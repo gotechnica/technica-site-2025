@@ -1,0 +1,27 @@
+html, body {
+  font-family: 'Poppins' !important;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+}
+
+li {
+  margin: 0;
+  padding: .25rem;
+  font-size: 1rem;
+}
+
+hr {
+  background-color: #aa96ca;
+  border-top: solid 2px #aa96ca;
+  opacity: 1;
+  margin-top: .75rem;
+  overflow: hidden;
+}
+/*# sourceMappingURL=base.css.map */

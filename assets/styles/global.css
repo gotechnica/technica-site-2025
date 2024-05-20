@@ -1,0 +1,78 @@
+/* devanagari */
+
+@font-face {
+  font-family: 'Munro';
+  src: url('../fonts/Munro-2LYe.ttf');
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: bold;
+  src: url('../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  src: url('../fonts/Audiowide-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Pixeloid-Sans';
+  src: url('../fonts/PixeloidSans-nR3g1.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Poppins' !important;
+  background-color: #FFFBEF;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+.carousel__slide {
+    background-color: white;
+}
+
+.carousel__track {
+    height: 36rem !important;
+}
+
+.carousel__pagination-button {
+    padding: 0.6rem !important;
+}
+
+.carousel__pagination-button::after {
+  border-radius: 50rem !important;
+  width: 0.6rem !important;
+  height: 0.58rem !important;
+}
+
+@media (max-width: 992px) {
+    .carousel__prev, .carousel__next {
+      top: 80% !important;
+    }
+    .carousel__track {
+      height: 50rem !important;
+    }
+}
+

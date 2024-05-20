@@ -1,0 +1,111 @@
+$PURPLE: #a878f5;
+$PINK: #ff6b98;
+$BLUE: #00ffff;
+$BLACK: #000000;
+$GRAY: #f7f7f7;
+$DARKGRAY: #a2a2a2;
+$MIDGRAY: #d4d4d4;
+$GREEN: #b5d5b2;
+$YELLOW: #FAF9D2;
+$DARKBLUE: #12c7d8;
+$DARKGREEN: #85D9C5;
+$DARKYELLOW: #edb715;
+$DARKERGRAY: #f0f0f0;
+$DEFAULT_BG_COLOR: #000000;
+$DEFAULT_TEXT_COLOR: #ffffff;
+$WHITE: #ffffff;
+$GRADIENT: linear-gradient(90deg, #00ffff 0%, #b6a1C4 46.35%, #ff7bac 100%);
+$BG_PURPLE_1: #302A44;
+$BG_PURPLE_2: #50357b;
+$BG_BLUE_3: #3c5898;
+$BG_PURPLE_4: #e8b8ff;
+$BG_PINK_5: #ffe6f3;
+
+:export {
+  DARKGREEN: $DARKGREEN;
+  GREEN: $GREEN;
+  PURPLE: $PURPLE;
+  PINK: $PINK;
+  BLUE: $BLUE;
+  BLACK: $BLACK;
+  WHITE: $WHITE;
+  GRAY: $GRAY;
+  YELLOW: $YELLOW;
+  DARKYELLOW: $DARKYELLOW; 
+  DARKBLUE: $DARKBLUE;
+  DEFAULT_BG_COLOR: $DEFAULT_BG_COLOR;
+  DEFAULT_TEXT_COLOR: $DEFAULT_TEXT_COLOR;
+  GRADIENT: $GRADIENT;
+  DARKGRAY: $DARKGRAY;
+  BG_PURPLE_1: $BG_PURPLE_1;
+  BG_PURPLE_2: $BG_PURPLE_2;
+  BG_BLUE_3: $BG_BLUE_3;
+  BG_PURPLE_4: $BG_PURPLE_4;
+  BG_PINK_5: $BG_PINK_5;
+}
+
+html, body {
+  font-family: 'Poppins' !important;
+  font-size: 1rem;
+  color: $WHITE;
+  background-color: $BG_PURPLE_1;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+a {
+  color: $PURPLE;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  p, li, .text-center, .baseButton, .select-button, body {
+    font-size: .7rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: .9rem;
+  }
+
+  h3 {
+    font-size: .85rem;
+  }
+
+  h4 {
+    font-size: .8rem;
+  }
+
+  h5 {
+    font-size: .75rem;
+  }
+}
+
+li {
+  margin: 0;
+  padding: .25rem;
+}
+
+hr {
+  background-color: $WHITE;
+  border-top: solid 2px $WHITE;
+  opacity: 1;
+  margin-top: .75rem;
+  overflow: hidden;
+}
+
+iframe {
+  aspect-ratio: 16/9;
+}
