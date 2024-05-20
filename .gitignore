@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# from 2023 gitignore
+.nitro
+.output
+.DS_Store
