@@ -34,7 +34,7 @@
   </template>
   
 <script setup lang="ts">
-import { FellowCard } from '~/components/Fellows/FellowsCards';
+import type { FellowCard } from '~/components/Fellows/FellowsCards';
 
 // Carousel state
 const props = defineProps<{

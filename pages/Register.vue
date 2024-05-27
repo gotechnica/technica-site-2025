@@ -494,8 +494,9 @@ import * as yup from 'yup';
 import { ref } from 'vue';
 import { useUtils } from '../composables/useUtils';
 import MLHSchools from '../static/mlh-schools.json';
-import { allCountries, CountryData, Region } from 'country-region-data';
-import { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
+import type { CountryData, Region } from 'country-region-data';
+import { allCountries } from 'country-region-data';
+import type { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
 import { Value } from 'sass';
 const { performPostRequest, getEnvVariable } = useUtils();
 const isSending = ref(false); //form submitting

@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { MeetTheTeamCard } from '~/components/meet-the-team/meet-the-team-cards';
+import type { MeetTheTeamCard } from '~/components/meet-the-team/meet-the-team-cards';
 
 // Carousel state
 const props = defineProps<{

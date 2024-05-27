@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { SponsorInfo } from './sponsor-info';
+import type { SponsorInfo } from './sponsor-info';
 
 const props = defineProps<{
   sponslist: SponsorInfo[];
