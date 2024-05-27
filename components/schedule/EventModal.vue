@@ -75,7 +75,7 @@ const locationMap = new Map([
   ['Virtual B', 'https://gotechnica.org/virtualb'],
   [
     'Gather',
-    'https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=QI7w-uGPQl2TDjSy4kcz',
+    'https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202024-2025?spawnToken=QI7w-uGPQl2TDjSy4kcz',
   ],
 ]);
 

@@ -77,7 +77,7 @@ const qaList = [
   {
     question: 'When does the travel reimbursement request window close?',
     answer:
-      'Travel reimbursement requests for bus, train, or plane accommodations will be accepted until 11:59 pm EDT on October 10th, 2023, and requests for car accommodations will be accepted until 11:59 pm EDT on October 14th, 2023.',
+      'Travel reimbursement requests for bus, train, or plane accommodations will be accepted until 11:59 pm EDT on October 10th, 2024, and requests for car accommodations will be accepted until 11:59 pm EDT on October 14th, 2024.',
   },
   {
     question: 'When will I receive my reimbursement?',

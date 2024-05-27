@@ -83,9 +83,9 @@ const qaList = [
     needs guidance on their code.',
   },
   {
-    question: 'When is Technica 2023?',
+    question: 'When is Technica 2024?',
     answer:
-      'Technica 2023 will take place on October 20-21 this year at The Hotel at UMD!',
+      'Technica 2024 will take place on October 20-21 this year at The Hotel at UMD!',
   },
   {
     question:

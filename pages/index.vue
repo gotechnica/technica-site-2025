@@ -13,7 +13,7 @@
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <p>This year we had over <b>800+</b> hackers participate (both in-person and online), compromised of underrepresented groups from many different backgrounds. We had <a href="https://technica-2023.devpost.com/project-gallery" target="_blank">121 awesome projects submitted</a>, many of which that tackle real-world issues with unique solutions. We hope everyone had a chance to learn and explore something new at Technica 2023, and we hope to see everyone again next year!</p>
+            <p>This year we had over <b>800+</b> hackers participate (both in-person and online), compromised of underrepresented groups from many different backgrounds. We had <a href="https://technica-2023.devpost.com/project-gallery" target="_blank">121 awesome projects submitted</a>, many of which that tackle real-world issues with unique solutions. We hope everyone had a chance to learn and explore something new at Technica 2024, and we hope to see everyone again next year!</p>
           </div>
           <div class="col-lg-6">
             <div class='embed-container'><iframe src='https://www.youtube.com/embed/4PBEfogEP6s' frameborder='0' allowfullscreen></iframe></div>
@@ -130,7 +130,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2023 will take place on October 21-22 in The Hotel at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.'
+      'Technica 2024 will take place on October 21-22 in The Hotel at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.'
   },
   {
     question: 'Who can attend Technica?',
@@ -152,7 +152,7 @@ const qaList = [
   },
   {
     question: 'How do teams work?',
-    answer: 'You can work on a project on your own, or you can work with a team. Teams can be formed prior to the day of the hackathon with other participants, or at the team formation event before official hacking begins. You can meet other hackers in the Technica 2023 Slack workspace. Weekend-of, we\'ll offer a team formation event in which you can use gotechnica.org/teamformationform to list your preferences and gotechnica.org/teamformationsheet to view potential team members. Team size must not exceed four members, per MLH rules.'
+    answer: 'You can work on a project on your own, or you can work with a team. Teams can be formed prior to the day of the hackathon with other participants, or at the team formation event before official hacking begins. You can meet other hackers in the Technica 2024 Slack workspace. Weekend-of, we\'ll offer a team formation event in which you can use gotechnica.org/teamformationform to list your preferences and gotechnica.org/teamformationsheet to view potential team members. Team size must not exceed four members, per MLH rules.'
   },
   {
     question: 'What should I bring?',

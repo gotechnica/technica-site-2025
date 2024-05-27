@@ -70,7 +70,7 @@ export default {
         { dropdown: false, name: 'Expo', path: '/Expo' },
         { dropdown: false, name: 'Schedule', path: '/Schedule' },
         { dropdown: false, name: 'Maps', path: '/Maps' },
-        { dropdown: false, name: 'Devpost', path: 'https://technica-2023.devpost.com/'},
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
         { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/64Rg7Asws1ePgj2L6'},
         {
           dropdown: true, 

@@ -1,17 +1,17 @@
 <template>
   <title>Sponsor</title>
   <div class="container">
-    <H1 class="sponsor-title">Help support Technica 2023!</H1>
+    <H1 class="sponsor-title">Help support Technica 2024!</H1>
     <div class="sponsor-letter">
       <h5>Hello Potential Sponsors!</h5>
       <br>
       <p>This coming fall, students from across the United States will organize Technica, our annual hackathon for underrepresented genders in tech, for its <b>ninth year</b>! Technica has been the largest hackathon for underrepresented genders in tech in the world for the past eight years, and welcomed over 1200+ participants from 15 countries and 4 continents last year.</p>
       <br>
-      <p>In 2021, Technica became the first hackathon to implement a hybrid event model—an event that is hosted both in-person and virtually, drawing on the success of our completely virtual event in 2020 and our history of in-person events. We continued this hybrid model in 2022 and will have it again in 2023!</p>
+      <p>In 2021, Technica became the first hackathon to implement a hybrid event model—an event that is hosted both in-person and virtually, drawing on the success of our completely virtual event in 2020 and our history of in-person events. We continued this hybrid model in 2022 and will have it again in 2024!</p>
       <br>
       <p>In the span of 24 hours, Technica gives our participants the opportunity to create new applications, websites or hardware projects. It serves as a place for the brightest thinkers in the country to come together to collaborate and share their innovative ideas. Our focus is on providing a welcoming, engaging, and creative environment to support underrepresented genders in tech culture. We pride ourselves in helping both beginners and experienced hackers explore technology and develop their skills.</p>
       <br>
-      <p>Not only does Technica serve as an incubator for creating and promoting a gender-diverse workforce in the future, it also provides an optimal opportunity for recruitment and outreach. We would love for you to get involved as a sponsor for Technica 2023!</p>
+      <p>Not only does Technica serve as an incubator for creating and promoting a gender-diverse workforce in the future, it also provides an optimal opportunity for recruitment and outreach. We would love for you to get involved as a sponsor for Technica 2024!</p>
       <br>
       <p>Our available sponsorship tiers are listed below. Additionally, we are happy to state that Technica has 501(c)(3) status. Please let us know if you are interested in becoming a part of Technica, or if you have any questions or concerns about the information below. We look forward to hearing from you!</p>
       <br>
@@ -337,7 +337,7 @@
             <tr>
               <td>
                 1 Community Event <span data-toggle="tooltip"
-                  title="There will be a variety of events held throughout 2023 outside of Technica weekend to allow our hackers more opportunities to learn and interact with companies. This is an opportunity for our partner-level sponsors to talk to members of the Technica community by hosting a workshop, talk, or any other event during one of these 1-2 day sessions this year.">&#9432;</span>
+                  title="There will be a variety of events held throughout 2024 outside of Technica weekend to allow our hackers more opportunities to learn and interact with companies. This is an opportunity for our partner-level sponsors to talk to members of the Technica community by hosting a workshop, talk, or any other event during one of these 1-2 day sessions this year.">&#9432;</span>
               </td>
               <td></td>
               <td></td>
@@ -472,7 +472,7 @@
             <tr>
               <td>
                 Logo on website & T-shirt <span data-toggle="tooltip"
-                  title="Sponsors will have their logos (ordered and scaled by sponsorship tier) on our website, as well as on the back of our official Technica 2023 T-shirts given to participants during the event.">&#9432;</span>
+                  title="Sponsors will have their logos (ordered and scaled by sponsorship tier) on our website, as well as on the back of our official Technica 2024 T-shirts given to participants during the event.">&#9432;</span>
               </td>
               <td class="align-middle">
                 <div class="benefit brand"></div>
@@ -678,8 +678,8 @@ const qaList = [
     answer: "A hackathon is a technology-focused event where individuals and teams work on new projects in a short period of time. You can build anything you want. An app, a robot, a website. The only limit is your imagination! Technica is the world’s largest hackathon for underrepresented genders."
   },
   {
-    question: "Will Technica 2023 be in-person, online, or hybrid?",
-    answer: "Technica 2023 will be hosted as a hybrid hackathon providing an in-person and virtual (online) experience for hackers to participate in. This means sponsors can choose a tier with in-person perks, like workshops and mentors, or go for our brand-new virtual tier where they can interact with hackers from a virtual booth!"
+    question: "Will Technica 2024 be in-person, online, or hybrid?",
+    answer: "Technica 2024 will be hosted as a hybrid hackathon providing an in-person and virtual (online) experience for hackers to participate in. This means sponsors can choose a tier with in-person perks, like workshops and mentors, or go for our brand-new virtual tier where they can interact with hackers from a virtual booth!"
   },
   {
     question: "Can companies sponsor at a custom tier?",

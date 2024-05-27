@@ -20,7 +20,7 @@ export interface InfoTab {
     { index: 2, title: 'Ambassadors', content: 'Technica Campus Ambassadors \
     have the unique opportunity to help foster our community beyond\
     Technica weekend at UMD. As a representative of your school, you’ll \
-    spread the word about Technica 2023 on your campus and promote inclusion \
+    spread the word about Technica 2024 on your campus and promote inclusion \
     in STEM!', link: 'Ambassadors', color:'#7937AE', displayed: false },
     { index: 3, title: 'Travel Info', content: 'Need to travel to get to Technica? \
     We got you covered! Technica can reimburse your travel fees or arrange a bus \

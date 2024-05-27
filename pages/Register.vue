@@ -1,9 +1,9 @@
 <template>
   <title>Register</title>
   <div id="form" class="container">
-    <h1 class="text-center my-5">Registration is closed for Technica 2023!</h1>
+    <h1 class="text-center my-5">Registration is closed for Technica 2024!</h1>
     <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for check-in instructions. We can't wait for you to <b>#CreateYourReality</b> at Technica!</p>
-    <h1 class="text-center my-4">Technica Registration Form 2023</h1>
+    <h1 class="text-center my-4">Technica Registration Form 2024</h1>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
       <H1>Hacker Info</H1>

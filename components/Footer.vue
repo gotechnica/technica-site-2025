@@ -1,4 +1,4 @@
-<!-- the footer for Technica 2023 web pages -->
+<!-- the footer for Technica 2024 web pages -->
 
 <template>
   <div class="footer-container">
@@ -92,7 +92,7 @@
                 > Donate
             </a>
             </p>
-            <p>Copyright &copy; 2023 | Technica</p>
+            <p>Copyright &copy; 2024 | Technica</p>
         </div>
     </div>
 </template>

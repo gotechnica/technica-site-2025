@@ -44,7 +44,7 @@ export default {
         {
           question: 'Rules',
           answer:
-            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2023's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and unlimited Sponsor prize categories. However, you will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
+            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2024's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and unlimited Sponsor prize categories. However, you will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
         },
         {
           question: 'Submission',
