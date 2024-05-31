@@ -2,7 +2,8 @@
   <title>Register</title>
   <div id="form" class="container">
     <h1 class="text-center my-5">Registration is closed for Technica 2024!</h1>
-    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for check-in instructions. We can't wait for you to <b>#CreateYourReality</b> at Technica!</p>
+    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
+      check-in instructions. We can't wait for you to <b>#CreateYourReality</b> at Technica!</p>
     <h1 class="text-center my-4">Technica Registration Form 2024</h1>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
@@ -123,7 +124,7 @@
             Technica, we will need your guardian's email. We will email a waiver
             to you and your guardian to sign closer to the event. Minors who plan
             to attend the event in-person will need to be accompanied by a chaperone.
-            A chaperone can accompany up to six minors. 
+            A chaperone can accompany up to six minors.
           </p>
 
           <div class="mt-4" v-if="parseInt(values.age) < 18">
@@ -155,7 +156,7 @@
             <label class="form-label">School Name*</label>
             <AutoComplete v-model="values.school" name="school" inputId="school" :suggestions="filteredSchools"
               @complete="search" placeholder="The University of Maryland, College Park"
-              :class="{ 'p-invalid': submitTimes > 0 && (values.school == null || values.school == '')}" required />
+              :class="{ 'p-invalid': submitTimes > 0 && (values.school == null || values.school == '') }" required />
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
@@ -258,7 +259,8 @@
               </label>
               <div class="form-check" v-for="option in firstTechnica">
                 <Field name="isFirstTechnica" :value="option.value" type="radio" class="form-check-input"
-                  :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isFirstTechnica'] }" required />
+                  :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isFirstTechnica'] }"
+                  required />
                 <label class="form-check-label" :for="option.value">
                   {{ option.text }}
                 </label>
@@ -306,8 +308,8 @@
           </p>
 
           <div class="form-check" v-for="option in trackOptions" :key="`track-${option.value}`">
-            <Field name="track" :value="option.value" type="radio" class="form-check-input" :id="`track-${option.value}`"
-              :class="{ 'is-invalid': errors['track'] }" required />
+            <Field name="track" :value="option.value" type="radio" class="form-check-input"
+              :id="`track-${option.value}`" :class="{ 'is-invalid': errors['track'] }" required />
             <label class="form-check-label" :for="`track-${option.value}`">
               {{ option.text }}
             </label>
@@ -322,7 +324,7 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <div class="mb-4">
-            <label class="form-label">Dietary Restrictions*</label>
+            <label class="form-label">Do you have any dietary restrictions?*</label>
             <div class="form-check" v-for="option in dietaryRestrictionsOptions">
               <Field name="dietaryRestrictions" :value="option.value" type="checkbox" class="form-check-input"
                 :id="option.value" :class="{ 'is-invalid': errors['dietaryRestrictions'] }" required />
@@ -461,7 +463,8 @@
           :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
 
         <label class="form-check-label">
-          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.
+          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
+          announcements.
         </label>
       </div>
 
@@ -986,7 +989,7 @@ const registerUser = async (values: Record<string, any>) => {
 
   // Add referral code if it exists
   let params = new URL(document.location as any).searchParams;
-  let referral = params.get("referral");  
+  let referral = params.get("referral");
 
   fd.append("referral", referral as string)
 
