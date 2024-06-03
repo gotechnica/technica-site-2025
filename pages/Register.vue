@@ -142,7 +142,7 @@
           <div class="mb-4">
             <label class="form-label">Education Level*</label>
             <Field name="education" as="select" class="form-select" :class="{ 'is-invalid': errors['education'] }"
-              required>
+              required v-model ="userInput.education">
               <option v-for="option in educationOptions" :value="option">
                 {{ option }}
               </option>
@@ -784,10 +784,12 @@ interface UserInput {
   isFirstTechnica: string;
   yearsExperience: string;
   topicsOfInterest: string[];
+  education: string;
 }
 
 // Define reactive variables
 const userInput = reactive<UserInput>({
+  education: '',
   attendanceType: 'in-person',
   isFirstHackathon: '',
   isFirstTechnica: '',
@@ -821,6 +823,10 @@ const trackOptions: Option[] = [
   { text: 'Startup', value: 'startup' },
   { text: 'Research', value: 'research' }
 ];
+
+const isHighSchoolOrLower = computed(() => {
+  return ['Less than Secondary / High School', 'Secondary / High School'].includes(userInput.education);
+});
 
 // Define method to update recommended tracks
 const updateRecommendedTracks = () => {
@@ -857,17 +863,16 @@ const computeRecommendedTracks = (userInput: UserInput): string[] => {
     }
 
     // Criteria for Hardware track
-    if (
-      userInput.topicsOfInterest.includes('hardware')) {
+    if (userInput.topicsOfInterest.includes('hardware')) {
       tracks.push('Hardware');
     }
 
     // Criteria for Research track
-    if (
-      userInput.topicsOfInterest.some(topic => topic.toLowerCase() === 'research')) {
-      tracks.push('Research');
+    if (userInput.topicsOfInterest.some(topic => topic.toLowerCase() === 'research') && !isHighSchoolOrLower.value) {
+      tracks.push('Research'); 
     }
   }
+
   if (tracks.length === 0) {
     tracks.push('General');
   }
