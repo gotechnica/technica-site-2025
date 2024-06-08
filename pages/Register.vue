@@ -216,7 +216,7 @@
       <!-- TRACKS -->
       <H1 class="green">Tracks</H1>
       <p class="description">
-        Tracks accomodate a hacker's interests and skill level, and can provide
+        Tracks accommodate a hacker's interests and skill level, and can provide
         a more guided hackathon experience. Visit the
         <a href="/Tracks" target="_blank">tracks page</a> for more information!
         We provide recommendations for tracks you may be interested in, but you
@@ -744,7 +744,7 @@ const hearOptions = ref<Option[]>([
   { text: 'LinkedIn', value: 'linkedin' },
   { text: 'Google', value: 'google' },
   { text: 'Major League Hacking', value: 'mlh' },
-  { text: 'Email Listserv', value: 'email' },
+  { text: 'Email Listser', value: 'email' },
   { text: 'Flyer or Poster', value: 'flyer' },
   { text: 'Friend', value: 'friend' },
   { text: 'Other', value: 'other' },
@@ -782,6 +782,7 @@ const accommodationsOptions = ref<Option[]>([
   { text: 'ASL Interpreter', value: 'asl-interpreter' },
   { text: 'Guides', value: 'guides' },
   { text: 'Earplugs', value: 'earplugs' },
+  { text: 'Masks', value: 'masks'},
   { text: 'Other', value: 'other' },
 ]);
 
