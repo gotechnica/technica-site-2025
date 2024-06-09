@@ -227,7 +227,7 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">Will you be attending online or in person?*</label>
-            <select id="attendance" v-model="userInput.attendanceType" @change = "updateRecommendedTracks" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
+            <select id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
               <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
             </select>
             <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
@@ -293,22 +293,12 @@
         <div class="col-md-6 mb-4">
           <label class="form-label">Which track do you wish to participate in?*</label>
           <p><b>**Note</b>: All special tracks are closed now.</p>
-          <div class="form-check" v-for="option in trackOptions" :key="option.value">
+          <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
             <Field name="track" :value="option.value" type="radio" class="form-check-input" />
             <label class="form-check-label">{{ option.text }}</label>
           </div>
         </div>
-
-        <!-- Display recommended tracks -->
-        <div class="col-md-6 mb-4">
-          <label class="form-label">Recommended Tracks:</label>
-          <ul>
-            <li v-for="track in recommendedTracks" :key="track">
-            {{ track }}</li>
-          </ul>
-        </div>
       </div>
-  
 
       <!-- EVENT INFO -->
       <H1>Event Info</H1>
@@ -824,61 +814,47 @@ const trackOptions: Option[] = [
   { text: 'Research', value: 'research' }
 ];
 
-const isHighSchoolOrLower = computed(() => {
-  return ['Less than Secondary / High School', 'Secondary / High School'].includes(userInput.education);
-});
-
-// Define method to update recommended tracks
-const updateRecommendedTracks = () => {
-  // Trigger reactivity
-  recommendedTracks.value = computeRecommendedTracks(userInput);
+// Function to check if education is high school or lower 
+const isHighSchoolOrLower = (education: string): boolean => {
+  const highSchoolOrLowerOptions = [
+    'Less than Secondary / High School',
+    'Secondary / High School'
+  ];
+  return highSchoolOrLowerOptions.includes(education);
 };
 
-// Define computed property for recommended tracks
-const recommendedTracks = ref<string[]>([]);
+// Compute recommended tracks based on user input
+const recommendedTracks = computed(() => {
+  const tracks: { text: string, value: string }[] = [];
 
-watch(userInput, updateRecommendedTracks, { deep: true});
-
-// Define function to compute recommended tracks based on user input
-const computeRecommendedTracks = (userInput: UserInput): string[] => {
-  const tracks: string[] = [];
-
-  //Debugging
-  console.log('User Input:', JSON.stringify(userInput, null, 2));
-
-   // Check if attendance type is in-person
-   if (userInput.attendanceType === 'in-person') {
-    // Criteria for Beginner track
+  if (userInput.attendanceType === 'in-person') {
     if (
       userInput.isFirstHackathon === 'Yes' &&
-      (userInput.isFirstTechnica === 'Yes' || userInput.isFirstTechnica === 'No') &&
       parseInt(userInput.yearsExperience) >= 0 &&
       parseInt(userInput.yearsExperience) <= 2
     ) {
-      tracks.push('Beginner');
+      tracks.push({ text: 'Beginner', value: 'beginner' });
     }
 
     if (userInput.topicsOfInterest.includes('startups')) {
-      tracks.push('Startup');
+      tracks.push({ text: 'Startup', value: 'startup' });
     }
 
-    // Criteria for Hardware track
     if (userInput.topicsOfInterest.includes('hardware')) {
-      tracks.push('Hardware');
+      tracks.push({ text: 'Hardware', value: 'hardware' });
     }
 
-    // Criteria for Research track
-    if (userInput.topicsOfInterest.some(topic => topic.toLowerCase() === 'research') && !isHighSchoolOrLower.value) {
-      tracks.push('Research'); 
+    if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
+      tracks.push({ text: 'Research', value: 'research' });
     }
   }
 
   if (tracks.length === 0) {
-    tracks.push('General');
+    tracks.push({ text: 'General', value: 'general' });
   }
 
   return tracks;
-};
+});
 
 const educationOptions = ref([
   'Less than Secondary / High School',
