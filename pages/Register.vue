@@ -143,7 +143,7 @@
           <div class="mb-4">
             <label class="form-label">Education Level*</label>
             <Field name="education" as="select" class="form-select" :class="{ 'is-invalid': errors['education'] }"
-              required>
+              required v-model ="userInput.education">
               <option v-for="option in educationOptions" :value="option">
                 {{ option }}
               </option>
@@ -216,7 +216,7 @@
       <!-- TRACKS -->
       <H1 class="green">Tracks</H1>
       <p class="description">
-        Tracks accommodate a hacker's interests and skill level, and can provide
+        Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
         <a href="/Tracks" target="_blank">tracks page</a> for more information!
         We provide recommendations for tracks you may be interested in, but you
@@ -228,23 +228,21 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">Will you be attending online or in person?*</label>
-            <Field name="attendance" as="select" class="form-select" :class="{ 'is-invalid': errors['attendance'] }"
-              required>
-              <option v-for="option in attendanceOptions" :value="option">
-                {{ option }}
-              </option>
-            </Field>
-            <ErrorMessage :name="'attendance'" class="invalid-feedback" />
+            <select id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
+              <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
+            </select>
+            <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
           </div>
+
 
           <div class="mb-4">
             <div>
-              <label class="form-label"> Is this your first hackathon?* </label>
-              <div class="form-check" v-for="option in firstHackathon">
-                <Field name="isFirstHackathon" :value="option.value" type="radio" class="form-check-input"
+              <label class="form-label">Is this your first hackathon?*</label>
+              <div class="form-check" v-for="option in firstHackathon" :key="option.value">
+                <Field name="isFirstHackathon" v-model="userInput.isFirstHackathon" :value="option.value" type="radio" class="form-check-input"
                   :id="`first-hackathon-${option.value}`" :class="{ 'is-invalid': errors['isFirstHackathon'] }"
                   required />
-                <label class="form-check-label" :for="option.value">
+                <label class="form-check-label" :for="`first-hackathon-${option.value}`">
                   {{ option.text }}
                 </label>
               </div>
@@ -254,14 +252,11 @@
 
           <div class="mb-4">
             <div>
-              <label class="form-label">
-                Is this your first time at Technica?*
-              </label>
-              <div class="form-check" v-for="option in firstTechnica">
-                <Field name="isFirstTechnica" :value="option.value" type="radio" class="form-check-input"
-                  :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isFirstTechnica'] }"
-                  required />
-                <label class="form-check-label" :for="option.value">
+              <label class="form-label">Is this your first time at Technica?*</label>
+              <div class="form-check" v-for="option in firstTechnica" :key="option.value">
+                <Field name="isFirstTechnica" v-model="userInput.isFirstTechnica" :value="option.value" type="radio" class="form-check-input"
+                  :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isFirstTechnica'] }" required />
+                <label class="form-check-label" :for="`first-technica-${option.value}`">
                   {{ option.text }}
                 </label>
               </div>
@@ -273,9 +268,8 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">How many years of CS experience do you have?*</label>
-            <Field name="yearsExperience" as="select" class="form-select"
-              :class="{ 'is-invalid': errors['yearsExperience'] }" required>
-              <option v-for="option in experience" :value="option">
+            <Field name="yearsExperience" v-model="userInput.yearsExperience" as="select" class="form-select" :class="{ 'is-invalid': errors['yearsExperience'] }" required>
+              <option v-for="option in experience" :key="option" :value="option">
                 {{ option }}
               </option>
             </Field>
@@ -283,13 +277,11 @@
           </div>
 
           <div class="mb-4">
-            <label class="form-label">
-              What topics do you want to learn about?*
-            </label>
-            <div class="form-check" v-for="option in topics">
-              <Field name="topics" :value="option.value" type="checkbox" class="form-check-input"
+            <label class="form-label">What topics do you want to learn about?*</label>
+            <div class="form-check" v-for="option in topicsOfInterest" :key="option.value">
+              <Field name="topics" v-model="userInput.topicsOfInterest" :value="option.value" type="checkbox" class="form-check-input"
                 :id="`topics-${option.value}`" :class="{ 'is-invalid': errors['topics'] }" />
-              <label class="form-check-label" :for="option.value">
+              <label class="form-check-label" :for="`topics-${option.value}`">
                 {{ option.text }}
               </label>
             </div>
@@ -299,22 +291,13 @@
       </div>
 
       <div class="row gx-5">
-        <div class="mb-4">
-          <label class="form-label">
-            Which track do you wish to participate in?*
-          </label>
-          <p>
-            <b>**Note</b>: All special tracks are closed now.
-          </p>
-
-          <div class="form-check" v-for="option in trackOptions" :key="`track-${option.value}`">
-            <Field name="track" :value="option.value" type="radio" class="form-check-input"
-              :id="`track-${option.value}`" :class="{ 'is-invalid': errors['track'] }" required />
-            <label class="form-check-label" :for="`track-${option.value}`">
-              {{ option.text }}
-            </label>
+        <div class="col-md-6 mb-4">
+          <label class="form-label">Which track do you wish to participate in?*</label>
+          <p><b>**Note</b>: All special tracks are closed now.</p>
+          <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
+            <Field name="track" :value="option.value" type="radio" class="form-check-input" />
+            <label class="form-check-label">{{ option.text }}</label>
           </div>
-          <ErrorMessage :name="'track'" class="invalid-feedback" />
         </div>
       </div>
 
@@ -486,6 +469,7 @@
 </template>
 
 <script setup lang="ts">
+import {reactive, computed} from 'vue';
 import {
   Form,
   Field,
@@ -501,6 +485,7 @@ import type { CountryData, Region } from 'country-region-data';
 import { allCountries } from 'country-region-data';
 import type { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
 import { Value } from 'sass';
+import { Options } from 'tsparticles-engine';
 const { performPostRequest, getEnvVariable } = useUtils();
 const isSending = ref(false); //form submitting
 const submitTimes = ref(0);
@@ -731,10 +716,6 @@ const sizeOptions = ref([
   '3XL',
 ]);
 
-const attendanceOptions = ref(['Online', 'Hybrid', 'In-person']);
-
-const experience = ref(['0-2', '3-4', '5+']);
-
 const hearOptions = ref<Option[]>([
   { text: 'Instagram', value: 'instagram' },
   { text: 'Facebook', value: 'facebook' },
@@ -762,7 +743,7 @@ const dietaryRestrictionsOptions = ref<Option[]>([
   { text: 'Other', value: 'other' },
 ]);
 
-const topics = ref<Option[]>([
+const topicsOfInterest = ref<Option[]>([
   { text: 'AI and Machine Learning', value: 'ai-and-machine-learning' },
   { text: 'Cloud Computing', value: 'cloud-computing' },
   { text: 'Data Science', value: 'data-science' },
@@ -770,6 +751,7 @@ const topics = ref<Option[]>([
   { text: 'Research', value: 'research' },
   { text: 'UI/UX', value: 'ui-ux' },
   { text: 'Web Development', value: 'web-development' },
+  {text: 'Hardware', value: 'hardware' },
 ]);
 
 const foodAllergiesOptions = ref<Option[]>([
@@ -786,62 +768,95 @@ const accommodationsOptions = ref<Option[]>([
   { text: 'Other', value: 'other' },
 ]);
 
-const firstHackathon = ref<Option[]>([
-  { text: 'No', value: 'No' },
-  { text: 'Yes', value: 'Yes' },
-]);
-
-const firstTechnica = ref<Option[]>([
-  { text: 'No', value: 'No' },
-  { text: 'Yes', value: 'Yes' },
-]);
-
-const trackOptions = ref<Option[]>([
-  { text: 'General', value: 'general' }
-]);
 const agreeRules = ref({ text: 'agree rules', value: 'Yes' });
 const agreeEmails = ref({ text: 'agree emails', value: 'Yes' });
 const agreeNewsletter = ref({ text: 'agree newsletter', value: 'Yes' });
 
-function getTracks(values: Record<string, any>) {
-  const { education, attendance, isFirstHackathon, yearsExperience, topics } =
-    values;
-
-  let other: Option[] = [
-    { text: 'Beginner', value: 'beginner' },
-    { text: 'Startup', value: 'startup' },
-    { text: 'Exploratory', value: 'exploratory' },
-    { text: 'General', value: 'general' },
-  ];
-  let recommended: Option[] = [];
-  let removed = 0;
-
-  if (attendance === 'In-person' || attendance === 'Hybrid') {
-    if (isFirstHackathon === 'Yes' || yearsExperience === '0-2') {
-      recommended.push(other[0]);
-      other.splice(0, 1);
-      removed++;
-    }
-    if (topics && topics.includes('startups')) {
-      recommended.push(other[1 - removed]);
-      other.splice(1 - removed, 1);
-      removed++;
-    }
-  } else if (attendance === 'Online') {
-    other.splice(0, 2);
-    removed += 2;
-  }
-
-  if (recommended.length === 0) {
-    recommended.push(other[3 - removed]);
-    other.splice(3 - removed, 1);
-    removed++;
-  }
-
-  console.log(recommended)
-  console.log(other)
-  return [recommended, other];
+interface UserInput {
+  attendanceType: string;
+  isFirstHackathon: string;
+  isFirstTechnica: string;
+  yearsExperience: string;
+  topicsOfInterest: string[];
+  education: string;
 }
+
+// Define reactive variables
+const userInput = reactive<UserInput>({
+  education: '',
+  attendanceType: 'in-person',
+  isFirstHackathon: '',
+  isFirstTechnica: '',
+  yearsExperience: '0',
+  topicsOfInterest: [],
+});
+
+// Define other reactive variables and options
+const attendanceOptions: Option[] = [
+  { text: 'In-Person', value: 'in-person' },
+  { text: 'Virtual', value: 'virtual' },
+  { text: 'Hybrid', value: 'hybrid' }
+];
+
+const firstHackathon: Option[] = [
+  { text: 'No', value: 'No' },
+  { text: 'Yes', value: 'Yes' }
+];
+
+const firstTechnica: Option[] = [
+  { text: 'No', value: 'No' },
+  { text: 'Yes', value: 'Yes' }
+];
+
+const experience: string[] = ['0', '1', '2', '3', '4', '5+'];
+
+const trackOptions: Option[] = [
+  { text: 'Beginner', value: 'beginner' },
+  { text: 'General', value: 'general' },
+  { text: 'Hardware', value: 'hardware' }, // Add the hardware option
+  { text: 'Startup', value: 'startup' },
+  { text: 'Research', value: 'research' }
+];
+
+// Function to check if education is high school or lower 
+const isHighSchoolOrLower = (education: string): boolean => {
+  const highSchoolOrLowerOptions = [
+    'Less than Secondary / High School',
+    'Secondary / High School'
+  ];
+  return highSchoolOrLowerOptions.includes(education);
+};
+
+// Compute recommended tracks based on user input
+const recommendedTracks = computed(() => {
+  const tracks: { text: string, value: string }[] = [];
+
+  tracks.push({ text: 'General', value: 'general' });
+
+  if (userInput.attendanceType === 'in-person') {
+    if (
+      userInput.isFirstHackathon === 'Yes' &&
+      parseInt(userInput.yearsExperience) >= 0 &&
+      parseInt(userInput.yearsExperience) <= 2
+    ) {
+      tracks.push({ text: 'Beginner', value: 'beginner' });
+    }
+
+    if (userInput.topicsOfInterest.includes('startups')) {
+      tracks.push({ text: 'Startup', value: 'startup' });
+    }
+
+    if (userInput.topicsOfInterest.includes('hardware')) {
+      tracks.push({ text: 'Hardware', value: 'hardware' });
+    }
+
+    if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
+      tracks.push({ text: 'Research', value: 'research' });
+    }
+  }
+
+  return tracks;
+});
 
 const educationOptions = ref([
   'Less than Secondary / High School',
