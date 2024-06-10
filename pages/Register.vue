@@ -827,6 +827,8 @@ const isHighSchoolOrLower = (education: string): boolean => {
 const recommendedTracks = computed(() => {
   const tracks: { text: string, value: string }[] = [];
 
+  tracks.push({ text: 'General', value: 'general' });
+
   if (userInput.attendanceType === 'in-person') {
     if (
       userInput.isFirstHackathon === 'Yes' &&
@@ -847,10 +849,6 @@ const recommendedTracks = computed(() => {
     if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
       tracks.push({ text: 'Research', value: 'research' });
     }
-  }
-
-  if (tracks.length === 0) {
-    tracks.push({ text: 'General', value: 'general' });
   }
 
   return tracks;
