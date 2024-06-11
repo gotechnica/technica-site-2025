@@ -47,139 +47,17 @@
 <script setup lang="ts">
 import { SponsorInfo } from './sponsor-info';
 
-const partnerSponsors: SponsorInfo[] = [
-    {
-      name: 'umdcs',
-      link: 'https://www.cs.umd.edu'
-    }
-]
+const partnerSponsors: SponsorInfo[] = []
 
-const platinumSponsors: SponsorInfo[] = [
-    {
-      name: 'umdclark',
-      link: 'https://eng.umd.edu'
-    }
-]
+const platinumSponsors: SponsorInfo[] = []
 
-const goldSponsors: SponsorInfo[] = [
-    {
-      name: 't-rowe-price',
-      link: 'https://www.troweprice.com/corporate/us/en/home.html'
-    },
-    {
-      name: 'fannie-mae',
-      link: 'https://www.fanniemae.com'
-    }
-]
+const goldSponsors: SponsorInfo[] = []
 
-const silverSponsors: SponsorInfo[] = [
-    {
-      name: 'jane-street',
-      link: 'https://www.janestreet.com/'
-    },
-    {
-      name: 'caci',
-      link: 'https://www.caci.com'
-    },
-    {
-      name: 'optiver',
-      link: 'https://optiver.com'
-    },
-    {
-      name: 'afcea',
-      link: 'https://www.afcea.org'
-    },
-    {
-      name: 'capital-one',
-      link: 'https://www.capitalone.com'
-    },
-    {
-      name: 'northrop-grumman',
-      link: 'https://www.northropgrumman.com'
-    }
-]
+const silverSponsors: SponsorInfo[] = []
 
-const bronzeSponsors: SponsorInfo[] = [
-    {
-      name: 'bloomberg',
-      link: 'https://www.bloomberg.com'
-    },
-    {
-      name: 'btt',
-      link: 'https://inclusion.cs.umd.edu/breakthroughtech'
-    },
-    {
-      name: 'umdi4c',
-      link: 'https://inclusion.cs.umd.edu'
-    },
-    {
-      name: 'lts',
-      link: 'https://www.ltsnet.net'
-    },
-    {
-      name: 'qualtrics',
-      link: 'https://www.qualtrics.com'
-    },
-    {
-      name: 'travelers',
-      link: 'https://www.travelers.com'
-    },
-    {
-      name: 'big',
-      link: 'https://www.bloombergindustry.com/'
-    },
-    {
-      name: 'geico',
-      link: 'https://www.geico.com/'
-    },
-    {
-      name: 'jhu',
-      link: 'https://www.jhuapl.edu/'
-    }
-]
+const bronzeSponsors: SponsorInfo[] = []
 
-const starterSponsors: SponsorInfo[] = [
-    {
-      name: 'aces',
-      link: 'https://aces.umd.edu/'
-    },
-    {
-      name: 'umdbsos',
-      link: 'https://bsos.umd.edu/'
-    },
-    {
-      name: 'standout',
-      link: 'http://hackp.ac/mlh-StandOutStickers-hackathons'
-    },
-    {
-      name: 'codepath',
-      link: 'https://www.codepath.org'
-    },
-    {
-      name: 'mlh',
-      link: 'https://mlh.io'
-    },
-    {
-      name: 'qualcomm',
-      link: 'https://www.qualcomm.com'
-    },
-    {
-      name: 'appian',
-      link: 'https://appian.com'
-    },
-    {
-      name: 'blue-halo',
-      link: 'https://bluehalo.com'
-    },
-    {
-      name: 'visionist',
-      link: 'https://www.visionistinc.com'
-    },
-    {
-      name: '355code',
-      link: 'http://www.355code.com/'
-    }
-]
+const starterSponsors: SponsorInfo[] = []
 
 </script>
 
@@ -213,8 +91,7 @@ const starterSponsors: SponsorInfo[] = [
 }
 
 h4 {
-  text-align: center;
+  text-align: left;
 }
 
 </style>
-  
