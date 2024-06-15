@@ -1,10 +1,16 @@
 <template>
   <title>Technica Home</title>
   <!-- Hero Section -->
+  <HeroLanding/>
+  <!--About Section-->
+  <div class="container">
+    <About/>
     <!-- Frequently Asked Questions -->
     <!-- <H1 v-if="width <= 768">FAQ</H1>
     <H1 v-else>Frequently Asked Questions</H1>
     <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
+  </div>
+  
 </template>
 
 <script setup lang="ts">
