@@ -1,8 +1,9 @@
 <template>
   <title>Technica Home</title>
+  <AdditionalInfo class="main-section" />
   <!-- Hero Section -->
-    <!-- Frequently Asked Questions -->
-    <!-- <H1 v-if="width <= 768">FAQ</H1>
+  <!-- Frequently Asked Questions -->
+  <!-- <H1 v-if="width <= 768">FAQ</H1>
     <H1 v-else>Frequently Asked Questions</H1>
     <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
 </template>
@@ -76,6 +77,4 @@ const { width } = useWindowSize();
 
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
