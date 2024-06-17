@@ -1,6 +1,5 @@
 <template>
   <title>Technica Home</title>
-  <AdditionalInfo class="main-section" />
   <!-- Hero Section -->
   <!-- Frequently Asked Questions -->
   <!-- <H1 v-if="width <= 768">FAQ</H1>
