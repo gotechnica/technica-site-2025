@@ -1,10 +1,9 @@
 <template>
   <title>Technica Home</title>
   <!-- Hero Section -->
-     Frequently Asked Questions
      <H1 v-if="width <= 768">FAQ</H1>
     <H1 v-else>Frequently Asked Questions</H1>
-    <FAQSection faqId="main" :qaList="qaList" class="main-section" />
+    <FAQ faqId="main" :qaList="qaList" class="main-section" />
 </template>
 
 <script setup lang="ts">

@@ -46,7 +46,7 @@
   <style scoped lang="scss">
   .faq-section-wrapper {
     border-radius: 33px;
-    background: rgba(222, 182, 42, 0.3);
+    background: #B6A1C4;
     padding: 25px 15px 25px 15px;
     color: #1f035a;
     margin: 0 auto;
