@@ -72,6 +72,11 @@
     <H1 v-else class = faq>Frequently Asked Questions</H1>
     <FAQ faqId="main" :qaList="qaList" class="main-section" />
   </div>
+
+    <!-- What Can You Do At Technica-->
+    <h1 class="section-heading">What Can You Do at Technica?</h1>
+    <WhatToDo/>
+
 </template>
 
 <script setup lang="ts">
@@ -392,6 +397,10 @@ body {
 
 .flip-card-back h4 {
   color: black;
+}
+
+.section-heading {
+  text-align: center;
 }
 
 </style>
