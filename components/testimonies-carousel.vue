@@ -30,7 +30,7 @@
   </Carousel>
   <h3>Want to see more of last year's projects?</h3>
   <div class="button-container">
-    <PixelButton text="Devpost" link="https://technica2022.devpost.com/project-gallery" img="purple-button-normal.svg" hover="purple-button-hover.svg" click="purple-button-onclick.svg"/>
+    <PixelButton text="Devpost" link="https://technica-2023.devpost.com/project-gallery" img="purple-button-normal.svg" hover="purple-button-hover.svg" click="purple-button-onclick.svg"/>
   </div>
 </template>
 
@@ -39,30 +39,30 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
 
 const slides = [
-  { hackerImage: "/testimonials/lin-taylor.jpg",
-    hackerName: "Lin Taylor",
+  { hackerImage: "/testimonials/aneesa-ayornu.jpg",
+    hackerName: "Aneesa Ayornu",
     hackerDesc: "General Track",
-    testimonyDescription: "\"Huge thanks to Technica for including younger girls. The fact that an 8 year old won a prize this year at Technica has really gotten her and other girls excited about coding, which is important because we’re trying to close the gender gap.\"",
+    testimonyDescription: "\"I would rate my technica experience as a 10/10. I would rate it like this because the environment was very welcoming and I was able to network with many companies and organizations around the area. I also feel like I was able to meet other underrepresented people in tech  in the DMV and make new friends and get hands on experience with a project.\"",
     hasProject: false},
 
-  { hackerImage: "/testimonials/wendy-tu.jpg",
-    hackerName: "Wendy Tu",
-    hackerDesc: "General Track",
-    testimonyDescription: "\"My Technica experience has always been absolutely fantastic; the organizers' friendliness and passion for the event really made a difference from a hacker perspective and the event is just so well executed! It does amazing at creating a space for underrepresented genders and backgrounds in tech, and because of that I would not be where I am now without Technica.\"",
-    projectImage: "/testimonials/sensory-umd.png",
-    projectName: "SensoryUMD",
-    projectCategories: "Winner: Best Hack Promoting Education or Public Health - Bloomberg, Best IoT Product Hack - Qualcomm",
-    projectDescription: "A website that informs neurodivergent students at UMD about the different qualities and possible distractors of study spaces around campus.",
+  { hackerImage: "/testimonials/claire-chen.jpg",
+    hackerName: "Claire Chen",
+    hackerDesc: "Startup Track",
+    testimonyDescription: "\"10/10 experience :)! It was a comfortable experience and it was easy to talk to people and go up to organizers and directors during.\"",
+    projectImage: "/testimonials/study-terp-logo.jpg",
+    projectName: "Study Terp",
+    projectCategories: "Winner: Most Creative Use of GitHub - Technica 2023",
+    projectDescription: "Study Terp is a study buddy matchmaker for students at the University of Maryland. Through this revolutionary social study platform, students are matched with study buddies based on classes, schedules, majors/minors, study habits, and overall compatibility. Study Terp aims to foster a supportive and collaborative learning environment on demand for every student by connecting them with like-minded peers. Say goodbye to solo study struggles and hello to a brighter, more interactive academic journey.",
     hasProject: true},
   
-  { hackerImage: "/testimonials/amelia-talbot.jpg",
-    hackerName: "Amelia Talbot",
-    hackerDesc: "Beginner Track",
-    testimonyDescription: "\"As a freshman who had never coded before, I didn’t think I would be able to contribute anything or create a project at all at Technica. Instead, I learned so much about different technologies and was able to help with some of the major portions of the project. Even better, I bonded with my teammates, who are now my best friends and will remain in my life long after college.\"",
-    projectImage: "/testimonials/food-saver.png",
-    projectName: "Food Saver",
+  { hackerImage: "/testimonials/nia-plair.jpg",
+    hackerName: "Nia Plair",
+    hackerDesc: "General Track",
+    testimonyDescription: "\"\"",
+    projectImage: "/testimonials/access-bsu.jpg",
+    projectName: "AccessBSU",
     projectCategories: "",
-    projectDescription: "A mobile app that manages the expiration dates of your groceries and sends push notifications to indicate when foods are about to go bad.",
+    projectDescription: "Accessibility is essential for the campus to be a welcoming and inclusive environment for all people. In this app, students and faculty will be able to mark areas in campus that are hazards and lack accommodations. They can also select what type of hazard it is from a drop down menu that includes whether an area has is wheelchair accessibility, flashing lights, excessive volume, uneven surfaces, and broken or heavy doors. Lastly, there is an icon that can selected for marking areas with accommodations such as a ramp, sidewalk, or wheelchair street entrance.",
     hasProject: true},
 ]
 

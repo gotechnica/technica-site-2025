@@ -177,12 +177,12 @@ export default defineComponent({
 
 .image-container img {
   border: 0.6rem solid #8E1E4D;
-  border-radius: 30px;  
+  border-radius: 60%;  
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
 }
 
