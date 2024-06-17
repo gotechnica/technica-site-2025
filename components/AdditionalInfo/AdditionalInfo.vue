@@ -4,7 +4,9 @@
       <div class="card" v-for="(tab) in AdditionalInfoTabs" :key="tab.index">
         <div class="card-header">{{ tab.title }}</div>
         <div class="card-content">{{ tab.content }}</div>
-        <PixelButton class="learn-more-button" text="Learn more" textColor="gray" :link="tab.link" />
+        <a :href="tab.link">
+          <button class=" learn-more-button">Learn More</button>
+        </a>
       </div>
     </div>
   </div>
@@ -24,10 +26,10 @@ interface InfoTab {
 }
 
 const AdditionalInfoTabs: InfoTab[] = [
-  { index: 0, title: 'Fellowship Program', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: 'fellows', color: '#FFFFFF', displayed: true },
-  { index: 1, title: 'Ambassadors', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: 'ambassadors', color: '#FFFFFF', displayed: false },
-  { index: 2, title: 'Mentors and Volunteers', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: 'mentors', color: '#FFFFFF', displayed: false },
-  { index: 3, title: 'Travel Info', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: 'travel', color: '#FFFFFF', displayed: false },
+  { index: 0, title: 'Fellowship Program', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/fellows', color: '#FFFFFF', displayed: true },
+  { index: 1, title: 'Ambassadors', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/ambassadors', color: '#FFFFFF', displayed: false },
+  { index: 2, title: 'Mentors and Volunteers', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/mentors', color: '#FFFFFF', displayed: false },
+  { index: 3, title: 'Travel Info', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/travel', color: '#FFFFFF', displayed: false },
 ];
 
 const mounted = ref(false);
@@ -64,18 +66,21 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
 .card {
   background-color: #D9D9D9;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
 .card-header {
-  font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   text-align: left;
+  border: none;
+  align-self: baseline;
+  padding-left: 0;
+  background-color: #D9D9D9;
 }
 
 .card-content {
@@ -84,6 +89,12 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
 }
 
 .learn-more-button {
-  margin-top: auto;
+  margin-top: 0.7rem;
+  background-color: #B097C0;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
 }
 </style>
