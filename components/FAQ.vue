@@ -49,7 +49,8 @@
     background: #B6A1C4;
     padding: 25px 15px 25px 15px;
     color: #1f035a;
-    margin: 0 auto;
+    margin: auto;
+    width: 90%;
     border: 5px solid #8C6E08;
   }
   

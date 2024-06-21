@@ -1,8 +1,8 @@
 <template>
   <title>Technica Home</title>
   <!-- Hero Section -->
-     <H1 v-if="width <= 768">FAQ</H1>
-    <H1 v-else>Frequently Asked Questions</H1>
+    <H1 v-if="width <= 768" class = faq>FAQ</H1>
+    <H1 v-else class = faq>Frequently Asked Questions</H1>
     <FAQ faqId="main" :qaList="qaList" class="main-section" />
 </template>
 
@@ -76,5 +76,7 @@ const qaList = [
 </script>
 
 <style scoped lang="scss">
-
+  .faq {
+    text-align: center;
+  }
 </style>
