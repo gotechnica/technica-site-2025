@@ -14,7 +14,7 @@
             </div>
             <div id="dummy"></div>
             <div class="buttons">
-                <button type="button" class="btn register" text="Register" @click="navigateTo('/register')">Register</button>
+                <button type="button" class="btn register" text="Register" @click="navigateTo('/Register')">Register</button>
                 <button type="button" class="btn learn-more" @click="TogglePopup">Learn More</button>
             </div>
         </div>
