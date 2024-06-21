@@ -9,15 +9,121 @@
     <!-- <H1 v-if="width <= 768">FAQ</H1>
     <H1 v-else>Frequently Asked Questions</H1>
     <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
+   
+  <!-- Hybrid Environment Section -->
+    <div class="container">
+      <h1>Hybrid Environment</h1>
+      <div class="row">
+        <div class="col-sm" v-for="(item, index) in items" :key="index">
+          <div class="larger-circle mx-auto">
+            <div class="icon-circle mx-auto">
+              <h2>LOGO</h2>
+            </div>
+          </div>
+          <div class="caption-box mx-auto">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tracks Section ------------------------------------------------------------------->
+    <div class="container">
+      <h1>Tracks</h1>
+      <div class="row">
+        <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
+          <div class="flip-card" :class="{ 'do-flip': card.flipped }">
+            <div class="flip-card-front">
+              <div class="card-body">
+                <h3 class="corner top-left">A<br />♠</h3>
+                <h3 class="corner bottom-right">A<br />♠</h3>
+                <h4 class="text-center">{{ card.title }}</h4>
+                <p>{{ card.frontContent }}</p>
+                <img class="card-img" :src="card.image" alt="Card Image">
+                <button class="flip-card-btn-turn-to-back" @click="toggleFlip(card)">More info</button>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-body">
+                <h4 class="text-center">More info</h4>
+                <p>{{ card.backContent }}</p>
+                <button class="flip-card-btn-turn-to-front" @click="toggleFlip(card)">Back to the front</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import { useWindowSize } from '@vueuse/core';
+
+// Hybrid Enviornment -----------------------------------------------------------------
+const items = ref([
+  { title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
+  { title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
+  { title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
+]);
 
 // Detect mobile layout based on screen width
 const { width } = useWindowSize();
+const isMobile = computed(() => width.value <= 768);
+
+// Tracks -----------------------------------------------------------------
+interface Card {
+  title: string;
+  frontContent: string;
+  backContent: string;
+  flipped: boolean;
+  image: string;
+}
+
+const cards = ref<Card[]>([
+  {
+    title: 'General',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'assets/in-person.png'
+  },
+  {
+    title: 'Beginner',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'assets/in-person.png'
+  },
+  {
+  title: 'Startup',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'assets/in-person.png'
+  },
+  {
+  title: 'Research',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'assets/in-person.png'
+  },
+  {
+  title: 'Hardware',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'assets/in-person.png'
+  }
+]);
+
+const toggleFlip = (card: Card) => {
+  card.flipped = !card.flipped;
+};
+
 
 // const qaList = [
 //   {
@@ -83,5 +189,192 @@ const { width } = useWindowSize();
 </script>
 
 <style scoped lang="scss">
+//Hybrid Enviornment Section -----------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.larger-circle, .icon-circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.larger-circle {
+  width: 216px;
+  height: 216px;
+  background-color: #6F6F6F;
+  margin-bottom: 20px;
+}
+
+.icon-circle {
+  width: 170px;
+  height: 170px;
+  background-color: #616161;
+}
+
+.caption-box {
+  width: 365px;
+  height: 443px;
+  background-color: #D9D9D9;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.caption-box h3, .caption-box p {
+  margin: 0;
+  color: #464343;
+}
+
+.caption-box h3 {
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #464343;
+}
+
+h1 {
+  font-size: 60px;
+  color: #000;
+  padding: 20px 0 74px;
+}
+
+.container {
+  text-align: center;
+}
+
+.icon-circle h2 {
+  margin: 0;
+}
+
+.col-sm {
+  padding: 15px;
+}
+
+//Tracks Section -----------------------------------------------------------------
+.container {
+  text-align: center;
+}
+body {
+  background: #f5f6fa;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #000000;
+  font-size: 20px;
+}
+
+.flip-card-3D-wrapper {
+    width: 100%;
+    max-width: 340px; 
+    margin: 10px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.flip-card {
+  height: 100%;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+  height: 446px;
+  width: 318px;
+}
+
+.do-flip {
+  transform: rotateY(-180deg);
+}
+
+.flip-card-btn-turn-to-back, .flip-card-btn-turn-to-front {
+  visibility: visible;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  background: #d9d9d9;
+  color: #000000;
+}
+
+.flip-card-front, .flip-card-back {
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  z-index: 2;
+  border-radius: 18px;
+}
+
+.corner {
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+  position: absolute;
+  color: #000;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.suit {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+.card-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flip-card-front {
+  background: #d9d9d9;
+}
+
+.flip-card-back {
+  background: #d9d9d9;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back h4 {
+  color: black;
+}
 
 </style>
