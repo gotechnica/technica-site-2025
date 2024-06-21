@@ -1,5 +1,6 @@
 <!-- this component uses vue3carousel with custom styling, see https://ismail9k.github.io/vue3-carousel/ -->
 <template>
+  <h1>Hear From Past Hackers!</h1>
   <h2>Testimonies and Projects</h2>
   <Carousel :itemsToShow="3" :wrapAround="true" :transition="500">
     <Slide v-for="slide in slides" :key="slide.hackerName" class="carousel__item">
@@ -29,9 +30,7 @@
     </template>
   </Carousel>
   <h3>Want to see more of last year's projects?</h3>
-  <div class="button-container">
-    <PixelButton text="Devpost" link="https://technica-2023.devpost.com/project-gallery" img="purple-button-normal.svg" hover="purple-button-hover.svg" click="purple-button-onclick.svg"/>
-  </div>
+  <a href = "https://technica-2023.devpost.com/project-gallery">link here</a>
 </template>
 
 <script setup lang="ts">
@@ -70,6 +69,11 @@ const slides = [
 
 <style scoped lang="scss">
 /* header styling */
+
+h1 {
+  text-align: center;
+}
+
 h2 {
   text-align: center;
   color: $DARK_PURPLE;
