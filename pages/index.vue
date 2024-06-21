@@ -249,6 +249,7 @@ h1 {
 }
 
 .container {
+  margin-top: 5rem;
   text-align: center;
 }
 
