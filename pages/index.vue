@@ -58,6 +58,11 @@
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <AdditionalInfo/>
+  </div>
+  
 </template>
 
 <script setup lang="ts">
