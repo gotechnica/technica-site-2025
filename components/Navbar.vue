@@ -37,13 +37,13 @@
                   </div>
                 </li>
 
-                <li v-else :key="link.name">
+                <!-- <li v-else :key="link.name">
                   <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
                     <NuxtLink :to="link.path" class="nuxt-link-active">
                       {{ link.name }}
                     </NuxtLink>
                   </div>
-                </li>
+                </li> -->
             </template>
           </ul>
         </div>

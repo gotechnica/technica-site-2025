@@ -27,7 +27,9 @@
         </div>
       </div>
     </div>
-
+    <div class="container">
+      <TestimoniesCarousel class="main-section"/>
+    </div>
     <!-- Tracks Section ------------------------------------------------------------------->
     <div class="container">
       <h1>Tracks</h1>
