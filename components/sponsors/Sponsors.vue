@@ -2,42 +2,42 @@
     <div class="sponsor-grid">
       <!-- Partner Sponsors -->
       <h4><b>Partner</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <img class="underline" src="../../public/sponsors/blue_sponsor_underlining.svg" />
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="partnerSponsors" />
       </div>
 
       <!-- Platinum Sponsors -->
       <h4><b>Platinum</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <img class="underline" src="../../public/sponsors/blue_sponsor_underlining.svg" />
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="platinumSponsors" />
       </div>
 
       <!-- Gold Sponsors -->
       <h4><b>Gold</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <img class="underline" src="../../public/sponsors/blue_sponsor_underlining.svg" />
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="goldSponsors" />
       </div>
 
       <!-- Silver Sponsors -->
       <h4><b>Silver</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <img class="underline" src="../../public/sponsors/blue_sponsor_underlining.svg" />
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="silverSponsors" />
       </div>
 
       <!-- Bronze Sponsors -->
       <h4><b>Bronze</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <img class="underline" src="../../public/sponsors/blue_sponsor_underlining.svg" />
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="bronzeSponsors" />
       </div>
 
       <!-- Starter Sponsors -->
       <h4><b>Starter</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <img class="underline" src="../../public/sponsors/blue_sponsor_underlining.svg" />
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="starterSponsors" />
       </div>

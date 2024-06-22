@@ -62,6 +62,10 @@
   <div class="container">
     <AdditionalInfo/>
   </div>
+
+  <div class="container">
+    <Sponsors/>
+  </div>
   
 </template>
 
