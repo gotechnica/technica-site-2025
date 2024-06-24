@@ -66,24 +66,21 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        // { dropdown: false, name: 'Register', path: '/Register' },
-        //{ dropdown: false, name: 'Expo', path: '/Expo' },
-        //{ dropdown: false, name: 'Schedule', path: '/Schedule' },
-        //{ dropdown: false, name: 'Maps', path: '/Maps' },
-        //{ dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
-        // { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/64Rg7Asws1ePgj2L6'},
-        // {
-        //   dropdown: true, 
-        //   showDropdown: false,
-        //   name: 'Programs',
-        //   items: [
-        //     { name: 'Fellows', path: '/Fellows' },
-        //     { name: 'Ambassadors', path: '/Ambassadors' },
-        //     { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
-        //     { name: 'Travel', path: '/Travel' },
-        //     { name: 'Tracks', path: '/Tracks' }
-        //   ]
-        //},
+        { dropdown: false, name: 'Register', path: '/Register' },
+        { dropdown: false, name: 'Expo', path: '/Expo' },
+        { dropdown: false, name: 'Schedule', path: '/Schedule' },
+        { dropdown: false, name: 'Maps', path: '/Maps' },
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
+        { dropdown: false, name: 'Data Rights', path: 'https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform'},
+        { dropdown: true, showDropdown: false, name: 'Programs',
+            items: [
+              { name: 'Fellows', path: '/Fellows' },
+              { name: 'Ambassadors', path: '/Ambassadors' },
+              { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+              { name: 'Travel', path: '/Travel' },
+              { name: 'Tracks', path: '/Tracks' }
+            ]
+        },
       ]
     }
   },

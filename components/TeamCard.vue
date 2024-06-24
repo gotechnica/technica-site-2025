@@ -58,7 +58,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Hide backface of the card */
   }
   
   /* front and back styling */
@@ -139,7 +138,7 @@
   
   @media screen and (max-width: 992px) {
   
-    .card-back, .card-front {
+    .card-front {
       flex-direction: column-reverse !important;
       padding: 0 !important;
       padding-bottom: 10rem !important;
@@ -148,7 +147,7 @@
   
     .left-column {
       width: 80%;
-      margin-top: 22vw;
+      //margin-top: 22vw;
     }
   
     .right-column {
@@ -185,7 +184,8 @@
     }
   
     .left-column {
-      margin-top: 30vw;
+      //margin-top: 30vw;
+
     }
   
     .right-column {
@@ -204,19 +204,28 @@
   }
   
   @media screen and (max-width: 445px) {
+    .card-front {
+      width: 75vw;
+    }
+
     p {
       font-size: 80%;
     }
   
     .left-column {
-      width: 80%;
-      margin-top: 50vw;
+      visibility: hidden;
+    }
+
+    .right-column {
+      width: 100%;
+      height: 75vh;
+      margin-top: 10vh;
     }
   }
   
   @media screen and (max-width: 365px) {
     .left-column {
-      margin-top: 75vw;
+      //margin-top: 75vw;
     }
   }
   

@@ -76,4 +76,66 @@ const { width } = useWindowSize();
 
 <style scoped lang="scss">
 
+.about-blurb {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  font-size: 110%;
+  margin-bottom: 0% !important;
+}
+
+.about-blurb a {
+  color: black;
+  font-weight: bold;
+}
+
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%; 
+} 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+}
+.keynote {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+}
+
+.about-container {
+  padding-top: 5vh;
+  border-radius: 33px;
+  background-color: rgba(255, 251, 239, 0.8);
+}
+
+.description {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 110%;
+}
+
+.main-section {
+  margin-bottom: 3%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10%;
+    max-width: 100% !important;
+  }
+}
 </style>

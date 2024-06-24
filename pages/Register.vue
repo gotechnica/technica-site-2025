@@ -459,6 +459,16 @@
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
+
+      <div class="form-check mt-4">
+        <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
+          :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
+
+        <label class="form-check-label">
+          I understand that the withdrawal or deletion of my data must be requested via the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform">Data Rights Contact Form</a>.
+        </label>
+      </div>
+
       <button type="submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
           click="purple-button-onclick.svg" />
@@ -524,6 +534,7 @@ interface RegisterForm {
   technicaValid?: string;
   mlhEmails?: string;
   agreeNewsletter?: string;
+  dataRights?: string;
 }
 
 const validationSchema = yup.object<RegisterForm>({
@@ -771,6 +782,7 @@ const accommodationsOptions = ref<Option[]>([
 const agreeRules = ref({ text: 'agree rules', value: 'Yes' });
 const agreeEmails = ref({ text: 'agree emails', value: 'Yes' });
 const agreeNewsletter = ref({ text: 'agree newsletter', value: 'Yes' });
+const agreeDataRights = ref({ text: 'agree dataRights', value: 'Yes' });
 
 interface UserInput {
   attendanceType: string;
@@ -960,6 +972,7 @@ const registerUser = async (values: Record<string, any>) => {
   if (values.agreeNewsletter == null) {
     values.agreeNewsletter = "No"
   }
+
 
   //Test input for submission
   // let testInput = {

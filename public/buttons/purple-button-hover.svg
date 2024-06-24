@@ -1,0 +1,27 @@
+<svg width="247" height="85" viewBox="0 0 247 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_493)">
+<path d="M210.952 17H41.0483C28.8714 17 19 27.0779 19 39.5097V48.4903C19 60.9221 28.8714 71 41.0483 71H210.952C223.129 71 233 60.9221 233 48.4903V39.5097C233 27.0779 223.129 17 210.952 17Z" fill="#7438D2"/>
+<path d="M207.232 22H44.7681C33.8505 22 25 30.7672 25 41.582V46.418C25 57.2328 33.8505 66 44.7681 66H207.232C218.15 66 227 57.2328 227 46.418V41.582C227 30.7672 218.15 22 207.232 22Z" stroke="#380F84" stroke-width="2" stroke-miterlimit="10"/>
+<rect width="9.04494" height="9.04494" transform="matrix(0.762737 -0.646709 -0.646709 -0.762737 213.207 30.3693)" fill="white"/>
+<rect width="4.707" height="4.707" transform="matrix(0.762737 -0.646709 -0.646709 -0.762737 232.935 20.1108)" fill="white"/>
+<circle cx="216.18" cy="21.1797" r="21.3484" transform="rotate(113.968 216.18 21.1797)" fill="url(#paint0_radial_1_493)" fill-opacity="0.8"/>
+<circle cx="25.1796" cy="68.1797" r="21.3484" transform="rotate(113.968 25.1796 68.1797)" fill="url(#paint1_radial_1_493)" fill-opacity="0.8"/>
+<rect width="4.707" height="4.707" transform="matrix(0.762737 -0.646709 -0.646709 -0.762737 217.044 11.6343)" fill="white"/>
+<rect width="4.707" height="4.707" transform="matrix(0.762737 -0.646709 -0.646709 -0.762737 217.044 11.6343)" fill="white"/>
+<rect width="9.41792" height="9.41792" transform="matrix(0.762737 -0.646709 -0.646709 -0.762737 34.0908 79.2742)" fill="white"/>
+<rect width="4.707" height="4.707" transform="matrix(0.762737 -0.646709 -0.646709 -0.762737 24.0439 65.6343)" fill="white"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1_493" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(216.18 21.1797) rotate(90) scale(21.3484)">
+<stop stop-color="#FFFFF8"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_1_493" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(25.1796 68.1797) rotate(90) scale(21.3484)">
+<stop stop-color="#FFFFF8"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_1_493">
+<rect width="247" height="85" fill="white"/>
+</clipPath>
+</defs>
+</svg>
