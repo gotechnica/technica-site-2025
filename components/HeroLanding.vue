@@ -3,19 +3,21 @@
         <div class="details" id="top">
             <div class="logos">
                 <div class="col-md">
-                    <img class = "technica-logo" src = "/logos/technica-logo-hi-res.png" width="30%"/>
+                    <img class = "alice-logo" src = "/hero/wonder-awaits.svg" width="25%"/>
+                </div>
+                <div class="col-md">
+                    <img class = "technica-logo" src = "/logos/technica-logo-hi-res.png" width="40%"/>
                 </div>
             </div>
 
             <div class="subtext">
-                <h1>Down the Rabbit Hole</h1>
-                <p class = "basic-info">October 21-22 at The Hotel, UMD | Hybrid Environment</p>
+                <p class = "basic-info">October 21-22 at the Armory, UMD | Hybrid Environment</p>
                 <p>The world's largest hackathon for underrepresented genders</p>
             </div>
             <div id="dummy"></div>
             <div class="buttons">
-                <button type="button" class="btn register" text="Register" @click="navigateTo('/Register')">Register</button>
-                <button type="button" class="btn learn-more" @click="TogglePopup">Learn More</button>
+                <VineButton text="Register" link="/register" img="green-button-regular.svg" hover="green-on-click.svg" click="green-visited.svg"/>
+                <VineButton text="Learn More" @click="TogglePopup" img="green-button-regular.svg" hover="green-on-click.svg" click="green-visited.svg"/>
             </div>
         </div>
     </div>
@@ -96,7 +98,7 @@ const TogglePopup = () => {
 <style scoped lang="scss">
 
     #wrapper {
-        background-image: url("/hero/john-fowler-RsRTIofe0HE-unsplash.jpg");
+        background-image: url("/hero/hero.svg");
         background-attachment:scroll;
         background-size: 100vw;
         resize: both;
@@ -118,12 +120,10 @@ const TogglePopup = () => {
 
     .logos {
         resize: both;
-        margin-top: 5%;
     }
 
     .subtext{
         color: white;
-        font-weight: bold;
          
         width: fit-content;
         text-shadow: 5px 5px 13px black;
@@ -136,12 +136,12 @@ const TogglePopup = () => {
         font-size: 15px;
     }
 
-    .subtext h1 {
-        font-size: 300%;
-    }
+   
     .basic-info{
-        margin-top: 1.5rem;
-        margin-bottom: 0.3rem;
+        font-weight: bold;
+        margin-top: 0.8rem;
+        margin-bottom: 0.1rem;
+        font-size: 25px !important;
     }
 
     #popup {
@@ -173,17 +173,7 @@ const TogglePopup = () => {
         margin-right:10%;
         width:auto;
     }
-
-    .buttons button {
-        display: block;
-        width: 17%;
-        padding: 1.5%;
-        margin-top: 2%;
-        border-radius: 20px;
-        font-size: 125%;
-        border: #aa96ca solid;
-    }
-
+ 
     .register {
         background-color: #aa96ca;
         color: white;
@@ -206,21 +196,20 @@ const TogglePopup = () => {
         color: white;
     }
 
+    .buttons {
+        width: 40%;
+    }
+
+    .buttons a {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -3%;
+    }
+
     @media screen and (max-width: 1048px) {
         #popup {
             margin-top: -40%;
             margin-left: 0;
-        }
-
-        
-        .buttons {
-            width: 175%;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .details {
-            padding: 2.5rem;
         }
 
         #wrapper, #wrapper.day {
@@ -230,19 +219,49 @@ const TogglePopup = () => {
             overflow-y: hidden;
             height: 100vh;
         }
+    }
 
-        .logos img {
-            width: 80%;
+    @media screen and (max-width: 768px) {
+        .details {
+            padding: 2.5rem;
+        }
+
+        .technica-logo {
+            width: 50%;
+        }
+
+        .alice-logo {
+            width: 35%;
         }
 
         #popup {
             margin-top: -65vw;
+        }
+
+        .subtext p {
+            font-size: 15px;
+        }
+
+    
+        .basic-info{
+            font-weight: bold;
+            margin-top: 0.8rem;
+            margin-bottom: 0.1rem;
+            font-size: 20px !important;
         }
     }
 
     @media screen and (max-width: 500px) {
         .details {
             padding: 1.5rem;
+        }
+
+        .technica-logo {
+            width: 80%;
+        }
+
+        .alice-logo {
+            width: 50%;
         }
 
         #wrapper, #wrapper.day {
@@ -252,10 +271,21 @@ const TogglePopup = () => {
             height: 100vh;
         }
 
-        .buttons button {
-            width: 40% !important;
+        .subtext p {
+            font-size: 15px;
         }
 
+    
+        .basic-info{
+            font-weight: bold;
+            margin-top: 0.8rem;
+            margin-bottom: 0.1rem;
+            font-size: 17px !important;
+        }
+
+        .buttons a {
+            width: 10rem;
+        }
         #popup {
             margin-top: -90vw;
         }

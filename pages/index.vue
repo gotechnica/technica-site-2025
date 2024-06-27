@@ -1,76 +1,78 @@
 <template>
   <title>Technica Home</title>
   <!-- Hero Section -->
+  <div class="main-body">
   <HeroLanding/>
   <!--About Section-->
-  <div class="container">
-    <About/>
-    <!-- Frequently Asked Questions -->
-    <!-- <H1 v-if="width <= 768">FAQ</H1>
-    <H1 v-else>Frequently Asked Questions</H1>
-    <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
-   
-  <!-- Hybrid Environment Section -->
     <div class="container">
-      <h1>Hybrid Environment</h1>
-      <div class="row">
-        <div class="col-sm" v-for="(item, index) in items" :key="index">
-          <div class="larger-circle mx-auto">
-            <div class="icon-circle mx-auto">
-              <h2>LOGO</h2>
-            </div>
-          </div>
-          <div class="caption-box mx-auto">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.content }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <TestimoniesCarousel class="main-section"/>
-    </div>
-    <!-- Tracks Section ------------------------------------------------------------------->
-    <div class="container">
-      <h1>Tracks</h1>
-      <div class="row">
-        <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
-          <div class="flip-card" :class="{ 'do-flip': card.flipped }">
-            <div class="flip-card-front">
-              <div class="card-body">
-                <h3 class="corner top-left">A<br />♠</h3>
-                <h3 class="corner bottom-right">A<br />♠</h3>
-                <h4 class="text-center">{{ card.title }}</h4>
-                <p>{{ card.frontContent }}</p>
-                <img class="card-img" :src="card.image" alt="Card Image">
-                <button class="flip-card-btn-turn-to-back" @click="toggleFlip(card)">More info</button>
+      <About/>
+      <!-- Frequently Asked Questions -->
+      <!-- <H1 v-if="width <= 768">FAQ</H1>
+      <H1 v-else>Frequently Asked Questions</H1>
+      <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
+    
+    <!-- Hybrid Environment Section -->
+      <div class="container">
+        <h1>Hybrid Environment</h1>
+        <div class="row">
+          <div class="col-sm" v-for="(item, index) in items" :key="index">
+            <div class="larger-circle mx-auto">
+              <div class="icon-circle mx-auto">
+                <h2>LOGO</h2>
               </div>
             </div>
-            <div class="flip-card-back">
-              <div class="card-body">
-                <h4 class="text-center">More info</h4>
-                <p>{{ card.backContent }}</p>
-                <button class="flip-card-btn-turn-to-front" @click="toggleFlip(card)">Back to the front</button>
-              </div>
+            <div class="caption-box mx-auto">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.content }}</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="container">
+        <TestimoniesCarousel class="main-section"/>
+      </div>
+      <!-- Tracks Section ------------------------------------------------------------------->
+      <div class="container">
+        <h1>Tracks</h1>
+        <div class="row">
+          <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
+            <div class="flip-card" :class="{ 'do-flip': card.flipped }">
+              <div class="flip-card-front">
+                <div class="card-body">
+                  <h3 class="corner top-left">A<br />♠</h3>
+                  <h3 class="corner bottom-right">A<br />♠</h3>
+                  <h4 class="text-center">{{ card.title }}</h4>
+                  <p>{{ card.frontContent }}</p>
+                  <img class="card-img" :src="card.image" alt="Card Image">
+                  <button class="flip-card-btn-turn-to-back" @click="toggleFlip(card)">More info</button>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="card-body">
+                  <h4 class="text-center">More info</h4>
+                  <p>{{ card.backContent }}</p>
+                  <button class="flip-card-btn-turn-to-front" @click="toggleFlip(card)">Back to the front</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="container">
-    <AdditionalInfo/>
-  </div>
+    <div class="container">
+      <AdditionalInfo/>
+    </div>
 
-  <div class="container">
-    <Sponsors/>
-  </div>
+    <div class="container">
+      <Sponsors/>
+    </div>
 
-  <div class="container">
-    <H1 v-if="width <= 768" class = faq>FAQ</H1>
-    <H1 v-else class = faq>Frequently Asked Questions</H1>
-    <FAQ faqId="main" :qaList="qaList" class="main-section" />
+    <div class="container">
+      <H1 v-if="width <= 768" class = faq>FAQ</H1>
+      <H1 v-else class = faq>Frequently Asked Questions</H1>
+      <FAQ faqId="main" :qaList="qaList" class="main-section" />
+    </div>
   </div>
 </template>
 
@@ -211,6 +213,11 @@ const qaList = [
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.main-body {
+  background: linear-gradient(180deg, #351C33 30%, #F4D1D9 75%);
+}
+
 .larger-circle, .icon-circle {
   border-radius: 50%;
   display: flex;
