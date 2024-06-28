@@ -6,22 +6,14 @@
   <!--About Section-->
     <div class="container">
       <About/>
-      <!-- Frequently Asked Questions -->
-      <!-- <H1 v-if="width <= 768">FAQ</H1>
-      <H1 v-else>Frequently Asked Questions</H1>
-      <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
-    
+    </div>
     <!-- Hybrid Environment Section -->
       <div class="container">
-        <h1>Hybrid Environment</h1>
+        <Header>Hybrid Environment</Header>
         <div class="row">
           <div class="col-sm" v-for="(item, index) in items" :key="index">
-            <div class="larger-circle mx-auto">
-              <div class="icon-circle mx-auto">
-                <h2>LOGO</h2>
-              </div>
-            </div>
-            <div class="caption-box mx-auto">
+            <img class="hybrid-img" :src=item.image>
+            <div class="caption-box mx-auto" :class="item.class">
               <h3>{{ item.title }}</h3>
               <p>{{ item.content }}</p>
             </div>
@@ -33,7 +25,7 @@
       </div>
       <!-- Tracks Section ------------------------------------------------------------------->
       <div class="container">
-        <h1>Tracks</h1>
+        <Header>Tracks</Header>
         <div class="row">
           <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
             <div class="flip-card" :class="{ 'do-flip': card.flipped }">
@@ -58,7 +50,6 @@
           </div>
         </div>
       </div>
-    </div>
 
     <div class="container">
       <AdditionalInfo/>
@@ -69,8 +60,8 @@
     </div>
 
     <div class="container">
-      <H1 v-if="width <= 768" class = faq>FAQ</H1>
-      <H1 v-else class = faq>Frequently Asked Questions</H1>
+      <Header v-if="width <= 768" class = faq>FAQ</Header>
+      <Header v-else class = faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
   </div>
@@ -82,9 +73,9 @@ import { useWindowSize } from '@vueuse/core';
 
 // Hybrid Enviornment -----------------------------------------------------------------
 const items = ref([
-  { title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
+  { image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
+  { image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
+  { image: "/hybrid/virtual.svg", class: "virtual",  title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
 ]);
 
 // Detect mobile layout based on screen width
@@ -225,23 +216,39 @@ body {
   justify-content: center;
 }
 
-.larger-circle {
-  width: 216px;
-  height: 216px;
-  background-color: #6F6F6F;
-  margin-bottom: 20px;
+.hybrid-img{
+  margin-bottom: 5%;
 }
 
-.icon-circle {
-  width: 170px;
-  height: 170px;
-  background-color: #616161;
+.in-person {
+  background-color: $LIGHTGREEN;
+  border: $DARKGREEN solid 5px;
+
+  h3 {
+    -webkit-text-stroke: 2px $DARKGREEN;
+    text-shadow: $DARKGREEN;
+  }
+}
+.hybrid {
+  background-color: $LIGHTPINK;
+  border: $DARKPINK solid 5px;
+  h3 {
+    -webkit-text-stroke: 2px $DARKPINK;
+    text-shadow: $DARKPINK;
+  }
+}
+.virtual {
+  background-color: $LIGHTYELLOW;
+  border: $DARKYELLOW solid 5px;
+  h3 {
+    -webkit-text-stroke: 2px $DARKYELLOW;
+    text-shadow: $DARKYELLOW;
+  }
 }
 
 .caption-box {
   width: 365px;
   height: 443px;
-  background-color: #D9D9D9;
   border-radius: 40px;
   box-sizing: border-box;
   padding: 40px;
@@ -253,12 +260,13 @@ body {
 
 .caption-box h3, .caption-box p {
   margin: 0;
-  color: #464343;
+  color: white;
 }
 
 .caption-box h3 {
   font-size: 36px;
   margin-bottom: 0.5rem;
+  border: $DARKGREEN;
 }
 
 p {
@@ -274,6 +282,10 @@ h1 {
 .container {
   margin-top: 5rem;
   text-align: center;
+}
+
+.header-container {
+  margin-bottom: 2%;
 }
 
 .icon-circle h2 {
@@ -399,6 +411,12 @@ body {
 
 .flip-card-back h4 {
   color: black;
+}
+
+@media screen and (max-width: 400px) {
+  .caption-box {
+    width: 300px;
+  }
 }
 
 </style>

@@ -1,6 +1,6 @@
 <!-- this component uses vue3carousel with custom styling, see https://ismail9k.github.io/vue3-carousel/ -->
 <template>
-  <h1>Hear From Past Hackers!</h1>
+  <Header>Hear From Past Hackers!</Header>
   <h2>Testimonies and Projects</h2>
   <Carousel :itemsToShow="3" :wrapAround="true" :transition="500">
     <Slide v-for="slide in slides" :key="slide.hackerName" class="carousel__item">
@@ -20,17 +20,16 @@
     <template #addons>
       <Navigation >
         <template #next>
-            <img class="arrowButtonRight" src="/testimonials/testimonies-next-arrow.svg">
+            <img class="arrowButtonRight" src="/testimonials/right-arrow.svg">
         </template>
         <template #prev>
-            <img class="arrowButtonLeft" src="/testimonials/testimonies-back-arrow.svg">
+            <img class="arrowButtonLeft" src="/testimonials/left-arrow.svg">
         </template>
       </Navigation>
       <Pagination />
     </template>
   </Carousel>
-  <h3>Want to see more of last year's projects?</h3>
-  <a href = "https://technica-2023.devpost.com/project-gallery">link here</a>
+  <h3>Want to see more of last year's <a href = "https://technica-2023.devpost.com/project-gallery" target="_blank">projects?</a></h3>
 </template>
 
 <script setup lang="ts">
@@ -76,12 +75,23 @@ h1 {
 
 h2 {
   text-align: center;
-  color: $DARK_PURPLE;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 2%;
 } 
 
 h3 {
   text-align: center;
-  color: #464343;
+  color: white;
+}
+
+a {
+  color: white;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: #c1c9c4;
 }
 /* button styling */
 .button-container {
@@ -99,7 +109,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFBEF;
+  background-color: transparent;
 }
 /* right/left button styling */
 .arrowButtonRight {

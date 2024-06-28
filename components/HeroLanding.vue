@@ -40,11 +40,6 @@
     </div>
     <div  v-else>
         <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
-           <!-- <div class="icons pull-left">
-                <img class="yellow-icon" src = "/hero-landing/yellow.svg"/>
-                <img class="pink-icon" src = "/hero-landing/pink.svg"/>
-                <img class="blue-icon" src = "/hero-landing/blue.svg"/>
-            </div> -->
             <div id="popup-inner">
                 <h3>What is <br/>Create Your Reality*?</h3>
                 <p> In this new world, the possibilities are endless. 
