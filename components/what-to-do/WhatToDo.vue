@@ -1,6 +1,6 @@
 <!-- Template -->
 <template>
-    <Carousel :items-to-show="2" :wrap-around="true" :autoplay="10000" pause-autoplay-on-hover>
+    <Carousel :items-to-show="2" :wrap-around="true" :autoplay="10000000" pause-autoplay-on-hover>
         <Slide v-for="slide in slides" :key="slide.whatToDoTitle">
             <WhatToDoCarouselSlide 
             :what-to-do-img="slide.whatToDoImg"
@@ -60,20 +60,32 @@ const slides = [
   transition: 0.31s;
   opacity: 0.6;
   scale: 0.5;
+  background-color: transparent;
   /* hiding slides by default */
   visibility: hidden; 
 }
 
-.carousel__slide--prev {
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+}
+
+
+.carousel__slide--sliding {
+  transition: 0.7s;
+}
+
+
+.carousel__slide--prev, .carousel__slide--next {
   opacity: 0.6;
   visibility: visible;
-  transform: translateX(9rem) scale(1.5);
+  transform: translateX(30rem) scale(1.5);
 }
 
 .carousel__slide--next {
   opacity: 0.6;
   visibility: visible;
-  transform: translateX(-9rem) scale(1.5);
+  transform: translateX(-30rem) scale(1.5);
 }
 
 .carousel__slide--active {
@@ -82,6 +94,21 @@ const slides = [
   transform: scale(2);
   z-index: 3;
   transition: 0.5s
+}
+
+@media (max-width: 992px) {
+  .carousel__slide--next, .carousel__slide--prev {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 450px) {
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: -10%;
+    z-index: 3 !important;
+    position: relative;
+  }
 }
 
 

@@ -60,16 +60,16 @@ export default defineComponent({
     align-content: center;
     width: 50vw;  
     height: 40vw;
-    max-width: 80vw;
-    max-height: 60vh;
-    border-radius: 3rem;
+    border-radius: 1rem;
+    border-width: 0;
+    background-color: transparent;
     transition: transform 0.6s;
     
   }
    
   .card-contents {
     border: 0.7rem solid #1e638e;
-    border-radius: 3rem;
+    border-radius: 1rem;
     background-color: #FFFBEF;
     width: 100%;
     height: 100%;
@@ -83,7 +83,7 @@ export default defineComponent({
 
   .image-container img{
     border-radius: .5rem;
-    max-width: 45vw;
+    max-width: 100%;
   }
 
 
@@ -119,6 +119,58 @@ export default defineComponent({
     font-weight: 600;
     font-size: 2.5rem;
     }
+
+
+/* responsivity */
+@media screen and (max-width: 1300px) {
+  p {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .card, .card-contents {
+    height:75%;
+  }
+  
+  p {
+    font-size: 80%;
+  }
+
+  .card-text {
+    padding-top: 10rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .card, .card-contents {
+    height:75%;
+  }
+  
+}
+
+@media screen and (max-width: 630px) {
+  .card {
+    width: 70vw;
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  p {
+    font-size: 80%;
+  }
+
+}
+
+@media screen and (max-width: 365px) {
+  .card, .card-contents {
+    width: 70vw;
+    height: 650px;
+  }
+}  
 
   </style>
   

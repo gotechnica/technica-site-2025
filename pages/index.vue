@@ -9,7 +9,11 @@
     <!-- <H1 v-if="width <= 768">FAQ</H1>
     <H1 v-else>Frequently Asked Questions</H1>
     <FAQSection faqId="main" :qaList="qaList" class="main-section" /> -->
-   
+  
+    <!-- What Can You Do At Technica-->
+  <h1 class="section-heading">What Can You Do at Technica?</h1>
+  <WhatToDo />
+
   <!-- Hybrid Environment Section -->
     <div class="container">
       <h1>Hybrid Environment</h1>
@@ -72,10 +76,6 @@
     <H1 v-else class = faq>Frequently Asked Questions</H1>
     <FAQ faqId="main" :qaList="qaList" class="main-section" />
   </div>
-
-    <!-- What Can You Do At Technica-->
-    <h1 class="section-heading">What Can You Do at Technica?</h1>
-    <WhatToDo/>
 
 </template>
 
