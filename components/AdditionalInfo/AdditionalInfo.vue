@@ -2,7 +2,7 @@
   <div class="additional-info-container" v-if="mounted">
     <div class="cards-container">
       <div class="card" v-for="(tab) in AdditionalInfoTabs" :key="tab.index" :style="{ backgroundColor: tab.color }">
-        <div class="card-header">{{ tab.title }}</div>
+        <div class="card-header" :style="{ textShadow: `2px 2px 0 ${tab.buttonColor}, -2px 2px 0 ${tab.buttonColor}, 2px -2px 0 ${tab.buttonColor}, -2px -2px 0 ${tab.buttonColor}` }">{{ tab.title }}</div>
         <div class="card-content">{{ tab.content }}</div>
         <a :href="tab.link" class="learn-more-link">
           <button class="learn-more-button" :style="{ backgroundColor: tab.buttonColor }">
@@ -15,6 +15,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
@@ -34,7 +35,7 @@ const AdditionalInfoTabs: InfoTab[] = [
   { index: 0, title: 'Fellowship Program', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/fellows', color: '#FFFFFF', buttonColor: '#6c4a70', displayed: true },
   { index: 1, title: 'Ambassadors', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/ambassadors', color: '#FFFFFF', buttonColor: '#6c4a70', displayed: false },
   { index: 2, title: 'Mentors and Volunteers', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/mentors', color: '#FFFFFF', buttonColor: '#6c4a70', displayed: false },
-  { index: 3, title: 'Travel Info', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/travel', color: '#E9CB8D', buttonColor: '#6c4a70', displayed: false },
+  { index: 3, title: 'Travel Info', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/travel', color: '#E9CB8D', buttonColor: '#FFCE64', displayed: false },
 ];
 
 const mounted = ref(false);
@@ -75,6 +76,7 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   flex-direction: column;
   align-items: center;
   text-align: center;
+  color: white;
 }
 
 .card-header {
@@ -84,6 +86,12 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   border: none;
   padding-left: 0;
   background-color: inherit;
+  font-weight: bold;
+  text-shadow: 
+    1px 1px 0px ,
+    -1px 1px 0px ,
+    1px -1px 0px white, 
+    -1px -1px 0px white; 
 }
 
 .card-content {
@@ -95,6 +103,7 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .learn-more-button {
@@ -118,14 +127,16 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
 }
 
 .leaf-icon-top-right {
-  top: -0.75rem;
+  top: -0.3rem;
   right: 2rem;
-  width: 30%;
+  width: 25%;
+  height: 30%;
 }
 
 .leaf-icon-bottom-left {
-  bottom: -0.15rem;
+  bottom: 0.3rem;
   left: -0.15rem;
   width: 20%;
+  height: 40%;
 }
 </style>
