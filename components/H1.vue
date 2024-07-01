@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <img src="/headings/heading.svg" />
+    <!--<img src="/headings/heading.svg"/>-->
     <h1><slot /></h1>
   </div>
 </template>

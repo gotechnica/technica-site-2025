@@ -2,7 +2,11 @@
   <title>Fellows</title>
     <div class="container">
       <div class="row fellow-header">
-        <H1 class="title">Virtual Fellowship Program</H1>
+        <!--<H1 class="title">Virtual Fellowship Program</H1>-->
+        <div class = "header">
+          <img src="/headings/header.png">
+          <h1>Virtual Fellowship Program</h1>
+        </div>
         <!-- <h4>
           Work on real-world coding projects for rising college freshman, no
           experience required.
@@ -59,7 +63,7 @@
           <div class="col section section-req">
             <h3>Application Requirements</h3>
             <ul>
-                <li v-for="item in items" :key="item">
+                <li style = "color: white;" v-for="item in items" :key="item">
                 {{ item }}
                 </li>
             </ul>
@@ -200,16 +204,47 @@
 	}
 }
 
-.fellow-header {
+.header {
+  align-items: center;
+  color: #653553;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
   text-align: center;
 }
 
+.header img {
+  width: 66%;
+}
+
+.fellow-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  padding-top: 100px;
+}
+
 .fellow-header h4 {
-  color: $LIGHT_PURPLE;
+  color: #ffce64;
+}
+
+.fellow-header h1 {
+  font-size: 26px;
+  position: absolute;
+  transform: translate(0, -75%);
+  top: 50%;
+  margin: 0;
+}
+
+.fellow-header img {
+  width: calc(10rem + 30vw);
 }
 
 h3 {
-  color: $DARK_PURPLE;
+  color: #ffce64;
 }
 
 .faq-heading {
@@ -282,6 +317,19 @@ h3 {
       height: 2rem;
       border-radius: 2rem;
       cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header img {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+    word-wrap: normal;
+    padding-top: 0.5rem;
+    color: black;
   }
 }
 </style>
