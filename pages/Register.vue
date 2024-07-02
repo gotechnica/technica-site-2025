@@ -292,7 +292,6 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label">Which track do you wish to participate in?*</label>
-          <p><b>**Note</b>: All special tracks are closed now.</p>
           <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
             <Field name="track" :value="option.value" type="radio" class="form-check-input" />
             <label class="form-check-label">{{ option.text }}</label>
