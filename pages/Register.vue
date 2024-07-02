@@ -1,10 +1,9 @@
 <template>
   <title>Register</title>
   <div id="form" class="container">
-    <h1 class="text-center my-5">Registration is closed for Technica 2024!</h1>
-    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
-      check-in instructions. We can't wait for you to <b>#CreateYourReality</b> at Technica!</p>
     <h1 class="text-center my-4">Technica Registration Form 2024</h1>
+    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
+      check-in instructions. We can't wait for you to <b>#</b> at Technica!</p>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
       <H1>Hacker Info</H1>
@@ -293,7 +292,6 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label">Which track do you wish to participate in?*</label>
-          <p><b>**Note</b>: All special tracks are closed now.</p>
           <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
             <Field name="track" :value="option.value" type="radio" class="form-check-input" />
             <label class="form-check-label">{{ option.text }}</label>
@@ -407,22 +405,23 @@
       <!-- RULES AND PRIVACY POLICY -->
 
       <H1 class="mb-2">Rules and Privacy Policies</H1>
-      <div class="form-check">
+      <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          I agree to the conditions below:
-        </label>
-      </div>
-      <ul class="conditions mt-4 ms-4">
-        <li>
           <b>I identify as a person of an underrepresented gender in tech. </b>This includes but is not limited to:
           cisgender women, transgender
           women, transgender men, non-binary individuals, genderqueer
-          individuals, and other underrepresented genders.
-        </li>
+          individuals, and other underrepresented genders. I further agree to the <a href="2024 Technica Terms and Code of Conduct.docx.pdf">Technica Terms and Code of Conduct</a>.
+        </label>
+      </div>
 
-        <li>
+      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="mlhValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValid'] }" required />
+        <label class="form-check-label">
           I authorize you to share my application/registration information with
           Major League Hacking for event administration, ranking, and MLH
           administration in-line with the
@@ -432,19 +431,14 @@
             Conditions</a>
           and the
           <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.
-        </li>
-
-        <li>
-          I have read and agree to the
-          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.
-        </li>
-      </ul>
-      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
+        </label>
+      </div>
+      
+      <ErrorMessage :name="'mlhValid'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
         <Field name="mlhEmails" type="checkbox" class="form-check-input" :value="agreeEmails.value"
           :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
-
         <label class="form-check-label">
           I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
           announcements.
@@ -522,6 +516,7 @@ interface RegisterForm {
   resume?: any;
   accommodations?: string;
   technicaValid?: string;
+  mlhValid?: string;
   mlhEmails?: string;
   agreeNewsletter?: string;
 }
@@ -652,7 +647,8 @@ const validationSchema = yup.object<RegisterForm>({
     }),
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
-  technicaValid: yup.string().required('Agreement of conditions is required'),
+  technicaValid: yup.string().required('Agreement of Technica conditions is required'),
+  mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
 
 interface Option {
