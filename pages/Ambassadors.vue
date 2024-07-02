@@ -1,7 +1,11 @@
 <template>
   <title>Ambassadors</title>
   <div class="container">
-    <H1 class="title">Become an Ambassador</H1>
+    <!--<H1 class="title">Become an Ambassador</H1>-->
+    <div class= "header">
+      <img src="/headings/header2024.png">
+      <h1>Become an Ambassador</h1>
+    </div>
     <h3>Applications are now open!</h3>
     <p>
       We are very excited to launch the fifth year of Technica Campus
@@ -117,20 +121,22 @@ h3,
 h3 {
   text-align: center;
   margin-bottom: 1rem;
-  color: $DARK-PURPLE;
+  color: #ffce64;
 }
 
 p {
   text-align: center;
+  color: #FFFFFF; 
 }
 
 .list li {
   padding: 0.3rem 0px;
   margin-left: 2rem;
+  color: #FFFFFF;
 }
 
 a {
-  color: $DARK-PURPLE;
+  color: #ffce64;
 }
 
 .row {
@@ -159,9 +165,40 @@ a {
   margin: auto;
 }
 
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header-image {
+  position: relative;
+  display: inline-block;
+}
+
+.header img{
+  width: 100%;
+}
+
+.header h1{
+  position: absolute;
+  bottom:65%;
+  left: 50%;
+  transform: translateX(-50%);
+  color:#653553;
+  margin: 0;
+  padding: 0.5rem;
+}
+
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 100%;
+  .header img {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+    word-wrap: normal;
+    padding-top: 0.5rem;
+    color: black;
   }
 
   .list li { 
