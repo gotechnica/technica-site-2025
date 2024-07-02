@@ -1,7 +1,5 @@
 <template>
   <title>Technica Home</title>
- 
-    <!-- Hear from past hackers -->
     <TeamsCarousel class="main-section"/>
 </template>
 

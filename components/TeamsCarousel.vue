@@ -1,6 +1,6 @@
 <template>
     <h2>Meet the Team</h2>
-    <Carousel :itemsToShow="3" :wrapAround="true" :transition="500">
+    <Carousel :itemsToShow="2" :wrapAround="true" :transition="500">
       <Slide v-for="slide in slides" :key="slide.teamName" class="carousel__item">
           <TeamCard 
             :team-image="slide.teamImage"
@@ -98,11 +98,11 @@
   /* right/left button styling */
   .arrowButtonRight {
     height: 4rem;
-    padding-right: 45vw;
+    padding-right: 30vw;
   }
   .arrowButtonLeft {
     height: 4rem;
-    padding-left: 45vw;
+    padding-left: 30vw;
   }
   
   .carousel__prev,
@@ -142,12 +142,21 @@
     visibility: visible;
     transform: scale(2);
     z-index: 3;
-    transition: 0.5s
+    transition: 0.5s;
   }
   /* after this width, too cramped to show all 3 cards */
   @media (max-width: 992px) {
     .carousel__slide--next, .carousel__slide--prev {
       visibility: hidden;
+    }
+
+    .arrowButtonRight {
+      height: 3rem;
+      padding-right: 20vw; 
+    }
+    .arrowButtonLeft {
+      height: 3rem;
+      padding-left: 20vw;
     }
   }
   

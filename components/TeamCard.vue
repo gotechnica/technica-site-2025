@@ -45,6 +45,7 @@
     border-width: 0;
     border-radius: 3rem;
     background-color: transparent;
+    margin: 0px;
   }
   
   .card-front {
@@ -131,50 +132,34 @@
   
   /* responsivity */
   @media screen and (max-width: 1300px) {
-    p {
-      font-size: 1.2vw;
+    .card .card-front {
+      width: 75vw;
     }
   }
   
-  @media screen and (max-width: 992px) {
-  
+  @media screen and (max-width: 1000px) {
     .card-front {
-      flex-direction: column-reverse !important;
-      padding: 0 !important;
-      padding-bottom: 10rem !important;
-      background-image: none;
+      width: 75vw;
     }
-  
-    .left-column {
-      width: 80%;
-      //margin-top: 22vw;
-    }
-  
-    .right-column {
-      position: absolute;
-      top: -80px;
-      margin-left: 0;
-    }
-  
+
     .card {
-      width: 55vw;
-      height: 55vw;
+      width: 75vw;
     }
-  
-    .image-container {
-      width: 75%;
-      padding-top: 75%;
-      margin: 0;
-    }
-  
-    button.flip-button {
-      font-size: 0.9rem;
-    }
-  
+
     p {
       font-size: 80%;
     }
   
+    .left-column {
+      visibility: hidden;
+      margin-top: 0px;
+    }
+
+    .right-column {
+      margin-top: 0px;
+      width: 100%;
+      height: 75vh;
+    }
   }
   
   @media screen and (max-width: 768px) {
@@ -184,15 +169,13 @@
     }
   
     .left-column {
-      //margin-top: 30vw;
-
+      visibility: hidden;
     }
   
     .right-column {
-      width: 50%;
-      position: absolute;
-      top: -60px;
-      margin-left: 0;
+      width: 100%;
+      height: 75vh;
+      margin-top: 0;
     }
   }
   
@@ -201,10 +184,24 @@
       width: 70vw;
       height: 650px;
     }
+
+    .left-column {
+      visibility: hidden;
+    }
+
+    .right-column {
+      margin-top: 0px;
+      width: 100%;
+      height: 75vh;
+    }
   }
   
   @media screen and (max-width: 445px) {
     .card-front {
+      width: 75vw;
+    }
+
+    .card {
       width: 75vw;
     }
 
@@ -225,7 +222,11 @@
   
   @media screen and (max-width: 365px) {
     .left-column {
-      //margin-top: 75vw;
+      visibility: hidden;
+    }
+
+    .right-column {
+      width: 75vw;
     }
   }
   
