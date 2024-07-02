@@ -152,13 +152,10 @@
   
     .left-column {
       visibility: hidden;
-      margin-top: 0px;
     }
 
     .right-column {
-      margin-top: 0px;
       width: 100%;
-      height: 75vh;
     }
   }
   
@@ -174,7 +171,6 @@
   
     .right-column {
       width: 100%;
-      height: 75vh;
       margin-top: 0;
     }
   }
@@ -192,7 +188,6 @@
     .right-column {
       margin-top: 0px;
       width: 100%;
-      height: 75vh;
     }
   }
   
@@ -215,7 +210,6 @@
 
     .right-column {
       width: 100%;
-      height: 75vh;
       margin-top: 10vh;
     }
   }

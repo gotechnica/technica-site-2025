@@ -162,8 +162,6 @@
   
   @media (max-width: 450px) {
     h2 {
-      font-size: 1.2rem;
-      margin-bottom: -10%;
       z-index: 3 !important;
       position: relative;
     }
