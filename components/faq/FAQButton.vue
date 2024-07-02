@@ -100,7 +100,7 @@ onMounted(() => {
   border: none;
   width: 100%;
   text-align: left;
-  color: #1f035a;
+  color: #000000;
   font-weight: 500;
   font-size: 18px;
 }
@@ -108,10 +108,11 @@ onMounted(() => {
 .card-text {
   margin-bottom: 20px;
   padding: 0;
+  color: black;
 }
 
 .answer-container {
-  color: #1f035a;
+  color: #000000;
   font-weight: 500;
   font-size: 18px;
 
@@ -142,6 +143,6 @@ hr {
   border: none;
   height: 2px;
   opacity: 1;
-  background: #1f035a;
+  background: #000000;
 }
 </style>

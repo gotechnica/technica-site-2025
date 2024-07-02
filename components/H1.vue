@@ -27,8 +27,7 @@ h1 {
   margin-top: calc(-3.9rem - 7vw);
   margin-bottom: calc(1rem + 5.5vw);
   margin-right: 2rem;
-  color: $DARK_PURPLE;
-  white-space: nowrap;
+  color: #653564;;
 }
 
 .header-container {

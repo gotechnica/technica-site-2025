@@ -38,7 +38,7 @@
 html,
 body {
   font-family: 'Poppins' !important;
-  background-color: #FFFBEF;
+  background-image:linear-gradient(#351C33, #F4D1D9);
 }
 
 h1,
@@ -47,6 +47,10 @@ h3,
 h4 {
   font-family: 'Poppins';
   font-weight: bold;
+}
+
+p{
+  color:white;
 }
 
 .carousel__slide {

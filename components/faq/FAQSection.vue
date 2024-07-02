@@ -45,11 +45,11 @@ onMounted(() => {
 <style scoped lang="scss">
 .faq-section-wrapper {
   border-radius: 33px;
-  background: rgba(222, 182, 42, 0.3);
+  background: #69B7AE;
   padding: 25px 15px 25px 15px;
-  color: #1f035a;
+  color: black;
   margin: 0 auto;
-  border: 5px solid #8C6E08;
+  border: 5px solid #00473E;
 }
 
 @media screen and (max-width: 768px) {

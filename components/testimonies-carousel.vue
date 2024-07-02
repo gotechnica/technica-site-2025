@@ -48,7 +48,7 @@ const slides = [
   { hackerImage: "/testimonials/claire-chen.jpg",
     hackerName: "Claire Chen",
     hackerDesc: "Startup Track",
-    testimonyDescription: "\"10/10 experience :)! It was a comfortable experience and it was easy to talk to people and go up to organizers and directors during.\"",
+    testimonyDescription: "\"10/10 experience :)! It was a comfortable experience and it was easy to talk to people and go up to organizers and directors during. The community events like the ice cream social was a nice way to meet new people.\"",
     projectImage: "/testimonials/study-terp-logo.jpg",
     projectName: "Study Terp",
     projectCategories: "Winner: Most Creative Use of GitHub - Technica 2023",
@@ -58,12 +58,18 @@ const slides = [
   { hackerImage: "/testimonials/nia-plair.jpg",
     hackerName: "Nia Plair",
     hackerDesc: "General Track",
-    testimonyDescription: "\"\"",
+    testimonyDescription: "\"Everyone was kind and supportive. I created a website that could report inaccessible areas to show what accommodations are present, which was one of the project themes available at Technica. \"",
     projectImage: "/testimonials/access-bsu.jpg",
     projectName: "AccessBSU",
     projectCategories: "",
     projectDescription: "Accessibility is essential for the campus to be a welcoming and inclusive environment for all people. In this app, students and faculty will be able to mark areas in campus that are hazards and lack accommodations. They can also select what type of hazard it is from a drop down menu that includes whether an area has is wheelchair accessibility, flashing lights, excessive volume, uneven surfaces, and broken or heavy doors. Lastly, there is an icon that can selected for marking areas with accommodations such as a ramp, sidewalk, or wheelchair street entrance.",
     hasProject: true},
+
+  {hackerImage: "/testimonials/claire-chen.jpg",
+    hackerName: "Carolynn Lee",
+    hackerDesc: "General Track",
+    testimonyDescription: "\"I had a really good friend and found a team for Technica. I’d say that the project I made, based on financial education, was a game similar to quizlet and you could plant your own garden to earn points, with questions about financial education. Over the span of the hackathon, I had a lot of fun and pulled an all-nighter.\"",
+    hasProject: false},
 ]
 
 </script>
