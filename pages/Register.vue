@@ -3,7 +3,7 @@
   <div id="form" class="container">
     <h1 class="text-center my-4">Technica Registration Form 2024</h1>
     <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
-      check-in instructions. We can't wait for you to <b>#</b> at Technica!</p>
+      check-in instructions. <b>#Wonder Awaits</b> at Technica!</p>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
       <H1>Hacker Info</H1>
@@ -453,7 +453,7 @@
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
-      <button type="submit" class="btn mt-4" @click="submitTimes++">
+      <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
           click="purple-button-onclick.svg" />
       </button>
@@ -904,6 +904,7 @@ const search = (event: AutoCompleteCompleteEvent) => {
 
 const resumeFile = ref<File>();
 const registerUser = async (values: Record<string, any>) => {
+  
   let fd = new FormData();
 
   if (
@@ -1004,7 +1005,7 @@ const registerUser = async (values: Record<string, any>) => {
   let referral = params.get("referral");
 
   fd.append("referral", referral as string)
-
+  
   try {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
@@ -1014,6 +1015,8 @@ const registerUser = async (values: Record<string, any>) => {
 
     isSending.value = false;
 
+
+    
     if (
       !response ||
       (response.error.value && response.error.value.statusCode == 500)
@@ -1022,7 +1025,7 @@ const registerUser = async (values: Record<string, any>) => {
         'Sorry, there was an error with the submission. Please try again later.'
       );
     } else {
-      location.href = '/RegistrationConfirmation';
+      location.href = '/index';
     }
   } catch (error: any) {
     alert(
