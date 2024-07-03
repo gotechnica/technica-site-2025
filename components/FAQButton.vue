@@ -94,6 +94,7 @@
   .faq-header {
     align-items: center;
     cursor: pointer;
+    
   }
   
   .faq-btn {
@@ -101,9 +102,11 @@
     border: none;
     width: 100%;
     text-align: left;
-    color: #1f035a;
+    color: black;
+    font-family: Poppins;
+    font-size: 20px;
     font-weight: 500;
-    font-size: 18px;
+    line-height: 30px;
   }
   
   .card-text {
@@ -143,6 +146,6 @@
     border: none;
     height: 2px;
     opacity: 1;
-    background: #1f035a;
+    background: black;
   }
   </style>

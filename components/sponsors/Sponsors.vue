@@ -1,4 +1,7 @@
 <template>
+    <div class = "header-container">
+      <h1>Sponsors</h1>
+    </div>
     <div class="sponsor-grid">
       <!-- Partner Sponsors -->
       <h4><b>Partner</b></h4>
@@ -71,8 +74,6 @@ const starterSponsors: SponsorInfo[] = []
 .sponsor-tier {
   margin: 1.5rem auto;
   text-align: left;
-  padding-top: 0.5rem;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -86,12 +87,18 @@ const starterSponsors: SponsorInfo[] = []
   padding: 2%;
 }
 
-.sponsor-tier h3 {
-  margin-bottom: 0.5rem;
-}
+// .sponsor-tier h3 {
+//   margin-bottom: 0.5rem;
+// }
 
 h4 {
   text-align: left;
+  font-family: Poppins;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 75px;
+  text-align: left;
+
 }
 
 </style>

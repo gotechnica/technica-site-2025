@@ -107,19 +107,17 @@ export default defineComponent({
 }
 
 
-.card-back,
-.card-front {
+.card-back, .card-front {
   background-image: url("/testimonials/testimony-card.svg");
   background-size: 193% 193%;
   background-repeat: no-repeat;
   background-position: center;
-  border: 0.7rem solid #D7316E;
+  border: 0.7rem solid #EC8DA5;
   border-radius: 3rem;
-  background-color: #FFFBEF;
+  background-color: #F6D6E0;
 }
 
-.card .card-front,
-.card .card-back {
+.card .card-front, .card .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -176,7 +174,7 @@ export default defineComponent({
 }
 
 .image-container img {
-  border: 0.6rem solid #8E1E4D;
+  border: 0.3rem solid #09665B;
   border-radius: 60%;  
   position: absolute;
   top: 0;

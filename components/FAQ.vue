@@ -46,12 +46,12 @@
   <style scoped lang="scss">
   .faq-section-wrapper {
     border-radius: 33px;
-    background: #B6A1C4;
+    background: #69B7AE;
     padding: 25px 15px 25px 15px;
-    color: #1f035a;
+    color: #000000;
     margin: auto;
     width: 90%;
-    border: 5px solid #8C6E08;
+    border: 5px solid #00473E;
   }
   
   @media screen and (max-width: 768px) {

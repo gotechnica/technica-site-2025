@@ -3,58 +3,53 @@
         <div class="details" id="top">
             <div class="logos">
                 <div class="col-md">
-                    <img class = "technica-logo" src = "/logos/technica-logo-hi-res.png" width="30%"/>
+                    <img class="technica-logo" src="/logos/technica-logo-hi-res.png" width="30%" />
                 </div>
             </div>
 
             <div class="subtext">
                 <h1>Down the Rabbit Hole</h1>
-                <p class = "basic-info">October 21-22 at The Hotel, UMD | Hybrid Environment</p>
+                <p class="basic-info">October 21-22 at The Hotel, UMD | Hybrid Environment</p>
                 <p>The world's largest hackathon for underrepresented genders</p>
             </div>
             <div id="dummy"></div>
             <div class="buttons">
-                <button type="button" class="btn register" text="Register" @click="navigateTo('/Register')">Register</button>
-                <button type="button" class="btn learn-more" @click="TogglePopup">Learn More</button>
+                <img class="btn register" src="assets/buttons/Register-Button.svg" @click="navigateTo('/Register')" alt="Register" />
+                <img class="btn learn-more" src="assets/buttons/Learn-More-Button(hover).svg" @click="TogglePopup" alt="Learn More" />
             </div>
         </div>
     </div>
     <div v-if="isMobile" class="popup-mobile">
-        <div id="popup" v-if="popupTriggers" >
+        <div id="popup" v-if="popupTriggers">
             <div id="popup-inner" class="mobile">
-                <h3>What is <br/>Create Your Reality*?</h3>
-                <p> In this new world, the possibilities are endless. 
-                This year, we want you to Create Your Reality 
-                at Technica! <br/><br/>We encourage you to forge your own 
-                path, whether this means embarking on your first 
-                journey to hacking, pushing yourself past your 
-                own comfort zone, or coming to relax and just 
-                having fun: <b>choose the reality that fits you. </b>
-                <br/><br/>Technica is a safe space; regardless of what you 
-                decide, the reality you create can open doors to a
-                new realm of opportunity where you can prosper!</p>
+                <h3>What is <br />Create Your Reality*?</h3>
+                <p> In this new world, the possibilities are endless.
+                    This year, we want you to Create Your Reality
+                    at Technica! <br /><br />We encourage you to forge your own
+                    path, whether this means embarking on your first
+                    journey to hacking, pushing yourself past your
+                    own comfort zone, or coming to relax and just
+                    having fun: <b>choose the reality that fits you. </b>
+                    <br /><br />Technica is a safe space; regardless of what you
+                    decide, the reality you create can open doors to a
+                    new realm of opportunity where you can prosper!</p>
             </div>
         </div>
     </div>
-    <div  v-else>
+    <div v-else>
         <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
-           <!-- <div class="icons pull-left">
-                <img class="yellow-icon" src = "/hero-landing/yellow.svg"/>
-                <img class="pink-icon" src = "/hero-landing/pink.svg"/>
-                <img class="blue-icon" src = "/hero-landing/blue.svg"/>
-            </div> -->
             <div id="popup-inner">
-                <h3>What is <br/>Create Your Reality*?</h3>
-                <p> In this new world, the possibilities are endless. 
-                This year, we want you all to Create Your Reality 
-                at Technica! <br/><br/>We encourage you to forge your own 
-                path, whether this means embarking on your first 
-                journey to hacking, pushing yourself past your 
-                own comfort zone, or coming to relax and just 
-                have fun: <b>choose the reality that fits you. </b>
-                <br/><br/>Technica is a safe space; regardless of what you 
-                decide, the reality you create can open doors to a
-                new realm of opportunity where you can prosper!</p>
+                <h3>What is <br />Create Your Reality*?</h3>
+                <p> In this new world, the possibilities are endless.
+                    This year, we want you all to Create Your Reality
+                    at Technica! <br /><br />We encourage you to forge your own
+                    path, whether this means embarking on your first
+                    journey to hacking, pushing yourself past your
+                    own comfort zone, or coming to relax and just
+                    have fun: <b>choose the reality that fits you. </b>
+                    <br /><br />Technica is a safe space; regardless of what you
+                    decide, the reality you create can open doors to a
+                    new realm of opportunity where you can prosper!</p>
             </div>
         </div>
     </div>
@@ -62,7 +57,7 @@
 
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const learnMore = ref("Learn More");
 const { width } = useWindowSize();
@@ -70,24 +65,24 @@ const isMobile = computed(() => {
     return width.value <= 1150;
 });
 
-const popupTriggers = ref(false)
-const { scrollToAnchor, scrollToTop } = useAnchorScroll({
-  toTop: {
-    scrollOptions: {
-      behavior: 'smooth',
-      offsetTop: 0,
-    }
-  },
-})
+const popupTriggers = ref(false);
+const { scrollToAnchor } = useAnchorScroll({
+    toTop: {
+        scrollOptions: {
+            behavior: 'smooth',
+            offsetTop: 0,
+        }
+    },
+});
 
 const TogglePopup = () => {
-    popupTriggers.value = !popupTriggers.value
-    console.log(popupTriggers.value)
-    if(popupTriggers.value) {
-        scrollToAnchor("#dummy")
+    popupTriggers.value = !popupTriggers.value;
+    console.log(popupTriggers.value);
+    if (popupTriggers.value) {
+        scrollToAnchor("#dummy");
         learnMore.value = "Close";
     } else {
-        scrollToAnchor("#top")
+        scrollToAnchor("#top");
         learnMore.value = "Learn More";
     }
 };
@@ -96,7 +91,7 @@ const TogglePopup = () => {
 <style scoped lang="scss">
 
     #wrapper {
-        background-image: url("/hero/john-fowler-RsRTIofe0HE-unsplash.jpg");
+        background-image: url("assets/background-header.png");
         background-attachment:scroll;
         background-size: 100vw;
         resize: both;
@@ -104,7 +99,7 @@ const TogglePopup = () => {
         padding-top: 0;
         background-repeat:no-repeat;
         padding-bottom: 20%;
-        margin-bottom: 5%;
+        margin-bottom: 5%; 
     }
 
     .details {
@@ -121,10 +116,9 @@ const TogglePopup = () => {
         margin-top: 5%;
     }
 
-    .subtext{
+    .subtext {
         color: white;
         font-weight: bold;
-         
         width: fit-content;
         text-shadow: 5px 5px 13px black;
         border-radius: 10px;
@@ -139,7 +133,8 @@ const TogglePopup = () => {
     .subtext h1 {
         font-size: 300%;
     }
-    .basic-info{
+
+    .basic-info {
         margin-top: 1.5rem;
         margin-bottom: 0.3rem;
     }
@@ -151,7 +146,7 @@ const TogglePopup = () => {
         resize: both;
     }
 
-    #popup-inner h3{
+    #popup-inner h3 {
         color: #4E23AA;
         text-align: center;
         margin-bottom: 1rem;
@@ -161,49 +156,42 @@ const TogglePopup = () => {
         padding: 2rem;
         margin: 2rem;
         margin-right: 4rem;
-        height:auto;
+        height: auto;
         border-radius: 2rem;
         width: 40%;
-        padding:3rem;
+        padding: 3rem;
         background-color: white;
         color: black;
     }
 
     #popup-inner.mobile {
-        margin-right:10%;
-        width:auto;
+        margin-right: 10%;
+        width: auto;
     }
 
-    .buttons button {
+    .buttons img {
         display: block;
-        width: 17%;
-        padding: 1.5%;
+        // width: 23dvh;
+        opacity: 0px;
+        width: 18%;
+        position: relative;
+  text-align: center;
         margin-top: 2%;
-        border-radius: 20px;
-        font-size: 125%;
-        border: #aa96ca solid;
+        // border-radius: 20px;
+        // font-size: 125%;
+        // border: #aa96ca solid;
+        // cursor: pointer;
     }
 
     .register {
-        background-color: #aa96ca;
+        // background-color: #aa96ca;
         color: white;
-    }
-
-    .register:hover {
-        background-color: transparent !important;
-        color: #aa96ca;
-        border: #aa96ca solid;
     }
 
     .learn-more {
         background-color: transparent;
-        border: #aa96ca solid;
-        color: #aa96ca;
-    }
-
-    .learn-more:hover{
-        background-color: #aa96ca;
-        color: white;
+        // border: #aa96ca solid;
+        // color: #aa96ca;
     }
 
     @media screen and (max-width: 1048px) {
@@ -212,7 +200,6 @@ const TogglePopup = () => {
             margin-left: 0;
         }
 
-        
         .buttons {
             width: 175%;
         }
@@ -252,7 +239,7 @@ const TogglePopup = () => {
             height: 100vh;
         }
 
-        .buttons button {
+        .buttons img {
             width: 40% !important;
         }
 
@@ -260,7 +247,4 @@ const TogglePopup = () => {
             margin-top: -90vw;
         }
     }
-
-    
-
 </style>

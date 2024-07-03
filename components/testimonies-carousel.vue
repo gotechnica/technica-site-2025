@@ -1,6 +1,8 @@
 <!-- this component uses vue3carousel with custom styling, see https://ismail9k.github.io/vue3-carousel/ -->
 <template>
+  <div class = "header-container">
   <h1>Hear From Past Hackers!</h1>
+  </div>
   <h2>Testimonies and Projects</h2>
   <Carousel :itemsToShow="3" :wrapAround="true" :transition="500">
     <Slide v-for="slide in slides" :key="slide.hackerName" class="carousel__item">
@@ -70,18 +72,24 @@ const slides = [
 <style scoped lang="scss">
 /* header styling */
 
-h1 {
-  text-align: center;
-}
-
 h2 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 400;
   text-align: center;
-  color: $DARK_PURPLE;
+  color:white;
+
 } 
 
 h3 {
   text-align: center;
-  color: #464343;
+  color: white;
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+
 }
 /* button styling */
 .button-container {
