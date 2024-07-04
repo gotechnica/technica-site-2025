@@ -904,8 +904,14 @@ const search = (event: AutoCompleteCompleteEvent) => {
 };
 
 const resumeFile = ref<File>();
-const registerUser = async (values: Record<string, any>) => {
-  
+const registerUser = async () => {
+  console.log("here");
+  return false;
+}
+
+const registerUserOrig = async (values: Record<string, any>) => {
+  alert('testing');
+  console.log("test");
   let fd = new FormData();
 
   if (
