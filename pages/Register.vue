@@ -229,9 +229,10 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">Will you be attending online or in person?*</label>
-            <select id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
+            <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
               <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
-            </select>
+            </Field>
+
             <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
           </div>
 
@@ -455,11 +456,14 @@
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
+      {{ values }}
+      {{errors}}
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         Submit
       </button>
     </Form>
   </div>
+
   <StickyButton></StickyButton>
 </template>
 
