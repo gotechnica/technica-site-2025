@@ -23,7 +23,7 @@ export function useUtils(){
 
     const endpoints: Endpoints = {
         dev: {
-            BACKEND_ENDPOINT: 'https://dv3oqznx0a.execute-api.us-east-1.amazonaws.com',
+            BACKEND_ENDPOINT: 'https://dv3oqznx0a.execute-api.us-east-1.amazonaws.com/dev',
             DATES: DATES_ALL
         },
         stg: {
@@ -31,7 +31,7 @@ export function useUtils(){
             DATES: DATES_ALL
         },
         prd: {
-            BACKEND_ENDPOINT: 'https://4qjnx4eksi.execute-api.us-east-1.amazonaws.com',
+            BACKEND_ENDPOINT: 'https://fh4mt530mg.execute-api.us-east-1.amazonaws.com/prd',
             DATES: DATES_ALL
         },
         bucket: {

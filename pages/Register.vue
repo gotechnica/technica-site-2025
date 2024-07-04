@@ -153,9 +153,11 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">School Name*</label>
-            <AutoComplete v-model="values.school" name="school" inputId="school" :suggestions="filteredSchools"
-              @complete="search" placeholder="The University of Maryland, College Park"
-              :class="{ 'p-invalid': submitTimes > 0 && (values.school == null || values.school == '') }" required />
+            <Field name="school" as="select" class="form-select" :class="{ 'is-invalid': errors['school'] }" required>
+              <option v-for="school in schoolList" :value="school">
+                {{ school }}
+              </option>
+            </Field>
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
@@ -454,8 +456,7 @@
         </label>
       </div>
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
-          click="purple-button-onclick.svg" />
+        Submit
       </button>
     </Form>
   </div>
@@ -1010,6 +1011,7 @@ const registerUser = async (values: Record<string, any>) => {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
       'signup',
+      
       fd
     );
 
