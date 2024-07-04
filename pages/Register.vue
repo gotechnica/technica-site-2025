@@ -157,7 +157,8 @@
               <option v-for="school in schoolList" :value="school">
                 {{ school }}
               </option>
-            </Field>
+            </Field>   
+
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
@@ -232,7 +233,6 @@
             <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
               <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
             </Field>
-
             <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
           </div>
 
@@ -406,8 +406,8 @@
       </p>
 
       <!-- RULES AND PRIVACY POLICY -->
-
       <H1 class="mb-2">Rules and Privacy Policies</H1>
+
       <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
@@ -420,6 +420,29 @@
       </div>
 
       <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
+          :id="`agree-newsletter-${agreeNewsletter.value}`" :class="{ 'is-invalid': errors['agreeNewsletter'] }" />
+
+        <label class="form-check-label">
+          I agree to opt into the monthly Technica newsletter.
+        </label>
+      </div>
+
+      <div class="disclaimer mt-4">
+        <p>We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
+      </div>
+
+      <div class="form-check mt-4">
+        <Field name="mlhValidCoC" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValidCoC'] }" required />
+        <label class="form-check-label">
+          I have read and agree to the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Code of Conduct</a>. 
+        </label>
+      </div>
+      <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
         <Field name="mlhValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
@@ -448,22 +471,14 @@
         </label>
       </div>
 
-      <div class="form-check mt-4">
-        <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
-          :id="`agree-newsletter-${agreeNewsletter.value}`" :class="{ 'is-invalid': errors['agreeNewsletter'] }" />
 
-        <label class="form-check-label">
-          I agree to opt into the monthly Technica newsletter.
-        </label>
-      </div>
-      {{ values }}
-      {{errors}}
+      <!-- {{ values }}
+      {{errors}} -->
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         Submit
       </button>
     </Form>
   </div>
-
   <StickyButton></StickyButton>
 </template>
 
@@ -521,6 +536,7 @@ interface RegisterForm {
   resume?: any;
   accommodations?: string;
   technicaValid?: string;
+  mlhValidCoC?: string;
   mlhValid?: string;
   mlhEmails?: string;
   agreeNewsletter?: string;
@@ -653,6 +669,7 @@ const validationSchema = yup.object<RegisterForm>({
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
   technicaValid: yup.string().required('Agreement of Technica conditions is required'),
+  mlhValidCoC: yup.string().required('Agreement of MLH Code of Conduct is required'),
   mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
 
@@ -908,14 +925,8 @@ const search = (event: AutoCompleteCompleteEvent) => {
 };
 
 const resumeFile = ref<File>();
-const registerUser = async () => {
-  console.log("here");
-  return false;
-}
 
-const registerUserOrig = async (values: Record<string, any>) => {
-  alert('testing');
-  console.log("test");
+const registerUser = async (values: Record<string, any>) => {
   let fd = new FormData();
 
   if (
@@ -1060,6 +1071,11 @@ a {
 h1,
 H3 {
   color: $DARK_PURPLE;
+}
+
+.disclaimer{
+  padding: 2rem;
+  padding-bottom: 0rem;
 }
 
 .form-label {
