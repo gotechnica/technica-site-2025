@@ -472,8 +472,8 @@
       </div>
 
 
-      <!-- {{ values }}
-      {{errors}} -->
+      {{ values }}
+      {{errors}}
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         Submit
       </button>
@@ -801,12 +801,12 @@ interface UserInput {
 
 // Define reactive variables
 const userInput = reactive<UserInput>({
-  education: '',
+  education: 'other',
   attendanceType: 'in-person',
-  isFirstHackathon: '',
-  isFirstTechnica: '',
+  isFirstHackathon: 'Yes',
+  isFirstTechnica: 'Yes',
   yearsExperience: '0',
-  topicsOfInterest: [],
+  topicsOfInterest: ['research'],
 });
 
 // Define other reactive variables and options
@@ -1041,18 +1041,21 @@ const registerUser = async (values: Record<string, any>) => {
 
     
     if (
-      !response ||
-      (response.error.value && response.error.value.statusCode == 500)
+      !response 
     ) {
       alert(
-        'Sorry, there was an error with the submission. Please try again later.'
+        'Sorry, there was an error with the submission. Please try again later. noresponse'
       );
-    } else {
+    } else if
+      (response.error.value && response.error.value.statusCode == 500) {
+        alert('status code 500')
+    }
+      else {
       location.href = '/index';
     }
   } catch (error: any) {
     alert(
-      'Sorry, there was an error with the submission. Please try again later.'
+      'Sorry, there was an error with the submission. Please try again later. Catch'
     );
   }
 };
