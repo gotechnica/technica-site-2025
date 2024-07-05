@@ -12,7 +12,7 @@
         
         <div class="collapse navbar-collapse" id="my-navbar">
           <ul class="navbar-nav mr-auto">
-              <template v-for="link in links"> 
+              <!-- <template v-for="link in links"> 
                 <li class="nav-item dropdown" v-if="link.dropdown" :key="link.items.map(item => item.name).join()">
                   <div variant="none" min-width="100px" :text="link.name" size="sm">
                       <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem"> 
@@ -35,7 +35,7 @@
                       {{ link.name }}
                     </NuxtLink>
                   </div>
-                </li>
+                </li> -->
 
                 <!-- <li v-else :key="link.name">
                   <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
@@ -44,6 +44,35 @@
                     </NuxtLink>
                   </div>
                 </li> -->
+            <!-- </template> -->
+
+            <template v-for="link in links"> 
+              <li class="nav-item dropdown" v-if="link.dropdown" :key="link.items.map(item => item.name).join()">
+                <div variant="none" min-width="100px" :text="link.name" size="sm">
+                  <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem"> 
+                    {{ link.name }}
+                    <div class="dropdown-arrow"></div>
+                  </div>
+                  <div v-if="link.showDropdown" class="dropdown-options">
+                    <div class="dropdown-item" @click="toggleDropdown(link)" v-for="item in link.items" :key="item.name">
+                      <NuxtLink :to="item.path" class="dropdown-link-active">
+                        {{ item.name }}
+                      </NuxtLink>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li v-else :key="link.name">
+                <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
+                  <NuxtLink :to="link.path" target="_blank" class="nuxt-link-active" v-if="link.name === 'Data Rights' || link.name === 'Devpost'">
+                    {{ link.name }}
+                  </NuxtLink>
+                  <NuxtLink :to="link.path" class="nuxt-link-active" v-else>
+                    {{ link.name }}
+                  </NuxtLink>
+                </div>
+              </li>
             </template>
           </ul>
         </div>
@@ -54,7 +83,7 @@
     <a class="mlh-logo" 
       href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" 
       target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg" 
+      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" 
         alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
     </a>
   </div>
@@ -66,24 +95,21 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        // { dropdown: false, name: 'Register', path: '/Register' },
-        //{ dropdown: false, name: 'Expo', path: '/Expo' },
-        //{ dropdown: false, name: 'Schedule', path: '/Schedule' },
-        //{ dropdown: false, name: 'Maps', path: '/Maps' },
-        //{ dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
-        // { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/64Rg7Asws1ePgj2L6'},
-        // {
-        //   dropdown: true, 
-        //   showDropdown: false,
-        //   name: 'Programs',
-        //   items: [
-        //     { name: 'Fellows', path: '/Fellows' },
-        //     { name: 'Ambassadors', path: '/Ambassadors' },
-        //     { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
-        //     { name: 'Travel', path: '/Travel' },
-        //     { name: 'Tracks', path: '/Tracks' }
-        //   ]
-        //},
+        { dropdown: false, name: 'Register', path: '/Register' },
+        { dropdown: false, name: 'Expo', path: '/Expo' },
+        { dropdown: false, name: 'Schedule', path: '/Schedule' },
+        { dropdown: false, name: 'Maps', path: '/Maps' },
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
+        { dropdown: false, name: 'Data Rights', path: 'https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform'},
+        { dropdown: true, showDropdown: false, name: 'Programs',
+            items: [
+              { name: 'Fellows', path: '/Fellows' },
+              { name: 'Ambassadors', path: '/Ambassadors' },
+              { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+              { name: 'Travel', path: '/Travel' },
+              { name: 'Tracks', path: '/Tracks' }
+            ]
+        },
       ]
     }
   },
