@@ -65,6 +65,10 @@
       <Header v-else class = faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
+
+    <!-- <div class="container">
+      <TeamsCarousel/>
+    </div> -->
   </div>
 </template>
 
