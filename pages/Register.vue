@@ -476,7 +476,7 @@
         </label>
       </div>
       
-      <!-- <div class="form-check mt-4">
+      <div class="form-check mt-4">
         <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
           :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
 
@@ -484,7 +484,7 @@
           I understand that the withdrawal or deletion of my data must be requested via the 
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform">Data Rights Contact Form</a>.
         </label>
-      </div> -->
+      </div>
 
       <!-- {{ values }}
       {{errors}} -->
