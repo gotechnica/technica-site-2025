@@ -11,7 +11,8 @@
             </div>
 
             <div class="subtext">
-                <p class = "basic-info">October 21-22 at the Armory, UMD | Hybrid Environment</p>
+                <h1>Wonder Awaits</h1>
+                <p class = "basic-info">October 26-27 at The Hotel, UMD | Hybrid Environment</p>
                 <p>The world's largest hackathon for underrepresented genders</p>
             </div>
             <div id="dummy"></div>

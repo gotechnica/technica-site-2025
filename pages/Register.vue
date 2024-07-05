@@ -3,7 +3,7 @@
   <div id="form" class="container">
     <h1 class="text-center my-4">Technica Registration Form 2024</h1>
     <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
-      check-in instructions. We can't wait for you to <b>#</b> at Technica!</p>
+      check-in instructions. <b>#Wonder Awaits</b> at Technica!</p>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
       <H1>Hacker Info</H1>
@@ -153,9 +153,12 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">School Name*</label>
-            <AutoComplete v-model="values.school" name="school" inputId="school" :suggestions="filteredSchools"
-              @complete="search" placeholder="The University of Maryland, College Park"
-              :class="{ 'p-invalid': submitTimes > 0 && (values.school == null || values.school == '') }" required />
+            <Field name="school" as="select" class="form-select" :class="{ 'is-invalid': errors['school'] }" required>
+              <option v-for="school in schoolList" :value="school">
+                {{ school }}
+              </option>
+            </Field>   
+
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
@@ -227,9 +230,9 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">Will you be attending online or in person?*</label>
-            <select id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
+            <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
               <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
-            </select>
+            </Field>
             <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
           </div>
 
@@ -403,8 +406,8 @@
       </p>
 
       <!-- RULES AND PRIVACY POLICY -->
-
       <H1 class="mb-2">Rules and Privacy Policies</H1>
+
       <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
@@ -417,6 +420,29 @@
       </div>
 
       <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
+          :id="`agree-newsletter-${agreeNewsletter.value}`" :class="{ 'is-invalid': errors['agreeNewsletter'] }" />
+
+        <label class="form-check-label">
+          I agree to opt into the monthly Technica newsletter.
+        </label>
+      </div>
+
+      <div class="disclaimer mt-4">
+        <p>We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
+      </div>
+
+      <div class="form-check mt-4">
+        <Field name="mlhValidCoC" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValidCoC'] }" required />
+        <label class="form-check-label">
+          I have read and agree to the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Code of Conduct</a>. 
+        </label>
+      </div>
+      <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
         <Field name="mlhValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
@@ -445,17 +471,11 @@
         </label>
       </div>
 
-      <div class="form-check mt-4">
-        <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
-          :id="`agree-newsletter-${agreeNewsletter.value}`" :class="{ 'is-invalid': errors['agreeNewsletter'] }" />
 
-        <label class="form-check-label">
-          I agree to opt into the monthly Technica newsletter.
-        </label>
-      </div>
-      <button type="submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
-          click="purple-button-onclick.svg" />
+      {{ values }}
+      {{errors}}
+      <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
+        Submit
       </button>
     </Form>
   </div>
@@ -516,6 +536,7 @@ interface RegisterForm {
   resume?: any;
   accommodations?: string;
   technicaValid?: string;
+  mlhValidCoC?: string;
   mlhValid?: string;
   mlhEmails?: string;
   agreeNewsletter?: string;
@@ -648,6 +669,7 @@ const validationSchema = yup.object<RegisterForm>({
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
   technicaValid: yup.string().required('Agreement of Technica conditions is required'),
+  mlhValidCoC: yup.string().required('Agreement of MLH Code of Conduct is required'),
   mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
 
@@ -779,12 +801,12 @@ interface UserInput {
 
 // Define reactive variables
 const userInput = reactive<UserInput>({
-  education: '',
+  education: 'other',
   attendanceType: 'in-person',
-  isFirstHackathon: '',
-  isFirstTechnica: '',
+  isFirstHackathon: 'Yes',
+  isFirstTechnica: 'Yes',
   yearsExperience: '0',
-  topicsOfInterest: [],
+  topicsOfInterest: ['research'],
 });
 
 // Define other reactive variables and options
@@ -903,6 +925,7 @@ const search = (event: AutoCompleteCompleteEvent) => {
 };
 
 const resumeFile = ref<File>();
+
 const registerUser = async (values: Record<string, any>) => {
   let fd = new FormData();
 
@@ -1004,29 +1027,35 @@ const registerUser = async (values: Record<string, any>) => {
   let referral = params.get("referral");
 
   fd.append("referral", referral as string)
-
+  
   try {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
       'signup',
+      
       fd
     );
 
     isSending.value = false;
 
+
+    
     if (
-      !response ||
-      (response.error.value && response.error.value.statusCode == 500)
+      !response 
     ) {
       alert(
-        'Sorry, there was an error with the submission. Please try again later.'
+        'Sorry, there was an error with the submission. Please try again later. noresponse'
       );
-    } else {
-      location.href = '/RegistrationConfirmation';
+    } else if
+      (response.error.value && response.error.value.statusCode == 500) {
+        alert('status code 500')
+    }
+      else {
+      location.href = '/index';
     }
   } catch (error: any) {
     alert(
-      'Sorry, there was an error with the submission. Please try again later.'
+      'Sorry, there was an error with the submission. Please try again later. Catch'
     );
   }
 };
@@ -1045,6 +1074,11 @@ a {
 h1,
 H3 {
   color: $DARK_PURPLE;
+}
+
+.disclaimer{
+  padding: 2rem;
+  padding-bottom: 0rem;
 }
 
 .form-label {
