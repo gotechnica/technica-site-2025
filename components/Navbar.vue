@@ -54,7 +54,7 @@
     <a class="mlh-logo" 
       href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" 
       target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg" 
+      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" 
         alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
     </a>
   </div>
@@ -66,24 +66,21 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        // { dropdown: false, name: 'Register', path: '/Register' },
-        //{ dropdown: false, name: 'Expo', path: '/Expo' },
-        //{ dropdown: false, name: 'Schedule', path: '/Schedule' },
-        //{ dropdown: false, name: 'Maps', path: '/Maps' },
-        //{ dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
-        // { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/64Rg7Asws1ePgj2L6'},
-        // {
-        //   dropdown: true, 
-        //   showDropdown: false,
-        //   name: 'Programs',
-        //   items: [
-        //     { name: 'Fellows', path: '/Fellows' },
-        //     { name: 'Ambassadors', path: '/Ambassadors' },
-        //     { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
-        //     { name: 'Travel', path: '/Travel' },
-        //     { name: 'Tracks', path: '/Tracks' }
-        //   ]
-        //},
+        { dropdown: false, name: 'Register', path: '/Register' },
+        { dropdown: false, name: 'Expo', path: '/Expo' },
+        { dropdown: false, name: 'Schedule', path: '/Schedule' },
+        { dropdown: false, name: 'Maps', path: '/Maps' },
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
+        { dropdown: false, name: 'Data Rights', path: 'https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform'},
+        { dropdown: true, showDropdown: false, name: 'Programs',
+            items: [
+              { name: 'Fellows', path: '/Fellows' },
+              { name: 'Ambassadors', path: '/Ambassadors' },
+              { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+              { name: 'Travel', path: '/Travel' },
+              { name: 'Tracks', path: '/Tracks' }
+            ]
+        },
       ]
     }
   },
