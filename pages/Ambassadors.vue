@@ -2,10 +2,12 @@
   <title>Ambassadors</title>
   <div class="container">
     <!--<H1 class="title">Become an Ambassador</H1>-->
-    <div class= "header">
+    <!-- <div class= "header">
       <img src="/headings/header2024.png">
       <h1>Become an Ambassador</h1>
-    </div>
+    </div> -->
+    <div style="margin-top: 5rem;"></div>
+    <Header>Become an Ambassador</Header>
     <h3>Applications are now open!</h3>
     <p>
       We are very excited to launch the fifth year of Technica Campus
@@ -48,10 +50,10 @@
       </div>
     </div>
 
-    <div class="row">
-      <h3 v-if="width <= 768">FAQ</h3>
-      <h3 v-else>Frequently Asked Questions</h3>
-      <FAQSection class="faq" faqId="faq" :qaList="qaList" />
+    <div class="container">
+      <Header v-if="width <= 768" class = faq>FAQ</Header>
+      <Header v-else class = faq>Frequently Asked Questions</Header>
+      <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
     <StickyButton></StickyButton>
   </div>
