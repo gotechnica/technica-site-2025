@@ -486,8 +486,8 @@
         </label>
       </div> -->
 
-      {{ values }}
-      {{errors}}
+      <!-- {{ values }}
+      {{errors}} -->
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         Submit
       </button>

@@ -12,7 +12,7 @@
         
         <div class="collapse navbar-collapse" id="my-navbar">
           <ul class="navbar-nav mr-auto">
-              <template v-for="link in links"> 
+              <!-- <template v-for="link in links"> 
                 <li class="nav-item dropdown" v-if="link.dropdown" :key="link.items.map(item => item.name).join()">
                   <div variant="none" min-width="100px" :text="link.name" size="sm">
                       <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem"> 
@@ -35,7 +35,7 @@
                       {{ link.name }}
                     </NuxtLink>
                   </div>
-                </li>
+                </li> -->
 
                 <!-- <li v-else :key="link.name">
                   <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
@@ -44,6 +44,35 @@
                     </NuxtLink>
                   </div>
                 </li> -->
+            <!-- </template> -->
+
+            <template v-for="link in links"> 
+              <li class="nav-item dropdown" v-if="link.dropdown" :key="link.items.map(item => item.name).join()">
+                <div variant="none" min-width="100px" :text="link.name" size="sm">
+                  <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem"> 
+                    {{ link.name }}
+                    <div class="dropdown-arrow"></div>
+                  </div>
+                  <div v-if="link.showDropdown" class="dropdown-options">
+                    <div class="dropdown-item" @click="toggleDropdown(link)" v-for="item in link.items" :key="item.name">
+                      <NuxtLink :to="item.path" class="dropdown-link-active">
+                        {{ item.name }}
+                      </NuxtLink>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li v-else :key="link.name">
+                <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
+                  <NuxtLink :to="link.path" target="_blank" class="nuxt-link-active" v-if="link.name === 'Data Rights' || link.name === 'Devpost'">
+                    {{ link.name }}
+                  </NuxtLink>
+                  <NuxtLink :to="link.path" class="nuxt-link-active" v-else>
+                    {{ link.name }}
+                  </NuxtLink>
+                </div>
+              </li>
             </template>
           </ul>
         </div>
