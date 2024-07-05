@@ -37,13 +37,13 @@
                   </div>
                 </li>
 
-                <li v-else :key="link.name">
+                <!-- <li v-else :key="link.name">
                   <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
                     <NuxtLink :to="link.path" class="nuxt-link-active">
                       {{ link.name }}
                     </NuxtLink>
                   </div>
-                </li>
+                </li> -->
             </template>
           </ul>
         </div>
@@ -67,23 +67,23 @@ export default {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
         // { dropdown: false, name: 'Register', path: '/Register' },
-        { dropdown: false, name: 'Expo', path: '/Expo' },
-        { dropdown: false, name: 'Schedule', path: '/Schedule' },
-        { dropdown: false, name: 'Maps', path: '/Maps' },
-        { dropdown: false, name: 'Devpost', path: 'https://technica-2023.devpost.com/'},
-        { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/64Rg7Asws1ePgj2L6'},
-        {
-          dropdown: true, 
-          showDropdown: false,
-          name: 'Programs',
-          items: [
-            { name: 'Fellows', path: '/Fellows' },
-            { name: 'Ambassadors', path: '/Ambassadors' },
-            { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
-            { name: 'Travel', path: '/Travel' },
-            { name: 'Tracks', path: '/Tracks' }
-          ]
-        },
+        //{ dropdown: false, name: 'Expo', path: '/Expo' },
+        //{ dropdown: false, name: 'Schedule', path: '/Schedule' },
+        //{ dropdown: false, name: 'Maps', path: '/Maps' },
+        //{ dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/'},
+        // { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/64Rg7Asws1ePgj2L6'},
+        // {
+        //   dropdown: true, 
+        //   showDropdown: false,
+        //   name: 'Programs',
+        //   items: [
+        //     { name: 'Fellows', path: '/Fellows' },
+        //     { name: 'Ambassadors', path: '/Ambassadors' },
+        //     { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+        //     { name: 'Travel', path: '/Travel' },
+        //     { name: 'Tracks', path: '/Tracks' }
+        //   ]
+        //},
       ]
     }
   },

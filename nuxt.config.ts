@@ -27,7 +27,8 @@ export default defineNuxtConfig({
     transpile: ['primevue'],
   },
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-anchorscroll'
   ],
   plugins: ['~/plugins/useBootstrap.client.ts', '~/plugins/vue-gtag.client.ts'],
   ssr: false,

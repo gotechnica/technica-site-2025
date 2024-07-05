@@ -1,214 +1,142 @@
 <template>
   <div class="additional-info-container" v-if="mounted">
-    <div class="header-container">
-      <div class="tab-header-container" v-for="(tab) in  AdditionalInfoTabs " @click="handleTabClick(tab.index)"
-        :key=tab.index>
-
-        <!-- /* in the case of clicking bottom tab on mobile version, put content div above */ -->
-        <div class=" tab-content-container" v-if="isMobile && activeTab == (AdditionalInfoTabs.length - 1)"
-          v-show="tab.index == activeTab" :style="{
-            backgroundColor: tab.color
-          }">
-          <div class=" tab-content">{{ tab.content }}</div>
-          <PixelButton text="Learn more" textColor="gray" :link="tab.link" img="white-button-normal.svg" hover="white-button-hover.svg" click="white-button-onclick.svg"/>
-        </div>
-
-        <!-- /* display each tab */ -->
-        <div class="tab-header"
-          :style="{ backgroundColor: (isMobile || tab.index == activeTab) ? tab.color : '#494356' }">
-          <div class="tab-title-container">{{ tab.title }}</div>
-          <div class="tab-icon-container" v-if=isMobile>
-            <img class="tab-icon" v-if="tab.index != activeTab" src="/icons/ArrowUpIcon.png">
-            <img class="tab-icon" v-if="tab.index == activeTab" src="/icons/ArrowDownIcon.png">
-          </div>
-        </div>
-
-        <!-- /* mobile version, display content below tab */ -->
-        <div class=" tab-content-container" v-if="isMobile && activeTab != 3" v-show="tab.index == activeTab" :style="{
-          backgroundColor: tab.color
-        }">
-          <div class=" tab-content">{{ tab.content }}</div>
-          <PixelButton text="Learn more" textColor="gray" :link="tab.link" img="white-button-normal.svg" hover="white-button-hover.svg" click="white-button-onclick.svg"/>
-        </div>
+    <Header>Additional Information</Header>
+    <div class="cards-container">
+      <div class="card" :class="tab.class" v-for="(tab) in AdditionalInfoTabs" :key="tab.index">
+        <div class="card-header">{{ tab.title }}</div>
+        <div class="card-content">{{ tab.content }}</div>
+        <VineButton text="Learn More" link="/register" :img=tab.img :hover=tab.hover :click=tab.click as string/>
       </div>
     </div>
-
-    <!-- /* desktop version, display content below all tabs */ -->
-    <div class=" tab-content-container" v-if=isLargeScreen v-show="tab.index == activeTab"
-      v-for="( tab ) in  AdditionalInfoTabs " :style="{
-        backgroundColor: tab.color
-      }">
-      <div class=" tab-content">{{ tab.content }}</div>
-      <PixelButton text="Learn more" textColor="gray" :link="tab.link" img="white-button-normal.svg" hover="white-button-hover.svg" click="white-button-onclick.svg"/>
-    </div>
-
   </div>
 </template>
-  
+
 <script setup lang="ts">
-import {
-  AdditionalInfoTabs
-} from '~/components/AdditionalInfo/InfoTabs';
-import { ref } from 'vue';
-import { useWindowSize } from '@vueuse/core'
+import { onMounted, ref } from 'vue';
+import { useWindowSize } from '@vueuse/core';
+
+interface InfoTab {
+  index: number;
+  title: string;
+  content: string;
+  link: string;
+  color: string;
+  displayed: boolean;
+  class: string;
+  img: string;
+  hover: string;
+  click: string;
+}
+
+const AdditionalInfoTabs: InfoTab[] = [
+  { index: 0, img:"green-button-regular.svg", hover:"green-on-click.svg", click:"green-visited.svg", class: "fellows", title: 'Fellowship Program', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/fellows', color: '#FFFFFF', displayed: true },
+  { index: 1, img:"purple-button-regular.svg", hover:"purple-on-click.svg",  click:"purple-visited.svg", class: "mentors", title: 'Mentors and Volunteers', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/mentors', color: '#FFFFFF', displayed: false },
+  { index: 2, img:"pink-button-regular.svg", hover:"pink-on-click.svg", click:"pink-visited.svg", class: "ambassadors", title: 'Ambassadors', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/ambassadors', color: '#FFFFFF', displayed: false },
+  { index: 3, img:"yellow-button-regular.svg", hover:"yellow-on-click.svg", click:"yellow-visited.svg", class: "travel", title: 'Travel Info', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: '/travel', color: '#FFFFFF', displayed: false },
+];
 
 const mounted = ref(false);
 onMounted(() => {
   mounted.value = true;
 });
 
-// Tab currently being displayed
-const activeTab = ref(0);
-
 const { width } = useWindowSize();
+const isMobile = ref(false);
 
-// Check window size for mobile version
-const isMobile = computed(() => {
-  return width.value <= 768;
-});
-
-const isLargeScreen = computed(() => {
-  if (width.value > 768 && (activeTab.value === -1)) {
-    activeTab.value = 0;
-  }
-  return width.value > 768;
-});
-
-// Switch active tab on click or window resize
-function handleTabClick(tabIndex: number) {
-  if (isMobile.value) {
-    activeTab.value = (activeTab.value === tabIndex) ? -1 : tabIndex;
-  } else {
-    activeTab.value = tabIndex;
-  }
-}
+width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
 </script>
-  
+
 <style scoped lang="scss">
 .additional-info-container {
   display: flex;
   flex-direction: column;
   color: white;
   font-family: 'Poppins';
-  margin-bottom: 50px;
+  margin-bottom: 1rem;
 }
 
-.header-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  position: relative;
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 5rem;
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
-.tab-header-container {
-  font-weight: bold;
-  width: 100%;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.tab-header {
-  width: 100%;
-  padding: 1.25rem;
-  border-radius: 1rem 1rem 0rem 0rem;
-  position: relative;
-  z-index: 1;
-  overflow-wrap: break-word;
-  height: 100%;
-  font-size: 1.25rem;
-  cursor: pointer;
-  
-  @media screen and (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    border-radius: 1rem;
-  }
-}
-
-.tab-title-container {
-  justify-content: center;
-  margin-left: auto;
-}
-
-.tab-icon-container {
-  justify-content: flex-end;
-  margin-left: auto;
-}
-
-.tab-icon {
-  width: 1rem;
-}
-
-.tab-header-container :hover {
-  text-decoration: underline;
-
-  @media screen and (max-width: 768px) {
-    text-decoration: none;
-  }
-}
-
-.tab-content-container {
-  padding: 1.25rem;
-  border-radius: 0rem 0rem 1rem 1rem;
+.card {
+  border-radius: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-family: 'Poppins';
-
-  @media screen and (max-width: 768px) {
-    text-align: center;
-    opacity: 0.8;
-    border-radius: 0rem;
-    width: 75%;
-    align-self: center;
-  }
+  text-align: left;
 }
 
-.tab-content-container:after {
-  @media screen and (max-width: 768px) {
-    opacity: 0.8;
-  }
+.card-header {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  align-self: baseline;
+  padding-left: 0;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 }
 
-.tab-content {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+.card-content {
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
 .learn-more-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("/icons/LearnMore.png");
-  background-repeat: no-repeat;
-  height: 100%;
-  color: gray;
-  text-align: center;
-  background-size: contain;
-  background-position: center;
-  font-size: 1rem;
-  padding: 1rem;
-
-  @media screen and (max-width: 768px) {
-    color: white;
-    border-radius: 1rem;
-
-  }
+  margin-top: 0.7rem;
+  background-color: #B097C0;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
 }
 
-.learn-more-text {
-  display: inline-block;
-  text-decoration: none;
-  color: gray;
-  padding: 1.25rem;
-  font-family: 'Pixeloid-Sans';
+.fellows {
+  background-color: $LIGHTGREEN;
+  border: $DARKGREEN solid 5px;
+
+  .card-header  {
+    -webkit-text-stroke: 1px $DARKGREEN;
+    text-shadow: $DARKGREEN;
+  }
+}
+.ambassadors {
+  background-color: $LIGHTPINK;
+  border: $DARKPINK solid 5px;
+  .card-header  {
+    -webkit-text-stroke: 1px $DARKPINK;
+    text-shadow: $DARKPINK;
+  }
+}
+.mentors {
+  background-color: $LIGHTPURPLE;
+  border: $DARKPURPLE solid 5px;
+  .card-header  {
+    -webkit-text-stroke: 1px $DARKPURPLE;
+    text-shadow: $DARKPURPLE;
+  }
+}
+.travel {
+  background-color: $LIGHTYELLOW;
+  border: $DARKYELLOW solid 5px;
+  .card-header  {
+    -webkit-text-stroke: 2px $DARKYELLOW;
+    text-shadow: $DARKYELLOW;
+  }
 }
 </style>

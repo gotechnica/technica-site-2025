@@ -1,9 +1,9 @@
 <template>
   <title>Register</title>
   <div id="form" class="container">
-    <h1 class="text-center my-5">Registration is closed for Technica 2023!</h1>
-    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for check-in instructions. We can't wait for you to <b>#CreateYourReality</b> at Technica!</p>
-    <h1 class="text-center my-4">Technica Registration Form 2023</h1>
+    <h1 class="text-center my-4">Technica Registration Form 2024</h1>
+    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
+      check-in instructions. <b>#Wonder Awaits</b> at Technica!</p>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
       <H1>Hacker Info</H1>
@@ -123,7 +123,7 @@
             Technica, we will need your guardian's email. We will email a waiver
             to you and your guardian to sign closer to the event. Minors who plan
             to attend the event in-person will need to be accompanied by a chaperone.
-            A chaperone can accompany up to six minors. 
+            A chaperone can accompany up to six minors.
           </p>
 
           <div class="mt-4" v-if="parseInt(values.age) < 18">
@@ -153,9 +153,12 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">School Name*</label>
-            <AutoComplete v-model="values.school" name="school" inputId="school" :suggestions="filteredSchools"
-              @complete="search" placeholder="The University of Maryland, College Park"
-              :class="{ 'p-invalid': submitTimes > 0 && (values.school == null || values.school == '')}" required />
+            <Field name="school" as="select" class="form-select" :class="{ 'is-invalid': errors['school'] }" required>
+              <option v-for="school in schoolList" :value="school">
+                {{ school }}
+              </option>
+            </Field>   
+
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
@@ -227,9 +230,9 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">Will you be attending online or in person?*</label>
-            <select id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
+            <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
               <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
-            </select>
+            </Field>
             <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
           </div>
 
@@ -292,7 +295,6 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label">Which track do you wish to participate in?*</label>
-          <p><b>**Note</b>: All special tracks are closed now.</p>
           <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
             <Field name="track" :value="option.value" type="radio" class="form-check-input" />
             <label class="form-check-label">{{ option.text }}</label>
@@ -306,7 +308,7 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <div class="mb-4">
-            <label class="form-label">Dietary Restrictions*</label>
+            <label class="form-label">Do you have any dietary restrictions?*</label>
             <div class="form-check" v-for="option in dietaryRestrictionsOptions">
               <Field name="dietaryRestrictions" :value="option.value" type="checkbox" class="form-check-input"
                 :id="option.value" :class="{ 'is-invalid': errors['dietaryRestrictions'] }" required />
@@ -404,50 +406,20 @@
       </p>
 
       <!-- RULES AND PRIVACY POLICY -->
-
       <H1 class="mb-2">Rules and Privacy Policies</H1>
-      <div class="form-check">
+
+      <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          I agree to the conditions below:
-        </label>
-      </div>
-      <ul class="conditions mt-4 ms-4">
-        <li>
           <b>I identify as a person of an underrepresented gender in tech. </b>This includes but is not limited to:
           cisgender women, transgender
           women, transgender men, non-binary individuals, genderqueer
-          individuals, and other underrepresented genders.
-        </li>
-
-        <li>
-          I authorize you to share my application/registration information with
-          Major League Hacking for event administration, ranking, and MLH
-          administration in-line with the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both
-          the
-          <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" target="_blank">MLH Contest Terms and
-            Conditions</a>
-          and the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.
-        </li>
-
-        <li>
-          I have read and agree to the
-          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.
-        </li>
-      </ul>
-      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
-
-      <div class="form-check mt-4">
-        <Field name="mlhEmails" type="checkbox" class="form-check-input" :value="agreeEmails.value"
-          :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
-
-        <label class="form-check-label">
-          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.
+          individuals, and other underrepresented genders. I further agree to the <a href="2024 Technica Terms and Code of Conduct.docx.pdf">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
+
+      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
         <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
@@ -457,9 +429,53 @@
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
-      <button type="submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
-          click="purple-button-onclick.svg" />
+
+      <div class="disclaimer mt-4">
+        <p>We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
+      </div>
+
+      <div class="form-check mt-4">
+        <Field name="mlhValidCoC" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValidCoC'] }" required />
+        <label class="form-check-label">
+          I have read and agree to the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Code of Conduct</a>. 
+        </label>
+      </div>
+      <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="mlhValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValid'] }" required />
+        <label class="form-check-label">
+          I authorize you to share my application/registration information with
+          Major League Hacking for event administration, ranking, and MLH
+          administration in-line with the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both
+          the
+          <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" target="_blank">MLH Contest Terms and
+            Conditions</a>
+          and the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.
+        </label>
+      </div>
+      
+      <ErrorMessage :name="'mlhValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="mlhEmails" type="checkbox" class="form-check-input" :value="agreeEmails.value"
+          :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
+        <label class="form-check-label">
+          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
+          announcements.
+        </label>
+      </div>
+
+
+      {{ values }}
+      {{errors}}
+      <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
+        Submit
       </button>
     </Form>
   </div>
@@ -479,8 +495,9 @@ import * as yup from 'yup';
 import { ref } from 'vue';
 import { useUtils } from '../composables/useUtils';
 import MLHSchools from '../static/mlh-schools.json';
-import { allCountries, CountryData, Region } from 'country-region-data';
-import { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
+import type { CountryData, Region } from 'country-region-data';
+import { allCountries } from 'country-region-data';
+import type { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
 import { Value } from 'sass';
 import { Options } from 'tsparticles-engine';
 const { performPostRequest, getEnvVariable } = useUtils();
@@ -519,6 +536,8 @@ interface RegisterForm {
   resume?: any;
   accommodations?: string;
   technicaValid?: string;
+  mlhValidCoC?: string;
+  mlhValid?: string;
   mlhEmails?: string;
   agreeNewsletter?: string;
 }
@@ -649,7 +668,9 @@ const validationSchema = yup.object<RegisterForm>({
     }),
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
-  technicaValid: yup.string().required('Agreement of conditions is required'),
+  technicaValid: yup.string().required('Agreement of Technica conditions is required'),
+  mlhValidCoC: yup.string().required('Agreement of MLH Code of Conduct is required'),
+  mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
 
 interface Option {
@@ -722,7 +743,7 @@ const hearOptions = ref<Option[]>([
   { text: 'LinkedIn', value: 'linkedin' },
   { text: 'Google', value: 'google' },
   { text: 'Major League Hacking', value: 'mlh' },
-  { text: 'Email Listserv', value: 'email' },
+  { text: 'Email Listser', value: 'email' },
   { text: 'Flyer or Poster', value: 'flyer' },
   { text: 'Friend', value: 'friend' },
   { text: 'Other', value: 'other' },
@@ -761,6 +782,7 @@ const accommodationsOptions = ref<Option[]>([
   { text: 'ASL Interpreter', value: 'asl-interpreter' },
   { text: 'Guides', value: 'guides' },
   { text: 'Earplugs', value: 'earplugs' },
+  { text: 'Masks', value: 'masks'},
   { text: 'Other', value: 'other' },
 ]);
 
@@ -779,12 +801,12 @@ interface UserInput {
 
 // Define reactive variables
 const userInput = reactive<UserInput>({
-  education: '',
+  education: 'other',
   attendanceType: 'in-person',
-  isFirstHackathon: '',
-  isFirstTechnica: '',
+  isFirstHackathon: 'Yes',
+  isFirstTechnica: 'Yes',
   yearsExperience: '0',
-  topicsOfInterest: [],
+  topicsOfInterest: ['research'],
 });
 
 // Define other reactive variables and options
@@ -827,6 +849,8 @@ const isHighSchoolOrLower = (education: string): boolean => {
 const recommendedTracks = computed(() => {
   const tracks: { text: string, value: string }[] = [];
 
+  tracks.push({ text: 'General', value: 'general' });
+
   if (userInput.attendanceType === 'in-person') {
     if (
       userInput.isFirstHackathon === 'Yes' &&
@@ -847,10 +871,6 @@ const recommendedTracks = computed(() => {
     if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
       tracks.push({ text: 'Research', value: 'research' });
     }
-  }
-
-  if (tracks.length === 0) {
-    tracks.push({ text: 'General', value: 'general' });
   }
 
   return tracks;
@@ -905,6 +925,7 @@ const search = (event: AutoCompleteCompleteEvent) => {
 };
 
 const resumeFile = ref<File>();
+
 const registerUser = async (values: Record<string, any>) => {
   let fd = new FormData();
 
@@ -1003,32 +1024,38 @@ const registerUser = async (values: Record<string, any>) => {
 
   // Add referral code if it exists
   let params = new URL(document.location as any).searchParams;
-  let referral = params.get("referral");  
+  let referral = params.get("referral");
 
   fd.append("referral", referral as string)
-
+  
   try {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
       'signup',
+      
       fd
     );
 
     isSending.value = false;
 
+
+    
     if (
-      !response ||
-      (response.error.value && response.error.value.statusCode == 500)
+      !response 
     ) {
       alert(
-        'Sorry, there was an error with the submission. Please try again later.'
+        'Sorry, there was an error with the submission. Please try again later. noresponse'
       );
-    } else {
-      location.href = '/RegistrationConfirmation';
+    } else if
+      (response.error.value && response.error.value.statusCode == 500) {
+        alert('status code 500')
+    }
+      else {
+      location.href = '/index';
     }
   } catch (error: any) {
     alert(
-      'Sorry, there was an error with the submission. Please try again later.'
+      'Sorry, there was an error with the submission. Please try again later. Catch'
     );
   }
 };
@@ -1047,6 +1074,11 @@ a {
 h1,
 H3 {
   color: $DARK_PURPLE;
+}
+
+.disclaimer{
+  padding: 2rem;
+  padding-bottom: 0rem;
 }
 
 .form-label {
