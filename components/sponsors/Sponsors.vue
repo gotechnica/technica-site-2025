@@ -1,43 +1,44 @@
 <template>
+    <Header>Sponsors</Header>
     <div class="sponsor-grid">
       <!-- Partner Sponsors -->
       <h4><b>Partner</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <div class="underline"></div>
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="partnerSponsors" />
       </div>
 
       <!-- Platinum Sponsors -->
       <h4><b>Platinum</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <div class="underline"></div>
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="platinumSponsors" />
       </div>
 
       <!-- Gold Sponsors -->
       <h4><b>Gold</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <div class="underline"></div>
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="goldSponsors" />
       </div>
 
       <!-- Silver Sponsors -->
       <h4><b>Silver</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <div class="underline"></div>
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="silverSponsors" />
       </div>
 
       <!-- Bronze Sponsors -->
       <h4><b>Bronze</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <div class="underline"></div>
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="bronzeSponsors" />
       </div>
 
       <!-- Starter Sponsors -->
       <h4><b>Starter</b></h4>
-      <img class="underline" src="/sponsors/blue_sponsor_underline.svg" />
+      <div class="underline"></div>
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="starterSponsors" />
       </div>
@@ -45,7 +46,7 @@
 </template>
   
 <script setup lang="ts">
-import { SponsorInfo } from './sponsor-info';
+import { type SponsorInfo } from './sponsor-info';
 
 const partnerSponsors: SponsorInfo[] = []
 
@@ -79,6 +80,8 @@ const starterSponsors: SponsorInfo[] = []
 
 .underline {
   width: 100%;
+  background-color: $LIGHTPURPLE;
+  height: 0.3em;
 }
 
 .sponsor-tier img {

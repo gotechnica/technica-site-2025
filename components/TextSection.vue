@@ -1,5 +1,3 @@
-<!-- This component adds a heading to the content passed into the slot -->
-
 <template>
   <div class="p-3">
     <h3

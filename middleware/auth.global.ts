@@ -38,7 +38,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
           '/virtualc': {redirect: 'https://umd.zoom.us/j/2393475431#success'},
           '/virtuald': {redirect: 'https://umd.zoom.us/j/4676517781#success'},
           '/virtuale': {redirect: 'https://umd.zoom.us/j/99224648948#success'},
-          '/slack': {redirect: 'https://join.slack.com/t/technica2023/shared_invite/zt-25geilhhh-3hUZYLLyO0GsJPIA6Br5qw'},
+          '/slack': {redirect: 'https://join.slack.com/t/technica2024/shared_invite/zt-25geilhhh-3hUZYLLyO0GsJPIA6Br5qw'},
           '/hacker-guide': {redirect: 'https://platform-assets-prd.s3.amazonaws.com/Hacker+Guide.pdf'},
           '/incident': {redirect: 'https://docs.google.com/forms/d/e/1FAIpQLSe9poAKvb9P9ND9bnm9RVyjxOcU4i69KxZ6GA6oTrePXOfuSQ/viewform'}}
 

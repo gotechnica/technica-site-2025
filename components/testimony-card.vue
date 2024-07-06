@@ -14,7 +14,7 @@
         </div>
         <div v-if="hasProject">
           <button class="flip-button" @click="flipCard">Flip To Project</button>
-          <img class="flip-arrow" src="/testimonials/flip-arrow.svg" alt="flip arrow">
+          <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
         </div>
         <div>
           <button class="flip-button" @click="flipCard">Flip To Testimony</button>
-          <img class="flip-arrow" src="/testimonials/flip-arrow.svg" alt="flip arrow">
+          <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .card {
   position: absolute;
@@ -106,16 +106,12 @@ export default defineComponent({
   background-color: transparent;
 }
 
-
 .card-back,
 .card-front {
-  background-image: url("/testimonials/testimony-card.svg");
-  background-size: 193% 193%;
+  background-image: url("/testimonials/testimonial-card.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  border: 0.7rem solid #D7316E;
-  border-radius: 3rem;
-  background-color: #FFFBEF;
+  background-size: contain;
+  background-color: transparent;
 }
 
 .card .card-front,
@@ -176,13 +172,13 @@ export default defineComponent({
 }
 
 .image-container img {
-  border: 0.6rem solid #8E1E4D;
-  border-radius: 30px;  
+  border: 0.3rem solid $MIDGREEN;
+  border-radius: 60%;  
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
 }
 
@@ -205,62 +201,24 @@ h4 {
 
 button.flip-button {
   margin-top: 1rem;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.3rem;
   text-align: center;
-  text-decoration-line: underline;
-
-  color: #A6871B;
-
+  color: black;
   background-color: transparent;
   border-width: 0;
   white-space: nowrap;
-  /* background-image: url("../assets/flip-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right; */
 }
 /* 
 .flip-arrow {
 } */
 
 /* responsivity */
-@media screen and (max-width: 1300px) {
-  p {
-    font-size: 1.2vw;
-  }
-}
 
 @media screen and (max-width: 992px) {
-
-  .card-back, .card-front {
-    flex-direction: column-reverse !important;
-    padding: 0 !important;
-    padding-bottom: 10rem !important;
-    background-image: none;
-  }
-
-  .left-column {
-    width: 80%;
-    margin-top: 22vw;
-  }
-
-  .right-column {
-    position: absolute;
-    top: -80px;
-    margin-left: 0;
-  }
-
   .card {
     width: 55vw;
     height: 55vw;
-  }
-
-  .image-container {
-    width: 75%;
-    padding-top: 75%;
-    margin: 0;
   }
 
   button.flip-button {

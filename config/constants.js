@@ -5,7 +5,7 @@ const DATES = {
 
 export default {
   dev: {
-    BACKEND_ENDPOINT: 'https://76n41v84v9.execute-api.us-east-1.amazonaws.com',
+    BACKEND_ENDPOINT: 'https://dv3oqznx0a.execute-api.us-east-1.amazonaws.com',
     ...DATES
   },
   stg: {
@@ -13,7 +13,7 @@ export default {
     ...DATES
   },
   prd: {
-    BACKEND_ENDPOINT: 'https://y92wclox20.execute-api.us-east-1.amazonaws.com',
+    BACKEND_ENDPOINT: 'https://fh4mt530mg.execute-api.us-east-1.amazonaws.com/prd',
     ...DATES
   },
   bucket: {

@@ -1,9 +1,9 @@
 <template>
   <title>Register</title>
   <div id="form" class="container">
-    <h1 class="text-center my-5">Registration is closed for Technica 2023!</h1>
-    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for check-in instructions. We can't wait for you to <b>#CreateYourReality</b> at Technica!</p>
-    <h1 class="text-center my-4">Technica Registration Form 2023</h1>
+    <h1 class="text-center my-4">Technica Registration Form 2024</h1>
+    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
+      check-in instructions. <b>#Wonder Awaits</b> at Technica!</p>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
       <H1>Hacker Info</H1>
@@ -123,7 +123,7 @@
             Technica, we will need your guardian's email. We will email a waiver
             to you and your guardian to sign closer to the event. Minors who plan
             to attend the event in-person will need to be accompanied by a chaperone.
-            A chaperone can accompany up to six minors. 
+            A chaperone can accompany up to six minors.
           </p>
 
           <div class="mt-4" v-if="parseInt(values.age) < 18">
@@ -142,7 +142,7 @@
           <div class="mb-4">
             <label class="form-label">Education Level*</label>
             <Field name="education" as="select" class="form-select" :class="{ 'is-invalid': errors['education'] }"
-              required>
+              required v-model ="userInput.education">
               <option v-for="option in educationOptions" :value="option">
                 {{ option }}
               </option>
@@ -153,9 +153,12 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">School Name*</label>
-            <AutoComplete v-model="values.school" name="school" inputId="school" :suggestions="filteredSchools"
-              @complete="search" placeholder="The University of Maryland, College Park"
-              :class="{ 'p-invalid': submitTimes > 0 && (values.school == null || values.school == '')}" required />
+            <Field name="school" as="select" class="form-select" :class="{ 'is-invalid': errors['school'] }" required>
+              <option v-for="school in schoolList" :value="school">
+                {{ school }}
+              </option>
+            </Field>   
+
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
@@ -215,7 +218,7 @@
       <!-- TRACKS -->
       <H1 class="green">Tracks</H1>
       <p class="description">
-        Tracks accomodate a hacker's interests and skill level, and can provide
+        Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
         <a href="/Tracks" target="_blank">tracks page</a> for more information!
         We provide recommendations for tracks you may be interested in, but you
@@ -227,23 +230,21 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">Will you be attending online or in person?*</label>
-            <Field name="attendance" as="select" class="form-select" :class="{ 'is-invalid': errors['attendance'] }"
-              required>
-              <option v-for="option in attendanceOptions" :value="option">
-                {{ option }}
-              </option>
+            <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
+              <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
             </Field>
-            <ErrorMessage :name="'attendance'" class="invalid-feedback" />
+            <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
           </div>
+
 
           <div class="mb-4">
             <div>
-              <label class="form-label"> Is this your first hackathon?* </label>
-              <div class="form-check" v-for="option in firstHackathon">
-                <Field name="isFirstHackathon" :value="option.value" type="radio" class="form-check-input"
+              <label class="form-label">Is this your first hackathon?*</label>
+              <div class="form-check" v-for="option in firstHackathon" :key="option.value">
+                <Field name="isFirstHackathon" v-model="userInput.isFirstHackathon" :value="option.value" type="radio" class="form-check-input"
                   :id="`first-hackathon-${option.value}`" :class="{ 'is-invalid': errors['isFirstHackathon'] }"
                   required />
-                <label class="form-check-label" :for="option.value">
+                <label class="form-check-label" :for="`first-hackathon-${option.value}`">
                   {{ option.text }}
                 </label>
               </div>
@@ -253,13 +254,11 @@
 
           <div class="mb-4">
             <div>
-              <label class="form-label">
-                Is this your first time at Technica?*
-              </label>
-              <div class="form-check" v-for="option in firstTechnica">
-                <Field name="isFirstTechnica" :value="option.value" type="radio" class="form-check-input"
+              <label class="form-label">Is this your first time at Technica?*</label>
+              <div class="form-check" v-for="option in firstTechnica" :key="option.value">
+                <Field name="isFirstTechnica" v-model="userInput.isFirstTechnica" :value="option.value" type="radio" class="form-check-input"
                   :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isFirstTechnica'] }" required />
-                <label class="form-check-label" :for="option.value">
+                <label class="form-check-label" :for="`first-technica-${option.value}`">
                   {{ option.text }}
                 </label>
               </div>
@@ -271,9 +270,8 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">How many years of CS experience do you have?*</label>
-            <Field name="yearsExperience" as="select" class="form-select"
-              :class="{ 'is-invalid': errors['yearsExperience'] }" required>
-              <option v-for="option in experience" :value="option">
+            <Field name="yearsExperience" v-model="userInput.yearsExperience" as="select" class="form-select" :class="{ 'is-invalid': errors['yearsExperience'] }" required>
+              <option v-for="option in experience" :key="option" :value="option">
                 {{ option }}
               </option>
             </Field>
@@ -281,13 +279,11 @@
           </div>
 
           <div class="mb-4">
-            <label class="form-label">
-              What topics do you want to learn about?*
-            </label>
-            <div class="form-check" v-for="option in topics">
-              <Field name="topics" :value="option.value" type="checkbox" class="form-check-input"
+            <label class="form-label">What topics do you want to learn about?*</label>
+            <div class="form-check" v-for="option in topicsOfInterest" :key="option.value">
+              <Field name="topics" v-model="userInput.topicsOfInterest" :value="option.value" type="checkbox" class="form-check-input"
                 :id="`topics-${option.value}`" :class="{ 'is-invalid': errors['topics'] }" />
-              <label class="form-check-label" :for="option.value">
+              <label class="form-check-label" :for="`topics-${option.value}`">
                 {{ option.text }}
               </label>
             </div>
@@ -297,22 +293,12 @@
       </div>
 
       <div class="row gx-5">
-        <div class="mb-4">
-          <label class="form-label">
-            Which track do you wish to participate in?*
-          </label>
-          <p>
-            <b>**Note</b>: All special tracks are closed now.
-          </p>
-
-          <div class="form-check" v-for="option in trackOptions" :key="`track-${option.value}`">
-            <Field name="track" :value="option.value" type="radio" class="form-check-input" :id="`track-${option.value}`"
-              :class="{ 'is-invalid': errors['track'] }" required />
-            <label class="form-check-label" :for="`track-${option.value}`">
-              {{ option.text }}
-            </label>
+        <div class="col-md-6 mb-4">
+          <label class="form-label">Which track do you wish to participate in?*</label>
+          <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
+            <Field name="track" :value="option.value" type="radio" class="form-check-input" />
+            <label class="form-check-label">{{ option.text }}</label>
           </div>
-          <ErrorMessage :name="'track'" class="invalid-feedback" />
         </div>
       </div>
 
@@ -322,7 +308,7 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <div class="mb-4">
-            <label class="form-label">Dietary Restrictions*</label>
+            <label class="form-label">Do you have any dietary restrictions?*</label>
             <div class="form-check" v-for="option in dietaryRestrictionsOptions">
               <Field name="dietaryRestrictions" :value="option.value" type="checkbox" class="form-check-input"
                 :id="option.value" :class="{ 'is-invalid': errors['dietaryRestrictions'] }" required />
@@ -420,50 +406,20 @@
       </p>
 
       <!-- RULES AND PRIVACY POLICY -->
-
       <H1 class="mb-2">Rules and Privacy Policies</H1>
-      <div class="form-check">
+
+      <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          I agree to the conditions below:
-        </label>
-      </div>
-      <ul class="conditions mt-4 ms-4">
-        <li>
           <b>I identify as a person of an underrepresented gender in tech. </b>This includes but is not limited to:
           cisgender women, transgender
           women, transgender men, non-binary individuals, genderqueer
-          individuals, and other underrepresented genders.
-        </li>
-
-        <li>
-          I authorize you to share my application/registration information with
-          Major League Hacking for event administration, ranking, and MLH
-          administration in-line with the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both
-          the
-          <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" target="_blank">MLH Contest Terms and
-            Conditions</a>
-          and the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.
-        </li>
-
-        <li>
-          I have read and agree to the
-          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.
-        </li>
-      </ul>
-      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
-
-      <div class="form-check mt-4">
-        <Field name="mlhEmails" type="checkbox" class="form-check-input" :value="agreeEmails.value"
-          :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
-
-        <label class="form-check-label">
-          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.
+          individuals, and other underrepresented genders. I further agree to the <a href="2024 Technica Terms and Code of Conduct.docx.pdf">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
+
+      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
         <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
@@ -473,9 +429,67 @@
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
+
       <button type="submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
           click="purple-button-onclick.svg" />
+      </button>
+     
+      <div class="disclaimer mt-4">
+        <p>We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
+      </div>
+
+      <div class="form-check mt-4">
+        <Field name="mlhValidCoC" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValidCoC'] }" required />
+        <label class="form-check-label">
+          I have read and agree to the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Code of Conduct</a>. 
+        </label>
+      </div>
+      <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="mlhValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValid'] }" required />
+        <label class="form-check-label">
+          I authorize you to share my application/registration information with
+          Major League Hacking for event administration, ranking, and MLH
+          administration in-line with the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both
+          the
+          <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" target="_blank">MLH Contest Terms and
+            Conditions</a>
+          and the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.
+        </label>
+      </div>
+      
+      <ErrorMessage :name="'mlhValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field name="mlhEmails" type="checkbox" class="form-check-input" :value="agreeEmails.value"
+          :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
+        <label class="form-check-label">
+          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
+          announcements.
+        </label>
+      </div>
+      
+      <div class="form-check mt-4">
+        <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
+          :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
+
+        <label class="form-check-label">
+          I understand that the withdrawal or deletion of my data must be requested via the 
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform">Data Rights Contact Form</a>.
+        </label>
+      </div>
+
+      <!-- {{ values }}
+      {{errors}} -->
+      <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
+        Submit
       </button>
     </Form>
   </div>
@@ -483,6 +497,7 @@
 </template>
 
 <script setup lang="ts">
+import {reactive, computed} from 'vue';
 import {
   Form,
   Field,
@@ -494,9 +509,11 @@ import * as yup from 'yup';
 import { ref } from 'vue';
 import { useUtils } from '../composables/useUtils';
 import MLHSchools from '../static/mlh-schools.json';
-import { allCountries, CountryData, Region } from 'country-region-data';
-import { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
+import type { CountryData, Region } from 'country-region-data';
+import { allCountries } from 'country-region-data';
+import type { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
 import { Value } from 'sass';
+import { Options } from 'tsparticles-engine';
 const { performPostRequest, getEnvVariable } = useUtils();
 const isSending = ref(false); //form submitting
 const submitTimes = ref(0);
@@ -533,8 +550,11 @@ interface RegisterForm {
   resume?: any;
   accommodations?: string;
   technicaValid?: string;
+  mlhValidCoC?: string;
+  mlhValid?: string;
   mlhEmails?: string;
   agreeNewsletter?: string;
+  dataRights?: string;
 }
 
 const validationSchema = yup.object<RegisterForm>({
@@ -663,7 +683,9 @@ const validationSchema = yup.object<RegisterForm>({
     }),
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
-  technicaValid: yup.string().required('Agreement of conditions is required'),
+  technicaValid: yup.string().required('Agreement of Technica conditions is required'),
+  mlhValidCoC: yup.string().required('Agreement of MLH Code of Conduct is required'),
+  mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
 
 interface Option {
@@ -727,10 +749,6 @@ const sizeOptions = ref([
   '3XL',
 ]);
 
-const attendanceOptions = ref(['Online', 'Hybrid', 'In-person']);
-
-const experience = ref(['0-2', '3-4', '5+']);
-
 const hearOptions = ref<Option[]>([
   { text: 'Instagram', value: 'instagram' },
   { text: 'Facebook', value: 'facebook' },
@@ -740,7 +758,7 @@ const hearOptions = ref<Option[]>([
   { text: 'LinkedIn', value: 'linkedin' },
   { text: 'Google', value: 'google' },
   { text: 'Major League Hacking', value: 'mlh' },
-  { text: 'Email Listserv', value: 'email' },
+  { text: 'Email Listser', value: 'email' },
   { text: 'Flyer or Poster', value: 'flyer' },
   { text: 'Friend', value: 'friend' },
   { text: 'Other', value: 'other' },
@@ -758,7 +776,7 @@ const dietaryRestrictionsOptions = ref<Option[]>([
   { text: 'Other', value: 'other' },
 ]);
 
-const topics = ref<Option[]>([
+const topicsOfInterest = ref<Option[]>([
   { text: 'AI and Machine Learning', value: 'ai-and-machine-learning' },
   { text: 'Cloud Computing', value: 'cloud-computing' },
   { text: 'Data Science', value: 'data-science' },
@@ -766,6 +784,7 @@ const topics = ref<Option[]>([
   { text: 'Research', value: 'research' },
   { text: 'UI/UX', value: 'ui-ux' },
   { text: 'Web Development', value: 'web-development' },
+  {text: 'Hardware', value: 'hardware' },
 ]);
 
 const foodAllergiesOptions = ref<Option[]>([
@@ -778,65 +797,100 @@ const accommodationsOptions = ref<Option[]>([
   { text: 'ASL Interpreter', value: 'asl-interpreter' },
   { text: 'Guides', value: 'guides' },
   { text: 'Earplugs', value: 'earplugs' },
+  { text: 'Masks', value: 'masks'},
   { text: 'Other', value: 'other' },
 ]);
 
-const firstHackathon = ref<Option[]>([
-  { text: 'No', value: 'No' },
-  { text: 'Yes', value: 'Yes' },
-]);
-
-const firstTechnica = ref<Option[]>([
-  { text: 'No', value: 'No' },
-  { text: 'Yes', value: 'Yes' },
-]);
-
-const trackOptions = ref<Option[]>([
-  { text: 'General', value: 'general' }
-]);
 const agreeRules = ref({ text: 'agree rules', value: 'Yes' });
 const agreeEmails = ref({ text: 'agree emails', value: 'Yes' });
 const agreeNewsletter = ref({ text: 'agree newsletter', value: 'Yes' });
+const agreeDataRights = ref({ text: 'agree dataRights', value: 'Yes' });
 
-function getTracks(values: Record<string, any>) {
-  const { education, attendance, isFirstHackathon, yearsExperience, topics } =
-    values;
-
-  let other: Option[] = [
-    { text: 'Beginner', value: 'beginner' },
-    { text: 'Startup', value: 'startup' },
-    { text: 'Exploratory', value: 'exploratory' },
-    { text: 'General', value: 'general' },
-  ];
-  let recommended: Option[] = [];
-  let removed = 0;
-
-  if (attendance === 'In-person' || attendance === 'Hybrid') {
-    if (isFirstHackathon === 'Yes' || yearsExperience === '0-2') {
-      recommended.push(other[0]);
-      other.splice(0, 1);
-      removed++;
-    }
-    if (topics && topics.includes('startups')) {
-      recommended.push(other[1 - removed]);
-      other.splice(1 - removed, 1);
-      removed++;
-    }
-  } else if (attendance === 'Online') {
-    other.splice(0, 2);
-    removed += 2;
-  }
-
-  if (recommended.length === 0) {
-    recommended.push(other[3 - removed]);
-    other.splice(3 - removed, 1);
-    removed++;
-  }
-
-  console.log(recommended)
-  console.log(other)
-  return [recommended, other];
+interface UserInput {
+  attendanceType: string;
+  isFirstHackathon: string;
+  isFirstTechnica: string;
+  yearsExperience: string;
+  topicsOfInterest: string[];
+  education: string;
 }
+
+// Define reactive variables
+const userInput = reactive<UserInput>({
+  education: 'other',
+  attendanceType: 'in-person',
+  isFirstHackathon: 'Yes',
+  isFirstTechnica: 'Yes',
+  yearsExperience: '0',
+  topicsOfInterest: ['research'],
+});
+
+// Define other reactive variables and options
+const attendanceOptions: Option[] = [
+  { text: 'In-Person', value: 'in-person' },
+  { text: 'Virtual', value: 'virtual' },
+  { text: 'Hybrid', value: 'hybrid' }
+];
+
+const firstHackathon: Option[] = [
+  { text: 'No', value: 'No' },
+  { text: 'Yes', value: 'Yes' }
+];
+
+const firstTechnica: Option[] = [
+  { text: 'No', value: 'No' },
+  { text: 'Yes', value: 'Yes' }
+];
+
+const experience: string[] = ['0', '1', '2', '3', '4', '5+'];
+
+const trackOptions: Option[] = [
+  { text: 'Beginner', value: 'beginner' },
+  { text: 'General', value: 'general' },
+  { text: 'Hardware', value: 'hardware' }, // Add the hardware option
+  { text: 'Startup', value: 'startup' },
+  { text: 'Research', value: 'research' }
+];
+
+// Function to check if education is high school or lower 
+const isHighSchoolOrLower = (education: string): boolean => {
+  const highSchoolOrLowerOptions = [
+    'Less than Secondary / High School',
+    'Secondary / High School'
+  ];
+  return highSchoolOrLowerOptions.includes(education);
+};
+
+// Compute recommended tracks based on user input
+const recommendedTracks = computed(() => {
+  const tracks: { text: string, value: string }[] = [];
+
+  tracks.push({ text: 'General', value: 'general' });
+
+  if (userInput.attendanceType === 'in-person') {
+    if (
+      userInput.isFirstHackathon === 'Yes' &&
+      parseInt(userInput.yearsExperience) >= 0 &&
+      parseInt(userInput.yearsExperience) <= 2
+    ) {
+      tracks.push({ text: 'Beginner', value: 'beginner' });
+    }
+
+    if (userInput.topicsOfInterest.includes('startups')) {
+      tracks.push({ text: 'Startup', value: 'startup' });
+    }
+
+    if (userInput.topicsOfInterest.includes('hardware')) {
+      tracks.push({ text: 'Hardware', value: 'hardware' });
+    }
+
+    if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
+      tracks.push({ text: 'Research', value: 'research' });
+    }
+  }
+
+  return tracks;
+});
 
 const educationOptions = ref([
   'Less than Secondary / High School',
@@ -887,6 +941,7 @@ const search = (event: AutoCompleteCompleteEvent) => {
 };
 
 const resumeFile = ref<File>();
+
 const registerUser = async (values: Record<string, any>) => {
   let fd = new FormData();
 
@@ -941,6 +996,7 @@ const registerUser = async (values: Record<string, any>) => {
     values.agreeNewsletter = "No"
   }
 
+
   //Test input for submission
   // let testInput = {
   //   timestamp: "test",
@@ -985,32 +1041,38 @@ const registerUser = async (values: Record<string, any>) => {
 
   // Add referral code if it exists
   let params = new URL(document.location as any).searchParams;
-  let referral = params.get("referral");  
+  let referral = params.get("referral");
 
   fd.append("referral", referral as string)
-
+  
   try {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
       'signup',
+      
       fd
     );
 
     isSending.value = false;
 
+
+    
     if (
-      !response ||
-      (response.error.value && response.error.value.statusCode == 500)
+      !response 
     ) {
       alert(
-        'Sorry, there was an error with the submission. Please try again later.'
+        'Sorry, there was an error with the submission. Please try again later. noresponse'
       );
-    } else {
-      location.href = '/RegistrationConfirmation';
+    } else if
+      (response.error.value && response.error.value.statusCode == 500) {
+        alert('status code 500')
+    }
+      else {
+      location.href = '/index';
     }
   } catch (error: any) {
     alert(
-      'Sorry, there was an error with the submission. Please try again later.'
+      'Sorry, there was an error with the submission. Please try again later. Catch'
     );
   }
 };
@@ -1029,6 +1091,11 @@ a {
 h1,
 H3 {
   color: $DARK_PURPLE;
+}
+
+.disclaimer{
+  padding: 2rem;
+  padding-bottom: 0rem;
 }
 
 .form-label {

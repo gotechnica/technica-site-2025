@@ -1,5 +1,3 @@
-<!-- reusable MainButton component w/ text, backgroundColor, and textColor props -->
-<!-- usage: <MainButton text="Text here" backgroundColor="#hex" textColor="#hex" /> -->
 <template>
   <a :href="link" target="_blank">
     <button

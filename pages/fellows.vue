@@ -3,10 +3,11 @@
     <div class="container">
       <div class="row fellow-header">
         <!--<H1 class="title">Virtual Fellowship Program</H1>-->
-        <div class = "header">
+        <!-- <div class = "header">
           <img src="/headings/header.png">
           <h1>Virtual Fellowship Program</h1>
-        </div>
+        </div> -->
+        <Header>Virtual Fellowship Program</Header>
         <!-- <h4>
           Work on real-world coding projects for rising college freshman, no
           experience required.
@@ -93,9 +94,11 @@
           </div>
       </div>
         
-      <h3 class="faq-heading" v-if="width <= 768">FAQ</h3>
-      <h3 class="faq-heading" v-else>Frequently Asked Questions</h3>
-      <FAQSection faqId="fellows" :qaList="qaList" class="faq"/>
+      <div class="container">
+      <Header v-if="width <= 768" class = faq>FAQ</Header>
+      <Header v-else class = faq>Frequently Asked Questions</Header>
+      <FAQ faqId="main" :qaList="qaList" class="main-section" />
+    </div>
 
       <StickyButton />
     </div>

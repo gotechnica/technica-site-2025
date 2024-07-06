@@ -1,115 +1,150 @@
 <template>
   <title>Technica Home</title>
   <!-- Hero Section -->
-  <HeroLanding />
-  
-  <div class="container">
-    <!-- About Technica -->
-    <div class="about-container">
-      <H1>Thank You For Coming!</H1>
-      <div class="about-blurb main-section">
+  <div class="main-body">
+  <HeroLanding/>
+  <!--About Section-->
+    <div class="container">
+      <About/>
+    </div>
+    <!-- Hybrid Environment Section -->
+      <div class="container">
+        <Header>Hybrid Environment</Header>
         <div class="row">
-          <p><p>Technica is the world’s largest hackathon for underrepresented genders in tech. The hackathon is hosted annually at the University of Maryland, and is a weekend jam-packed with swag, workshops, networking, and awesome projects!</p></p>
+          <div class="col-sm" v-for="(item, index) in items" :key="index">
+            <img class="hybrid-img" :src=item.image>
+            <div class="caption-box mx-auto" :class="item.class">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.content }}</p>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="container">
+        <TestimoniesCarousel class="main-section"/>
+      </div>
+      <!-- Tracks Section ------------------------------------------------------------------->
+      <div class="container">
+        <Header>Tracks</Header>
         <div class="row">
-          <div class="col-lg-6">
-            <p>This year we had over <b>800+</b> hackers participate (both in-person and online), compromised of underrepresented groups from many different backgrounds. We had <a href="https://technica-2023.devpost.com/project-gallery" target="_blank">121 awesome projects submitted</a>, many of which that tackle real-world issues with unique solutions. We hope everyone had a chance to learn and explore something new at Technica 2023, and we hope to see everyone again next year!</p>
-          </div>
-          <div class="col-lg-6">
-            <div class='embed-container'><iframe src='https://www.youtube.com/embed/4PBEfogEP6s' frameborder='0' allowfullscreen></iframe></div>
+          <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
+            <div class="flip-card" :class="{ 'do-flip': card.flipped }">
+              <div class="flip-card-front">
+                <img class="card-img" :src="card.image" alt="Card Image">
+                <div class="card-body">
+                  <span class="flip-text" @click="toggleFlip(card)">Learn More</span>
+                  <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <img class="card-img" :src="card.imageFlipped" alt="Card Image">
+                <div class="card-body-flipped">
+                  <p>{{card.title}} track</p>
+                  <p>{{ card.backContent }}</p>
+                </div>
+                <div class="return-front">
+                  <span class="flip-text" @click="toggleFlip(card)">Return to front</span>
+                  <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <H1>Our Achievements</H1>
-      <AboutTechnica class="main-section"/>
+    <div class="container">
+      <AdditionalInfo/>
     </div>
 
-    <!-- What to do at Technica -->
-    <H1>What Can You Do at Technica?</H1>
-    <WhatToDo class="main-section"/>
- 
-    <!-- Hear from past hackers -->
-    <H1>Hear From Past Hackers!</H1>
-    <TestimoniesCarousel class="main-section"/>
-
-    <!-- Hybrid Envrionment -->
-    <H1>Hybrid Environment</H1>
-    <HybridEnvironment class="main-section"/>
-
-    <!-- Tracks -->
-    <H1>Tracks</H1>
-    <p class="description">
-      Tracks can guide your hackathon experience for specific interests and
-      skill levels with a more curated set of workshops and events. Each hacker
-      may select one track during registration. The beginner and startup tracks
-      have limited spots!
-    </p>
-
-    <PixelButton
-      text="Learn more"
-      link="/tracks"
-      img="purple-button-normal.svg"
-      hover="purple-button-hover.svg"
-      click="purple-button-onclick.svg"
-    />
-    <TracksComponent class="main-section" />
-
-    <!-- Additional Information -->
-    <H1>Additional Info</H1>
-    <AdditionalInfo class="main-section"/>
-
-    <!-- Keynote Speakers -->
-    <H1>Keynote Speakers</H1> 
-    <div class="keynote main-section">
-      <div class="col">
-        <KeynoteSpeaker :speaker="speaker1" />
-      </div>
-      <div class="col">
-        <KeynoteSpeaker :speaker="speaker2" />
-      </div>
+    <div class="container">
+      <Sponsors/>
     </div>
 
-    <!-- Frequently Asked Questions -->
-    <H1 v-if="width <= 768">FAQ</H1>
-    <H1 v-else>Frequently Asked Questions</H1>
-    <FAQSection faqId="main" :qaList="qaList" class="main-section" />
-
-    <!-- Sponsors -->
-    <H1>Sponsors</H1>
-    <Sponsors class="main-section"/>
-
-    <!-- Meet the Team -->
-    <H1>Meet the Team</H1>
-    <MeetTheTeam class="main-section"/>
-
-    <!-- Scroll to Top Button -->
-    <StickyButton />
-    
+    <div class="container">
+      <Header v-if="width <= 768" class = faq>FAQ</Header>
+      <Header v-else class = faq>Frequently Asked Questions</Header>
+      <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
+
+    <!-- <div class="container">
+      <TeamsCarousel/>
+    </div> -->
+  </div>
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import { useWindowSize } from '@vueuse/core';
+import { string } from 'yup';
+
+// Hybrid Enviornment -----------------------------------------------------------------
+const items = ref([
+  { image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
+  { image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
+  { image: "/hybrid/virtual.svg", class: "virtual",  title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
+]);
 
 // Detect mobile layout based on screen width
 const { width } = useWindowSize();
+const isMobile = computed(() => width.value <= 768);
 
-// keynote speaker 1
-const speaker1 = {
-  name: "Ashley Huynh (she/her)",
-  image: "/keynote/ashley-huynh.svg",
-  position: "Open Source Engineer at Slack",
-  description: "Ashley Huynh is a queer Vietnamese-Malaysian Chinese software engineer from Atlanta, GA. With deep roots in hackathons, she was inspired by tech’s impact and has taken on different career paths during her time in the industry. She started off as a product software engineer, building marketing features to empower small businesses at Mailchimp. From there, she entered developer relations as a Community Engineer at Mux and a Developer Advocate at RenderATL. Today, she is an Open Source Software Engineer at Slack, enabling their developer community to build apps that enhance productivity and make work a more pleasant place to be!"
+// Tracks -----------------------------------------------------------------
+interface Card {
+  title: string;
+  frontContent: string;
+  backContent: string;
+  flipped: boolean;
+  image: string;
+  imageFlipped: string;
 }
 
-// keynote speaker 2
-const speaker2 = {
-  name: "Emma Mitchell (she/her)",
-  image: "/keynote/emma-mitchell.svg",
-  position: "Founder, InspireHER STEM & Senior IT Systems Analyst",
-  description: "Emma Mitchell is the founder of InspireHER STEM, an international mentoring program, and a charitable trust in Kenya with the Amazing Grace Center Kenya CBO. She is also the president of the Mirror of Hope Foundation and a board member of Quilts for Empowerment; educating, mentoring and empowering underserved women and rural girls to lead for change. Emma is a certified Project Management Professional(PMP) with over a decade of experience in technology and diverse expertise in cloud architecture, system analysis, IT asset management, and software implementations. Born and raised in Kenya, she now lives in the USA with her family."
-}
+const cards = ref<Card[]>([
+  {
+    title: 'General',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'tracks/Technica-Tracks-conflict-01.svg',
+    imageFlipped: 'tracks/Technica-Tracks-final-04.svg'
+  },
+  {
+    title: 'Beginner',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'tracks/Technica-Tracks-color-05.svg',
+    imageFlipped: 'tracks/Technica-Tracks-final-10.svg'
+  },
+  {
+  title: 'Startup',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'tracks/Technica-Tracks-color-07.svg',
+    imageFlipped: 'tracks/Technica-Tracks-final-06.svg'
+  },
+  {
+  title: 'Research',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'tracks/Technica-Tracks-color-03.svg',
+    imageFlipped: 'tracks/Technica-Tracks-final-08.svg'
+  },
+  {
+  title: 'Hardware',
+    frontContent: 'A quick description of the front item',
+    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    flipped: false,
+    image: 'tracks/Technica-Tracks-color-09.svg',
+    imageFlipped: 'tracks/Technica-Tracks-final-02.svg'
+  }
+]);
+
+const toggleFlip = (card: Card) => {
+  card.flipped = !card.flipped;
+};
+
 
 const qaList = [
   {
@@ -130,7 +165,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2023 will take place on October 21-22 in The Hotel at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.'
+      'Technica 2024 will take place on October 26-27 in The Hotel at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.'
   },
   {
     question: 'Who can attend Technica?',
@@ -152,7 +187,7 @@ const qaList = [
   },
   {
     question: 'How do teams work?',
-    answer: 'You can work on a project on your own, or you can work with a team. Teams can be formed prior to the day of the hackathon with other participants, or at the team formation event before official hacking begins. You can meet other hackers in the Technica 2023 Slack workspace. Weekend-of, we\'ll offer a team formation event in which you can use gotechnica.org/teamformationform to list your preferences and gotechnica.org/teamformationsheet to view potential team members. Team size must not exceed four members, per MLH rules.'
+    answer: 'You can work on a project on your own, or you can work with a team. Teams can be formed prior to the day of the hackathon with other participants, or at the team formation event before official hacking begins. You can meet other hackers in the Technica 2024 Slack workspace. Weekend-of, we\'ll offer a team formation event in which you can use gotechnica.org/teamformationform to list your preferences and gotechnica.org/teamformationsheet to view potential team members. Team size must not exceed four members, per MLH rules.'
   },
   {
     question: 'What should I bring?',
@@ -175,6 +210,227 @@ const qaList = [
 </script>
 
 <style scoped lang="scss">
+//Hybrid Enviornment Section -----------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-body {
+  background: linear-gradient(180deg, #351C33 30%, #F4D1D9 75%);
+}
+
+.larger-circle, .icon-circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hybrid-img{
+  margin-bottom: 5%;
+}
+
+.in-person {
+  background-color: $LIGHTGREEN;
+  border: $DARKGREEN solid 5px;
+
+  h3 {
+    -webkit-text-stroke: 2px $DARKGREEN;
+    text-shadow: $DARKGREEN;
+  }
+}
+.hybrid {
+  background-color: $LIGHTPINK;
+  border: $DARKPINK solid 5px;
+  h3 {
+    -webkit-text-stroke: 2px $DARKPINK;
+    text-shadow: $DARKPINK;
+  }
+}
+.virtual {
+  background-color: $LIGHTYELLOW;
+  border: $DARKYELLOW solid 5px;
+  h3 {
+    -webkit-text-stroke: 2px $DARKYELLOW;
+    text-shadow: $DARKYELLOW;
+  }
+}
+
+.caption-box {
+  width: 365px;
+  height: 443px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.caption-box h3, .caption-box p {
+  margin: 0;
+  color: white;
+}
+
+.caption-box h3 {
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+  border: $DARKGREEN;
+}
+
+p {
+  color: #464343;
+}
+
+h1 {
+  font-size: 60px;
+  color: #000;
+  padding: 20px 0 74px;
+}
+
+.container {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.header-container {
+  margin-bottom: 2%;
+}
+
+.icon-circle h2 {
+  margin: 0;
+}
+
+.col-sm {
+  padding: 15px;
+}
+
+//Tracks Section -----------------------------------------------------------------
+.container {
+  text-align: center;
+}
+body {
+  background: #f5f6fa;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #000000;
+  font-size: 20px;
+}
+
+.flip-card-3D-wrapper {
+  width: 100%;
+  max-width: 340px; 
+  margin: 10px auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.flip-card {
+  height: 100%;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+  height: 446px;
+  width: 318px
+}
+
+.do-flip {
+  transform: rotateY(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  z-index: 2;
+  border-radius: 18px;
+  background-color: transparent !important;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+.card-body {
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  color: white;
+}
+
+.card-body-flipped {
+  position: absolute;
+  top: 10%;
+  left: 16%;
+  width: 75%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.return-front {
+  position: absolute;
+  bottom: 9%;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.flip-text {
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+.flip-arrow {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flip-card-front {
+  background: #d9d9d9;
+}
+
+.flip-card-back {
+  background: #d9d9d9;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back h4 {
+  color: black;
+}
+
+@media screen and (max-width: 400px) {
+  .caption-box {
+    width: 300px;
+  }
+}
 
 .about-blurb {
   text-align: center;
