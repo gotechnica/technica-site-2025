@@ -525,7 +525,7 @@ interface RegisterForm {
   pronouns?: string;
   race: string[];
   age: string;
-  guardianEmail: string;
+  parentEmail: string;
   education: string;
   school: string;
   major: string;
