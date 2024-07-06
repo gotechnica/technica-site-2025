@@ -422,6 +422,16 @@
       <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
+        <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
+          :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
+          <label class="form-check-label">
+            I understand that the withdrawal or deletion of my data must be requested via the <a href = "https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform">Data Rights Contact Form</a>.
+          </label>
+        </div>
+
+      <ErrorMessage :name="'dataRights'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
         <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
           :id="`agree-newsletter-${agreeNewsletter.value}`" :class="{ 'is-invalid': errors['agreeNewsletter'] }" />
 
@@ -468,16 +478,6 @@
         <label class="form-check-label">
           I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
           announcements.
-        </label>
-      </div>
-      
-      <div class="form-check mt-4">
-        <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
-          :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
-
-        <label class="form-check-label">
-          I understand that the withdrawal or deletion of my data must be requested via the 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform">Data Rights Contact Form</a>.
         </label>
       </div>
 
@@ -680,6 +680,7 @@ const validationSchema = yup.object<RegisterForm>({
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
   technicaValid: yup.string().required('Agreement of Technica conditions is required'),
+  dataRights: yup.string().required('Agreement to the Data Rights Agreement is required'),
   mlhValidCoC: yup.string().required('Agreement of MLH Code of Conduct is required'),
   mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
