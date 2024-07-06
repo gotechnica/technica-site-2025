@@ -429,11 +429,6 @@
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
-
-      <button type="submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
-          click="purple-button-onclick.svg" />
-      </button>
      
       <div class="disclaimer mt-4">
         <p>We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
@@ -489,7 +484,8 @@
       <!-- {{ values }}
       {{errors}} -->
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
-        Submit
+        <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
+          click="purple-button-onclick.svg" />
       </button>
     </Form>
   </div>
@@ -817,12 +813,12 @@ interface UserInput {
 
 // Define reactive variables
 const userInput = reactive<UserInput>({
-  education: 'other',
-  attendanceType: 'in-person',
-  isFirstHackathon: 'Yes',
-  isFirstTechnica: 'Yes',
-  yearsExperience: '0',
-  topicsOfInterest: ['research'],
+  education: '',
+  attendanceType: '',
+  isFirstHackathon: '',
+  isFirstTechnica: '',
+  yearsExperience: '',
+  topicsOfInterest: [],
 });
 
 // Define other reactive variables and options
