@@ -15,7 +15,7 @@
             <img class="hybrid-img" :src=item.image>
             <div class="caption-box mx-auto" :class="item.class">
               <h3>{{ item.title }}</h3>
-              <p>{{ item.content }}</p>
+              <li v-for="content in item.content">{{ content }}</li>
             </div>
           </div>
         </div>
@@ -79,9 +79,28 @@ import { string } from 'yup';
 
 // Hybrid Enviornment -----------------------------------------------------------------
 const items = ref([
-  { image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { image: "/hybrid/virtual.svg", class: "virtual",  title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
+  { image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: [
+      'Held at The Hotel at UMD (eligible for hotel rooms if traveling)',
+      'Receive swag (such as t-shirts, stickers, etc.)',
+      'Visit sponsor booths face to face',
+      'Live workshops',
+      'Catered food service and snacks',
+    ] },
+  { image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: [
+      'Judging and expo will be held in person',
+      'Request mentor for technical help',
+      'Resume will be shared with sponsors',
+      'Mini events and games',
+      'Access event through the Technica virtual platform',
+      'Win a prize for hacking categories (Digital gift card only for online hackers)',
+    ] },
+  { image: "/hybrid/virtual.svg", class: "virtual",  title: "Virtual", content: [
+      'Visit sponsor booths virtually',
+      'Slack community to make friends and discuss your project',
+      'Chat with the Technica community on Discord and Slack',
+      'Attend recorded or streamed workshops',
+      'Receive swag depending on participation level if based in the U.S.',
+    ] }
 ]);
 
 // Detect mobile layout based on screen width
@@ -101,39 +120,39 @@ interface Card {
 const cards = ref<Card[]>([
   {
     title: 'General',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for anyone and everyone!',
+    backContent: 'For any and all hackers! Come build to your heart\'s content using hardware, software, or anything you want with other hackers. Hackers can be students, designers, or just any tech-lovers out there. Hackers of all skill levels are welcomed and supported!',
     flipped: false,
     image: 'tracks/Technica-Tracks-conflict-01.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-04.svg'
   },
   {
     title: 'Beginner',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those new to hackathons!',
+    backContent: 'New to hackathons? Don\'t know how to code? No worries! You\'ll be provided with resources to help you succeed at Technica and beyond. This track begins with exclusive workshops a few weeks before Technica, and includes everything from an introduction to hackathons to coding and logic concepts.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-05.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-10.svg'
   },
   {
   title: 'Startup',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those interested in business!',
+    backContent: 'Interested in the business side of building a project? Join startup track! Featuring both workshops before and during Technica weekend, startup track is a unique opportunity to explore an alternate dimension of project building that you won\'t want to miss out on!',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-07.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-06.svg'
   },
   {
   title: 'Research',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those interested in business!',
+    backContent: 'Calling all undergraduates interested in research! Come explore the fields of research within computer science. You will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-03.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-08.svg'
   },
   {
   title: 'Hardware',
-    frontContent: 'A quick description of the front item',
+    frontContent: 'A track for those interested in hardware!',
     backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-09.svg',
@@ -219,6 +238,10 @@ body {
 
 .main-body {
   background: linear-gradient(180deg, #351C33 30%, #F4D1D9 75%);
+}
+
+li {
+  color: white;
 }
 
 .larger-circle, .icon-circle {
