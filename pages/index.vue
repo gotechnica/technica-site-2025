@@ -153,7 +153,7 @@ const cards = ref<Card[]>([
   {
   title: 'Hardware',
     frontContent: 'A track for those interested in hardware!',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    backContent: 'Want to explore the fusion of software and hardware engineering? Join the hardware track! During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-09.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-02.svg'
