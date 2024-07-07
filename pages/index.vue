@@ -7,6 +7,11 @@
     <div class="container">
       <About/>
     </div>
+
+    <div class="whatToDo">
+      <h1>What can you do at Technica?</h1>
+      <WhatToDo/>
+    </div>
     <!-- Hybrid Environment Section -->
       <div class="container">
         <Header>Hybrid Environment</Header>
