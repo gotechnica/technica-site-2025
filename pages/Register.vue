@@ -1,12 +1,14 @@
 <template>
   <title>Register</title>
   <div id="form" class="container">
-    <h1 class="text-center my-4">Technica Registration Form 2024</h1>
+    <br><br>
+    <Header>Registration Form</Header>
     <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
       check-in instructions. <b>#Wonder Awaits</b> at Technica!</p>
+    <br><br>
     <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
       <!-- HACKER INFO -->
-      <H1>Hacker Info</H1>
+      <Header>Hacker Info</Header>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div>
@@ -90,7 +92,7 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label"> What race(s) do you identify as?* </label>
-          <div class="form-check" v-for="option in raceOptions">
+          <div class="form-check" style="color: white;" v-for="option in raceOptions">
             <Field name="race" :value="option.value" type="checkbox" class="form-check-input" :id="option.value"
               :class="{ 'is-invalid': errors['race'] }" required />
 
@@ -111,7 +113,7 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">
-              What age will you be during Technica (October 21-22)?*
+              What age will you be during Technica (October 26-27)?*
             </label>
             <Field name="age" type="text" value="" class="form-control" :class="{ 'is-invalid': errors['age'] }"
               required />
@@ -136,7 +138,7 @@
       </div>
 
       <!-- EDUCATION -->
-      <H1 class="blue"> Education </H1>
+      <Header> Education </Header>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div class="mb-4">
@@ -178,7 +180,7 @@
       </div>
 
       <!-- LOCATION -->
-      <H1>Location</H1>
+      <Header>Location</Header>
       <p>
         Please make sure to enter the place you'll be departing from for
         Technica. For hackers in the U.S. only, select zip codes will be
@@ -216,7 +218,7 @@
       </div>
 
       <!-- TRACKS -->
-      <H1 class="green">Tracks</H1>
+      <Header>Tracks</Header>
       <p class="description">
         Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
@@ -303,7 +305,7 @@
       </div>
 
       <!-- EVENT INFO -->
-      <H1>Event Info</H1>
+      <Header>Event Info</Header>
 
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
@@ -406,7 +408,7 @@
       </p>
 
       <!-- RULES AND PRIVACY POLICY -->
-      <H1 class="mb-2">Rules and Privacy Policies</H1>
+      <Header>Rules and Privacy Policies</Header>
 
       <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
@@ -441,7 +443,7 @@
       </div>
      
       <div class="disclaimer mt-4">
-        <p>We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
+        <p style="color: black;">We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
       </div>
 
       <div class="form-check mt-4">
@@ -484,8 +486,7 @@
       <!-- {{ values }}
       {{errors}} -->
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-normal.svg" hover="purple-button-hover.svg"
-          click="purple-button-onclick.svg" />
+        <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-onclick.svg" />
       </button>
     </Form>
   </div>
@@ -1082,7 +1083,7 @@ function getFileUpload(e: any) {
 
 <style scoped lang="scss">
 a {
-  color: $DARK_PURPLE;
+  color: $DARKYELLOW;
 }
 
 h1,
@@ -1096,7 +1097,7 @@ H3 {
 }
 
 .form-label {
-  color: #212529;
+  color: white;
   font-size: 16px;
   font-weight: 600;
 }
@@ -1106,6 +1107,14 @@ H3 {
 .form-check-input,
 .p-autocomplete {
   border: 2px solid #a464d8;
+}
+
+.form-check-label {
+  color: white;
+}
+
+.form-check.mt-4 a {
+  color: $DARKPURPLE;
 }
 
 .p-autocomplete {
