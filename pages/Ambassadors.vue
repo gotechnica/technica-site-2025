@@ -148,9 +148,9 @@ a {
   margin: 1rem 0;
 }
 
-.faq {
-  margin: auto;
-}
+// .faq {
+//   // margin: auto;
+// }
 
 .button {
   width: 50%;
@@ -189,6 +189,10 @@ a {
   color:#653553;
   margin: 0;
   padding: 0.5rem;
+}
+
+.main-section {
+  margin-left: 3.5vw;
 }
 
 @media screen and (max-width: 768px) {
