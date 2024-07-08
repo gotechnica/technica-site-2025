@@ -14,7 +14,7 @@
     </div>
 
     <!-- Hybrid Environment Section -->
-    <div class="container">
+    <div class="container hybrid">
       <HybridEnv/>
     </div>
 
@@ -121,4 +121,17 @@ const qaList = [
 
 <style scoped lang="scss">
 
+.container {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 630px) {
+  .whatToDo {
+    visibility: hidden;
+  }
+
+  .hybrid {
+    margin-top: -60rem;
+  }
+}
 </style>

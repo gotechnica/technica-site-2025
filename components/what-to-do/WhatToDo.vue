@@ -1,6 +1,7 @@
 <!-- Template -->
-<template>
+<template class = notMobileFriendly>
   <Header>What To Do At Technica?</Header>
+    <p>Swipe to see more suggestions!</p>
     <Carousel :items-to-show="2" :wrap-around="true" :autoplay="10000000" pause-autoplay-on-hover>
         <Slide v-for="slide in slides" :key="slide.whatToDoTitle">
             <WhatToDoCarouselSlide 
@@ -57,6 +58,10 @@ const slides = [
 
 <style scoped lang="scss">
 
+p {
+  text-align: center;
+}
+
 .carousel__slide {
   transition: 0.31s;
   opacity: 0.6;
@@ -101,16 +106,7 @@ const slides = [
   .carousel__slide--next, .carousel__slide--prev {
     visibility: hidden;
   }
+
+
 }
-
-@media (max-width: 450px) {
-  h2 {
-    font-size: 1.2rem;
-    margin-bottom: -10%;
-    z-index: 3 !important;
-    position: relative;
-  }
-}
-
-
 </style>

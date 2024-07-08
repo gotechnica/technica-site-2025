@@ -2,20 +2,21 @@
 
 <!-- Template -->
 <template>
-    <div class="card" >
-        <div class="card-contents">
-            <div class="image-container">
-                <img :src="`${whatToDoImg}`" alt="What To Do Image"/>
-                <div v-if="showDesc" class="overlay-text">
-                  <p> {{ whatToDoDesc }}</p>
-                </div>
+    <div class="card">
+      <div class="card-contents">
+        <div class="image-container">
+           <img :src="`${whatToDoImg}`" alt="What To Do Image"/>
+            <div v-if="showDesc" class="overlay-text">
+              <p> {{ whatToDoDesc }}</p>
             </div>
+
             <div class="card-text">
-                <div class="clickable-text" @click="toggleText" >
-                  <h3>{{ whatToDoTitle }}</h3>
-                </div>
+            <div class="clickable-text" @click="toggleText" >
+              <h3>{{ whatToDoTitle }}</h3>
             </div>
-        </div>
+          </div>
+        </div>  
+      </div>
     </div>
 
 </template>
@@ -64,12 +65,16 @@ export default defineComponent({
     border-width: 0;
     background-color: transparent;
     transition: transform 0.6s;
-    
+    visibility: visible;
+  }
+
+  .mobile {
+    visibility: hidden;
   }
    
   .card-contents {
     border: 0.7rem solid #1e638e;
-    border-radius: 1rem;
+    border-radius: 20px;
     background-color: #FFFBEF;
     width: 100%;
     height: 100%;
@@ -148,29 +153,22 @@ export default defineComponent({
   .card, .card-contents {
     height:75%;
   }
-  
+  .card-text {
+    padding-top: 15rem;
+  }
 }
 
 @media screen and (max-width: 630px) {
   .card {
-    width: 70vw;
-    height: 650px;
+    visibility: hidden;
+  }
+
+  .mobile {
+    visibility: visible;
   }
 }
 
-@media screen and (max-width: 445px) {
-  p {
-    font-size: 80%;
-  }
 
-}
-
-@media screen and (max-width: 365px) {
-  .card, .card-contents {
-    width: 70vw;
-    height: 650px;
-  }
-}  
 
   </style>
   
