@@ -1,21 +1,22 @@
 <template>
   <title>Fellows</title>
   <div class="container">
-    <div class="row fellow-header">
-      <!--<H1 class="title">Virtual Fellowship Program</H1>-->
-      <!-- <div class = "header">
+    <!-- <div class="row fellow-header"> -->
+    <!--<H1 class="title">Virtual Fellowship Program</H1>-->
+    <!-- <div class = "header">
           <img src="/headings/header.png">
           <h1>Virtual Fellowship Program</h1>
         </div> -->
-      <Header>Virtual Fellowship Program</Header>
-      <!-- <h4>
+    <div style="margin-top: 5rem;"></div>
+    <Header>Virtual Fellowship Program</Header>
+    <!-- <h4>
           Work on real-world coding projects for rising college freshman, no
           experience required.
         </h4> -->
-      <h4>
-        Applications are now closed. Congrats to our fellows!
-      </h4>
-      <!-- <div class="d-flex justify-content-center button">
+    <h4>
+      Applications are now closed. Congrats to our fellows!
+    </h4>
+    <!-- <div class="d-flex justify-content-center button">
           <MainButton
             text="Apply Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLSeF1wVCqc4y6chQcS_p0ahKHa4b1cqV7pQK7YiOJWSK4Q-9tiQ/viewform"
@@ -23,7 +24,7 @@
           />
         </div>
         <p>Open until May 31st at 11:59PM EST</p> -->
-    </div>
+    <!-- </div> -->
     <div class="row container grid-section">
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col section">
@@ -239,6 +240,12 @@ const items = [
 
 h3 {
   color: #ffce64;
+  text-align: center;
+}
+
+h4 {
+  color: #ffce64;
+  text-align: center;
 }
 
 .faq-heading {
