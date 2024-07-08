@@ -18,6 +18,7 @@
       <HybridEnv/>
     </div>
 
+    <!-- Hear From Past Hackers -->
     <div class="container">
       <TestimoniesCarousel class="main-section"/>
     </div>
