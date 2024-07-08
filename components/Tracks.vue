@@ -1,40 +1,34 @@
 <template>
-    <div class="container">
-        <Header>Tracks</Header>
-        <div class="row">
-          <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
-            <div class="flip-card" :class="{ 'do-flip': card.flipped }">
-              <div class="flip-card-front">
-                <img class="card-img" :src="card.image" alt="Card Image">
-                <div class="card-body">
-                  <span class="flip-text" @click="toggleFlip(card)">Learn More</span>
-                  <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
-                </div>
-              </div>
-              <div class="flip-card-back">
-                <img class="card-img" :src="card.imageFlipped" alt="Card Image">
-                <div class="card-body-flipped">
-                  <p>{{card.title}} track</p>
-                  <p>{{ card.backContent }}</p>
-                </div>
-                <div class="return-front">
-                  <span class="flip-text" @click="toggleFlip(card)">Return to front</span>
-                  <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
-                </div>
-              </div>
+  <div class="container">
+    <Header>Tracks</Header>
+    <div class="row">
+      <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
+        <div class="flip-card" :class="{ 'do-flip': card.flipped }">
+          <div class="flip-card-front">
+            <img class="card-img" :src="card.image" alt="Card Image">
+            <div class="card-body">
+              <span class="flip-text" @click="toggleFlip(card)">Learn More</span>
+              <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <img class="card-img" :src="card.imageFlipped" alt="Card Image">
+            <div class="card-body-flipped">
+              <p>{{ card.title }} track</p>
+              <p style="color: #653554">{{ card.backContent }}</p>
+            </div>
+            <div class="return-front">
+              <span class="flip-text" @click="toggleFlip(card)">Return to front</span>
+              <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </template>
-<script setup lang="ts">
-// Hybrid Enviornment -----------------------------------------------------------------
-const items = ref([
-  { image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { image: "/hybrid/virtual.svg", class: "virtual",  title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
-]);
 
+<script setup lang="ts">
 interface Card {
   title: string;
   frontContent: string;
@@ -47,40 +41,40 @@ interface Card {
 const cards = ref<Card[]>([
   {
     title: 'General',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for anyone and everyone!',
+    backContent: 'For any and all hackers! Come build to your heart\'s content using hardware, software, or anything you want with other hackers. Hackers can be students, designers, or just any tech-lovers out there. Hackers of all skill levels are welcomed and supported!',
     flipped: false,
     image: 'tracks/Technica-Tracks-conflict-01.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-04.svg'
   },
   {
     title: 'Beginner',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those new to hackathons!',
+    backContent: 'New to hackathons? Don\'t know how to code? No worries! You\'ll be provided with resources to help you succeed at Technica and beyond. This track begins with exclusive workshops a few weeks before Technica, and includes everything from an introduction to hackathons to coding and logic concepts.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-05.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-10.svg'
   },
   {
   title: 'Startup',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those interested in business!',
+    backContent: 'Interested in the business side of building a project? Join startup track! Featuring both workshops before and during Technica weekend, startup track is a unique opportunity to explore an alternate dimension of project building that you won\'t want to miss out on!',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-07.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-06.svg'
   },
   {
   title: 'Research',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those interested in business!',
+    backContent: 'Calling all undergraduates interested in research! Come explore the fields of research within computer science. You will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-03.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-08.svg'
   },
   {
   title: 'Hardware',
-    frontContent: 'A quick description of the front item',
-    backContent: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    frontContent: 'A track for those interested in hardware!',
+    backContent: 'Want to explore the fusion of software and hardware engineering? Join the hardware track! During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-09.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-02.svg'
@@ -90,14 +84,13 @@ const cards = ref<Card[]>([
 const toggleFlip = (card: Card) => {
   card.flipped = !card.flipped;
 };
-
-
-
 </script>
+
 <style scoped lang="scss">
-    .container {
+.container {
   text-align: center;
 }
+
 body {
   background: #f5f6fa;
   font-family: 'Poppins', sans-serif;
@@ -108,7 +101,7 @@ body {
 
 .flip-card-3D-wrapper {
   width: 100%;
-  max-width: 340px; 
+  max-width: 340px;
   margin: 10px auto;
   box-sizing: border-box;
   display: flex;
@@ -129,7 +122,8 @@ body {
   transform: rotateY(-180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
@@ -152,8 +146,10 @@ body {
 .card-img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 20px; /* Adjust spacing as needed */
+  margin-bottom: 20px;
+  /* Adjust spacing as needed */
 }
+
 .card-body {
   text-align: center;
   position: absolute;
@@ -231,20 +227,24 @@ body {
   font-weight: bold;
 }
 
-.embed-container { 
-  position: relative; 
-  padding-bottom: 56.25%; 
-  height: 0; 
-  overflow: hidden; 
-  max-width: 100%; 
-} 
-.embed-container iframe, .embed-container object, .embed-container embed { 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .keynote {
   display: flex;
   flex-flow: row wrap;

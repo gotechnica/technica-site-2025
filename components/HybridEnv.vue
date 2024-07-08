@@ -1,26 +1,52 @@
 <template>
-    <div class="container">
-        <Header>Hybrid Environment</Header>
-        <div class="row">
-          <div class="col-sm" v-for="(item, index) in items" :key="index">
-            <img class="hybrid-img" :src=item.image>
-            <div class="caption-box mx-auto" :class="item.class">
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.content }}</p>
-            </div>
-          </div>
+  <div class="container">
+    <Header>Hybrid Environment</Header>
+    <div class="row">
+      <div class="col-sm" v-for="(item, index) in items" :key="index">
+        <img class="hybrid-img" :src=item.image>
+        <div class="caption-box mx-auto" :class="item.class">
+          <h3>{{ item.title }}</h3>
+          <li v-for="content in item.content">{{ content }}</li>
         </div>
       </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
 const items = ref([
-  { image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." },
-  { image: "/hybrid/virtual.svg", class: "virtual",  title: "Virtual", content: "Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi. Lorem ipsum dolor sit amet consectetur. Tincidunt tortor nunc est urna. Interdum morbi malesuada velit massa facilisi. Est at elementum et aliquet mi." }
+  {
+    image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: [
+      'Held at The Hotel at UMD (eligible for hotel rooms if traveling)',
+      'Receive swag (such as t-shirts, stickers, etc.)',
+      'Visit sponsor booths face to face',
+      'Live workshops',
+      'Catered food service and snacks',
+    ]
+  },
+  {
+    image: "/hybrid/hybrid.svg", class: "hybrid", title: "Hybrid", content: [
+      'Judging and expo will be held in person',
+      'Request mentor for technical help',
+      'Resume will be shared with sponsors',
+      'Mini events and games',
+      'Access event through the Technica virtual platform',
+      'Win a prize for hacking categories (Digital gift card only for online hackers)',
+    ]
+  },
+  {
+    image: "/hybrid/virtual.svg", class: "virtual", title: "Virtual", content: [
+      'Visit sponsor booths virtually',
+      'Slack community to make friends and discuss your project',
+      'Chat with the Technica community on Discord and Slack',
+      'Attend recorded or streamed workshops',
+      'Receive swag depending on participation level if based in the U.S.',
+    ]
+  }
 ]);
+
 </script>
 
 <style scoped lang="scss">
@@ -34,14 +60,15 @@ body {
   background: linear-gradient(180deg, #351C33 30%, #F4D1D9 75%);
 }
 
-.larger-circle, .icon-circle {
+.larger-circle,
+.icon-circle {
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hybrid-img{
+.hybrid-img {
   margin-bottom: 5%;
 }
 
@@ -54,17 +81,21 @@ body {
     text-shadow: $DARKGREEN;
   }
 }
+
 .hybrid {
   background-color: $LIGHTPINK;
   border: $DARKPINK solid 5px;
+
   h3 {
     -webkit-text-stroke: 2px $DARKPINK;
     text-shadow: $DARKPINK;
   }
 }
+
 .virtual {
   background-color: $LIGHTYELLOW;
   border: $DARKYELLOW solid 5px;
+
   h3 {
     -webkit-text-stroke: 2px $DARKYELLOW;
     text-shadow: $DARKYELLOW;
@@ -83,7 +114,8 @@ body {
   text-align: center;
 }
 
-.caption-box h3, .caption-box p {
+.caption-box h3,
+.caption-box p {
   margin: 0;
   color: white;
 }
@@ -119,5 +151,9 @@ h1 {
 
 .col-sm {
   padding: 15px;
+}
+
+li {
+  color: white;
 }
 </style>
