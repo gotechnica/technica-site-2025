@@ -483,11 +483,15 @@
         </label>
       </div>
 
-      <!-- {{ values }}
-      {{errors}} -->
+      <!-- {{ values }} -->
+      <!-- {{errors}} -->
+
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-onclick.svg" />
       </button>
+      <div class="error">
+        <p v-if="submitTimes!= 0" >Please fill in the missing field(s) above.</p>
+      </div>
     </Form>
   </div>
   <StickyButton></StickyButton>
@@ -1066,7 +1070,7 @@ const registerUser = async (values: Record<string, any>) => {
         alert('status code 500')
     }
       else {
-      location.href = '/index';
+      location.href = '/RegistrationConfirmation';
     }
   } catch (error: any) {
     alert(
@@ -1158,5 +1162,11 @@ ul {
 
 :global(.p-autocomplete-panel) {
   max-width: min(500px, calc(100% - 6rem));
+}
+
+.error p{
+  color: red;
+  margin-top: -2rem;
+  margin-left: 2.5rem;
 }
 </style>
