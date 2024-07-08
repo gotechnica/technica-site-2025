@@ -11,9 +11,6 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <TestimoniesCarousel class="main-section"/>
-      </div>
 </template>
 
 <script setup lang="ts">
