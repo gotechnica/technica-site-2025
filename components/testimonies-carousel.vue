@@ -1,5 +1,6 @@
 <!-- this component uses vue3carousel with custom styling, see https://ismail9k.github.io/vue3-carousel/ -->
 <template>
+  <div style="margin-top: 5rem;"></div>
   <Header>Hear From Past Hackers!</Header>
   <h2>Testimonies and Projects</h2>
   <Carousel :itemsToShow="3" :wrapAround="true" :transition="500">

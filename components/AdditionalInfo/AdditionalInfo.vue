@@ -1,5 +1,6 @@
 <template>
   <div class="additional-info-container" v-if="mounted">
+    <div style="margin-top: 5rem;"></div>
     <Header>Additional Information</Header>
     <div class="cards-container">
       <div class="card" :class="tab.class" v-for="(tab) in AdditionalInfoTabs" :key="tab.index">

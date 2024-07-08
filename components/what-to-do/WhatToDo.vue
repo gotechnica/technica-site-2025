@@ -1,5 +1,6 @@
 <!-- Template -->
 <template>
+  <div style="margin-top: 5rem;"></div>
   <Header>What To Do At Technica?</Header>
     <Carousel :items-to-show="2" :wrap-around="true" :autoplay="10000000" pause-autoplay-on-hover>
         <Slide v-for="slide in slides" :key="slide.whatToDoTitle">

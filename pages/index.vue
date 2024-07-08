@@ -2,42 +2,45 @@
   <title>Technica Home</title>
   <!-- Hero Section -->
   <div class="main-body">
-  
-  <HeroLanding/>
-  <!--About Section-->
+
+    <HeroLanding />
+    <!-- About Technica Section -->
     <div class="container">
-      <About/>
+      <About />
     </div>
 
+    <!-- What to do at Technica Section -->
     <div class="whatToDo">
-      <WhatToDo/>
+      <WhatToDo />
     </div>
 
     <!-- Hybrid Environment Section -->
     <div class="container">
-      <HybridEnv/>
+      <HybridEnv />
+    </div>
+
+    <!-- Testimonies Section -->
+    <div class="container">
+      <TestimoniesCarousel class="main-section" />
+    </div>
+
+    <!-- Tracks Section -->
+    <div class="container">
+      <Tracks />
+    </div>
+
+    <!-- Additional Info Section -->
+    <div class="container">
+      <AdditionalInfo />
     </div>
 
     <div class="container">
-      <TestimoniesCarousel class="main-section"/>
-    </div>
-
-    <!-- Tracks Section ------------------------------------------------------------------->
-    <div class="container">
-      <Tracks/>
+      <Sponsors />
     </div>
 
     <div class="container">
-      <AdditionalInfo/>
-    </div>
-
-    <div class="container">
-      <Sponsors/>
-    </div>
-
-    <div class="container">
-      <Header v-if="width <= 768" class = faq>FAQ</Header>
-      <Header v-else class = faq>Frequently Asked Questions</Header>
+      <Header v-if="width <= 768" class=faq>FAQ</Header>
+      <Header v-else class=faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
 
@@ -118,6 +121,4 @@ const qaList = [
 
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
