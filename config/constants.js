@@ -5,7 +5,7 @@ const DATES = {
 
 export default {
   dev: {
-    BACKEND_ENDPOINT: 'https://dv3oqznx0a.execute-api.us-east-1.amazonaws.com',
+    BACKEND_ENDPOINT: 'https://tnofke68f9.execute-api.us-east-1.amazonaws.com',
     ...DATES
   },
   stg: {
