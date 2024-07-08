@@ -108,6 +108,7 @@ export default defineComponent({
 
 .card-back,
 .card-front {
+  visibility: visible;
   background-image: url("/testimonials/testimonial-card.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -215,7 +216,7 @@ button.flip-button {
 
 /* responsivity */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
   .card {
     width: 55vw;
     height: 55vw;
@@ -236,6 +237,13 @@ button.flip-button {
     width: 50vw;
     height: 75vw;
   }
+
+.card-back,
+.card-front {
+  background-image: none;
+  background-color: #EBBCCA;
+  border-radius: 20px;
+}
 
   .left-column {
     margin-top: 30vw;
@@ -263,13 +271,15 @@ button.flip-button {
 
   .left-column {
     width: 80%;
-    margin-top: 50vw;
+    margin-top: 30vw;
   }
 }
 
 @media screen and (max-width: 365px) {
   .left-column {
-    margin-top: 75vw;
+    margin-top: 30vw;
+    margin-left: -10vw;
+    margin-right: -10vw;
   }
 
   button.flip-button {

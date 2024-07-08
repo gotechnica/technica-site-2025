@@ -51,7 +51,7 @@ const slides = [
     projectImage: "/testimonials/study-terp-logo.jpg",
     projectName: "Study Terp",
     projectCategories: "Winner: Most Creative Use of GitHub - Technica 2023",
-    projectDescription: "Study Terp is a study buddy matchmaker for students at the University of Maryland. Through this revolutionary social study platform, students are matched with study buddies based on classes, schedules, majors/minors, study habits, and overall compatibility. Study Terp aims to foster a supportive and collaborative learning environment on demand for every student by connecting them with like-minded peers. Say goodbye to solo study struggles and hello to a brighter, more interactive academic journey.",
+    projectDescription: "Study Terp is a study buddy matchmaker for students at the UMD. Study Terp aims to foster a supportive and collaborative learning environment for every student by connecting them with like-minded peers. Say goodbye to solo study struggles and hello to a brighter, more interactive academic journey.",
     hasProject: true},
   
   { hackerImage: "/testimonials/nia-plair.jpg",
@@ -61,7 +61,7 @@ const slides = [
     projectImage: "/testimonials/access-bsu.jpg",
     projectName: "AccessBSU",
     projectCategories: "",
-    projectDescription: "Accessibility is essential for the campus to be a welcoming and inclusive environment for all people. In this app, students and faculty will be able to mark areas in campus that are hazards and lack accommodations. They can also select what type of hazard it is from a drop down menu that includes whether an area has is wheelchair accessibility, flashing lights, excessive volume, uneven surfaces, and broken or heavy doors. Lastly, there is an icon that can selected for marking areas with accommodations such as a ramp, sidewalk, or wheelchair street entrance.",
+    projectDescription: "Accessibility is essential for the campus to be a welcoming and inclusive environment for all people. In this app, students and faculty will be able to see and mark areas in campus that are hazards and lack accommodations, as well as areas that offer accommodations.",
     hasProject: true},
 
   {hackerImage: "/testimonials/claire-chen.jpg",
@@ -70,6 +70,8 @@ const slides = [
     testimonyDescription: "\"I had a really good friend and found a team for Technica. I’d say that the project I made, based on financial education, was a game similar to quizlet and you could plant your own garden to earn points, with questions about financial education. Over the span of the hackathon, I had a lot of fun and pulled an all-nighter.\"",
     hasProject: false},
 ]
+
+
 
 </script>
 

@@ -15,11 +15,11 @@
     </div>
 
     <!-- Hybrid Environment Section -->
-    <div class="container">
-      <HybridEnv />
+    <div class="container hybrid">
+      <HybridEnv/>
     </div>
 
-    <!-- Testimonies Section -->
+    <!-- Hear From Past Hackers -->
     <div class="container">
       <TestimoniesCarousel class="main-section" />
     </div>
@@ -121,4 +121,19 @@ const qaList = [
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+.container {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 630px) {
+  .whatToDo {
+    visibility: hidden;
+  }
+
+  .hybrid {
+    margin-top: -60rem;
+  }
+}
+</style>
