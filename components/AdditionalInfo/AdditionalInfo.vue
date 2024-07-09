@@ -6,7 +6,7 @@
       <div class="card" :class="tab.class" v-for="(tab) in AdditionalInfoTabs" :key="tab.index">
         <div class="card-header">{{ tab.title }}</div>
         <div class="card-content">{{ tab.content }}</div>
-        <VineButton text="Learn More" link="/register" :img=tab.img :hover=tab.hover :click=tab.click as string/>
+        <VineButton :text="'Learn More'" :link="tab.link" :img="tab.img" :hover="tab.hover" :click="tab.click" />
       </div>
     </div>
   </div>
@@ -30,10 +30,10 @@ interface InfoTab {
 }
 
 const AdditionalInfoTabs: InfoTab[] = [
-  { index: 0, img:"green-button-regular.svg", hover:"green-on-click.svg", click:"green-visited.svg", class: "fellows", title: 'Fellowship Program', content: 'The Technica Fellowship Program gives rising college freshman opportunity to work on a coding project impacting Technica. Fellows will gain real industry experience and impact thousands of users!', link: '/fellows', color: '#FFFFFF', displayed: true },
-  { index: 1, img:"purple-button-regular.svg", hover:"purple-on-click.svg",  click:"purple-visited.svg", class: "mentors", title: 'Mentors and Volunteers', content: 'Bring hackers\' ideas to life by sharing your Technica knowledge or help with event operations at Technica! Anyone 18 years or older and of any gender can volunteer and help make Technica a success!', link: '/mentors', color: '#FFFFFF', displayed: false },
-  { index: 2, img:"pink-button-regular.svg", hover:"pink-on-click.svg", click:"pink-visited.svg", class: "ambassadors", title: 'Ambassadors', content: 'Technica Campus Ambassadors have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you\'ll spread the word about Technica 2023 on your campus and promote inclusion in STEM!', link: '/ambassadors', color: '#FFFFFF', displayed: false },
-  { index: 3, img:"yellow-button-regular.svg", hover:"yellow-on-click.svg", click:"yellow-visited.svg", class: "travel", title: 'Travel Info', content: 'Need to travel to get to Technica? We got you covered! Technica can reimburse your travel fees or arrange a bus to transport eligible hackers in the United States. Head to our travel page to learn more!', link: '/travel', color: '#FFFFFF', displayed: false },
+  { index: 0, img: "green-button-regular.svg", hover: "green-on-click.svg", click: "green-visited.svg", class: "fellows", title: 'Fellowship Program', content: 'The Technica Fellowship Program gives rising college freshman opportunity to work on a coding project impacting Technica. Fellows will gain real industry experience and impact thousands of users!', link: '/fellows', color: '#FFFFFF', displayed: true },
+  { index: 1, img: "purple-button-regular.svg", hover: "purple-on-click.svg", click: "purple-visited.svg", class: "mentors", title: 'Mentors and Volunteers', content: 'Bring hackers\' ideas to life by sharing your Technica knowledge or help with event operations at Technica! Anyone 18 years or older and of any gender can volunteer and help make Technica a success!', link: '/mentors-volunteers', color: '#FFFFFF', displayed: false },
+  { index: 2, img: "pink-button-regular.svg", hover: "pink-on-click.svg", click: "pink-visited.svg", class: "ambassadors", title: 'Ambassadors', content: 'Technica Campus Ambassadors have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you\'ll spread the word about Technica 2023 on your campus and promote inclusion in STEM!', link: '/ambassadors', color: '#FFFFFF', displayed: false },
+  { index: 3, img: "yellow-button-regular.svg", hover: "yellow-on-click.svg", click: "yellow-visited.svg", class: "travel", title: 'Travel Info', content: 'Need to travel to get to Technica? We got you covered! Technica can reimburse your travel fees or arrange a bus to transport eligible hackers in the United States. Head to our travel page to learn more!', link: '/travel', color: '#FFFFFF', displayed: false },
 ];
 
 const mounted = ref(false);
@@ -111,31 +111,37 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   background-color: $LIGHTGREEN;
   border: $DARKGREEN solid 5px;
 
-  .card-header  {
+  .card-header {
     -webkit-text-stroke: 1px $DARKGREEN;
     text-shadow: $DARKGREEN;
   }
 }
+
 .ambassadors {
   background-color: $LIGHTPINK;
   border: $DARKPINK solid 5px;
-  .card-header  {
+
+  .card-header {
     -webkit-text-stroke: 1px $DARKPINK;
     text-shadow: $DARKPINK;
   }
 }
+
 .mentors {
   background-color: $LIGHTPURPLE;
   border: $DARKPURPLE solid 5px;
-  .card-header  {
+
+  .card-header {
     -webkit-text-stroke: 1px $DARKPURPLE;
     text-shadow: $DARKPURPLE;
   }
 }
+
 .travel {
   background-color: $LIGHTYELLOW;
   border: $DARKYELLOW solid 5px;
-  .card-header  {
+
+  .card-header {
     -webkit-text-stroke: 2px $DARKYELLOW;
     text-shadow: $DARKYELLOW;
   }
