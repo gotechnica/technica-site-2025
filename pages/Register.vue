@@ -427,7 +427,7 @@
         <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
           :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
           <label class="form-check-label">
-            I understand that the withdrawal or deletion of my data must be requested via the <a href = "https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform">Data Rights Contact Form</a>.
+            I understand that the withdrawal or deletion of my data must be requested via the <a href = "https://forms.gle/i8YqC1HN1rZ55xy86">Data Rights Contact Form</a>.
           </label>
         </div>
 

@@ -31,7 +31,7 @@
               <NuxtLink to="/Tracks" class="nuxt-link-active">Tracks</NuxtLink>
             </li>
             <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform" target="_blank" class="nuxt-link-active">Data Rights</NuxtLink>
+              <NuxtLink to="https://forms.gle/i8YqC1HN1rZ55xy86" target="_blank" class="nuxt-link-active">Data Rights</NuxtLink>
             </li>
           </ul>
         </div>
