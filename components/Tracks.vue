@@ -3,11 +3,11 @@
     <Header>Tracks</Header>
     <div class="row">
       <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
-        <div class="flip-card" :class="{ 'do-flip': card.flipped }">
+        <div class="flip-card" :class="{ 'do-flip': card.flipped }" @click="toggleFlip(card)">
           <div class="flip-card-front">
             <img class="card-img" :src="card.image" alt="Card Image">
             <div class="card-body">
-              <span class="flip-text" @click="toggleFlip(card)">Learn More</span>
+              <span class="flip-text">Learn More</span>
               <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
             </div>
           </div>
@@ -18,7 +18,7 @@
               <p style="color: #653554">{{ card.backContent }}</p>
             </div>
             <div class="return-front">
-              <span class="flip-text" @click="toggleFlip(card)">Return to front</span>
+              <span class="flip-text">Return to front</span>
               <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
             </div>
           </div>
