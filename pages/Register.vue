@@ -117,6 +117,7 @@
             </label>
             <Field name="age" type="text" value="" class="form-control" :class="{ 'is-invalid': errors['age'] }"
               required />
+            <ErrorMessage :name="'age'" class="invalid-feedback" />
           </div>
 
           <p class="description">
@@ -235,7 +236,7 @@
             <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
               <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
             </Field>
-            <ErrorMessage :name="'attendanceType'" class="invalid-feedback" />
+            <ErrorMessage :name="'attendance'" class="invalid-feedback" />
           </div>
 
 
@@ -301,6 +302,7 @@
             <Field name="track" :value="option.value" type="radio" class="form-check-input" />
             <label class="form-check-label">{{ option.text }}</label>
           </div>
+          <ErrorMessage :name="'track'" class="invalid-feedback" />
         </div>
       </div>
 
@@ -487,7 +489,7 @@
         <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-onclick.svg" />
       </button>
       <div class="error">
-        <p v-if="submitTimes!= 0" >Please fill in the missing field(s) above.</p>
+        <p v-if="submitTimes != 0" >Please fill in the missing field(s) above.</p>
       </div>
     </Form>
   </div>
@@ -594,7 +596,11 @@ const validationSchema = yup.object<RegisterForm>({
         ? schema.notRequired()
         : schema.required('Race(s) are required');
     }),
-  age: yup.number().min(1).required('Age is required'),
+  age: yup
+    .number()
+    .min(1, 'Age must be greater or equal to 1')
+    // .string()
+    .required('Age is required'),
 
   parentEmail: yup
     .string()
@@ -666,18 +672,18 @@ const validationSchema = yup.object<RegisterForm>({
     .string()
     .required('Please enter a source')
     .when('hear', (hear, schema: any) => {
-      return !hear.includes('other')
-        ? schema.notRequired()
-        : schema.required('Please enter a source');
+      return hear.includes('other')
+        ? schema.required('Please enter a source')
+        : schema.notRequired();
     }),
   accommodations: yup.array().notRequired(),
   accommodationsOther: yup
     .string()
     .required('Please enter an accommodation')
     .when('accommodations', (accommodations, schema: any) => {
-      return !accommodations.includes('other')
-        ? schema.notRequired()
-        : schema.required('Please enter an accommodation');
+      return accommodations.includes('other')
+        ? schema.required('Please enter an accommodation') : schema.notRequired();
+
     }),
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),

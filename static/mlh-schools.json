@@ -1717,7 +1717,7 @@
     "Thanthai Periyar Government Institute of Technology", 
     "Thapar Institute of Engineering and Technology", 
     "THDC Institute of Hydropower Engineering and Technology, Tehri", 
-    "The Arts Academy at Benjamin Rush", 
+    "Arts Academy at Benjamin Rush", 
     "The British University In Egypt", 
     "The Bronx High School of Science", 
     "The City College of New York, CUNY", 
@@ -1822,8 +1822,6 @@
     "The University of Málaga", 
     "The University of Manchester", 
     "The University of Manitoba", 
-    "The University of Maryland, Baltimore County", 
-    "The University of Maryland, College Park", 
     "The University of Massachusetts Amherst", 
     "The University of Massachusetts Boston", 
     "The University of Massachusetts Dartmouth", 
@@ -2040,6 +2038,8 @@
     "University of London", 
     "University of Mary Washington", 
     "University of Maryland University College", 
+    "University of Maryland Baltimore",
+    "Univeristy of Maryland College Park",
     "University of North America", 
     "University of North Florida", 
     "University of North Georgia", 
@@ -2222,5 +2222,6 @@
     "Zespół Szkół Łączności, Monte Cassino 31", 
     "Zespół Szkół nr 1 im. Jana Pawła II w Przysusze", 
     "Zespół szkół nr 1 im. Stanisława Staszica w Bochni", 
-    "Zespół Szkół Nr.2 im. Jana Pawła II w Miechowie"
+    "Zespół Szkół Nr.2 im. Jana Pawła II w Miechowie",
+    "Other"
 ]
