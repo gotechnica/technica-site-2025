@@ -11,9 +11,9 @@
             </div>
 
             <div class="subtext">
-                <h1>Wonder Awaits</h1>
-                <p class = "basic-info">October 26-27 at The Hotel, UMD | Hybrid Environment</p>
-                <p>The world's largest hackathon for underrepresented genders</p>
+                <h1 class = "outline">Wonder Awaits</h1>
+                <p class = "basic-info outline">October 26-27 at The Hotel, UMD | Hybrid Environment</p>
+                <p class = "outline">The world's largest hackathon for underrepresented genders</p>
             </div>
             <div id="dummy"></div>
             <div class="buttons">
@@ -26,7 +26,7 @@
         <div id="popup" v-if="popupTriggers" >
             <div id="popup-inner" class="mobile">
                 <h3>What is <br/>Create Your Reality*?</h3>
-                <p style="color: black"> In this new world, the possibilities are endless. 
+                <p> In this new world, the possibilities are endless. 
                 This year, we want you to Create Your Reality 
                 at Technica! <br/><br/>We encourage you to forge your own 
                 path, whether this means embarking on your first 
@@ -43,7 +43,7 @@
         <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
             <div id="popup-inner">
                 <h3>What is <br/>Create Your Reality*?</h3>
-                <p style="color: black"> In this new world, the possibilities are endless. 
+                <p> In this new world, the possibilities are endless. 
                 This year, we want you all to Create Your Reality 
                 at Technica! <br/><br/>We encourage you to forge your own 
                 path, whether this means embarking on your first 
@@ -129,7 +129,8 @@ const TogglePopup = () => {
     }
 
     .subtext p {
-        font-size: 15px;
+        font-weight: bold;
+        font-size: 20px;
     }
 
    
@@ -140,6 +141,13 @@ const TogglePopup = () => {
         font-size: 25px !important;
     }
 
+    .outline {
+        color: white;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: black;
+        text-shadow: 2px 5px 2px black;
+    }
+
     #popup {
         margin-top: -30%;
         margin-left: 10%;
@@ -148,7 +156,7 @@ const TogglePopup = () => {
     }
 
     #popup-inner h3{
-        color: $DARKPURPLE;
+        color: #4E23AA;
         text-align: center;
         margin-bottom: 1rem;
     }
