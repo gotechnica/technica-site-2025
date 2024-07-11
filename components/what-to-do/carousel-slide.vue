@@ -4,21 +4,19 @@
 <template>
   <div class="card">
     <div class="card-contents">
-      <div class="image-container">
+      <div class="image-container" @click="toggleText">
         <img :src="`${whatToDoImg}`" alt="What To Do Image" />
         <div v-if="showDesc" class="overlay-text">
-          <p> {{ whatToDoDesc }}</p>
+          <p>{{ whatToDoDesc }}</p>
         </div>
-
         <div class="card-text">
-          <div class="clickable-text" @click="toggleText">
+          <div class="clickable-text">
             <h3>{{ whatToDoTitle }}</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script lang="ts">
@@ -37,12 +35,12 @@ export default defineComponent({
     whatToDoDesc: {
       type: String,
       required: true
-    },
+    }
   },
   data() {
     return {
       showDesc: false
-    }
+    };
   },
   methods: {
     toggleText() {
