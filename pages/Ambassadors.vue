@@ -55,7 +55,7 @@
       <Header v-else class = faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
-    <StickyButton></StickyButton>
+    <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
 </template>
