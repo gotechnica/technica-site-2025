@@ -1,4 +1,5 @@
 <template>
+  <title>Travel</title>
   <!-- <Header>Travel</Header> -->
   <div class="travel-container">
     <div class="travel-header section">
