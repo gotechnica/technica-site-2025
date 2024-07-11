@@ -4,7 +4,7 @@
         <div class="content">
             <Header>Thank You For Registering!</Header>
             <p>You will be sent a confirmation email for your registration.</p>
-            <p>Keep in touch with Technica by following us on <a href="https://linktr.ee/gotechnica_">social media</a> or joining our <a href="gotechnica.org/discord">Community listserv</a>!</p>
+            <p>Keep in touch with Technica by following us on <a href="https://linktr.ee/gotechnica_">social media</a>!</p>
             <p class="mt-5"> Welcome to the TechniFAM. Get ready for the best weekend you've ever had!</p>
             
             <PixelButton text="Back to Home" link="/" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-on-click.svg" class="mt-5"/>

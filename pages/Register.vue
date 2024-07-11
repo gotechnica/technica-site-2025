@@ -414,10 +414,7 @@
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          <b>I identify as a person of an underrepresented gender in tech. </b>This includes but is not limited to:
-          cisgender women, transgender
-          women, transgender men, non-binary individuals, genderqueer
-          individuals, and other underrepresented genders. I further agree to the <a href="2024 Technica Terms and Code of Conduct.docx.pdf">Technica Terms and Code of Conduct</a>.
+          <b>I understand that this hackathon is intended for underrepresented genders in tech.</b> I further agree to the <a href="2024 Technica Terms and Code of Conduct.docx.pdf">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
 

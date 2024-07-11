@@ -115,7 +115,7 @@ const qaList = [
   },
   {
     question: 'Are there any COVID-19 policies?',
-    answer: 'All in-person attendees must be fully vaccinated or wear a mask throughout the duration of the event. Please pack your vaccination card (or a picture of it) and photo ID to present at check-in!'
+    answer: 'While vaccination and masking is encouraged, masking will be optional for in-person attendees. Technica offers an online platform for remote participation.'
   }
 ];
 
