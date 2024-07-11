@@ -52,13 +52,22 @@
           <FAQ faqId="main" :qaList="qaList" class="main-section" />
         </div>
       </div>
-      <div class="email-blurb section">
+      <!-- <div class="email-blurb section">
         <h3>Have Other Questions?</h3>
         <p class="contact-blurb">
           Email us at
           <a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a>
         </p>
-      </div>
+      </div> -->
+
+      <div class="contact">
+      <h3 style="color: #653554;">Have Other Questions?</h3>
+      <p style="color: #653554;">
+        Reach out to
+        <a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a>
+        and we'll get back to you soon!
+      </p>
+    </div>
       <StickyButton></StickyButton>
     </div>
   </template>
