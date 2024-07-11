@@ -73,6 +73,7 @@ export default {
 
 .text p {
   font-size: 125% !important;
+  color: black;
 }
 
 @media screen and (max-width: 900px) {
