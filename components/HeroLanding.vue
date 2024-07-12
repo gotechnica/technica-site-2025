@@ -26,24 +26,7 @@
         <div id="popup" v-if="popupTriggers" >
             <div id="popup-inner" class="mobile">
                 <h3>What is <br/>Wonder Awaits*?</h3>
-                <p> In this new world, the possibilities are endless. 
-                This year, we want you to Create Your Reality 
-                at Technica! <br/><br/>We encourage you to forge your own 
-                path, whether this means embarking on your first 
-                journey to hacking, pushing yourself past your 
-                own comfort zone, or coming to relax and just 
-                having fun: <b>choose the reality that fits you. </b>
-                <br/><br/>Technica is a safe space; regardless of what you 
-                decide, the reality you create can open doors to a
-                new realm of opportunity where you can prosper!</p>
-            </div>
-        </div>
-    </div>
-    <div  v-else>
-        <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
-            <div id="popup-inner">
-                <h3>What is <br/>Wonder Awaits*?</h3>
-                <p> In this new world, the possibilities are endless. 
+                <!-- <p> In this new world, the possibilities are endless. 
                 This year, we want you all to Create Your Reality 
                 at Technica! <br/><br/>We encourage you to forge your own 
                 path, whether this means embarking on your first 
@@ -52,7 +35,26 @@
                 have fun: <b>choose the reality that fits you. </b>
                 <br/><br/>Technica is a safe space; regardless of what you 
                 decide, the reality you create can open doors to a
-                new realm of opportunity where you can prosper!</p>
+                new realm of opportunity where you can prosper!</p> -->
+                <p> NEED BLURB HERE </p>
+            </div>
+        </div>
+    </div>
+    <div  v-else>
+        <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
+            <div id="popup-inner">
+                <h3>What is <br/>Wonder Awaits*?</h3>
+                <!-- <p> In this new world, the possibilities are endless. 
+                This year, we want you all to Create Your Reality 
+                at Technica! <br/><br/>We encourage you to forge your own 
+                path, whether this means embarking on your first 
+                journey to hacking, pushing yourself past your 
+                own comfort zone, or coming to relax and just 
+                have fun: <b>choose the reality that fits you. </b>
+                <br/><br/>Technica is a safe space; regardless of what you 
+                decide, the reality you create can open doors to a
+                new realm of opportunity where you can prosper!</p> -->
+                <p> NEED BLURB HERE </p>
             </div>
         </div>
     </div>
@@ -175,6 +177,7 @@ const TogglePopup = () => {
         padding:3rem;
         background-color: white;
         color: black;
+        border: 7px solid $DARKPURPLE; 
     }
 
     #popup-inner.mobile {

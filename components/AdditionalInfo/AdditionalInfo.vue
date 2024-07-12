@@ -32,7 +32,7 @@ interface InfoTab {
 const AdditionalInfoTabs: InfoTab[] = [
   { index: 0, img: "green-button-regular.svg", hover: "green-on-click.svg", click: "green-visited.svg", class: "fellows", title: 'Fellowship Program', content: 'The Technica Fellowship Program gives rising college freshman opportunity to work on a coding project impacting Technica. Fellows will gain real industry experience and impact thousands of users!', link: '/fellows', color: '#FFFFFF', displayed: true },
   { index: 1, img: "purple-button-regular.svg", hover: "purple-on-click.svg", click: "purple-visited.svg", class: "mentors", title: 'Mentors and Volunteers', content: 'Bring hackers\' ideas to life by sharing your Technica knowledge or help with event operations at Technica! Anyone 18 years or older and of any gender can volunteer and help make Technica a success!', link: '/mentors-volunteers', color: '#FFFFFF', displayed: false },
-  { index: 2, img: "pink-button-regular.svg", hover: "pink-on-click.svg", click: "pink-visited.svg", class: "ambassadors", title: 'Ambassadors', content: 'Technica Campus Ambassadors have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you\'ll spread the word about Technica 2023 on your campus and promote inclusion in STEM!', link: '/ambassadors', color: '#FFFFFF', displayed: false },
+  { index: 2, img: "pink-button-regular.svg", hover: "pink-on-click.svg", click: "pink-visited.svg", class: "ambassadors", title: 'Ambassadors', content: 'Technica Campus Ambassadors have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you\'ll spread the word about Technica 2024 on your campus and promote inclusion in STEM!', link: '/ambassadors', color: '#FFFFFF', displayed: false },
   { index: 3, img: "yellow-button-regular.svg", hover: "yellow-on-click.svg", click: "yellow-visited.svg", class: "travel", title: 'Travel Info', content: 'Need to travel to get to Technica? We got you covered! Technica can reimburse your travel fees or arrange a bus to transport eligible hackers in the United States. Head to our travel page to learn more!', link: '/travel', color: '#FFFFFF', displayed: false },
 ];
 
@@ -92,9 +92,10 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
 }
 
 .card-content {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
   color: white;
+  text-align: center;
 }
 
 .learn-more-button {

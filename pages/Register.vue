@@ -418,7 +418,8 @@
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          <b>I understand that this hackathon is intended for underrepresented genders in tech.</b> I further agree to the <a href="./2024TechnicaCoC.pdf">Technica Terms and Code of Conduct</a>.
+          <b>I understand that this hackathon is intended for underrepresented genders in tech.</b> I further agree to the 
+          <a href="./2024TechnicaCoC.pdf" target="_blank">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
 
@@ -428,7 +429,8 @@
         <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
           :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
           <label class="form-check-label">
-            I understand that the withdrawal or deletion of my data must be requested via the <a href = "https://forms.gle/i8YqC1HN1rZ55xy86">Data Rights Contact Form</a>.
+            I understand that the withdrawal or deletion of my data must be requested via the 
+            <a href = "https://forms.gle/i8YqC1HN1rZ55xy86" target="_blank">Data Rights Contact Form</a>.
           </label>
         </div>
 
@@ -452,7 +454,7 @@
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValidCoC'] }" required />
         <label class="form-check-label">
           I have read and agree to the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Code of Conduct</a>. 
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>. 
         </label>
       </div>
       <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
@@ -600,10 +602,11 @@ const validationSchema = yup.object<RegisterForm>({
         : schema.required('Race(s) are required');
     }),
   age: yup
-    .number()
-    .min(1, 'Age must be greater or equal to 1')
-    // .string()
-    .required('Age is required'),
+  .number()
+  .min(1, 'Age must be greater or equal to 1')
+  .nullable() // Allows null or undefined values
+  .required('Age is required')
+  .typeError('Age must be a number'),
 
   parentEmail: yup
     .string()
