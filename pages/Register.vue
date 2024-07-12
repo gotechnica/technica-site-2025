@@ -983,6 +983,10 @@ const registerUser = async (values: Record<string, any>) => {
     values.gender = 'Other: ' + values.genderOther;
   }
 
+  if(values.school == 'Other') {
+    values.school = 'Other: ' +  + values.schoolOther;
+  }
+
   if (values.raceOther != null) {
     let idx = values.race.findIndex((acc: string) => acc == 'other');
     values.race[idx] = 'other: ' + values.raceOther;
