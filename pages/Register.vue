@@ -619,8 +619,8 @@ const validationSchema = yup.object<RegisterForm>({
   schoolOther: yup
     .string()
     .required('Please enter a school')
-    .when('gender', ([gender], schema: any) => {
-      return gender == 'Other' ? schema.required() : schema.notRequired();
+    .when('school', ([school], schema: any) => {
+      return school == 'Other' ? schema.required() : schema.notRequired();
     }),
   major: yup.string().required('Major is required'),
   country: yup.string().required('Country is required'),
