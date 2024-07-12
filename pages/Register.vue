@@ -984,7 +984,7 @@ const registerUser = async (values: Record<string, any>) => {
   }
 
   if(values.school == 'Other') {
-    values.school = 'Other: ' +  + values.schoolOther;
+    values.school = 'Other: ' + values.schoolOther;
   }
 
   if (values.raceOther != null) {
