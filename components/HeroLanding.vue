@@ -25,7 +25,7 @@
     <div v-if="isMobile" class="popup-mobile">
         <div id="popup" v-if="popupTriggers" >
             <div id="popup-inner" class="mobile">
-                <h3>What is <br/>Create Your Reality*?</h3>
+                <h3>What is <br/>Wonder Awaits*?</h3>
                 <p> In this new world, the possibilities are endless. 
                 This year, we want you to Create Your Reality 
                 at Technica! <br/><br/>We encourage you to forge your own 
@@ -42,7 +42,7 @@
     <div  v-else>
         <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
             <div id="popup-inner">
-                <h3>What is <br/>Create Your Reality*?</h3>
+                <h3>What is <br/>Wonder Awaits*?</h3>
                 <p> In this new world, the possibilities are endless. 
                 This year, we want you all to Create Your Reality 
                 at Technica! <br/><br/>We encourage you to forge your own 
@@ -156,9 +156,13 @@ const TogglePopup = () => {
     }
 
     #popup-inner h3{
-        color: #4E23AA;
+        color: $DARKPURPLE;
         text-align: center;
         margin-bottom: 1rem;
+    }
+
+    #popup-inner p{
+        color: $DARKPURPLE;
     }
 
     #popup-inner {
