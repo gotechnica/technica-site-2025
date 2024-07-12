@@ -84,10 +84,7 @@
       </div>
 
       <p class="description">
-        Please note, Cisgender Men (someone who identifies as male and was
-        assigned male at birth) are not eligible to participate at Technica.
-        This hackathon serves to promote, support, and celebrate technologists
-        of underrepresented genders!
+        Please note: Technica is intended for underrepresented genders in tech!
       </p>
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
@@ -164,6 +161,11 @@
 
             <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
               <ErrorMessage name="school" class="invalid-feedback" />
+            </div>
+            <div class="mt-1" v-if="values.school?.includes('Other')">
+              <Field name="schoolOther" type="text" value="" placeholder="Other" class="form-control"
+                :class="{ 'is-invalid': errors['schoolOther'] }" />
+              <ErrorMessage :name="'schoolOther'" class="invalid-feedback" />
             </div>
           </div>
         </div>
@@ -416,7 +418,7 @@
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          <b>I understand that this hackathon is intended for underrepresented genders in tech.</b> I further agree to the <a href="2024 Technica Terms and Code of Conduct.docx.pdf">Technica Terms and Code of Conduct</a>.
+          <b>I understand that this hackathon is intended for underrepresented genders in tech.</b> I further agree to the <a href="./2024TechnicaCoC.pdf">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
 
@@ -486,10 +488,10 @@
       <!-- {{errors}} -->
 
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-onclick.svg" />
+        <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-visited.svg"/>
       </button>
       <div class="error">
-        <p v-if="submitTimes != 0" >Please fill in the missing field(s) above.</p>
+        <p v-if="submitTimes != 0" >The page may take a second to redirect, if it doesn't, please make sure you've filled out all the required fields!</p>
       </div>
     </Form>
   </div>
@@ -532,6 +534,7 @@ interface RegisterForm {
   parentEmail: string;
   education: string;
   school: string;
+  schoolOther: string;
   major: string;
   country: string;
   region: string;
@@ -568,14 +571,14 @@ const validationSchema = yup.object<RegisterForm>({
   phone: yup.string().matches(/^[0-9]{10}$/, 'Phone number is required'),
   gender: yup
     .string()
-    .test(
-      'cis-man',
-      'Cisgender men are not allowed to participate',
-      function (value) {
-        const isCisgenderMale = value?.includes('cis-man');
-        return !isCisgenderMale;
-      }
-    )
+    // .test(
+    //   'cis-man',
+    //   'Cisgender men are not allowed to participate',
+    //   function (value) {
+    //     const isCisgenderMale = value?.includes('cis-man');
+    //     return !isCisgenderMale;
+    //   }
+    // )
     .required('Gender selection is required'),
   genderOther: yup
     .string()
@@ -613,6 +616,12 @@ const validationSchema = yup.object<RegisterForm>({
 
   education: yup.string().required('Education level is required'),
   school: yup.string().required('School name is required'),
+  schoolOther: yup
+    .string()
+    .required('Please enter a school')
+    .when('gender', ([gender], schema: any) => {
+      return gender == 'other' ? schema.required() : schema.notRequired();
+    }),
   major: yup.string().required('Major is required'),
   country: yup.string().required('Country is required'),
   region: yup.string().required('Region is required'),
@@ -709,10 +718,10 @@ const genderOptions = ref<Option[]>([
     text: 'Cisgender Woman (identifies and assigned at birth as female)',
     value: 'cis-woman',
   },
-  {
-    text: 'Cisgender Man (identifies and assigned at birth as male)',
-    value: 'cis-man',
-  },
+  // {
+  //   text: 'Cisgender Man (identifies and assigned at birth as male)',
+  //   value: 'cis-man',
+  // },
   { text: 'Transgender Woman', value: 'trans-woman' },
   { text: 'Transgender Man', value: 'trans-man' },
   { text: 'Non-binary', value: 'non-binary' },
@@ -1167,8 +1176,7 @@ ul {
   max-width: min(500px, calc(100% - 6rem));
 }
 
-.error p{
-  color: red;
+.error p {
   margin-top: -2rem;
   margin-left: 2.5rem;
 }

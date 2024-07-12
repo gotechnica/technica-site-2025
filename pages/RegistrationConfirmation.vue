@@ -7,7 +7,7 @@
             <p>Keep in touch with Technica by following us on <a href="https://linktr.ee/gotechnica_">social media</a>!</p>
             <p class="mt-5"> Welcome to the TechniFAM. Get ready for the best weekend you've ever had!</p>
             
-            <PixelButton text="Back to Home" link="/" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-on-click.svg" class="mt-5"/>
+            <PixelButton text="Back to Home" link="/" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-visited.svg" class="mt-5"/>
         </div>
     </div>
 </template>
