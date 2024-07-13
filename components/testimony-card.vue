@@ -94,6 +94,11 @@ export default defineComponent({
 
 <style scoped lang="scss">
 
+// Text accessibility
+p {
+  color: $DARKPURPLE;
+}
+
 .card {
   position: absolute;
   width: 50vw;  
