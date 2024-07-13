@@ -9,7 +9,7 @@
             <div class="col-md-6">
                 <div class="video-container">
                     <!-- <img src="/video-container.svg"> -->
-                    <iframe class="fellows-video" src="https://www.youtube.com/embed/MuRBvUQ_Xp4?si=YG4grhi7RF7817UP" frameborder="0" allowfullscreen>
+                    <iframe class="fellows-video" src="https://www.youtube.com/embed/4PBEfogEP6s?si=Us0BnivHvQ-bpEaV" frameborder="0" allowfullscreen>
                     </iframe>
                 </div>
             </div>
