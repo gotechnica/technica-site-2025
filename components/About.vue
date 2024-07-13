@@ -8,7 +8,9 @@
             </div>
             <div class="col-md-6">
                 <div class="video-container">
-                    <img src="/video-container.svg">
+                    <!-- <img src="/video-container.svg"> -->
+                    <iframe class="fellows-video" src="https://www.youtube.com/embed/MuRBvUQ_Xp4?si=YG4grhi7RF7817UP" frameborder="0" allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -18,9 +20,16 @@
 </script>
 <style scoped lang="scss">
 
-.video-container img {
+.video-container iframe {
     width: 100%;
+    height: 100%;
 }
+
+.video-container {
+    width: 100%;
+    height: 25vw;
+}
+
 .col-md-6 {
     margin-top: 3%;
 }
