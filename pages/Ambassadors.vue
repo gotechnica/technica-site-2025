@@ -23,7 +23,7 @@
         <h3>What do Campus Ambassadors do?</h3>
         <ul class="list">
           <li>
-            Generate awareness, excitement, and buzz leading up to Technica 2023
+            Generate awareness, excitement, and buzz leading up to Technica 2024
           </li>
           <li>Promote Technica on your campus and social media</li>
           <li>Communicate with Technica's Outreach team weekly</li>
@@ -36,7 +36,7 @@
           <li>Have your resume shared with our sponsors</li>
           <li>Potential to earn awesome perks:</li>
           <ul>
-            <li>Travel reimbursement for Technica 2023</li>
+            <li>Travel reimbursement for Technica 2024</li>
             <li>Social Media features</li>
             <li>Host a fireside chat or workshop for Technica</li>
             <li>Custom Technica merchandise</li>
@@ -45,11 +45,11 @@
       </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
       <Header v-if="width <= 768" class = faq>FAQ</Header>
       <Header v-else class = faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
-    </div>
+    </div> -->
     <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
