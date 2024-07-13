@@ -25,7 +25,7 @@
     <div v-if="isMobile" class="popup-mobile">
         <div id="popup" v-if="popupTriggers" >
             <div id="popup-inner" class="mobile">
-                <h3>What is <br/>Wonder Awaits*?</h3>
+                <h3>What is Wonder Awaits*?</h3>
                 <p> We are thrilled to announce the theme for this fall's 
                     hackathon: <b>Wonder Awaits!</b> <br/><br/> 
                     Inspired by the whimsical world of Alice in Wonderland, 
@@ -42,7 +42,7 @@
     <div  v-else>
         <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
             <div id="popup-inner">
-                <h3>What is <br/>Wonder Awaits*?</h3>
+                <h3>What is Wonder Awaits*?</h3>
                 <p> We are thrilled to announce the theme for this fall's 
                     hackathon: <b>Wonder Awaits!</b> <br/><br/> 
                     Inspired by the whimsical world of Alice in Wonderland, 
@@ -103,6 +103,7 @@ const TogglePopup = () => {
         background-repeat:no-repeat;
         padding-bottom: 20%;
         margin-bottom: 5%;
+        // display: inline-block;
     }
 
     .details {
@@ -111,21 +112,28 @@ const TogglePopup = () => {
         width: 100%;
         padding: 5rem;
         margin-top: -5%;
-        margin-left: 2%;
+        // margin-left: 2%;
+        // align-items: right;
+        // justify-items: right;
+        text-align: right;
+        // margin-right: 0;
+        // background-color: black;
     }
 
     .logos {
         resize: both;
+        // background-color: black;
     }
 
     .subtext{
         color: white;
-         
-        width: fit-content;
+        justify-items: right; 
+        // width: fit-content;
         text-shadow: 5px 5px 13px black;
         border-radius: 10px;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        // background-color: black;
     }
 
     .subtext p {
@@ -150,9 +158,13 @@ const TogglePopup = () => {
 
     #popup {
         margin-top: -30%;
-        margin-left: 10%;
+        // margin-left: 10%;
+        // margin-right: 0%;
         width: 100%;
         resize: both;
+        // justify-self: right;
+        // align-self: right;
+        justify-items: right; 
     }
 
     #popup-inner h3{
@@ -171,7 +183,7 @@ const TogglePopup = () => {
         margin-right: 4rem;
         height:auto;
         border-radius: 2rem;
-        width: 40%;
+        width: 100%;
         padding:3rem;
         background-color: white;
         color: black;
@@ -208,13 +220,16 @@ const TogglePopup = () => {
     }
 
     .buttons {
-        width: 40%;
+        justify-self: right; 
+        // background-color: black;
+        float: right;
+        margin-right: 0;
     }
 
     .buttons a {
-        margin-left: 0;
+        // margin-left: 0;
         margin-right: 0;
-        margin-top: -3%;
+        // margin-top: -3%;
     }
 
     @media screen and (max-width: 1048px) {

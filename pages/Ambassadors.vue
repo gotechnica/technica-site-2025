@@ -45,11 +45,11 @@
       </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
       <Header v-if="width <= 768" class = faq>FAQ</Header>
       <Header v-else class = faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
-    </div>
+    </div> -->
     <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
