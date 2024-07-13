@@ -419,7 +419,7 @@
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
           <b>I understand that Technica is intended for underrepresented genders in tech.</b> I further agree to the 
-          <a href="../public/2024TechnicaCoC.pdf" target="_blank">Technica Terms and Code of Conduct</a>.
+          <a href="../2024TechnicaCoC.pdf" target="_blank">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
 
