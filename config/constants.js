@@ -13,7 +13,7 @@ export default {
     ...DATES
   },
   prd: {
-    BACKEND_ENDPOINT: 'https://j9swf7gf5e.execute-api.us-east-1.amazonaws.com',
+    BACKEND_ENDPOINT: 'https://j9swf7gf5e.execute-api.us-east-1.amazonaws.com/prd',
     ...DATES
   },
   bucket: {
