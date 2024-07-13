@@ -31,7 +31,7 @@
                     <img
                         class="icon"
                         style="background-color: #6C65A8"
-                        src="../static/w_twitter_x.svg"
+                        src="../static/w_twitter_x_white.svg"
                     />
                     </a>
                 </div>
