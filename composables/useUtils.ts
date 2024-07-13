@@ -49,7 +49,15 @@ export function useUtils(){
             return 'prd'
         }
 
-        if (window.location.href === 'https://pr-201.d22tefb47u3z2s.amplifyapp.com/register') {
+        if (window.location.href === 'https://main.d2mxcgofoy6m8p.amplifyapp.com/register') {
+            return 'prd'
+        }
+
+        if (window.location.href === 'https://main.d2mxcgofoy6m8p.amplifyapp.com') {
+            return 'prd'
+        }
+
+        if (window.location.href === 'https://main.d2mxcgofoy6m8p.amplifyapp.com/register/') {
             return 'prd'
         }
 
