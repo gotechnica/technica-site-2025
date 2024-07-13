@@ -486,8 +486,8 @@
         </label>
       </div>
 
-      {{ values }}
-      {{errors}}
+      <!-- {{ values }}
+      {{errors}} -->
 
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-visited.svg"/>
