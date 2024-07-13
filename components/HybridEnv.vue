@@ -19,7 +19,7 @@ import { ref } from 'vue';
 const items = ref([
   {
     image: "/hybrid/in-person.svg", class: "in-person", title: "In-Person", content: [
-      'Held at The Hotel at UMD (eligible for hotel rooms if traveling)',
+      'Held at The Armory at UMD',
       'Receive swag (such as t-shirts, stickers, etc.)',
       'Visit sponsor booths face to face',
       'Live workshops',
