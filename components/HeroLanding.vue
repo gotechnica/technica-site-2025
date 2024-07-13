@@ -12,7 +12,7 @@
 
             <div class="subtext">
                 <h1 class = "outline">Wonder Awaits</h1>
-                <p class = "basic-info outline">October 26-27 at The Hotel, UMD | Hybrid Environment</p>
+                <p class = "basic-info outline">October 26-27 at The Armory, UMD | Hybrid Environment</p>
                 <p class = "outline">The world's largest hackathon for underrepresented genders</p>
             </div>
             <div id="dummy"></div>

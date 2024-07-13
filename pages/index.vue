@@ -78,7 +78,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2024 will take place on October 26-27 in The Hotel at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.'
+      'Technica 2024 will take place on October 26-27 in The Armory at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.'
   },
   {
     question: 'Who can attend Technica?',
@@ -96,7 +96,7 @@ const qaList = [
   },
   {
     question: 'How do I travel to Technica?',
-    answer: 'There are many ways to travel to Technica! We will be sending buses to nearby universities which hackers can take to and from Technica. For hackers not within 30 minutes of a bus stop, travel reimbursement will also be available to assist in getting to and from Technica. Eligible hackers will be sent travel registration information after registering for Technica.'
+    answer: 'There are many ways to travel to Technica! We will be sending buses to nearby universities which hackers can take to and from Technica. For hackers not within 30 minutes of a bus stop, travel reimbursement will also be available to assist in getting to and from Technica. For more information, check the travel page!'
   },
   {
     question: 'How do teams work?',
@@ -104,7 +104,7 @@ const qaList = [
   },
   {
     question: 'What should I bring?',
-    answer: 'Some recommended items to bring are a computer, chargers, and a pair of headphones! Bring what you feel will help you stay comfortable during the course of the hackathon, this could be hygiene products, computer peripherals, or a blanket. A detailed list of items to bring can be found in our hacker guide, which will be released on October 17!'
+    answer: 'Some recommended items to bring are a computer, chargers, and a pair of headphones! Bring what you feel will help you stay comfortable during the course of the hackathon, this could be hygiene products, computer peripherals, or a blanket. A detailed list of items to bring can be found in our hacker guide, which will be released early October!'
   },
   {
     question: 'What if I need any accomodations?',
