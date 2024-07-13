@@ -10,7 +10,7 @@
     <!-- DESCRIPTION -->
     <div style="margin-top: 2rem;"></div>
     <p>
-      Help run Technica and help hackers during the hackathon! Expect to gain
+      Help run Technica and assist hackers during the hackathon! Expect to gain
       valuable experience while applying your skills for the world's largest
       hackathon for underrepresented genders.
       <b>Must be 18+ to sign up.</b> People of all genders welcome!
