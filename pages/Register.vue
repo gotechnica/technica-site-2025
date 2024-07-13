@@ -67,7 +67,9 @@
               </option>
             </Field>
             <ErrorMessage :name="'gender'" class="invalid-feedback" />
-          </div>
+          </div><p class="description">
+        Please note: Technica is intended for underrepresented genders in tech!
+      </p>
           <div class="mt-1" v-if="values.gender?.includes('other')">
             <Field name="genderOther" type="text" value="" placeholder="Other" class="form-control"
               :class="{ 'is-invalid': errors['genderOther'] }" />
@@ -83,9 +85,7 @@
         </div>
       </div>
 
-      <p class="description">
-        Please note: Technica is intended for underrepresented genders in tech!
-      </p>
+      
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label"> What race(s) do you identify as?* </label>
@@ -418,8 +418,8 @@
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
           :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
         <label class="form-check-label">
-          <b>I understand that this hackathon is intended for underrepresented genders in tech.</b> I further agree to the 
-          <a href="./2024TechnicaCoC.pdf" target="_blank">Technica Terms and Code of Conduct</a>.
+          <b>I understand that Technica is intended for underrepresented genders in tech.</b> I further agree to the 
+          <a href="../public/2024TechnicaCoC.pdf" target="_blank">Technica Terms and Code of Conduct</a>.
         </label>
       </div>
 
