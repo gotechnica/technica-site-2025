@@ -23,7 +23,7 @@
         <h3>What do Campus Ambassadors do?</h3>
         <ul class="list">
           <li>
-            Generate awareness, excitement, and buzz leading up to Technica 2023
+            Generate awareness, excitement, and buzz leading up to Technica 2024
           </li>
           <li>Promote Technica on your campus and social media</li>
           <li>Communicate with Technica's Outreach team weekly</li>
@@ -36,7 +36,7 @@
           <li>Have your resume shared with our sponsors</li>
           <li>Potential to earn awesome perks:</li>
           <ul>
-            <li>Travel reimbursement for Technica 2023</li>
+            <li>Travel reimbursement for Technica 2024</li>
             <li>Social Media features</li>
             <li>Host a fireside chat or workshop for Technica</li>
             <li>Custom Technica merchandise</li>
@@ -71,9 +71,9 @@ const qaList = [
       perks you'll receive!",
   },
   {
-    question: 'When is Technica 2023?',
+    question: 'When is Technica 2024?',
     answer:
-      'Technica 2023 will take place on October 21-22 this year at The Hotel at UMD!',
+      'Technica 2024 will take place on October 26-27 this year at The Armory at UMD!',
   },
   {
     question:
@@ -90,7 +90,7 @@ const qaList = [
   {
     question: "I'm in high school, can I still apply?",
     answer:
-      'Yes! Any full-time student, as of October 2023, from 6th grade onwards \
+      'Yes! Any full-time student, as of October 2024, from 6th grade onwards \
       is eligible to apply!',
   },
   {
@@ -101,8 +101,8 @@ const qaList = [
     question: 'How much of a time commitment will this role require?',
     answer:
       "If you're selected as a Campus Ambassador, all that we require is that \
-      you attend Technica 2023 and complete our weekly progress form (which \
-      will start in September 2023)! This a merit-based program, so you'll get \
+      you attend Technica 2024 and complete our weekly progress form (which \
+      will start in September 2024)! This a merit-based program, so you'll get \
       out of it as much as you put in!",
   },
 ];
