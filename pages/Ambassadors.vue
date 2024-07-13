@@ -7,21 +7,16 @@
       <h1>Become an Ambassador</h1>
     </div> -->
     <div style="margin-top: 5rem;"></div>
-    <Header>Become an Ambassador</Header>
-    <h3>Applications are now open!</h3>
+    <Header>Congrats to our Ambassadors!</Header>
+    <h3>Applications are now closed.</h3>
     <p>
-      We are very excited to launch the fifth year of Technica Campus
-      Ambassadors! As a Technica Campus Ambassador, you'll have the unique
-      opportunity to help foster our community beyond Technica weekend at UMD.
-      As a representative of your school, you'll spread the word about Technica
-      2023 on your campus and promote our message of inclusion in STEM for the
-      world's largest hackathon for underrepresented genders!
+      We are very excited to launch the sixth year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2024 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon for underrepresented genders!
     </p>
-    <p>
+    <!-- <p>
       Fill out the
       <a href="https://gotechnica.org/ambassadorapp">application</a> by July 16th
       at 11:59pm EST to be considered. You'll hear back by July 20th!
-    </p>
+    </p> -->
 
     <div class="row">
       <div class="col">
