@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header>Hybrid Environment</Header>
+    <Header>Techni-Environments</Header>
     <div class="row">
       <div class="col-sm" v-for="(item, index) in items" :key="index">
         <img class="hybrid-img" :src=item.image>
@@ -100,6 +100,10 @@ body {
     -webkit-text-stroke: 2px $DARKYELLOW;
     text-shadow: $DARKYELLOW;
   }
+}
+
+.in-person h3 {
+  -webkit-text-stroke: 2.4px $DARKGREEN; 
 }
 
 .caption-box {

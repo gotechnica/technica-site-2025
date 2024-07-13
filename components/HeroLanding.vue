@@ -26,17 +26,16 @@
         <div id="popup" v-if="popupTriggers" >
             <div id="popup-inner" class="mobile">
                 <h3>What is <br/>Wonder Awaits*?</h3>
-                <!-- <p> In this new world, the possibilities are endless. 
-                This year, we want you all to Create Your Reality 
-                at Technica! <br/><br/>We encourage you to forge your own 
-                path, whether this means embarking on your first 
-                journey to hacking, pushing yourself past your 
-                own comfort zone, or coming to relax and just 
-                have fun: <b>choose the reality that fits you. </b>
-                <br/><br/>Technica is a safe space; regardless of what you 
-                decide, the reality you create can open doors to a
-                new realm of opportunity where you can prosper!</p> -->
-                <p> NEED BLURB HERE </p>
+                <p> We are thrilled to announce the theme for this fall's 
+                    hackathon: <b>Wonder Awaits!</b> <br/><br/> 
+                    Inspired by the whimsical world of Alice in Wonderland, 
+                    we're diving into the rabbit hole and embarking on a 
+                    nostalgic journey to celebrate our <b>10-year anniversary</b>. <br/><br/>
+                    This year, we're inviting you to join us in a fantastical 
+                    adventure where <b>innovation meets imagination</b>. From 
+                    curious concepts to groundbreaking creations, let’s 
+                    explore the wonders that await us in this magical realm.
+                    Get ready to leap down the rabbit hole with us!</p>
             </div>
         </div>
     </div>
@@ -44,17 +43,16 @@
         <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
             <div id="popup-inner">
                 <h3>What is <br/>Wonder Awaits*?</h3>
-                <!-- <p> In this new world, the possibilities are endless. 
-                This year, we want you all to Create Your Reality 
-                at Technica! <br/><br/>We encourage you to forge your own 
-                path, whether this means embarking on your first 
-                journey to hacking, pushing yourself past your 
-                own comfort zone, or coming to relax and just 
-                have fun: <b>choose the reality that fits you. </b>
-                <br/><br/>Technica is a safe space; regardless of what you 
-                decide, the reality you create can open doors to a
-                new realm of opportunity where you can prosper!</p> -->
-                <p> NEED BLURB HERE </p>
+                <p> We are thrilled to announce the theme for this fall's 
+                    hackathon: <b>Wonder Awaits!</b> <br/><br/> 
+                    Inspired by the whimsical world of Alice in Wonderland, 
+                    we're diving into the rabbit hole and embarking on a 
+                    nostalgic journey to celebrate our <b>10-year anniversary</b>. <br/><br/>
+                    This year, we're inviting you to join us in a fantastical 
+                    adventure where <b>innovation meets imagination</b>. From 
+                    curious concepts to groundbreaking creations, let’s 
+                    explore the wonders that await us in this magical realm.
+                    Get ready to leap down the rabbit hole with us!</p>
             </div>
         </div>
     </div>
@@ -181,6 +179,8 @@ const TogglePopup = () => {
     }
 
     #popup-inner.mobile {
+        margin-top: 30rem;
+        margin-left:10%;
         margin-right:10%;
         width:auto;
     }

@@ -1,9 +1,9 @@
 <template>
   <title>Technica Home</title>
-  <!-- Hero Section -->
   <div class="main-body">
-
+    <!-- Hero's Section -->
     <HeroLanding />
+
     <!-- About Technica Section -->
     <div class="container">
       <About />

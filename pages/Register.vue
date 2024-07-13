@@ -78,7 +78,7 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label"> Pronouns </label>
-            <Field name="pronouns" type="text" value="" placeholder="she/they" class="form-control" />
+            <Field name="pronouns" type="text" placeholder="she/they" class="form-control" />
           </div>
         </div>
       </div>
@@ -486,8 +486,8 @@
         </label>
       </div>
 
-      <!-- {{ values }} -->
-      <!-- {{errors}} -->
+      {{ values }}
+      {{errors}}
 
       <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-visited.svg"/>
@@ -588,7 +588,8 @@ const validationSchema = yup.object<RegisterForm>({
     .when('gender', ([gender], schema: any) => {
       return gender == 'other' ? schema.required() : schema.notRequired();
     }),
-  pronouns: yup.string(),
+  pronouns: yup.string()
+    .notRequired(),
   race: yup
     .array()
     .min(1, 'At least one race must be selected')
@@ -638,7 +639,7 @@ const validationSchema = yup.object<RegisterForm>({
     }),
   attendance: yup
     .string()
-    .required('Please select if the event is online or in person'),
+    .required('Please specify how you will be attending'),
   isFirstHackathon: yup
     .string()
     .required('Please specify if this is your first hackathon'),
@@ -988,6 +989,10 @@ const registerUser = async (values: Record<string, any>) => {
 
   if(values.school == 'Other') {
     values.school = 'Other: ' + values.schoolOther;
+  }
+
+  if(values.pronouns == "") {
+    values.pronouns = 'Not Listed';
   }
 
   if (values.raceOther != null) {
