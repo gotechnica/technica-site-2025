@@ -8,9 +8,9 @@
     <PixelButton
       text="Back To Top"
       textAlign="-1.25rem"
-      img="blue-button-normal.svg"
-      hover="blue-button-hover.svg"
-      click="blue-button-onclick.svg"
+      img="green-button-regular.svg"
+      hover="green-button-regular.svg"
+      click="green-on-click.svg"
     />
     <!-- <div class="text">Back To Top</div> -->
     <img class="arrow" :src="'/buttons/expand-arrow.svg'" alt="arrow" />
@@ -55,8 +55,8 @@ function showButton() {
 
 .sticky-button {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   width: 14rem;
   height: 4rem;
   align-items: center;

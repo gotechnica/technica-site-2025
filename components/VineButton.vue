@@ -18,7 +18,7 @@
       :src="`/buttons/${click as string}`"
       :style="{ opacity: isClick ? 1 : 0 }"
     />
-    <span :style="{ color: textColor ? textColor : 'white' , marginLeft: textAlign ? textAlign : '0rem'}">{{ text }}</span>
+    <span :style="{ color: textColor ? textColor : 'white', marginLeft: textAlign ? textAlign : '0rem'}">{{ text }}</span>
   </a>
   
 </template>

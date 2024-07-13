@@ -17,8 +17,8 @@
             </div>
             <div id="dummy"></div>
             <div class="buttons">
-                <VineButton text="Register" link="/register" img="green-button-regular.svg" hover="green-on-click.svg" click="green-visited.svg"/>
-                <VineButton text="Learn More" @click="TogglePopup" img="green-button-regular.svg" hover="green-on-click.svg" click="green-visited.svg"/>
+                <VineButton text="Register" link="/register" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
+                <VineButton text="Learn More" @click="TogglePopup" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
             </div>
         </div>
     </div>
