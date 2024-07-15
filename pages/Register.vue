@@ -292,6 +292,8 @@
                 {{ option.text }}
               </label>
             </div>
+            <p></p>
+            <p>Quick tip: Different tracks will be avaibable to you based on what topics you're interested in</p>
             <ErrorMessage :name="'topics'" class="invalid-feedback" />
           </div>
         </div>
@@ -300,6 +302,7 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label">Which track do you wish to participate in?*</label>
+          <p>Please note: Most tracks are only available to in-person hackers!</p>
           <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
             <Field name="track" :value="option.value" type="radio" class="form-check-input" />
             <label class="form-check-label">{{ option.text }}</label>
