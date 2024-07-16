@@ -80,7 +80,7 @@
                 </div>
               </div>
               <p>
-              <a href="https://gotechnica.org/sponsor" target="_blank">
+              <a href="/sponsor" target="_blank">
                   Sponsor
               </a> |
               <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">
