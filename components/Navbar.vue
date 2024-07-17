@@ -25,6 +25,9 @@
               <NuxtLink to="/Mentors-Volunteers" class="nuxt-link-active">Mentors and Volunteers</NuxtLink>
             </li>
             <li class="nav-item" @click="closeDropdown">
+              <NuxtLink to="/Sponsor" class="nuxt-link-active">Sponsor</NuxtLink>
+            </li>
+            <li class="nav-item" @click="closeDropdown">
               <NuxtLink to="/Travel" class="nuxt-link-active">Travel</NuxtLink>
             </li>
             <li class="nav-item" @click="closeDropdown">
