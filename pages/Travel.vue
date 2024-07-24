@@ -1,74 +1,168 @@
 <template>
   <title>Travel</title>
-  <!-- <Header>Travel</Header> -->
+  <div style="margin-top: 5rem;"></div>
+  <Header>Travel</Header>
   <div class="travel-container">
     <div class="travel-header section">
-      <Header class="title">Travel Information</Header>
-      <h3>Information about Travel for Technica 2024 will be released in August!</h3>
-      <!-- <p class="process-blurb">
-        <b>The Technica opening ceremony will start at 12:00pm EST on Saturday, October 21 and the closing ceremony will be at 3:00pm EST 
-        on Sunday, October 22.</b>
-        Eligible hackers who need transportation to Technica will receive more
-        information on how to apply for bus seats and travel reimbursements after registering to attend Technica in person.
-        Your eligibility is determined by your location from your registration
-        form responses and is only applicable for hackers in the United States.
-        Please read below for more details and to check your eligibility for
-        either option. <b>Note: For questions about travel and hotel registration please contact us at travel@gotechnica.org 
-        and not at The Hotel UNLESS you are booking a hotel room yourselves without Technica reimbursement!</b>
-      </p> -->
+      <div class="process-blurb">
+        <p>
+          At Technica, we understand the importance of making the event accessible to participants from diverse backgrounds, 
+          and we are committed to supporting your journey to our hackathon!
+        </p>
+        <p>
+          Technica will be hosted at the Reckord Armory, College Park, MD, 
+          from 9 AM, Saturday, October 26th to 5 PM, Sunday, October 27th.
+        </p>
+        <p>
+          We will offer travel reimbursement and bus accommodations at specified universities 
+          for hackers on a first-come, first-serve basis.
+        </p>
+        <p>
+          Technica reserves the right to adjust or cancel reimbursement at any time if necessary.
+        </p>
+        <p>
+          Please email <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b> with any questions.
+        </p>
+      </div>
     </div>
-    <!-- <div class="container">
+    <div class="container">
       <div class="row row-cols-1 row-cols-md-2 section">
         <div class="info-section">
           <h3>Buses</h3>
           <p>
-            Technica provides buses to several cities to facilitate travel for
-            hackers to and from hackers. Eligible hackers will receive an email
-            detailing bus locations and further instructions on how to apply for
-            bus transportation. Buses will stop at Towson University, University of Maryland Baltimore County, Johns Hopkins University, Stevens Institute of Technology, New Jersey Institute of Technology, Rutgers University, Princeton University, University of Pennsylvania, and University of Delaware. Exact locations and departure times will be confirmed closer to the event. If we are not providing a bus to a city within 30 minutes of
-            you and you are not within 30 minutes of College Park, Maryland, you
-            may apply for travel reimbursement. A seperate form for hotel rooms
-            will be sent out.
+            At Technica, we understand the importance of making the event accessible to participants from diverse backgrounds, 
+            and we are committed to supporting your journey to our hackathon!
           </p>
-        </div>
+          <p>Technica provides buses to several cities to facilitate travel for hackers to and from Technica. 
+            Eligible hackers will receive an email detailing bus locations and further instructions on how to apply for bus transportation. 
+            Buses will stop at the following universities:
+          </p>
+          <ul>
+            <li v-for="(university, index) in universities" :key="index">
+              {{ university }}
+            </li>
+          </ul>
+          <p>
+            Exact stop locations and departure times will be confirmed closer to the event. 
+            If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of 
+            College Park, Maryland, they may apply for travel reimbursement. 
+            If hackers cannot attend the event in-person, Technica offers a free, 
+            virtual environment to interact with fellow hackers online.
+          </p>
+          <p>
+            Hackers located within 30 minutes of these university stops are encouraged to register 
+            for bus accommodation to the nearest bus stop, even if they do not attend the university.
+          </p>
+          <p>
+            Bus routes are listed as follows. <b>Note that these routes are two ways.</b>
+          </p>
+          <ul>
+            <li v-for="(route, index) in routes" :key="index">
+              {{ route }}
+            </li>
+          </ul>
+          <p>
+            All buses would arrive at the Reckord Armory at the University of Maryland 
+            (4490 Rossborough Ln, College Park, MD 20742) on 
+            <b>Saturday, October 26th at approximately 10 AM</b> 
+            and depart from the Reckord Armory on <b>Sunday, October 27th at 5 PM.</b>
+          </p>
+          <p>
+            Technica reserves the right to adjust or cancel travel accommodations at any time if necessary.
+          </p>
+          <VineButton text="Sign Up Now!" link="https://forms.gle/LiZe4ESwWs84oSpb8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
+          </div>
         <div class="info-section">
           <h3>Reimbursement</h3>
           <p>
-            Technica will provide travel reimbursement to hackers who require
-            transportation directly to the University of Maryland and are unable
-            to travel via buses Technica sends. Reimbursements will be evaluated
-            on a case-by-case basis and may not cover the full cost of travel.
-            Eligible hackers will be contacted via email with additional
-            information on how to apply for reimbursement and hotel rooms.
-            <b
-              >Please note that hackers will need to be physically present
-              during Technica in order to receive their reimbursement, not
-              attending online.</b
-            >
+            <i>
+              At Technica, we understand the importance of making the event accessible to participants from diverse backgrounds, 
+              and we are committed to supporting your journey to our hackathon! 
+            </i>
           </p>
+          <p>
+            Technica will provide travel reimbursement to hackers who require transportation directly 
+            to the University of Maryland and are unable to travel via buses Technica sends. 
+            Reimbursements will be evaluated on a <b>first-come, first-serve basis</b> and may not cover the full cost of travel. 
+            Notice of reimbursement approval/rejection will be sent via email before the event. 
+            Minors are eligible to apply for travel reimbursement; please refer to the Technica 2024 Minor Policy for further details. 
+          </p>
+          <p>
+            Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park or a Technica bus stop. 
+          </p>
+          <p>
+            Eligible hackers will be contacted via email with additional information on how to apply for reimbursement. 
+            Please note that hackers will <b>need to be physically present</b> during Technica in order to receive their reimbursement, 
+            not attending online. Reimbursement checks will be handed out during the event at a marked table.
+          </p>
+          <p>
+            <i>
+              If hackers cannot attend the event in-person, 
+              Technica offers a free, virtual environment to interact with fellow hackers online. 
+            </i>
+          </p>
+          <p>
+            Reimbursement amounts per method of transportation 
+            (note that in a carpool, <b>only the driver may receive reimbursement</b>):
+          </p>
+          <ul>
+            <li v-for="item in transportation" :key="item.name">
+              {{ item.name }}: ${{ item.minPrice }} - ${{ item.maxPrice }}
+            </li>
+          </ul>
+          <p>
+            Reimbursement amount is dependent on how much was spent on traveling to Technica. 
+            Hackers should make sure to keep their trip purchase receipts and 
+            submit the bus/train/plane itinerary of the ride/flight they intend to take. 
+            We recommend that hackers wait until receiving approval from Technica before purchasing their ticket. 
+            Please note that Technica <b>requires proof of travel or a receipt for reimbursement of travel expenses, 
+            stating the exact amount spent</b>. 
+            We will not reimburse without this documentation.
+          </p>
+          <p>
+            Reminder that reimbursement will not be provided for transportation to a Technica bus stop. 
+            If hackers are taking the Technica-provided bus, they are responsible for getting themselves to the bus stop.
+          </p>
+          <p>
+            Technica will reimburse up to $200 for any hackers traveling from the United States and Canada. 
+            Reimbursements will only be in US dollars. 
+            Please note that Technica will not reimburse travel from any other country.
+          </p>
+          <p>
+            Here are some examples of documentation to submit for reimbursement:
+          </p>
+          <ul>
+            <li v-for="transportation in documentation" :key="transportation.name">
+              {{ transportation.name }}
+              <ul>
+                <li v-for="item in transportation.items" :key="item">
+                  {{ item }}
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            If you are unsure whether your documentation is acceptable, 
+            please email <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b> for clarification. 
+          </p>
+          <p>
+            Technica reserves the right to adjust or cancel reimbursement at any time if necessary.
+          </p>
+          <VineButton text="Sign Up Now!" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
         </div>
       </div>
       <div class="faq-section section">
         <Header>Frequently Asked Questions</Header>
         <FAQ faqId="main" :qaList="qaList" class="main-section" />
       </div>
-    </div> -->
-    <!-- <div class="email-blurb section">
+    </div>
+    <div class="email-blurb section">
       <h3>Have Other Questions?</h3>
       <p class="contact-blurb">
         Email us at
-        <a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a>
+        <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b>
       </p>
-    </div> -->
-
-    <div class="contact">
-    <h3 style="color: #653554;">Have Other Questions?</h3>
-    <p style="color: #653554;">
-      Reach out to
-      <a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a>
-      and we'll get back to you soon!
-    </p>
-  </div>
+    </div>
     <StickyButton></StickyButton>
   </div>
 </template>
@@ -122,6 +216,53 @@ const qaList = [
   },
 ];
 
+const universities = [
+  "Towson University",
+  "Johns Hopkins University",
+  "University of Maryland Baltimore County",
+  "New York University",
+  "Stevens Institute of Technology",
+  "New Jersey Institute of Technology",
+  "Rutgers University",
+  "Princeton University",
+  "University of Pennsylvania",
+  "University of Delaware",
+  "George Mason University",
+  "University of Virginia",
+  "Virginia Tech"
+];
+
+const routes = [
+  "New York University → Stevens Institute of Technology → New Jersey Institute of Technology → Rutgers University → Princeton University → University of Maryland, College Park",
+  "University of Pennsylvania → University of Delaware → Towson University → Johns Hopkins University → University of Maryland, Baltimore County → University of Maryland, College Park",
+  "Virginia Tech → University of Virginia → George Mason University → University of Maryland, College Park"
+];
+
+const transportation = [
+  { name: 'Car', minPrice: 1, maxPrice: 40 },
+  { name: 'Metro', minPrice: 1, maxPrice: 20 },
+  { name: 'Bus/Train', minPrice: 1, maxPrice: 100 },
+  { name: 'Plane', minPrice: 1, maxPrice: 200 },
+]
+
+const documentation = [
+  {
+    name: 'Car',
+    items: ['Gas receipt']
+  },
+  {
+    name: 'Bus/Train',
+    items: ['Bus tickets', 'Booking confirmation receipt']
+  },
+  {
+    name: 'Metro',
+    items: ['Ticket receipt', 'Transit statement']
+  },
+  {
+    name: 'Plane',
+    items: ['Plane tickets', 'Booking confirmation receipt']
+  }
+]
 </script>
 
 <style scoped lang="scss">
@@ -135,9 +276,9 @@ const qaList = [
   color: #ffce64;
   }
 
-  .a {
-      color: #ffce64;
-  }
+.a {
+  color: #ffce64;
+}
 
 .travel-container {
     display: flex;
@@ -172,6 +313,10 @@ const qaList = [
   text-align: center;
 }
 
+.email-blurb h3 {
+  color: $DARKYELLOW;
+}
+
 .faq-section h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -190,6 +335,10 @@ template {
 }
 
 a {
-    color: $DARK-PURPLE;
+    color: $DARKYELLOW;
+}
+
+li {
+  color: white;
 }
 </style>
