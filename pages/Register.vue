@@ -104,9 +104,6 @@
             <ErrorMessage :name="'raceOther'" class="invalid-feedback" />
           </div>
         </div>
-      </div>
-
-      <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">
@@ -116,15 +113,14 @@
               required />
             <ErrorMessage :name="'age'" class="invalid-feedback" />
           </div>
-
           <p class="description">
             <br>
-            If you will be a minor (under 18 years of age) at any point during
-            Technica, we will need your guardian's email. We will email a waiver
-            to you and your guardian to sign closer to the event. Minors who plan
-            to attend the event in-person will need to be accompanied by a chaperone.
-            A chaperone can accompany up to six minors.
-          </p>
+            If you will be a minor (under 18 years of age) at any point during Technica, 
+            we will need your parent/guardian's email. We will email a waiver to your 
+            parent/guardian in early October to sign. Minors attending the event in-person 
+            will need to be accompanied by a chaperone who must also be a registered hacker. 
+            A chaperone can accompany up to ten minors.
+            </p>
 
           <div class="mt-4" v-if="parseInt(values.age) < 18">
             <label class="form-label"> Parent or Guardian Email* </label>
@@ -293,7 +289,7 @@
               </label>
             </div>
             <p></p>
-            <p>Quick tip: Different tracks will be avaibable to you based on what topics you're interested in</p>
+            <p>Quick tip: Different tracks will be available to you based on what topics you're interested in</p>
             <ErrorMessage :name="'topics'" class="invalid-feedback" />
           </div>
         </div>
@@ -799,11 +795,9 @@ const dietaryRestrictionsOptions = ref<Option[]>([
 
 const topicsOfInterest = ref<Option[]>([
   { text: 'AI and Machine Learning', value: 'ai-and-machine-learning' },
-  { text: 'Cloud Computing', value: 'cloud-computing' },
   { text: 'Data Science', value: 'data-science' },
   { text: 'Startups', value: 'startups' },
   { text: 'Research', value: 'research' },
-  { text: 'UI/UX', value: 'ui-ux' },
   { text: 'Web Development', value: 'web-development' },
   {text: 'Hardware', value: 'hardware' },
 ]);

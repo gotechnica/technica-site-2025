@@ -117,6 +117,10 @@ const qaList = [
   {
     question: 'Are there any COVID-19 policies?',
     answer: 'While vaccination and masking is encouraged, masking will be optional for in-person attendees. Technica offers an online platform for remote participation.'
+  },
+  {
+    question: 'I have an unanswered question',
+    answer: 'We’d love to hear from you! Reach out to us at <a href="mailto:hello@gotechnica.org">hello@gotechnica.org</a> and we’ll be in touch soon.'
   }
 ];
 
