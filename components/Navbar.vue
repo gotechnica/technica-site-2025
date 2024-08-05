@@ -81,7 +81,8 @@ export default {
             { name: 'Ambassadors', path: '/Ambassadors' },
             { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
             { name: 'Travel', path: '/Travel' },
-            { name: 'Tracks', path: '/Tracks' }
+            { name: 'Tracks', path: '/Tracks' },
+            { name: 'Gather', path:'/Gather'}
           ]
         },
       ]
