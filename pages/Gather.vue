@@ -136,7 +136,7 @@
             right-clicking, and clicking the triple dots <img src="/gather/three_dots.png" class="smaller-image">.
         </p>
 
-        <p>
+        <p class="lastPar">
             <b>Please reach out to </b>
             <a href="mailto:christinaxu10@gmail.com" class="email-link">Christina Xu</a> 
             or <a href="mailto:christinaxu10@gmail.com" class="email-link">Claire Chen</a> <b>if you encounter any issues.</b>
@@ -355,6 +355,8 @@ export default{
   .bold{
     color:#ffce64;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 5px;
   }
 
   ol {
@@ -374,5 +376,9 @@ export default{
     justify-content: center;
   }
 
+
+  .lastPar {
+    margin-bottom: 0rem;
+  }
   </style>
   
