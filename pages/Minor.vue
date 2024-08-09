@@ -21,7 +21,7 @@
                 <p>Whether participating in person or virtually, a minor’s chaperone must submit Technica’s Minor Waiver
                     for
                     the minor. This waiver is linked <a
-                        href="https://drive.google.com/file/u/0/d/1OesK8GFb-V6NWDKceDZ02VNi9kGxKAKP/view?usp=sharing&pli=1"
+                        href="../minor/2024 Technica Minors Waiver.pdf"
                         target="_blank"> here</a> and will also be emailed to the hacker’s parent/guardian in
                     early October to sign through Docusign (given that the hacker is registered). The parent/guardian
                     must
