@@ -10,10 +10,10 @@
     <!-- DESCRIPTION -->
     <div style="margin-top: 2rem;"></div>
     <p>
-      Help run Technica and assist hackers during the hackathon! Expect to gain
-      valuable experience while applying your skills for the world's largest
-      hackathon for underrepresented genders.
-      <b>Must be 18+ to sign up.</b> People of all genders welcome!
+      Join us in running Technica and helping hackers during the event! 
+      Gain valuable experience while applying your skills for the world's 
+      largest hackathon for underrepresented genders. 
+      <b>Must be 18+ to sign up.</b> People of all genders are welcome!
     </p>
 
     <!-- MENTOR AND VOLUNTEER INFO COLUMNS -->
@@ -23,7 +23,7 @@
       <div class="col">
         <h3>Mentors</h3>
         <div class="button">
-          <VineButton text="Mentor" link="THIS_DOES_NOT_LEAD_ANYWHERE_YET" img="yellow-button-regular.svg"
+          <VineButton text="Mentor" link="https://forms.gle/Hf8EMYYeuooMEzhPA" img="yellow-button-regular.svg"
             hover="yellow-on-click.svg" click="yellow-visited.svg" />
         </div>
         <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p>
@@ -38,7 +38,7 @@
       <div class="col">
         <h3>Volunteers</h3>
         <div class="button">
-          <VineButton text="Volunteer" link="THIS_DOES_NOT_LEAD_ANYWHERE_YET" img="yellow-button-regular.svg"
+          <VineButton text="Volunteer" link="https://forms.gle/N34mdXiYtWWsRAbr6" img="yellow-button-regular.svg"
             hover="yellow-on-click.svg" click="yellow-visited.svg" />
         </div>
         <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p>
@@ -85,15 +85,13 @@ const mentorInfo = [
   'Help hackers bring their ideas to life',
   'Refine your leadership skills',
   'Share your knowledge and expertise with our hackers',
-  'Opportunities for mentors both in-person and virtual',
-  'Assist hackers in workshop activities',
+  'Both in-person and virtual opportunities for mentors ',
 ];
 
 const volunteerInfo = [
   'Help with in-person operations of the hackathon',
-  'Direct hackers to mentors if they need coding help',
   'Help set up for Technica weekend',
-  'Report any technical issues to tech team',
+  'Serve meals to hackers',
   'Assist workshop operations',
 ];
 
@@ -101,9 +99,7 @@ const qaList = [
   {
     question: 'Should I be a mentor or a volunteer?',
     answer:
-      'Volunteers help out with running the hackathon while mentors give more technical help. \
-    For instance, volunteers could help direct check-in lines while mentors might help a hacker who \
-    needs guidance on their code.',
+      'Volunteers assist with general tasks at the hackathon, such as directing check-in lines, while mentors provide technical support, such as guiding hackers with their code.',
   },
   {
     question: 'Where and when is Technica?',
@@ -135,9 +131,7 @@ const qaList = [
   {
     question: 'When will I hear back after signing up?',
     answer:
-      'After signing up, you will be contacted to provide additional information about your \
-    availability and receive other relevant information closer to the date of Technica. Please \
-    keep an eye on the inbox of the email you register with!',
+      'After signing up, you will be contacted to provide additional information about your availability and receive other relevant information closer to Technica weekend. Please keep an eye on the inbox of the email you register with!',
   },
 ];
 
