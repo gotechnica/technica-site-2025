@@ -9,6 +9,10 @@
       <About />
     </div>
 
+    <div class="container">
+      <Achievements />
+    </div>
+
     <!-- What to do at Technica Section -->
     <div class="whatToDo">
       <WhatToDo />
