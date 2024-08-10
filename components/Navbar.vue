@@ -63,18 +63,19 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        { dropdown: false, name: 'Fellows', path: '/Fellows' },
-        { dropdown: false, name: 'Ambassadors', path: '/Ambassadors' },
-        { dropdown: false, name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+        { dropdown: false, name: 'Annual Report', path: './Report'},
+        { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
+        { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         { dropdown: false, name: 'Sponsors', path: '/Sponsor' },
-        { dropdown: false, name: 'Travel', path: '/Travel' },
-        { dropdown: false, name: 'Tracks', path: '/Tracks' },
         {
-          dropdown: true, showDropdown: false, name: 'More',
+          dropdown: true, showDropdown: false, name: 'Programs',
           items: [
-            { name: 'Annual Report', path: '/2023AnnualReport.pdf'},
-            { name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
-            { name: 'Donate', path: ''}
+            
+            {name: 'Fellows', path: '/Fellows' },
+            {name: 'Ambassadors', path: '/Ambassadors' },
+            {name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+            {name: 'Travel', path: '/Travel' },
+            {name: 'Tracks', path: '/Tracks' },
           ]
         },
       ]
