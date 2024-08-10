@@ -12,30 +12,39 @@
 
         <div class="collapse navbar-collapse" id="my-navbar">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/" class="nuxt-link-active">Home</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/Fellows" class="nuxt-link-active">Fellows</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/Ambassadors" class="nuxt-link-active">Ambassadors</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/Mentors-Volunteers" class="nuxt-link-active">Mentors and Volunteers</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/Sponsor" class="nuxt-link-active">Sponsor</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/Travel" class="nuxt-link-active">Travel</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="/Tracks" class="nuxt-link-active">Tracks</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeDropdown">
-              <NuxtLink to="https://forms.gle/i8YqC1HN1rZ55xy86" target="_blank" class="nuxt-link-active">Data Rights</NuxtLink>
-            </li>
+              <template v-for="link in links"> 
+                <li class="nav-item dropdown" v-if="link.dropdown" :key="link.items.map(item => item.name).join()">
+                  <div variant="none" min-width="100px" :text="link.name" size="sm">
+                      <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem"> 
+                        {{ link.name }}
+                        <div class="dropdown-arrow"></div>
+                      </div>
+                      <div v-if="link.showDropdown" class="dropdown-options">
+                        <div class="dropdown-item" @click="toggleDropdown(link)" v-for="item in link.items" :key="item.name">
+                          <NuxtLink :to="item.path" class="dropdown-link-active">
+                            {{ item.name }}
+                          </NuxtLink>
+                        </div>
+                      </div>
+                  </div>
+                </li>
+
+                <li v-else-if="link.name === 'Data Rights' | link.name === 'Devpost'" :key="link.name">
+                  <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
+                    <NuxtLink :to="link.path" target="_blank" class="nuxt-link-active">
+                      {{ link.name }}
+                    </NuxtLink>
+                  </div>
+                </li>
+
+                <li v-else :key="link.name">
+                  <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
+                    <NuxtLink :to="link.path" class="nuxt-link-active">
+                      {{ link.name }}
+                    </NuxtLink>
+                  </div>
+                </li>
+            </template>
           </ul>
         </div>
       </div>
@@ -54,20 +63,19 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        { dropdown: false, name: 'Register', path: '/Register' },
-        { dropdown: false, name: 'Expo', path: '/Expo' },
-        { dropdown: false, name: 'Schedule', path: '/Schedule' },
-        { dropdown: false, name: 'Maps', path: '/Maps' },
-        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com/' },
-        { dropdown: false, name: 'Data Rights', path: 'https://docs.google.com/forms/d/e/1FAIpQLSeo-xzpgBPHDoMd4kbz3V7b0Pi-XnIICiDPNMbURt5NSvHJPA/viewform' },
+        { dropdown: false, name: 'Annual Report', path: './Report'},
+        { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
+        { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
+        { dropdown: false, name: 'Sponsors', path: '/Sponsor' },
         {
           dropdown: true, showDropdown: false, name: 'Programs',
           items: [
-            { name: 'Fellows', path: '/Fellows' },
-            { name: 'Ambassadors', path: '/Ambassadors' },
-            { name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
-            { name: 'Travel', path: '/Travel' },
-            { name: 'Tracks', path: '/Tracks' }
+            
+            {name: 'Fellows', path: '/Fellows' },
+            {name: 'Ambassadors', path: '/Ambassadors' },
+            {name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
+            {name: 'Travel', path: '/Travel' },
+            {name: 'Tracks', path: '/Tracks' },
           ]
         },
       ]
