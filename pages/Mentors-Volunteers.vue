@@ -26,7 +26,7 @@
           <VineButton text="Mentor" link="https://forms.gle/Hf8EMYYeuooMEzhPA" img="yellow-button-regular.svg"
             hover="yellow-on-click.svg" click="yellow-visited.svg" />
         </div>
-        <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p>
+        <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
         <ul>
           <li v-for="info in mentorInfo">
             {{ info }}
@@ -41,7 +41,7 @@
           <VineButton text="Volunteer" link="https://forms.gle/N34mdXiYtWWsRAbr6" img="yellow-button-regular.svg"
             hover="yellow-on-click.svg" click="yellow-visited.svg" />
         </div>
-        <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p>
+        <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
         <ul>
           <li v-for="info in volunteerInfo">
             {{ info }}
