@@ -4,7 +4,7 @@
         <div class="stat-card-container">
         <img class="edge-icon" src="/achievements/teal.png" />
         <div class="stat-card" id="teal">
-            <h1>8</h1>
+            <h1>10</h1>
             <p>years of Technica</p>
         </div>
       </div>
