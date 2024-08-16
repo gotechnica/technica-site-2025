@@ -335,7 +335,22 @@ li {
   <div class="travel-container">
     <div class="travel-header section">
       <Header class="title">Travel Information</Header>
-      <h3>Information about Travel for Technica 2024 will be released in August!</h3>
+      
+      <div class="info">
+        <p>At Technica, we understand the importance of making the event accessible to participants from diverse 
+        backgrounds, and we are committed to supporting your journey to our hackathon!</p>
+
+        <p>Technica will be hosted at the Reckord Armory, College Park, MD, from 9 AM, Saturday, October 26th 
+        to 5 PM, Sunday, October 27th.</p>
+
+        <p>We will confirm travel accommodations in waves for hackers who have registered using the 
+        <a href = "https://forms.gle/1SmVpCvQy9eoQWj79">Technica 2024 Travel Accommodations Request Form</a>. If hackers cannot attend 
+        the event in-person, Technica offers a free, virtual environment to interact with fellow hackers 
+        online. </p>
+
+        <p>Technica reserves the right to adjust or cancel accommodations at any time, if necessary.</p>
+
+      </div>
     </div>
 
     <div class="contact">
