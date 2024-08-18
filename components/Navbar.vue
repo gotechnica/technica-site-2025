@@ -67,6 +67,7 @@ export default {
         { dropdown: false, name: 'Annual Report', path: './Report'},
         { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
+        { dropdown: false, name: 'Minors', path: '/minor' }, 
         { dropdown: false, name: 'Sponsors', path: '/Sponsor' },
         {
           dropdown: true, showDropdown: false, name: 'Programs',
