@@ -42,6 +42,13 @@
       <div class="sponsor-tier">
         <SponsorsSponsorGrid :sponslist="starterSponsors" />
       </div>
+
+      <!-- Special Thanks -->
+      <h4><b>Special Thanks</b></h4>
+      <div class="underline"></div>
+      <div class="sponsor-tier">
+        <SponsorsSponsorGrid :sponslist="specialThanks" />
+      </div>
     </div>
 </template>
   
@@ -59,6 +66,8 @@ const silverSponsors: SponsorInfo[] = []
 const bronzeSponsors: SponsorInfo[] = []
 
 const starterSponsors: SponsorInfo[] = []
+
+const specialThanks: SponsorInfo[] = [{name: "standout", link: "https://www.standoutstickers.com/"}]
 
 </script>
 

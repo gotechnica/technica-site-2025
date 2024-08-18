@@ -220,16 +220,26 @@ const TogglePopup = () => {
     }
 
     .buttons {
-        justify-self: right; 
         // background-color: black;
         float: right;
+        display: flex;
+        justify-content: flex-end;
         margin-right: 0;
+        gap: 3%;
     }
 
     .buttons a {
         // margin-left: 0;
         margin-right: 0;
         // margin-top: -3%;
+    }
+
+    .buttons .image-container {
+        margin: 0;
+    }
+
+    .alice-logo {
+        margin-right: 25%;
     }
 
     @media screen and (max-width: 1048px) {
@@ -244,6 +254,10 @@ const TogglePopup = () => {
             overflow-x: hidden;
             overflow-y: hidden;
             height: 100vh;
+        }
+
+        .alice-logo {
+            margin-right: 0;
         }
     }
 
@@ -268,7 +282,15 @@ const TogglePopup = () => {
             font-size: 15px;
         }
 
-    
+        .buttons {
+            display: initial;
+            justify-self: right;
+        }
+
+        .buttons .image-container {
+            margin-left: auto;
+        }
+
         .basic-info{
             font-weight: bold;
             margin-top: 0.8rem;
