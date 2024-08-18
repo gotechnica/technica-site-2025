@@ -775,7 +775,7 @@ const hearOptions = ref<Option[]>([
   { text: 'LinkedIn', value: 'linkedin' },
   { text: 'Google', value: 'google' },
   { text: 'Major League Hacking', value: 'mlh' },
-  { text: 'Email Listser', value: 'email' },
+  { text: 'Email Listserv', value: 'email' },
   { text: 'Flyer or Poster', value: 'flyer' },
   { text: 'Friend', value: 'friend' },
   { text: 'Other', value: 'other' },
