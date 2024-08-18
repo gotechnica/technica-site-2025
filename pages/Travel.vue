@@ -343,8 +343,10 @@ li {
         <p>Technica will be hosted at the Reckord Armory, College Park, MD, from 9 AM, Saturday, October 26th 
         to 5 PM, Sunday, October 27th.</p>
 
-        <p>We will confirm travel accommodations in waves for hackers who have registered using the 
-        <a href = "https://forms.gle/1SmVpCvQy9eoQWj79">Technica 2024 Travel Accommodations Request Form</a>. If hackers cannot attend 
+        <p>If you wish to receive Travel Accomodations, please apply using the 
+        <a href = "https://forms.gle/1SmVpCvQy9eoQWj79">Technica 2024 Travel Accommodations Request Form</a>. More information will be released soon!</p>
+
+        <p>We will confirm travel accommodations in waves for hackers who have registered using the form above. If hackers cannot attend 
         the event in-person, Technica offers a free, virtual environment to interact with fellow hackers 
         online. </p>
 
