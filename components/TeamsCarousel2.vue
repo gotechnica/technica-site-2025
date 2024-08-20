@@ -83,7 +83,20 @@ const teams = ref([
 .carousel__slide {
   background-color: transparent;
 }
-@media screen and (max-width: 768px) {}
 
-@media screen and (max-width: 400px) {}
+@media (max-width: 630px) {
+  // .carousel__slide {
+  //   visibility: hidden;
+  // }
+
+  // .carousel {
+  //   visibility: hidden;
+  // }
+
+  // .header {
+  //   visibility: hidden;
+  // }
+}
+
+@media (max-width: 400px) {}
 </style>

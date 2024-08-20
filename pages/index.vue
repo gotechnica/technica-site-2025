@@ -20,7 +20,7 @@
 
     <!-- Hybrid Environment Section -->
     <div class="container hybrid">
-      <HybridEnv/>
+      <HybridEnv />
     </div>
 
     <!-- Hear From Past Hackers -->
@@ -44,11 +44,11 @@
     </div>
 
     <!-- Meet the Team -->
-    <div class="container">
-      <TeamsCarousel2/>
+    <div class="container meetTheTeam">
+      <TeamsCarousel2 />
     </div>
 
-    <div class="container">
+    <div class="container faq">
       <Header v-if="width <= 768" class=faq>FAQ</Header>
       <Header v-else class=faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
@@ -133,7 +133,6 @@ const qaList = [
 </script>
 
 <style scoped lang="scss">
-
 .container {
   margin-bottom: 5rem;
 }
@@ -146,5 +145,14 @@ const qaList = [
   .hybrid {
     margin-top: -60rem;
   }
+
+  .meetTheTeam {
+    visibility: hidden;
+  }
+
+  .faq {
+    margin-top: -60rem;
+  }
+
 }
 </style>

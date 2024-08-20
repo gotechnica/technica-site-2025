@@ -65,4 +65,18 @@ const props = defineProps({
   font-size: 1rem;
   color: #555;
 }
+
+@media (max-width: 630px) {
+  // .cards-container {
+  //   visibility: hidden;
+  // }
+
+  // .cards {
+  //   visibility: hidden;
+  // }
+
+  // .header {
+  //   visibility: hidden;
+  // }
+}
 </style>
