@@ -38,8 +38,14 @@
       <AdditionalInfo />
     </div>
 
+    <!-- Sponsors Section -->
     <div class="container">
       <Sponsors />
+    </div>
+
+    <!-- Meet the Team -->
+    <div class="container">
+      <TeamsCarousel2/>
     </div>
 
     <div class="container">
@@ -47,10 +53,6 @@
       <Header v-else class=faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
-
-    <!-- <div class="container">
-      <TeamsCarousel/>
-    </div> -->
   </div>
   <StickyButton></StickyButton>
 </template>
