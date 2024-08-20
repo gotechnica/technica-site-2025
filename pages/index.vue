@@ -1,5 +1,6 @@
 <template>
-  <title>Technica Home</title>
+  <!-- Modify page title in "useHead({ title: })" -->
+  <!-- <title>Technica Home</title> -->
   <div class="main-body">
     <!-- Hero's Section -->
     <HeroLanding />
@@ -20,7 +21,7 @@
 
     <!-- Hybrid Environment Section -->
     <div class="container hybrid">
-      <HybridEnv/>
+      <HybridEnv />
     </div>
 
     <!-- Hear From Past Hackers -->
@@ -128,10 +129,46 @@ const qaList = [
   }
 ];
 
+// Google stuff + meta tags ~~ ! Update each year ! ~~
+useHead({
+  title: 'Technica 2024',
+  meta: [
+    {
+      name: 'description',
+      content: 'World’s largest hackathon for underrepresented genders',
+    },
+    {
+      property: 'og:title',
+      content: 'Technica 2024',
+    },
+    {
+      property: 'og:site_name',
+      content: 'Technica',
+    },
+    {
+      property: 'og:description',
+      content: 'World’s largest hackathon for underrepresented genders',
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      property: 'og:url',
+      content: 'https://gotechnica.org/',
+    },
+  ],
+  link: [
+    {
+      rel: 'icon',
+      href: '/logos/favicon.ico',
+    },
+  ],
+})
+
 </script>
 
 <style scoped lang="scss">
-
 .container {
   margin-bottom: 5rem;
 }
