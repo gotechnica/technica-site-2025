@@ -1,16 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    head: {
-      link: [
-        { rel: 'icon', type: 'image/png', href: '/logo.png' }
-      ],
-      title: 'Technica Home',
-      meta: [
-        { name: 'description', content: "World's largest hackathon for underrepresented genders." }
-      ]
-    }
-  },
+  ssr: false,
   typescript: {
     strict: true,
     typeCheck: true,
@@ -42,7 +32,6 @@ export default defineNuxtConfig({
     'nuxt-anchorscroll'
   ],
   plugins: ['~/plugins/useBootstrap.client.ts', '~/plugins/vue-gtag.client.ts'],
-  ssr: false,
   runtimeConfig: {
     public: {
       calendarID: '',
