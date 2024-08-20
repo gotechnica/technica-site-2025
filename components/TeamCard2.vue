@@ -25,7 +25,9 @@ const props = defineProps({
 .cards-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
+  width: 40vw;
+  background-color: transparent;
 }
 
 .card {
