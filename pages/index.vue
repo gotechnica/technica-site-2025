@@ -63,6 +63,7 @@
 </template>
 
 <script setup lang="ts">
+import KeynoteSpeakers from '~/components/KeynoteSpeaker/KeynoteSpeakers.vue';
 import { computed } from 'vue';
 import { useWindowSize } from '@vueuse/core';
 
