@@ -3,7 +3,7 @@
     <div class="container">
         <Header class="title">Minors Information</Header>
         <div class="section row">
-            <div class="col-md-6 text-block">
+            <div class="col-md-7 text-block">
                 <p>
                     Participants under 18 are welcome to join us for Technica weekend! We have accommodations in place
                     for minors. This includes a minors waiver and a curfew policy for minors detailed below. We will be
@@ -11,7 +11,7 @@
                     at all times during Technica this year. Chaperones must also be registered as a hacker.
                 </p>
             </div>
-            <div class="col-md-6 img-container">
+            <div class="col-md-5 img-container">
                 <img class="minor-graphic" src="/minor/minor-graphic.png">
             </div>
         </div>
@@ -116,6 +116,11 @@ template {
 
 .text-block h3, .text-block a {
     color: $LIGHTGREEN;
+    text-align: center;
+}
+
+.text-block {
+    text-align: center;
 }
 
 .contact {
