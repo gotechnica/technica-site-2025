@@ -66,7 +66,7 @@ const cards = ref<Card[]>([
   {
   title: 'Research',
     frontContent: 'A track for those interested in business!',
-    backContent: 'Interested in research? Explore different areas where you will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend. Visit inclusion.cs.umd.edu\n/events/techresearch for more information!',
+    backContent: 'Interested in research? Explore different areas where you will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-03.svg',
     imageFlipped: 'tracks/Technica-Tracks-final-08.svg'
@@ -160,7 +160,7 @@ body {
 
 .card-body-flipped {
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 16%;
   width: 75%;
   text-align: left;

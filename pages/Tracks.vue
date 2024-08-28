@@ -85,7 +85,9 @@
         
     Note that registering for this track does not guarantee admittance; you will receive another form in your registration email that you must also complete to be eligible for the research track.
         
-    You must be a college/university student to register. Preference will be given to undergraduates." />
+    You must be a college/university student to register. Preference will be given to undergraduates. 
+    
+    For more information about the research track and our partnership with the Iribe Initiative for Inclusion and Diversity in Computing, please visit the following link: https://inclusion.cs.umd.edu/events/techresearch!" />
   
     
 
