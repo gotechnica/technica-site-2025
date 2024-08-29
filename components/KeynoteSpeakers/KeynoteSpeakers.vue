@@ -1,7 +1,7 @@
 <template>
   <Header>Keynote Speakers</Header>
     <div class="speaker-container">
-      <div class="speaker-card">
+      <div class="speaker-card first">
         <div class="image-wrapper1">
           <img class="speaker-one" src="/keynote-speakers/speaker1.png" />
         </div>
@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div class="speaker-card">
+      <div class="speaker-card second">
         <div class="image-wrapper2">
           <img class="speaker-one" src="/keynote-speakers/speaker1.png" />
         </div>
@@ -69,6 +69,10 @@ const toggleDropdown = (dropdownNumber: number) => {
   justify-content: center;
 }
 
+.first {
+  margin-right: 5rem;
+}
+
 .image-wrapper2{
   position: relative;
   width: 300px;
@@ -113,16 +117,17 @@ const toggleDropdown = (dropdownNumber: number) => {
   justify-content: center;      
   margin-top: 0.5rem;
   margin-bottom: 5rem;
-  gap: 5rem;                 
+  gap: 5rem;               
 }
 
   .speaker-card {
     display: flex;           
     flex-direction: column;    
     align-items: center; 
-    width: 100%;
+    width: 90%;
     max-width: 250px;
     box-sizing: border-box;     
+    
   }
 
   .speaker-one{
@@ -151,7 +156,5 @@ const toggleDropdown = (dropdownNumber: number) => {
     flex-direction: column; /* Stack cards vertically on smaller screens */
   }
 }
-
-
 
 </style>
