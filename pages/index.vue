@@ -39,6 +39,12 @@
       <AdditionalInfo />
     </div>
 
+    <!--Keynote Speakers Section -->
+    <div class="container">
+      <KeynoteSpeakers />
+    </div>
+
+
     <div class="container">
       <Sponsors />
     </div>
