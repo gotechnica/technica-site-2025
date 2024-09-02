@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <title>Travel</title>
   <div style="margin-top: 5rem;"></div>
   <Header>Travel</Header>
@@ -45,15 +45,15 @@
             Hackers located within 30 minutes of these university stops are encouraged to register 
             for bus accommodation to the nearest bus stop, even if they do not attend the university.
           </p>
-          <!-- <p>
+          <p>
             Bus routes are listed as follows. <b>Note that these routes are two ways.</b>
           </p>
           <ul>
             <li v-for="(route, index) in routes" :key="index">
               {{ route }}
             </li>
-          </ul> -->
-          <!-- <p>
+          </ul>
+          <p>
             All buses would arrive at the Reckord Armory at the University of Maryland 
             (4490 Rossborough Ln, College Park, MD 20742) on 
             <b>Saturday, October 26th at approximately 10 AM</b> 
@@ -212,16 +212,12 @@ const universities = [
   "Rutgers University",
   "Princeton University",
   "University of Pennsylvania",
-  "University of Delaware",
-  "George Mason University",
-  "University of Virginia",
-  "Virginia Tech"
+  "University of Delaware"
 ];
 
 const routes = [
   "New York University → Stevens Institute of Technology → New Jersey Institute of Technology → Rutgers University → Princeton University → University of Maryland, College Park",
   "University of Pennsylvania → University of Delaware → Towson University → Johns Hopkins University → University of Maryland, Baltimore County → University of Maryland, College Park",
-  "Virginia Tech → University of Virginia → George Mason University → University of Maryland, College Park"
 ];
 
 const transportation = [
@@ -327,11 +323,11 @@ a {
 li {
   color: white;
 }
-</style> -->
+</style>
 
-<template>
+<!-- <template>
   <title>Travel</title>
-  <!-- <Header>Travel</Header> -->
+  <Header>Travel</Header>
   <div class="travel-container">
     <div class="travel-header section">
       <Header class="title">Travel Information</Header>
@@ -486,4 +482,4 @@ template {
 a {
     color: $DARK-PURPLE;
 }
-</style>
+</style> -->
