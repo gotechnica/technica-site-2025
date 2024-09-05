@@ -137,10 +137,10 @@
           <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
         </div>
       </div>
-      <div class="faq-section section">
+      <!-- <div class="faq-section section">
         <Header>Frequently Asked Questions</Header>
         <FAQ faqId="main" :qaList="qaList" class="main-section" />
-      </div>
+      </div> -->
     </div>
     <div class="email-blurb section">
       <h3>Have Other Questions?</h3>
