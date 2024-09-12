@@ -18,7 +18,7 @@
         <div class="section row">
             <div class="col-md-6 text-block">
                 <h3>Minors Waiver</h3>
-                <p>Whether participating in person or virtually, a minor’s chaperone must submit Technica’s Minor Waiver
+                <p>Whether participating in person or virtually, a minor’s chaperone/guardian must submit Technica’s Minor Waiver
                     for
                     the minor. This waiver is linked <a
                         href="../minor/2024 Technica Minors Waiver.pdf"
