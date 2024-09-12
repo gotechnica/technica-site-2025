@@ -137,10 +137,10 @@
           <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
         </div>
       </div>
-      <!-- <div class="faq-section section">
+      <div class="faq-section section">
         <Header>Frequently Asked Questions</Header>
         <FAQ faqId="main" :qaList="qaList" class="main-section" />
-      </div> -->
+      </div> 
     </div>
     <div class="email-blurb section">
       <h3>Have Other Questions?</h3>
@@ -156,49 +156,34 @@
 <script setup lang="ts">
 const qaList = [
   {
-    question: 'How do I apply for travel reimbursement?',
-    answer:
-      'Eligible hackers will be sent an email detailing reimbursement requirements and steps to follow to receive reimbursement.',
-  },
-  {
     question: 'Am I eligible for travel reimbursement?',
-    answer: 'Please refer to our travel reimbursement policy above.',
+    answer: 'Hackers who live more than 30 minutes away from College Park or a Technica bus stop are eligible to apply for travel reimbursement.',
   },
   {
-    question: 'When does the travel reimbursement request window close?',
+    question: 'How will I receive my reimbursement?',
     answer:
-      'Travel reimbursement requests for bus, train, or plane accommodations will be accepted until 11:59 pm EDT on October 10th, 2023, and requests for car accommodations will be accepted until 11:59 pm EDT on October 14th, 2023.',
-  },
-  {
-    question: 'When will I receive my reimbursement?',
-    answer:
-      'You will receive your reimbursement via check or Venmo at the end of Technica on Sunday, October 22nd.',
-  },
-  {
-    question: 'How will I be reimbursed?',
-    answer:
-      'You will be reimbursed via check or Venmo at the end of Technica. You must be present at Technica in person during this time to receive your reimbursement, and we will have a table there to assist you!',
+      'Checks will be given at a table at the event in-person. Note that hackers must physically attend the event to receive reimbursement.',
   },
   {
     question: 'How will I get my bus stop and bus tickets?',
     answer:
-      'Your stop and bus information will be sent via email. If you elect to travel by bus, an application form will be sent to you via email. Buses will stop at select universities; their exact location and departure time will be confirmed closer to the event.',
-  },
-  {
-    question:
-      "I'm eligible travel assistance to Technica but I haven’t received an email yet",
-    answer:
-      'We will be sending out travel information via email on a rolling basis. If you have registered for Technica and have not received information about travel within a week of registering, please reach out to <a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a> via email with the subject "URGENT - Travel Information Not Received"',
-  },
-  {
-    question: 'How do I choose to either ride a bus or get reimbursed?',
-    answer:
-      'Emails will be sent out to everyone eligible for travel assistance. Seperate forms for bus, reimbursement, and hotel rooms will be sent.',
+      'After applying for the Technica bus, stop information and times will be sent via email. Note that university stops are listed above in the “Buses” category.',
   },
   {
     question: 'Is travel assistance guaranteed?',
     answer:
-      'No, we suggest registering for Technica as soon as possible to for the best chance to receive travel assistance and hotel rooms.',
+      'No, but we suggest applying for buses or reimbursement as soon as possible, as we evaluate on a first-come, first-serve basis.',
+  },
+  {
+    question: 'Can I apply for bus and reimbursement accommodations?',
+    answer:
+      'No, hackers cannot apply for both. If hackers live near a Technica bus stop, they are encouraged to apply for bus accommodations. If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of College Park, Maryland, they may apply for travel reimbursement.',
+  },
+  {
+    question:
+      "Will there be designated sleeping spaces?",
+    answer:
+      'Unfortunately, per Fire Marshal regulations, we cannot provide sleeping accommodations this year. Hackers are welcome to stay at nearby hotels, or to rest and take naps at the provided workspaces. ',
   },
 ];
 
