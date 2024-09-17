@@ -9,16 +9,16 @@
         <div class="schedule-legend">
           <div>
             <div class="schedule-legend-filter">
-              <b style="white-space: nowrap">Event Categories:&nbsp;</b>
+              <b style="white-space: nowrap; color: white;">Event Categories:&nbsp;</b>
               <Multiselect v-model="selectedEventCategories" mode="tags" placeholder="Filter by event category"
                 :append-new-option="false" :close-on-select="false" :searchable="false" :options="eventCategories" />
             </div>
-            <div class="schedule-favorite-filter">
+            <div class="schedule-favorite-filter" style="color: white;">
               <b>Show favorited events only:</b>
               <input class="favorite-checkbox form-check-input" type="checkbox" v-model="showFavorites" />
             </div>
           </div>
-          <span> <b>Timezone:</b> {{ timezoneDisplayName }} </span>
+          <span style="color:white;"> <b>Timezone:</b> {{ timezoneDisplayName }} </span>
         </div>
 
         <!-- FULL SCHEDULE -->
@@ -575,7 +575,7 @@ export default {
   text-align: center;
   font-weight: bold;
   font-size: 2em;
-  color: $DARK_PURPLE;
+  color: $DARKPURPLE;
 }
 
 .card {
