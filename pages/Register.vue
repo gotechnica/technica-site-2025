@@ -129,6 +129,19 @@
             <ErrorMessage :name="'parentEmail'" class="invalid-feedback" />
           </div>
         </div>
+        <div class="col-md-6 mb-4">
+            <div>
+              <label class="form-label">Are you an Alumni?*</label>
+              <div class="form-check" v-for="option in alumni" :key="option.value">
+                <Field name="isAlumni" v-model="userInput.isAlumni" :value="option.value" type="radio" class="form-check-input"
+                  :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isAlumni'] }" required />
+                <label class="form-check-label" :for="`first-technica-${option.value}`">
+                  {{ option.text }}
+                </label>
+              </div>
+              <ErrorMessage :name="'isAlumni'" class="invalid-feedback" />
+            </div>
+          </div>
       </div>
 
       <!-- EDUCATION -->
@@ -265,7 +278,7 @@
               </div>
               <ErrorMessage :name="'isFirstTechnica'" class="invalid-feedback" />
             </div>
-          </div>
+          </div>   
         </div>
 
         <div class="col-md-6 mb-4">
@@ -543,6 +556,7 @@ interface RegisterForm {
   attendance: string;
   isFirstHackathon: string;
   isFirstTechnica: string;
+  isAlumni: string;
   yearsExperience: number;
   topics: string[];
   track: string;
@@ -645,6 +659,9 @@ const validationSchema = yup.object<RegisterForm>({
   isFirstTechnica: yup
     .string()
     .required('Please specify if this is your first time at Technica'),
+  isAlumni: yup
+    .string()
+    .required('Please specify if you are an alumni'),
   yearsExperience: yup
     .string()
     .required('Please specify how many years of CS experience you have'),
@@ -825,6 +842,7 @@ interface UserInput {
   attendanceType: string;
   isFirstHackathon: string;
   isFirstTechnica: string;
+  isAlumni: string;
   yearsExperience: string;
   topicsOfInterest: string[];
   education: string;
@@ -836,6 +854,7 @@ const userInput = reactive<UserInput>({
   attendanceType: '',
   isFirstHackathon: '',
   isFirstTechnica: '',
+  isAlumni: '',
   yearsExperience: '',
   topicsOfInterest: [],
 });
@@ -853,6 +872,11 @@ const firstHackathon: Option[] = [
 ];
 
 const firstTechnica: Option[] = [
+  { text: 'No', value: 'No' },
+  { text: 'Yes', value: 'Yes' }
+];
+
+const alumni: Option[] = [
   { text: 'No', value: 'No' },
   { text: 'Yes', value: 'Yes' }
 ];
@@ -1072,7 +1096,6 @@ const registerUser = async (values: Record<string, any>) => {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
       'signup',
-      
       fd
     );
 
