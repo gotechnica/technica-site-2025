@@ -76,9 +76,10 @@
                 <div class="table-cell">3 Mbps Upload Speed</div>
             </div>
         </div>
-
-        <h3 class="spaced-heading">Basic Controls: Avatar Control and Communication</h3>
-        <p>
+        
+        <div class="controls">
+          <h3 class="spaced-heading">Basic Controls: Avatar Control and Communication</h3>
+          <p>
             In a Gather space, use the arrow <span class="bold">[↑↓←→]</span> or <span class="bold"> [WASD] </span> keys to move around. 
             You can also scroll or pinch to zoom in and out of the map.
         </p>
@@ -93,6 +94,8 @@
         <p>
             Your audio and video will automatically be connected to others within 5 tiles of you, unless you are <span class="bold">ghosted</span> or have enabled <span class="bold">do not disturb</span>.
         </p>
+        </div>
+        
 
         <div class="four-column-table-container">
             <div class="four-column-table">
@@ -139,7 +142,7 @@
         <p class="lastPar">
             <b>Please reach out to </b>
             <a href="mailto:christinaxu10@gmail.com" class="email-link">Christina Xu</a> 
-            or <a href="mailto:christinaxu10@gmail.com" class="email-link">Claire Chen</a> <b>if you encounter any issues.</b>
+            or <a href="mailto:cchen145@terpmail.umd.edu" class="email-link">Claire Chen</a> <b>if you encounter any issues.</b>
         </p>
    </div>
 </template>
@@ -153,6 +156,10 @@ export default{
 
 <style scoped lang="scss">
 
+.template {
+  background-color: black;
+}
+
 .email-link {
     color: white;
     font-weight: bold;
@@ -165,14 +172,14 @@ export default{
     color:#653553
 }
 
-  .title {
-    margin-top: 50px;
-  }
+.title {
+  margin-top: 50px;
+}
 
-  .bold-text{
-    font-weight: bold;
-    color: #653553;
-  }
+.bold-text{
+  font-weight: bold;
+  color: #653553
+}
   
   .four-column-table-container {
   width: 100%;
@@ -210,7 +217,6 @@ export default{
   border-left: none;
 }
 
-
 .table-container{
     width:100%;
     margin: 20px 0;
@@ -221,6 +227,10 @@ export default{
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+.controls {
+  background-color: #653554;
 }
 
   .table-cell {
@@ -237,11 +247,31 @@ export default{
 
 .table-cell:first-child {
   font-weight: bold;
-  background-color: #653553;
+  background-color: #653554;
   color: white;
   text-align: center;
 }
 
+.four-column-table-cell:nth-child(2) {
+  // font-weight: bold;
+  background-color: #653554;
+  color: white;
+  text-align: center;
+}
+
+.four-column-table:first- {
+  font-weight: bold;
+  background-color: #653554;
+  color: white;
+  text-align: center;
+}
+
+.four-column-table-cell:nth-child(4) {
+  // font-weight: bold;
+  background-color: #653554;
+  color: white;
+  text-align: center;
+}
 
 .table-cell + .table-cell {
     border-left: none;
@@ -260,125 +290,126 @@ export default{
     border-left: 2px #ffce64;
 }
 
-  .image-spacing{
-    margin-right: 20px;
-  }
+.image-spacing{
+  margin-right: 20px;
+}
 
-  .smaller-image{
-    width: 30px;
-    height: auto;
-    vertical-align: middle;
-    margin: 0 0.5rem;
-  }
+.smaller-image{
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
 
-  .spaced-heading{
-    margin-top: 3rem;
-  }
+.spaced-heading{
+  margin-top: 3rem;
+}
 
-  h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #ffce64;
-  }
-  
-  p {
-    text-align: center;
-    color: #FFFFFF; 
-    margin-bottom: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-  
-  a {
-    color: #ffce64;
-  }
-  
-  .row {
-    margin: 2rem 0;
-  }
-  .col {
-    margin: 1rem 0;
-  }
-  
-  .faq {
-    margin: auto;
-  }
-  
-  .button {
-    width: 50%;
-  }
-  
-  .contact {
-    margin: 2rem 0;
-  }
-  
-  .divider{
-    border: none;
-    height: 4px; 
-    background-color: #FFFFFF; 
-    margin-top: 2rem; 
-    width: 100%;
-  }
+h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffce64;
+}
 
-  .header {
-    text-align: center;
-    margin-top: 50px;
-    position: relative;
-  }
-  
-  .header img{
-    width: 100%;
-  }
-  
-  .header h1{
-    position: absolute;
-    top: 10%;
-    bottom:65%;
-    left: 50%;
-    transform: translateX(-50%);
-    color:#653553;
-    margin: 0;
-    padding: 0.5rem;
-  }
+p {
+  text-align: center;
+  color: #FFFFFF; 
+  margin-bottom: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 
-  .highlight{
-    font-weight:bold;
-    color: #ffce64;
-    text-decoration:underline;
-  }
-  
-  .underline{
-    color: #ffce64;
-    text-decoration: underline;
-  }
+a {
+  color: #ffce64;
+}
 
-  .bold{
-    color:#ffce64;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, .15);
-    border-radius: 5px;
-  }
+.row {
+  margin: 2rem 0;
+}
+.col {
+  margin: 1rem 0;
+}
 
-  ol {
-    list-style-position: inside; 
-    text-align: left; 
-    color: #FFFFFF;
-    padding: 0;
-    margin: 0;
-  }
+.faq {
+  margin: auto;
+}
 
-  ol li {
-    margin-bottom: 0.5rem; 
-  }
-  
-  .rules-container{
-    display: flex;
-    justify-content: center;
-  }
+.button {
+  width: 50%;
+}
+
+.contact {
+  margin: 2rem 0;
+}
+
+.divider{
+  border: none;
+  height: 4px; 
+  background-color: #FFFFFF; 
+  margin-top: 2rem; 
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.header img{
+  width: 100%;
+}
+
+.header h1{
+  position: absolute;
+  top: 10%;
+  bottom:65%;
+  left: 50%;
+  transform: translateX(-50%);
+  color:#653553;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.highlight{
+  font-weight:bold;
+  color: #ffce64;
+  text-decoration:underline;
+}
+
+.underline{
+  color: #ffce64;
+  text-decoration: underline;
+}
+
+.bold{
+  color:#ffce64;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, .15);
+  border-radius: 5px;
+}
+
+ol {
+  list-style-position: inside; 
+  text-align: left; 
+  color: #FFFFFF;
+  padding: 0;
+  margin: 0;
+}
+
+ol li {
+  margin-bottom: 0.5rem; 
+}
+
+.rules-container{
+  display: flex;
+  justify-content: center;
+}
 
 
-  .lastPar {
-    margin-bottom: 0rem;
-  }
-  </style>
+.lastPar {
+  margin-bottom: 0rem;
+}
+
+</style>
   
