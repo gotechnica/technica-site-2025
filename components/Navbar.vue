@@ -52,7 +52,7 @@
 
     <!-- MLH LOGO OVERLAY -->
     <a class="mlh-logo" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
+      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-Vabadge-2025-white.svg" alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
     </a>
   </div>
 </template>
@@ -63,12 +63,19 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        { dropdown: false, name: 'Register', path: './Register'},
-        { dropdown: false, name: 'Annual Report', path: './Report'},
+        { dropdown: false, name: 'Schedule', path: './Schedule'},
+        { dropdown: false, name: 'Gather', path: './Gather'},
+        { dropdown: false, name: 'Maps', path: './Maps'},
+        { dropdown: false, name: 'Expo', path: './Expo'}, 
+        { dropdown: false, name: 'Devpost'},
         { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
+
+        /* { dropdown: false, name: 'Register', path: './Register'},
+        { dropdown: false, name: 'Annual Report', path: './Report'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         { dropdown: false, name: 'Minors', path: '/minor' }, 
-        { dropdown: false, name: 'Sponsors', path: '/Sponsor' },
+        { dropdown: false, name: 'Sponsors', path: '/Sponsor' }, */
+        
         {
           dropdown: true, showDropdown: false, name: 'Programs',
           items: [
