@@ -52,7 +52,7 @@
 
     <!-- MLH LOGO OVERLAY -->
     <a class="mlh-logo" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
+      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-Vabadge-2025-white.svg" alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
     </a>
   </div>
 </template>
