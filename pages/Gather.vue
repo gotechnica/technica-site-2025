@@ -114,36 +114,38 @@
             </div>
         </div>
        
-         <p>
-            A <span class="bold">Bubble</span> can be enabled by right-clicking on the desired player and selecting <span class="bold">"Start Bubble"</span>. 
-            Users in bubbles are only connected to others in the same bubble, but anyone can join the bubble anytime!
-         </p>
-         <p>
-            Gather also has a Chat feature <img src="/gather/chat_feature.png" class="smaller-image">, found in the bottom right-hand menu. 
-            You have the option to message <span class ="bold">everyone</span> in the room, people <span class ="bold">nearby</span> (within 5 tiles) of you, or <span class ="bold">privately</span> message anyone in the space.
-         </p>
-         <hr class="divider">
+        <div class="bottom-info">
+          <p>
+              A <span class="bold">Bubble</span> can be enabled by right-clicking on the desired player and selecting <span class="bold">"Start Bubble"</span>. 
+              Users in bubbles are only connected to others in the same bubble, but anyone can join the bubble anytime!
+          </p>
+          <p>
+              Gather also has a Chat feature <img src="/gather/chat_feature.png" class="smaller-image">, found in the bottom right-hand menu. 
+              You have the option to message <span class ="bold">everyone</span> in the room, people <span class ="bold">nearby</span> (within 5 tiles) of you, or <span class ="bold">privately</span> message anyone in the space.
+          </p>
+          <hr class="divider">
 
-         <p> 
-            Note that none of the above will apply if you are in a <span class ="bold">private area</span>. 
-            In a private area, you can only communicate with others in the same private area.
-         </p>
+          <p> 
+              Note that none of the above will apply if you are in a <span class ="bold">private area</span>. 
+              In a private area, you can only communicate with others in the same private area.
+          </p>
 
-         <p>
-            Gather’s <span class ="bold">screen share</span> feature <img src="/gather/screen_share.png" class="smaller-image"> is useful for demoing projects during the Expo fair.
-        </p> 
+          <p>
+              Gather’s <span class ="bold">screen share</span> feature <img src="/gather/screen_share.png" class="smaller-image"> is useful for demoing projects during the Expo fair.
+          </p> 
 
-        <p>
-            Finally, you can <span class="bold">mute</span> others by hovering over their video feed and turning off their audio/video. 
-            Note that muting only applies on your end. Or, you can <span class ="bold">block</span> them by finding them in the player list <img src="/gather/player-list.png" class="smaller-image">, 
-            right-clicking, and clicking the triple dots <img src="/gather/three_dots.png" class="smaller-image">.
-        </p>
+          <p>
+              Finally, you can <span class="bold">mute</span> others by hovering over their video feed and turning off their audio/video. 
+              Note that muting only applies on your end. Or, you can <span class ="bold">block</span> them by finding them in the player list <img src="/gather/player-list.png" class="smaller-image">, 
+              right-clicking, and clicking the triple dots <img src="/gather/three_dots.png" class="smaller-image">.
+          </p>
 
-        <p class="lastPar">
-            <b>Please reach out to </b>
-            <a href="mailto:christinaxu10@gmail.com" class="email-link">Christina Xu</a> 
-            or <a href="mailto:cchen145@terpmail.umd.edu" class="email-link">Claire Chen</a> <b>if you encounter any issues.</b>
-        </p>
+          <p class="lastPar">
+              <b>Please reach out to </b>
+              <a href="mailto:christinaxu10@gmail.com" class="email-link">Christina Xu</a> 
+              or <a href="mailto:cchen145@terpmail.umd.edu" class="email-link">Claire Chen</a> <b>if you encounter any issues.</b>
+          </p>
+        </div>
    </div>
 </template>
 
@@ -161,7 +163,7 @@ export default{
 }
 
 .email-link {
-    color: white;
+    color: #D26B89;
     font-weight: bold;
     text-decoration: underline;
     transition: color 0.3s ease;
@@ -181,7 +183,7 @@ export default{
   color: #653553
 }
   
-  .four-column-table-container {
+.four-column-table-container {
   width: 100%;
   margin: 20px 0;
 }
@@ -231,9 +233,10 @@ export default{
 
 .controls {
   background-color: #653554;
+  padding: 2rem;
 }
 
-  .table-cell {
+.table-cell {
   flex: 1;
   box-sizing: border-box;
   padding: 8px;
@@ -252,22 +255,14 @@ export default{
   text-align: center;
 }
 
-.four-column-table-cell:nth-child(2) {
-  // font-weight: bold;
-  background-color: #653554;
-  color: white;
+.four-column-table-cell {
+  background-color: transparent;
+  color: #653554;
   text-align: center;
 }
 
-.four-column-table:first- {
+.four-column-table-cell:first-child, .four-column-table-cell:nth-child(3) {
   font-weight: bold;
-  background-color: #653554;
-  color: white;
-  text-align: center;
-}
-
-.four-column-table-cell:nth-child(4) {
-  // font-weight: bold;
   background-color: #653554;
   color: white;
   text-align: center;
@@ -385,7 +380,7 @@ a {
 .bold{
   color:#ffce64;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 
@@ -409,6 +404,11 @@ ol li {
 
 .lastPar {
   margin-bottom: 0rem;
+}
+
+.bottom-info p{
+  color: #653553;
+  margin-top: 2rem;
 }
 
 </style>
