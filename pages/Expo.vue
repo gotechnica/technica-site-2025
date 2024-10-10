@@ -69,11 +69,7 @@ export default {
     };
   },
   async mounted() {
-    console.log("HERE");
-    console.log(data); 
     this.schedule = data;
-    console.log("SCHEDULE");
-    console.log(this.schedule);
   },
   beforeMount() {
     window.addEventListener('scroll', this.showButton);

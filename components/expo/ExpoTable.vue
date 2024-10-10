@@ -50,7 +50,7 @@
               <td>{{ formatAMPM(item.time) }}</td>
               <td>{{ item.prize_category }}</td>
               <td>{{ item.sponsor_name }}</td>
-              <td v-if="item.location.startsWith('http')">
+              <td v-if="item.location.toString().startsWith('http')">
                 <a :href="item.location" target="_blank">{{ item.location }}</a>
               </td>
               <td v-else>
@@ -96,10 +96,10 @@
           // Filter by the selected toggle
           const virtualFilter =
             this.selectedToggle === 'virtual' &&
-            item.location.startsWith('https');
+            item.location.toString().startsWith('https');
           const inPersonFilter =
             this.selectedToggle === 'in-person' &&
-            !item.location.startsWith('https');
+            !item.location.toString().startsWith('https');
   
           return nameFilter && (virtualFilter || inPersonFilter || this.selectedToggle === 'all');
         });
@@ -169,16 +169,16 @@
     }
   
     td {
-      background-color: transparent;
+      background-color: $LIGHTGREEN;
       border-top: none !important;
-      border-bottom: 1px solid $DARKYELLOW;
-      color: $LIGHTYELLOW;
+      border-bottom: 1px solid $DARKGREEN;
+      color: black !important;
     }
   
     th {
       border-top: none !important;
-      border-bottom: solid 1px $DARKYELLOW;
-      background-color: $LIGHTYELLOW !important;
+      border-bottom: solid 1px $DARKGREEN;
+      background-color: $MIDGREEN !important;
       cursor: pointer;
       font-weight: 600;
       user-select: none;
@@ -191,6 +191,10 @@
     tr:hover {
       background-color: #f5f5f5;
     }
+  }
+
+  a {
+    color: $DARKYELLOW;
   }
   
   .search-container {
