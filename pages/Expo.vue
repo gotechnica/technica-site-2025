@@ -15,7 +15,9 @@
             </p>
             <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
           </div>
-          <h4 class="title" id="questions">Frequently Asked Questions</h4>
+          <div style="margin-top: 5rem;"></div>
+          <Header>Frequently Asked Questions</Header>
+          <div style="margin-top: 5rem;"></div>
           <FAQ class="faq-section" faqId="faq" :qaList="qaList" />
         </div>
       </div>
@@ -28,7 +30,7 @@
   
   <script>
   import ExpoTable from '../components/expo/ExpoTable.vue';
-  import data from '../static/test.json';
+  import data from '../static/expo_virtual_schedule.json';
   export default {
     name: 'ExpoPage',
     components: {
@@ -102,16 +104,26 @@
         if (schedule) {
           //waiting for schedule query
           Object.values(schedule).forEach((k) => {
+            console.log(k);
             const item = {};
-            item.team_name = k.team_name;
-            let start_time = new Date(k.start_time); //putting actual date object in
+            item.team_name = k[0][0];
+            let start_time = new Date(k[1]); //putting actual date object in
             start_time.setHours(start_time.getHours());
-            let end_time = new Date(k.end_time);
+            let end_time = new Date(k[2]);
             end_time.setHours(end_time.getHours());
-            item.time = !k.start_time ? ['', ''] : [start_time, end_time]; //both start and end time
-            item.prize_category = k.prize_category;
-            item.sponsor_name = k.sponsor_name;
-            item.location = k.location;
+            item.time = [start_time, end_time];
+            item.prize_category = k[3];
+            item.sponsor_name = k[4];
+            if(k[5] == null) {
+                if(k[4] === "Technica") {
+                    item.location = "https Technica";
+                } else {
+                    item.location = "https Gather";
+                }
+                
+            } else {
+                item.location = k[5];
+            }
             items.push(item); //boom
           });
         }

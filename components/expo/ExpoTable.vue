@@ -50,10 +50,7 @@
               <td>{{ formatAMPM(item.time) }}</td>
               <td>{{ item.prize_category }}</td>
               <td>{{ item.sponsor_name }}</td>
-              <td v-if="item.location.toString().startsWith('http')">
-                <a :href="item.location" target="_blank">{{ item.location }}</a>
-              </td>
-              <td v-else>
+              <td>
                 {{ item.location }}
               </td>
             </tr>
