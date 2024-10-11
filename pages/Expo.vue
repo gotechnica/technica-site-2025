@@ -116,9 +116,9 @@ export default {
           item.sponsor_name = k[4];
           if(k[5] == null) {
               if(k[4] === "Technica") {
-                  item.location = "https Technica";
+                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
               } else {
-                  item.location = "https Gather";
+                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=LYU-6ovOQfOfpx0ZqyK-";
               }
               
           } else {
