@@ -59,13 +59,49 @@ const partnerSponsors: SponsorInfo[] = []
 
 const platinumSponsors: SponsorInfo[] = []
 
-const goldSponsors: SponsorInfo[] = []
+const goldSponsors: SponsorInfo[] = [
+  {
+   name: 't-rowe-price',
+   link: 'https://www.troweprice.com/corporate/us/en/home.html' 
+  }
+]
 
 const silverSponsors: SponsorInfo[] = []
 
-const bronzeSponsors: SponsorInfo[] = []
+const bronzeSponsors: SponsorInfo[] = [
+  {
+    name: 'visionist',
+    link: 'https://www.visionistinc.com'
+  },
+  {
+    name: 'travelers',
+    link: 'https://www.travelers.com'
+  },
+  {
+    name: 'i4c',
+    link: 'https://inclusion.cs.umd.edu/'
+  }
+]
 
-const starterSponsors: SponsorInfo[] = []
+const starterSponsors: SponsorInfo[] = [
+  {
+    name: 'softrams',
+    link: 'https://www.softrams.com/'
+  },
+
+  { 
+    name: 'trails',
+    link: 'https://www.trails.umd.edu/'
+  },
+  { 
+    name: 'umdbsos',
+    link: 'https://bsos.umd.edu/'
+  },
+  { 
+    name: 'tenable',
+    link: 'https://www.tenable.com/'
+  },
+]
 
 const specialThanks: SponsorInfo[] = [{name: "standout", link: "https://www.standoutstickers.com/"}]
 
