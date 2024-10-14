@@ -923,9 +923,9 @@ const recommendedTracks = computed(() => {
       tracks.push({ text: 'Hardware', value: 'hardware' });
     }
 
-    if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
-      tracks.push({ text: 'Research', value: 'research' });
-    }
+    // if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
+    //   tracks.push({ text: 'Research', value: 'research' });
+    // }
   }
 
   return tracks;
