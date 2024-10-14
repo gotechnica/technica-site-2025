@@ -1,43 +1,54 @@
 <template>
   <!-- Modify page title in "useHead({ title: })" -->
   <!-- <title>Technica Home</title> -->
+
+  
+
   <div class="main-body">
     <!-- Hero's Section -->
-    <HeroLanding />
+    <!-- <HeroLanding /> -->
+
+    <div class="container">
+      <Timer />
+    </div>
+
+    <div class="container">
+      <Announcements />
+    </div>
 
     <!-- About Technica Section -->
-    <div class="container">
+    <!-- <div class="container">
       <About />
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <Achievements />
-    </div>
+    </div> -->
 
     <!-- What to do at Technica Section -->
-    <div class="whatToDo">
+    <!-- <div class="whatToDo">
       <WhatToDo />
-    </div>
+    </div> -->
 
     <!-- Hybrid Environment Section -->
-    <div class="container hybrid">
+    <!-- <div class="container hybrid">
       <HybridEnv />
-    </div>
+    </div> -->
 
     <!-- Hear From Past Hackers -->
-    <div class="container">
+    <!-- <div class="container">
       <TestimoniesCarousel class="main-section" />
-    </div>
+    </div> -->
 
     <!-- Tracks Section -->
-    <div class="container">
+    <!-- <div class="container">
       <Tracks />
-    </div>
+    </div> -->
 
     <!-- Additional Info Section -->
-    <div class="container">
+    <!-- <div class="container">
       <AdditionalInfo />
-    </div>
+    </div> -->
 
     <!--Keynote Speakers Section -->
     <div class="container">
