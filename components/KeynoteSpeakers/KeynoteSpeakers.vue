@@ -3,7 +3,6 @@
     <div class="speaker-container">
       <div class="speaker-card first">
         <div class="image-wrapper1">
-          <img class="speaker-one" src="/keynote-speakers/speaker1.png" />
         </div>
         <h1 class="speaker-name">Eriol Fox</h1>
         <p class="speaker-info">Senior Human-Rights centered Designer at Superbloom</p>
@@ -17,14 +16,13 @@
         
         <p v-if="isOpen1" class="description">
           Eriol has been working as a designer for 10+ years working in for-profits and then NGO’s and open-source software organisations, working on complex problems like sustainable food systems, peace-building and crisis response technology. Eriol now works at Superbloom design, research, open-source and technology projects.
-They are also part of the core teams at <a href="http://opensourcedesign.net/">Open Source Design</a> and <a href="https://hrcd.pubpub.org/">Human Rights Centred Design working group</a> and <a href="https://sustainoss.org/working-groups/design-and-ux/">Sustain UX & Design working group</a> and help <a href="https://sosdesign.sustainoss.org/">hosts podcast</a> about open source and design
+They are also part of the core teams at <a href="http://opensourcedesign.net/">Open Source Design</a>, <a href="https://hrcd.pubpub.org/">Human Rights Centred Design working group</a>, <a href="https://sustainoss.org/working-groups/design-and-ux/">Sustain UX & Design working group</a>, and help <a href="https://sosdesign.sustainoss.org/">hosts podcast</a> about open source and design.
 Eriol is a non-binary, queer person who uses they/them pronouns.
         </p>
       </div>
 
       <div class="speaker-card second">
         <div class="image-wrapper2">
-          <img class="speaker-one" src="/keynote-speakers/speaker1.png" />
         </div>
         <h1 class="speaker-name">Ayodele Odubela</h1>
         <p class="speaker-info">Founder, AI ALT Lab</p>
