@@ -5,6 +5,9 @@
         <img src="/headings/header2024.png">
         <h1>Gather Guide 2024</h1>
       </div>
+        <p>
+          You can access Gather <a href = https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024>here</a>!
+        </p>
 
         <h3>What is Gather?</h3>
         <p>
