@@ -67,7 +67,7 @@ export default {
         { dropdown: false, name: 'Gather', path: './Gather'},
         { dropdown: false, name: 'Maps', path: './Maps'},
         { dropdown: false, name: 'Expo', path: './Expo'}, 
-        { dropdown: false, name: 'Devpost'},
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com'},
         { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
 
         /* { dropdown: false, name: 'Register', path: './Register'},
