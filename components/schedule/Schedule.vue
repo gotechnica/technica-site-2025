@@ -136,8 +136,8 @@ const timeWindowColumns = ref<any>({});
 const scheduleColumns = ref<any>({});
 const dataLoaded = ref(false);
 const selectedEvent = ref<Event>();
-const startDate = ref(new Date('2023-10-21T09:00:00-04:00'));
-const endDate = ref(new Date('2023-10-22T16:00:00-04:00'));
+const startDate = ref(new Date('2024-10-26T09:00:00-04:00'));
+const endDate = ref(new Date('2024-10-27T16:00:00-04:00'));
 const showEventModal = ref(false);
 const showFavorites = ref(false);
 const isFavorite = ref(false);
@@ -776,7 +776,7 @@ export default {
   max-width: 80%;
   min-width: 80%;
   max-height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -837,57 +837,63 @@ $event-length: 30;
 
 /* Coloring by Category */
 .main-event-text {
-  color: $COLOR_MAIN_EVENT;
+  color: $COLOR_MAIN_EVENT_BORDER;
 }
 
 .workshop-text {
-  color: $COLOR_WORKSHOP;
+  color: $COLOR_WORKSHOP_BORDER;
 }
 
 .mini-event-text {
-  color: $COLOR_MINI_EVENT;
+  color: $COLOR_MINI_EVENT_BORDER;
 }
 
 .chat-text {
-  color: $COLOR_TECHNI_CHAT;
+  color: $COLOR_TECHNI_CHAT_BORDER;
 }
 
 .food-text {
-  color: $COLOR_FOOD;
+  color: $COLOR_FOOD_BORDER;
 }
 
 .virtual-text {
-  color: $COLOR_VIRTUAL;
+  color: $COLOR_VIRTUAL_BORDER;
 }
 
 .main-event {
   background-color: $COLOR_MAIN_EVENT;
   border-color: $COLOR_MAIN_EVENT_BORDER;
+  color: $COLOR_MAIN_EVENT_BORDER;
 }
 
 .workshop-event {
   background-color: $COLOR_WORKSHOP;
   border-color: $COLOR_WORKSHOP_BORDER;
+  color: $COLOR_WORKSHOP_BORDER;
 }
 
 .mini-event {
   background-color: $COLOR_MINI_EVENT;
   border-color: $COLOR_MINI_EVENT_BORDER;
+  color: $COLOR_MINI_EVENT_BORDER;
 }
 
 .chat-event {
   background-color: $COLOR_TECHNI_CHAT;
   border-color: $COLOR_TECHNI_CHAT_BORDER;
+  color: $COLOR_TECHNI_CHAT_BORDER;
 }
 
 .food-event {
   background-color: $COLOR_FOOD;
   border-color: $COLOR_FOOD_BORDER;
+  color: $COLOR_FOOD_BORDER;
 }
 
 .virtual-event {
   background-color: $COLOR_VIRTUAL;
   border-color: $COLOR_VIRTUAL_BORDER;
+  color: $COLOR_VIRTUAL_BORDER;
 }
 
 @media only screen and (min-width: 1101px) {

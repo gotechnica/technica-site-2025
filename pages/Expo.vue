@@ -15,7 +15,9 @@
           </p>
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
-        <h4 class="title" id="questions">Frequently Asked Questions</h4>
+        <div style="margin-top: 5rem;"></div>
+        <Header>Frequently Asked Questions</Header>
+        <div style="margin-top: 5rem;"></div>
         <FAQ class="faq-section" faqId="faq" :qaList="qaList" />
       </div>
     </div>
@@ -28,6 +30,7 @@
 
 <script>
 import ExpoTable from '../components/expo/ExpoTable.vue';
+import data from '../static/expo_virtual_schedule.json';
 export default {
   name: 'ExpoPage',
   components: {
@@ -42,12 +45,12 @@ export default {
         {
           question: 'Rules',
           answer:
-            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2023's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and unlimited Sponsor prize categories. However, you will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
+            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2024's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and unlimited Sponsor prize categories. However, you will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
         },
         {
           question: 'Submission',
           answer:
-            'You will be required to submit information about you and your hack to Devpost by 11:30am EDT on Sunday, 10/22. After the submission deadline, no hacks will be accepted, with absolutely no exceptions. Ensure that you have ample time to submit your project before the deadline.',
+            'You will be required to submit information about you and your hack to Devpost by 11:30am EDT on Sunday, 10/27. After the submission deadline, no hacks will be accepted, with absolutely no exceptions. Ensure that you have ample time to submit your project before the deadline.',
         },
         {
           question: 'Where will I demo?',
@@ -57,7 +60,7 @@ export default {
         {
           question: 'If you are attending Expo virtually',
           answer:
-            'Find your team name by searching in the table above. If you are in-person at The Hotel &copy; and need to attend virtually, we have rooms reserved for you! <br>If you are a <b>Hacker</b>, you can go to:<ul><li>Wayne K. Curry</li><li>Jim Henson</li><li>Francis Scott Key</li></ul><br>If you are a <b>Sponsor</b>, you can go to rooms:<ul><li>Salon I</li><li>Salon II</li><li>Salon III</li></ul>',
+            'Find your team name by searching in the table above. If you are in-person at The Armory &copy; and need to attend virtually, we have rooms reserved for you! <br>If you are a <b>Hacker</b>, you can go to:<ul><li>Wayne K. Curry</li><li>Jim Henson</li><li>Francis Scott Key</li></ul><br>If you are a <b>Sponsor</b>, you can go to rooms:<ul><li>Salon I</li><li>Salon II</li><li>Salon III</li></ul>',
         },
         {
           question: 'Judging Process',
@@ -68,13 +71,7 @@ export default {
     };
   },
   async mounted() {
-    try {
-      //https://content.nuxt.com/usage/typescript#usage
-      let data = await queryContent('/expo_schedule').findOne();
-      this.schedule = data['body']; //body of the query contains the parsed csv
-    } catch (error) {
-      console.log(error);
-    }
+    this.schedule = data;
   },
   beforeMount() {
     window.addEventListener('scroll', this.showButton);
@@ -107,16 +104,26 @@ export default {
       if (schedule) {
         //waiting for schedule query
         Object.values(schedule).forEach((k) => {
+          console.log(k);
           const item = {};
-          item.team_name = k.team_name;
-          let start_time = new Date(k.start_time); //putting actual date object in
+          item.team_name = k[0][0];
+          let start_time = new Date(k[1]); //putting actual date object in
           start_time.setHours(start_time.getHours());
-          let end_time = new Date(k.end_time);
+          let end_time = new Date(k[2]);
           end_time.setHours(end_time.getHours());
-          item.time = !k.start_time ? ['', ''] : [start_time, end_time]; //both start and end time
-          item.prize_category = k.prize_category;
-          item.sponsor_name = k.sponsor_name;
-          item.location = k.location;
+          item.time = [start_time, end_time];
+          item.prize_category = k[3];
+          item.sponsor_name = k[4];
+          if(k[5] == null) {
+              if(k[4] === "Technica") {
+                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
+              } else {
+                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=LYU-6ovOQfOfpx0ZqyK-";
+              }
+              
+          } else {
+              item.location = k[5];
+          }
           items.push(item); //boom
         });
       }

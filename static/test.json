@@ -1,0 +1,2026 @@
+[
+  {
+    "team_name": "Test0",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test0",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test0",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test0",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test0",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test1",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test2",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test2",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test2",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test2",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=jya3rsCWQ2iRdOHUijIo"
+  },
+  {
+    "team_name": "Test2",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test2",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test3",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test3",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IiY7hI5HQ0e9s7K3yMt8"
+  },
+  {
+    "team_name": "Test4",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 1.1
+  },
+  {
+    "team_name": "Test4",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 1.1
+  },
+  {
+    "team_name": "Test4",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": 1.1
+  },
+  {
+    "team_name": "Test4",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 1.1
+  },
+  {
+    "team_name": "Test4",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": 1.1
+  },
+  {
+    "team_name": "Test5",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": 1.2
+  },
+  {
+    "team_name": "Test5",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 1.2
+  },
+  {
+    "team_name": "Test5",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": 1.2
+  },
+  {
+    "team_name": "Test6",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test6",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test6",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test6",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test7",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test8",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": 2.1
+  },
+  {
+    "team_name": "Test9",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test9",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test9",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test10",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test11",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test11",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test11",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test12",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test12",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test12",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test13",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test14",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test14",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=jya3rsCWQ2iRdOHUijIo"
+  },
+  {
+    "team_name": "Test14",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test14",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test14",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test15",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test16",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test16",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test17",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test17",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test17",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test17",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test18",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 2.2
+  },
+  {
+    "team_name": "Test18",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": 2.2
+  },
+  {
+    "team_name": "Test18",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 2.2
+  },
+  {
+    "team_name": "Test18",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 2.2
+  },
+  {
+    "team_name": "Test18",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": 2.2
+  },
+  {
+    "team_name": "Test19",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test20",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test20",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test20",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IiY7hI5HQ0e9s7K3yMt8"
+  },
+  {
+    "team_name": "Test20",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test20",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test21",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test21",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test21",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test22",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": 2.3
+  },
+  {
+    "team_name": "Test22",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": 2.3
+  },
+  {
+    "team_name": "Test22",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": 2.3
+  },
+  {
+    "team_name": "Test22",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 2.3
+  },
+  {
+    "team_name": "Test22",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 2.3
+  },
+  {
+    "team_name": "Test22",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 2.3
+  },
+  {
+    "team_name": "Test23",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test23",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test24",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test25",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test25",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test25",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test25",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test25",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test26",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 2.4
+  },
+  {
+    "team_name": "Test26",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 2.4
+  },
+  {
+    "team_name": "Test26",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 2.4
+  },
+  {
+    "team_name": "Test26",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": 2.4
+  },
+  {
+    "team_name": "Test27",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 2.5
+  },
+  {
+    "team_name": "Test27",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": 2.5
+  },
+  {
+    "team_name": "Test27",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": 2.5
+  },
+  {
+    "team_name": "Test28",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test28",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test28",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test28",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=jya3rsCWQ2iRdOHUijIo"
+  },
+  {
+    "team_name": "Test28",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test29",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test30",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test30",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test30",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test30",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test31",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test32",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test32",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IiY7hI5HQ0e9s7K3yMt8"
+  },
+  {
+    "team_name": "Test32",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test32",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test33",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test34",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": 2.6
+  },
+  {
+    "team_name": "Test34",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 2.6
+  },
+  {
+    "team_name": "Test35",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test36",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test36",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test36",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test37",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test37",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test37",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test38",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test38",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test38",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test38",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test38",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test39",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 2.7
+  },
+  {
+    "team_name": "Test39",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": 2.7
+  },
+  {
+    "team_name": "Test39",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": 2.7
+  },
+  {
+    "team_name": "Test39",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 2.7
+  },
+  {
+    "team_name": "Test40",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test40",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test41",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test41",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test41",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=jya3rsCWQ2iRdOHUijIo"
+  },
+  {
+    "team_name": "Test41",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test42",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 3.1
+  },
+  {
+    "team_name": "Test42",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 3.1
+  },
+  {
+    "team_name": "Test42",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": 3.1
+  },
+  {
+    "team_name": "Test42",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 3.1
+  },
+  {
+    "team_name": "Test43",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": 3.2
+  },
+  {
+    "team_name": "Test43",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 3.2
+  },
+  {
+    "team_name": "Test44",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test44",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test45",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": 3.3
+  },
+  {
+    "team_name": "Test45",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 3.3
+  },
+  {
+    "team_name": "Test45",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 3.3
+  },
+  {
+    "team_name": "Test45",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": 3.3
+  },
+  {
+    "team_name": "Test46",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test46",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test46",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test47",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": 3.4
+  },
+  {
+    "team_name": "Test47",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": 3.4
+  },
+  {
+    "team_name": "Test47",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": 3.4
+  },
+  {
+    "team_name": "Test47",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": 3.4
+  },
+  {
+    "team_name": "Test47",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": 3.4
+  },
+  {
+    "team_name": "Test48",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test48",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test48",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test48",
+    "start_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test49",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 3.5
+  },
+  {
+    "team_name": "Test49",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": 3.5
+  },
+  {
+    "team_name": "Test49",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": 3.5
+  },
+  {
+    "team_name": "Test50",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 3.6
+  },
+  {
+    "team_name": "Test50",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": 3.6
+  },
+  {
+    "team_name": "Test50",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 3.6
+  },
+  {
+    "team_name": "Test50",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 3.6
+  },
+  {
+    "team_name": "Test51",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 3.7
+  },
+  {
+    "team_name": "Test51",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 3.7
+  },
+  {
+    "team_name": "Test51",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": 3.7
+  },
+  {
+    "team_name": "Test52",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=9_-SdnUWRBmVbAJZ03IP"
+  },
+  {
+    "team_name": "Test52",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test52",
+    "start_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test52",
+    "start_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:00:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test52",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test52",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test53",
+    "start_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:00:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test53",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test53",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test53",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=r7yzD6LMSfKznT00-EUH"
+  },
+  {
+    "team_name": "Test53",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test54",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test54",
+    "start_time": "Sun Oct 22 2023 13:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test54",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test54",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test55",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": 3.8
+  },
+  {
+    "team_name": "Test55",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 3.8
+  },
+  {
+    "team_name": "Test55",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": 3.8
+  },
+  {
+    "team_name": "Test56",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": 4.1
+  },
+  {
+    "team_name": "Test56",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 4.1
+  },
+  {
+    "team_name": "Test56",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": 4.1
+  },
+  {
+    "team_name": "Test56",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 4.1
+  },
+  {
+    "team_name": "Test56",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": 4.1
+  },
+  {
+    "team_name": "Test57",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IiY7hI5HQ0e9s7K3yMt8"
+  },
+  {
+    "team_name": "Test57",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test57",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test57",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test58",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": 4.2
+  },
+  {
+    "team_name": "Test58",
+    "start_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": 4.2
+  },
+  {
+    "team_name": "Test58",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 4.2
+  },
+  {
+    "team_name": "Test58",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": 4.2
+  },
+  {
+    "team_name": "Test59",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test59",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test59",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=jya3rsCWQ2iRdOHUijIo"
+  },
+  {
+    "team_name": "Test59",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IiY7hI5HQ0e9s7K3yMt8"
+  },
+  {
+    "team_name": "Test60",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 4.3
+  },
+  {
+    "team_name": "Test60",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": 4.3
+  },
+  {
+    "team_name": "Test60",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 4.3
+  },
+  {
+    "team_name": "Test60",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 4.3
+  },
+  {
+    "team_name": "Test60",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 4.3
+  },
+  {
+    "team_name": "Test60",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": 4.3
+  },
+  {
+    "team_name": "Test61",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test61",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Research Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IiY7hI5HQ0e9s7K3yMt8"
+  },
+  {
+    "team_name": "Test62",
+    "start_time": "Sun Oct 22 2023 12:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": 4.4
+  },
+  {
+    "team_name": "Test63",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test64",
+    "start_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test64",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test64",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=jya3rsCWQ2iRdOHUijIo"
+  },
+  {
+    "team_name": "Test65",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test65",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test65",
+    "start_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:00:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test65",
+    "start_time": "Sun Oct 22 2023 13:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test65",
+    "start_time": "Sun Oct 22 2023 13:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test66",
+    "start_time": "Sun Oct 22 2023 13:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test66",
+    "start_time": "Sun Oct 22 2023 13:00:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:05:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test66",
+    "start_time": "Sun Oct 22 2023 13:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test66",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test67",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test68",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": 4.5
+  },
+  {
+    "team_name": "Test68",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": 4.5
+  },
+  {
+    "team_name": "Test68",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": 4.5
+  },
+  {
+    "team_name": "Test68",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 4.5
+  },
+  {
+    "team_name": "Test68",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 4.5
+  },
+  {
+    "team_name": "Test69",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=yN2qcnSpR7-_3FnrfGEY"
+  },
+  {
+    "team_name": "Test69",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=F3O8WYesQ3aMLgCFevNq"
+  },
+  {
+    "team_name": "Test69",
+    "start_time": "Sun Oct 22 2023 13:05:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:10:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test70",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test71",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IBOcPturRx6K1VSL8akC"
+  },
+  {
+    "team_name": "Test71",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=j8ND0kojQtWSO-ReVluV"
+  },
+  {
+    "team_name": "Test71",
+    "start_time": "Sun Oct 22 2023 13:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Startup Track Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=GtOloWdhST-5pf0G3n1I"
+  },
+  {
+    "team_name": "Test71",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=J9G88MheRua2bdRNEF7t"
+  },
+  {
+    "team_name": "Test72",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 4.6
+  },
+  {
+    "team_name": "Test72",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": 4.6
+  },
+  {
+    "team_name": "Test73",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test73",
+    "start_time": "Sun Oct 22 2023 13:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test74",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": 4.7
+  },
+  {
+    "team_name": "Test74",
+    "start_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": 4.7
+  },
+  {
+    "team_name": "Test74",
+    "start_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 4.7
+  },
+  {
+    "team_name": "Test74",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Technica",
+    "location": 4.7
+  },
+  {
+    "team_name": "Test75",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=BSmzOgRfSw6aaiRle3HX"
+  },
+  {
+    "team_name": "Test75",
+    "start_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=IrPGEyT_Q8CmHheZ1QEN"
+  },
+  {
+    "team_name": "Test76",
+    "start_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=a_qHUKY0SqW__K1BjBn_"
+  },
+  {
+    "team_name": "Test76",
+    "start_time": "Sun Oct 22 2023 13:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack for Sustainability",
+    "sponsor_name": "Optiver",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=I9cykNv1QkecnTqvd0D4"
+  },
+  {
+    "team_name": "Test77",
+    "start_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:45:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Gamification Hack - Create Your Own Reality",
+    "sponsor_name": "Technica",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=UHb47IZnR72t_VaKFK0H"
+  },
+  {
+    "team_name": "Test77",
+    "start_time": "Sun Oct 22 2023 13:15:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 13:20:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": "https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024?spawnToken=c6F6snDbRFOU9EtuudbC"
+  },
+  {
+    "team_name": "Test78",
+    "start_time": "Sun Oct 22 2023 12:10:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:15:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Technica",
+    "location": 4.8
+  },
+  {
+    "team_name": "Test78",
+    "start_time": "Sun Oct 22 2023 12:50:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:55:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": 4.8
+  },
+  {
+    "team_name": "Test78",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Active-Wellness/Health Hack - Herbal Apothecary",
+    "sponsor_name": "Technica",
+    "location": 4.8
+  },
+  {
+    "team_name": "Test78",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Climate Change Sentiment Analysis and Impacts on Housing",
+    "sponsor_name": "Fannie Mae",
+    "location": 4.8
+  },
+  {
+    "team_name": "Test78",
+    "start_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Social Good Hack",
+    "sponsor_name": "Technica",
+    "location": 4.8
+  },
+  {
+    "team_name": "Test78",
+    "start_time": "Sun Oct 22 2023 12:35:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:40:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Hack Promoting Education or Public Health",
+    "sponsor_name": "Bloomberg",
+    "location": 4.8
+  },
+  {
+    "team_name": "Test79",
+    "start_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:30:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Best Accessibility Hack",
+    "sponsor_name": "Technica",
+    "location": 5.1
+  },
+  {
+    "team_name": "Test79",
+    "start_time": "Sun Oct 22 2023 12:20:00 GMT-0400 (Eastern Daylight Time)",
+    "end_time": "Sun Oct 22 2023 12:25:00 GMT-0400 (Eastern Daylight Time)",
+    "prize_category": "Most “Ever Vigilant” Hack Against Spyware",
+    "sponsor_name": "CACI International",
+    "location": 5.1
+  }
+]
