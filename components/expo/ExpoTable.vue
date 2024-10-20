@@ -320,7 +320,10 @@
             <td>{{ item.prize_category }}</td>
             <td>{{ item.sponsor_name }}</td>
             <td>
-              {{ item.location }}
+              <span v-if="item.location.startsWith('https')">
+                <a :href="item.location">{{ item.location }}</a>
+              </span>
+              <span v-else>{{ item.location }}</span>
             </td>
           </tr>
         </tbody>
