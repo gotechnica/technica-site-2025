@@ -31,7 +31,7 @@ const isMobile = computed(() => {
 //Timer
 
 const startTime = new Date('2024-10-26T00:00:00'); 
-const endTime = new Date('2024-10-27T23:59:59');
+const endTime = new Date('2024-10-27T12:00:00');
 
 const days = ref('00');
 const hours = ref('00');
