@@ -741,6 +741,7 @@ export default {
 }
 
 .schedule-content-item {
+  overflow: scroll;
   height: 4.5vh;
   border-radius: 8px;
   font-style: normal;
