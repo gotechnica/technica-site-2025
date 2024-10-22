@@ -65,7 +65,7 @@ const toggleDropdown = (dropdownNumber: number) => {
   position: relative;
   width: 300px;
   height: 250px;
-  background-image: url('/keynote-speakers/picture-wrapper1.png'); /* Your background image */
+  background-image: url('/keynote-speakers/eriol-fox.png'); /* Your background image */
   background-size: cover; /* Make the background cover the whole container */
   background-position: center; /* Center the background */
   display: flex;
@@ -81,7 +81,7 @@ const toggleDropdown = (dropdownNumber: number) => {
   position: relative;
   width: 300px;
   height: 250px;
-  background-image: url('/keynote-speakers/picture-wrapper2.png'); /* Your background image */
+  background-image: url('/keynote-speakers/ayodele-odubela.png'); /* Your background image */
   background-size: cover; /* Make the background cover the whole container */
   background-position: center; /* Center the background */
   display: flex;
