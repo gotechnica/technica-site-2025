@@ -3,6 +3,7 @@
     <div class="speaker-container">
       <div class="speaker-card first">
         <div class="image-wrapper1">
+          <!-- <img src="/keynote-speakers/eriol-fox.png"/> -->
         </div>
         <h1 class="speaker-name">Eriol Fox</h1>
         <p class="speaker-info">Senior Human-Rights centered Designer at Superbloom</p>
@@ -23,6 +24,7 @@ Eriol is a non-binary, queer person who uses they/them pronouns.
 
       <div class="speaker-card second">
         <div class="image-wrapper2">
+          <!-- <img src="/keynote-speakers/ayodele-odubela.png"/> -->
         </div>
         <h1 class="speaker-name">Ayodele Odubela</h1>
         <p class="speaker-info">Founder, AI ALT Lab</p>
@@ -65,7 +67,7 @@ const toggleDropdown = (dropdownNumber: number) => {
   position: relative;
   width: 300px;
   height: 250px;
-  background-image: url('keynote-speakers/eriol-fox.png'); /* Your background image */
+  background-image: url('eriol-fox.png'); /* Your background image */
   background-size: cover; /* Make the background cover the whole container */
   background-position: center; /* Center the background */
   display: flex;
@@ -81,7 +83,7 @@ const toggleDropdown = (dropdownNumber: number) => {
   position: relative;
   width: 300px;
   height: 250px;
-  background-image: url('keynote-speakers/ayodele-odubela.png'); /* Your background image */
+  background-image: url('ayodele-odubela.png'); /* Your background image */
   background-size: cover; /* Make the background cover the whole container */
   background-position: center; /* Center the background */
   display: flex;
