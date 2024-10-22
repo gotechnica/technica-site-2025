@@ -11,8 +11,10 @@
             published here after the submission period closes. <br/>Sit tight!
           </p>
           <p class="table-description">
-            Below is a list of the demos and corresponding locations.
+            Below is a list of the demos and corresponding locations, as well as a map with all of the in-person judging locations.
           </p>
+          <img src="../static/expo_map.svg">
+          <br><br>
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
         <div style="margin-top: 5rem;"></div>
