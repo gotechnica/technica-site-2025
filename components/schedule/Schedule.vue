@@ -740,6 +740,10 @@ export default {
   }
 }
 
+#element::-webkit-scrollbar {
+    display: none;
+}
+
 .schedule-content-item {
   overflow: scroll;
   height: 4.5vh;
