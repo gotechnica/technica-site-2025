@@ -3,12 +3,15 @@
   <div id="form" class="container">
     <br><br>
     <Header>Registration Form</Header>
-    <p style="text-align: center;">If you already registered, check your email inbox for an important email from us for
-      check-in instructions. <b>#Wonder Awaits</b> at Technica!</p>
+    <p style="text-align: center;">Registration is now closed! </p>
+    <p style="text-align: center;">There will be last minute check in on Saturday <b>after 11am</b> but it will be first come first serve. </p>
+    <p style="text-align: center;">We look forward to seeing you there! <b>#Wonder Awaits</b> at Technica!</p>
     <br><br>
-    <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
+
+
+    <!-- <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser"> -->
       <!-- HACKER INFO -->
-      <Header>Hacker Info</Header>
+      <!-- <Header>Hacker Info</Header>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div>
@@ -128,7 +131,7 @@
               :class="{ 'is-invalid': errors['parentEmail'] }" />
             <ErrorMessage :name="'parentEmail'" class="invalid-feedback" />
           </div>
-        </div>
+        </div> -->
         <!-- <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">Are you an Alumni?*</label>
@@ -142,10 +145,10 @@
             <ErrorMessage :name="'isAlumni'" class="invalid-feedback" />
           </div>
         </div> -->
-      </div>
+      <!-- </div> -->
 
       <!-- EDUCATION -->
-      <Header> Education </Header>
+      <!-- <Header> Education </Header>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div class="mb-4">
@@ -189,10 +192,10 @@
             <ErrorMessage :name="'major'" class="invalid-feedback" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- LOCATION -->
-      <Header>Location</Header>
+      <!-- <Header>Location</Header>
       <p>
         Please make sure to enter the place you'll be departing from for
         Technica. For hackers in the U.S. only, select zip codes will be
@@ -227,10 +230,10 @@
             <ErrorMessage :name="'zipcode'" class="invalid-feedback" />
           </div>
         </div>
-      </div>
+      </div> --> 
 
       <!-- TRACKS -->
-      <Header>Tracks</Header>
+      <!-- <Header>Tracks</Header>
       <p class="description">
         Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
@@ -318,10 +321,10 @@
           </div>
           <ErrorMessage :name="'track'" class="invalid-feedback" />
         </div>
-      </div>
+      </div> -->
 
       <!-- EVENT INFO -->
-      <Header>Event Info</Header>
+      <!-- <Header>Event Info</Header>
 
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
@@ -421,10 +424,10 @@
         If you choose to share your resume with us, it will be shared with our
         sponsors for opportunities. You may upload or update your resume during
         the event.
-      </p>
+      </p> -->
 
       <!-- RULES AND PRIVACY POLICY -->
-      <Header>Rules and Privacy Policies</Header>
+      <!-- <Header>Rules and Privacy Policies</Header>
 
       <div class="form-check mt-4">
         <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
@@ -496,18 +499,18 @@
           I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
           announcements.
         </label>
-      </div>
+      </div> -->
 
       <!-- {{ values }}
       {{errors}} -->
 
-      <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
+      <!-- <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
         <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-visited.svg"/>
       </button>
       <div class="error">
         <p v-if="submitTimes != 0" >The page may take a second to redirect, if it doesn't, please make sure you've filled out all the required fields!</p>
       </div>
-    </Form>
+    </Form> -->
   </div>
   <StickyButton></StickyButton>
 </template>

@@ -12,7 +12,7 @@
                 </p>
             </div>
             <div class="col-md-5 img-container">
-                <img class="minor-graphic" src="/minor/minor-graphic.png">
+                <img class="minor-graphic" src="/minor/minor-graphic.svg">
             </div>
         </div>
         <div class="section row">
@@ -133,7 +133,7 @@ template {
 }
 
 .minor-graphic {
-    width: 35%;
+    width: 70%;
 }
 
 .img-container {
