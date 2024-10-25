@@ -50,7 +50,7 @@
 
     <!--Keynote Speakers Section -->
     <div class="container">
-      <!-- <KeynoteSpeakers /> -->
+      <KeynoteSpeakers />
     </div>
 
 
@@ -193,8 +193,9 @@ useHead({
     visibility: hidden;
   }
 
+/**
   .hybrid {
     margin-top: -60rem;
-  }
+  } */
 }
 </style>
