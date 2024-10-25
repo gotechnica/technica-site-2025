@@ -50,7 +50,7 @@
 
     <!--Keynote Speakers Section -->
     <div class="container">
-      <KeynoteSpeakers />
+      <!-- <KeynoteSpeakers /> -->
     </div>
 
 
