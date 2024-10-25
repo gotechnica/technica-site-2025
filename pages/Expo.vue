@@ -32,7 +32,7 @@
 
 <script>
 import ExpoTable from '../components/expo/ExpoTable.vue';
-import data from '../static/expo_virtual_schedule.json';
+import data from '../static/test_data_schedule.json';
 export default {
   name: 'ExpoPage',
   components: {
@@ -103,20 +103,36 @@ export default {
     },
     formatSchedule(schedule) {
       const items = [];
+      const tables = {
+        Spades: { rows: 'ABCDE', cols: 6 },
+        Diamonds: { rows: 'ABCDEF', cols: 5 },
+        Hearts: { rows: 'ABCDEFGHIJK', cols: 5 },
+        Clubs: { rows: 'ABCDE', cols: 6 },
+      };
+      let tableIndex = 0;
+      const tableMap = [];
+      for (const [category, config] of Object.entries(tables)) {
+          const { rows, cols } = config;
+          for (let row of rows) {
+              for (let col = 1; col <= cols; col++) {
+                  tableMap[tableIndex] = `${category} ${row}${col}`;
+                  tableIndex++;
+              }
+          }
+      }
       if (schedule) {
         //waiting for schedule query
         Object.values(schedule).forEach((k) => {
-          console.log(k);
           const item = {};
-          item.team_name = k[0][0];
-          let start_time = new Date(k[1]); //putting actual date object in
+          item.team_name = k.team_name;
+          let start_time = new Date(k.start_time); //putting actual date object in
           start_time.setHours(start_time.getHours());
-          let end_time = new Date(k[2]);
+          let end_time = new Date(k.end_time);
           end_time.setHours(end_time.getHours());
           item.time = [start_time, end_time];
-          item.prize_category = k[3];
-          item.sponsor_name = k[4];
-          if(k[5] == null) {
+          item.prize_category = k.prize_category;
+          item.sponsor_name = k.sponsor_name;
+          if(k.location == null) {
               if(k[4] === "Technica") {
                   item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
               } else {
@@ -124,7 +140,7 @@ export default {
               }
               
           } else {
-              item.location = k[5];
+              item.location = tableMap[Number(k.location) - 1];
           }
           items.push(item); //boom
         });
