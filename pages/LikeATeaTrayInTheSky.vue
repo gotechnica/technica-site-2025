@@ -1,5 +1,5 @@
 <template>
-    <meta http-equiv="Refresh" content="0; url=LikeATeaTrayInTheSky.pdf" />
+    <meta http-equiv="Refresh" content="0; url=../LikeATeaTrayInTheSky.pdf" />
     <h1>Redirecting!!!</h1>
 </template>
 
