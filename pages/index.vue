@@ -3,40 +3,49 @@
   <!-- <title>Technica Home</title> -->
   <div class="main-body">
     <!-- Hero's Section -->
-    <HeroLanding />
-
-    <!-- About Technica Section -->
+    <!-- <HeroLanding /> -->
+    
+    <!-- DAY OF! -->
     <div class="container">
-      <About />
+      <Timer />
     </div>
 
     <div class="container">
-      <Achievements />
+      <Announcements />
+    </div>
+
+    <!-- About Technica Section -->
+    <div class="container">
+      <!-- <About /> -->
+    </div>
+
+    <div class="container">
+      <!-- <Achievements /> -->
     </div>
 
     <!-- What to do at Technica Section -->
     <div class="whatToDo">
-      <WhatToDo />
+      <!-- <WhatToDo /> -->
     </div>
 
     <!-- Hybrid Environment Section -->
     <div class="container hybrid">
-      <HybridEnv />
+      <!-- <HybridEnv /> -->
     </div>
 
     <!-- Hear From Past Hackers -->
     <div class="container">
-      <TestimoniesCarousel class="main-section" />
+      <!-- <TestimoniesCarousel class="main-section" /> -->
     </div>
 
     <!-- Tracks Section -->
     <div class="container">
-      <Tracks />
+      <!-- <Tracks /> -->
     </div>
 
     <!-- Additional Info Section -->
     <div class="container">
-      <AdditionalInfo />
+      <!-- <AdditionalInfo /> -->
     </div>
 
     <!--Keynote Speakers Section -->

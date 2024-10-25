@@ -51,12 +51,7 @@
     import { ref, computed } from 'vue';
     
     const announcements = ref([
-        { title: "Announcement 4", text: "More details coming soon." },
-      { title: "Announcement 1", text: "Hello! This is the first announcement." },
-      { title: "Announcement 2", text: "Hi! This is the second announcement." },
-      { title: "Announcement 3", text: "More details coming soon." },
-      { title: "Announcement 4", text: "More details coming soon." },
-      { title: "Announcement 4", text: "More details coming soon." },
+        { title: "Welcome!", text: "No major announcements yet. The timer will start when hacking begins!" },
     ]);
     
     // const previousAnnouncements = ref([

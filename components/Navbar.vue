@@ -63,12 +63,14 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/' },
-        { dropdown: false, name: 'Register', path: './Register'},
+        // { dropdown: false, name: 'Register', path: './Register'},
         /*{ dropdown: false, name: 'Annual Report', path: './Report'},*/
         { dropdown: false, name: 'Schedule', path: '/schedule' }, 
         { dropdown: false, name: 'Gather', path: '/gather' }, 
         { dropdown: false, name: 'Maps', path: '/maps' }, 
-        { dropdown: false, name: 'Minors', path: '/minor' }, 
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com'},
+        { dropdown: false, name: 'Slack', path: '/slack'},
+        // { dropdown: false, name: 'Minors', path: '/minor' }, 
         { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         {
