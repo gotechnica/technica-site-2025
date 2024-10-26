@@ -51,6 +51,7 @@
     import { ref, computed } from 'vue';
     
     const announcements = ref([
+        { title: "Technica App", text: "Calling all Android users! You can download the Technica app in the Google Play Store!" },
         { title: "Welcome!", text: "No major announcements yet. The timer will start when hacking begins!" },
     ]);
     
