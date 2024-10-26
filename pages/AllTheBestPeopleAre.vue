@@ -1,5 +1,5 @@
 <template>
-    <meta http-equiv="Refresh" content="0; url=../chogfoldable.pdf" />
+    <meta http-equiv="Refresh" content="0; url=../chogfoldable.png" />
     <h1>Redirecting!!!</h1>
 </template>
 
