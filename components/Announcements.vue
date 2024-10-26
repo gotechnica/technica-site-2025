@@ -24,8 +24,8 @@
         </div>
       </div>
   
-      <div class="announcement-bubble" :class="{ 'announcement-bubble-expanded': isExpanded }">
-        <!-- <h3 class="previous-announcements-header"></h3>
+      <!-- <div class="announcement-bubble" :class="{ 'announcement-bubble-expanded': isExpanded }">
+        <h3 class="previous-announcements-header"></h3>
         <ul class="announcement-list">
           <li
             v-for="(announcement, index) in previousAnnouncements"
@@ -35,13 +35,13 @@
             <div class="announcement-title">{{ announcement.title }}</div>
             <div class="announcement-text">{{ announcement.text }}</div>
           </li>
-        </ul> -->
+        </ul>
         <div class="button-container">
           <button @click="toggleShowMore" class="show-more-button">
             {{ isExpanded ? 'Show Less' : 'Show More' }}
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </template>
   
