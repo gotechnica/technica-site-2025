@@ -177,6 +177,11 @@ const customSponsors: SponsorInfo[] = [
     name: 'see-funding',
     link: 'https://www.see.umd.edu/funding'
   },
+
+  { 
+    name: 'code-path',
+    link: 'https://www.codepath.org'
+  },
 ]
 
 const virtualSponsors: SponsorInfo[] = [
