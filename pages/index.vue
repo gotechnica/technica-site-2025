@@ -6,7 +6,7 @@
     <!-- <HeroLanding /> -->
     
     <!-- DAY OF! -->
-    <div class="container">
+    <div class="container timer">
       <Timer />
     </div>
 
@@ -188,10 +188,17 @@ useHead({
   margin-bottom: 5rem;
 }
 
+.timer {
+  margin-top: -2rem;
+  margin-bottom: -10rem;
+  width: 70%;
+}
+
 @media screen and (max-width: 630px) {
   .whatToDo {
     visibility: hidden;
   }
+
 
 /**
   .hybrid {

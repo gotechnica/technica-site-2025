@@ -56,12 +56,17 @@ const sponslist = ref(props.sponslist);
     align-items: center;
     margin: 1.5rem 1.5rem;
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray; /* IE 6-9 */
-    transition: transform .2s; /* Animation */
+    // -webkit-filter: grayscale(100%);
+    // -moz-filter: grayscale(100%);
+    // -ms-filter: grayscale(100%);
+    // filter: grayscale(100%);
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    filter: none;
+    transform: scale(1.2);
+    // filter: gray; /* IE 6-9 */
+    // transition: transform .2s; /* Animation */
   }
 
   .grid-item:hover {
