@@ -51,7 +51,7 @@
             <td>{{ item.prize_category }}</td>
             <td>{{ item.sponsor_name }}</td>
             <td>
-              <span v-if="item.location.startsWith('https')">
+              <span v-if="item.location.toString().startsWith('https')">
                 <a :href="item.location">{{ item.location }}</a>
               </span>
               <span v-else>{{ item.location }}</span>

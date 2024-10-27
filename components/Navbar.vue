@@ -65,6 +65,7 @@ export default {
         { dropdown: false, name: 'Home', path: '/' },
         // { dropdown: false, name: 'Register', path: './Register'},
         /*{ dropdown: false, name: 'Annual Report', path: './Report'},*/
+        { dropdown: false, name: 'Expo', path: '/expo' }, 
         { dropdown: false, name: 'Schedule', path: '/schedule' }, 
         { dropdown: false, name: 'Gather', path: '/gather' }, 
         { dropdown: false, name: 'Maps', path: '/maps' }, 
