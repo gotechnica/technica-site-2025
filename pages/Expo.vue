@@ -33,7 +33,7 @@
 <script>
 import { identifierToKeywordKind } from 'typescript';
 import ExpoTable from '../components/expo/ExpoTable.vue';
-import data from '../static/actual.json';
+import data from '../static/final.json';
 export default {
   name: 'ExpoPage',
   components: {
