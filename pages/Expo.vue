@@ -33,7 +33,7 @@
 <script>
 import { identifierToKeywordKind } from 'typescript';
 import ExpoTable from '../components/expo/ExpoTable.vue';
-import data from '../static/big_test_data_schedule.json';
+import data from '../static/actual.json';
 export default {
   name: 'ExpoPage',
   components: {
@@ -124,7 +124,11 @@ export default {
       if (schedule) {
         //waiting for schedule query
         Object.values(schedule).forEach((k) => {
-          if(k.sponsor_name != null && !k.sponsor_name.toString().startsWith("[MLH]") && !k.prize_category.toString().startsWith("Best Research Track Hack")) {
+          // if(!('prize_category' in k) || !k.hasOwnProperty('prize_category') || k.prize_category === undefined) {
+          //   k.prize_category = k.sponsor_name;
+          //   k.sponsor_name = "Technica";
+          // }
+          if(k.sponsor_name != null && !k.sponsor_name.toString().includes("[MLH]") && (k.prize_category !== undefined && !k.prize_category.toString().includes("Best Research Track Hack"))) {
             const item = {};
             item.team_name = k.team_name;
             let start_time = new Date(k.start_time); //putting actual date object in
@@ -138,35 +142,37 @@ export default {
               item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=j_sGeUFoTdiSHGi0rv_j";
             }
             if(k.location == null) {
-                if(k.sponsor_name.toString().startsWith("Bloomberg")) {
+                if(k.sponsor_name.toString().includes("Bloomberg")) {
                   item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=NRCV3WFDSwm1HFHmjbqQ";
-                } else if (k.sponsor_name.toString().startsWith("ICF")) {
+                } else if (k.sponsor_name.toString().includes("ICF")) {
                   item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=j_sGeUFoTdiSHGi0rv_j";
-                } else if (k.sponsor_name.toString().startsWith("T. Rowe Price")) {
+                } else if (k.sponsor_name.toString().includes("T. Rowe Price")) {
                   item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_bFXPg1uRmGKtGNnNsDG";
                 } else { // Technica 
-                  if(k.prize_category.toString().startsWith("Best Education Hack")) {
+                  if(k.prize_category.toString().includes("Best Education Hack")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=X3pU1IHlTY20jdEaSwGq";
-                  } else if(k.prize_category.toString().startsWith("Best UI/UX Hack")) {
+                  } else if(k.prize_category.toString().includes("Best UI/UX Hack")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=vtiNk00kRk24OWkIRZIE";
-                  } else if(k.prize_category.toString().startsWith("Best Hack For Social Good")) {
+                  } else if(k.prize_category.toString().includes("Best Hack For Social Good")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=CW9Q-FR5Q5-9H0v-iy_K";
-                  } else if(k.prize_category.toString().startsWith("Best Gamification Hack")) {
+                  } else if(k.prize_category.toString().includes("Best Gamification Hack")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=EcvQ61m4TTy1Q090L8Pn";
-                  } else if(k.prize_category.toString().startsWith("Best Accessibility Solution")) {
+                  } else if(k.prize_category.toString().includes("Best Accessibility Solution")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=uAiSIXV1Tvu8IL0aDcTg";
-                  } else if(k.prize_category.toString().startsWith("Best Active-Wellness/Health Hack")) {
+                  } else if(k.prize_category.toString().includes("Best Active-Wellness/Health Hack")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=m0H0r72WTDC8PaQhAvyv";
-                  } else if(k.prize_category.toString().startsWith("Best Startup Track Hack")) {
+                  } else if(k.prize_category.toString().includes("Best Startup Track Hack")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=LGR1eBZITQiGPvt7BXJs";
-                  } else if(k.prize_category.toString().startsWith("Best Beginner Hack (College)")) {
+                  } else if(k.prize_category.toString().includes("Best Beginner Hack (College)")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=C19eA1PSS5aL9UGOgkFe";
-                  } else if(k.prize_category.toString().startsWith("Best Beginner Hack (Middle/High School)")) {
+                  } else if(k.prize_category.toString().includes("Best Beginner Hack (Middle/High School)")) {
                     item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=oIZDuZWST-W3bXw6tzal";
+                  } else {
+                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
                   }
                 }
             } else {
-              if (k.sponsor_name.toString().startsWith("ICF")) {
+              if (k.sponsor_name.toString().includes("ICF")) {
                   item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=j_sGeUFoTdiSHGi0rv_j";
                 } else {
                   item.location = tableMap[Number(k.location) - 1];
