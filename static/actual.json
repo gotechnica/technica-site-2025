@@ -1,0 +1,2282 @@
+[
+  {
+    "team_name": "MedMap",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Sauce Labs Hot Sauce Raffle",
+    "location": null
+  },
+  {
+    "team_name": "MedMap",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "MedMap",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "MedMap",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": null
+  },
+  {
+    "team_name": "MedMap",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": null
+  },
+  {
+    "team_name": "MedMap",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "CollegeHelp",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "CollegeHelp",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "Personal Self-Care App",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "WELLTH WI$E",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "H.I. AI; Health Insurance Cost Predictor",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": null
+  },
+  {
+    "team_name": "H.I. AI; Health Insurance Cost Predictor",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": null
+  },
+  {
+    "team_name": "MoodCast",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "MoodCast",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "MoodCast",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": null
+  },
+  {
+    "team_name": "FinTechstic Chronicles",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": null
+  },
+  {
+    "team_name": "FinTechstic Chronicles",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": null
+  },
+  {
+    "team_name": "FinTechstic Chronicles",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "FinChatWUs",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": null
+  },
+  {
+    "team_name": "FinChatWUs",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "FinChatWUs",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "FinChatWUs",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": null
+  },
+  {
+    "team_name": "FinChatWUs",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": null
+  },
+  {
+    "team_name": "FinChatWUs",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best Financial Hack",
+    "sponsor_name": "Capital One",
+    "location": null
+  },
+  {
+    "team_name": "IntegriMED",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": null
+  },
+  {
+    "team_name": "IntegriMED",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "IntegriMED",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "IntegriMED",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "IntegriMED",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "IntegriMED",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "LegalLeaks - Detecting data contamination and memorization in Law Datasets",
+    "sponsor_name": "Bloomberg Industry Group",
+    "location": null
+  },
+  {
+    "team_name": "WayPoint",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "WayPoint",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "WayPoint",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": null
+  },
+  {
+    "team_name": "WayPoint",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "EchoAlert",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": null
+  },
+  {
+    "team_name": "AI-Powered Mood Board Add-On",
+    "start_time": "2024-10-26T17:20:00.000Z",
+    "end_time": "2024-10-26T17:25:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Most Creative Adobe Express Add-On",
+    "location": null
+  },
+  {
+    "team_name": "Mind Body Thrive",
+    "start_time": "2024-10-26T17:25:00.000Z",
+    "end_time": "2024-10-26T17:30:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": null
+  },
+  {
+    "team_name": "Mind Body Thrive",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "Mind Body Thrive",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "PLANTrees",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "PLANTrees",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "PLANTrees",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "NIRBHAYA",
+    "start_time": "2024-10-26T17:20:00.000Z",
+    "end_time": "2024-10-26T17:25:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "NIRBHAYA",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "NIRBHAYA",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "NIRBHAYA",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": null
+  },
+  {
+    "team_name": "NIRBHAYA",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "Succession",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "Succession",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "Succession",
+    "start_time": "2024-10-26T16:50:00.000Z",
+    "end_time": "2024-10-26T16:55:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": null
+  },
+  {
+    "team_name": "Succession",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": null
+  },
+  {
+    "team_name": "Ask The PDF",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "BiodiverCity",
+    "start_time": "2024-10-26T17:30:00.000Z",
+    "end_time": "2024-10-26T17:35:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": null
+  },
+  {
+    "team_name": "BiodiverCity",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "BiodiverCity",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "BiodiverCity",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "Wristore- Wrist Exercise Application",
+    "start_time": "2024-10-26T17:35:00.000Z",
+    "end_time": "2024-10-26T17:40:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Sauce Labs Hot Sauce Raffle",
+    "location": null
+  },
+  {
+    "team_name": "Wristore- Wrist Exercise Application",
+    "start_time": "2024-10-26T17:20:00.000Z",
+    "end_time": "2024-10-26T17:25:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "Wristore- Wrist Exercise Application",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": null
+  },
+  {
+    "team_name": "Wristore- Wrist Exercise Application",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "ContractScout",
+    "start_time": "2024-10-26T16:55:00.000Z",
+    "end_time": "2024-10-26T17:00:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "ContractScout",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "ContractScout",
+    "start_time": "2024-10-26T16:45:00.000Z",
+    "end_time": "2024-10-26T16:50:00.000Z",
+    "prize_category": "LegalLeaks - Detecting data contamination and memorization in Law Datasets",
+    "sponsor_name": "Bloomberg Industry Group",
+    "location": null
+  },
+  {
+    "team_name": "MyCare",
+    "start_time": "2024-10-26T17:25:00.000Z",
+    "end_time": "2024-10-26T17:30:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "MyCare",
+    "start_time": "2024-10-26T17:30:00.000Z",
+    "end_time": "2024-10-26T17:35:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": null
+  },
+  {
+    "team_name": "MyCare",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "GLYMPSE",
+    "start_time": "2024-10-26T17:00:00.000Z",
+    "end_time": "2024-10-26T17:05:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "FocusBox",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "FocusBox",
+    "start_time": "2024-10-26T17:30:00.000Z",
+    "end_time": "2024-10-26T17:35:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "Aira",
+    "start_time": "2024-10-26T17:40:00.000Z",
+    "end_time": "2024-10-26T17:45:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Most Creative Adobe Express Add-On",
+    "location": null
+  },
+  {
+    "team_name": "Aira",
+    "start_time": "2024-10-26T17:05:00.000Z",
+    "end_time": "2024-10-26T17:10:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "Aira",
+    "start_time": "2024-10-26T17:20:00.000Z",
+    "end_time": "2024-10-26T17:25:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "ChroniWise:Tailored smart Support for daily Chronic Wellness",
+    "start_time": "2024-10-26T17:20:00.000Z",
+    "end_time": "2024-10-26T17:25:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "ChroniWise:Tailored smart Support for daily Chronic Wellness",
+    "start_time": "2024-10-26T17:10:00.000Z",
+    "end_time": "2024-10-26T17:15:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "ChroniWise:Tailored smart Support for daily Chronic Wellness",
+    "start_time": "2024-10-26T17:25:00.000Z",
+    "end_time": "2024-10-26T17:30:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": null
+  },
+  {
+    "team_name": "Luna.AI",
+    "start_time": "2024-10-26T17:25:00.000Z",
+    "end_time": "2024-10-26T17:30:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": null
+  },
+  {
+    "team_name": "Luna.AI",
+    "start_time": "2024-10-26T17:35:00.000Z",
+    "end_time": "2024-10-26T17:40:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": null
+  },
+  {
+    "team_name": "Luna.AI",
+    "start_time": "2024-10-26T17:15:00.000Z",
+    "end_time": "2024-10-26T17:20:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": null
+  },
+  {
+    "team_name": "Luna.AI",
+    "start_time": "2024-10-26T17:45:00.000Z",
+    "end_time": "2024-10-26T17:50:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": null
+  },
+  {
+    "team_name": "Luna.AI",
+    "start_time": "2024-10-26T17:30:00.000Z",
+    "end_time": "2024-10-26T17:35:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": null
+  },
+  {
+    "team_name": "Down the Ribbit Hole",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "1"
+  },
+  {
+    "team_name": "Down the Ribbit Hole",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "1"
+  },
+  {
+    "team_name": "Down the Ribbit Hole",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "1"
+  },
+  {
+    "team_name": "Chicken Learn",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "2"
+  },
+  {
+    "team_name": "Chicken Learn",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "2"
+  },
+  {
+    "team_name": "Chicken Learn",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "2"
+  },
+  {
+    "team_name": "The Litterbug",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "3"
+  },
+  {
+    "team_name": "Patchy Pages",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "4"
+  },
+  {
+    "team_name": "Patchy Pages",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "4"
+  },
+  {
+    "team_name": "Patchy Pages",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "4"
+  },
+  {
+    "team_name": "Whimsy",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "5"
+  },
+  {
+    "team_name": "Inventory.com",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "6"
+  },
+  {
+    "team_name": "Inventory.com",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "6"
+  },
+  {
+    "team_name": "Inventory.com",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "6"
+  },
+  {
+    "team_name": "Password Project",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "7"
+  },
+  {
+    "team_name": "Password Project",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "7"
+  },
+  {
+    "team_name": "Password Project",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "7"
+  },
+  {
+    "team_name": "Alice's First Yeat Computer Science",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "8"
+  },
+  {
+    "team_name": "Alice's First Yeat Computer Science",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "8"
+  },
+  {
+    "team_name": "Alice's First Yeat Computer Science",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "8"
+  },
+  {
+    "team_name": "Farms-Up!",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "9"
+  },
+  {
+    "team_name": "Farms-Up!",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "9"
+  },
+  {
+    "team_name": "Farms-Up!",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "9"
+  },
+  {
+    "team_name": "Farms-Up!",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "9"
+  },
+  {
+    "team_name": "EasiPeasi Expense Snap",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of Terraform",
+    "location": "10"
+  },
+  {
+    "team_name": "EasiPeasi Expense Snap",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "10"
+  },
+  {
+    "team_name": "EasiPeasi Expense Snap",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "10"
+  },
+  {
+    "team_name": "EasiPeasi Expense Snap",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "10"
+  },
+  {
+    "team_name": "SeizureSafe",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "11"
+  },
+  {
+    "team_name": "SeizureSafe",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "11"
+  },
+  {
+    "team_name": "SeizureSafe",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "11"
+  },
+  {
+    "team_name": "SeizureSafe",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "11"
+  },
+  {
+    "team_name": "Wonderland Wellness",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": "12"
+  },
+  {
+    "team_name": "Wonderland Wellness",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Sauce Labs Hot Sauce Raffle",
+    "location": "12"
+  },
+  {
+    "team_name": "Wonderland Wellness",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "12"
+  },
+  {
+    "team_name": "Wonderland Wellness",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "12"
+  },
+  {
+    "team_name": "Wonderland Wellness",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "12"
+  },
+  {
+    "team_name": "PPTE (Privacy Policy Transparency Explorer",
+    "start_time": "2024-10-26T18:00:00.000Z",
+    "end_time": "2024-10-26T18:05:00.000Z",
+    "prize_category": "LegalLeaks - Detecting data contamination and memorization in Law Datasets",
+    "sponsor_name": "Bloomberg Industry Group",
+    "location": "13"
+  },
+  {
+    "team_name": "phishphree",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "14"
+  },
+  {
+    "team_name": "phishphree",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "14"
+  },
+  {
+    "team_name": "phishphree",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "14"
+  },
+  {
+    "team_name": "NutriSync",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "15"
+  },
+  {
+    "team_name": "NutriSync",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "15"
+  },
+  {
+    "team_name": "NutriSync",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "15"
+  },
+  {
+    "team_name": "Pennywise",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "16"
+  },
+  {
+    "team_name": "Pennywise",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "16"
+  },
+  {
+    "team_name": "Pennywise",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "16"
+  },
+  {
+    "team_name": "Pennywise",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "16"
+  },
+  {
+    "team_name": "QuickTrip Minis",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "17"
+  },
+  {
+    "team_name": "QuickTrip Minis",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "17"
+  },
+  {
+    "team_name": "Tianyi Dance Team Website",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "18"
+  },
+  {
+    "team_name": "FaceTect",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "19"
+  },
+  {
+    "team_name": "FaceTect",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "19"
+  },
+  {
+    "team_name": "FaceTect",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "19"
+  },
+  {
+    "team_name": "FaceTect",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "19"
+  },
+  {
+    "team_name": "Survive Wonderland",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "20"
+  },
+  {
+    "team_name": "Survive Wonderland",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "20"
+  },
+  {
+    "team_name": "Wonder Run",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "21"
+  },
+  {
+    "team_name": "Wonder Run",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "21"
+  },
+  {
+    "team_name": "Lunari",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "22"
+  },
+  {
+    "team_name": "Lunari",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "22"
+  },
+  {
+    "team_name": "Lunari",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "22"
+  },
+  {
+    "team_name": "Lunari",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "22"
+  },
+  {
+    "team_name": "Alphabet Matching Game",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "23"
+  },
+  {
+    "team_name": "Alphabet Matching Game",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "23"
+  },
+  {
+    "team_name": "Alphabet Matching Game",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "23"
+  },
+  {
+    "team_name": "Money Math",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "24"
+  },
+  {
+    "team_name": "Money Math",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "24"
+  },
+  {
+    "team_name": "Money Math",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "24"
+  },
+  {
+    "team_name": "Evaluating Impact Of De-Identification On Behavioral Data",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": "25"
+  },
+  {
+    "team_name": "ALT Text Add-On Outline",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Most Creative Adobe Express Add-On",
+    "location": "26"
+  },
+  {
+    "team_name": "ALT Text Add-On Outline",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "26"
+  },
+  {
+    "team_name": "FaunaFlow: Building Animal Observer via Point-tracking",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": "27"
+  },
+  {
+    "team_name": "Blackjack",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "28"
+  },
+  {
+    "team_name": "QuickLinks",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "29"
+  },
+  {
+    "team_name": "QuickLinks",
+    "start_time": "2024-10-26T18:15:00.000Z",
+    "end_time": "2024-10-26T18:20:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "29"
+  },
+  {
+    "team_name": "QuickLinks",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "29"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "30"
+  },
+  {
+    "team_name": "TouchGrass",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "30"
+  },
+  {
+    "team_name": "Navigating the Future: Predicting Human Behavior for AVs",
+    "start_time": "2024-10-26T19:10:00.000Z",
+    "end_time": "2024-10-26T19:15:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": "31"
+  },
+  {
+    "team_name": "Serenity",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "32"
+  },
+  {
+    "team_name": "Serenity",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "32"
+  },
+  {
+    "team_name": "Serenity",
+    "start_time": "2024-10-26T18:20:00.000Z",
+    "end_time": "2024-10-26T18:25:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "32"
+  },
+  {
+    "team_name": "SimpliSafe",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "33"
+  },
+  {
+    "team_name": "SimpliSafe",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "33"
+  },
+  {
+    "team_name": "SimpliSafe",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "LegalLeaks - Detecting data contamination and memorization in Law Datasets",
+    "sponsor_name": "Bloomberg Industry Group",
+    "location": "33"
+  },
+  {
+    "team_name": "Recyclopedia",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "34"
+  },
+  {
+    "team_name": "Recyclopedia",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "34"
+  },
+  {
+    "team_name": "Recyclopedia",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "34"
+  },
+  {
+    "team_name": "signMate",
+    "start_time": "2024-10-26T19:10:00.000Z",
+    "end_time": "2024-10-26T19:15:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "35"
+  },
+  {
+    "team_name": "signMate",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "35"
+  },
+  {
+    "team_name": "signMate",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "35"
+  },
+  {
+    "team_name": "Listings",
+    "start_time": "2024-10-26T19:15:00.000Z",
+    "end_time": "2024-10-26T19:20:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "36"
+  },
+  {
+    "team_name": "Listings",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "36"
+  },
+  {
+    "team_name": "Listings",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "36"
+  },
+  {
+    "team_name": "Listings",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "36"
+  },
+  {
+    "team_name": "Receiptable",
+    "start_time": "2024-10-26T19:20:00.000Z",
+    "end_time": "2024-10-26T19:25:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": "37"
+  },
+  {
+    "team_name": "Receiptable",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "37"
+  },
+  {
+    "team_name": "Receiptable",
+    "start_time": "2024-10-26T18:05:00.000Z",
+    "end_time": "2024-10-26T18:10:00.000Z",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "37"
+  },
+  {
+    "team_name": "SafePlates",
+    "start_time": "2024-10-26T19:25:00.000Z",
+    "end_time": "2024-10-26T19:30:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "38"
+  },
+  {
+    "team_name": "SafePlates",
+    "start_time": "2024-10-26T19:30:00.000Z",
+    "end_time": "2024-10-26T19:35:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": "38"
+  },
+  {
+    "team_name": "SafePlates",
+    "start_time": "2024-10-26T19:35:00.000Z",
+    "end_time": "2024-10-26T19:40:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of Terraform",
+    "location": "38"
+  },
+  {
+    "team_name": "SafePlates",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "38"
+  },
+  {
+    "team_name": "SafePlates",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "38"
+  },
+  {
+    "team_name": "SafePlates",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "38"
+  },
+  {
+    "team_name": "Bin It To Win It",
+    "start_time": "2024-10-26T19:15:00.000Z",
+    "end_time": "2024-10-26T19:20:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "39"
+  },
+  {
+    "team_name": "Bin It To Win It",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "39"
+  },
+  {
+    "team_name": "Bin It To Win It",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "39"
+  },
+  {
+    "team_name": "Eco-Life Living",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "40"
+  },
+  {
+    "team_name": "Eco-Life Living",
+    "start_time": "2024-10-26T19:10:00.000Z",
+    "end_time": "2024-10-26T19:15:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "40"
+  },
+  {
+    "team_name": "Crawler",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "41"
+  },
+  {
+    "team_name": "Binary Buddy",
+    "start_time": "2024-10-26T19:40:00.000Z",
+    "end_time": "2024-10-26T19:45:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Sauce Labs Hot Sauce Raffle",
+    "location": "42"
+  },
+  {
+    "team_name": "Binary Buddy",
+    "start_time": "2024-10-26T19:20:00.000Z",
+    "end_time": "2024-10-26T19:25:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "42"
+  },
+  {
+    "team_name": "Binary Buddy",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "42"
+  },
+  {
+    "team_name": "Binary Buddy",
+    "start_time": "2024-10-26T19:45:00.000Z",
+    "end_time": "2024-10-26T19:50:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "42"
+  },
+  {
+    "team_name": "Culinary Compass",
+    "start_time": "2024-10-26T19:15:00.000Z",
+    "end_time": "2024-10-26T19:20:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "43"
+  },
+  {
+    "team_name": "Culinary Compass",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "43"
+  },
+  {
+    "team_name": "Culinary Compass",
+    "start_time": "2024-10-26T19:50:00.000Z",
+    "end_time": "2024-10-26T19:55:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "43"
+  },
+  {
+    "team_name": "One Stop",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "44"
+  },
+  {
+    "team_name": "One Stop",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "44"
+  },
+  {
+    "team_name": "One Stop",
+    "start_time": "2024-10-26T18:10:00.000Z",
+    "end_time": "2024-10-26T18:15:00.000Z",
+    "prize_category": "Best Use of FinTech",
+    "sponsor_name": "T. Rowe Price",
+    "location": "44"
+  },
+  {
+    "team_name": "Big Back Bird",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "45"
+  },
+  {
+    "team_name": "Big Back Bird",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "45"
+  },
+  {
+    "team_name": "Big Back Bird",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "45"
+  },
+  {
+    "team_name": "ImPACTful Literacy",
+    "start_time": "2024-10-26T19:25:00.000Z",
+    "end_time": "2024-10-26T19:30:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "46"
+  },
+  {
+    "team_name": "ImPACTful Literacy",
+    "start_time": "2024-10-26T19:20:00.000Z",
+    "end_time": "2024-10-26T19:25:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "46"
+  },
+  {
+    "team_name": "Phoneme Based Augmentative Alternative Communication Device",
+    "start_time": "2024-10-26T19:55:00.000Z",
+    "end_time": "2024-10-26T20:00:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "47"
+  },
+  {
+    "team_name": "Phoneme Based Augmentative Alternative Communication Device",
+    "start_time": "2024-10-26T20:00:00.000Z",
+    "end_time": "2024-10-26T20:05:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": "47"
+  },
+  {
+    "team_name": "Phoneme Based Augmentative Alternative Communication Device",
+    "start_time": "2024-10-26T19:30:00.000Z",
+    "end_time": "2024-10-26T19:35:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "47"
+  },
+  {
+    "team_name": "Phoneme Based Augmentative Alternative Communication Device",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "47"
+  },
+  {
+    "team_name": "Phoneme Based Augmentative Alternative Communication Device",
+    "start_time": "2024-10-26T18:25:00.000Z",
+    "end_time": "2024-10-26T18:30:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "47"
+  },
+  {
+    "team_name": "Phoneme Based Augmentative Alternative Communication Device",
+    "start_time": "2024-10-26T18:30:00.000Z",
+    "end_time": "2024-10-26T18:35:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "47"
+  },
+  {
+    "team_name": "Mousehunter",
+    "start_time": "2024-10-26T19:25:00.000Z",
+    "end_time": "2024-10-26T19:30:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "48"
+  },
+  {
+    "team_name": "Mousehunter",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "48"
+  },
+  {
+    "team_name": "catchup!",
+    "start_time": "2024-10-26T19:35:00.000Z",
+    "end_time": "2024-10-26T19:40:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "49"
+  },
+  {
+    "team_name": "catchup!",
+    "start_time": "2024-10-26T19:10:00.000Z",
+    "end_time": "2024-10-26T19:15:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "49"
+  },
+  {
+    "team_name": "catchup!",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "49"
+  },
+  {
+    "team_name": "Just VR It",
+    "start_time": "2024-10-26T20:05:00.000Z",
+    "end_time": "2024-10-26T20:10:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "50"
+  },
+  {
+    "team_name": "Just VR It",
+    "start_time": "2024-10-26T19:40:00.000Z",
+    "end_time": "2024-10-26T19:45:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "50"
+  },
+  {
+    "team_name": "Just VR It",
+    "start_time": "2024-10-26T19:30:00.000Z",
+    "end_time": "2024-10-26T19:35:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "50"
+  },
+  {
+    "team_name": "Just VR It",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "50"
+  },
+  {
+    "team_name": "Just VR It",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "50"
+  },
+  {
+    "team_name": "Project Empower",
+    "start_time": "2024-10-26T19:35:00.000Z",
+    "end_time": "2024-10-26T19:40:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "51"
+  },
+  {
+    "team_name": "Project Empower",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "51"
+  },
+  {
+    "team_name": "Project Empower",
+    "start_time": "2024-10-26T18:35:00.000Z",
+    "end_time": "2024-10-26T18:40:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "51"
+  },
+  {
+    "team_name": "Examining Diffusion Models for Image Generation",
+    "start_time": "2024-10-26T20:10:00.000Z",
+    "end_time": "2024-10-26T20:15:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": "52"
+  },
+  {
+    "team_name": "TerpPlate",
+    "start_time": "2024-10-26T19:15:00.000Z",
+    "end_time": "2024-10-26T19:20:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "53"
+  },
+  {
+    "team_name": "TerpPlate",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "53"
+  },
+  {
+    "team_name": "TerpPlate",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "53"
+  },
+  {
+    "team_name": "TerpPlate",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "53"
+  },
+  {
+    "team_name": "BikeSafe UMD",
+    "start_time": "2024-10-26T20:15:00.000Z",
+    "end_time": "2024-10-26T20:20:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of Terraform",
+    "location": "54"
+  },
+  {
+    "team_name": "BikeSafe UMD",
+    "start_time": "2024-10-26T19:40:00.000Z",
+    "end_time": "2024-10-26T19:45:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "54"
+  },
+  {
+    "team_name": "QA Calibration: AIs knowing when they're right (and wrong)",
+    "start_time": "2024-10-26T20:20:00.000Z",
+    "end_time": "2024-10-26T20:25:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": "55"
+  },
+  {
+    "team_name": "Wonderland",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "56"
+  },
+  {
+    "team_name": "Wonderland",
+    "start_time": "2024-10-26T18:40:00.000Z",
+    "end_time": "2024-10-26T18:45:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "56"
+  },
+  {
+    "team_name": "The not so Sneaky Snack Jar",
+    "start_time": "2024-10-26T19:10:00.000Z",
+    "end_time": "2024-10-26T19:15:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "57"
+  },
+  {
+    "team_name": "The not so Sneaky Snack Jar",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "57"
+  },
+  {
+    "team_name": "The not so Sneaky Snack Jar",
+    "start_time": "2024-10-26T19:15:00.000Z",
+    "end_time": "2024-10-26T19:20:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "57"
+  },
+  {
+    "team_name": "Escape from Your Wonderland!",
+    "start_time": "2024-10-26T19:15:00.000Z",
+    "end_time": "2024-10-26T19:20:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "58"
+  },
+  {
+    "team_name": "Escape the Music Forest",
+    "start_time": "2024-10-26T19:45:00.000Z",
+    "end_time": "2024-10-26T19:50:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "59"
+  },
+  {
+    "team_name": "Escape the Music Forest",
+    "start_time": "2024-10-26T19:20:00.000Z",
+    "end_time": "2024-10-26T19:25:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "59"
+  },
+  {
+    "team_name": "Escape the Music Forest",
+    "start_time": "2024-10-26T19:25:00.000Z",
+    "end_time": "2024-10-26T19:30:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "59"
+  },
+  {
+    "team_name": "Alice in DisasterLand",
+    "start_time": "2024-10-26T19:10:00.000Z",
+    "end_time": "2024-10-26T19:15:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "60"
+  },
+  {
+    "team_name": "Hi. I love you. Please send me gift cards”",
+    "start_time": "2024-10-26T20:25:00.000Z",
+    "end_time": "2024-10-26T20:30:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Research Track Hack",
+    "location": "61"
+  },
+  {
+    "team_name": "Alice Lost",
+    "start_time": "2024-10-26T19:25:00.000Z",
+    "end_time": "2024-10-26T19:30:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "62"
+  },
+  {
+    "team_name": "Alice Lost",
+    "start_time": "2024-10-26T19:00:00.000Z",
+    "end_time": "2024-10-26T19:05:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "62"
+  },
+  {
+    "team_name": "Alice Lost",
+    "start_time": "2024-10-26T19:20:00.000Z",
+    "end_time": "2024-10-26T19:25:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "62"
+  },
+  {
+    "team_name": "Microbit robot LED hack",
+    "start_time": "2024-10-26T19:30:00.000Z",
+    "end_time": "2024-10-26T19:35:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "63"
+  },
+  {
+    "team_name": "Microbit robot LED hack",
+    "start_time": "2024-10-26T19:20:00.000Z",
+    "end_time": "2024-10-26T19:25:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "63"
+  },
+  {
+    "team_name": "Microbit robot LED hack",
+    "start_time": "2024-10-26T18:45:00.000Z",
+    "end_time": "2024-10-26T18:50:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "63"
+  },
+  {
+    "team_name": "StudyBuddy",
+    "start_time": "2024-10-26T19:50:00.000Z",
+    "end_time": "2024-10-26T19:55:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "64"
+  },
+  {
+    "team_name": "StudyBuddy",
+    "start_time": "2024-10-26T19:35:00.000Z",
+    "end_time": "2024-10-26T19:40:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "64"
+  },
+  {
+    "team_name": "StudyBuddy",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Beginner Hack (Middle & High School)",
+    "sponsor_name": "Wonderland's First Steps",
+    "location": "64"
+  },
+  {
+    "team_name": "Elected",
+    "start_time": "2024-10-26T19:55:00.000Z",
+    "end_time": "2024-10-26T20:00:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "65"
+  },
+  {
+    "team_name": "Elected",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "65"
+  },
+  {
+    "team_name": "Elected",
+    "start_time": "2024-10-26T19:25:00.000Z",
+    "end_time": "2024-10-26T19:30:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "65"
+  },
+  {
+    "team_name": "TerpSync",
+    "start_time": "2024-10-26T20:30:00.000Z",
+    "end_time": "2024-10-26T20:35:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "66"
+  },
+  {
+    "team_name": "TerpSync",
+    "start_time": "2024-10-26T19:45:00.000Z",
+    "end_time": "2024-10-26T19:50:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "66"
+  },
+  {
+    "team_name": "TerpSync",
+    "start_time": "2024-10-26T19:30:00.000Z",
+    "end_time": "2024-10-26T19:35:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "66"
+  },
+  {
+    "team_name": "bookworm",
+    "start_time": "2024-10-26T20:35:00.000Z",
+    "end_time": "2024-10-26T20:40:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best AI Project with Databricks Open Source",
+    "location": "67"
+  },
+  {
+    "team_name": "bookworm",
+    "start_time": "2024-10-26T20:40:00.000Z",
+    "end_time": "2024-10-26T20:45:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": "67"
+  },
+  {
+    "team_name": "bookworm",
+    "start_time": "2024-10-26T20:45:00.000Z",
+    "end_time": "2024-10-26T20:50:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of Terraform",
+    "location": "67"
+  },
+  {
+    "team_name": "bookworm",
+    "start_time": "2024-10-26T19:40:00.000Z",
+    "end_time": "2024-10-26T19:45:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "67"
+  },
+  {
+    "team_name": "ModSpot",
+    "start_time": "2024-10-26T20:50:00.000Z",
+    "end_time": "2024-10-26T20:55:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": "68"
+  },
+  {
+    "team_name": "ModSpot",
+    "start_time": "2024-10-26T19:45:00.000Z",
+    "end_time": "2024-10-26T19:50:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "68"
+  },
+  {
+    "team_name": "ModSpot",
+    "start_time": "2024-10-26T19:30:00.000Z",
+    "end_time": "2024-10-26T19:35:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "68"
+  },
+  {
+    "team_name": "ModSpot",
+    "start_time": "2024-10-26T20:55:00.000Z",
+    "end_time": "2024-10-26T21:00:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "Best Startup Track Hack",
+    "location": "68"
+  },
+  {
+    "team_name": "ColorMatch",
+    "start_time": "2024-10-26T20:00:00.000Z",
+    "end_time": "2024-10-26T20:05:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "69"
+  },
+  {
+    "team_name": "ColorMatch",
+    "start_time": "2024-10-26T19:50:00.000Z",
+    "end_time": "2024-10-26T19:55:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "69"
+  },
+  {
+    "team_name": "ColorMatch",
+    "start_time": "2024-10-26T19:35:00.000Z",
+    "end_time": "2024-10-26T19:40:00.000Z",
+    "prize_category": "Best Gamification Hack",
+    "sponsor_name": "Queen of Hearts Game Changer",
+    "location": "69"
+  },
+  {
+    "team_name": "unwind",
+    "start_time": "2024-10-26T19:55:00.000Z",
+    "end_time": "2024-10-26T20:00:00.000Z",
+    "prize_category": "Best UI/UX Hack",
+    "sponsor_name": "Looking Glass Glam",
+    "location": "70"
+  },
+  {
+    "team_name": "unwind",
+    "start_time": "2024-10-26T19:05:00.000Z",
+    "end_time": "2024-10-26T19:10:00.000Z",
+    "prize_category": "Best Active-Wellness/Health Hack",
+    "sponsor_name": "The Queen's Vitality Tonic",
+    "location": "70"
+  },
+  {
+    "team_name": "unwind",
+    "start_time": "2024-10-26T19:35:00.000Z",
+    "end_time": "2024-10-26T19:40:00.000Z",
+    "prize_category": "Best Beginner Hack (College)",
+    "sponsor_name": "Alice's Brave Venture",
+    "location": "70"
+  },
+  {
+    "team_name": "Financial Access for All",
+    "start_time": "2024-10-26T21:00:00.000Z",
+    "end_time": "2024-10-26T21:05:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best DEI Hack sponsored by Fidelity",
+    "location": "71"
+  },
+  {
+    "team_name": "LockedIn",
+    "start_time": "2024-10-26T21:05:00.000Z",
+    "end_time": "2024-10-26T21:10:00.000Z",
+    "prize_category": "",
+    "sponsor_name": "[MLH] Best Use of PropelAuth",
+    "location": "72"
+  },
+  {
+    "team_name": "LockedIn",
+    "start_time": "2024-10-26T20:05:00.000Z",
+    "end_time": "2024-10-26T20:10:00.000Z",
+    "prize_category": "Best Education Hack",
+    "sponsor_name": "Cheshire Classroom Creation",
+    "location": "72"
+  },
+  {
+    "team_name": "LockedIn",
+    "start_time": "2024-10-26T19:50:00.000Z",
+    "end_time": "2024-10-26T19:55:00.000Z",
+    "prize_category": "Best Hack for Social Good",
+    "sponsor_name": "Hearts of Good Award",
+    "location": "72"
+  },
+  {
+    "team_name": "LockedIn",
+    "start_time": "2024-10-26T18:55:00.000Z",
+    "end_time": "2024-10-26T19:00:00.000Z",
+    "prize_category": "Best Accessibility Solution",
+    "sponsor_name": "WonderBridge Connecting All Users",
+    "location": "72"
+  },
+  {
+    "team_name": "LockedIn",
+    "start_time": "2024-10-26T18:50:00.000Z",
+    "end_time": "2024-10-26T18:55:00.000Z",
+    "prize_category": "Best Hack for Real-World Change",
+    "sponsor_name": "ICF",
+    "location": "72"
+  }
+]
