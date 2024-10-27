@@ -8,7 +8,7 @@
             <th>Location</th>
         </tr>
         <tr>
-            <td>John DoeNext Stop: College!</td>
+            <td>Next Stop: College!</td>
             <td>2:00</td>
             <td>Spades I5</td>
         </tr>
