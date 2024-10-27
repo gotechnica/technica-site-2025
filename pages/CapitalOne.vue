@@ -10,7 +10,7 @@
         <tr>
             <td>John DoeNext Stop: College!</td>
             <td>2:00</td>
-            <td>Location Unknown</td>
+            <td>Spades I5</td>
         </tr>
         <tr>
             <td>EasiPeasi Expense Snap</td>
