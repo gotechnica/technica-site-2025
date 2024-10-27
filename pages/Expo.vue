@@ -32,7 +32,7 @@
 
 <script>
 import ExpoTable from '../components/expo/ExpoTable.vue';
-import data from '../static/test_data_schedule.json';
+import data from '../static/big_test_data_schedule.json';
 export default {
   name: 'ExpoPage',
   components: {
@@ -133,10 +133,10 @@ export default {
           item.prize_category = k.prize_category;
           item.sponsor_name = k.sponsor_name;
           if(k.location == null) {
-              if(k[4] === "Technica") {
-                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
+              if(k.sponsor_name.toString().startsWith("Bloomberg") || k.sponsor_name.toString().startsWith("ICF")) {
+                item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=LYU-6ovOQfOfpx0ZqyK-";
               } else {
-                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=LYU-6ovOQfOfpx0ZqyK-";
+                item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
               }
               
           } else {

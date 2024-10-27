@@ -5,7 +5,7 @@
     "end_time": "2024-10-26T16:05:00.000Z",
     "prize_category": "Best Education Hack",
     "sponsor_name": "Cheshire Classroom Creation",
-    "location": "1"
+    "location": null
   },
   {
     "team_name": "Realtime chat APP",
@@ -13,7 +13,7 @@
     "end_time": "2024-10-26T16:10:00.000Z",
     "prize_category": "Best UI/UX Hack",
     "sponsor_name": "Looking Glass Glam",
-    "location": "1"
+    "location": null
   },
   {
     "team_name": "Realtime chat APP",
@@ -21,7 +21,7 @@
     "end_time": "2024-10-26T16:15:00.000Z",
     "prize_category": "Best Accessibility Solution",
     "sponsor_name": "WonderBridge Connecting All Users",
-    "location": "1"
+    "location": null
   },
   {
     "team_name": "Realtime chat APP",
@@ -29,6 +29,6 @@
     "end_time": "2024-10-26T16:20:00.000Z",
     "prize_category": "Best Hack for Real-World Change",
     "sponsor_name": "ICF",
-    "location": "1"
+    "location": null
   }
 ]
