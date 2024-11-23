@@ -3,49 +3,53 @@
   <!-- <title>Technica Home</title> -->
   <div class="main-body">
     <!-- Hero's Section -->
-    <!-- <HeroLanding /> -->
+    <HeroLanding />
     
+    <div class="containers after">
+      <H1>Thank you for Coming!</H1>
+    </div>
+
     <!-- DAY OF! -->
     <div class="container timer">
-      <Timer />
+      <!-- <Timer /> -->
     </div>
 
     <div class="container">
-      <Announcements />
+      <!-- <Announcements /> -->
     </div>
 
     <!-- About Technica Section -->
     <div class="container">
-      <!-- <About /> -->
+      <About />
     </div>
 
     <div class="container">
-      <!-- <Achievements /> -->
+      <Achievements />
     </div>
 
     <!-- What to do at Technica Section -->
     <div class="whatToDo">
-      <!-- <WhatToDo /> -->
+      <WhatToDo />
     </div>
 
     <!-- Hybrid Environment Section -->
     <div class="container hybrid">
-      <!-- <HybridEnv /> -->
+      <HybridEnv />
     </div>
 
     <!-- Hear From Past Hackers -->
     <div class="container">
-      <!-- <TestimoniesCarousel class="main-section" /> -->
+      <TestimoniesCarousel class="main-section" />
     </div>
 
     <!-- Tracks Section -->
     <div class="container">
-      <!-- <Tracks /> -->
+      <Tracks />
     </div>
 
     <!-- Additional Info Section -->
     <div class="container">
-      <!-- <AdditionalInfo /> -->
+      <AdditionalInfo />
     </div>
 
     <!--Keynote Speakers Section -->
@@ -192,6 +196,12 @@ useHead({
   margin-top: -2rem;
   margin-bottom: -10rem;
   width: 70%;
+}
+
+.after {
+  text-align: center;
+  color: white;
+  margin-bottom: 20rem;
 }
 
 @media screen and (max-width: 630px) {
