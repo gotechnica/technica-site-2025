@@ -4,7 +4,7 @@
     <Header>Expo</Header>
     <div style="margin-top: 5rem;"></div>
     <div class="container mx-auto">
-      <div>
+      <!--<div>
         <div>
           <p class="table-description">
             A schedule of all demo times and their corresponding locations will
@@ -21,7 +21,8 @@
         <Header>Frequently Asked Questions</Header>
         <div style="margin-top: 5rem;"></div>
         <FAQ class="faq-section" faqId="faq" :qaList="qaList" />
-      </div>
+      </div>-->
+      <h1 class="title">Expo has ended! Thank you to all that participated!</h1>
     </div>
     <div>
       <StickyButton v-if="showStickyUp" />
@@ -193,7 +194,7 @@ export default {
 .title {
   margin: 3.5rem 0 1.5rem 0;
   text-align: center;
-  color: $DARKGREEN;
+  color: $DARKPURPLE;
 }
 .faq-section {
   margin-bottom: 10rem;
