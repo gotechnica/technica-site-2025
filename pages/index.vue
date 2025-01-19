@@ -6,7 +6,7 @@
     <HeroLanding />
     
     <div class="containers after">
-      <H1>Thank you for Coming!</H1>
+      <H1>Thank You For Coming!</H1>
     </div>
 
     <!-- DAY OF! -->
