@@ -3,6 +3,6 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "noEmitOnError": true,
-    "moduleResolution": "node"
+    "moduleResolution": "bundler"
   }
 }
