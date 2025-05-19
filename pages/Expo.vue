@@ -190,7 +190,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './styles/base.scss';
+@import './styles/base.css';
 .title {
   margin: 3.5rem 0 1.5rem 0;
   text-align: center;
