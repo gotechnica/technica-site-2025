@@ -12,12 +12,15 @@
 		class="card"
 		:class="[card.color, { wide: card.wide }]"
 	  >
+	  <!-- Why are quotes and images for the same card rendered separately? -->
 		<div v-if="card.type === 'quote'" class="card-content quote">
 		  <div>
 			<h3>“</h3>
 			<p>
 			  {{ !isShorten ? card.quote : card.shortenQuote}}
 			</p>
+			<!-- Added end quotes, because why wouldn't you include them???? -->
+			<h3>”</h3>
 		  </div>
 		  <h3 class="name">
 			{{ card.quoteName }}
@@ -30,7 +33,7 @@
 		  :src="`/fellows/${card.image}`"
 		/>
 	  </div>
-	</div>
+	  </div>
   </template>
   
 <script setup lang="ts">
@@ -144,7 +147,6 @@ function prev() {
 	white-space: nowrap;
 }
 
-
 .card {
 	display: inline-block;
 	width: 50%;
@@ -178,6 +180,7 @@ function prev() {
 	& .card-content {
 	  width: 100%;
 	  height: 100%;
+	
 	}
 	
 	& .quote {
@@ -185,6 +188,7 @@ function prev() {
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 2rem;
+		height: 100%;
 
 		@media screen and (max-width: 1450px) {
 			padding: 2rem;
@@ -198,9 +202,14 @@ function prev() {
 			padding: 10%;
 		}
 	
+		//Some of the quotes were too long, scrollable feature
 		p {
+			position: relative;
 			margin-top: -0.5rem;
-
+			overflow-y: auto;
+			height: 18rem;
+			scrollbar-width: thin;
+			padding-right: 20px;
 		}
   
 		.name {
@@ -253,5 +262,29 @@ function prev() {
 		height: 19rem;
 	}
 }
+</style>
+
+<style lang = "scss">
+/* Tried to modify the scrollbar to look better, but style won't apply??? */
+
+ .card .quote p::-webkit-scrollbar {
+ 	background-color: transparent;
+	width: 5px;
+ }
+
+.card .quote p::-webkit-scrollbar-thumb {
+ 	border-radius: 3px;
+}
+
+ .card .quote p::-webkit-scrollbar-track {
+	background: transparent;
+ }
+
+ .card .quote p::-webkit-scrollbar-button {
+ 	display: none;
+	height: 0;
+
+}
+
 </style>
   
