@@ -1,44 +1,55 @@
 <template>
-    <div class="wrapper">
-        <Header>About Technica</Header>
-        <div class="row">
-            <div class="col-md-6 padding">
-                <p>Technica is the world's largest hackathon for underrepresented genders in tech. The hackathon is hosted annually at the University of Maryland, and is a weekend jam-packed with swag, workshops, networking, and awesome projects!</p>
-                <p>Last year we had over 800+ hackers participate (both in-person and online), comprised of underrepresented groups from many different backgrounds. We had 121 awesome projects submitted, many of which that tackle real-world issues with unique solutions!</p>
-            </div>
-            <div class="col-md-6">
-                <div class="video-container">
-                    <!-- <img src="/video-container.svg"> -->
-                    <iframe class="fellows-video" src="https://www.youtube.com/embed/4PBEfogEP6s?si=Us0BnivHvQ-bpEaV" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
+  <div class="wrapper">
+    <Header>About Technica</Header>
+    <div class="row">
+      <div class="col-md-6 padding">
+        <p>
+          Technica is the world's largest hackathon for underrepresented genders
+          in tech. The hackathon is hosted annually at the University of
+          Maryland, and is a weekend jam-packed with swag, workshops,
+          networking, and awesome projects!
+        </p>
+        <p>
+          Last year we had over 800+ hackers participate (both in-person and
+          online), comprised of underrepresented groups from many different
+          backgrounds. We had 114 awesome projects submitted, many of which that
+          tackle real-world issues with unique solutions!
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="video-container">
+          <iframe
+            class="recap-video"
+            src="https://www.youtube.com/embed/YZZYDJbuJF8?si=SmOTifPbtn5o8WLR"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
         </div>
+      </div>
     </div>
+  </div>
 </template>
-<script setup="ts">
-</script>
+<script setup="ts"></script>
 <style scoped lang="scss">
-
 .video-container iframe {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .video-container {
-    width: 100%;
-    height: 25vw;
+  width: 100%;
+  height: 25vw;
 }
 
 .col-md-6 {
-    margin-top: 3%;
+  margin-top: 3%;
 }
 
 .padding {
-    padding: 5%;
+  padding: 5%;
 }
 p {
-    color: $DARKWHITE;
+  color: $DARKWHITE;
 }
-
 </style>
