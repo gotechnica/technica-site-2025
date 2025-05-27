@@ -62,30 +62,14 @@ export default {
   data() {
     return {
       links: [
-        { dropdown: false, name: 'Home', path: '/' },
-        // { dropdown: false, name: 'Register', path: './Register'},
-        /*{ dropdown: false, name: 'Annual Report', path: './Report'},*/
-        { dropdown: false, name: 'Expo', path: '/expo' }, 
-        /* { dropdown: false, name: 'Capital One Judging', path: '/capitalOne'}, */
-        { dropdown: false, name: 'Schedule', path: '/schedule' }, 
-        { dropdown: false, name: 'Gather', path: '/gather' }, 
-        { dropdown: false, name: 'Maps', path: '/maps' }, 
-        { dropdown: false, name: 'Devpost', path: 'https://technica-2024.devpost.com'},
-        /* { dropdown: false, name: 'Slack', path: '/slack'}, */
-        // { dropdown: false, name: 'Minors', path: '/minor' }, 
-        { dropdown: false, name: 'Data Rights', path: 'https://forms.gle/i8YqC1HN1rZ55xy86'},
+        // { dropdown: false, name: 'Home', path: '/' },
+        { dropdown: false, name: 'Register', path: './Register'},
+        { dropdown: false, name: 'Fellows', path: './Fellows'},
+        { dropdown: false, name: 'Ambassadors', path: './Ambassadors'},
+        { dropdown: false, name: 'Mentors & Volunteers', path: './Mentors-Volunteers'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
-        {
-          dropdown: true, showDropdown: false, name: 'Programs',
-          items: [
-            
-            {name: 'Fellows', path: '/Fellows' },
-            {name: 'Ambassadors', path: '/Ambassadors' },
-            {name: 'Mentors and Volunteers', path: '/Mentors-Volunteers' },
-            {name: 'Travel', path: '/Travel' },
-            {name: 'Tracks', path: '/Tracks' },
-          ]
-        },
+        { dropdown: false, name: 'Travel', path: '/Travel' },
+        { dropdown: false, name: 'Tracks', path: '/Tracks' },
       ]
     }
   },
