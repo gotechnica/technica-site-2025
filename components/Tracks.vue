@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header>Tracks</Header>
+    <div style="margin-top: 5rem"></div>
     <div class="row">
       <div
         v-for="(card, index) in cards"

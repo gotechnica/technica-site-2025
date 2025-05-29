@@ -3,7 +3,6 @@
   <div class="card" :class="{ flipped: isFlipped }">
     <div class="card-front">
       <div class="left-column">
-        <!-- <h1 style="margin-left: 0;">"</h1> -->
         <p>{{ testimonyDescription }}</p>
         <h3>{{ hackerName }}</h3>
         <h4>{{ hackerDesc }}</h4>
@@ -14,7 +13,11 @@
         </div>
         <div v-if="hasProject">
           <button class="flip-button" @click="flipCard">Flip To Project</button>
-          <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+          <img
+            class="flip-arrow"
+            src="/testimonials/flip.svg"
+            alt="flip arrow"
+          />
         </div>
       </div>
     </div>
@@ -29,8 +32,14 @@
           <img :src="`${projectImage}`" alt="Project Image" />
         </div>
         <div>
-          <button class="flip-button" @click="flipCard">Flip To Testimony</button>
-          <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+          <button class="flip-button" @click="flipCard">
+            Flip To Testimony
+          </button>
+          <img
+            class="flip-arrow"
+            src="/testimonials/flip.svg"
+            alt="flip arrow"
+          />
         </div>
       </div>
     </div>
@@ -44,56 +53,55 @@ export default defineComponent({
   props: {
     testimonyDescription: {
       type: String,
-      required: true
+      required: true,
     },
     hackerName: {
       type: String,
-      required: true
+      required: true,
     },
     hackerDesc: {
       type: String,
-      required: true
+      required: true,
     },
     hackerImage: {
       type: String,
-      required: true
+      required: true,
     },
     projectName: {
       type: String,
-      required: false
+      required: false,
     },
     projectCategories: {
       type: String,
-      required: false
+      required: false,
     },
     projectDescription: {
       type: String,
-      required: false
+      required: false,
     },
     projectImage: {
       type: String,
-      required: false
+      required: false,
     },
     hasProject: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      isFlipped: false
+      isFlipped: false,
     };
   },
   methods: {
     flipCard() {
       this.isFlipped = !this.isFlipped;
-    }
-  }
+    },
+  },
 });
 </script>
 
 <style scoped lang="scss">
-
 // Text accessibility
 p {
   color: $DARKPURPLE;
@@ -101,7 +109,7 @@ p {
 
 .card {
   position: absolute;
-  width: 50vw;  
+  width: 50vw;
   height: 39.6vw;
   max-width: 710px;
   max-height: 550px;
@@ -114,7 +122,7 @@ p {
 .card-back,
 .card-front {
   visibility: visible;
-  background-image: url("/testimonials/testimonial-card.svg");
+  background-image: url('/testimonials/testimonial-card.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
@@ -179,7 +187,7 @@ p {
 
 .image-container img {
   border: 0.3rem solid $MIDGREEN;
-  border-radius: 60%;  
+  border-radius: 60%;
   position: absolute;
   top: 0;
   left: 0;
@@ -215,14 +223,18 @@ button.flip-button {
   border-width: 0;
   white-space: nowrap;
 }
-/* 
-.flip-arrow {
-} */
 
 /* responsivity */
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .card {
+    width: 55vw;
+    height: 55vw;
+  }
+
+  .card-back,
+  .card-front {
+    padding: 1rem;
     width: 55vw;
     height: 55vw;
   }
@@ -234,21 +246,20 @@ button.flip-button {
   p {
     font-size: 80%;
   }
-
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .card {
     width: 50vw;
     height: 75vw;
   }
 
-.card-back,
-.card-front {
-  background-image: none;
-  background-color: #EBBCCA;
-  border-radius: 20px;
-}
+  .card-back,
+  .card-front {
+    background-image: none;
+    background-color: #ebbcca;
+    border-radius: 20px;
+  }
 
   .left-column {
     margin-top: 30vw;
@@ -297,5 +308,4 @@ button.flip-button {
     font-size: 0.7rem;
   }
 }
-
 </style>

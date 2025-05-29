@@ -1,6 +1,5 @@
 <template>
   <div class="additional-info-container" v-if="mounted">
-    <div style="margin-top: 5rem"></div>
     <Header>Additional Information</Header>
     <div class="cards-container">
       <div
@@ -119,7 +118,7 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin: 5rem;
+  margin: 5rem 5rem 0 5rem;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
