@@ -6,8 +6,7 @@
     <div class="travel-header section">
       <div class="process-blurb">
         <p>
-          Technica will be hosted at the Reckord Armory, College Park, MD, 
-          from 9 AM, Saturday, October 26th to 5 PM, Sunday, October 27th.
+          Technica will be hosted in College Park, MD in late October.
         </p>
         <p>
           We will offer travel reimbursement and bus accommodations at specified universities 
@@ -53,13 +52,16 @@
               {{ route }}
             </li>
           </ul>
-          <p>
+          <!-- Commenting out for now because dates/place not finalized -->
+          <!-- <p>
             All buses would arrive at the Reckord Armory at the University of Maryland 
             (4490 Rossborough Ln, College Park, MD 20742) on 
             <b>Saturday, October 26th at approximately 10 AM</b> 
             and depart from the Reckord Armory on <b>Sunday, October 27th at 5 PM.</b>
-          </p>
-          <VineButton text="Bus Form" link="https://forms.gle/LiZe4ESwWs84oSpb8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
+          </p> -->
+
+          <!-- Used for Bus Form Link-->
+          <!-- <VineButton text="Bus Form" link="https://forms.gle/LiZe4ESwWs84oSpb8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/> -->
           </div>
         <div class="info-section">
           <h3>Reimbursement</h3>
@@ -74,7 +76,7 @@
             to the University of Maryland and are unable to travel via buses Technica sends. 
             Reimbursements will be evaluated on a <b>first-come, first-serve basis</b> and may not cover the full cost of travel. 
             Notice of reimbursement approval/rejection will be sent via email before the event. 
-            Minors are eligible to apply for travel reimbursement; please refer to the Technica 2024 Minor Policy for further details. 
+            Minors are eligible to apply for travel reimbursement; please refer to the Technica 2025 Minor Policy for further details. 
           </p>
           <p>
             Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park or a Technica bus stop. 
@@ -94,11 +96,12 @@
             Reimbursement amounts per method of transportation 
             (note that in a carpool, <b>only the driver may receive reimbursement</b>):
           </p>
-          <ul>
+          <!-- Used to list the actual reinbursement prices, edit the variable transportation for the updated price values-->
+          <!-- <ul>
             <li v-for="item in transportation" :key="item.name">
               {{ item.name }}: ${{ item.minPrice }} - ${{ item.maxPrice }}
             </li>
-          </ul>
+          </ul> -->
           <p>
             Reimbursement amount is dependent on how much was spent on traveling to Technica. 
             Hackers should make sure to keep their trip purchase receipts and 
@@ -113,7 +116,7 @@
             If hackers are taking the Technica-provided bus, they are responsible for getting themselves to the bus stop.
           </p>
           <p>
-            Technica will reimburse up to $200 for any hackers traveling from the United States and Canada. 
+
             Reimbursements will only be in US dollars. 
             Please note that Technica will not reimburse travel from any other country.
           </p>
@@ -134,7 +137,8 @@
             If you are unsure whether your documentation is acceptable, 
             please email <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b> for clarification. 
           </p>
-          <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
+          <!-- Used for Reinbursement Form Link-->
+          <!-- <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/> -->
         </div>
       </div>
       <div class="faq-section section">
@@ -205,12 +209,13 @@ const routes = [
   "University of Pennsylvania → University of Delaware → Towson University → Johns Hopkins University → University of Maryland, Baltimore County → University of Maryland, College Park",
 ];
 
-const transportation = [
-  { name: 'Car', minPrice: 1, maxPrice: 40 },
-  { name: 'Metro', minPrice: 1, maxPrice: 20 },
-  { name: 'Bus/Train', minPrice: 1, maxPrice: 100 },
-  { name: 'Plane', minPrice: 1, maxPrice: 200 },
-]
+// Used for Transportation Cost List Section
+// const transportation = [
+//   { name: 'Car', minPrice: 1, maxPrice: 40 },
+//   { name: 'Metro', minPrice: 1, maxPrice: 20 },
+//   { name: 'Bus/Train', minPrice: 1, maxPrice: 100 },
+//   { name: 'Plane', minPrice: 1, maxPrice: 200 },
+// ]
 
 const documentation = [
   {
@@ -270,7 +275,7 @@ const documentation = [
 }
 
 .process-blurb {
-  text-align: left;
+  text-align: center;
   width: min(81rem, 100%);
   margin: auto;
   margin-top: 2rem;
