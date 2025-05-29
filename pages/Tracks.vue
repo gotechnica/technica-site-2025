@@ -1,6 +1,6 @@
 <template>
 
-  <title>2024 Tracks</title>
+  <title>2025 Tracks</title>
   <div class="container">
 
     <!-- HEADER BANNER -->
@@ -9,8 +9,8 @@
 
     <!-- DESCRIPTION -->
     <div style="margin-top: 2rem;"></div>
-    <p>
-      Each of Technica's five tracks are designed to best accomodate a hacker's
+    <p class="text-center">
+      Each of Technica's four tracks are designed to best accomodate a hacker's
       interests and skill level, and will have track-specific mentors for
       support and guidance during the hackathon. During registration, hackers
       will select the track that they feel best aligns with their goals for the
@@ -35,7 +35,7 @@
     iconLink="Technica-Tracks-conflict-01.svg"
     altText="!!! REPLACE THIS !!!"
     heading="General Track"
-    description="The general track is for any and all hackers! Individuals of all skill levels and with any interests and curiosities are welcomed and supported. In this track, you will bring creative ideas to life through building projects that use software, hardware, or anything that is reachable. You will have the opportunity to connect and collaborate with hackers of diverse backgrounds, experiences, and interests on a project of your own." />
+    description="The general track is for any and all hackers! Individuals of all skill levels and with any interests and curiosities are welcomed and supported. In this track, you will bring creative ideas to life through building projects that use software or anything that is reachable. You will have the opportunity to connect and collaborate with hackers of diverse backgrounds, experiences, and interests on a project of your own." />
   
     <div style="margin-top: 3rem;"></div>
     <TracksIconCard borderColor="#FFFFFF"
@@ -59,17 +59,6 @@
 
     Hackers are highly encouraged to attend the beginner track's exclusive workshops. The guided and hands-on workshops will help you set up your programming environment, introduce you to web development, and more! Get excited for the opportunity to build your own working website and collaborate with other hackers on meaningful projects.
         
-    This track is for in-person attendance only." />
-  
-    <div style="margin-top: 3rem;"></div>
-    <TracksIconCard borderColor="#FFFFFF"
-    backgroundColor="#0E675B"
-    padding="5% 5% 5% 5%"
-    iconLink="Technica-Tracks-color-09.svg"
-    altText="!!! REPLACE THIS !!!"
-    heading="Hardware Track"
-    description="Technica’s hardware track caters to those interested in exploring the fusion of software and hardware engineering. During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond. Whether you're an experienced hardware hacker or just starting out, come join us at Technica for an in-depth exploration of innovation, problem-solving, and more in the realm of hardware technology!
-    
     This track is for in-person attendance only." />
   
     <div style="margin-top: 3rem;"></div>
