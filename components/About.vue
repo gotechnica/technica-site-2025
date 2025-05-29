@@ -19,8 +19,8 @@
       <div class="col-md-6">
         <div class="video-container">
           <iframe
-            class="fellows-video"
-            src="https://www.youtube.com/embed/YZZYDJbuJF8?si=9-CYaV0K9uwbMzEs"
+            class="recap-video"
+            src="https://www.youtube.com/embed/YZZYDJbuJF8?si=VeMp8j6L7SlOkPoi"
             frameborder="0"
             allowfullscreen
           >

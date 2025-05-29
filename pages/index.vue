@@ -100,7 +100,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2025 will take place on October 26-27 in The Armory at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
+      'Technica 2025 will take place on October 25-26 in The Armory at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
   },
   {
     question: 'Who can attend Technica?',
@@ -149,7 +149,7 @@ const qaList = [
   {
     question: 'I have an unanswered question',
     answer:
-      'We’d love to hear from you! Reach out to us at <a href="mailto:hello@gotechnica.org">hello@gotechnica.org</a> and we’ll be in touch soon.',
+      'We’d love to hear from you! Reach out to us at <a style="color:#4E23AA" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a> and we’ll be in touch soon.',
   },
 ];
 
