@@ -1,25 +1,42 @@
 <template>
   <div class="container">
     <Header>Tracks</Header>
+    <div style="margin-top: 5rem"></div>
     <div class="row">
-      <div v-for="(card, index) in cards" :key="index" class="flip-card-3D-wrapper col-lg-4">
-        <div class="flip-card" :class="{ 'do-flip': card.flipped }" @click="toggleFlip(card)">
+      <div
+        v-for="(card, index) in cards"
+        :key="index"
+        class="flip-card-3D-wrapper col-lg-4"
+      >
+        <div
+          class="flip-card"
+          :class="{ 'do-flip': card.flipped }"
+          @click="toggleFlip(card)"
+        >
           <div class="flip-card-front">
-            <img class="card-img" :src="card.image" alt="Card Image">
+            <img class="card-img" :src="card.image" alt="Card Image" />
             <div class="card-body">
               <span class="flip-text">Learn More</span>
-              <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+              <img
+                class="flip-arrow"
+                src="/testimonials/flip.svg"
+                alt="flip arrow"
+              />
             </div>
           </div>
           <div class="flip-card-back">
-            <img class="card-img" :src="card.imageFlipped" alt="Card Image">
+            <img class="card-img" :src="card.imageFlipped" alt="Card Image" />
             <div class="card-body-flipped">
               <p>{{ card.title }} track</p>
               <p style="color: #653554">{{ card.backContent }}</p>
             </div>
             <div class="return-front">
               <span class="flip-text">Return to front</span>
-              <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+              <img
+                class="flip-arrow"
+                src="/testimonials/flip.svg"
+                alt="flip arrow"
+              />
             </div>
           </div>
         </div>
@@ -42,43 +59,39 @@ const cards = ref<Card[]>([
   {
     title: 'General',
     frontContent: 'A track for anyone and everyone!',
-    backContent: 'For any and all hackers! Come build to your heart\'s content using hardware, software, or anything you want with other hackers. Hackers can be students, designers, or just any tech-lovers out there. Hackers of all skill levels are welcomed and supported!',
+    backContent:
+      "For any and all hackers! Come build to your heart's content using hardware, software, or anything you want with other hackers. Hackers can be students, designers, or just any tech-lovers out there. Hackers of all skill levels are welcomed and supported!",
     flipped: false,
     image: 'tracks/Technica-Tracks-conflict-01.svg',
-    imageFlipped: 'tracks/Technica-Tracks-final-04.svg'
+    imageFlipped: 'tracks/Technica-Tracks-final-04.svg',
   },
   {
     title: 'Beginner',
     frontContent: 'A track for those new to hackathons!',
-    backContent: 'New to hackathons? Don\'t know how to code? No worries! You\'ll be provided with resources to help you succeed at Technica and beyond. This track begins with exclusive workshops a few weeks before Technica, and includes everything from an introduction to hackathons to coding and logic concepts.',
+    backContent:
+      "New to hackathons? Don't know how to code? No worries! You'll be provided with resources to help you succeed at Technica and beyond. This track begins with exclusive workshops a few weeks before Technica, and includes everything from an introduction to hackathons to coding and logic concepts.",
     flipped: false,
     image: 'tracks/Technica-Tracks-color-05.svg',
-    imageFlipped: 'tracks/Technica-Tracks-final-10.svg'
+    imageFlipped: 'tracks/Technica-Tracks-final-10.svg',
   },
   {
-  title: 'Startup',
+    title: 'Startup',
     frontContent: 'A track for those interested in business!',
-    backContent: 'Interested in the business side of building a project? Join startup track! Featuring both workshops before and during Technica weekend, startup track is a unique opportunity to explore an alternate dimension of project building that you won\'t want to miss out on!',
+    backContent:
+      "Interested in the business side of building a project? Join startup track! Featuring both workshops before and during Technica weekend, startup track is a unique opportunity to explore an alternate dimension of project building that you won't want to miss out on!",
     flipped: false,
     image: 'tracks/Technica-Tracks-color-07.svg',
-    imageFlipped: 'tracks/Technica-Tracks-final-06.svg'
+    imageFlipped: 'tracks/Technica-Tracks-final-06.svg',
   },
   {
-  title: 'Research',
+    title: 'Research',
     frontContent: 'A track for those interested in business!',
-    backContent: 'Interested in research? Explore different areas where you will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend.',
+    backContent:
+      'Interested in research? Explore different areas where you will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend.',
     flipped: false,
     image: 'tracks/Technica-Tracks-color-03.svg',
-    imageFlipped: 'tracks/Technica-Tracks-final-08.svg'
+    imageFlipped: 'tracks/Technica-Tracks-final-08.svg',
   },
-  {
-  title: 'Hardware',
-    frontContent: 'A track for those interested in hardware!',
-    backContent: 'Want to explore the fusion of software and hardware engineering? Join the hardware track! During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond.',
-    flipped: false,
-    image: 'tracks/Technica-Tracks-color-09.svg',
-    imageFlipped: 'tracks/Technica-Tracks-final-02.svg'
-  }
 ]);
 
 const toggleFlip = (card: Card) => {
@@ -115,7 +128,7 @@ body {
   transition: all 1s ease-in-out;
   transform-style: preserve-3d;
   height: 446px;
-  width: 318px
+  width: 318px;
 }
 
 .do-flip {
