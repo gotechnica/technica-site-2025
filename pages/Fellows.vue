@@ -30,8 +30,38 @@
         <div class="col section">
           <h3>About the Program</h3>
           <p>
+
+            <!-- New description based on fellowship page, separated some points into list (Let me know what you think!!)-->
+            The Technica Fellowship Program is an 8-week initiative, running from <strong>June</strong> to <strong>August</strong>, designed for students of all skill levels — especially those with less technical experience who are eager to grow! Throughout the program, fellows will: </p>
+            <ul>
+              <li>collaborate on a guided technical project</li>
+              <li>gain hands-on experience</li>
+              <li>develop coding and teamwork skills</li>
+              <li>build confidence within a supportive, mentorship-based environment</li>
+            </ul>
+
+
+          <!-- Little bit of spacing here, no need to make a new css rule for it... -->
+          <h3 style = "margin-top: 3rem;">Weekly Schedule</h3>
+
+          <h5>Sunday Evening:</h5>
+          <p><span class = "schedule-act">Project Work Sessions / Technical Workshops: </span>Hands-on work on technical projects, guided learning sessions, and skill-building workshops</p>
+
+          <hr>
+    
+          <h5>Tuesday and Thursday Evening:</h5>
+          <p>
+          <span class = "schedule-act">Professional Development Workshop:</span> Workshops focused on career growth, including resume building, interview prep, networking, and tech industry insights<br>
+
+          <span style = "display: flex; justify-content: center;">OR</span><br>
+
+          <span class = "schedule-act">Bonding Workshop:</span> Fun, interactive workshops designed to build team cohesion, foster relationships, and explore topics related to personal growth and community building
+          </p>
+
+          <!-- Old description:
+
             The Technica Fellowship Program is a 8-week initiative during June
-            26th - August 14th that seeks to democratize access to the tech
+            to August that seeks to democratize access to the tech
             industry. In this program, a group of exceptional students will be
             given the special opportunity to work directly on Technica’s very
             own digital platform. Fellows will gain real industry experience
@@ -40,8 +70,7 @@
             mentors, organizers, and sponsors!<br /><br />
             The fellowship is designed for <b>rising college freshmen</b> who
             have a demonstrated interest in technology but have not had an
-            industry internship yet.
-          </p>
+            industry internship yet. -->
         </div>
         <div class="col section">
           <h3>Testimonials</h3>
@@ -51,38 +80,37 @@
                 <Carousel :initialCards="FellowCards" :isMobile="false" :isShorten="isShorten" ref="carouselRef1" />
               </div>
               <div class="buttons">
-                <img class="prev" @click="prev" src="/icons/left-arrow.svg" />
-                <img class="next" @click="next" src="/icons/right-arrow.svg" />
+                <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
+                <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
               </div>
             </div>
           </div>
         </div>
         <div class="col section section-req">
           <h3>Application Requirements</h3>
+          <p>To be eligible for the Technica Fellowship Program, applicants must:</p>
           <ul>
-            <li style="color: white;" v-for="item in items" :key="item">
+            <li v-for="item in items" :key="item">
               {{ item }}
             </li>
           </ul>
         </div>
         <div class="col section">
-          <h3>Program Outcomes</h3>
-          <p>
-            The goal of the fellowship is to give you hands-on experience
-            working on a real-world technology project in order to give you a
-            leg up in your career, supplemented with a supportive community of
-            other underrepresented individuals in tech. Along the way, you'll
-            get access to world-class workshops and tutorials to help you get up
-            to speed, exclusive networking/career opportunities with our sponsor
-            partners, and tons of free food, swag, and MORE!
-          </p>
+          <h3>Learning Outcomes</h3>
+          <p>By the end of the Technica Fellowship Program, fellows will:</p>
+          <ul>
+            <li v-for = "outcome in outcomes" :key = "outcome">
+              {{ outcome }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
     <div class="row hearFromFellows">
       <h3>Hear from Our Fellows</h3>
+      
       <div class="fellows-video-container">
-        <iframe class="fellows-video" src="https://www.youtube.com/embed/MuRBvUQ_Xp4?si=YG4grhi7RF7817UP" frameborder="0" allowfullscreen>
+        <iframe class="fellows-video" src="https://www.youtube.com/embed/OLOZIyTzyCo" frameborder="0" allowfullscreen>
         </iframe>
       </div>
     </div>
@@ -94,6 +122,12 @@
     </div>
 
     <StickyButton />
+
+
+    <!-- <div class = "temp-carousel">
+      <Car2 :initialCards="FellowCards" :isMobile="false" :isShorten="isShorten" ref="carouselRef1"/>
+    
+    </div> -->
   </div>
 </template>
 
@@ -103,6 +137,7 @@ import Carousel from '~/components/Fellows/FellowsCarousel.vue';
 import {
   FellowCards,
 } from '~/components/Fellows/FellowsCards';
+import Car2 from '~/components/Fellows/Carousel.vue';
 
 const isShorten = computed(() => {
   return width.value <= 1400;
@@ -156,11 +191,13 @@ const qaList = [
   },
   {
     question: 'Who should apply to the Fellowship?',
-    answer: 'The fellowship is designed for rising college freshmen from DC, Maryland or Virginia who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other underrepresented individuals in tech. <br><br>Fellows must identify as an underrepresented gender in tech: women, non-binary, genderqueer, and all others who are marginalized in tech.'
+    answer: 'The fellowship is designed for rising college freshmen who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other underrepresented individuals in tech. <br><br>Fellows must identify as an underrepresented gender in tech: women, non-binary, genderqueer, and all others who are marginalized in tech.'
   },
+
+  // Updated Q&A
   {
     question: 'When will this happen?',
-    answer: 'The Fellowship Program will be an 8-week program, held June 26th to August 14th. We invite our fellows and other interested applicants to Technica for our closing session of the fellowship. The Technica team is excited to release more details about weekend-of soon!'
+    answer: 'The Fellowship Program will be an 8-week program, held from June to August. We invite our fellows and other interested applicants to Technica for our closing session of the fellowship. The Technica team is excited to release more details about weekend-of soon!'
   },
   {
     question: 'What will the schedule look like?',
@@ -181,11 +218,20 @@ const qaList = [
 ];
 
 const items = [
-  'Must be a rising college freshman',
-  'Identify as an underrepresented gender in tech',
-  'From the DC, Maryland, and Virginia area',
-  'Able to commit for the whole program'
+  'Be a rising college freshman (starting college in Fall 2025)',
+  'Identify as an underrepresented gender in tech (e.g. women, nonbinary, gender-nonconforming)',
+  'Be available for the full duration of the 8-week summer program',
+  '(Preferred, but not required): Demonstrated interest in technology (e.g., school clubs, self-led projects, online courses), but no prior industry internship experience'
 ];
+
+//Learning outcomes is a list so easier to render with v-for and array of data!!
+const outcomes = [
+  'Gain hands-on experience with software development tools and practices (e.g., GitHub, version control, debugging)',
+  'Build a technical project from start to finish, collaborating effectively in teams',
+  'Develop problem-solving skills by working through real-world coding challenges',
+  'Strengthen communication and feedback skills, learning to present technical work clearly, culminating in a final project showcase',
+  'Grow a network of peers, mentors, and organizers for continued support and future opportunities in tech, with insight into next steps like clubs, internships, and personal projects',
+]
 </script>
 
 <style scoped lang='scss'>
@@ -238,15 +284,27 @@ const items = [
   width: calc(10rem + 30vw);
 }
 
-h3 {
+h3, h4 {
   color: #ffce64;
   text-align: center;
 }
 
-h4 {
+h5{
   color: #ffce64;
-  text-align: center;
 }
+
+li, p{
+  color: white;
+}
+
+.schedule-act{
+  font-weight: bold;
+}
+
+hr{
+  color: white;
+}
+
 
 .faq-heading {
   text-align: center;
@@ -289,6 +347,8 @@ h4 {
   position: relative;
   width: 100%;
   max-width: 60rem;
+  z-index: 1;
+  // background-color: blue;
 }
 
 .carousel-cards {
@@ -307,6 +367,7 @@ h4 {
   padding: 0 0.5rem;
   top: 0;
 
+
   @media screen and (max-width: 768px) {
     align-items: flex-end;
     margin-top: 2.5rem;
@@ -318,6 +379,18 @@ h4 {
     height: 2rem;
     border-radius: 2rem;
     cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+
+  //Moved arrows to make space for scrollbar
+
+  & .prev {
+    margin-left: -5%;
+  }
+
+  & .next {
+    margin-right: -5%;
   }
 }
 

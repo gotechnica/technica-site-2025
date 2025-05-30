@@ -90,7 +90,7 @@
                   > Donate
               </a>
               </p>
-              <p>Copyright &copy; 2024 | Technica</p>
+              <p>Copyright &copy; 2025 | Technica</p>
           </div>
       </div>
   </template>
