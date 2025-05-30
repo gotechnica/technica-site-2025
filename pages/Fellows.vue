@@ -80,8 +80,8 @@
                 <Carousel :initialCards="FellowCards" :isMobile="false" :isShorten="isShorten" ref="carouselRef1" />
               </div>
               <div class="buttons">
-                <img class="prev" @click="prev" src="/icons/left-arrow.svg" />
-                <img class="next" @click="next" src="/icons/right-arrow.svg" />
+                <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
+                <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
               </div>
             </div>
           </div>
@@ -110,7 +110,8 @@
       <h3>Hear from Our Fellows</h3>
       
       <div class="fellows-video-container">
-        <iframe height = "430px" width = "730px" src="https://www.youtube.com/embed/OLOZIyTzyCo" title="Technica 2025 Fellowship" frameborder="0" allowfullscreen></iframe>
+        <iframe class="fellows-video" src="https://www.youtube.com/embed/OLOZIyTzyCo" frameborder="0" allowfullscreen>
+        </iframe>
       </div>
     </div>
 
@@ -121,6 +122,12 @@
     </div>
 
     <StickyButton />
+
+
+    <!-- <div class = "temp-carousel">
+      <Car2 :initialCards="FellowCards" :isMobile="false" :isShorten="isShorten" ref="carouselRef1"/>
+    
+    </div> -->
   </div>
 </template>
 
@@ -130,6 +137,7 @@ import Carousel from '~/components/Fellows/FellowsCarousel.vue';
 import {
   FellowCards,
 } from '~/components/Fellows/FellowsCards';
+import Car2 from '~/components/Fellows/Carousel.vue';
 
 const isShorten = computed(() => {
   return width.value <= 1400;
@@ -183,7 +191,7 @@ const qaList = [
   },
   {
     question: 'Who should apply to the Fellowship?',
-    answer: 'The fellowship is designed for rising college freshmen from DC, Maryland or Virginia who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other underrepresented individuals in tech. <br><br>Fellows must identify as an underrepresented gender in tech: women, non-binary, genderqueer, and all others who are marginalized in tech.'
+    answer: 'The fellowship is designed for rising college freshmen who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other underrepresented individuals in tech. <br><br>Fellows must identify as an underrepresented gender in tech: women, non-binary, genderqueer, and all others who are marginalized in tech.'
   },
 
   // Updated Q&A
@@ -340,6 +348,7 @@ hr{
   width: 100%;
   max-width: 60rem;
   z-index: 1;
+  // background-color: blue;
 }
 
 .carousel-cards {
