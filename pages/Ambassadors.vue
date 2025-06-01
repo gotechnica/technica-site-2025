@@ -2,28 +2,28 @@
   <title>Ambassadors</title>
   <div class="container">
     <!--<H1 class="title">Become an Ambassador</H1>-->
-    <!-- <div class= "header">
+    <div class= "header">
       <img src="/headings/header2024.png">
       <h1>Become an Ambassador</h1>
-    </div> -->
-    <div style="margin-top: 5rem;"></div>
+    </div> 
+    <!-- <div style="margin-top: 5rem;"></div>
     <Header>Congrats to our Ambassadors!</Header>
     <h3>Applications are now closed.</h3>
     <p>
-      We are very excited to launch the sixth year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2024 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon for underrepresented genders!
-    </p>
-    <!-- <p>
+      We are very excited to launch the sixth year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2025 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon for underrepresented genders!
+    </p> -->
+    <p>
       Fill out the
       <a href="https://gotechnica.org/ambassadorapp">application</a> by July 16th
       at 11:59pm EST to be considered. You'll hear back by July 20th!
-    </p> -->
+    </p>
 
     <div class="row">
       <div class="col">
         <h3>What do Campus Ambassadors do?</h3>
         <ul class="list">
           <li>
-            Generate awareness, excitement, and buzz leading up to Technica 2024
+            Generate awareness, excitement, and buzz leading up to Technica 2025
           </li>
           <li>Promote Technica on your campus and social media</li>
           <li>Communicate with Technica's Outreach team weekly</li>
@@ -36,7 +36,7 @@
           <li>Have your resume shared with our sponsors</li>
           <li>Potential to earn awesome perks:</li>
           <ul>
-            <li>Travel reimbursement for Technica 2024</li>
+            <li>Travel reimbursement for Technica 2025</li>
             <li>Social Media features</li>
             <li>Host a fireside chat or workshop for Technica</li>
             <li>Custom Technica merchandise</li>
@@ -45,11 +45,11 @@
       </div>
     </div>
 
-    <!-- <div class="container">
+    <div class="container">
       <Header v-if="width <= 768" class = faq>FAQ</Header>
       <Header v-else class = faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
-    </div> -->
+    </div> 
     <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
@@ -71,9 +71,9 @@ const qaList = [
       perks you'll receive!",
   },
   {
-    question: 'When is Technica 2024?',
+    question: 'When is Technica 2025?',
     answer:
-      'Technica 2024 will take place on October 26-27 this year at The Armory at UMD!',
+      'Technica 2024 will take place on October 25-26 this year at The Reckford Armory at UMD!',
   },
   {
     question:
@@ -90,7 +90,7 @@ const qaList = [
   {
     question: "I'm in high school, can I still apply?",
     answer:
-      'Yes! Any full-time student, as of October 2024, from 6th grade onwards \
+      'Yes! Any full-time student, as of October 2025, from 6th grade onwards \
       is eligible to apply!',
   },
   {
@@ -101,8 +101,8 @@ const qaList = [
     question: 'How much of a time commitment will this role require?',
     answer:
       "If you're selected as a Campus Ambassador, all that we require is that \
-      you attend Technica 2024 and complete our weekly progress form (which \
-      will start in September 2024)! This a merit-based program, so you'll get \
+      you attend Technica 2025 and complete our weekly progress form (which \
+      will start in September 2025)! This a merit-based program, so you'll get \
       out of it as much as you put in!",
   },
 ];
@@ -178,7 +178,7 @@ a {
 
 .header h1{
   position: absolute;
-  bottom:65%;
+  bottom:77%;
   left: 50%;
   transform: translateX(-50%);
   color:#653553;
@@ -188,6 +188,24 @@ a {
 
 .main-section {
   margin-left: 3.5vw;
+}
+
+@media screen and (max-width: 950px) {
+  .header img {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+    word-wrap: normal;
+    padding-top: 0.5rem;
+    color: black;
+    bottom: 79%;
+  }
+
+  .list li { 
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -206,4 +224,39 @@ a {
     margin-left: 0;
   }
 }
+@media screen and (max-width: 572px) {
+  .header img {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 1rem;
+    word-wrap: normal;
+    padding-top: 0.5rem;
+    color: black;
+    bottom: 80%;
+  }
+
+  .list li { 
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header img {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 0.7rem;
+    word-wrap: normal;
+    padding-top: 0.5rem;
+    color: black;
+    bottom: 80.5%;
+  }
+
+  .list li { 
+    margin-left: 0;
+  }
+}
+
 </style>
