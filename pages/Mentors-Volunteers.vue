@@ -104,7 +104,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2024 will take place on October 26-27 in The Armory at UMD and virtually through our online platform, Gather. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
+      'Technica 2025 will take place on October 25-26 in The Reckord Armory at UMD and virtually through our online platform, Gather. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
   },
   {
     question:
