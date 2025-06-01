@@ -6,11 +6,11 @@
     <div class="travel-header section">
       <div class="process-blurb">
         <p>
-          Technica will be hosted in College Park, MD in late October.
+          Technica will be hosted at the Reckord Armory, College Park, MD, 
+          from Saturday, October 25th to Sunday, October 26th.
         </p>
         <p>
-          We will offer travel reimbursement and bus accommodations at specified universities 
-          for hackers on a first-come, first-serve basis.
+          We will offer travel reimbursement for hackers on a first-come, first-serve basis.
         </p>
         <p>
           Technica reserves the right to adjust or cancel reimbursement at any time if necessary.
@@ -21,48 +21,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 section">
-        <div class="info-section">
-          <h3>Buses</h3>
-          <p>Technica provides buses to several cities to facilitate travel for hackers to and from Technica. 
-            Eligible hackers will receive an email detailing bus locations and further instructions on how to apply for bus transportation. 
-            Buses will stop at the following universities:
-          </p>
-          <ul>
-            <li v-for="(university, index) in universities" :key="index">
-              {{ university }}
-            </li>
-          </ul>
-          <p>
-            Exact stop locations and departure times will be confirmed closer to the event. 
-            If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of 
-            College Park, Maryland, they may apply for travel reimbursement. 
-            If hackers cannot attend the event in-person, Technica offers a free, 
-            virtual environment to interact with fellow hackers online.
-          </p>
-          <p>
-            Hackers located within 30 minutes of these university stops are encouraged to register 
-            for bus accommodation to the nearest bus stop, even if they do not attend the university.
-          </p>
-          <p>
-            Bus routes are listed as follows. <b>Note that these routes are two ways.</b>
-          </p>
-          <ul>
-            <li v-for="(route, index) in routes" :key="index">
-              {{ route }}
-            </li>
-          </ul>
-          <!-- Commenting out for now because dates/place not finalized -->
-          <!-- <p>
-            All buses would arrive at the Reckord Armory at the University of Maryland 
-            (4490 Rossborough Ln, College Park, MD 20742) on 
-            <b>Saturday, October 26th at approximately 10 AM</b> 
-            and depart from the Reckord Armory on <b>Sunday, October 27th at 5 PM.</b>
-          </p> -->
-
-          <!-- Used for Bus Form Link-->
-          <!-- <VineButton text="Bus Form" link="https://forms.gle/LiZe4ESwWs84oSpb8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/> -->
-          </div>
+      <div class="row row-cols-1 section">
         <div class="info-section">
           <h3>Reimbursement</h3>
           <p>
@@ -73,13 +32,13 @@
           </p>
           <p>
             Technica will provide travel reimbursement to hackers who require transportation directly 
-            to the University of Maryland and are unable to travel via buses Technica sends. 
+            to the University of Maryland. 
             Reimbursements will be evaluated on a <b>first-come, first-serve basis</b> and may not cover the full cost of travel. 
             Notice of reimbursement approval/rejection will be sent via email before the event. 
             Minors are eligible to apply for travel reimbursement; please refer to the Technica 2025 Minor Policy for further details. 
           </p>
           <p>
-            Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park or a Technica bus stop. 
+            Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park. 
           </p>
           <p>
             Eligible hackers will be contacted via email with additional information on how to apply for reimbursement. 
@@ -112,10 +71,6 @@
             We will not reimburse without this documentation.
           </p>
           <p>
-            Reminder that reimbursement will not be provided for transportation to a Technica bus stop. 
-            If hackers are taking the Technica-provided bus, they are responsible for getting themselves to the bus stop.
-          </p>
-          <p>
 
             Reimbursements will only be in US dollars. 
             Please note that Technica will not reimburse travel from any other country.
@@ -123,7 +78,7 @@
           <p>
             Here are some examples of documentation to submit for reimbursement:
           </p>
-          <ul>
+          <ul class="d-inline-block text-start">
             <li v-for="transportation in documentation" :key="transportation.name">
               {{ transportation.name }}
               <ul>
@@ -161,52 +116,34 @@
 const qaList = [
   {
     question: 'Am I eligible for travel reimbursement?',
-    answer: 'Hackers who live more than 30 minutes away from College Park or a Technica bus stop are eligible to apply for travel reimbursement.',
+    answer: 'Hackers who live more than 30 minutes away from College Park are eligible to apply for travel reimbursement.',
   },
   {
     question: 'How will I receive my reimbursement?',
     answer:
       'Checks will be given at a table at the event in-person. Note that hackers must physically attend the event to receive reimbursement.',
   },
-  {
-    question: 'How will I get my bus stop and bus tickets?',
-    answer:
-      'After applying for the Technica bus, stop information and times will be sent via email. Note that university stops are listed above in the “Buses” category.',
-  },
+  // {
+  //   question: 'How will I get my bus stop and bus tickets?',
+  //   answer:
+  //     'After applying for the Technica bus, stop information and times will be sent via email. Note that university stops are listed above in the “Buses” category.',
+  // },
   {
     question: 'Is travel assistance guaranteed?',
     answer:
-      'No, but we suggest applying for buses or reimbursement as soon as possible, as we evaluate on a first-come, first-serve basis.',
+      'No, but we suggest applying for reimbursement as soon as possible, as we evaluate on a first-come, first-serve basis.',
   },
-  {
-    question: 'Can I apply for bus and reimbursement accommodations?',
-    answer:
-      'No, hackers cannot apply for both. If hackers live near a Technica bus stop, they are encouraged to apply for bus accommodations. If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of College Park, Maryland, they may apply for travel reimbursement.',
-  },
+  // {
+  //   question: 'Can I apply for bus and reimbursement accommodations?',
+  //   answer:
+  //     'No, hackers cannot apply for both. If hackers live near a Technica bus stop, they are encouraged to apply for bus accommodations. If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of College Park, Maryland, they may apply for travel reimbursement.',
+  // },
   {
     question:
       "Will there be designated sleeping spaces?",
     answer:
       'Unfortunately, per Fire Marshal regulations, we cannot provide sleeping accommodations this year. Hackers are welcome to stay at nearby hotels, or to rest and take naps at the provided workspaces. ',
   },
-];
-
-const universities = [
-  "Towson University",
-  "Johns Hopkins University",
-  "University of Maryland Baltimore County",
-  "New York University",
-  "Stevens Institute of Technology",
-  "New Jersey Institute of Technology",
-  "Rutgers University",
-  "Princeton University",
-  "University of Pennsylvania",
-  "University of Delaware"
-];
-
-const routes = [
-  "New York University → Stevens Institute of Technology → New Jersey Institute of Technology → Rutgers University → Princeton University → University of Maryland, College Park",
-  "University of Pennsylvania → University of Delaware → Towson University → Johns Hopkins University → University of Maryland, Baltimore County → University of Maryland, College Park",
 ];
 
 // Used for Transportation Cost List Section
@@ -279,6 +216,10 @@ const documentation = [
   width: min(81rem, 100%);
   margin: auto;
   margin-top: 2rem;
+}
+
+.info-section {
+  text-align: center;
 }
 
 .email-blurb {
