@@ -13,7 +13,7 @@
 		:class="[card.color, { wide: card.wide }]"
 	  >
 		<div v-if="card.type === 'quote'" class="card-content quote">
-		  <div>
+		  <div class = "quote-content">
 			<h3>“</h3>
 			<p>
 			  {{ !isShorten ? card.quote : card.shortenQuote}}
@@ -152,7 +152,7 @@ function prev() {
 	border-radius: 0;
 	vertical-align: top;
 	white-space: normal;
-	aspect-ratio: 9/15;
+	aspect-ratio: 9/16;
 	color: $CREAM;
   
 	&.wide {
@@ -185,6 +185,7 @@ function prev() {
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 2rem;
+		height: 100%;
 
 		@media screen and (max-width: 1450px) {
 			padding: 2rem;
@@ -197,10 +198,28 @@ function prev() {
 		@media screen and (max-width: 768px) {
 			padding: 10%;
 		}
-	
-		p {
-			margin-top: -0.5rem;
 
+		p {
+			margin-top: -1rem;
+			flex: 1;
+			padding-right: 5px;
+		}
+
+		.quote-content{
+			margin-bottom: 0.5rem;
+			// max-height: 80%;
+			overflow-y: auto;
+		}
+
+		.quote-content::-webkit-scrollbar {
+			background: rgba(255, 255, 255, 0.2);
+			width: 5px;
+			border-radius: 10px;
+		}
+
+		.quote-content::-webkit-scrollbar-thumb{
+			border-radius: 10px;
+			background:rgba(255, 255, 255, 0.5);
 		}
   
 		.name {
@@ -222,6 +241,7 @@ function prev() {
 		}
 
 		height: auto;
+
 	}
 
 	@media screen and (max-width: 850px) {
@@ -229,7 +249,18 @@ function prev() {
 			font-size: 95%;
 		}
 
+
 		height: 20rem;
+
+	}
+
+
+	// That one awkward place where Anagha's name overflows
+	@media screen and (max-width: 990px){
+		.name{
+			font-size: 1.15rem;
+		}
+
 	}
 
 	@media screen and (max-width: 1200px) {
@@ -238,6 +269,7 @@ function prev() {
 		h3 {
 			font-size: 120%;
 		}
+
 	}
 
 
