@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^2.4.1",
     "@nuxtjs/style-resources": "^1.2.1",
     "@types/bootstrap": "^5.2.6",
     "@vueuse/core": "^10.5.0",
