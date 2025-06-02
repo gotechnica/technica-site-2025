@@ -7,11 +7,10 @@
       <div class="process-blurb">
         <p>
           Technica will be hosted at the Reckord Armory, College Park, MD, 
-          from 9 AM, Saturday, October 26th to 5 PM, Sunday, October 27th.
+          from Saturday, October 25th to Sunday, October 26th.
         </p>
         <p>
-          We will offer travel reimbursement and bus accommodations at specified universities 
-          for hackers on a first-come, first-serve basis.
+          We will offer travel reimbursement for hackers on a first-come, first-serve basis.
         </p>
         <p>
           Technica reserves the right to adjust or cancel reimbursement at any time if necessary.
@@ -22,45 +21,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 section">
-        <div class="info-section">
-          <h3>Buses</h3>
-          <p>Technica provides buses to several cities to facilitate travel for hackers to and from Technica. 
-            Eligible hackers will receive an email detailing bus locations and further instructions on how to apply for bus transportation. 
-            Buses will stop at the following universities:
-          </p>
-          <ul>
-            <li v-for="(university, index) in universities" :key="index">
-              {{ university }}
-            </li>
-          </ul>
-          <p>
-            Exact stop locations and departure times will be confirmed closer to the event. 
-            If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of 
-            College Park, Maryland, they may apply for travel reimbursement. 
-            If hackers cannot attend the event in-person, Technica offers a free, 
-            virtual environment to interact with fellow hackers online.
-          </p>
-          <p>
-            Hackers located within 30 minutes of these university stops are encouraged to register 
-            for bus accommodation to the nearest bus stop, even if they do not attend the university.
-          </p>
-          <p>
-            Bus routes are listed as follows. <b>Note that these routes are two ways.</b>
-          </p>
-          <ul>
-            <li v-for="(route, index) in routes" :key="index">
-              {{ route }}
-            </li>
-          </ul>
-          <p>
-            All buses would arrive at the Reckord Armory at the University of Maryland 
-            (4490 Rossborough Ln, College Park, MD 20742) on 
-            <b>Saturday, October 26th at approximately 10 AM</b> 
-            and depart from the Reckord Armory on <b>Sunday, October 27th at 5 PM.</b>
-          </p>
-          <VineButton text="Bus Form" link="https://forms.gle/LiZe4ESwWs84oSpb8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
-          </div>
+      <div class="row row-cols-1 section">
         <div class="info-section">
           <h3>Reimbursement</h3>
           <p>
@@ -71,13 +32,13 @@
           </p>
           <p>
             Technica will provide travel reimbursement to hackers who require transportation directly 
-            to the University of Maryland and are unable to travel via buses Technica sends. 
+            to the University of Maryland. 
             Reimbursements will be evaluated on a <b>first-come, first-serve basis</b> and may not cover the full cost of travel. 
             Notice of reimbursement approval/rejection will be sent via email before the event. 
-            Minors are eligible to apply for travel reimbursement; please refer to the Technica 2024 Minor Policy for further details. 
+            Minors are eligible to apply for travel reimbursement; please refer to the Technica 2025 Minor Policy for further details. 
           </p>
           <p>
-            Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park or a Technica bus stop. 
+            Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park. 
           </p>
           <p>
             Eligible hackers will be contacted via email with additional information on how to apply for reimbursement. 
@@ -94,11 +55,12 @@
             Reimbursement amounts per method of transportation 
             (note that in a carpool, <b>only the driver may receive reimbursement</b>):
           </p>
-          <ul>
+          <!-- Used to list the actual reinbursement prices, edit the variable transportation for the updated price values-->
+          <!-- <ul>
             <li v-for="item in transportation" :key="item.name">
               {{ item.name }}: ${{ item.minPrice }} - ${{ item.maxPrice }}
             </li>
-          </ul>
+          </ul> -->
           <p>
             Reimbursement amount is dependent on how much was spent on traveling to Technica. 
             Hackers should make sure to keep their trip purchase receipts and 
@@ -109,18 +71,14 @@
             We will not reimburse without this documentation.
           </p>
           <p>
-            Reminder that reimbursement will not be provided for transportation to a Technica bus stop. 
-            If hackers are taking the Technica-provided bus, they are responsible for getting themselves to the bus stop.
-          </p>
-          <p>
-            Technica will reimburse up to $200 for any hackers traveling from the United States and Canada. 
+
             Reimbursements will only be in US dollars. 
             Please note that Technica will not reimburse travel from any other country.
           </p>
           <p>
             Here are some examples of documentation to submit for reimbursement:
           </p>
-          <ul>
+          <ul class="d-inline-block text-start">
             <li v-for="transportation in documentation" :key="transportation.name">
               {{ transportation.name }}
               <ul>
@@ -134,7 +92,8 @@
             If you are unsure whether your documentation is acceptable, 
             please email <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b> for clarification. 
           </p>
-          <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/>
+          <!-- Used for Reinbursement Form Link-->
+          <!-- <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/> -->
         </div>
       </div>
       <div class="faq-section section">
@@ -157,28 +116,28 @@
 const qaList = [
   {
     question: 'Am I eligible for travel reimbursement?',
-    answer: 'Hackers who live more than 30 minutes away from College Park or a Technica bus stop are eligible to apply for travel reimbursement.',
+    answer: 'Hackers who live more than 30 minutes away from College Park are eligible to apply for travel reimbursement.',
   },
   {
     question: 'How will I receive my reimbursement?',
     answer:
       'Checks will be given at a table at the event in-person. Note that hackers must physically attend the event to receive reimbursement.',
   },
-  {
-    question: 'How will I get my bus stop and bus tickets?',
-    answer:
-      'After applying for the Technica bus, stop information and times will be sent via email. Note that university stops are listed above in the “Buses” category.',
-  },
+  // {
+  //   question: 'How will I get my bus stop and bus tickets?',
+  //   answer:
+  //     'After applying for the Technica bus, stop information and times will be sent via email. Note that university stops are listed above in the “Buses” category.',
+  // },
   {
     question: 'Is travel assistance guaranteed?',
     answer:
-      'No, but we suggest applying for buses or reimbursement as soon as possible, as we evaluate on a first-come, first-serve basis.',
+      'No, but we suggest applying for reimbursement as soon as possible, as we evaluate on a first-come, first-serve basis.',
   },
-  {
-    question: 'Can I apply for bus and reimbursement accommodations?',
-    answer:
-      'No, hackers cannot apply for both. If hackers live near a Technica bus stop, they are encouraged to apply for bus accommodations. If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of College Park, Maryland, they may apply for travel reimbursement.',
-  },
+  // {
+  //   question: 'Can I apply for bus and reimbursement accommodations?',
+  //   answer:
+  //     'No, hackers cannot apply for both. If hackers live near a Technica bus stop, they are encouraged to apply for bus accommodations. If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of College Park, Maryland, they may apply for travel reimbursement.',
+  // },
   {
     question:
       "Will there be designated sleeping spaces?",
@@ -187,30 +146,13 @@ const qaList = [
   },
 ];
 
-const universities = [
-  "Towson University",
-  "Johns Hopkins University",
-  "University of Maryland Baltimore County",
-  "New York University",
-  "Stevens Institute of Technology",
-  "New Jersey Institute of Technology",
-  "Rutgers University",
-  "Princeton University",
-  "University of Pennsylvania",
-  "University of Delaware"
-];
-
-const routes = [
-  "New York University → Stevens Institute of Technology → New Jersey Institute of Technology → Rutgers University → Princeton University → University of Maryland, College Park",
-  "University of Pennsylvania → University of Delaware → Towson University → Johns Hopkins University → University of Maryland, Baltimore County → University of Maryland, College Park",
-];
-
-const transportation = [
-  { name: 'Car', minPrice: 1, maxPrice: 40 },
-  { name: 'Metro', minPrice: 1, maxPrice: 20 },
-  { name: 'Bus/Train', minPrice: 1, maxPrice: 100 },
-  { name: 'Plane', minPrice: 1, maxPrice: 200 },
-]
+// Used for Transportation Cost List Section
+// const transportation = [
+//   { name: 'Car', minPrice: 1, maxPrice: 40 },
+//   { name: 'Metro', minPrice: 1, maxPrice: 20 },
+//   { name: 'Bus/Train', minPrice: 1, maxPrice: 100 },
+//   { name: 'Plane', minPrice: 1, maxPrice: 200 },
+// ]
 
 const documentation = [
   {
@@ -270,10 +212,14 @@ const documentation = [
 }
 
 .process-blurb {
-  text-align: left;
+  text-align: center;
   width: min(81rem, 100%);
   margin: auto;
   margin-top: 2rem;
+}
+
+.info-section {
+  text-align: center;
 }
 
 .email-blurb {
