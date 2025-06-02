@@ -292,11 +292,11 @@ const tech = computed(() =>
 }
 
 .card-grid {
-  display: inline-grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 220px);
+  gap: 1rem;
+  justify-content: center; 
 }
+
 </style>
   
