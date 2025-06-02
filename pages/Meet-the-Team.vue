@@ -11,6 +11,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -29,6 +30,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -47,6 +49,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
           </div>
         </div>
@@ -65,6 +68,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -83,6 +87,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -101,6 +106,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -119,6 +125,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -137,6 +144,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -155,6 +163,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -173,6 +182,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
@@ -191,6 +201,7 @@
                 :title="person.Title"
                 :pronouns="person.Pronouns"
                 :image="person.Image"
+                :linkedin="person.Linkedin"
                 />
             </div>
         </div>
