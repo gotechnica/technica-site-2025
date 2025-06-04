@@ -270,12 +270,13 @@ const tech = computed(() =>
 
 .box {
   background-color: rgba(56, 104, 62, 0.2);
-  padding: 2rem;
+  padding: 3rem 2rem;
   border-radius: 15px;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .container {
@@ -304,9 +305,11 @@ const tech = computed(() =>
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 220px);
-  gap: 1rem;
-  justify-content: center; 
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px; 
+  box-sizing: border-box;
 }
 
 </style>
