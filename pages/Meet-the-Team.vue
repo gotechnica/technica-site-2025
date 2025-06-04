@@ -305,7 +305,7 @@ const tech = computed(() =>
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 1200px; 
