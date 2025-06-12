@@ -1,23 +1,32 @@
 <template>
   <title>Register</title>
   <div id="form" class="container">
-    <br><br>
+    <br /><br />
     <Header>Registration Form</Header>
     <!-- <p style="text-align: center;">Registration is now closed! </p>
     <p style="text-align: center;">There will be last minute check in on Saturday <b>after 11am</b> but it will be first come first serve. </p>
     <p style="text-align: center;">We look forward to seeing you there! <b>#Wonder Awaits</b> at Technica!</p>
     <br><br> -->
 
-
-    <Form v-slot="{ values, errors }" :validation-schema="validationSchema" @submit="registerUser">
+    <Form
+      v-slot="{ values, errors }"
+      :validation-schema="validationSchema"
+      @submit="registerUser"
+    >
       <!-- HACKER INFO -->
       <Header>Hacker Info</Header>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div>
             <label class="form-label"> First Name* </label>
-            <Field name="firstName" type="text" value="" placeholder="First" class="form-control"
-              :class="{ 'is-invalid': errors['firstName'] }" />
+            <Field
+              name="firstName"
+              type="text"
+              value=""
+              placeholder="First"
+              class="form-control"
+              :class="{ 'is-invalid': errors['firstName'] }"
+            />
             <ErrorMessage :name="'firstName'" class="invalid-feedback" />
           </div>
         </div>
@@ -25,8 +34,14 @@
         <div class="col-md-4 mb-4">
           <div>
             <label class="form-label"> Last Name* </label>
-            <Field name="lastName" type="text" value="" placeholder="Last" class="form-control"
-              :class="{ 'is-invalid': errors['lastName'] }" />
+            <Field
+              name="lastName"
+              type="text"
+              value=""
+              placeholder="Last"
+              class="form-control"
+              :class="{ 'is-invalid': errors['lastName'] }"
+            />
             <ErrorMessage :name="'lastName'" class="invalid-feedback" />
           </div>
         </div>
@@ -34,8 +49,14 @@
         <div class="col-md-4 mb-4">
           <div>
             <label class="form-label"> Phonetic Spelling* </label>
-            <Field name="spelling" type="text" value="" placeholder="tek-ni-ka" class="form-control"
-              :class="{ 'is-invalid': errors['spelling'] }" />
+            <Field
+              name="spelling"
+              type="text"
+              value=""
+              placeholder="tek-ni-ka"
+              class="form-control"
+              :class="{ 'is-invalid': errors['spelling'] }"
+            />
             <ErrorMessage :name="'spelling'" class="invalid-feedback" />
           </div>
         </div>
@@ -45,16 +66,28 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label"> Email* </label>
-            <Field name="email" type="text" value="" placeholder="hello@gotechnica.org" class="form-control"
-              :class="{ 'is-invalid': errors['email'] }" />
+            <Field
+              name="email"
+              type="text"
+              value=""
+              placeholder="hello@gotechnica.org"
+              class="form-control"
+              :class="{ 'is-invalid': errors['email'] }"
+            />
             <ErrorMessage :name="'email'" class="invalid-feedback" />
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label"> Phone Number* </label>
-            <Field name="phone" type="text" value="" placeholder="5552341230" class="form-control"
-              :class="{ 'is-invalid': errors['phone'] }" />
+            <Field
+              name="phone"
+              type="text"
+              value=""
+              placeholder="5552341230"
+              class="form-control"
+              :class="{ 'is-invalid': errors['phone'] }"
+            />
             <ErrorMessage :name="'phone'" class="invalid-feedback" />
           </div>
         </div>
@@ -64,18 +97,31 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">Gender Identity*</label>
-            <Field name="gender" as="select" class="form-select" :class="{ 'is-invalid': errors['gender'] }">
+            <Field
+              name="gender"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['gender'] }"
+            >
               <option v-for="option in genderOptions" :value="option.value">
                 {{ option.text }}
               </option>
             </Field>
             <ErrorMessage :name="'gender'" class="invalid-feedback" />
-          </div><p class="description">
-        Please note: Technica is intended for underrepresented genders in tech!
-      </p>
+          </div>
+          <p class="description">
+            Please note: Technica is intended for underrepresented genders in
+            tech!
+          </p>
           <div class="mt-1" v-if="values.gender?.includes('other')">
-            <Field name="genderOther" type="text" value="" placeholder="Other" class="form-control"
-              :class="{ 'is-invalid': errors['genderOther'] }" />
+            <Field
+              name="genderOther"
+              type="text"
+              value=""
+              placeholder="Other"
+              class="form-control"
+              :class="{ 'is-invalid': errors['genderOther'] }"
+            />
             <ErrorMessage :name="'genderOther'" class="invalid-feedback" />
           </div>
         </div>
@@ -83,18 +129,33 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label"> Pronouns </label>
-            <Field name="pronouns" type="text" placeholder="she/they" class="form-control" />
+            <Field
+              name="pronouns"
+              type="text"
+              placeholder="she/they"
+              class="form-control"
+            />
           </div>
         </div>
       </div>
 
-      
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <label class="form-label"> What race(s) do you identify as?* </label>
-          <div class="form-check" style="color: white;" v-for="option in raceOptions">
-            <Field name="race" :value="option.value" type="checkbox" class="form-check-input" :id="option.value"
-              :class="{ 'is-invalid': errors['race'] }" required />
+          <div
+            class="form-check"
+            style="color: white"
+            v-for="option in raceOptions"
+          >
+            <Field
+              name="race"
+              :value="option.value"
+              type="checkbox"
+              class="form-check-input"
+              :id="option.value"
+              :class="{ 'is-invalid': errors['race'] }"
+              required
+            />
 
             <label class="form-check-label" :for="option.value">
               {{ option.text }}
@@ -102,36 +163,77 @@
           </div>
           <ErrorMessage :name="'race'" class="invalid-feedback" />
           <div v-if="values.race?.includes('other')">
-            <Field name="raceOther" type="text" value="" placeholder="Other" class="form-control"
-              :class="{ 'is-invalid': errors['raceOther'] }" />
+            <Field
+              name="raceOther"
+              type="text"
+              value=""
+              placeholder="Other"
+              class="form-control"
+              :class="{ 'is-invalid': errors['raceOther'] }"
+            />
             <ErrorMessage :name="'raceOther'" class="invalid-feedback" />
+          </div>
+
+          <div class="mt-4">
+            <label class="form-label"> LinkedIn </label>
+            <Field
+              name="linkedin"
+              type="text"
+              placeholder="linkedin.com/in/technica"
+              class="form-control"
+            />
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">
-              What age will you be during Technica (October 26-27)?*
+              What age will you be during Technica (October 25-26)?*
             </label>
-            <Field name="age" type="text" value="" class="form-control" :class="{ 'is-invalid': errors['age'] }"
-              required />
+            <Field
+              name="age"
+              type="text"
+              value=""
+              class="form-control"
+              :class="{ 'is-invalid': errors['age'] }"
+              required
+            />
             <ErrorMessage :name="'age'" class="invalid-feedback" />
           </div>
           <p class="description">
-            <br>
-            If you will be a minor (under 18 years of age) at any point during Technica, 
-            we will need your parent/guardian's email. We will email a waiver to your 
-            parent/guardian in early October to sign. Minors attending the event in-person 
-            will need to be accompanied by a chaperone who must also be a registered hacker. 
-            A chaperone can accompany up to ten minors.
-            </p>
+            <br />
+            If you will be a minor (under 18 years of age) at any point during
+            Technica, we will need your parent/guardian's email. We will email a
+            waiver to your parent/guardian in early October to sign. Minors
+            attending the event in-person will need to be accompanied by a
+            chaperone who must also be a registered hacker. A chaperone can
+            accompany up to ten minors.
+          </p>
 
           <div class="mt-4" v-if="parseInt(values.age) < 18">
             <label class="form-label"> Parent or Guardian Email* </label>
-            <Field name="parentEmail" type="text" value="" placeholder="hello@gotechnica.org" class="form-control"
-              :class="{ 'is-invalid': errors['parentEmail'] }" />
+            <Field
+              name="parentEmail"
+              type="text"
+              value=""
+              placeholder="hello@gotechnica.org"
+              class="form-control"
+              :class="{ 'is-invalid': errors['parentEmail'] }"
+            />
             <ErrorMessage :name="'parentEmail'" class="invalid-feedback" />
           </div>
         </div>
+        <!-- 
+        <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label"> LinkedIn </label>
+            <Field
+              name="linkedin"
+              type="text"
+              placeholder="linkedin.com/in/technica"
+              class="form-control"
+            />
+          </div>
+        </div> -->
         <!-- <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">Are you an Alumni?*</label>
@@ -153,8 +255,14 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">Education Level*</label>
-            <Field name="education" as="select" class="form-select" :class="{ 'is-invalid': errors['education'] }"
-              required v-model ="userInput.education">
+            <Field
+              name="education"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['education'] }"
+              required
+              v-model="userInput.education"
+            >
               <option v-for="option in educationOptions" :value="option">
                 {{ option }}
               </option>
@@ -165,18 +273,35 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">School Name*</label>
-            <Field name="school" as="select" class="form-select" :class="{ 'is-invalid': errors['school'] }" required>
+            <Field
+              name="school"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['school'] }"
+              required
+            >
               <option v-for="school in schoolList" :value="school">
                 {{ school }}
               </option>
-            </Field>   
+            </Field>
 
-            <div v-if="submitTimes > 0 && (values.school == null || values.school == '')">
+            <div
+              v-if="
+                submitTimes > 0 &&
+                (values.school == null || values.school == '')
+              "
+            >
               <ErrorMessage name="school" class="invalid-feedback" />
             </div>
             <div class="mt-1" v-if="values.school?.includes('Other')">
-              <Field name="schoolOther" type="text" value="" placeholder="Other" class="form-control"
-                :class="{ 'is-invalid': errors['schoolOther'] }" />
+              <Field
+                name="schoolOther"
+                type="text"
+                value=""
+                placeholder="Other"
+                class="form-control"
+                :class="{ 'is-invalid': errors['schoolOther'] }"
+              />
               <ErrorMessage :name="'schoolOther'" class="invalid-feedback" />
             </div>
           </div>
@@ -184,7 +309,13 @@
         <div class="col-md-4 mb-4">
           <div class="mb-4">
             <label class="form-label">Major*</label>
-            <Field name="major" as="select" class="form-select" :class="{ 'is-invalid': errors['major'] }" required>
+            <Field
+              name="major"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['major'] }"
+              required
+            >
               <option v-for="major in majorOptions" :value="major">
                 {{ major }}
               </option>
@@ -197,17 +328,23 @@
       <!-- LOCATION -->
       <Header>Location</Header>
       <p>
-        Please make sure to enter the place you'll be departing from for
-        Technica. For hackers in the U.S. only, select zip codes will be
-        eligible to apply for travel assistance. Double check that you have
-        entered your location correctly! For more info about travel, visit our
+        Please enter the place you'll be departing from for Technica. For
+        hackers in the U.S. only, select zip codes will be eligible to apply for
+        travel assistance. Double check that you have entered your location
+        correctly! For more info about travel, visit our
         <a href="/travel" target="_blank">travel page</a>.
       </p>
       <div class="mb-4">
         <div class="row gx-5">
           <div class="col-md-4">
             <label class="form-label">Country*</label>
-            <Field name="country" as="select" class="form-select" :class="{ 'is-invalid': errors['country'] }" required>
+            <Field
+              name="country"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['country'] }"
+              required
+            >
               <option v-for="option in countryOptions" :value="option">
                 {{ option }}
               </option>
@@ -216,8 +353,17 @@
           </div>
           <div class="col-md-4" v-if="values.country">
             <label class="form-label">Region*</label>
-            <Field name="region" as="select" class="form-select" :class="{ 'is-invalid': errors['region'] }" required>
-              <option v-for="option in getRegionOptions(values.country)" :value="option">
+            <Field
+              name="region"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['region'] }"
+              required
+            >
+              <option
+                v-for="option in getRegionOptions(values.country)"
+                :value="option"
+              >
                 {{ option }}
               </option>
             </Field>
@@ -225,12 +371,19 @@
           </div>
           <div class="col-md-4" v-if="values.country === 'United States'">
             <label class="form-label">Zipcode*</label>
-            <Field name="zipcode" type="text" value="" placeholder="" class="form-control"
-              :class="{ 'is-invalid': errors['zipcode'] }" required />
+            <Field
+              name="zipcode"
+              type="text"
+              value=""
+              placeholder=""
+              class="form-control"
+              :class="{ 'is-invalid': errors['zipcode'] }"
+              required
+            />
             <ErrorMessage :name="'zipcode'" class="invalid-feedback" />
           </div>
         </div>
-      </div> 
+      </div>
 
       <!-- TRACKS -->
       <Header>Tracks</Header>
@@ -246,49 +399,114 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <div class="mb-4">
-            <label class="form-label">Will you be attending online or in person?*</label>
-            <Field as="select" name="attendance" id="attendance" v-model="userInput.attendanceType" class="form-select" :class="{ 'is-invalid': errors['attendanceType'] }" required>
-              <option v-for="option in attendanceOptions" :key="option.value" :value="option.value">{{ option.text }}</option>
+            <label class="form-label"
+              >Will you be attending online or in person?*</label
+            >
+            <Field
+              as="select"
+              name="attendance"
+              id="attendance"
+              v-model="userInput.attendanceType"
+              class="form-select"
+              :class="{ 'is-invalid': errors['attendanceType'] }"
+              required
+            >
+              <option
+                v-for="option in attendanceOptions"
+                :key="option.value"
+                :value="option.value"
+              >
+                {{ option.text }}
+              </option>
             </Field>
             <ErrorMessage :name="'attendance'" class="invalid-feedback" />
           </div>
 
-
           <div class="mb-4">
             <div>
               <label class="form-label">Is this your first hackathon?*</label>
-              <div class="form-check" v-for="option in firstHackathon" :key="option.value">
-                <Field name="isFirstHackathon" v-model="userInput.isFirstHackathon" :value="option.value" type="radio" class="form-check-input"
-                  :id="`first-hackathon-${option.value}`" :class="{ 'is-invalid': errors['isFirstHackathon'] }"
-                  required />
-                <label class="form-check-label" :for="`first-hackathon-${option.value}`">
+              <div
+                class="form-check"
+                v-for="option in firstHackathon"
+                :key="option.value"
+              >
+                <Field
+                  name="isFirstHackathon"
+                  v-model="userInput.isFirstHackathon"
+                  :value="option.value"
+                  type="radio"
+                  class="form-check-input"
+                  :id="`first-hackathon-${option.value}`"
+                  :class="{ 'is-invalid': errors['isFirstHackathon'] }"
+                  required
+                />
+                <label
+                  class="form-check-label"
+                  :for="`first-hackathon-${option.value}`"
+                >
                   {{ option.text }}
                 </label>
               </div>
-              <ErrorMessage :name="'isFirstHackathon'" class="invalid-feedback" />
+              <ErrorMessage
+                :name="'isFirstHackathon'"
+                class="invalid-feedback"
+              />
             </div>
           </div>
 
           <div class="mb-4">
             <div>
-              <label class="form-label">Is this your first time at Technica?*</label>
-              <div class="form-check" v-for="option in firstTechnica" :key="option.value">
-                <Field name="isFirstTechnica" v-model="userInput.isFirstTechnica" :value="option.value" type="radio" class="form-check-input"
-                  :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isFirstTechnica'] }" required />
-                <label class="form-check-label" :for="`first-technica-${option.value}`">
+              <label class="form-label"
+                >Is this your first time at Technica?*</label
+              >
+              <div
+                class="form-check"
+                v-for="option in firstTechnica"
+                :key="option.value"
+              >
+                <Field
+                  name="isFirstTechnica"
+                  v-model="userInput.isFirstTechnica"
+                  :value="option.value"
+                  type="radio"
+                  class="form-check-input"
+                  :id="`first-technica-${option.value}`"
+                  :class="{ 'is-invalid': errors['isFirstTechnica'] }"
+                  required
+                />
+                <label
+                  class="form-check-label"
+                  :for="`first-technica-${option.value}`"
+                >
                   {{ option.text }}
                 </label>
               </div>
-              <ErrorMessage :name="'isFirstTechnica'" class="invalid-feedback" />
+              <ErrorMessage
+                :name="'isFirstTechnica'"
+                class="invalid-feedback"
+              />
             </div>
-          </div>   
+          </div>
         </div>
 
         <div class="col-md-6 mb-4">
           <div class="mb-4">
-            <label class="form-label">How many years of CS experience do you have?*</label>
-            <Field name="yearsExperience" v-model="userInput.yearsExperience" as="select" class="form-select" :class="{ 'is-invalid': errors['yearsExperience'] }" required>
-              <option v-for="option in experience" :key="option" :value="option">
+            <label class="form-label"
+              >How many years of CS experience do you have?*</label
+            >
+            <Field
+              name="yearsExperience"
+              v-model="userInput.yearsExperience"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['yearsExperience'] }"
+              required
+            >
+              <option
+                v-for="option in experience"
+                :key="option"
+                :value="option"
+              >
                 {{ option }}
               </option>
             </Field>
@@ -296,16 +514,32 @@
           </div>
 
           <div class="mb-4">
-            <label class="form-label">What topics do you want to learn about?*</label>
-            <div class="form-check" v-for="option in topicsOfInterest" :key="option.value">
-              <Field name="topics" v-model="userInput.topicsOfInterest" :value="option.value" type="checkbox" class="form-check-input"
-                :id="`topics-${option.value}`" :class="{ 'is-invalid': errors['topics'] }" />
+            <label class="form-label"
+              >What topics do you want to learn about?*</label
+            >
+            <div
+              class="form-check"
+              v-for="option in topicsOfInterest"
+              :key="option.value"
+            >
+              <Field
+                name="topics"
+                v-model="userInput.topicsOfInterest"
+                :value="option.value"
+                type="checkbox"
+                class="form-check-input"
+                :id="`topics-${option.value}`"
+                :class="{ 'is-invalid': errors['topics'] }"
+              />
               <label class="form-check-label" :for="`topics-${option.value}`">
                 {{ option.text }}
               </label>
             </div>
             <p></p>
-            <p>Quick tip: Different tracks will be available to you based on what topics you're interested in</p>
+            <p>
+              Quick tip: Different tracks will be available to you based on what
+              topics you're interested in
+            </p>
             <ErrorMessage :name="'topics'" class="invalid-feedback" />
           </div>
         </div>
@@ -313,10 +547,23 @@
 
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
-          <label class="form-label">Which track do you wish to participate in?*</label>
-          <p>Please note: Most tracks are only available to in-person hackers!</p>
-          <div class="form-check" v-for="option in recommendedTracks" :key="option.value">
-            <Field name="track" :value="option.value" type="radio" class="form-check-input" />
+          <label class="form-label"
+            >Which track do you wish to participate in?*</label
+          >
+          <p>
+            Please note: Most tracks are only available to in-person hackers!
+          </p>
+          <div
+            class="form-check"
+            v-for="option in recommendedTracks"
+            :key="option.value"
+          >
+            <Field
+              name="track"
+              :value="option.value"
+              type="radio"
+              class="form-check-input"
+            />
             <label class="form-check-label">{{ option.text }}</label>
           </div>
           <ErrorMessage :name="'track'" class="invalid-feedback" />
@@ -329,37 +576,79 @@
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
           <div class="mb-4">
-            <label class="form-label">Do you have any dietary restrictions?*</label>
-            <div class="form-check" v-for="option in dietaryRestrictionsOptions">
-              <Field name="dietaryRestrictions" :value="option.value" type="checkbox" class="form-check-input"
-                :id="option.value" :class="{ 'is-invalid': errors['dietaryRestrictions'] }" required />
+            <label class="form-label"
+              >Do you have any dietary restrictions?*</label
+            >
+            <div
+              class="form-check"
+              v-for="option in dietaryRestrictionsOptions"
+            >
+              <Field
+                name="dietaryRestrictions"
+                :value="option.value"
+                type="checkbox"
+                class="form-check-input"
+                :id="option.value"
+                :class="{ 'is-invalid': errors['dietaryRestrictions'] }"
+                required
+              />
               <label class="form-check-label" :for="option.value">
                 {{ option.text }}
               </label>
             </div>
-            <ErrorMessage :name="'dietaryRestrictions'" class="invalid-feedback" />
+            <ErrorMessage
+              :name="'dietaryRestrictions'"
+              class="invalid-feedback"
+            />
 
             <div v-if="values.dietaryRestrictions?.includes('other')">
-              <Field name="dietaryRestrictionsOther" type="text" value="" placeholder="Other" class="form-control"
-                :class="{ 'is-invalid': errors['dietaryRestrictionsOther'] }" />
-              <ErrorMessage :name="'dietaryRestrictionsOther'" class="invalid-feedback" />
+              <Field
+                name="dietaryRestrictionsOther"
+                type="text"
+                value=""
+                placeholder="Other"
+                class="form-control"
+                :class="{ 'is-invalid': errors['dietaryRestrictionsOther'] }"
+              />
+              <ErrorMessage
+                :name="'dietaryRestrictionsOther'"
+                class="invalid-feedback"
+              />
             </div>
           </div>
 
           <div>
-            <label class="form-label">Do you have any severe food allergies?*</label>
+            <label class="form-label"
+              >Do you have any severe food allergies?*</label
+            >
             <div class="form-check" v-for="option in foodAllergiesOptions">
-              <Field name="foodAllergies" :value="option.value" type="radio" class="form-check-input"
-                :id="`food-allergies-${option.value}`" :class="{ 'is-invalid': errors['foodAllergies'] }" required />
+              <Field
+                name="foodAllergies"
+                :value="option.value"
+                type="radio"
+                class="form-check-input"
+                :id="`food-allergies-${option.value}`"
+                :class="{ 'is-invalid': errors['foodAllergies'] }"
+                required
+              />
               <label class="form-check-label" :for="option.value">
                 {{ option.text }}
               </label>
             </div>
             <ErrorMessage :name="'foodAllergies'" class="invalid-feedback" />
             <div v-if="values.foodAllergies === 'Yes'">
-              <Field name="foodAllergiesText" type="text" value="" placeholder="Food allergies" class="form-control"
-                :class="{ 'is-invalid': errors['foodAllergiesText'] }" />
-              <ErrorMessage :name="'foodAllergiesText'" class="invalid-feedback" />
+              <Field
+                name="foodAllergiesText"
+                type="text"
+                value=""
+                placeholder="Food allergies"
+                class="form-control"
+                :class="{ 'is-invalid': errors['foodAllergiesText'] }"
+              />
+              <ErrorMessage
+                :name="'foodAllergiesText'"
+                class="invalid-feedback"
+              />
             </div>
           </div>
         </div>
@@ -367,8 +656,15 @@
         <div class="col-md-6 mb-4">
           <label class="form-label">How did you hear about us?*</label>
           <div class="form-check" v-for="option in hearOptions">
-            <Field name="hear" :value="option.value" type="checkbox" class="form-check-input" :id="option.value"
-              :class="{ 'is-invalid': errors['hear'] }" required />
+            <Field
+              name="hear"
+              :value="option.value"
+              type="checkbox"
+              class="form-check-input"
+              :id="option.value"
+              :class="{ 'is-invalid': errors['hear'] }"
+              required
+            />
             <label class="form-check-label" :for="option.value">
               {{ option.text }}
             </label>
@@ -376,8 +672,14 @@
           <ErrorMessage :name="'hear'" class="invalid-feedback" />
 
           <div v-if="values.hear?.includes('other')">
-            <Field name="hearOther" type="text" value="" placeholder="Other" class="form-control"
-              :class="{ 'is-invalid': errors['hearOther'] }" />
+            <Field
+              name="hearOther"
+              type="text"
+              value=""
+              placeholder="Other"
+              class="form-control"
+              :class="{ 'is-invalid': errors['hearOther'] }"
+            />
             <ErrorMessage :name="'hearOther'" class="invalid-feedback" />
           </div>
         </div>
@@ -387,7 +689,13 @@
         <div class="col-md-6 mb-4">
           <div class="mb-4">
             <label class="form-label">T-Shirt Size*</label>
-            <Field name="size" as="select" class="form-select" :class="{ 'is-invalid': errors['size'] }" required>
+            <Field
+              name="size"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['size'] }"
+              required
+            >
               <option v-for="option in sizeOptions" :value="option">
                 {{ option }}
               </option>
@@ -397,7 +705,12 @@
           <div>
             <label for="resume" class="form-label">Upload Resume</label>
             <Field name="resume">
-              <input class="form-control" type="file" id="resume" @change="getFileUpload" />
+              <input
+                class="form-control"
+                type="file"
+                id="resume"
+                @change="getFileUpload"
+              />
             </Field>
           </div>
         </div>
@@ -405,17 +718,25 @@
         <div class="col-md-6 mb-4">
           <label class="form-label">Accommodations</label>
           <div class="form-check" v-for="option in accommodationsOptions">
-            <Field name="accommodations" :value="option.value" type="checkbox" class="form-check-input"
-              :id="option.value" />
+            <Field
+              name="accommodations"
+              :value="option.value"
+              type="checkbox"
+              class="form-check-input"
+              :id="option.value"
+            />
             <label class="form-check-label" :for="option.value">
               {{ option.text }}
             </label>
           </div>
 
           <div v-if="values.accommodations?.includes('other')">
-            <Field name="accommodationsOther" type="text" value="" placeholder="Other" class="form-control"
-              :class="{ 'is-invalid': errors['accommodationsOther'] }" />
-            <ErrorMessage :name="'accommodationsOther'" class="invalid-feedback" />
+            <p>
+              If you require an accommodation that is not listed, please email
+              <a href="mailto:community@gotechnica.org"
+                >community@gotechnica.org</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -430,85 +751,159 @@
       <Header>Rules and Privacy Policies</Header>
 
       <div class="form-check mt-4">
-        <Field name="technicaValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
-          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['technicaValid'] }" required />
+        <Field
+          name="technicaValid"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`"
+          :class="{ 'is-invalid': errors['technicaValid'] }"
+          required
+        />
         <label class="form-check-label">
-          <b>I understand that Technica is intended for underrepresented genders in tech.</b> I further agree to the 
-          <a href="../2024TechnicaCoC.pdf" target="_blank">Technica Terms and Code of Conduct</a>.
+          <b
+            >I understand that Technica is intended for underrepresented genders
+            in tech.</b
+          >
+          I further agree to the
+          <a href="../2024TechnicaCoC.pdf" target="_blank"
+            >Technica Terms and Code of Conduct</a
+          >.*
         </label>
       </div>
 
       <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
-        <Field name="dataRights" type="checkbox" class="form-check-input" :value="agreeDataRights.value"
-          :id="`agree-dataRights-${agreeDataRights.value}`" :class="{ 'is-invalid': errors['dataRights'] }" />
-          <label class="form-check-label">
-            I understand that the withdrawal or deletion of my data must be requested via the 
-            <a href = "https://forms.gle/i8YqC1HN1rZ55xy86" target="_blank">Data Rights Contact Form</a>.
-          </label>
-        </div>
+        <Field
+          name="dataRights"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeDataRights.value"
+          :id="`agree-dataRights-${agreeDataRights.value}`"
+          :class="{ 'is-invalid': errors['dataRights'] }"
+        />
+        <label class="form-check-label">
+          I understand that the withdrawal or deletion of my data must be
+          requested via the
+          <a href="https://forms.gle/i8YqC1HN1rZ55xy86" target="_blank"
+            >Data Rights Contact Form</a
+          >.*
+        </label>
+      </div>
 
       <ErrorMessage :name="'dataRights'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
-        <Field name="agreeNewsletter" type="checkbox" class="form-check-input" :value="agreeNewsletter.value"
-          :id="`agree-newsletter-${agreeNewsletter.value}`" :class="{ 'is-invalid': errors['agreeNewsletter'] }" />
+        <Field
+          name="agreeNewsletter"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeNewsletter.value"
+          :id="`agree-newsletter-${agreeNewsletter.value}`"
+          :class="{ 'is-invalid': errors['agreeNewsletter'] }"
+        />
 
         <label class="form-check-label">
           I agree to opt into the monthly Technica newsletter.
         </label>
       </div>
-     
+
       <div class="disclaimer mt-4">
-        <p style="color: black;">We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared</p>
+        <p style="color: black">
+          We are currently in the process of partnering with MLH. The following
+          3 checkboxes are for this partnership. If we do not end up partnering
+          with MLH, your information will not be shared
+        </p>
       </div>
 
       <div class="form-check mt-4">
-        <Field name="mlhValidCoC" type="checkbox" class="form-check-input" :value="agreeRules.value"
-          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValidCoC'] }" required />
+        <Field
+          name="mlhValidCoC"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`"
+          :class="{ 'is-invalid': errors['mlhValidCoC'] }"
+          required
+        />
         <label class="form-check-label">
           I have read and agree to the
-          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>. 
+          <a
+            href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+            target="_blank"
+            >MLH Code of Conduct</a
+          >.*
         </label>
       </div>
       <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
-        <Field name="mlhValid" type="checkbox" class="form-check-input" :value="agreeRules.value"
-          :id="`agree-rules-${agreeRules.value}`" :class="{ 'is-invalid': errors['mlhValid'] }" required />
+        <Field
+          name="mlhValid"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`"
+          :class="{ 'is-invalid': errors['mlhValid'] }"
+          required
+        />
         <label class="form-check-label">
           I authorize you to share my application/registration information with
           Major League Hacking for event administration, ranking, and MLH
           administration in-line with the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both
-          the
-          <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" target="_blank">MLH Contest Terms and
-            Conditions</a>
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a
+          >. I further agree to the terms of both the
+          <a
+            href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
+            target="_blank"
+            >MLH Contest Terms and Conditions</a
+          >
           and the
-          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a
+          >.*
         </label>
       </div>
-      
+
       <ErrorMessage :name="'mlhValid'" class="invalid-feedback ms-4" />
 
       <div class="form-check mt-4">
-        <Field name="mlhEmails" type="checkbox" class="form-check-input" :value="agreeEmails.value"
-          :id="`agree-emails-${agreeEmails.value}`" :class="{ 'is-invalid': errors['mlhEmails'] }" />
+        <Field
+          name="mlhEmails"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeEmails.value"
+          :id="`agree-emails-${agreeEmails.value}`"
+          :class="{ 'is-invalid': errors['mlhEmails'] }"
+        />
         <label class="form-check-label">
-          I authorize MLH to send me occasional emails about relevant events, career opportunities, and community
-          announcements.
+          I authorize MLH to send me occasional emails about relevant events,
+          career opportunities, and community announcements.
         </label>
       </div>
 
       <!-- {{ values }}
       {{errors}} -->
 
-      <button type="submit" text = "Submit" class="btn mt-4" @click="submitTimes++">
-        <PixelButton class="submit-btn" text="Submit" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-visited.svg"/>
+      <button
+        type="submit"
+        text="Submit"
+        class="btn mt-4"
+        @click="submitTimes++"
+      >
+        <PixelButton
+          class="submit-btn"
+          text="Submit"
+          img="purple-button-regular.svg"
+          hover="purple-button-regular.svg"
+          click="purple-visited.svg"
+        />
       </button>
       <div class="error">
-        <p v-if="submitTimes != 0" >The page may take a second to redirect, if it doesn't, please make sure you've filled out all the required fields!</p>
+        <p v-if="submitTimes != 0">
+          The page may take a second to redirect, if it doesn't, please make
+          sure you've filled out all the required fields!
+        </p>
       </div>
     </Form>
   </div>
@@ -516,7 +911,7 @@
 </template>
 
 <script setup lang="ts">
-import {reactive, computed} from 'vue';
+import { reactive, computed } from 'vue';
 import {
   Form,
   Field,
@@ -604,8 +999,7 @@ const validationSchema = yup.object<RegisterForm>({
     .when('gender', ([gender], schema: any) => {
       return gender == 'other' ? schema.required() : schema.notRequired();
     }),
-  pronouns: yup.string()
-    .notRequired(),
+  pronouns: yup.string().notRequired(),
   race: yup
     .array()
     .min(1, 'At least one race must be selected')
@@ -619,11 +1013,11 @@ const validationSchema = yup.object<RegisterForm>({
         : schema.required('Race(s) are required');
     }),
   age: yup
-  .number()
-  .min(1, 'Age must be greater or equal to 1')
-  .nullable() // Allows null or undefined values
-  .required('Age is required')
-  .typeError('Age must be a number'),
+    .number()
+    .min(1, 'Age must be greater or equal to 1')
+    .nullable() // Allows null or undefined values
+    .required('Age is required')
+    .typeError('Age must be a number'),
 
   parentEmail: yup
     .string()
@@ -653,9 +1047,7 @@ const validationSchema = yup.object<RegisterForm>({
         ? schema.required()
         : schema.notRequired();
     }),
-  attendance: yup
-    .string()
-    .required('Please specify how you will be attending'),
+  attendance: yup.string().required('Please specify how you will be attending'),
   isFirstHackathon: yup
     .string()
     .required('Please specify if this is your first hackathon'),
@@ -714,14 +1106,20 @@ const validationSchema = yup.object<RegisterForm>({
     .required('Please enter an accommodation')
     .when('accommodations', (accommodations, schema: any) => {
       return accommodations.includes('other')
-        ? schema.required('Please enter an accommodation') : schema.notRequired();
-
+        ? schema.required('Please enter an accommodation')
+        : schema.notRequired();
     }),
   size: yup.string().required('T-shirt size is required'),
   resume: yup.mixed().notRequired(),
-  technicaValid: yup.string().required('Agreement of Technica conditions is required'),
-  dataRights: yup.string().required('Agreement to the Data Rights Agreement is required'),
-  mlhValidCoC: yup.string().required('Agreement of MLH Code of Conduct is required'),
+  technicaValid: yup
+    .string()
+    .required('Agreement of Technica conditions is required'),
+  dataRights: yup
+    .string()
+    .required('Agreement to the Data Rights Agreement is required'),
+  mlhValidCoC: yup
+    .string()
+    .required('Agreement of MLH Code of Conduct is required'),
   mlhValid: yup.string().required('Agreement of MLH conditions is required'),
 });
 
@@ -819,7 +1217,6 @@ const topicsOfInterest = ref<Option[]>([
   { text: 'Startups', value: 'startups' },
   { text: 'Research', value: 'research' },
   { text: 'Web Development', value: 'web-development' },
-  {text: 'Hardware', value: 'hardware' },
 ]);
 
 const foodAllergiesOptions = ref<Option[]>([
@@ -832,7 +1229,7 @@ const accommodationsOptions = ref<Option[]>([
   { text: 'ASL Interpreter', value: 'asl-interpreter' },
   { text: 'Guides', value: 'guides' },
   { text: 'Earplugs', value: 'earplugs' },
-  { text: 'Masks', value: 'masks'},
+  { text: 'Masks', value: 'masks' },
   { text: 'Other', value: 'other' },
 ]);
 
@@ -866,17 +1263,17 @@ const userInput = reactive<UserInput>({
 const attendanceOptions: Option[] = [
   { text: 'In-Person', value: 'in-person' },
   { text: 'Virtual', value: 'virtual' },
-  { text: 'Hybrid', value: 'hybrid' }
+  { text: 'Hybrid', value: 'hybrid' },
 ];
 
 const firstHackathon: Option[] = [
   { text: 'No', value: 'No' },
-  { text: 'Yes', value: 'Yes' }
+  { text: 'Yes', value: 'Yes' },
 ];
 
 const firstTechnica: Option[] = [
   { text: 'No', value: 'No' },
-  { text: 'Yes', value: 'Yes' }
+  { text: 'Yes', value: 'Yes' },
 ];
 
 // const alumni: Option[] = [
@@ -889,23 +1286,22 @@ const experience: string[] = ['0', '1', '2', '3', '4', '5+'];
 const trackOptions: Option[] = [
   { text: 'Beginner', value: 'beginner' },
   { text: 'General', value: 'general' },
-  { text: 'Hardware', value: 'hardware' }, // Add the hardware option
   { text: 'Startup', value: 'startup' },
-  { text: 'Research', value: 'research' }
+  { text: 'Research', value: 'research' },
 ];
 
-// Function to check if education is high school or lower 
+// Function to check if education is high school or lower
 const isHighSchoolOrLower = (education: string): boolean => {
   const highSchoolOrLowerOptions = [
     'Less than Secondary / High School',
-    'Secondary / High School'
+    'Secondary / High School',
   ];
   return highSchoolOrLowerOptions.includes(education);
 };
 
 // Compute recommended tracks based on user input
 const recommendedTracks = computed(() => {
-  const tracks: { text: string, value: string }[] = [];
+  const tracks: { text: string; value: string }[] = [];
 
   tracks.push({ text: 'General', value: 'general' });
 
@@ -922,13 +1318,12 @@ const recommendedTracks = computed(() => {
       tracks.push({ text: 'Startup', value: 'startup' });
     }
 
-    if (userInput.topicsOfInterest.includes('hardware')) {
-      tracks.push({ text: 'Hardware', value: 'hardware' });
+    if (
+      userInput.topicsOfInterest.includes('research') &&
+      !isHighSchoolOrLower(userInput.education)
+    ) {
+      tracks.push({ text: 'Research', value: 'research' });
     }
-
-    // if (userInput.topicsOfInterest.includes('research') && !isHighSchoolOrLower(userInput.education)) {
-    //   tracks.push({ text: 'Research', value: 'research' });
-    // }
   }
 
   return tracks;
@@ -1011,11 +1406,11 @@ const registerUser = async (values: Record<string, any>) => {
     values.gender = 'Other: ' + values.genderOther;
   }
 
-  if(values.school == 'Other') {
+  if (values.school == 'Other') {
     values.school = 'Other: ' + values.schoolOther;
   }
 
-  if(values.pronouns == "") {
+  if (values.pronouns == '') {
     values.pronouns = 'Not Listed';
   }
 
@@ -1043,9 +1438,8 @@ const registerUser = async (values: Record<string, any>) => {
   }
 
   if (values.agreeNewsletter == null) {
-    values.agreeNewsletter = "No"
+    values.agreeNewsletter = 'No';
   }
-
 
   //Test input for submission
   // let testInput = {
@@ -1091,10 +1485,10 @@ const registerUser = async (values: Record<string, any>) => {
 
   // Add referral code if it exists
   let params = new URL(document.location as any).searchParams;
-  let referral = params.get("referral");
+  let referral = params.get('referral');
 
-  fd.append("referral", referral as string)
-  
+  fd.append('referral', referral as string);
+
   try {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
@@ -1104,19 +1498,13 @@ const registerUser = async (values: Record<string, any>) => {
 
     isSending.value = false;
 
-
-    
-    if (
-      !response 
-    ) {
+    if (!response) {
       alert(
         'Sorry, there was an error with the submission. Please try again later. noresponse'
       );
-    } else if
-      (response.error.value && response.error.value.statusCode == 500) {
-        alert('status code 500')
-    }
-      else {
+    } else if (response.error.value && response.error.value.statusCode == 500) {
+      alert('status code 500');
+    } else {
       location.href = '/RegistrationConfirmation';
     }
   } catch (error: any) {
@@ -1129,7 +1517,6 @@ const registerUser = async (values: Record<string, any>) => {
 function getFileUpload(e: any) {
   resumeFile.value = e.target.files[0];
 }
-
 </script>
 
 <style scoped lang="scss">
@@ -1142,7 +1529,7 @@ H3 {
   color: $DARK_PURPLE;
 }
 
-.disclaimer{
+.disclaimer {
   padding: 2rem;
   padding-bottom: 0rem;
 }
