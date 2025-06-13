@@ -487,6 +487,29 @@
               />
             </div>
           </div>
+
+          <div class="mb-4">
+            <label class="form-label"
+              >Which track do you wish to participate in?*</label
+            >
+            <p>
+              Please note: Most tracks are only available to in-person hackers!
+            </p>
+            <div
+              class="form-check"
+              v-for="option in recommendedTracks"
+              :key="option.value"
+            >
+              <Field
+                name="track"
+                :value="option.value"
+                type="radio"
+                class="form-check-input"
+              />
+              <label class="form-check-label">{{ option.text }}</label>
+            </div>
+            <ErrorMessage :name="'track'" class="invalid-feedback" />
+          </div>
         </div>
 
         <div class="col-md-6 mb-4">
@@ -542,31 +565,6 @@
             </p>
             <ErrorMessage :name="'topics'" class="invalid-feedback" />
           </div>
-        </div>
-      </div>
-
-      <div class="row gx-5">
-        <div class="col-md-6 mb-4">
-          <label class="form-label"
-            >Which track do you wish to participate in?*</label
-          >
-          <p>
-            Please note: Most tracks are only available to in-person hackers!
-          </p>
-          <div
-            class="form-check"
-            v-for="option in recommendedTracks"
-            :key="option.value"
-          >
-            <Field
-              name="track"
-              :value="option.value"
-              type="radio"
-              class="form-check-input"
-            />
-            <label class="form-check-label">{{ option.text }}</label>
-          </div>
-          <ErrorMessage :name="'track'" class="invalid-feedback" />
         </div>
       </div>
 
@@ -712,6 +710,11 @@
                 @change="getFileUpload"
               />
             </Field>
+            <p class="mt-3">
+              If you choose to share your resume with us, it will be shared with
+              our sponsors for opportunities. You may upload or update your
+              resume during the event.
+            </p>
           </div>
         </div>
 
@@ -729,23 +732,15 @@
               {{ option.text }}
             </label>
           </div>
-
-          <div v-if="values.accommodations?.includes('other')">
-            <p>
-              If you require an accommodation that is not listed, please email
-              <a href="mailto:community@gotechnica.org"
-                >community@gotechnica.org</a
-              >
-            </p>
-          </div>
+          <p class="mt-3">
+            If you select other, please email
+            <a href="mailto:community@gotechnica.org"
+              >community@gotechnica.org</a
+            >
+            with your accommodation request.
+          </p>
         </div>
       </div>
-
-      <p>
-        If you choose to share your resume with us, it will be shared with our
-        sponsors for opportunities. You may upload or update your resume during
-        the event.
-      </p>
 
       <!-- RULES AND PRIVACY POLICY -->
       <Header>Rules and Privacy Policies</Header>
@@ -942,6 +937,7 @@ interface RegisterForm {
   genderOther: string;
   pronouns?: string;
   race: string[];
+  linkedIn?: string;
   age: string;
   parentEmail: string;
   education: string;
@@ -982,17 +978,7 @@ const validationSchema = yup.object<RegisterForm>({
     .email('Invalid email address')
     .required('Email is required'),
   phone: yup.string().matches(/^[0-9]{10}$/, 'Phone number is required'),
-  gender: yup
-    .string()
-    // .test(
-    //   'cis-man',
-    //   'Cisgender men are not allowed to participate',
-    //   function (value) {
-    //     const isCisgenderMale = value?.includes('cis-man');
-    //     return !isCisgenderMale;
-    //   }
-    // )
-    .required('Gender selection is required'),
+  gender: yup.string().required('Gender selection is required'),
   genderOther: yup
     .string()
     .required('Please enter a gender')
@@ -1012,6 +998,7 @@ const validationSchema = yup.object<RegisterForm>({
         ? schema.notRequired()
         : schema.required('Race(s) are required');
     }),
+  linkedIn: yup.string().notRequired(),
   age: yup
     .number()
     .min(1, 'Age must be greater or equal to 1')
@@ -1213,9 +1200,11 @@ const dietaryRestrictionsOptions = ref<Option[]>([
 
 const topicsOfInterest = ref<Option[]>([
   { text: 'AI and Machine Learning', value: 'ai-and-machine-learning' },
+  { text: 'Cloud Computing', value: 'cloud-computing' },
   { text: 'Data Science', value: 'data-science' },
   { text: 'Startups', value: 'startups' },
   { text: 'Research', value: 'research' },
+  { text: 'UI/UX', value: 'ui-ux' },
   { text: 'Web Development', value: 'web-development' },
 ]);
 
@@ -1417,6 +1406,10 @@ const registerUser = async (values: Record<string, any>) => {
   if (values.raceOther != null) {
     let idx = values.race.findIndex((acc: string) => acc == 'other');
     values.race[idx] = 'other: ' + values.raceOther;
+  }
+
+  if (values.linkedIn == '') {
+    values.linkedIn = 'Not Listed';
   }
 
   if (values.dietaryRestrictions != null) {
