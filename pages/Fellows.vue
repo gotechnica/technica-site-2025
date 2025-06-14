@@ -115,6 +115,37 @@
       </div>
     </div>
 
+    <!-- Projects! -->
+    <!-- replace google.com with their actual project links and add pictures -->
+    <div class="row project-section">
+     <h3 style="font-size: 3vw;">Past Projects</h3>
+     <div class="project-cards">
+        <div class="project-card">
+          <div class="subtitle">View Project</div>
+          <a href="google.com" class="project-button"></a>
+        </div>
+        <div class="project-card">
+          <div class="subtitle">View Project</div>
+          <a href="google.com" class="project-button"></a>
+        </div>
+        <div class="project-card">
+          <div class="subtitle">View Project</div>
+          <a href="google.com" class="project-button"></a>
+        </div>
+        <div class="project-card">
+          <div class="subtitle">View Project</div>
+          <a href="google.com" class="project-button"></a>
+        </div>
+        <div class="project-card">
+          <div class="subtitle">View Project</div>
+          <a href="google.com" class="project-button"></a>
+        </div>
+        <div class="project-card">
+          <div class="subtitle">View Project</div>
+          <a href="google.com" class="project-button"></a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <Header v-if="width <= 768" class=faq>FAQ</Header>
       <Header v-else class=faq>Frequently Asked Questions</Header>
@@ -392,6 +423,70 @@ hr{
   & .next {
     margin-right: -5%;
   }
+}
+
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 5vw;
+  width: 100%;
+  max-width: 60vw;
+  margin: auto;
+  padding: 20px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(6, 200px);
+  }
+}
+
+.project-card {
+  position: relative;
+  background-color: #6CB4AC;
+  border: 3px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.project-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(226, 226, 226);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Show subtitle on hover */
+.project-card:hover .subtitle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.subtitle {
+
 }
 
 @media screen and (max-width: 800px) {
