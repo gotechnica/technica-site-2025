@@ -121,28 +121,34 @@
      <h3 style="font-size: 3vw;">Past Projects</h3>
      <div class="project-cards">
         <div class="project-card">
-          <div class="subtitle">View Project</div>
-          <a href="google.com" class="project-button"></a>
+            <img src="/fellows/down-down-down-the-rabbithole.jpg" alt="Down Down Down the Rabbithole" class="project-image" />
+            <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Milkii_Savya/fellowshipproject.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+            </a>
         </div>
         <div class="project-card">
-          <div class="subtitle">View Project</div>
-          <a href="google.com" class="project-button"></a>
+          <img src="/fellows/hackerland.jpg" alt="Hackerland" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Christiana_Sophia/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
         </div>
         <div class="project-card">
-          <div class="subtitle">View Project</div>
-          <a href="google.com" class="project-button"></a>
+          <img src="/fellows/high-tea-time.jpg" alt="High Tea Time" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Nikita_Eniola/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
         </div>
         <div class="project-card">
-          <div class="subtitle">View Project</div>
-          <a href="google.com" class="project-button"></a>
+          <img src="/fellows/the-wonder-of-fall.jpg" alt="The Wonder of Fall" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Samragyee_Anagha/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
         </div>
         <div class="project-card">
-          <div class="subtitle">View Project</div>
-          <a href="google.com" class="project-button"></a>
-        </div>
-        <div class="project-card">
-          <div class="subtitle">View Project</div>
-          <a href="google.com" class="project-button"></a>
+          <img src="/fellows/top-fantasy-movies.jpg" alt="Top Fantasy Movies" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Zoey_Aabha/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
         </div>
       </div>
     </div>
@@ -452,6 +458,7 @@ hr{
   font-weight: bold;
   font-size: 1.2rem;
   overflow: hidden;
+  border-radius: 1rem;       
 }
 
 .project-button {
@@ -462,6 +469,19 @@ hr{
   border: none;
   text-decoration: none;
   color: inherit;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card:last-child {
+  grid-column: 1 / -1;  
+  justify-self: center;  
+  width: 50%;           
 }
 
 .subtitle {
