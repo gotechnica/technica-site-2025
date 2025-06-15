@@ -26,27 +26,27 @@ export default defineComponent({
   props: {
     whatToDoImg: {
       type: String,
-      required: true
+      required: true,
     },
     whatToDoTitle: {
       type: String,
-      required: true
+      required: true,
     },
     whatToDoDesc: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      showDesc: false
+      showDesc: false,
     };
   },
   methods: {
     toggleText() {
       this.showDesc = !this.showDesc;
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -57,7 +57,7 @@ export default defineComponent({
   flex-direction: column;
   align-content: center;
   width: 50vw;
-  height: 40vw;
+  height: fit-content;
   border-radius: 1rem;
   border-width: 0;
   background-color: transparent;
@@ -65,29 +65,24 @@ export default defineComponent({
   visibility: visible;
 }
 
-.mobile {
-  visibility: hidden;
-}
-
 .card-contents {
   border: 0.7rem solid #1e638e;
   border-radius: 20px;
-  background-color: #FFFBEF;
+  background-color: #fffbef;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   position: relative;
 }
 
 .image-container {
   position: relative;
-  padding: .5rem;
+  padding: 2rem 0;
 }
 
 .image-container img {
   border-radius: 0.5rem;
   max-width: 75%;
 }
-
 
 .card-text {
   position: relative;
@@ -98,11 +93,12 @@ export default defineComponent({
   position: absolute;
   top: 20%;
   background-color: rgba(0, 0, 0, 0.805);
-  color: #FFFBEF;
+  color: #fffbef;
   border: 0.3rem solid #6b80a2;
   border-radius: 30px;
   padding: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
+  z-index: 10;
 }
 
 .clickable-text {
@@ -122,8 +118,26 @@ h3 {
   font-size: 2.5rem;
 }
 
-
 /* responsivity */
+@media screen and (min-width: 1500px) {
+  /* .card-contents {
+    width: 100%;
+  }
+  .card {
+    justify-content: center;
+    align-items: center;
+  } */
+  .image-container img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .image-container img {
+    width: 25%;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   p {
     font-size: 1.2vw;
@@ -131,41 +145,39 @@ h3 {
 }
 
 @media screen and (max-width: 992px) {
-
   .card,
   .card-contents {
-    height: 75%;
+    height: fit-content;
+  }
+  .overlay-text {
+    top: 0;
   }
 
   p {
     font-size: 80%;
   }
-
-  .card-text {
-    padding-top: 10rem;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
-
   .card,
   .card-contents {
-    height: 75%;
+    height: 60%;
   }
 
-  .card-text {
-    padding-top: 15rem;
+  .card-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 630px) {
-  .card {
+  /* .card {
     visibility: hidden;
   }
 
   .mobile {
     visibility: visible;
-  }
+  } */
 }
 </style>
