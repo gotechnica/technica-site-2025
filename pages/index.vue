@@ -6,7 +6,7 @@
     <HeroLanding />
 
     <div class="containers after">
-      <h1>Thank You For Coming!</h1>
+      <!-- <h1>Thank You For Coming!</h1> -->
     </div>
 
     <!-- DAY OF! -->
@@ -206,16 +206,5 @@ useHead({
   text-align: center;
   color: white;
   margin-bottom: 20rem;
-}
-
-@media screen and (max-width: 630px) {
-  .whatToDo {
-    visibility: hidden;
-  }
-
-  /**
-  .hybrid {
-    margin-top: -60rem;
-  } */
 }
 </style>

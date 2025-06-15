@@ -119,6 +119,25 @@ h3 {
 }
 
 /* responsivity */
+@media screen and (min-width: 1500px) {
+  /* .card-contents {
+    width: 100%;
+  }
+  .card {
+    justify-content: center;
+    align-items: center;
+  } */
+  .image-container img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .image-container img {
+    width: 25%;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   p {
     font-size: 1.2vw;
@@ -142,17 +161,23 @@ h3 {
 @media screen and (max-width: 768px) {
   .card,
   .card-contents {
-    height: fit-content;
+    height: 60%;
+  }
+
+  .card-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 630px) {
-  .card {
+  /* .card {
     visibility: hidden;
   }
 
   .mobile {
     visibility: visible;
-  }
+  } */
 }
 </style>
