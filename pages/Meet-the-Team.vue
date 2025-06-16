@@ -264,10 +264,6 @@ const tech = computed(() =>
   box-sizing: border-box;
 }
 
-.h3 {
-  text-align: center;
-}
-
 .heading {
   margin-bottom: 2rem;
 }
