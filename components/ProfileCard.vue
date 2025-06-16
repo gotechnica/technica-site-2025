@@ -38,27 +38,15 @@ const placeholder = blankProfilePic
 .profile-card {
   padding: 1rem;
   border-radius: 0.5rem;
-  width: 160px;
+  width: 220px;
   text-align: center;
   position: relative;
 }
 
-.profile-name {
-  font-size: 0.85rem;
-  text-align: center;
-  margin-bottom: .5rem;
-  margin-top: .3rem;
-}
-
 .profile-text {
   margin: 0.1rem 0;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   line-height: 1.3;
-  text-wrap-style: pretty;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  text-align: center;
 }
 
 .profile-image-wrapper {
@@ -69,8 +57,8 @@ const placeholder = blankProfilePic
 }
 
 .profile-image {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 0.5rem;
@@ -90,13 +78,10 @@ const placeholder = blankProfilePic
   border-radius: 6px;
   background-color: white;
   padding: 2px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
-.profile-image-wrapper:hover .linkedin-badge {
-  opacity: 1;
-}
 
 </style>
