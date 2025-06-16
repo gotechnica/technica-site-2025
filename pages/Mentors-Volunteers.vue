@@ -23,7 +23,7 @@
       <div class="col">
         <h3>Mentors</h3>
         <div class="button">
-          <VineButton text="Mentor" link="https://forms.gle/Hf8EMYYeuooMEzhPA" img="yellow-button-regular.svg"
+          <VineButton text="Mentor" link="https://docs.google.com/forms/d/e/1FAIpQLSdTVezrN2UWKsXpJPDXKL7w4jA61BLbKvhYiUDdIhicpPWB_g/viewform?usp=dialog" img="yellow-button-regular.svg"
             hover="yellow-on-click.svg" click="yellow-visited.svg" />
         </div>
         <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
@@ -38,7 +38,7 @@
       <div class="col">
         <h3>Volunteers</h3>
         <div class="button">
-          <VineButton text="Volunteer" link="https://forms.gle/N34mdXiYtWWsRAbr6" img="yellow-button-regular.svg"
+          <VineButton text="Volunteer" link="https://docs.google.com/forms/d/e/1FAIpQLScosx_QuVt11v3RfSqLVlhM54Bs-MNfl6UCjLzmInK5DY8JdA/viewform?usp=dialog" img="yellow-button-regular.svg"
             hover="yellow-on-click.svg" click="yellow-visited.svg" />
         </div>
         <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
@@ -104,7 +104,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2024 will take place on October 26-27 in The Armory at UMD and virtually through our online platform, Gather. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
+      'Technica 2025 will take place on October 25-26 in The Reckord Armory at UMD and virtually through our online platform, Gather. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
   },
   {
     question:

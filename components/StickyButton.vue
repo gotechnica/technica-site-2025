@@ -51,7 +51,7 @@ function showButton() {
 </script>
 
 <style scoped lang="scss">
-@import '~/assets/styles/_variables.scss';
+@use '~/assets/styles/_variables.scss';
 
 .sticky-button {
   position: fixed;
