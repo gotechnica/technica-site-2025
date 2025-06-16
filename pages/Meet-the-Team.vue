@@ -260,8 +260,12 @@ const tech = computed(() =>
 
 <style scoped>
 
+* {
+  box-sizing: border-box;
+}
+
 .h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .heading {
@@ -280,36 +284,51 @@ const tech = computed(() =>
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .row {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name {
-    color: white;
+  color: white;
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px; 
-  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-grid > * {
+  flex: 0 1 calc((100% - 5rem) / 6);
+  max-width: calc((100% - 5rem) / 6);
+  min-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .card-grid > * {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .card-grid {
+    padding-inline: 1rem;
+  }
 }
 
 </style>

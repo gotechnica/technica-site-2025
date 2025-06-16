@@ -14,7 +14,7 @@
         />
       </a>
     </div>
-    <p class="profile-text" style="font-weight: bold; font-size: 1.1rem;">{{ name }}</p>
+    <p class="profile-name" style="font-weight: bold; font-size: 1.1rem;">{{ name }}</p>
     <p class="profile-text">{{ title }}</p>
     <p class="profile-text">{{ pronouns }}</p>
   </div>
@@ -38,15 +38,27 @@ const placeholder = blankProfilePic
 .profile-card {
   padding: 1rem;
   border-radius: 0.5rem;
-  width: 220px;
+  width: 160px;
   text-align: center;
   position: relative;
 }
 
+.profile-name {
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: .5rem;
+  margin-top: .3rem;
+}
+
 .profile-text {
   margin: 0.1rem 0;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1.3;
+  text-wrap-style: pretty;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: center;
 }
 
 .profile-image-wrapper {
@@ -57,8 +69,8 @@ const placeholder = blankProfilePic
 }
 
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 0.5rem;
