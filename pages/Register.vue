@@ -222,18 +222,6 @@
             <ErrorMessage :name="'parentEmail'" class="invalid-feedback" />
           </div>
         </div>
-        <!-- 
-        <div class="col-md-6 mb-4">
-          <div>
-            <label class="form-label"> LinkedIn </label>
-            <Field
-              name="linkedin"
-              type="text"
-              placeholder="linkedin.com/in/technica"
-              class="form-control"
-            />
-          </div>
-        </div> -->
         <!-- <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">Are you an Alumni?*</label>
@@ -559,10 +547,6 @@
               </label>
             </div>
             <p></p>
-            <p>
-              Quick tip: Different tracks will be available to you based on what
-              topics you're interested in
-            </p>
             <ErrorMessage :name="'topics'" class="invalid-feedback" />
           </div>
         </div>
@@ -1272,20 +1256,13 @@ const firstTechnica: Option[] = [
 
 const experience: string[] = ['0', '1', '2', '3', '4', '5+'];
 
-const trackOptions: Option[] = [
-  { text: 'Beginner', value: 'beginner' },
-  { text: 'General', value: 'general' },
-  { text: 'Startup', value: 'startup' },
-  { text: 'Research', value: 'research' },
-];
-
 // Function to check if education is high school or lower
 const isHighSchoolOrLower = (education: string): boolean => {
   const highSchoolOrLowerOptions = [
     'Less than Secondary / High School',
     'Secondary / High School',
   ];
-  return highSchoolOrLowerOptions.includes(education);
+  return !education || highSchoolOrLowerOptions.includes(education);
 };
 
 // Compute recommended tracks based on user input
@@ -1295,6 +1272,7 @@ const recommendedTracks = computed(() => {
   tracks.push({ text: 'General', value: 'general' });
 
   if (userInput.attendanceType === 'in-person') {
+    tracks.push({ text: 'Startup', value: 'startup' });
     if (
       userInput.isFirstHackathon === 'Yes' &&
       parseInt(userInput.yearsExperience) >= 0 &&
@@ -1303,14 +1281,7 @@ const recommendedTracks = computed(() => {
       tracks.push({ text: 'Beginner', value: 'beginner' });
     }
 
-    if (userInput.topicsOfInterest.includes('startups')) {
-      tracks.push({ text: 'Startup', value: 'startup' });
-    }
-
-    if (
-      userInput.topicsOfInterest.includes('research') &&
-      !isHighSchoolOrLower(userInput.education)
-    ) {
+    if (!isHighSchoolOrLower(userInput.education)) {
       tracks.push({ text: 'Research', value: 'research' });
     }
   }
