@@ -70,6 +70,7 @@ export default {
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         { dropdown: false, name: 'Travel', path: '/Travel' },
         { dropdown: false, name: 'Tracks', path: '/Tracks' },
+        { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'}
       ]
     }
   },
