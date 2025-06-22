@@ -9,7 +9,7 @@
         <p class="speaker-info">They/Them</p>
         <div class="btn-container">
           <button @click="toggleDropdown(1)" class="dropdown-button">
-            <PixelButton text="Read Bio" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-regular.svg" textAlign="-1.5rem"/>
+            <WebButton text="Read Bio" img="button_pink_normal.svg" hover="button_pink_hover.svg" click="button_pink_onclick.svg" textAlign="-1.5rem"/>
           </button>
           <img class="arrow" :style="{transform: `rotate(${degree1}deg)`}" :src="'/buttons/expand-arrow.svg'" alt="arrow"/>
         </div>
@@ -29,7 +29,7 @@ Eriol is a non-binary, queer person who uses they/them pronouns.
         <p class="speaker-info">She/Her</p>
         <div class="btn-container">
           <button @click="toggleDropdown(2)" class="dropdown-button">
-            <PixelButton text="Read Bio" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-regular.svg" textAlign="-1.5rem"/>
+            <WebButton text="Read Bio" img="button_pink_normal.svg" hover="button_pink_hover.svg" click="button_pink_onclick.svg" textAlign="-1.5rem"/>
           </button>
           <img class="arrow" :style="{transform: `rotate(${degree2}deg)`}" :src="'/buttons/expand-arrow.svg'" alt="arrow"/>
         </div>

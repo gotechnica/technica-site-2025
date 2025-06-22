@@ -2,64 +2,64 @@
   <Header>Sponsors</Header>
   <div class="sponsor-grid">
     <!-- Partner Sponsors  -->
-    <h4><b>Partner</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color:#EFE4DC">Partner</b></h4>
+    <div class="underline"style="background-color: #EFE4DC"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="partnerSponsors" />
     </div>
 
     <!-- Platinum Sponsors  -->
-    <h4><b>Platinum</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color:#CADAEA">Platinum</b></h4>
+    <div class="underline" style="background-color: #CADAEA"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="platinumSponsors" />
     </div>
 
     <!-- Gold Sponsors -->
-    <h4><b>Gold</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color:#F1ADCD">Gold</b></h4>
+    <div class="underline" style="background-color: #F1ADCD"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="goldSponsors" />
     </div>
 
     <!-- Silver Sponsors  -->
-    <h4><b>Silver</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color: #8E80AB">Silver</b></h4>
+    <div class="underline" style="background-color: #8E80AB"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="silverSponsors" />
     </div>
 
     <!-- Bronze Sponsors -->
-    <h4><b>Bronze</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color: #8E80AB">Bronze</b></h4>
+    <div class="underline" style="background-color: #8E80AB"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="bronzeSponsors" />
     </div>
 
     <!-- Starter Sponsors -->
-    <h4><b>Starter</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color: #8E80AB">Starter</b></h4>
+    <div class="underline" style="background-color: #8E80AB"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="starterSponsors" />
     </div>
 
     <!-- Custom Sponsors -->
-    <h4><b>Custom</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color: #8E80AB">Custom</b></h4>
+    <div class="underline" style="background-color: #8E80AB"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="customSponsors" />
     </div>
 
     <!-- Virtual Sponsors -->
-    <h4><b>Virtual</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color: #8E80AB">Virtual</b></h4>
+    <div class="underline" style="background-color: #8E80AB"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="virtualSponsors" />
     </div>
 
     <!-- Special Thanks -->
-    <h4><b>Special Thanks</b></h4>
-    <div class="underline"></div>
+    <h4><b style="color: #8E80AB">Special Thanks</b></h4>
+    <div class="underline" style="background-color: #8E80AB"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="specialThanks" />
     </div>
@@ -105,7 +105,6 @@ const specialThanks: SponsorInfo[] = [];
 
 .underline {
   width: 100%;
-  background-color: $LIGHTPURPLE;
   height: 0.3em;
 }
 

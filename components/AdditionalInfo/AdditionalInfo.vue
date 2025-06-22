@@ -10,7 +10,7 @@
       >
         <div class="card-header">{{ tab.title }}</div>
         <div class="card-content">{{ tab.content }}</div>
-        <VineButton
+        <WebButton
           :text="'Learn More'"
           :link="tab.link"
           :img="tab.img"
@@ -42,9 +42,9 @@ interface InfoTab {
 const AdditionalInfoTabs: InfoTab[] = [
   {
     index: 0,
-    img: 'green-button-regular.svg',
-    hover: 'green-on-click.svg',
-    click: 'green-visited.svg',
+    img: 'button_purple_normal.svg',
+    hover: 'button_purple_hover.svg',
+    click: 'button_purple_onclick.svg',
     class: 'fellows',
     title: 'Fellowship Program',
     content:
@@ -55,9 +55,9 @@ const AdditionalInfoTabs: InfoTab[] = [
   },
   {
     index: 1,
-    img: 'purple-button-regular.svg',
-    hover: 'purple-on-click.svg',
-    click: 'purple-visited.svg',
+    img: 'button_purple_normal.svg',
+    hover: 'button_purple_hover.svg',
+    click: 'button_purple_onclick.svg',
     class: 'mentors',
     title: 'Mentors and Volunteers',
     content:
@@ -68,9 +68,9 @@ const AdditionalInfoTabs: InfoTab[] = [
   },
   {
     index: 2,
-    img: 'pink-button-regular.svg',
-    hover: 'pink-on-click.svg',
-    click: 'pink-visited.svg',
+    img: 'button_purple_normal.svg',
+    hover: 'button_purple_hover.svg',
+    click: 'button_purple_onclick.svg',
     class: 'ambassadors',
     title: 'Ambassadors',
     content:
@@ -81,9 +81,9 @@ const AdditionalInfoTabs: InfoTab[] = [
   },
   {
     index: 3,
-    img: 'yellow-button-regular.svg',
-    hover: 'yellow-on-click.svg',
-    click: 'yellow-visited.svg',
+    img: 'button_purple_normal.svg',
+    hover: 'button_purple_hover.svg',
+    click: 'button_purple_onclick.svg',
     class: 'travel',
     title: 'Travel Info',
     content:
