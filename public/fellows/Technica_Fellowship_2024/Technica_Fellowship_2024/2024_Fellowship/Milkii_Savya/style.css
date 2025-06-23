@@ -1,0 +1,68 @@
+h1 {
+  background-color: #6eca71;
+  color: rgb(50, 106, 47);
+  font-style: oblique;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-style: oblique;
+  text-align: center;
+}
+
+h3 {
+  font-style: oblique;
+  text-align: center;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 16em;
+}
+
+body {
+    background-color: #c1e1c1;
+  }
+
+  #text {
+    color: rgb(50, 106, 47);
+    padding: 20px;
+  }
+
+  p {
+    line-height: 2;
+    text-align: center;
+  }
+
+  #Tea-Cups {
+    width: 350px;
+    height: 430px;
+    border: 15px solid #75c273;
+  }
+
+  #Books-And-Tea {
+   width: 350px;
+   height: 420px;
+   border: 15px solid #75c273;
+  }
+
+  #Chess-Garden {
+    width: 500px;
+    border: 20px solid #75c273;
+   }
+
+   .left {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+  #photobox {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+ 
+ 

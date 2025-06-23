@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 2em;
+}
+
+.box p, ol{
+    font-family: "Playfair Display";
+}
+
+.hackerLine {
+    max-width: 33.14em;
+    margin: 5em auto;
+}
+
+.box {
+    max-width: 33em;
+    padding-top:1.02em;
+    padding-bottom:1.02em;
+}
+
+.box div{
+    border: 2px solid #ffd3fd;
+    border-radius: 0.5em;
+    padding: 1.5em;
+}
+
+.box p, ol{
+    line-height: 21px;
+}
+
+.box:nth-child(odd){
+    border-left: 3px solid lightblue;
+    padding-left: 3em;
+    transform: translateX(16.5em);
+}
+
+.box:nth-child(even){
+    border-right: 3px solid pink;
+    transform: translateX(-16.5em);
+    padding-right:3em;
+}
+
+.box:nth-child(odd) img {
+    width: 12vh;
+    transform: translateX(-6.5em);
+}
+
+.box:nth-child(even) img {
+    width: 12vh;
+    transform: translateX(29.5em);
+}
+
+.wWaits{
+    color: palevioletred;
+}
+/*.cImg{
+    background-color: pink;
+    padding: 1.5em;
+    border-radius: 50%;
+    width: 30px;
+    height: auto;
+}*/
+
+.box div:hover{
+    transform:scale(1.1);
+}
