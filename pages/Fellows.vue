@@ -486,6 +486,9 @@ hr{
   grid-column: 1 / -1;  
   justify-self: center;  
   width: 50%;           
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .subtitle {
