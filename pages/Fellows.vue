@@ -444,7 +444,7 @@ hr{
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr; 
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(5, 200px);
   }
 }
 
