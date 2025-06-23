@@ -1,4 +1,3 @@
-<!-- this component is meant to work with testimonies-carousel.vue -->
 <template>
   <div class="card" :class="{ flipped: isFlipped }">
     <div class="card-front">
@@ -8,17 +7,7 @@
         <h4>{{ hackerDesc }}</h4>
       </div>
       <div class="right-column">
-        <div class="image-container">
-          <img :src="`${hackerImage}`" alt="Hacker Image" />
-        </div>
-        <div v-if="hasProject">
-          <button class="flip-button" @click="flipCard">Flip To Project</button>
-          <img
-            class="flip-arrow"
-            src="/testimonials/flip.svg"
-            alt="flip arrow"
-          />
-        </div>
+        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost" class="ghost-graphic" />
       </div>
     </div>
     <div class="card-back">
@@ -28,284 +17,116 @@
         <p>{{ projectDescription }}</p>
       </div>
       <div class="right-column">
-        <div class="image-container">
-          <img :src="`${projectImage}`" alt="Project Image" />
-        </div>
-        <div>
-          <button class="flip-button" @click="flipCard">
-            Flip To Testimony
-          </button>
-          <img
-            class="flip-arrow"
-            src="/testimonials/flip.svg"
-            alt="flip arrow"
-          />
-        </div>
+        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost" class="ghost-graphic" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    testimonyDescription: {
-      type: String,
-      required: true,
-    },
-    hackerName: {
-      type: String,
-      required: true,
-    },
-    hackerDesc: {
-      type: String,
-      required: true,
-    },
-    hackerImage: {
-      type: String,
-      required: true,
-    },
-    projectName: {
-      type: String,
-      required: false,
-    },
-    projectCategories: {
-      type: String,
-      required: false,
-    },
-    projectDescription: {
-      type: String,
-      required: false,
-    },
-    projectImage: {
-      type: String,
-      required: false,
-    },
-    hasProject: {
-      type: Boolean,
-      required: true,
-    },
+    testimonyDescription: String,
+    hackerName: String,
+    hackerDesc: String,
+    projectName: String,
+    projectCategories: String,
+    projectDescription: String,
+    projectImage: String,
+    hackerImage: String,
+    hasProject: Boolean,
   },
   data() {
     return {
-      isFlipped: false,
-    };
+      isFlipped: false
+    }
   },
   methods: {
     flipCard() {
-      this.isFlipped = !this.isFlipped;
-    },
-  },
-});
+      this.isFlipped = !this.isFlipped
+    }
+  }
+})
 </script>
 
 <style scoped lang="scss">
-// Text accessibility
-p {
-  color: $DARKPURPLE;
-}
-
 .card {
-  position: absolute;
+  position: relative;
   width: 50vw;
-  height: 39.6vw;
-  max-width: 710px;
-  max-height: 550px;
-  perspective: 1000px; /* Add perspective for 3D effect */
-  border-width: 0;
-  border-radius: 3rem;
-  background-color: transparent;
+  height: 38vw;
+  max-width: 700px;
+  max-height: 500px;
+  perspective: 1000px;
+  border-radius: 1.5rem;
 }
 
-.card-back,
-.card-front {
-  visibility: visible;
-  background-image: url('/testimonials/testimonial-card.svg');
+.card-front,
+.card-back {
+  background-color: #1A132F;
+  color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.6s ease-in-out;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-}
-
-.card .card-front,
-.card .card-back {
-  position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Hide backface of the card */
+  position: absolute;
+  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.1);
+  backface-visibility: hidden;
 }
 
-/* front and back styling */
-.card .card-front {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  transition: transform 0.6s;
+.card-back {
+  transform: rotateY(180deg);
 }
 
-.card .card-back {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  transform: rotateX(180deg); /* Initial flip */
-  transition: transform 0.6s;
-}
-/* flip visuals */
 .card.flipped .card-front {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 }
 
 .card.flipped .card-back {
-  transform: rotateX(0);
+  transform: rotateY(360deg);
 }
 
-/* stlying card sections */
 .left-column {
   width: 60%;
-  flex: 1;
+  text-align: left;
 }
 
 .right-column {
-  width: 40%;
+  width: 35%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-left: 2rem;
+  justify-content: center;
 }
 
-.image-container {
+.ghost-graphic {
   width: 100%;
-  padding-top: 100%; /* Maintain a square aspect ratio */
-  position: relative;
-  margin: 1rem;
-}
-
-.image-container img {
-  border: 0.3rem solid $MIDGREEN;
-  border-radius: 60%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 110%;
-  height: 110%;
-  object-fit: cover;
-}
-
-h1 {
-  padding-right: 100%;
+  max-width: 200px;
 }
 
 h3 {
   font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 h4 {
   font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-button.flip-button {
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-align: center;
-  color: black;
-  background-color: transparent;
-  border-width: 0;
-  white-space: nowrap;
-}
-
-/* responsivity */
-
-@media screen and (max-width: 1200px) {
-  .card {
-    width: 55vw;
-    height: 55vw;
-  }
-
-  .card-back,
-  .card-front {
-    padding: 1rem;
-    width: 55vw;
-    height: 55vw;
-  }
-
-  button.flip-button {
-    font-size: 0.9rem;
-  }
-
-  p {
-    font-size: 80%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .card {
-    width: 50vw;
-    height: 75vw;
-  }
-
-  .card-back,
-  .card-front {
-    background-image: none;
-    background-color: #ebbcca;
-    border-radius: 20px;
-  }
-
-  .left-column {
-    margin-top: 30vw;
-  }
-
-  .right-column {
-    width: 50%;
-    position: absolute;
-    top: -60px;
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  .card {
-    width: 70vw;
-    height: 650px;
-  }
-}
-
-@media screen and (max-width: 445px) {
-  p {
-    font-size: 80%;
-  }
-
-  .left-column {
-    width: 80%;
-    margin-top: 30vw;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  .left-column {
-    margin-top: 30vw;
-    margin-left: -10vw;
-    margin-right: -10vw;
-  }
-
-  button.flip-button {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  button.flip-button {
-    font-size: 0.7rem;
-  }
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 </style>
