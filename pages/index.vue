@@ -1,7 +1,7 @@
 <template>
   <!-- Modify page title in "useHead({ title: })" -->
   <!-- <title>Technica Home</title> -->
-  <div class="main-body">
+  <div class="main-body" :style = "{backgroundColor: '#272341'}">
     <!-- Hero's Section -->
     <HeroLanding />
 

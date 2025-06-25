@@ -4,6 +4,7 @@
   font-family: 'Munro';
   src: url('../fonts/Munro-2LYe.ttf');
 }
+
 @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-Regular.ttf');
@@ -31,14 +32,19 @@
   src: url('../fonts/PixeloidSans-nR3g1.ttf');
 }
 
-*{
-    box-sizing: border-box;
+@font-face {
+  font-family: 'dinpro';
+  src: url('../fonts/D-DIN.otf');
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
   font-family: 'Poppins' !important;
-  background-image:linear-gradient(#351C33, #F4D1D9);
+  background-image: linear-gradient(#351C33, #F4D1D9);
 }
 
 h1,
@@ -54,15 +60,15 @@ p {
 }
 
 .carousel__slide {
-    background-color: white;
+  background-color: white;
 }
 
 .carousel__track {
-    height: 36rem !important;
+  height: 36rem !important;
 }
 
 .carousel__pagination-button {
-    padding: 0.6rem !important;
+  padding: 0.6rem !important;
 }
 
 .carousel__pagination-button::after {
@@ -72,11 +78,13 @@ p {
 }
 
 @media (max-width: 992px) {
-    .carousel__prev, .carousel__next {
-      top: 80% !important;
-    }
-    .carousel__track {
-      height: 50rem !important;
-    }
-}
 
+  .carousel__prev,
+  .carousel__next {
+    top: 80% !important;
+  }
+
+  .carousel__track {
+    height: 50rem !important;
+  }
+}

@@ -6,6 +6,8 @@
   </template>
   
   <style scoped lang="scss">
+  
+
   div {
     position: relative;
     //text-align: center;
@@ -17,14 +19,15 @@
   }
   
   img {
-    width: 50rem;
+    width: 40rem;
   }
   
   h1 {
-    font-size: 2.5em;
+    font-family: 'dinpro';
+    font-size: 2em;
     position: absolute;
-    bottom: 0.5em;
-    color: $DARKPURPLE;
+    top: 3em;
+    color: white;
     white-space: nowrap;
   }
   
