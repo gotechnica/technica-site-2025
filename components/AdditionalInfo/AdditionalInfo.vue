@@ -8,22 +8,60 @@
     <div class = "info">
     <!-- Tabs -->
     <div class = "tabs-container">
-      <button
+      <div
         class="tab"
-        :class="tab.class" 
         v-for="tab in AdditionalInfoTabs"
         :key="'tab-' + tab.index"
-        @click = "currTab = tab.index"
-        :style = "currTab == tab.index ? {backgroundColor: '#EFE4DC', border: '1px solid transparent', borderBottom: 'none'} : {backgroundColor: '#141024', border: '3px solid #EFE4DC', borderBottom: 'none'}"
-      >
-        <p :style = "currTab == tab.index ? { color: '#141024', fontWeight: 'bold'} : {color: '#EFE4DC'}">{{ tab.title }}</p>
-    </button>
+        @click = "currTab == tab.index ? currTab = -1 : currTab = tab.index"
+        :class = "currTab == tab.index ? 'selected' : 'unselected'">
+
+      <div class = "tab-title">
+        <p :class = "currTab == tab.index ? 'selected' : 'unselected'" class = "title">{{tab.title}}</p>
+
+        <!-- "() => {currTab == tab.index ? currTab = -1 : currTab = tab.index}"  -->
+        <button 
+          v-if = "isMobile" 
+          class = "drop-down"
+          @click.stop = "currTab == tab.index ? currTab = -1 : currTab = tab.index;" 
+          :class = "currTab == tab.index ? 'active' : 'inactive'">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" width="30" 
+            height="30"
+            fill="currentColor"
+            class="bi bi-chevron-down"
+            viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </button>
+      </div>
+
+      <div v-if = "isMobile" class = "tab-content" :class = "currTab == tab.index ? 'active' : 'inactive'">
+        <p class = "tab-text" :class = "currTab == tab.index ? 'active' : 'inactive'">{{AdditionalInfoTabs[tab.index].content}}</p>
+        <div class = "mobile-button">
+        <VineButton
+          :text="'Learn More'"
+          :link="AdditionalInfoTabs[currTab].link"
+          :img="AdditionalInfoTabs[currTab].img"
+          :hover="AdditionalInfoTabs[currTab].hover"
+          :click.stop="AdditionalInfoTabs[currTab].click"
+        />
+        </div>
+      </div>
+
     </div>
 
+    </div>
+
+
+    <!-- Render separately, only on larger screen sizes -->
+
+
     <!-- Card Content -->
-    <div class = "card-content">
-    <p class = "line-breaks">{{AdditionalInfoTabs[currTab].content}}</p>
-    <div class = "learn-more-button">
+
+    
+    <div class = "card-content" v-if = "!isMobile">
+      <p class = "line-breaks">{{AdditionalInfoTabs[currTab].content}}</p>
+      <div class = "learn-more-button">
        <VineButton
           :text="'Learn More'"
           :link="AdditionalInfoTabs[currTab].link"
@@ -31,8 +69,10 @@
           :hover="AdditionalInfoTabs[currTab].hover"
           :click="AdditionalInfoTabs[currTab].click"
         />
-     </div>
+      </div>
     </div>
+
+
   </div>
 
   </div>
@@ -41,6 +81,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { useWindowSize } from '@vueuse/core';
+import {computed} from 'vue';
+import VineButton from '../VineButton.vue';
 
 interface InfoTab {
   index: number;
@@ -56,6 +98,14 @@ interface InfoTab {
 }
 
 const currTab = ref<number>(0);
+
+const mounted = ref(false);
+onMounted(() => {
+  mounted.value = true;
+});
+
+const { width } = useWindowSize();
+const isMobile = computed(() => width.value < 1200);
 
 const AdditionalInfoTabs: InfoTab[] = [
   {
@@ -112,18 +162,11 @@ const AdditionalInfoTabs: InfoTab[] = [
   },
 ];
 
-const mounted = ref(false);
-onMounted(() => {
-  mounted.value = true;
-});
 
-const { width } = useWindowSize();
-const isMobile = ref(false);
-
-width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
 </script>
 
 <style scoped lang="scss">
+
 .additional-info-container {
   display: flex;
   flex-direction: column;
@@ -138,11 +181,6 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   margin-bottom: 4rem;
 }
 
-.info{
-  // box-shadow: 0 0 30px 0 #8E80AB80;
-  // background-color: pink;
-}
-
 .tabs-container{
   display: flex;
   justify-content: space-between;
@@ -154,16 +192,165 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   .tab{
     border-radius: 10px 10px 0 0;
     z-index: 1;
-    
+    border: 1px solid transparent;
+    border-bottom: none;
+    position: relative;
+    // transition: height 0.5s ease-in;
+    height: 100%;
+    overflow: hidden;
 
-    p{
-      margin: 0;
+  &.selected{
+    background-color: #EFE4DC;
+  }
+
+  &.unselected{
+    background-color: #141024;
+    border: 2px solid #EFE4DC;
+  }
+
+    p, h3{
+      margin: 0 1rem;
       padding: 1rem 0.5rem;
-      font-size: 1rem;
+
+      &.selected {
+        color: #141024;
+        font-weight: bold;
+      } 
+
+      &.unselected {
+        color: #EFE4DC;
+      } 
+
     }
+
+  }
+
+  .mobile-button{
+    margin-top: 1rem;
+  }
+
+
+  @media screen and (max-width: 1200px) {
+     display: flex;
+     flex-direction: column;
+     margin-left: 5%;
+     margin-right: 5%;
+     
+     .tab{
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px 0 #8E80AB80;
+      margin-bottom: 1rem;
+
+      p, h3{
+        margin: 0 3rem;
+      }
+      
+      p{
+        font-size: 1.2rem;
+      }
+
+      .title{
+        font-size: 1.8rem;
+      }
+     }
+
+
   }
 
 }
+
+.tab-title{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-title p{
+  display: flex;
+}
+
+.drop-down{
+  display: flex;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  right: 2rem;
+  z-index: 2;
+  transition: transform 0.8s;
+}
+
+
+.drop-down.active{
+  color: #141024;
+  transform: rotate(180deg);
+}
+
+.drop-down.inactive{
+  color: #EFE4DC;
+}
+
+.tab-content{
+  display: none;
+}
+
+.tab-content.active{
+  display: block;
+}
+
+.tab-content.inactive{
+  display: none;
+}
+
+
+.tab-text{
+  // position: absolute;
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+  font-size: 1rem;
+}
+
+.tab-text.active{
+  color: #141024;
+  display: block;
+  height: 100%;
+}
+
+.tab-text.hidden{
+  color:#272341;
+  height: 0;
+  overflow: hidden;
+  // display: none;
+  // transition: 0.5s ease;
+}
+
+// .desc-container{
+//   overflow: hidden;
+//   height: 100%;
+// }
+
+// .desc-container.active{
+//   height: 100%;
+// }
+
+// .desc-container.hidden{
+//   height: 100%;
+//   overflow: hidden;
+//   // display: none;
+//   // transition: 0.5s ease;
+// }
+
+// .tab-desc.inactive{
+//   height: 0;
+//   visibility: hidden;
+
+// }
+
 
 .card-content {
   background-color: #EFE4DC;
@@ -177,18 +364,7 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   
   p{
     color: #141024;
-    
   }
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // gap: 2rem;
-  // margin: 5rem 5rem 0 5rem;
-
-  // @media screen and (max-width: 768px) {
-  //   grid-template-columns: 1fr;
-  //   margin-left: 5%;
-  //   margin-right: 5%;
-  // }
 }
 
 .line-breaks{
@@ -199,7 +375,6 @@ width.value <= 768 ? (isMobile.value = true) : (isMobile.value = false);
   position: absolute;
   right: 1em;
   bottom: 1em;
-  
 }
 
 // .card {
