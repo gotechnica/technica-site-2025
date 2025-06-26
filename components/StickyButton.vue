@@ -8,9 +8,9 @@
     <PixelButton
       text="Back To Top"
       textAlign="-1.25rem"
-      img="green-button-regular.svg"
-      hover="green-button-regular.svg"
-      click="green-on-click.svg"
+      img="button_cream_normal.svg"
+      hover="button_cream_hover.svg"
+      click="button_cream_onclick.svg"
     />
     <!-- <div class="text">Back To Top</div> -->
     <img class="arrow" :src="'/buttons/expand-arrow.svg'" alt="arrow" />

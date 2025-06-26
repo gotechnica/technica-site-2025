@@ -26,19 +26,19 @@
       </div>
       <div id="dummy"></div>
       <div class="buttons">
-        <VineButton
+        <WebButton
           text="Register"
           link="/register"
-          img="yellow-button-regular.svg"
-          hover="yellow-on-click.svg"
-          click="yellow-visited.svg"
+          img="button_blue_normal.svg"
+          hover="button_blue_hover.svg"
+          click="button_blue_onclick.svg"
         />
-        <VineButton
+        <WebButton
           text="Learn More"
           @click="TogglePopup"
-          img="yellow-button-regular.svg"
-          hover="yellow-on-click.svg"
-          click="yellow-visited.svg"
+          img="button_pink_normal.svg"
+          hover="button_pink_hover.svg"
+          click="button_pink_onclick.svg"
         />
       </div>
     </div>
