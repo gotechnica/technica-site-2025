@@ -44,7 +44,7 @@
 html,
 body {
   font-family: 'Poppins' !important;
-  background-image: linear-gradient(#351C33, #F4D1D9);
+  background-image: linear-gradient(#351c33, #f4d1d9);
 }
 
 h1,
@@ -75,10 +75,14 @@ p {
   border-radius: 50rem !important;
   width: 0.6rem !important;
   height: 0.58rem !important;
+  background-color: #d9d9d9 !important;
+}
+
+.carousel__pagination-button--active::after {
+  background-color: #eda9c8 !important;
 }
 
 @media (max-width: 992px) {
-
   .carousel__prev,
   .carousel__next {
     top: 80% !important;

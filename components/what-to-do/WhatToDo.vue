@@ -28,7 +28,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel';
 
 const slides = [
   {
-    whatToDoImg: '/what-to-do/learn-new-skill.svg',
+    whatToDoImg: '/what-to-do/temporary-learn-new-skill.svg',
     whatToDoTitle: 'Learn a New Skill',
     whatToDoDesc:
       'Technica aims to be a learning experience for everyone by providing' +
@@ -38,7 +38,7 @@ const slides = [
       'new career paths and opportunities that they may wish to pursue.',
   },
   {
-    whatToDoImg: '/what-to-do/network.svg',
+    whatToDoImg: '/what-to-do/temporary-network.svg',
     whatToDoTitle: 'Network',
     whatToDoDesc:
       'Looking to network? Companies are welcome to have recruiters and ' +
@@ -49,7 +49,7 @@ const slides = [
       'openings or even an internship or job offer.',
   },
   {
-    whatToDoImg: '/what-to-do/submit-project.svg',
+    whatToDoImg: '/what-to-do/temporary-submit-project.svg',
     whatToDoTitle: 'Submit a Project',
     whatToDoDesc:
       'Submit your project for prize categories for a chance to win ' +
