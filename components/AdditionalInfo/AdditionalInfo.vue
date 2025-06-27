@@ -12,7 +12,7 @@
         class="tab"
         v-for="tab in AdditionalInfoTabs"
         :key="'tab-' + tab.index"
-        @click = "currTab == tab.index ? currTab = -1 : currTab = tab.index"
+        @click = "toggleTab(tab.index)"
         :class = "currTab == tab.index ? 'selected' : 'unselected'">
 
       <div class = "tab-title">
@@ -22,7 +22,7 @@
         <button 
           v-if = "isMobile" 
           class = "drop-down"
-          @click.stop = "currTab == tab.index ? currTab = -1 : currTab = tab.index;" 
+          @click.stop = "toggleTab(tab.index)" 
           :class = "currTab == tab.index ? 'active' : 'inactive'">
             <svg 
             xmlns="http://www.w3.org/2000/svg" width="30" 
@@ -35,16 +35,18 @@
           </button>
       </div>
 
-      <div v-if = "isMobile" class = "tab-content" :class = "currTab == tab.index ? 'active' : 'inactive'">
+      <div v-if = "isMobile" class = "tab-content" v-show = "currTab == tab.index" :key = "currTab === tab.index ? tab.index : 'closed-' + tab.index">
         <p class = "tab-text" :class = "currTab == tab.index ? 'active' : 'inactive'">{{AdditionalInfoTabs[tab.index].content}}</p>
-        <div class = "mobile-button">
-        <VineButton
+        <div class = "mobile-button" :key="'button-' + currTab" @click.stop>
+        <WebButton
+          v-if = "currTab === tab.index"
           :text="'Learn More'"
           :link="AdditionalInfoTabs[currTab].link"
           :img="AdditionalInfoTabs[currTab].img"
           :hover="AdditionalInfoTabs[currTab].hover"
-          :click.stop="AdditionalInfoTabs[currTab].click"
+          :click="AdditionalInfoTabs[currTab].click"
         />
+        <!-- <button></button> -->
         </div>
       </div>
 
@@ -62,7 +64,7 @@
     <div class = "card-content" v-if = "!isMobile">
       <p class = "line-breaks">{{AdditionalInfoTabs[currTab].content}}</p>
       <div class = "learn-more-button">
-       <VineButton
+       <WebButton
           :text="'Learn More'"
           :link="AdditionalInfoTabs[currTab].link"
           :img="AdditionalInfoTabs[currTab].img"
@@ -107,6 +109,10 @@ onMounted(() => {
 const { width } = useWindowSize();
 const isMobile = computed(() => width.value < 1200);
 
+const toggleTab = (index:number) => {
+  currTab.value = currTab.value === index ? -1 : index;
+}
+
 const AdditionalInfoTabs: InfoTab[] = [
   {
     index: 0,
@@ -116,7 +122,7 @@ const AdditionalInfoTabs: InfoTab[] = [
     class: 'fellows',
     title: 'Fellowship Program',
     content:
-      'The Technica Fellowship Program gives rising college freshman opportunity to work on a coding project impacting Technica. Fellows will gain real industry experience and impact thousands of users! Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.  \n\nTempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.',
+      'The Technica Fellowship Program gives rising college freshman opportunity to work on a coding project impacting Technica. Fellows will gain real industry experience and impact thousands of users!',
     link: '/fellows',
     color: '#EFE4DC',
     displayed: true,
@@ -129,7 +135,7 @@ const AdditionalInfoTabs: InfoTab[] = [
     class: 'mentors',
     title: 'Mentors and Volunteers',
     content:
-      "Bring hackers' ideas to life by sharing your Technica knowledge or help with event operations at Technica! Anyone 18 years or older and of any gender can volunteer and help make Technica a success! Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. \n\n Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.",
+      "Bring hackers' ideas to life by sharing your Technica knowledge or help with event operations at Technica! Anyone 18 years or older and of any gender can volunteer and help make Technica a success!",
     link: '/mentors-volunteers',
     color: '#EFE4DC',
     displayed: false,
@@ -142,7 +148,7 @@ const AdditionalInfoTabs: InfoTab[] = [
     class: 'ambassadors',
     title: 'Ambassadors',
     content:
-      "Technica Campus Ambassadors have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you'll spread the word about Technica 2025 on your campus and promote inclusion in STEM! Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. \n\n Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.",
+      "Technica Campus Ambassadors have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you'll spread the word about Technica 2025 on your campus and promote inclusion in STEM!",
     link: '/ambassadors',
     color: '#EFE4DC',
     displayed: false,
@@ -155,7 +161,7 @@ const AdditionalInfoTabs: InfoTab[] = [
     class: 'travel',
     title: 'Travel Info',
     content:
-      'Need to travel to get to Technica? We got you covered! Technica can reimburse your travel fees. Head to our travel page to learn more!Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.  \n\n Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.  Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.',
+      'Need to travel to get to Technica? We got you covered! Technica can reimburse your travel fees. Head to our travel page to learn more!',
     link: '/travel',
     color: '#EFE4DC',
     displayed: false,
@@ -251,24 +257,49 @@ const AdditionalInfoTabs: InfoTab[] = [
       }
 
       .title{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
      }
 
 
   }
 
+  @media screen and (max-width: 765px) {
+    .tab{
+      padding: 20px 0px;
+    }
+  }
+
+   @media screen and (max-width: 550px) {
+    .tab{
+       padding: 20px 0px;
+
+      .tab-title p{
+        font-size: 1.4rem;
+      }
+    }
+  }
+
 }
+
 
 .tab-title{
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 765px) {
+    justify-content: space-between;
+  }
 }
 
 .tab-title p{
   display: flex;
+  
+  @media screen and (max-width: 765px) {
+    font-size: 1rem;
+  }
 }
 
 .drop-down{
@@ -281,6 +312,12 @@ const AdditionalInfoTabs: InfoTab[] = [
   right: 2rem;
   z-index: 2;
   transition: transform 0.8s;
+
+  
+  @media screen and (max-width: 765px) {
+    position: relative;
+  }
+
 }
 
 
@@ -294,7 +331,7 @@ const AdditionalInfoTabs: InfoTab[] = [
 }
 
 .tab-content{
-  display: none;
+  display: block;
 }
 
 .tab-content.active{
@@ -307,9 +344,6 @@ const AdditionalInfoTabs: InfoTab[] = [
 
 
 .tab-text{
-  // position: absolute;
-  display: none;
-  height: 0;
   overflow: hidden;
   transition: height 0.5s ease-in;
   font-size: 1rem;
@@ -325,31 +359,7 @@ const AdditionalInfoTabs: InfoTab[] = [
   color:#272341;
   height: 0;
   overflow: hidden;
-  // display: none;
-  // transition: 0.5s ease;
 }
-
-// .desc-container{
-//   overflow: hidden;
-//   height: 100%;
-// }
-
-// .desc-container.active{
-//   height: 100%;
-// }
-
-// .desc-container.hidden{
-//   height: 100%;
-//   overflow: hidden;
-//   // display: none;
-//   // transition: 0.5s ease;
-// }
-
-// .tab-desc.inactive{
-//   height: 0;
-//   visibility: hidden;
-
-// }
 
 
 .card-content {
@@ -365,10 +375,6 @@ const AdditionalInfoTabs: InfoTab[] = [
   p{
     color: #141024;
   }
-}
-
-.line-breaks{
-  white-space: pre-line;
 }
 
 .learn-more-button{
