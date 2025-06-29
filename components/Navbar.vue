@@ -62,16 +62,25 @@ export default {
   data() {
     return {
       links: [
-        // { dropdown: false, name: 'Home', path: '/' },
         { dropdown: false, name: 'Register', path: './Register'},
-        { dropdown: false, name: 'Fellows', path: './Fellows'},
-        { dropdown: false, name: 'Ambassadors', path: './Ambassadors'},
-        { dropdown: false, name: 'Mentors & Volunteers', path: './Mentors-Volunteers'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         { dropdown: false, name: 'Travel', path: '/Travel' },
         { dropdown: false, name: 'Tracks', path: '/Tracks' },
-        { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'}
-      ]
+        { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
+        { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
+
+        {
+          dropdown: true,
+          name: 'Programs',
+          showDropdown: false,
+          items: [
+            { name: 'Fellows', path: './Fellows' },
+            { name: 'Ambassadors', path: './Ambassadors' },
+            { name: 'Mentors & Volunteers', path: './Mentors-Volunteers' }
+        ]
+   }
+]
+
     }
   },
   mounted() {

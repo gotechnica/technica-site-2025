@@ -284,7 +284,7 @@ const outcomes = [
 
 .header {
   align-items: center;
-  color: #653553;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -306,7 +306,7 @@ const outcomes = [
 }
 
 .fellow-header h4 {
-  color: #ffce64;
+  color: #FFFFFF;
 }
 
 .fellow-header h1 {
@@ -322,12 +322,12 @@ const outcomes = [
 }
 
 h3, h4 {
-  color: #ffce64;
+  color: white;
   text-align: center;
 }
 
 h5{
-  color: #ffce64;
+  color: white;
 }
 
 li, p{
@@ -451,7 +451,8 @@ hr{
 .project-card {
   position: relative;
   background-color: transparent;
-  border: 3px solid #000000;
+  border: 1px solid #CADAEA; 
+  box-shadow: 0 4px 12px rgba(202, 218, 234, 0.7);
   width: 100%;
   height: auto;
   display: flex;
@@ -460,7 +461,7 @@ hr{
   font-weight: bold;
   font-size: 1.2rem;
   overflow: hidden;
-  border-radius: 1rem;       
+  border-radius: 1rem;   
 }
 
 .project-button {

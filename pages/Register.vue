@@ -745,7 +745,7 @@
             in tech.</b
           >
           I further agree to the
-          <a href="../2024TechnicaCoC.pdf" target="_blank"
+          <a href="../2025TechnicaCoC.pdf" target="_blank"
             >Technica Terms and Code of Conduct</a
           >.*
         </label>

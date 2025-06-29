@@ -31,6 +31,12 @@
   src: url('../fonts/PixeloidSans-nR3g1.ttf');
 }
 
+@font-face {
+  font-family: 'dinpro';
+  src: url('../fonts/D-DIN.otf');
+}
+
+
 *{
     box-sizing: border-box;
 }
@@ -38,14 +44,14 @@
 html,
 body {
   font-family: 'Poppins' !important;
-  background-image:linear-gradient(#351C33, #F4D1D9);
+  background-image: linear-gradient(#272341, #272341);;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Poppins';
+  font-family: 'dinpro';
   font-weight: bold;
 }
 
