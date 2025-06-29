@@ -23,7 +23,8 @@
   h1 {
     font-size: 2.5em;
     position: absolute;
-    bottom: 0.5em;
+    top: 47%; // aligns the text to the center (vertically)
+    //bottom: 0.5em;
     color: $DARKPURPLE;
     white-space: nowrap;
   }
