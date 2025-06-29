@@ -141,7 +141,10 @@
     color: white;
     position: absolute;
     text-align: center;
-    inset: 42% 0% 0% 15%;
+    inset: 53% 0 0 0%;
+    font-weight: 500;
+    text-shadow: 5px 5px 13px black;
+    font-size: 18px;
   }
   
   .socials {
