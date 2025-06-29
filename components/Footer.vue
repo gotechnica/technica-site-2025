@@ -86,8 +86,9 @@
               <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">
                   MLH Code of Conduct
               </a> |
+              <a href="https://docs.google.com/document/d/10NeTG-sm-0e_LcA58TfyniJN9ANM6zGw/edit?usp=sharing&ouid=104669897381416274191&rtpof=true&sd=true" target="_blank">
                   Technica Code of Conduct 
-                   |
+              </a> |
               <a href="https://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS" target="_blank"
                   > Donate
               </a>
