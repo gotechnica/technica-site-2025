@@ -25,7 +25,7 @@
     position: absolute;
     top: 47%; // aligns the text to the center (vertically)
     //bottom: 0.5em;
-    color: $DARKPURPLE;
+    color: white;
     white-space: nowrap;
   }
   

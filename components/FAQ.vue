@@ -46,13 +46,14 @@
   
   <style scoped lang="scss">
   .faq-section-wrapper {
-    border-radius: 33px;
-    background: $LIGHTGREEN;
+    border-radius: 10px;
+    background: rgb(19, 16, 35);
     padding: 25px 15px 25px 15px;
-    color: black;
+    color: white;
     margin: auto;
     width: 90%;
-    border: 5px solid $DARKGREEN;
+    border: 5px solid white;
+    box-shadow: 0px 0px 20px 3px #CADAEA;
   }
   
   @media screen and (max-width: 768px) {
