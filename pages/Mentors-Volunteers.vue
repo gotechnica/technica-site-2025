@@ -4,7 +4,7 @@
   <div class="container">
 
     <!-- HEADER BANNER -->
-    <div style="margin-top: 5rem;"></div>
+    <div style="margin-top: 1rem;"></div>
     <Header>Mentors and Volunteers</Header>
 
     <!-- DESCRIPTION -->
@@ -62,13 +62,14 @@
     <!-- GIVE OPS TROUBLE SECTION -->
     <div style="margin-top: 3rem;"></div>
     <div class="contact">
-      <h3 style="color: #653554;">Have Other Questions?</h3>
-      <p style="color: #653554;">
+      <h3 style="color: #F0B54F;">Have Other Questions?</h3>
+      <p style="color: white;">
         Reach out to
         <a href="mailto:operations@gotechnica.org">operations@gotechnica.org</a>
         and we'll get back to you soon!
       </p>
     </div>
+    <div style="margin-bottom: 3rem;"></div>
     <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
