@@ -17,11 +17,12 @@
   }
   
   img {
-    width: 50rem;
+    width: 40rem;
   }
   
   h1 {
-    font-size: 2.5em;
+    font-family: 'dinpro';
+    font-size: 2em;
     position: absolute;
     top: 47%; // aligns the text to the center (vertically)
     //bottom: 0.5em;

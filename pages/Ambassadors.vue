@@ -36,6 +36,22 @@
       </div>
     </div>
 
+    <!-- Ambassador Testimonial Carousel -->
+    <div class="row container">
+      <h3>Hear from a Campus Ambassador</h3>
+      <div class="testimonials">
+        <div class="carousel">
+          <div class="carousel-cards">
+            <Carousel :initialCards="AmbassadorCards" :isShorten="false" ref="carouselRefAmb" />
+          </div>
+          <div class="buttons">
+            <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
+            <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <Header v-if="width <= 768" class = faq>FAQ</Header>
       <Header v-else class = faq>Frequently Asked Questions</Header>
@@ -47,6 +63,19 @@
 </template>
 
 <script setup lang="ts">
+import Carousel from '~/components/Ambassadors/AmbassadorCarousel.vue';
+import { AmbassadorCards } from '~/components/Ambassadors/AmbassadorCards';
+
+const carouselRefAmb = ref();
+
+function prev() {
+  carouselRefAmb.value?.prev();
+}
+function next() {
+  carouselRefAmb.value?.next();
+}
+
+
 import { useWindowSize } from '@vueuse/core';
 
 // Detect mobile layout based on screen width
@@ -101,6 +130,52 @@ const qaList = [
 </script>
 
 <style scoped lang="scss">
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 60rem;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.carousel-cards {
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.5rem;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* prevent capturing clicks except on arrows */
+
+  & .prev,
+  & .next {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    pointer-events: auto; 
+  }
+
+  & .prev {
+    margin-left: 7%;
+  }
+
+  & .next {
+    margin-right: 7%;
+  }
+}
+
 .title {
   margin-top: 50px;
 }
@@ -109,7 +184,7 @@ h3,
 h3 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #ffce64;
+  color: #FFFFFF;
 }
 
 p {
@@ -124,7 +199,7 @@ p {
 }
 
 a {
-  color: #ffce64;
+  color: #FFFFFF;
 }
 
 .row {
