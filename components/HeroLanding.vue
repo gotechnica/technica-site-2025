@@ -3,7 +3,8 @@
     <div class="details" id="top">
       <div class="logos">
         <div class="col-md">
-          <img class="alice-logo" src="/hero/wonder-awaits.svg" width="25%" />
+          <!--<img class="halloween-logo" src="/hero/wonder-awaits.svg" width="25%" />-->
+          <p class="halloween-logo">Logo Here</p>
         </div>
         <div class="col-md">
           <img
@@ -17,7 +18,7 @@
       <div class="subtext">
         <h1 class="outline">Bring Your Ideas to Life</h1>
         <p class="basic-info outline">
-          9AM October 25 to 5PM October 26th at The Armory, UMD | Hybrid
+          October 25 to October 26th at The Armory, UMD | Hybrid
           Environment
         </p>
         <p class="outline">
@@ -103,14 +104,22 @@ const TogglePopup = () => {
 <style scoped lang="scss">
 #wrapper {
   background-image: url('/hero/hero.svg');
+  background-color: rgb(37,35,62);
   background-attachment: scroll;
-  background-size: 100vw;
+  background-size: 85vw;
+  background-position: right;
   resize: both;
-  margin-top: 0;
+  margin-top: 0%;
   padding-top: 0;
+  margin-right: -10%;
   background-repeat: no-repeat;
-  padding-bottom: 20%;
+  //padding-bottom: 20%;
   margin-bottom: 5%;
+  transition: background-image 0.3s ease;
+}
+
+#wrapper:hover {
+  background-image: url('/hero/hero-hover.svg');
 }
 
 .details {
@@ -119,7 +128,7 @@ const TogglePopup = () => {
   width: 100%;
   padding: 5rem;
   margin-top: -5%;
-  text-align: right;
+  text-align: left;
 }
 
 .logos {
@@ -128,11 +137,12 @@ const TogglePopup = () => {
 
 .subtext {
   color: white;
-  justify-items: right;
+  justify-items: left;
   text-shadow: 5px 5px 13px black;
   border-radius: 10px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  align-self: flex-start;
 }
 
 .subtext p {
@@ -214,11 +224,12 @@ const TogglePopup = () => {
 }
 
 .buttons {
-  float: right;
+  float: left;
   display: flex;
   justify-content: flex-end;
   margin-right: 0;
   gap: 3%;
+  align-self: flex-start;
 }
 
 .buttons a {
@@ -229,8 +240,14 @@ const TogglePopup = () => {
   margin: 0;
 }
 
-.alice-logo {
-  margin-right: 25%;
+.halloween-logo {
+  margin-top: 15%;
+  margin-bottom: 5rem;
+  align-self: flex-start;
+}
+
+.technica-logo {
+  align-self: flex-start;
 }
 
 @media screen and (max-width: 1048px) {
