@@ -7,7 +7,10 @@
         <h4>{{ hackerDesc }}</h4>
       </div>
       <div class="right-column">
-        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost" class="ghost-graphic" />
+        <div class="ghost-frame-container">
+          <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
+          <img :src="hackerImage" alt="Headshot" class="headshot" />
+        </div>
       </div>
     </div>
     <div class="card-back">
@@ -17,7 +20,10 @@
         <p>{{ projectDescription }}</p>
       </div>
       <div class="right-column">
-        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost" class="ghost-graphic" />
+        <div class="ghost-frame-container">
+          <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
+          <img :src="projectImage" alt="Project" class="headshot" />
+        </div>
       </div>
     </div>
   </div>
@@ -40,7 +46,7 @@ export default defineComponent({
   },
   data() {
     return {
-      isFlipped: false
+      isFlipped: false,
     }
   },
   methods: {
@@ -80,6 +86,7 @@ export default defineComponent({
   position: absolute;
   box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.1);
   backface-visibility: hidden;
+  overflow-wrap: break-word;
 }
 
 .card-back {
@@ -106,9 +113,26 @@ export default defineComponent({
   justify-content: center;
 }
 
-.ghost-graphic {
+.ghost-frame-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.ghost-frame {
   width: 100%;
-  max-width: 200px;
+  height: 100%;
+}
+
+.headshot {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 h3 {
@@ -128,5 +152,53 @@ h4 {
 p {
   font-size: 1rem;
   line-height: 1.5rem;
+  word-wrap: break-word;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .card {
+    width: 95vw;
+    max-width: none;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .card-front,
+  .card-back {
+    flex-direction: column;
+    padding: 1rem 1.2rem;
+    position: relative;
+    height: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .ghost-frame-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+  }
 }
 </style>
+
