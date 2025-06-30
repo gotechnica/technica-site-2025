@@ -2,23 +2,15 @@
   <a
     :href="link"
     class="image-container"
-    @mouseover="isHover = true"
-    @mouseleave="isHover = false"
-    @mousedown="isClick = true"
-    @mouseup="isClick = false"
+    @click.prevent="isClick = !isClick"
   >
-    <img class="image" :src="`/buttons/${img as string}`" />
-    <img
-      class="hover-image"
-      :src="`/buttons/${hover as string}`"
-      :style="{ opacity: isHover && !isClick ? 1 : 0 }"
-    />
+    <img class="image" :src="`/tracks/${img as string}`" />
     <img
       class="click-image"
-      :src="`/buttons/${click as string}`"
+      :src="`/tracks/${click as string}`"
       :style="{ opacity: isClick ? 1 : 0 }"
     />
-    <span :style="{ color: textColor ? textColor : 'white', marginLeft: textAlign ? textAlign : '0rem'}">{{ text }}</span>
+    <span :style="{ color: textColor ? textColor : 'white', opacity: isClick ? 1 : 0}">{{ text }}</span>
   </a>
   
 </template>
@@ -32,11 +24,9 @@ const props = defineProps({
   textAlign: String,
   link: String,
   img: String,
-  hover: String,
   click: String
 });
 
-const isHover = ref(false);
 const isClick = ref(false);
 
 </script>
@@ -57,38 +47,63 @@ a {
 
 .image-container {
   position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: -10%;
+  margin-bottom: -10%;
 }
 
 .image {
   //width: 120%;
   opacity: 1;
   transition: opacity 0.5s linear;
+  min-width: 40vw;
 }
 
-.hover-image {
-  position: absolute;
-  //top: 2%;
-  //left: -7%;
-  width: 116%;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
 .click-image {
   position: absolute;
   //top: 2%;
   //left: -7%;
-  width: 121%;
+  //width: 100%;
   opacity: 0;
   transition: opacity 0.5s;
+  min-width: 40vw;
 }
 
 span {
   position: absolute;
   margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 31%;
   white-space: nowrap;
   font-weight: 500;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+
+  white-space: normal;
+  text-align: center;
+  max-width: 16vw;
+  word-break: break-word;
+
+  max-height: 50%;
+  overflow-y: auto;
+  font-size: 100%;
+}
+span::-webkit-scrollbar {
+  width: 8px;
+}
+
+span::-webkit-scrollbar-thumb {
+  background-color: #EFE4DCCC;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 800px) {
+  .image, .click-image {
+    min-width: 80vw;
+  }
+  span {
+    max-width: 30vw;
+    font-size: 90%;
+  }
 }
 </style>

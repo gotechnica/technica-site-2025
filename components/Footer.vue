@@ -1,6 +1,6 @@
 <template>
     <div class="footer-container">
-          <img class="footer-img" src="../static/footer.png" style="width: 100vw"/>
+          <img class="footer-img" src="../static/footer.svg" style="width: 100vw"/>
           <div class="footer-text">
               <div class="footer-info">
                   <p style="font-size: 25px">Contact Us</p>
@@ -86,6 +86,9 @@
               <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">
                   MLH Code of Conduct
               </a> |
+              <a href="https://docs.google.com/document/d/10NeTG-sm-0e_LcA58TfyniJN9ANM6zGw/edit?usp=sharing&ouid=104669897381416274191&rtpof=true&sd=true" target="_blank">
+                  Technica Code of Conduct 
+              </a> |
               <a href="https://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS" target="_blank"
                   > Donate
               </a>
@@ -139,7 +142,10 @@
     color: white;
     position: absolute;
     text-align: center;
-    inset: 65% 0 0 0;
+    inset: 53% 0 0 0%;
+    font-weight: 500;
+    text-shadow: 5px 5px 13px black;
+    font-size: 18px;
   }
   
   .socials {

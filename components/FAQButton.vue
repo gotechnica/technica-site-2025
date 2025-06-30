@@ -101,7 +101,7 @@
     border: none;
     width: 100%;
     text-align: left;
-    color: #1f035a;
+    color: white;
     font-weight: 500;
     font-size: 18px;
   }
@@ -112,7 +112,7 @@
   }
   
   .answer-container {
-    color: #1f035a;
+    color: white;
     font-weight: 500;
     font-size: 18px;
   
@@ -143,6 +143,6 @@
     border: none;
     height: 2px;
     opacity: 1;
-    background: #1f035a;
+    background: white;
   }
   </style>
