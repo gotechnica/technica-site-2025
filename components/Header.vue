@@ -6,6 +6,8 @@
   </template>
   
   <style scoped lang="scss">
+  
+
   div {
     position: relative;
     //text-align: center;

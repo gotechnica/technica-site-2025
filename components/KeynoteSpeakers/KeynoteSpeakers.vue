@@ -1,43 +1,43 @@
 <template>
   <Header>Keynote Speakers</Header>
-  <!-- <div class="speaker-container">
+  <div class="speaker-container">
       <div class="speaker-card first">
         <div class="image-wrapper1">
+          <img src="/public/keynote-speakers/speaker_frame_1.svg" alt="ghost frame" />
         </div>
-        <h1 class="speaker-name">Eriol Fox</h1>
-        <p class="speaker-info">Senior Human-Rights centered Designer at Superbloom</p>
+        <h1 class="speaker-name">Name Lastname</h1>
+        <p class="speaker-info">Title</p>
         <p class="speaker-info">They/Them</p>
         <div class="btn-container">
           <button @click="toggleDropdown(1)" class="dropdown-button">
-            <PixelButton text="Read Bio" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-regular.svg" textAlign="-1.5rem"/>
+            <WebButton text="Read Bio" img="button_pink_normal.svg" hover="button_pink_hover.svg" click="button_pink_onclick.svg" textAlign="-1.5rem"/>
           </button>
           <img class="arrow" :style="{transform: `rotate(${degree1}deg)`}" :src="'/buttons/expand-arrow.svg'" alt="arrow"/>
         </div>
         
         <p v-if="isOpen1" class="description">
-          Eriol has been working as a designer for 10+ years working in for-profits and then NGO’s and open-source software organisations, working on complex problems like sustainable food systems, peace-building and crisis response technology. Eriol now works at Superbloom design, research, open-source and technology projects.
-They are also part of the core teams at <a href="http://opensourcedesign.net/">Open Source Design</a>, <a href="https://hrcd.pubpub.org/">Human Rights Centred Design working group</a>, <a href="https://sustainoss.org/working-groups/design-and-ux/">Sustain UX & Design working group</a>, and help <a href="https://sosdesign.sustainoss.org/">hosts podcast</a> about open source and design.
-Eriol is a non-binary, queer person who uses they/them pronouns.
+          Bio here:
         </p>
       </div>
 
       <div class="speaker-card second">
         <div class="image-wrapper2">
+          <img src="/public/keynote-speakers/speaker_frame_2.svg" alt="ghost frame" />
         </div>
-        <h1 class="speaker-name">Ayodele Odubela</h1>
-        <p class="speaker-info">Founder, AI ALT Lab</p>
-        <p class="speaker-info">She/Her</p>
+        <h1 class="speaker-name">Name Lastname</h1>
+        <p class="speaker-info">Title</p>
+        <p class="speaker-info">They/Them</p>
         <div class="btn-container">
           <button @click="toggleDropdown(2)" class="dropdown-button">
-            <PixelButton text="Read Bio" img="purple-button-regular.svg" hover="purple-button-regular.svg" click="purple-button-regular.svg" textAlign="-1.5rem"/>
+            <WebButton text="Read Bio" img="button_pink_normal.svg" hover="button_pink_hover.svg" click="button_pink_onclick.svg" textAlign="-1.5rem"/>
           </button>
           <img class="arrow" :style="{transform: `rotate(${degree2}deg)`}" :src="'/buttons/expand-arrow.svg'" alt="arrow"/>
         </div>
         <p v-if="isOpen2" class="description">
-          Odubela is the Founder of the AI ALT Lab, envisioning alternate approaches to AI that prioritize the well-being of marginalized people. She was previously a data scientist working on auditing HR algorithms, developing ML fairness education at Microsoft, and deploying ML features for various startups. She received her Bachelor’s in Communications from the University of Pittsburgh and went on to receive a Master’s in Data Science from Regis University. In her spare time Ayodele enjoys playing drums and making candles.
+          Bio here:
         </p>
       </div>
-  </div> -->
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -151,9 +151,23 @@ const toggleDropdown = (dropdownNumber: number) => {
   position: relative;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .speaker-container {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
+    flex-direction: column;
+    align-items: center; // center stack
+    gap: 3rem; // optional: reduce gap on mobile
+  }
+
+  .speaker-card {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    left: 85%; // if arrow is too far out on small screens
   }
 }
 </style>

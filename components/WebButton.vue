@@ -18,7 +18,7 @@
       :src="`/buttons/${click as string}`"
       :style="{ opacity: isClick ? 1 : 0 }"
     />
-    <span :style="{ color: textColor ? textColor : 'white' , marginLeft: textAlign ? textAlign : '0rem'}">{{ text }}</span>
+    <span :style="{ color: textColor ? textColor : 'white', marginLeft: textAlign ? textAlign : '0rem'}">{{ text }}</span>
   </a>
   
 </template>
@@ -38,10 +38,6 @@ const props = defineProps({
 
 const isHover = ref(false);
 const isClick = ref(false);
-
-// const toggleClick = () => {
-//   isClick.value = !isClick.value;
-// };
 
 </script>
 
@@ -64,22 +60,17 @@ a {
 }
 
 .image {
-  //width: 120%;
+  width: 87%;
   opacity: 1;
   transition: opacity 0.5s linear;
 }
 
-.hover-image {
-  position: absolute;
-  //top: 0%;
-  //left: -10%;
-  width: 116%;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
+.hover-image,
 .click-image {
   position: absolute;
-  width: 138%;
+  // top: 2%;
+  // left: -7%;
+  width: 100%;
   opacity: 0;
   transition: opacity 0.5s;
 }
