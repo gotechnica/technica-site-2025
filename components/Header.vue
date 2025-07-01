@@ -26,7 +26,8 @@
     font-family: 'dinpro';
     font-size: 2em;
     position: absolute;
-    top: 3em;
+    top: 47%; // aligns the text to the center (vertically)
+    //bottom: 0.5em;
     color: white;
     white-space: nowrap;
   }

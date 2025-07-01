@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Wonder of Fall</title>
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  <body>
+    
+    <main>
+      <div class="fall-decorations">
+      </div>
+      
+      <div> 
+        <h1 class="magazine-title">The Wonder of Fall</h1>
+      </div>
+
+      <div class="exp-container">
+        <div class="about">
+          <h1>Why we choose this theme</h1>
+        </div>
+        <div class="explaination">
+          <h2> We selected the fall and spooky season theme for Technica 2024 to coincide with the event's timing, just days before Halloween. Our inspiration also draws from the rich color palette of fall, renaissance art, and classic horror films.</h2>
+        </div>
+      </div>
+
+      <div class="webzine-container">
+        <div class="about-webzine">
+          <h1>A Modern Take on a Magazine: An Interactive Webzine</h1>
+        </div>
+        <div class="webzine-explaination">
+          <h2>Our interactive webzine features a haunted house. Click on the windows to explore: some are “spooky windows” and may lead you to try another. Look for the Costume Closet to find Halloween costumes based on your Myers-Briggs personality type, and the Kitchen for spooky season recipes. Enjoy!</h2>
+          <p>If you don't know your personality type, <a href="https://www.16personalities.com/free-personality-test">take the test!</a></p>
+        </div>
+      </div>
+
+        <div class="house">
+          <img src="./image/house2.1.png" alt="My Image" usemap="#haunted-house">
+          <map name="haunted-house">
+            <area shape="rect" coords="391,204,456,344" href= "#costume" id="window-left">
+            <area shape="rect" coords="815,203,889,340" href= "#foods-popup" id="window-right">
+            <area shape="rect" coords="574,230,696,340" href= "#spooky" id="middle-arch">
+            <area shape="rect" coords="84, 293, 141, 416" href= "#spooky" id="far-left-window-left-side">
+            <area shape="rect" coords="254, 234, 330, 368" href= "#spooky" id="far-right-window-left-side">
+            <area shape="rect" coords="961, 227, 1020, 368" href= "#spooky" id="far-left-window-right-side">
+            <area shape="rect" coords="1130, 211, 1194, 400" href= "#spooky" id="far-right-window-right-side">
+            <area shape="rect" coords="447, 499, 381, 350" href= "#spooky" id="bottom-left">
+            <area shape="rect" coords="830, 360, 910, 587" href= "#spooky" id="bottom-left">
+
+
+
+
+
+
+          </map>
+        </div>
+
+        <div class="spooky" id="spooky">
+          <h1>This a spooky window try again!</h1>
+          <a href="#" class="close">X</a>
+
+        </div>
+        
+        
+
+        <div class="costume" id="costume"> <!-- SAMRAGYEE'S SECTION -->
+            <form id="personality-form">
+              <label for="personality">Enter Your Personality Type:</label>
+              <div class="dropdown">
+                <select name="personlity-types" id="personalities-id">
+                  <option value="ISTJ">ISTJ</option>
+                  <option value="ISTP">ISTP</option>
+                  <option value="ISFJ">ISFJ</option>
+                  <option value="ISFP">ISFP</option>
+                  <option value="INFJ">INFJ</option>
+                  <option value="INFP">INFP</option>
+                  <option value="INTJ">INTJ</option>
+                  <option value="INTP">INTP</option>
+                  <option value="ESTP">ESTP</option>
+                  <option value="ESTJ">ESTJ</option>
+                  <option value="ESFP">ESFP</option>
+                  <option value="ESFJ">ESFJ</option>
+                  <option value="ENFP">ENFP</option>
+                  <option value="ENFJ">ENFJ</option>
+                  <option value="ENTP">ENTP</option>
+                  <option value="ENTJ">ENTJ</option>
+                </select>
+              </div>
+              <div class="sumbit">
+              <button type="submit">Submit</button>
+              </div>
+
+
+            </form>
+          <div id="result"></div>
+          <a href="#" class="close">X</a>
+
+        </div>
+      </div>
+
+        <div class="food" id="foods-popup"> <!-- ANAGHA'S SECTION -->
+          <!-- these are so cute -->
+          <p class="food_section_label"> 𓇼 ⋆.˚ 𓆉  Spooky Season Food  𓆝 𓆡⋆.˚ 𓇼 </p>
+
+          <div class="flex-container">
+            <div class="container">
+              <img src="image/cookies.jpg" alt="cookies" class="food_image" target="_blank">
+              <div class="overlay">
+                <div class="text"> <b>How to make these delicious <a href="https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/" target="_blank">cookies</a>! </b> <br><br>
+                  <b>1.</b> Beat 1½ CUP <i>sugar</i>, 1 CUP <i>butter</i>, 1 <i>egg</i>, and 1 TSP <i>vanilla extract</i> in one bowl. <br>
+                  <b>2.</b> Mix 2¾ CUP <i>all-purpose flour</i> and 1 TSP <i>baking soda</i> in another. <br>
+                  <b>3.</b> Slowly blend the two mixtures. <br>
+                  <b>4.</b> Roll the dough flat and use a <i>cookie cutter</i> to make the shapes you desire.  <br>
+                  <b>5.</b> Bake until the edges are golden. <br>
+                  <b>6.</b> Add icing and food coloring for the designs that you desire! <br><br>
+                  image <a href="https://www.pinterest.com/pin/46232333687120023/" target="_blank">source</a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="image/toast.jpg" alt="toast" class="food_image" target="_blank">
+              <div class="overlay">
+                <div class="text"><b>How to make this scary toast! </b> <br><br>
+                  <b>1.</b> Grab a <i>bag of bread</i> and cut jack-o-lantern faces into the slices with a knife. <br>
+                  <b>2.</b> Put the slices in the toaster for 3 minutes. <br>
+                  <b>3.</b> Take the slices out and insert a cheese slice in between every two slices! <br><br>
+                  image <a href="https://discover.hubpages.com/holidays/easy-halloween-breakfast-ideas" target="_blank">source</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="image/mocktail.jpg" alt="mocktail" class="food_image">
+              <div class="overlay">
+                <div class="text"><b>How to make this spooky <a href="https://www.simplyhappyfoodie.com/spooky-halloween-party-punch/" target="_blank">party punch</a>! </b> <br><br>
+                  <b>1.</b> Pour 4 QUARTZ <i>Cranberry Juice Cocktail</i> into a <i>large bowl</i>. <br>
+                  <b>2.</b> Pour <i>pineapple juice</i>, <i>lemonade construct</i>, and <i>ginger ale</i> into the bowl as well. <br>
+                  <b>3.</b> Fill 2 <i>food safe gloves</i> ¾ full with water. Tie like a balloon. <br>
+                  <b>4.</b> When frozen solid, take out of the freezer and gently cut the gloves off. <br>
+                  <b>5.</b> Place the ice cubes in the punch! <br><br>
+                  image <a href="https://www.simplyhappyfoodie.com/spooky-halloween-party-punch/" target="_blank">source</a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="image/donuts.jpg" alt="donuts" class="food_image">
+              <div class="overlay">
+                <div class="text"> <b>How to make these <a href="https://www.allrecipes.com/recipe/72964/super-easy-doughnuts/" target="_blank">fall donuts</a>! </b> <br><br>
+                  <b>1.</b> Stir together ⅜ CUP <i>milk</i> and 2 TSP <i>white vinegar</i>. Wait until thick. <br>
+                  <b>2.</b> Cream together ½ CUP <i>white sugar</i> and 2 TBS <i>shortening</i> in a mixing bowl until smooth. <br>
+                  <b>3.</b> Beat in 1 <i>egg</i> and ½ TSP <i>vanilla extract</i> until blended. <br>
+                  <b>4.</b> Sift together 1 CUP <i>all-purpose flour</i>, ½ TSP <i>baking soda</i>, and ¼ TSP <i>salt</i> in a separate bowl; stir into sugar mixture alternating with milk mixture. <br>
+                  <b>5.</b> Roll out dough and cut with a <i>donut cutter</i>. Let it stand for 10 minutes. <br>
+                  <b>6.</b> Fry slices in heated oil in batches until golden. <br>
+                  <b>7.</b> Add desired icing and designs! <br><br>
+                  image <a href="https://www.lemon8-app.com/lifewithkaitlynxo/7287722002025759238?region=us" target="_blank">source</a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="image/pizza.jpg" alt="pizza" class="food_image">
+              <div class="overlay">
+                <div class="text"><b>How to make this <a href="https://sallysbakingaddiction.com/homemade-pizza-crust-recipe/" target="_blank"> ghostly pizza</a>! </b> <br><br>
+                  <b>1.</b> In a bowl, stir together 2¼ TSP <i>yeast</i>, 1⅓ CUP <i>warmed water</i>, 3 TBS <i>olive oil</i>, 1 TBS <i>sugar</i>, and a few pinches of <i>salt</i>.<br>
+                  <b>2.</b> Add <i>all-purpose flour</i> until desired dough texture. <br>
+                  <b>3.</b> Knead the dough for 5 minutes using hands or a mixer. <br>
+                  <b>4.</b> Set aside to rise for 90 minutes. <br>
+                  <b>5.</b> Punch down dough and roll dough out into a circle.   <br>
+                  <b>6.</b> Add desired toppings. For ghosts, grab 1 CUP <i>feta cheese</i> and cut into ghost shapes. <br>
+                  <b>7.</b> Bake in the oven at 475°F for 10-15 minutes! <br><br>
+                  image <a href="https://julieterbang.tumblr.com/post/699642841919635456/budinovskayaksenia" target="_blank">source</a>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a class="close" href="#">X</a>
+
+        </div>
+
+        <br><br><br>
+        <section class="about-creators"> <center>About the Creators </center></section>
+        <div class="creators-container">
+          <div class="fellow">
+            <h2>Anagha Bhuvanagiri</h2>
+              <h5>Spooky Season Food</h5>
+              <p>Hi! My name is Anagha Bhuvanagiri and I'm a first-year Computer Science major at the University of Maryland, where I'm a member of the ACES Honors College. I'm deeply passionate about using technology to create a positive impact in the real world, and participating in the Technica Fellowship has been pivotal in helping me build the skills needed to achieve this. Since I'm a huge autumn-lover, I decided to theme this project around the Halloween season! When I'm not working with tech, you'll find me traveling, exploring new cuisines, or binge-watching Netflix shows.</p> <br>
+              <div class="Anagha-Accrediations">
+                <p>Connect with me!</p>
+                <a href="https://www.linkedin.com/in/anaghabhuvanagiri/" target="_blank"><img class="Anagha-LinkedIn" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"  target="_blank"></a>
+                <a href="https://github.com/anagha-vb" target="_blank"><img class="Anagha-Github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"></a>
+      
+              </div>
+          </div>
+          <div class="fellow">
+            <h2>Samragyee Dhakal</h2>
+            <h5>Interactive Haunted House and Costume Closet</h5>
+            <p>Hello! Thank you for visiting our website. I'm Samragyee Dhakal, one of the creators of this project. I’m currently a Computer Engineering student at the University of Maryland, Class of 2028, and a member of the ACES Honors College. My passion in technology stems from its ability to change the world for the better.  This potential to make a meaningful impact motivates me to continue learning and contributing to the field. I joined the Technica Fellowship to make friends, expand my network, and sharpen my skills. In my spare time, I enjoy playing tennis.</p> <br>
+            <div class="Samragyee-Accreditations">
+              <p>Connect with me!</p>
+              <a href="https://www.linkedin.com/in/samragyee-dhakal/" target="_blank"><img class="Samragyee-LinkedIn" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"  ></a>
+              <a href="https://github.com/samragyee-d" target="_blank"><img class="Samragyee-Github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"></a>
+            </div>
+          </div>
+      </div>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

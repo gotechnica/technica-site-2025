@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+body{
+    background-color: rgb(37, 20, 4);
+    color: white;
+}
+.magazine-title{
+    text-align:center;
+    font-size: 2000%;
+    font-family: 'UnifrakturCook', serif;
+    position: relative;
+    animation: fadeIn 5s;
+}
+.spooky {
+    padding: 20px;
+    background-color: rgba(116, 61, 17, 0.9);
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  .spooky:target {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .spooky > .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: black;
+    padding: 4px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+.about{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(26, 14, 3);
+    border: 10px solid rgb(17, 9, 2);
+    font-family: 'UnifrakturCook', serif;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.explaination{
+    font-family: 'MedievalSharp', serif;
+    text-align: center;
+    font-size: 30px;
+}
+.about-webzine{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(26, 14, 3);
+    border: 10px solid rgb(17, 9, 2);
+    font-family: 'UnifrakturCook', serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.webzine-explaination{
+    font-family: 'MedievalSharp', serif;
+    text-align: center;
+    font-size: 20px;
+}
+.house{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+label {
+    font-family: 'UnifrakturCook', serif;
+    font-size: 100px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+#personalities-id {
+    background-color: #4A2C2A;
+    color: #F5F5F5;
+    border: 1px solid #3B1F1B;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+#personalities-id option {
+    background-color: #4A2C2A;
+    color: #F5F5F5;
+}
+#personalities-id:hover,
+#personalities-id:focus {
+    background-color: #3B1F1B;
+    border-color: #2A1714;
+}
+.sumbit {
+    text-align: center;
+    margin-top: 20px;
+}
+button[type="submit"] {
+    background-color: #4A2C2A;
+    color: #F5F5F5;
+    border: 1px solid #3B1F1B;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #3B1F1B;
+    border-color: #2A1714;
+    outline: none;
+}
+.costume {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(116, 61, 17, 0.9);
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+.costume:target {
+    opacity: 1;
+    transform: scale(1);
+}
+.costume> .close {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    background-color: black;
+    padding: 4px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+#result{
+    width: 100%;
+    font-size: 50px;
+    width: 100%;
+    height: 500px;
+    background: rgb(136, 81, 19);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.food {
+    padding: 40px;
+    background-color: rgba(116, 61, 17, 0.9);
+    color: white;
+    font-weight: 100;
+    font-size: px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    overflow: auto;
+    z-index: 1000;
+  }
+  .food:target {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .food> .close {
+    position: absolute;
+    right: 90px;
+    top: 20px;
+    background-color: black;
+    padding: 4px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+.food_section_label {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(206, 184, 113);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+.food_image {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-container > div {
+    background-color: #FFD476;
+    margin: 5px;
+    padding: 20px;
+    flex-direction: column-reverse;
+    flex: 1;
+}
+.container {
+    position: relative;
+    width: 100%;
+    font-size: 0.95vw;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+.text {
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    line-height: 1;
+}
+a:visited {
+    color: white;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: rgb(218, 218, 218);
+}
+.Samragyee-Accreditations{
+    display:flex;
+    flex-direction: row;
+}
+.Samragyee-LinkedIn{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.Anagha-Accrediations{
+    display:flex;
+    flex-direction: row;
+}
+.Anagha-LinkedIn{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.Samragyee-Github{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.Anagha-Github{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.about-creators {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.creators-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+}
+.fellow {
+    width: 45%;
+    padding: 20px;
+    background-color: #1d0d04;
+    border-radius: 8px;
+    text-align: center;
+}
+p {
+    font-size: 15px;
+    line-height: 1.6;
+}

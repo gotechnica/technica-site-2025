@@ -115,6 +115,43 @@
       </div>
     </div>
 
+    <!-- Projects! -->
+    <!-- replace google.com with their actual project links and add pictures -->
+    <div class="row project-section">
+     <h3 style="font-size: 3vw;">Past Projects</h3>
+     <div class="project-cards">
+        <div class="project-card">
+            <img src="/fellows/down-down-down-the-rabbithole.jpg" alt="Down Down Down the Rabbithole" class="project-image" />
+            <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Milkii_Savya/fellowshipproject.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+            </a>
+        </div>
+        <div class="project-card">
+          <img src="/fellows/hackerland.jpg" alt="Hackerland" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Christiana_Sophia/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="/fellows/high-tea-time.jpg" alt="High Tea Time" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Nikita_Eniola/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="/fellows/the-wonder-of-fall.jpg" alt="The Wonder of Fall" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Samragyee_Anagha/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="/fellows/top-fantasy-movies.jpg" alt="Top Fantasy Movies" class="project-image" />
+          <a href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Zoey_Aabha/index.html" class="project-button" target="_blank">
+              <div class="subtitle">View Project</div>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <Header v-if="width <= 768" class=faq>FAQ</Header>
       <Header v-else class=faq>Frequently Asked Questions</Header>
@@ -247,7 +284,7 @@ const outcomes = [
 
 .header {
   align-items: center;
-  color: #653553;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -269,7 +306,7 @@ const outcomes = [
 }
 
 .fellow-header h4 {
-  color: #ffce64;
+  color: #FFFFFF;
 }
 
 .fellow-header h1 {
@@ -285,12 +322,12 @@ const outcomes = [
 }
 
 h3, h4 {
-  color: #ffce64;
+  color: white;
   text-align: center;
 }
 
 h5{
-  color: #ffce64;
+  color: white;
 }
 
 li, p{
@@ -392,6 +429,92 @@ hr{
   & .next {
     margin-right: -5%;
   }
+}
+
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 5vw;
+  width: 100%;
+  max-width: 60vw;
+  margin: auto;
+  padding: 20px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(5, 200px);
+  }
+}
+
+.project-card {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #CADAEA; 
+  box-shadow: 0 4px 12px rgba(202, 218, 234, 0.7);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  overflow: hidden;
+  border-radius: 1rem;   
+}
+
+.project-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+
+.project-card:last-child {
+  grid-column: 1 / -1;  
+  justify-self: center;  
+  width: 50%;           
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(226, 226, 226);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Show subtitle on hover */
+.project-card:hover .subtitle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.subtitle {
+
 }
 
 @media screen and (max-width: 800px) {

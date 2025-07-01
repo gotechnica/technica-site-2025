@@ -3,7 +3,7 @@
   <!-- <title>Technica Home</title> -->
   <div class="main-body" :style="{ backgroundColor: '#272341' }">
     <!-- Hero's Section -->
-    <HeroLanding />
+    <HeroLanding class="hero-section" />
 
     <div class="containers after">
       <!-- <h1>Thank You For Coming!</h1> -->
@@ -77,6 +77,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useWindowSize } from '@vueuse/core';
+import { ref } from 'vue'
+
+const isHovered = ref(false)
 
 // Detect mobile layout based on screen width
 const { width } = useWindowSize();

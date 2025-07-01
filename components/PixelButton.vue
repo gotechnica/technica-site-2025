@@ -64,12 +64,19 @@ a {
 }
 
 .image {
-  width: 120%;
+  //width: 120%;
   opacity: 1;
   transition: opacity 0.5s linear;
 }
 
-.hover-image,
+.hover-image {
+  position: absolute;
+  //top: 0%;
+  //left: -10%;
+  width: 116%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 .click-image {
   position: absolute;
   width: 138%;

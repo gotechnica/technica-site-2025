@@ -1,6 +1,6 @@
 <template>
   <title>Travel</title>
-  <div style="margin-top: 5rem;"></div>
+  <div style="margin-top: 1rem;"></div>
   <Header>Travel</Header>
   <div class="travel-container">
     <div class="travel-header section">
@@ -248,7 +248,7 @@ template {
 }
 
 a {
-    color: $DARKYELLOW;
+    color: #F1ADCD;
 }
 
 li {

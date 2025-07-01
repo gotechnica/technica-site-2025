@@ -51,8 +51,10 @@
     </nav>
 
     <!-- MLH LOGO OVERLAY -->
-    <a class="mlh-logo" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" target="_blank">
+    <!--<a class="mlh-logo" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" target="_blank">
       <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2024 Hackathon Season" style="width:100%">
+    </a>-->
+    <a id="mlh-trust-badge" style="display:block;max-width:5vw;min-width:60px;position:fixed;right:1vw;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%">
     </a>
   </div>
 </template>
@@ -62,16 +64,25 @@ export default {
   data() {
     return {
       links: [
-        // { dropdown: false, name: 'Home', path: '/' },
         { dropdown: false, name: 'Register', path: './Register'},
-        { dropdown: false, name: 'Fellows', path: './Fellows'},
-        { dropdown: false, name: 'Ambassadors', path: './Ambassadors'},
-        { dropdown: false, name: 'Mentors & Volunteers', path: './Mentors-Volunteers'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         { dropdown: false, name: 'Travel', path: '/Travel' },
         { dropdown: false, name: 'Tracks', path: '/Tracks' },
-        { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'}
-      ]
+        { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
+        { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
+
+        {
+          dropdown: true,
+          name: 'Programs',
+          showDropdown: false,
+          items: [
+            { name: 'Fellows', path: './Fellows' },
+            { name: 'Ambassadors', path: './Ambassadors' },
+            { name: 'Mentors & Volunteers', path: './Mentors-Volunteers' }
+        ]
+   }
+]
+
     }
   },
   mounted() {

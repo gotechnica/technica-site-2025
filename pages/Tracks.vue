@@ -4,7 +4,7 @@
   <div class="container">
 
     <!-- HEADER BANNER -->
-    <div style="margin-top: 5rem;"></div>
+    <div style="margin-top: 1rem;"></div>
     <Header>Tracks</Header>
 
     <!-- DESCRIPTION -->
@@ -29,6 +29,34 @@
 
     <!-- TRACKS ICON CARDS -->
     <!-- <div style="margin-top: 3rem;"></div> -->
+    <div class="tracks-gates">
+      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Beginner.svg"
+      click="OPEN_Beginner.svg"></TracksGates>
+      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_General.svg"
+      click="OPEN_General.svg"></TracksGates>
+      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Startup.svg"
+      click="OPEN_Startup.svg"></TracksGates>
+      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Research.svg"
+      click="OPEN_Research.svg"></TracksGates>
+      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Hardware.svg"
+      click="OPEN_Hardware.svg"></TracksGates>
+    </div>
+    <!--
     <TracksIconCard borderColor="#FFFFFF"
     backgroundColor="#65385D"
     padding="5% 5% 5% 5%"
@@ -78,7 +106,7 @@
     
     For more information about the research track and our partnership with the Iribe Initiative for Inclusion and Diversity in Computing, please visit the following link: https://inclusion.cs.umd.edu/events/techresearch!" />
   
-    
+  -->
 
   </div>
   <StickyButton></StickyButton>
@@ -89,5 +117,25 @@
 </script>
 
 <style scoped lang="scss">
+  .tracks-gates {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto); /* adjust height as needed */
+}
 
+.tracks-gates > :nth-child(5) {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 800px) {
+  .tracks-gates {
+    grid-template-columns: 1fr;
+  }
+
+  .tracks-gates > :nth-child(5) {
+    grid-column: span 1;
+  }
+}
 </style>

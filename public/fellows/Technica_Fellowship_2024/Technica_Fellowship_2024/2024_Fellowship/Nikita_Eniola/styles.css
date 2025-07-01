@@ -1,0 +1,61 @@
+header {
+    background-color: pink;
+    font-family: fantasy;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    border: 2px solid gold;
+}
+
+body {
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.description {
+    border: 2px solid gold;
+    font-family: cursive;
+    font-weight: 100;
+    font-size: large;
+    padding: 10px;
+    margin: 10px;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+.blue {
+    background-color: aliceblue;
+    border: 2px solid gold;
+    margin: 10px;
+    
+}
+
+.pink {
+    background-color: lightpink;
+    border: 2px solid gold;
+    margin: 10px;
+}
+
+ol {
+    text-align: left;
+    font-family: cursive;
+    font-weight: 100;
+    font-size: large;
+}
+
+
