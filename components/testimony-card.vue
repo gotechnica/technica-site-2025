@@ -155,13 +155,17 @@ p {
   word-wrap: break-word;
 }
 
+/* Mobile Responsiveness */
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
   .card {
     width: 95vw;
     max-width: none;
     margin: 0 auto;
+    margin-top: 0.5rem; /* Adjust margin above */
+    margin-bottom: 0.5rem; /* Add margin below */
     height: auto;
+    overflow: hidden; /* Ensuring no overflow out of bounds */
   }
 
   .card-front,
@@ -170,6 +174,8 @@ p {
     padding: 1rem 1.2rem;
     position: relative;
     height: auto;
+    max-height: 60vh; /* Control max height of card */
+    overflow-y: auto; /* Enable scroll when content exceeds max height */
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
@@ -200,5 +206,7 @@ p {
     font-size: 0.8rem;
   }
 }
+
+
 </style>
 

@@ -104,7 +104,7 @@ const slides = [
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 
   .header-image-wrap {
     position: relative;
@@ -152,11 +152,12 @@ a:hover {
   align-items: center;
   background-color: transparent;
   cursor: pointer;
+  margin-top: -1;
 }
 
 .carousel__pagination {
   padding: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .carousel__slide {
