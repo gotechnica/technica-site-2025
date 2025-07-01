@@ -18,7 +18,7 @@
       </div>
       <div class="col-md-6">
         <div class="tv-wrapper">
-          <img src="public\about\intro_vid_container.svg" alt="TV frame" class="tv-frame" />
+          <img src="public\about\intro_vid_container_transparent.svg" alt="TV frame" class="tv-frame" />
           <iframe
             class="tv-video"
             src="https://www.youtube.com/embed/YZZYDJbuJF8?si=VeMp8j6L7SlOkPoi"
@@ -37,32 +37,41 @@
 
 <style scoped lang="scss">
 
+.wrapper {
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
 .col-md-6 {
-  margin-top: 3%;
+  flex: 1;
 }
 
 .tv-wrapper {
   position: relative;
-  width: 700px; 
-  height: 360px; 
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
 }
 
 .tv-frame {
-  position: relative;
-  z-index: 0;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .tv-video {
   position: absolute;
   top: 16%;
-  left: 12%;
-  width: 76%;
-  height: 68%;
-  z-index: 2; 
+  left: 9%;
+  width: 65%;
+  height: 69%;
   border-radius: 4px;
-  box-shadow: 0 0 0 9999px #1a1b27; 
-  clip-path: inset(0 round 8px); 
+  clip-path: inset(0 round 8px);
 }
 
 .info-box {
@@ -71,20 +80,27 @@
   padding: 2rem;
   border-radius: 16px;
   border: 2px solid #ffffff;
-
-  box-shadow:
-    // white outer glow
-    0 0 20px rgba(255, 255, 255, 0.4),
-    // purple haze
-    0 0 40px rgba(150, 120, 255, 0.3),
-    // soft blue aura
-    0 0 60px rgba(100, 120, 255, 0.2);
-
   font-size: 1.1rem;
   line-height: 1.6;
-  transition: box-shadow 0.3s ease;
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(150, 120, 255, 0.3),
+    0 0 60px rgba(100, 120, 255, 0.2);
 }
+
 p {
-  color: $DARKWHITE;
+  color: #eaeaea;
 }
+
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+}
+
 </style>
