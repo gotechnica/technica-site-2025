@@ -151,9 +151,23 @@ const toggleDropdown = (dropdownNumber: number) => {
   position: relative;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .speaker-container {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
+    flex-direction: column;
+    align-items: center; // center stack
+    gap: 3rem; // optional: reduce gap on mobile
+  }
+
+  .speaker-card {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    left: 85%; // if arrow is too far out on small screens
   }
 }
 </style>
