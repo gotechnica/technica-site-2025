@@ -50,11 +50,11 @@
       textAlign="center"
       img="CLOSED_Research.svg"
       click="OPEN_Research.svg"></TracksGates>
-      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      <!-- <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
       textColor="white"
       textAlign="center"
       img="CLOSED_Hardware.svg"
-      click="OPEN_Hardware.svg"></TracksGates>
+      click="OPEN_Hardware.svg"></TracksGates> -->
     </div>
     <!--
     <TracksIconCard borderColor="#FFFFFF"

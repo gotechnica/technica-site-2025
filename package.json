@@ -46,6 +46,7 @@
     "papaparse": "^5.4.1",
     "path": "^0.12.7",
     "primevue": "^3.29.0",
+    "sqlite3": "^5.1.7",
     "tsparticles-engine": "^2.10.1",
     "vee-validate": "^4.8.6",
     "vue-final-modal": "^4.4.2",
