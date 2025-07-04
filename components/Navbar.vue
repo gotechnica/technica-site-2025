@@ -64,10 +64,10 @@ export default {
   data() {
     return {
       links: [
-        { dropdown: false, name: 'Register', path: './Register'},
+        { dropdown: false, name: 'Register', path: './register'},
         { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
-        { dropdown: false, name: 'Travel', path: '/Travel' },
-        { dropdown: false, name: 'Tracks', path: '/Tracks' },
+        { dropdown: false, name: 'Travel', path: '/travel' },
+        { dropdown: false, name: 'Tracks', path: '/tracks' },
         { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
         { dropdown: false, name: 'Sponsors', path: '/sponsor'},
         { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
