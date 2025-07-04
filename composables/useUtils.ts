@@ -85,7 +85,7 @@ export function useUtils(){
             return 'prd'
         }
         
-        if (window.location.href === 'https://main.d3d372rpngjchf.amplifyapp.com/register/') {
+        if (window.location.href === 'https://main.d19i3nhpmdj7cb.amplifyapp.com/Register') {
             return 'dev'
         }
 
