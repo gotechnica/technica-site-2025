@@ -16,7 +16,7 @@
       <!-- HACKER INFO -->
       <Header>Hacker Info</Header>
       <div class="row gx-5">
-        <div class="col-md-4 mb-4">
+        <div class="col-m d-4 mb-4">
           <div>
             <label class="form-label"> First Name* </label>
             <Field
@@ -878,6 +878,7 @@
           click="purple-visited.svg"
         />
       </button>
+
       <div class="error">
         <p v-if="submitTimes != 0">
           The page may take a second to redirect, if it doesn't, please make
