@@ -1,18 +1,8 @@
 <template>
   <title>Fellows</title>
   <div class="container">
-    <!-- <div class="row fellow-header"> -->
-    <!--<H1 class="title">Virtual Fellowship Program</H1>-->
-    <!-- <div class = "header">
-          <img src="/headings/header.png">
-          <h1>Virtual Fellowship Program</h1>
-        </div> -->
-    <div style="margin-top: 5rem"></div>
+    <div style="margin-top: 1rem"></div>
     <Header>Virtual Fellowship Program</Header>
-    <!-- <h4>
-          Work on real-world coding projects for rising college freshman, no
-          experience required.
-        </h4> -->
     <h4>Applications are now closed. Congrats to our fellows!</h4>
     <!-- <div class="d-flex justify-content-center button">
           <MainButton
@@ -23,104 +13,88 @@
         </div>
         <p>Open until May 31st at 11:59PM EST</p> -->
     <!-- </div> -->
+
+    <div class="info-box">
+      <p class="info-text">
+        <!-- New description based on fellowship page, separated some points into list (Let me know what you think!!)-->
+        The Technica Fellowship Program is an 8-week initiative, running from
+        <strong>June</strong> to <strong>August</strong>, designed for students
+        of all skill levels — especially those with less technical experience
+        who are eager to grow! <br /><br />
+        Throughout the program, fellows will:
+      </p>
+      <div class="list-container">
+        <ul>
+          <li>collaborate on a guided technical project</li>
+          <li>gain hands-on experience</li>
+          <li>develop coding and teamwork skills</li>
+          <li>
+            build confidence within a supportive, mentorship-based environment
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 3rem">Weekly Schedule</h3>
+
+    <div class="info-text">
+      <h5>Sunday Evening:</h5>
+      <p>
+        <span class="schedule-act"
+          >Project Work Sessions / Technical Workshops: </span
+        >Hands-on work on technical projects, guided learning sessions, and
+        skill-building workshops
+      </p>
+
+      <hr />
+
+      <h5>Tuesday and Thursday Evening:</h5>
+      <p>
+        <span class="schedule-act">Professional Development Workshops:</span>
+        Workshops focused on career growth, including resume building, interview
+        prep, networking, and tech industry insights<br />
+
+        <br /><span style="display: flex; justify-content: center">OR</span
+        ><br />
+
+        <span class="schedule-act">Bonding Workshops:</span> Fun, interactive
+        workshops designed to build team cohesion, foster relationships, and
+        explore topics related to personal growth and community building
+      </p>
+    </div>
+
+    <h3 style="margin-top: 3rem">Testimonials</h3>
+    <div class="testimonials">
+      <div class="carousel">
+        <div class="carousel-cards">
+          <Carousel
+            :initialCards="FellowCards"
+            :isMobile="false"
+            :isShorten="isShorten"
+            ref="carouselRef1"
+          />
+        </div>
+        <div class="buttons">
+          <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
+          <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
+        </div>
+      </div>
+    </div>
+
     <div class="row container grid-section">
       <div class="row row-cols-1 row-cols-md-2">
-        <div class="col section">
-          <h3>About the Program</h3>
-          <p>
-            <!-- New description based on fellowship page, separated some points into list (Let me know what you think!!)-->
-            The Technica Fellowship Program is an 8-week initiative, running
-            from <strong>June</strong> to <strong>August</strong>, designed for
-            students of all skill levels — especially those with less technical
-            experience who are eager to grow! Throughout the program, fellows
-            will:
-          </p>
-          <ul>
-            <li>collaborate on a guided technical project</li>
-            <li>gain hands-on experience</li>
-            <li>develop coding and teamwork skills</li>
-            <li>
-              build confidence within a supportive, mentorship-based environment
-            </li>
-          </ul>
-
-          <!-- Little bit of spacing here, no need to make a new css rule for it... -->
-          <h3 style="margin-top: 3rem">Weekly Schedule</h3>
-
-          <h5>Sunday Evening:</h5>
-          <p>
-            <span class="schedule-act"
-              >Project Work Sessions / Technical Workshops: </span
-            >Hands-on work on technical projects, guided learning sessions, and
-            skill-building workshops
-          </p>
-
-          <hr />
-
-          <h5>Tuesday and Thursday Evening:</h5>
-          <p>
-            <span class="schedule-act">Professional Development Workshop:</span>
-            Workshops focused on career growth, including resume building,
-            interview prep, networking, and tech industry insights<br />
-
-            <span style="display: flex; justify-content: center">OR</span><br />
-
-            <span class="schedule-act">Bonding Workshop:</span> Fun, interactive
-            workshops designed to build team cohesion, foster relationships, and
-            explore topics related to personal growth and community building
-          </p>
-
-          <!-- Old description:
-
-            The Technica Fellowship Program is a 8-week initiative during June
-            to August that seeks to democratize access to the tech
-            industry. In this program, a group of exceptional students will be
-            given the special opportunity to work directly on Technica’s very
-            own digital platform. Fellows will gain real industry experience
-            working on a real-world technology project that impacts thousands of
-            users while making a positive impact on our hackers, volunteers,
-            mentors, organizers, and sponsors!<br /><br />
-            The fellowship is designed for <b>rising college freshmen</b> who
-            have a demonstrated interest in technology but have not had an
-            industry internship yet. -->
-        </div>
-        <div class="col section">
-          <h3>Testimonials</h3>
-          <div class="testimonials">
-            <div class="carousel">
-              <div class="carousel-cards">
-                <Carousel
-                  :initialCards="FellowCards"
-                  :isMobile="false"
-                  :isShorten="isShorten"
-                  ref="carouselRef1"
-                />
-              </div>
-              <div class="buttons">
-                <img
-                  class="prev"
-                  @click="prev"
-                  src="/public/icons/left-arrow.svg"
-                />
-                <img
-                  class="next"
-                  @click="next"
-                  src="/public/icons/right-arrow.svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="col section section-req">
           <h3>Application Requirements</h3>
           <p>
             To be eligible for the Technica Fellowship Program, applicants must:
           </p>
-          <ul>
-            <li v-for="item in items" :key="item">
-              {{ item }}
-            </li>
-          </ul>
+          <div>
+            <ul>
+              <li v-for="item in items" :key="item">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col section">
           <h3>Learning Outcomes</h3>
@@ -133,6 +107,7 @@
         </div>
       </div>
     </div>
+
     <div class="row hearFromFellows">
       <h3>Hear from Our Fellowship Organizers</h3>
 
@@ -358,6 +333,9 @@ const outcomes = [
 }
 
 .testimonials {
+  max-width: 50%;
+  margin: auto;
+
   @media screen and (max-width: 768px) {
     margin-bottom: 15%;
   }
@@ -413,13 +391,43 @@ h4 {
   text-align: center;
 }
 
-h5 {
-  color: white;
-}
-
+h5,
 li,
 p {
   color: white;
+}
+
+h5,
+p {
+  text-align: center;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.info-text {
+  padding: 0 2rem;
+}
+
+.info-box {
+  margin-top: 3rem;
+  background-color: #1a1b27;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(150, 120, 255, 0.3), 0 0 60px rgba(100, 120, 255, 0.2);
+}
+
+.info-box ul {
+  margin-bottom: 0;
 }
 
 .schedule-act {
@@ -463,6 +471,7 @@ hr {
 }
 
 .hearFromFellows {
+  margin-top: 3rem;
   text-align: center;
   padding: 1rem;
 }
@@ -472,7 +481,6 @@ hr {
   width: 100%;
   max-width: 60rem;
   z-index: 1;
-  // background-color: blue;
 }
 
 .carousel-cards {

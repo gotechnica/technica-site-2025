@@ -4,7 +4,7 @@
   <div class="container">
 
     <!-- BIG TITLE -->
-    <div style="margin-top: 5rem;"></div>
+     <div style="margin-top: 1rem"></div>
     <Header>Help Support Technica 2025!</Header>
 
     <!-- SPONSOR LETTER -->
