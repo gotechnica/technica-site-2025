@@ -327,7 +327,7 @@ const qaList = [
   {
     question: "I have a question that's not answered here.",
     answer:
-      'Please reach out to <a class="email" href="mailto:community@gotechnica.org">community@gotechnica.org</a> and we\'ll get back to you as soon as possible!',
+      'Please reach out to <a style="color:#F1ADCD" href="mailto:community@gotechnica.org">community@gotechnica.org</a> and we\'ll get back to you as soon as possible!',
   },
 ];
 

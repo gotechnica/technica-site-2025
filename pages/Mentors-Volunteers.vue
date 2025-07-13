@@ -71,7 +71,9 @@
       <h3 style="color: #f0b54f">Have Other Questions?</h3>
       <p style="color: white">
         Reach out to
-        <a href="mailto:operations@gotechnica.org">operations@gotechnica.org</a>
+        <a style="color: #f1adcd" href="mailto:operations@gotechnica.org"
+          >operations@gotechnica.org</a
+        >
         and we'll get back to you soon!
       </p>
     </div>

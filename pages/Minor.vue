@@ -56,7 +56,9 @@
       <h3>Have Other Questions?</h3>
       <p>
         Reach out to
-        <a href="mailto:travel@gotechnica.org">operations@gotechnica.org</a>
+        <a style="color: #f1adcd" href="mailto:travel@gotechnica.org"
+          >operations@gotechnica.org</a
+        >
         and we'll get back to you soon!
       </p>
     </div>
