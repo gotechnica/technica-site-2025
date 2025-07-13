@@ -134,7 +134,7 @@
       </div>
     </div>
     <div class="row hearFromFellows">
-      <h3>Hear from Our Fellows</h3>
+      <h3>Hear from Our Fellowship Organizers</h3>
 
       <div class="fellows-video-container">
         <iframe
@@ -150,7 +150,7 @@
     <!-- Projects! -->
     <!-- replace google.com with their actual project links and add pictures -->
     <div class="row project-section">
-      <h3 style="font-size: 3vw">Past Projects</h3>
+      <h3>Past Projects</h3>
       <div class="project-cards">
         <div class="project-card">
           <img
@@ -402,7 +402,12 @@ const outcomes = [
   width: calc(10rem + 30vw);
 }
 
-h3,
+h3 {
+  font-family: 'dinpro';
+  text-align: center;
+  color: #cadaea;
+}
+
 h4 {
   color: white;
   text-align: center;
@@ -454,7 +459,7 @@ hr {
 }
 
 .faq {
-  margin-bottom: 6rem;
+  margin-top: 5rem;
 }
 
 .hearFromFellows {

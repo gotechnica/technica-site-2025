@@ -725,12 +725,12 @@ p {
 }
 
 h1 {
-  color: #ffce64;
+  color: #cadaea;
   text-align: center;
 }
 
 h4 {
-  color: #ffce64;
+  color: #cadaea;
   text-align: center;
 }
 

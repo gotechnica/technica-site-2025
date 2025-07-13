@@ -68,7 +68,7 @@
     <!-- GIVE OPS TROUBLE SECTION -->
     <div style="margin-top: 3rem"></div>
     <div class="contact">
-      <h3 style="color: #f0b54f">Have Other Questions?</h3>
+      <h3>Have Other Questions?</h3>
       <p style="color: white">
         Reach out to
         <a style="color: #f1adcd" href="mailto:operations@gotechnica.org"
@@ -152,10 +152,11 @@ p {
 }
 
 h3 {
+  font-family: 'dinpro';
   text-align: center;
-  color: #ffce64;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: #cadaea;
 }
 
 ul li {

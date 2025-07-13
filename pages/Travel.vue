@@ -204,15 +204,11 @@ const documentation = [
   margin: 3.5rem 0 1.5rem 0;
 }
 
-.h3,
 h3 {
+  font-family: 'dinpro';
   text-align: center;
   margin-bottom: 1rem;
-  color: #ffce64;
-}
-
-.a {
-  color: #ffce64;
+  color: #cadaea;
 }
 
 .travel-container {
@@ -250,10 +246,6 @@ h3 {
 
 .email-blurb {
   text-align: center;
-}
-
-.email-blurb h3 {
-  color: $DARKYELLOW;
 }
 
 .faq-section h3 {

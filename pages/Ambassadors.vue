@@ -190,11 +190,11 @@ const qaList = [
   margin-top: 50px;
 }
 
-h3,
 h3 {
+  font-family: 'dinpro';
   text-align: center;
+  color: #cadaea;
   margin-bottom: 1rem;
-  color: #ffffff;
 }
 
 p {
