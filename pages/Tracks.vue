@@ -1,28 +1,26 @@
 <template>
-
   <title>2025 Tracks</title>
   <div class="container">
-
     <!-- HEADER BANNER -->
-    <div style="margin-top: 1rem;"></div>
+    <div style="margin-top: 1rem"></div>
     <Header>Tracks</Header>
 
     <!-- DESCRIPTION -->
-    <div style="margin-top: 2rem;"></div>
+    <div style="margin-top: 2rem"></div>
     <p class="text-center">
       Each of Technica's four tracks are designed to best accomodate a hacker's
       interests and skill level, and will have track-specific mentors for
       support and guidance during the hackathon. During registration, hackers
       will select the track that they feel best aligns with their goals for the
       hackathon.
-      <br>
-      <br>
+      <br />
+      <br />
       During the weeks leading up to Technica, there will be virtual workshops
       hosted by Technica organizers that will help brief hackers on the various
       opportunities that the tracks offer. We highly recommend hackers to
       attend!
-      <br>
-      <br>
+      <br />
+      <br />
       Please note that some tracks may have limited capacity, and may be limited
       to specific attendance types.
     </p>
@@ -30,26 +28,34 @@
     <!-- TRACKS ICON CARDS -->
     <!-- <div style="margin-top: 3rem;"></div> -->
     <div class="tracks-gates">
-      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-      textColor="white"
-      textAlign="center"
-      img="CLOSED_Beginner.svg"
-      click="OPEN_Beginner.svg"></TracksGates>
-      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-      textColor="white"
-      textAlign="center"
-      img="CLOSED_General.svg"
-      click="OPEN_General.svg"></TracksGates>
-      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-      textColor="white"
-      textAlign="center"
-      img="CLOSED_Startup.svg"
-      click="OPEN_Startup.svg"></TracksGates>
-      <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-      textColor="white"
-      textAlign="center"
-      img="CLOSED_Research.svg"
-      click="OPEN_Research.svg"></TracksGates>
+      <TracksGates
+        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+        textColor="white"
+        textAlign="center"
+        img="CLOSED_Beginner.svg"
+        click="OPEN_Beginner.svg"
+      ></TracksGates>
+      <TracksGates
+        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+        textColor="white"
+        textAlign="center"
+        img="CLOSED_General.svg"
+        click="OPEN_General.svg"
+      ></TracksGates>
+      <TracksGates
+        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+        textColor="white"
+        textAlign="center"
+        img="CLOSED_Startup.svg"
+        click="OPEN_Startup.svg"
+      ></TracksGates>
+      <TracksGates
+        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+        textColor="white"
+        textAlign="center"
+        img="CLOSED_Research.svg"
+        click="OPEN_Research.svg"
+      ></TracksGates>
       <!-- <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
       textColor="white"
       textAlign="center"
@@ -106,18 +112,14 @@
     
     For more information about the research track and our partnership with the Iribe Initiative for Inclusion and Diversity in Computing, please visit the following link: https://inclusion.cs.umd.edu/events/techresearch!" />
   
-  -->
-
-  </div>
+  --></div>
   <StickyButton></StickyButton>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
-  .tracks-gates {
+.tracks-gates {
   display: grid;
   gap: 1rem;
   padding: 1rem;
