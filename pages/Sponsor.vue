@@ -696,7 +696,7 @@ const qaList = [
   },
   {
     question: 'Can companies sponsor at a custom tier?',
-    answer: 'If needed, companies can request to sponsor at a custom tier with whatever perks they like. If interested, please contact <b>sponsorship@gotechnica.org</b>'
+    answer: 'If needed, companies can request to sponsor at a custom tier with whatever perks they like. If interested, please contact <a style="color:#F1ADCD" href="mailto:sponsorship@gotechnica.org">sponsorship@gotechnica.org</a>'
   },
   {
     question: 'What is the difference between “mentors” and “recruiters”?',
@@ -990,7 +990,11 @@ th {
 }
 
 .recruit {
-  background: $LIGHT_PURPLE;
+  background: #AF57E6;
+}
+
+.recruit-text {
+  color: #AF57E6;
 }
 
 .brand {
