@@ -1,6 +1,6 @@
 <template>
-  <div class="card" :class="{ flipped: isFlipped }">
-    <div class="card-front">
+  <div class="card" :class="{ flipped: isFlipped, active: isActiveData}">
+    <div class="card-front" @click=flipCard>
       <div class="left-column">
         <p>{{ testimonyDescription }}</p>
         <h3>{{ hackerName }}</h3>
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <div class="card-back">
+    <div v-if="isActiveData" class="card-back" @click=flipCard>
       <div class="left-column">
         <h3>{{ projectName }}</h3>
         <h4>{{ projectCategories }}</h4>
@@ -47,11 +47,19 @@ export default defineComponent({
   data() {
     return {
       isFlipped: false,
+      isActiveData: false,
     }
   },
   methods: {
     flipCard() {
-      this.isFlipped = !this.isFlipped
+      if (this.hasProject === true) {
+        if (this.isActiveData === true) {
+          this.isFlipped = !this.isFlipped   
+        } else {
+          this.isActiveData = !this.isActiveData   
+          this.isFlipped = false
+        }
+      }
     }
   }
 })
