@@ -6,7 +6,7 @@
     <div
       class="card-contents"
       :style="{ backgroundImage: `url(${whatToDoImg})` }"
-      @click="toggleText"
+      @click="$emit('click')"
     >
       <div v-if="showDesc" class="overlay-text">
         <p>{{ whatToDoDesc }}</p>
@@ -32,17 +32,12 @@ export default defineComponent({
       type: String,
       required: true,
     },
-  },
-  data() {
-    return {
-      showDesc: false,
-    };
-  },
-  methods: {
-    toggleText() {
-      this.showDesc = !this.showDesc;
+    showDesc: { 
+      type: Boolean, 
+      required: true 
     },
   },
+  emits: ['click'],
 });
 </script>
 
@@ -60,7 +55,7 @@ export default defineComponent({
 
 .card-contents {
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;

@@ -134,6 +134,7 @@
     scale: 0.5;
     /* hiding slides by default */
     visibility: hidden; 
+    height: 500px;
   }
 
   /* active card */

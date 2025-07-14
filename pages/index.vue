@@ -199,6 +199,12 @@ useHead({
   margin-bottom: 5rem;
 }
 
+.whatToDo {
+  width: 100%;
+  max-width: 1500px; /* or use 100vw for full width */
+  margin: 0 auto;
+}
+
 .timer {
   margin-top: -2rem;
   margin-bottom: -10rem;

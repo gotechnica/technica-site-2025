@@ -1,18 +1,22 @@
 <!-- Template -->
 <template>
   <Header>What To Do At Technica?</Header>
-  <p>Swipe to see more suggestions!</p>
+  <p>Swipe to see more suggestions and click on the image for more info!</p>
   <Carousel
+    v-model="currentSlide"
     :items-to-show="2"
     :wrap-around="true"
     :autoplay="10000000"
     pause-autoplay-on-hover
   >
-    <Slide v-for="slide in slides" :key="slide.whatToDoTitle">
+    <Slide v-for="(slide, index) in slides" :key="slide.whatToDoTitle">
       <WhatToDoCarouselSlide
         :what-to-do-img="slide.whatToDoImg"
         :what-to-do-title="slide.whatToDoTitle"
         :what-to-do-desc="slide.whatToDoDesc"
+        :is-active="index === currentSlide"
+        :show-desc="index === currentSlide && index === textVisibleIndex"
+        @click="toggleText(index)"
       />
     </Slide>
 
@@ -25,6 +29,25 @@
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination } from 'vue3-carousel';
+import { ref, watch } from 'vue'
+
+const currentSlide = ref(0)
+const textVisibleIndex = ref<number | null>(null)
+
+function toggleText(index: number) {
+  if (index === currentSlide.value) {
+    textVisibleIndex.value = textVisibleIndex.value === index ? null : index
+  } else {
+    currentSlide.value = index
+    textVisibleIndex.value = null
+  }
+}
+
+watch(currentSlide, () => {
+  if (textVisibleIndex.value !== currentSlide.value) {
+    textVisibleIndex.value = null
+  }
+})
 
 const slides = [
   {
@@ -72,6 +95,7 @@ p {
   background-color: transparent;
   /* hiding slides by default */
   visibility: hidden;
+  height: 500px;
 }
 
 .carousel__prev,
@@ -108,6 +132,10 @@ p {
   .carousel__slide--next,
   .carousel__slide--prev {
     visibility: hidden;
+  }
+
+  :deep(.carousel__track) {
+    height: 30rem !important;
   }
 }
 </style>
