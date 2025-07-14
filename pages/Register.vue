@@ -1486,16 +1486,20 @@ function getFileUpload(e: any) {
 
 <style scoped lang="scss">
 a {
-  color: $DARKYELLOW;
+  color: #F1ADCD;
 }
 
 h1 {
-  font-family: 'dinpro';
+  font-family: 'poppins';
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
   white-space: nowrap;
   padding: 1em 0;
+}
+
+h1:first-of-type{
+  margin-top: 1em;
 }
 
 
@@ -1527,7 +1531,7 @@ H3 {
 }
 
 .form-check.mt-4 a {
-  color: $DARKPURPLE;
+  color: #aba0df;
 }
 
 .p-autocomplete {
@@ -1543,9 +1547,10 @@ ul {
 }
 
 .submit-btn {
-  width: 50%;
-  margin: 0;
+  width: 100%;
+  margin-left: -1rem;
   margin-bottom: 5rem;
+  
 }
 
 .text-center {
