@@ -14,7 +14,7 @@
       </h4>
       <br>
       <p>Thank you for your interest in Technica, the world's largest hackathon for underrepresented genders! This fall,
-        students from all over the globe will come to participate and celebrate our <b>tenth year</b> active! Last year,
+        students from all over the globe will come to participate and celebrate our <b>eleventh year</b> active! Last year,
         we were happy to welcome over 800 participants from several countries, both at the in-person event and virtually
         through Gather.</p>
       <br>
