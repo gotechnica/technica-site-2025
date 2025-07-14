@@ -126,10 +126,10 @@ export default defineComponent({
 
 .headshot {
   position: absolute;
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  height: 70%;
+  top: 13%;
+  left: 13%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
