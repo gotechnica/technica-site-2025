@@ -77,6 +77,7 @@ const items = ref([
 
 .hybrid > .caption-box {
   margin-bottom: 30px;
+  padding-top: 1.5rem;
 }
 
 .in-person > .caption-box,

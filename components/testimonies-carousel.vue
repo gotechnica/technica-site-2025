@@ -1,8 +1,8 @@
 <template>
   <div class="carousel-header">
     <div class="header-image-wrap">
-      <Header> Hear from Past Hackers </Header>
-      <p>Click on each card to learn more about their projects!</p>
+      <img src="/testimonials/newheader.svg" alt="Decorative header" />
+      <h2 class="overlay-text">Hear from Past Hackers</h2>
     </div>
   </div>
 
@@ -16,7 +16,7 @@
       v-for="(slide, index) in slides"
       :key="slide.hackerName"
       class="carousel__item"
-      @click="handleClick(index)"
+      @click="currentSlide = index"
     >
       <TestimonyCard
         :hacker-image="slide.hackerImage"
@@ -50,14 +50,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import { ref } from 'vue'
 
 const currentSlide = ref(0)
-const isActive = ref(false)
 
-function handleClick(index: number) {
-  if (currentSlide.value !== index) {
-    currentSlide.value = index
-    isActive.value = false
-  }
-}
 
 const slides = [
   {

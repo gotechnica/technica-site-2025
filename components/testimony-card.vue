@@ -6,11 +6,9 @@
         <h3>{{ hackerName }}</h3>
         <h4>{{ hackerDesc }}</h4>
       </div>
-      <div class="right-column">
-        <div class="ghost-frame-container">
-          <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
-          <img :src="hackerImage" alt="Headshot" class="headshot" />
-        </div>
+      <div class="ghost-frame-container">
+        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
+        <img :src="hackerImage" alt="Headshot" class="headshot" />
       </div>
     </div>
     <div v-if="isActiveData" class="card-back" @click=flipCard>
@@ -123,24 +121,33 @@ export default defineComponent({
 
 .ghost-frame-container {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ghost-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
+  object-fit: contain;
 }
 
 .headshot {
   position: absolute;
-  top: 13%;
-  left: 13%;
-  width: 80%;
-  height: 80%;
+  top: 12%;         // aligns nicely inside the ghost
+  left: 12%;
+  width: 76%;       // slightly smaller to fit within new frame
+  height: 76%;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
+  z-index: 2;
 }
 
 h3 {
@@ -197,8 +204,8 @@ p {
   }
 
   .ghost-frame-container {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto;
   }
 
