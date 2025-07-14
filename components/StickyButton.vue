@@ -41,11 +41,20 @@ function showButton() {
   var windowHeight = window.innerHeight;
   var scrollPosition =
     window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+  var footer = document.querySelector('#footer');
+  var footerTop = footer.getBoundingClientRect().top;
 
   if (scrollPosition > (pageHeight - windowHeight) / 6) {
     button.classList.add('show');
   } else {
     button.classList.remove('show');
+  }
+
+  if (footerTop < windowHeight) {
+    const newBottom = windowHeight - footerTop + 20;
+    button.style.bottom = `${newBottom}px`;
+  } else {
+    button.style.bottom = '1.5rem';
   }
 }
 </script>
