@@ -3,8 +3,7 @@
     <div class="details" id="top">
       <div class="logos">
         <div class="col-md">
-          <!--<img class="halloween-logo" src="/hero/wonder-awaits.svg" width="25%" />-->
-          <p class="halloween-logo">Logo Here</p>
+          <img class="halloween-logo" src="/hero/hero-logo.png" width="35%" />
         </div>
         <div class="col-md">
           <img
@@ -16,7 +15,7 @@
       </div>
 
       <div class="subtext">
-        <h1 class="outline">Bring Your Ideas to Life</h1>
+        <h1 class="tagline outline">Bring Your Ideas to Life</h1>
         <p class="basic-info outline">
           October 25 to October 26th at The Armory, UMD | Hybrid
           Environment
@@ -106,10 +105,9 @@ const TogglePopup = () => {
   background-image: url('/hero/hero.svg');
   background-color: rgb(37,35,62);
   background-attachment: scroll;
-  background-size: 85vw;
+  background-size: 100vw;
   background-position: right;
   resize: both;
-  margin-top: 0%;
   padding-top: 0;
   margin-right: -10%;
   background-repeat: no-repeat;
@@ -138,7 +136,7 @@ const TogglePopup = () => {
 .subtext {
   color: white;
   justify-items: left;
-  text-shadow: 5px 5px 13px black;
+  text-shadow: 1px 1px 13px black;
   border-radius: 10px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -159,16 +157,30 @@ const TogglePopup = () => {
 
 .outline {
   color: white;
-  -webkit-text-stroke: 1px;
+  -webkit-text-stroke: .8px;
   -webkit-text-stroke-color: black;
   text-shadow: 2px 5px 2px black;
 }
 
+.tagline {
+  color: white;
+  -webkit-text-stroke: 0px;
+}
+
+h1.tagline {
+  font-weight: 400;
+  font-size: 2rem;
+  -webkit-text-stroke: .8px;
+  -webkit-text-stroke-color: black;
+  font-family: 'Pippins', sans-serif;
+}
+
 #popup {
-  margin-top: -30%;
-  width: 100%;
-  resize: both;
-  justify-items: right;
+ margin-top: -30%;
+ width: 100%;
+ resize: both;
+ justify-items: right;
+ margin-top: -10vw;
 }
 
 #popup-inner h3 {
@@ -242,8 +254,9 @@ const TogglePopup = () => {
 
 .halloween-logo {
   margin-top: 15%;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   align-self: flex-start;
+  margin-left: -3.5%;
 }
 
 .technica-logo {
@@ -265,7 +278,7 @@ const TogglePopup = () => {
     height: 100vh;
   }
 
-  .alice-logo {
+  .halloween-logo {
     margin-right: 0;
   }
 }
@@ -279,7 +292,7 @@ const TogglePopup = () => {
     width: 50%;
   }
 
-  .alice-logo {
+  .halloween-logo {
     width: 35%;
   }
 
@@ -317,7 +330,7 @@ const TogglePopup = () => {
     width: 80%;
   }
 
-  .alice-logo {
+  .halloween-logo {
     width: 50%;
   }
 
@@ -325,8 +338,9 @@ const TogglePopup = () => {
   #wrapper.day {
     background-size: cover;
     padding-bottom: 80%;
-    background-position-x: -10em;
+    background-position: center;
     height: 100vh;
+    max-width: 100%;
   }
 
   .subtext p {
