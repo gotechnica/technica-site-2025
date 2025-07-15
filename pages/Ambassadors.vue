@@ -48,18 +48,10 @@
               ref="carouselRefAmb"
             />
           </div>
-          <div class="buttons">
-            <img
-              class="prev"
-              @click="prev"
-              src="/public/icons/left-arrow.svg"
-            />
-            <img
-              class="next"
-              @click="next"
-              src="/public/icons/right-arrow.svg"
-            />
-          </div>
+          <!-- <div class="buttons">
+            <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
+            <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
+          </div> -->
         </div>
       </div>
     </div>
@@ -296,7 +288,19 @@ a {
   .list li {
     margin-left: 0;
   }
+
+  .carousel {
+    width: 95%;     
+    max-width: none; 
+  }
+
+  .buttons .prev,
+  .buttons .next {
+    margin-left: -5%;  
+    margin-right: -5%;
+  }
 }
+
 @media screen and (max-width: 572px) {
   .header img {
     width: 100%;

@@ -25,38 +25,33 @@
       to specific attendance types.
     </p>
 
+    <div style="margin-top: 2rem;"></div>
+    <p class="hint-header">Click the gates to learn more!</p>
+
     <!-- TRACKS ICON CARDS -->
     <!-- <div style="margin-top: 3rem;"></div> -->
     <div class="tracks-gates">
-      <TracksGates
-        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-        textColor="white"
-        textAlign="center"
-        img="CLOSED_Beginner.svg"
-        click="OPEN_Beginner.svg"
-      ></TracksGates>
-      <TracksGates
-        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-        textColor="white"
-        textAlign="center"
-        img="CLOSED_General.svg"
-        click="OPEN_General.svg"
-      ></TracksGates>
-      <TracksGates
-        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-        textColor="white"
-        textAlign="center"
-        img="CLOSED_Startup.svg"
-        click="OPEN_Startup.svg"
-      ></TracksGates>
-      <TracksGates
-        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
-        textColor="white"
-        textAlign="center"
-        img="CLOSED_Research.svg"
-        click="OPEN_Research.svg"
-      ></TracksGates>
-      <!-- <TracksGates text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ad consequatur voluptas, qui blanditiis nesciunt obcaecati nisi amet! Cumque quas, consequatur nihil facere necessitatibus officiis harum corrupti quos? Quod perferendis asperiores laborum nam, assumenda excepturi, id sapiente saepe a eum quo ipsa expedita consequuntur natus. Veniam architecto reprehenderit ratione odio."
+      <TracksGates text="New to hackathons? Don't know how to code? No worries! You'll be provided with resources to help you succeed at Technica and beyond. This track begins with exclusive workshops a few weeks before Technica, and includes everything from an introduction to hackathons to coding and logic concepts."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Beginner.svg"
+      click="OPEN_Beginner.svg"></TracksGates>
+      <TracksGates text="For any and all hackers! Come build to your heart's content using hardware, software, or anything you want with other hackers. Hackers can be students, designers, or just any tech-lovers out there. Hackers of all skill levels are welcomed and supported!"
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_General.svg"
+      click="OPEN_General.svg"></TracksGates>
+      <TracksGates text="Interested in the business side of building a project? Join startup track! Featuring both workshops before and during Technica weekend, startup track is a unique opportunity to explore an alternate dimension of project building that you won't want to miss out on!"
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Startup.svg"
+      click="OPEN_Startup.svg"></TracksGates>
+      <TracksGates text="Interested in research? Explore different areas where you will get to work hands-on with faculty researchers and peers to address social issues using technology and research! This track is a separate 3-day event taking place during Technica weekend."
+      textColor="white"
+      textAlign="center"
+      img="CLOSED_Research.svg"
+      click="OPEN_Research.svg"></TracksGates>
+      <!-- <TracksGates text="Want to explore the fusion of software and hardware engineering? Join the hardware track! During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond."
       textColor="white"
       textAlign="center"
       img="CLOSED_Hardware.svg"
@@ -129,6 +124,15 @@
 
 .tracks-gates > :nth-child(5) {
   grid-column: span 2;
+}
+
+.hint-header {
+  text-align: center;
+  color: #FFFFFF; 
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 @media screen and (max-width: 800px) {
