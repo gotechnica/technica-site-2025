@@ -53,11 +53,11 @@
       textAlign="center"
       img="CLOSED_Research.svg"
       click="OPEN_Research.svg"></TracksGates>
-      <TracksGates text="Want to explore the fusion of software and hardware engineering? Join the hardware track! During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond."
+      <!-- <TracksGates text="Want to explore the fusion of software and hardware engineering? Join the hardware track! During the event, participants will engage in interactive workshops focusing on embedded systems, IoT (Internet of Things), robotics, circuit design, and beyond."
       textColor="white"
       textAlign="center"
       img="CLOSED_Hardware.svg"
-      click="OPEN_Hardware.svg"></TracksGates>
+      click="OPEN_Hardware.svg"></TracksGates> -->
     </div>
     <!--
     <TracksIconCard borderColor="#FFFFFF"
