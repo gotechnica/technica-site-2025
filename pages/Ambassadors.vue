@@ -44,10 +44,10 @@
           <div class="carousel-cards">
             <Carousel :initialCards="AmbassadorCards" :isShorten="false" ref="carouselRefAmb" />
           </div>
-          <div class="buttons">
+          <!-- <div class="buttons">
             <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
             <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
