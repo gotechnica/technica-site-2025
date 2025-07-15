@@ -1,8 +1,8 @@
 <template>
   <div class="carousel-header">
     <div class="header-image-wrap">
-      <img src="/testimonials/newheader.svg" alt="Decorative header" />
-      <h2 class="overlay-text">Hear from Past Hackers</h2>
+      <Header>Hear from Past Hackers</Header>
+      <p>Click on each card to learn more about their projects!</p>
     </div>
   </div>
 

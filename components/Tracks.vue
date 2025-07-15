@@ -2,11 +2,12 @@
   <div class="container">
     <Header>Tracks</Header>
     <!-- <div style="margin-top: 5rem"></div> -->
+    <p>Click on the gates to learn more!</p>
     <div class="row d-flex justify-content-center">
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="flip-card-3D-wrapper col-lg-4 d-flex justify-content-center"
+        class="flip-card-3D-wrapper col-lg-4 d-flex justify-content-center tracks"
       >
         <div
           class="flip-card"
@@ -16,7 +17,7 @@
           <div v-if="!card.flipped" key="front" class="flip-card-front">
             <img class="card-img" :src="card.image" alt="Card Image" />
             <div :class="['card-body', card.title]">
-              <span class="flip-text">Learn More</span>
+              <span class="flip-text">Click the gates to learn more!</span>
               <img
                 class="flip-arrow"
                 src="/testimonials/flip.svg"
@@ -342,10 +343,20 @@ body {
   margin-bottom: 3%;
 }
 
+@media screen and (max-width: 992px) {
+  .tracks {
+    margin-left: 21%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 10%;
     max-width: 100% !important;
+  }
+
+  .tracks {
+    margin-left: 12%;
   }
 }
 </style>

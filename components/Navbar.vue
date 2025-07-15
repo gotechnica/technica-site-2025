@@ -77,9 +77,9 @@ export default {
           name: 'Programs',
           showDropdown: false,
           items: [
-            { name: 'Fellows', path: './Fellows' },
-            { name: 'Ambassadors', path: './Ambassadors' },
-            { name: 'Mentors & Volunteers', path: './Mentors-Volunteers' }
+            { name: 'Fellows', path: '/Fellows' },
+            { name: 'Ambassadors', path: '/Ambassadors' },
+            { name: 'Mentors & Volunteers', path: '/Mentors-Volunteers' }
         ]
    }
 ]

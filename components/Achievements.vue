@@ -25,13 +25,13 @@ const stats = [
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
-  margin: 2rem 0 -15rem 0; //put the -15rem for now to remove the padding, will come back to later
+  margin: 2rem 0 2rem 0; //put the -15rem for now to remove the padding, will come back to later
 }
 
 .gameboy-stat {
   position: relative;
   width: 400px;
-  height: 750px;
+  height: 450px;
 
   .gameboy-img {
     width: 100%;
@@ -40,7 +40,7 @@ const stats = [
 
   .gameboy-screen {
     position: absolute;
-    top: 11%;
+    top: 18.5%;
     left: 36%;
     width: 145px;
     height: 120px;

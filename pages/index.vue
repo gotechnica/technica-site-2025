@@ -93,7 +93,7 @@ const qaList = [
   },
   {
     question: 'Why a hackathon for underrepresented genders?',
-    answer: `People of a variety of genders are underrepresented in the tech world, and it’s up to everyone to change that! Technica’s goal is to create a welcoming environment where people of underrepresented genders can build cool projects and share their stories! You can learn more about gender diversity <a style="color:#4E23AA" href="https://genderrights.org.au/information-hub/what-is-gender-diversity/">here</a>.`,
+    answer: `People of a variety of genders are underrepresented in the tech world, and it’s up to everyone to change that! Technica’s goal is to create a welcoming environment where people of underrepresented genders can build cool projects and share their stories! You can learn more about gender diversity <a style="color: #F1ADCD" href="https://genderrights.org.au/information-hub/what-is-gender-diversity/">here</a>.`,
   },
   {
     question: 'Do I need to know how to code?',
@@ -137,7 +137,7 @@ const qaList = [
   },
   {
     question: 'What if I need any accomodations?',
-    answer: `If you have any accomodations you feel our organizers should be aware of or other questions or concerns, you can reach out to us at <a style="color:#4E23AA" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a>!`,
+    answer: `If you have any accomodations you feel our organizers should be aware of or other questions or concerns, you can reach out to us at <a style="color: #F1ADCD" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a>!`,
   },
   {
     question: 'What do I need to register for Technica?',
@@ -152,7 +152,7 @@ const qaList = [
   {
     question: 'I have an unanswered question',
     answer:
-      'We’d love to hear from you! Reach out to us at <a style="color:#4E23AA" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a> and we’ll be in touch soon.',
+      'We’d love to hear from you! Reach out to us at <a style="color: #F1ADCD" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a> and we’ll be in touch soon.',
   },
 ];
 
@@ -197,6 +197,12 @@ useHead({
 <style scoped lang="scss">
 .container {
   margin-bottom: 5rem;
+}
+
+.whatToDo {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .timer {

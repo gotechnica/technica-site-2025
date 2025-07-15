@@ -1,19 +1,17 @@
 <template>
-  <div class="card" :class="{ flipped: isFlipped }">
-    <div class="card-front">
+  <div class="card" :class="{ flipped: isFlipped, active: isActiveData}">
+    <div class="card-front" @click=flipCard>
       <div class="left-column">
         <p>{{ testimonyDescription }}</p>
         <h3>{{ hackerName }}</h3>
         <h4>{{ hackerDesc }}</h4>
       </div>
-      <div class="right-column">
-        <div class="ghost-frame-container">
-          <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
-          <img :src="hackerImage" alt="Headshot" class="headshot" />
-        </div>
+      <div class="ghost-frame-container">
+        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
+        <img :src="hackerImage" alt="Headshot" class="headshot" />
       </div>
     </div>
-    <div class="card-back">
+    <div v-if="isActiveData" class="card-back" @click=flipCard>
       <div class="left-column">
         <h3>{{ projectName }}</h3>
         <h4>{{ projectCategories }}</h4>
@@ -47,11 +45,19 @@ export default defineComponent({
   data() {
     return {
       isFlipped: false,
+      isActiveData: false,
     }
   },
   methods: {
     flipCard() {
-      this.isFlipped = !this.isFlipped
+      if (this.hasProject === true) {
+        if (this.isActiveData === true) {
+          this.isFlipped = !this.isFlipped   
+        } else {
+          this.isActiveData = !this.isActiveData   
+          this.isFlipped = false
+        }
+      }
     }
   }
 })
@@ -115,24 +121,33 @@ export default defineComponent({
 
 .ghost-frame-container {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ghost-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
+  object-fit: contain;
 }
 
 .headshot {
   position: absolute;
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  height: 70%;
+  top: 12%;         // aligns nicely inside the ghost
+  left: 12%;
+  width: 76%;       // slightly smaller to fit within new frame
+  height: 76%;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
+  z-index: 2;
 }
 
 h3 {
@@ -189,8 +204,8 @@ p {
   }
 
   .ghost-frame-container {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto;
   }
 
