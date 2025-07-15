@@ -5,9 +5,9 @@
         <div class="image-wrapper1">
           <img src="/public/keynote-speakers/speaker_frame_1.svg" alt="ghost frame" />
         </div>
-        <h1 class="speaker-name">Name Lastname</h1>
-        <p class="speaker-info">Title</p>
-        <p class="speaker-info">They/Them</p>
+        <h1 class="speaker-name">TBA!</h1>
+        <!-- <p class="speaker-info">Title</p>
+        <p class="speaker-info">They/Them</p> -->
         <div class="btn-container">
           <button @click="toggleDropdown(1)" class="dropdown-button">
             <WebButton text="Read Bio" img="button_pink_normal.svg" hover="button_pink_hover.svg" click="button_pink_onclick.svg" textAlign="-1.5rem"/>
@@ -24,9 +24,9 @@
         <div class="image-wrapper2">
           <img src="/public/keynote-speakers/speaker_frame_2.svg" alt="ghost frame" />
         </div>
-        <h1 class="speaker-name">Name Lastname</h1>
-        <p class="speaker-info">Title</p>
-        <p class="speaker-info">They/Them</p>
+        <h1 class="speaker-name">TBA!</h1>
+        <!-- <p class="speaker-info">Title</p>
+        <p class="speaker-info">They/Them</p> -->
         <div class="btn-container">
           <button @click="toggleDropdown(2)" class="dropdown-button">
             <WebButton text="Read Bio" img="button_pink_normal.svg" hover="button_pink_hover.svg" click="button_pink_onclick.svg" textAlign="-1.5rem"/>
