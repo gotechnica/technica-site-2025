@@ -765,7 +765,9 @@
         <label class="form-check-label">
           I understand that the withdrawal or deletion of my data must be
           requested via the
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform?usp=dialog" target="_blank"
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform?usp=dialog"
+            target="_blank"
             >Data Rights Contact Form</a
           >.*
         </label>
@@ -1505,6 +1507,10 @@ h1:first-of-type{
 
 H3 {
   color: $DARK_PURPLE;
+}
+
+.container {
+  margin-bottom: 5rem;
 }
 
 .disclaimer {
