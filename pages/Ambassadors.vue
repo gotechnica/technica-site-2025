@@ -276,7 +276,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .header img {
-    width: 100%;
+    width: 95%;
   }
 
   .header h1 {
@@ -290,6 +290,8 @@ a {
     margin-left: 0;
   }
 }
+
+
 @media screen and (max-width: 572px) {
   .header img {
     width: 100%;
