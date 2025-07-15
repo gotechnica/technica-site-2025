@@ -276,7 +276,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .header img {
-    width: 95%;
+    width: 100%;
   }
 
   .header h1 {
@@ -289,8 +289,18 @@ a {
   .list li { 
     margin-left: 0;
   }
-}
 
+  .carousel {
+    width: 95%;     
+    max-width: none; 
+  }
+
+  .buttons .prev,
+  .buttons .next {
+    margin-left: -5%;  
+    margin-right: -5%;
+  }
+}
 
 @media screen and (max-width: 572px) {
   .header img {
