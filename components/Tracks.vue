@@ -343,6 +343,12 @@ body {
   margin-bottom: 3%;
 }
 
+@media screen and (max-width: 992px) {
+  .tracks {
+    margin-left: 21%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 10%;
@@ -350,8 +356,7 @@ body {
   }
 
   .tracks {
-    margin-left: 13%;
+    margin-left: 12%;
   }
 }
-
 </style>
