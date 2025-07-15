@@ -2,11 +2,12 @@
   <div class="container">
     <Header>Tracks</Header>
     <!-- <div style="margin-top: 5rem"></div> -->
+    <p>Click on the gates to learn more!</p>
     <div class="row d-flex justify-content-center">
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="flip-card-3D-wrapper col-lg-4 d-flex justify-content-center"
+        class="flip-card-3D-wrapper col-lg-4 d-flex justify-content-center tracks"
       >
         <div
           class="flip-card"
@@ -347,5 +348,10 @@ body {
     padding: 10%;
     max-width: 100% !important;
   }
+
+  .tracks {
+    margin-left: 13%;
+  }
 }
+
 </style>
