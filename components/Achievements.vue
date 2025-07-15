@@ -1,108 +1,77 @@
 <template>
-    <Header>Our Achievements</Header>
-    <div v-if="mounted" class="achievements-wrapper">
-        <div class="stat-card-container">
-        <img class="edge-icon" src="/achievements/teal.png" />
-        <div class="stat-card" id="teal">
-            <h1>10</h1>
-            <p>years of Technica</p>
-        </div>
-      </div>
-  
-      <div class="stat-card-container">
-        <img class="edge-icon" src="/achievements/pink.png" />
-        <div class="stat-card" id="pink">
-            <h1>20+</h1>
-            <p>sponsors each year</p>
-        </div>
-      </div>
-  
-      <div class="stat-card-container">
-        <img class="edge-icon" src="/achievements/yellow.png" />
-        <div class="stat-card" id="yellow">
-            <h1>800+</h1>
-            <p>hackers and counting</p>
-        </div>
+  <Header>Our Achievements</Header>
+  <div class="achievements-wrapper">
+    <div class="gameboy-stat" v-for="(stat, i) in stats" :key="i">
+      <img src="/public/achievements/gameboy.svg" class="gameboy-img" alt="Gameboy Frame" />
+      <div class="gameboy-screen">
+        <h1>{{ stat.number }}</h1>
+        <p>{{ stat.label }}</p>
       </div>
     </div>
+  </div>
 </template>
-  
+
 <script setup lang="ts">
-    const mounted = ref(false);
-    onMounted(() => {
-    mounted.value = true;
-    });
+const stats = [
+  { number: '11', label: 'years of Technica' },
+  { number: '20+', label: 'sponsors each year' },
+  { number: '800+', label: 'hackers and counting' },
+];
 </script>
   
 <style scoped lang="scss">
-    .achievements-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-        margin-bottom: 50px;
-        width: 100%;
-    }
-  
-    img {
-        height: 12rem;
-    }
-  
-    .stat-card-container {
-        margin-top: 5rem;
-        position: relative;
-    }
-  
-    .edge-icon {
-        height: 4rem;
-        left: 240px;
-        position: absolute;
-        top: -20px;
-        z-index: 2;
-    }
-  
-    .stat-card {
-        border-radius: 1rem;
-        border-style: solid;
-        border-width: thick;
-        color: #ffffff;
-        text-align: center;
-        padding: 1rem 0.5rem 1rem 0.5rem;
-        position: relative;
-        width: 18rem;
-        z-index: 1;
+.achievements-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 2rem 0 -15rem 0; //put the -15rem for now to remove the padding, will come back to later
+}
+
+.gameboy-stat {
+  position: relative;
+  width: 400px;
+  height: 750px;
+
+  .gameboy-img {
+    width: 100%;
+    display: block;
+  }
+
+  .gameboy-screen {
+    position: absolute;
+    top: 11%;
+    left: 36%;
+    width: 145px;
+    height: 120px;
+    background-color: #6b8e4e;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    overflow: hidden;
+
+    h1, p {
+      margin: 0;
+      font-weight: bold;
+      line-height: 1.2;
     }
 
-    .stat-card h1 {
-        -webkit-text-stroke-width: 2px;
-        text-shadow: 2px 2px 4px black;
+    h1 {
+      font-size: 2rem;
     }
 
-    .stat-card p {
-        text-shadow: 2px 2px 2px black;
+    p {
+      font-size: 1rem;
     }
+  }
+}
+
+
   
-    #teal {
-        background-color: $LIGHTGREEN;
-        border-color: $MIDGREEN;
-        -webkit-text-stroke-color: $MIDGREEN;
-    }
-  
-    #pink {
-        background-color: $LIGHTPINK;
-        border-color: $DARKPINK;
-        -webkit-text-stroke-color: $DARKPINK;
-    }
-  
-    #yellow {
-        background-color: $LIGHTYELLOW;
-        border-color: $DARKYELLOW;
-        -webkit-text-stroke-color: $DARKYELLOW;
-    }
-  
-    @media screen and (max-width: 480px) {
-        .stats {
-            margin-top: -7.5rem;
-        }
-    }
+
 </style>

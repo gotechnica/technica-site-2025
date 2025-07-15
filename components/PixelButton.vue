@@ -79,9 +79,7 @@ a {
 }
 .click-image {
   position: absolute;
-  //top: 0%;
-  //left: -10%;
-  width: 121%;
+  width: 138%;
   opacity: 0;
   transition: opacity 0.5s;
 }

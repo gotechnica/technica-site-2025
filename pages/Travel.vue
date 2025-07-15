@@ -1,22 +1,28 @@
 <template>
   <title>Travel</title>
-  <div style="margin-top: 1rem;"></div>
+  <div style="margin-top: 1rem"></div>
   <Header>Travel</Header>
   <div class="travel-container">
     <div class="travel-header section">
       <div class="process-blurb">
         <p>
-          Technica will be hosted at the Reckord Armory, College Park, MD, 
-          from Saturday, October 25th to Sunday, October 26th.
+          Technica will be hosted at the Reckord Armory, College Park, MD, from
+          Saturday, October 25th to Sunday, October 26th.
         </p>
         <p>
-          We will offer travel reimbursement for hackers on a first-come, first-serve basis.
+          We will offer travel reimbursement for hackers on a first-come,
+          first-serve basis.
         </p>
         <p>
-          Technica reserves the right to adjust or cancel reimbursement at any time if necessary.
+          Technica reserves the right to adjust or cancel reimbursement at any
+          time if necessary.
         </p>
         <p>
-          Please email <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b> with any questions.
+          Please email
+          <b
+            ><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b
+          >
+          with any questions.
         </p>
       </div>
     </div>
@@ -26,34 +32,42 @@
           <h3>Reimbursement</h3>
           <p>
             <i>
-              At Technica, we understand the importance of making the event accessible to participants from diverse backgrounds, 
-              and we are committed to supporting your journey to our hackathon! 
+              At Technica, we understand the importance of making the event
+              accessible to participants from diverse backgrounds, and we are
+              committed to supporting your journey to our hackathon!
             </i>
           </p>
           <p>
-            Technica will provide travel reimbursement to hackers who require transportation directly 
-            to the University of Maryland. 
-            Reimbursements will be evaluated on a <b>first-come, first-serve basis</b> and may not cover the full cost of travel. 
-            Notice of reimbursement approval/rejection will be sent via email before the event. 
-            Minors are eligible to apply for travel reimbursement; please refer to the Technica 2025 Minor Policy for further details. 
+            Technica will provide travel reimbursement to hackers who require
+            transportation directly to the University of Maryland.
+            Reimbursements will be evaluated on a
+            <b>first-come, first-serve basis</b> and may not cover the full cost
+            of travel. Notice of reimbursement approval/rejection will be sent
+            via email before the event. Minors are eligible to apply for travel
+            reimbursement; please refer to the Technica 2025 Minor Policy for
+            further details.
           </p>
           <p>
-            Travel reimbursement will be given to hackers who live more than 30 minutes away from College Park. 
+            Travel reimbursement will be given to hackers who live more than 30
+            minutes away from College Park.
           </p>
           <p>
-            Eligible hackers will be contacted via email with additional information on how to apply for reimbursement. 
-            Please note that hackers will <b>need to be physically present</b> during Technica in order to receive their reimbursement, 
-            not attending online. Reimbursement checks will be handed out during the event at a marked table.
+            Eligible hackers will be contacted via email with additional
+            information on how to apply for reimbursement. Please note that
+            hackers will <b>need to be physically present</b> during Technica in
+            order to receive their reimbursement, not attending online.
+            Reimbursement checks will be handed out during the event at a marked
+            table.
           </p>
           <p>
             <i>
-              If hackers cannot attend the event in-person, 
-              Technica offers a free, virtual environment to interact with fellow hackers online. 
+              If hackers cannot attend the event in-person, Technica offers a
+              free, virtual environment to interact with fellow hackers online.
             </i>
           </p>
           <p>
-            Reimbursement amounts per method of transportation 
-            (note that in a carpool, <b>only the driver may receive reimbursement</b>):
+            Reimbursement amounts per method of transportation (note that in a
+            carpool, <b>only the driver may receive reimbursement</b>):
           </p>
           <!-- Used to list the actual reinbursement prices, edit the variable transportation for the updated price values-->
           <!-- <ul>
@@ -62,24 +76,29 @@
             </li>
           </ul> -->
           <p>
-            Reimbursement amount is dependent on how much was spent on traveling to Technica. 
-            Hackers should make sure to keep their trip purchase receipts and 
-            submit the bus/train/plane itinerary of the ride/flight they intend to take. 
-            We recommend that hackers wait until receiving approval from Technica before purchasing their ticket. 
-            Please note that Technica <b>requires proof of travel or a receipt for reimbursement of travel expenses, 
-            stating the exact amount spent</b>. 
-            We will not reimburse without this documentation.
+            Reimbursement amount is dependent on how much was spent on traveling
+            to Technica. Hackers should make sure to keep their trip purchase
+            receipts and submit the bus/train/plane itinerary of the ride/flight
+            they intend to take. We recommend that hackers wait until receiving
+            approval from Technica before purchasing their ticket. Please note
+            that Technica
+            <b
+              >requires proof of travel or a receipt for reimbursement of travel
+              expenses, stating the exact amount spent</b
+            >. We will not reimburse without this documentation.
           </p>
           <p>
-
-            Reimbursements will only be in US dollars. 
-            Please note that Technica will not reimburse travel from any other country.
+            Reimbursements will only be in US dollars. Please note that Technica
+            will not reimburse travel from any other country.
           </p>
           <p>
             Here are some examples of documentation to submit for reimbursement:
           </p>
           <ul class="d-inline-block text-start">
-            <li v-for="transportation in documentation" :key="transportation.name">
+            <li
+              v-for="transportation in documentation"
+              :key="transportation.name"
+            >
               {{ transportation.name }}
               <ul>
                 <li v-for="item in transportation.items" :key="item">
@@ -89,8 +108,14 @@
             </li>
           </ul>
           <p>
-            If you are unsure whether your documentation is acceptable, 
-            please email <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b> for clarification. 
+            If you are unsure whether your documentation is acceptable, please
+            email
+            <b
+              ><a href="mailto:travel@gotechnica.org"
+                >travel@gotechnica.org</a
+              ></b
+            >
+            for clarification.
           </p>
           <!-- Used for Reinbursement Form Link-->
           <!-- <VineButton text="Reimbursement Form" link="https://forms.gle/AzG5fqaQEJuyTPSH8" img="yellow-button-regular.svg" hover="yellow-on-click.svg" click="yellow-visited.svg"/> -->
@@ -99,7 +124,7 @@
       <div class="faq-section section">
         <Header>Frequently Asked Questions</Header>
         <FAQ faqId="main" :qaList="qaList" class="main-section" />
-      </div> 
+      </div>
     </div>
     <div class="email-blurb section">
       <h3>Have Other Questions?</h3>
@@ -116,7 +141,8 @@
 const qaList = [
   {
     question: 'Am I eligible for travel reimbursement?',
-    answer: 'Hackers who live more than 30 minutes away from College Park are eligible to apply for travel reimbursement.',
+    answer:
+      'Hackers who live more than 30 minutes away from College Park are eligible to apply for travel reimbursement.',
   },
   {
     question: 'How will I receive my reimbursement?',
@@ -139,8 +165,7 @@ const qaList = [
   //     'No, hackers cannot apply for both. If hackers live near a Technica bus stop, they are encouraged to apply for bus accommodations. If we are not providing a bus within 30 minutes of a hacker and they are not within 30 minutes of College Park, Maryland, they may apply for travel reimbursement.',
   // },
   {
-    question:
-      "Will there be designated sleeping spaces?",
+    question: 'Will there be designated sleeping spaces?',
     answer:
       'Unfortunately, per Fire Marshal regulations, we cannot provide sleeping accommodations this year. Hackers are welcome to stay at nearby hotels, or to rest and take naps at the provided workspaces. ',
   },
@@ -157,21 +182,21 @@ const qaList = [
 const documentation = [
   {
     name: 'Car',
-    items: ['Gas receipt']
+    items: ['Gas receipt'],
   },
   {
     name: 'Bus/Train',
-    items: ['Bus tickets', 'Booking confirmation receipt']
+    items: ['Bus tickets', 'Booking confirmation receipt'],
   },
   {
     name: 'Metro',
-    items: ['Ticket receipt', 'Transit statement']
+    items: ['Ticket receipt', 'Transit statement'],
   },
   {
     name: 'Plane',
-    items: ['Plane tickets', 'Booking confirmation receipt']
-  }
-]
+    items: ['Plane tickets', 'Booking confirmation receipt'],
+  },
+];
 </script>
 
 <style scoped lang="scss">
@@ -179,24 +204,21 @@ const documentation = [
   margin: 3.5rem 0 1.5rem 0;
 }
 
-.h3, h3 {
+h3 {
+  font-family: 'dinpro';
   text-align: center;
   margin-bottom: 1rem;
-  color: #ffce64;
-  }
-
-.a {
-  color: #ffce64;
+  color: #cadaea;
 }
 
 .travel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3rem;
 }
 
 .travel-header {
@@ -204,11 +226,11 @@ const documentation = [
 }
 
 .travel-header h2 {
-    color: $DARK-PURPLE;
+  color: $DARK-PURPLE;
 }
 
 .travel-header h4 {
-    color: $DARK-PURPLE;
+  color: $DARK-PURPLE;
 }
 
 .process-blurb {
@@ -226,10 +248,6 @@ const documentation = [
   text-align: center;
 }
 
-.email-blurb h3 {
-  color: $DARKYELLOW;
-}
-
 .faq-section h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -239,16 +257,12 @@ const documentation = [
   padding-top: 2rem;
 }
 
-.contact-blurb {
-  margin-bottom: 5rem;
-}
-
 template {
   background-color: $CREAM;
 }
 
 a {
-    color: #F1ADCD;
+  color: #f1adcd;
 }
 
 li {

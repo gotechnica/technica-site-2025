@@ -1,5 +1,5 @@
 <template>
-    <div class="footer-container">
+    <div class="footer-container" id="footer">
           <img class="footer-img" src="../static/footer.svg" style="width: 100vw"/>
           <div class="footer-text">
               <div class="footer-info">
@@ -79,7 +79,7 @@
                     </a>
                 </div>
               </div>
-              <p>
+              <p class="footer-links">
               <a href="/sponsor" target="_blank">
                   Sponsor
               </a> |
@@ -147,6 +147,10 @@
     text-shadow: 5px 5px 13px black;
     font-size: 18px;
   }
+
+  .footer-links {
+   line-height:1;
+ }
   
   .socials {
     text-align: center;
@@ -185,7 +189,7 @@
     }
   
     .footer-text {
-      inset: 45% 0 0 0;
+      inset: 20% 0 0 0;
     }
   }
   </style>

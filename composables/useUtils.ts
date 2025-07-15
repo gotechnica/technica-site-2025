@@ -23,7 +23,7 @@ export function useUtils(){
 
     const endpoints: Endpoints = {
         dev: {
-            BACKEND_ENDPOINT: 'https://tnofke68f9.execute-api.us-east-1.amazonaws.com',
+            BACKEND_ENDPOINT: 'https://ll80jxg1r9.execute-api.us-east-1.amazonaws.com',
             DATES: DATES_ALL
         },
         stg: {
@@ -85,7 +85,7 @@ export function useUtils(){
             return 'prd'
         }
         
-        if (window.location.href === 'https://main.d3d372rpngjchf.amplifyapp.com/register/') {
+        if (window.location.href === 'https://main.d19i3nhpmdj7cb.amplifyapp.com/Register') {
             return 'dev'
         }
 

@@ -4,8 +4,8 @@
   <div class="container">
 
     <!-- BIG TITLE -->
-    <div style="margin-top: 5rem;"></div>
-    <Header>Help support Technica 2024!</Header>
+     <div style="margin-top: 1rem"></div>
+    <Header>Help Support Technica 2025!</Header>
 
     <!-- SPONSOR LETTER -->
     <div class="sponsor-letter">
@@ -14,17 +14,17 @@
       </h4>
       <br>
       <p>Thank you for your interest in Technica, the world's largest hackathon for underrepresented genders! This fall,
-        students from all over the globe will come to participate and celebrate our <b>tenth year</b> active! Last year,
+        students from all over the globe will come to participate and celebrate our <b>eleventh year</b> active! Last year,
         we were happy to welcome over 800 participants from several countries, both at the in-person event and virtually
         through Gather.</p>
       <br>
-      <p>In 24 hours, Technica gives participants the opportunity to create new applications, websites, or hardware
-        projects within one of our five amazing tracks – general, beginner, research, startup, and hardware. Technica
+      <p>In 24 hours, Technica gives participants the opportunity to create new applications and websites
+        within one of our four amazing tracks – general, beginner, research, and startup. Technica
         caters to all interests and skill levels, and we welcome and encourage hackers of all ages and majors to
         participate!</p>
       <br>
       <p>We strive to provide an exciting and welcoming atmosphere for beginners in tech to find their footing and gain
-        knowledge and support to help advance their careers. Technica 2024 aims to take a more interdisciplinary
+        knowledge and support to help advance their careers. Technica 2025 aims to take a more interdisciplinary
         approach through the creation of workshops that cater to various fields, thereby encouraging students of all
         majors to collaborate on projects that combine their interests with technology.</p>
       <br>
@@ -49,7 +49,7 @@
       <div class="col-6 d-flex justify-content-center">
         <div class="stat-box purple">
           <div class="stat-text-horizontal total-hackers">
-            <h2>800+</h2>
+            <h2>650+</h2>
             <p>Total <br> Hackers</p>
           </div>
         </div>
@@ -57,7 +57,7 @@
       <div class="col-3 d-flex justify-content-center">
         <div class="stat-box cyan">
           <div class="stat-text-vertical">
-            <h2>700+</h2>
+            <h2>550+</h2>
             <p>In-person Hackers</p>
           </div>
         </div>
@@ -65,7 +65,7 @@
       <div class="col-3 d-flex justify-content-center">
         <div class="stat-box pink">
           <div class="stat-text-vertical">
-            <h2>170+</h2>
+            <h2>90+</h2>
             <p>Virtual Hackers</p>
           </div>
         </div>
@@ -77,7 +77,7 @@
       <div class="col-12">
         <div class="stat-box purple">
           <div class="stat-text-horizontal total-hackers">
-            <h2>800+</h2>
+            <h2>650+</h2>
             <p>Total <br> Hackers</p>
           </div>
         </div>
@@ -87,7 +87,7 @@
       <div class="col-6">
         <div class="stat-box cyan">
           <div class="stat-text-vertical">
-            <h2>700+</h2>
+            <h2>550+</h2>
             <p>In-person Hackers</p>
           </div>
         </div>
@@ -95,7 +95,7 @@
       <div class="col-6">
         <div class="stat-box pink">
           <div class="stat-text-vertical">
-            <h2>170+</h2>
+            <h2>90+</h2>
             <p>Virtual Hackers</p>
           </div>
         </div>
@@ -113,31 +113,31 @@
         <div class="row h-100 demo-section">
           <div class="col-md-6 d-flex justify-content-around flex-column">
             <div class="demo-text">
-              <h2>793</h2>
+              <h2>571</h2>
               <p>cisgender female hackers</p>
             </div>
             <div class="demo-text">
-              <h2>34</h2>
+              <h2>18</h2>
               <p>non-binary hackers</p>
             </div>
             <div class="demo-text">
-              <h2>8</h2>
+              <h2>6</h2>
               <p>genderqueer hackers</p>
             </div>
           </div>
           <div class="col-md-6 d-flex justify-content-around flex-column">
             <div class="demo-text">
-              <h2>9</h2>
+              <h2>2</h2>
               <p>transgender female hackers</p>
             </div>
             <div class="demo-text">
-              <h2>5</h2>
+              <h2>3</h2>
               <p>transgender male hackers</p>
             </div>
-            <div class="demo-text">
+            <!-- <div class="demo-text">
               <h2>4</h2>
               <p>other</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -195,7 +195,7 @@
     <!-- Sponsorship Prospectus -->
     <div class="prospectus">
       <div class="table-responsive">
-        <table class="table table-hover separate">
+        <table class="table table-hover separate"  style="margin-bottom: 0;">
           <thead>
             <tr class="text-center prospectus-header">
               <th class="contr-amt">
@@ -220,7 +220,7 @@
                 Partner<br>$20,000
               </th>
               <th class="contr-amt">
-                Virtual<br>$4,000
+                Virtual<br>$3,000
               </th>
             </tr>
           </thead>
@@ -258,7 +258,7 @@
             </tr>
             <tr>
               <td>
-                Reserved Virtual & In-person<br>Booth at Event <span data-toggle="tooltip"
+                Reserved In-Person & Virtual<br>Booth at Event <span data-toggle="tooltip"
                   title="Sponsors have their own booth in the main hall of our venue during the event itself, and a virtual one on the Technica platform. Your booth is where you can interact face-to-face or virtually with all of our hackers, distribute marketing materials, and make your presence felt at Technica!">&#9432;</span>
               </td>
               <td></td>
@@ -341,21 +341,23 @@
               </td>
               <td class="align-middle">
                 <div class="general-text text-center">
-                  30 min &<br>60 min
+                  75 min
                 </div>
               </td>
               <td></td>
             </tr>
             <tr>
               <td>
-                One Community Event <span data-toggle="tooltip"
-                  title="There will be a variety of events held throughout 2024 outside of Technica weekend to allow our hackers more opportunities to learn and interact with companies. This is an opportunity for our partner-level sponsors to talk to members of the Technica community by hosting a workshop, talk, or any other event during one of these 1-2 day sessions this year.">&#9432;</span>
+                Community Events<span data-toggle="tooltip"
+                  title="There will be a variety of events held throughout 2025 outside of Technica weekend to allow our hackers more opportunities to learn and interact with companies. This is an opportunity for our partner-level sponsors to talk to members of the Technica community by hosting a workshop, talk, or any other event during one of these 1-2 day sessions this year.">&#9432;</span>
               </td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
+              <td class="align-middle">
+                <div class="benefit general-spons"></div>
+              </td>
               <td class="align-middle">
                 <div class="benefit general-spons"></div>
               </td>
@@ -373,7 +375,10 @@
                   title="You are welcome to have recruiters and recruiting materials at your booth at Technica, where you will be able to interact with all of our hackers.">&#9432;</span>
               </td>
               <td></td>
+              <td></td>
               <td class="align-middle">
+                <div class="benefit recruit"></div>
+              </td>              <td class="align-middle">
                 <div class="benefit recruit"></div>
               </td>
               <td class="align-middle">
@@ -382,23 +387,19 @@
               <td class="align-middle">
                 <div class="benefit recruit"></div>
               </td>
-              <td class="align-middle">
-                <div class="benefit recruit"></div>
-              </td>
-              <td class="align-middle">
-                <div class="benefit recruit"></div>
-              </td>
-              <td class="align-middle">
-                <div class="benefit recruit"></div>
-              </td>
+              <td></td>
             </tr>
             <tr>
               <td>
-                Pre/Post Technica Resume<br>Database <span data-toggle="tooltip"
+                Resume Database <span data-toggle="tooltip"
                   title="With this perk, we provide a database of all of our registrants’ resumes to our sponsors before and/or after the event.">&#9432;</span>
               </td>
               <td></td>
-              <td></td>
+              <td class="align-middle">
+                <div class="recruit-text text-center">
+                  Post
+                </div>
+              </td>
               <td class="align-middle">
                 <div class="recruit-text text-center">
                   Post
@@ -419,11 +420,7 @@
                   Pre &<br>Post
                 </div>
               </td>
-              <td class="align-middle">
-                <div class="recruit-text text-center">
-                  Post
-                </div>
-              </td>
+            <td></td>
             </tr>
             <tr>
               <td>
@@ -484,7 +481,7 @@
             <tr>
               <td>
                 Logo on Website & T-shirt <span data-toggle="tooltip"
-                  title="Sponsors will have their logos (ordered and scaled by sponsorship tier) on our website, as well as on the back of our official Technica 2024 T-shirts given to participants during the event.">&#9432;</span>
+                  title="Sponsors will have their logos (ordered and scaled by sponsorship tier) on our website, as well as on the back of our official Technica 2025 T-shirts given to participants during the event.">&#9432;</span>
               </td>
               <td class="align-middle">
                 <div class="benefit brand"></div>
@@ -510,7 +507,7 @@
             </tr>
             <tr>
               <td>
-                Social Media Shout-out <span data-toggle="tooltip"
+                Social Media Shoutout <span data-toggle="tooltip"
                   title="Technica social media accounts will promote your company through a customized message of choice at some point leading up to the day of the event. We will post about your company on Instagram and Linkedin">&#9432;</span>
               </td>
               <td class="align-middle">
@@ -562,7 +559,7 @@
             </tr>
             <tr>
               <td>
-                Opportunity to Speak at the<br>Opening/Closing Ceremony <span data-toggle="tooltip"
+                Opening Speaker <span data-toggle="tooltip"
                   title="Sponsors with this perk will get speaking time at the opening ceremony to discuss their company, their prize category, and anything else that they would like! Please keep in mind the designated time allotment for your tier when planning your presentation.">&#9432;</span>
               </td>
               <td></td>
@@ -642,7 +639,7 @@
         <table class="table" style="color: #fff">
           <thead>
             <tr>
-              <th class="text-center" colspan="3" style="border-bottom: 2px solid white;">
+              <th class="text-center" colspan="3" style="border-bottom: 2px solid #8e80ab;">
                 Add-Ons
               </th>
             </tr>
@@ -654,16 +651,14 @@
                 <span data-toggle="tooltip"
                   title="Sponsor a Technica bus which brings people from across the east coast. You have the option to have marketing materials distributed on the bus, and a “sponsored by” shoutout.">&#9432;</span>
                 <br>
-                <span style="color: #1f035a;">$3,000</span>
-                <!-- <span>$3,000</span> -->
+                <p class="addon-text">$3,000</p>
                 <br>
               <td style="width:33.33%;">
                 Technica Fellowship Workshop
                 <span data-toggle="tooltip"
                   title="This is a 60 minute workshop offered during our summer fellowship program, which seeks to democratize access to the tech industry via projects, workshops, and networking sessions over the summer. Sponsors can chat about whatever topic they'd like, but our fellows would love to hear about day-to-day life in the industry, about a specific sub-industry, or learn a particular technical skill!">&#9432;</span>
                 <br>
-                <span style="color: #1f035a;">$1,000</span>
-                <!-- <span>$1,000</span> -->
+                <p class="addon-text">$1,000</p>
                 <br>
               </td>
               </td>
@@ -696,12 +691,12 @@ const qaList = [
     answer: 'A hackathon is a technology-focused event where individuals and teams work on new projects in a short period of time. You can build anything you want. An app, a robot, a website. The only limit is your imagination! Technica is the world’s largest hackathon for underrepresented genders.'
   },
   {
-    question: 'Will Technica 2024 be in-person, online, or hybrid?',
-    answer: 'Technica 2024 will be hosted as a hybrid hackathon providing an in-person and virtual (online) experience for hackers to participate in. This means sponsors can choose a tier with in-person perks, like workshops and mentors, or go for our brand-new virtual tier where they can interact with hackers from a virtual booth!'
+    question: 'Will Technica 2025 be in-person, online, or hybrid?',
+    answer: 'Technica 2025 will be hosted as a hybrid hackathon providing an in-person and virtual (online) experience for hackers to participate in. This means sponsors can choose a tier with in-person perks, like workshops and mentors, or go for our brand-new virtual tier where they can interact with hackers from a virtual booth!'
   },
   {
     question: 'Can companies sponsor at a custom tier?',
-    answer: 'If needed, companies can request to sponsor at a custom tier with whatever perks they like. If interested, please contact <b>sponsorship@gotechnica.org</b>'
+    answer: 'If needed, companies can request to sponsor at a custom tier with whatever perks they like. If interested, please contact <a style="color:#F1ADCD" href="mailto:sponsorship@gotechnica.org">sponsorship@gotechnica.org</a>'
   },
   {
     question: 'What is the difference between “mentors” and “recruiters”?',
@@ -730,17 +725,21 @@ p {
 }
 
 h1 {
-  color: #ffce64;
+  color: #cadaea;
   text-align: center;
 }
 
 h4 {
-  color: #ffce64;
+  color: #cadaea;
   text-align: center;
 }
 
 h5 {
   color: $DARKWHITE;
+}
+
+.container {
+  margin-bottom: 5rem;
 }
 
 .stat-box {
@@ -853,7 +852,7 @@ p {
 
 .circle-container p {
   margin-top: 3%;
-  color: black;
+  color: white;
 }
 
 .stat-circle {
@@ -933,7 +932,7 @@ p {
 }
 
 .table-hover tbody tr:hover td {
-  color: #1f035a;
+  color: #cadaea;
 }
 
 .table-hover tbody tr:hover th {
@@ -941,25 +940,29 @@ p {
 }
 
 th {
-  --bs-table-hover-bg: rgba(222, 182, 42, 0.3);
+  --bs-table-hover-bg: #8e80ab;
 }
 
 td {
   border-top: none !important;
-  border-bottom: 1px solid #1f035a;
-  color: #1f035a;
+  border-bottom: 1px solid #8e80ab;
+  color: white;
 }
 
 th {
   border-top: none !important;
   padding-bottom: 5px !important;
   border-bottom: solid 1px #1f035a;
-  background-color: rgba(222, 182, 42, 0.3) !important;
+  background-color: #8e80ab !important;
   color: #1f035a;
 }
 
 .add-ons td {
-  border-bottom: 1px solid #1f035a;
+  border-bottom: 1px solid #8e80ab;
+}
+
+.addon-text {
+  color: #cadaea;
 }
 
 .contr-amt {
@@ -987,7 +990,11 @@ th {
 }
 
 .recruit {
-  background: $LIGHT_PURPLE;
+  background: #AF57E6;
+}
+
+.recruit-text {
+  color: #AF57E6;
 }
 
 .brand {

@@ -8,9 +8,9 @@
     <PixelButton
       text="Back To Top"
       textAlign="-1.25rem"
-      img="button_pink_normal.svg"
-      hover="button_pink_hover.svg"
-      click="button_pink_onclick.svg"
+      img="button_cream_normal.svg"
+      hover="button_cream_hover.svg"
+      click="button_cream_onclick.svg"
     />
     <!-- <div class="text">Back To Top</div> -->
     <img class="arrow" :src="'/buttons/expand-arrow.svg'" alt="arrow" />
@@ -41,11 +41,20 @@ function showButton() {
   var windowHeight = window.innerHeight;
   var scrollPosition =
     window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+  var footer = document.querySelector('#footer');
+  var footerTop = footer.getBoundingClientRect().top;
 
   if (scrollPosition > (pageHeight - windowHeight) / 6) {
     button.classList.add('show');
   } else {
     button.classList.remove('show');
+  }
+
+  if (footerTop < windowHeight) {
+    const newBottom = windowHeight - footerTop + 20;
+    button.style.bottom = `${newBottom}px`;
+  } else {
+    button.style.bottom = '1.5rem';
   }
 }
 </script>

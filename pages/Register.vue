@@ -14,9 +14,9 @@
       @submit="registerUser"
     >
       <!-- HACKER INFO -->
-      <Header>Hacker Info</Header>
+      <h1>Hacker Info</h1>
       <div class="row gx-5">
-        <div class="col-md-4 mb-4">
+        <div class="col-m d-4 mb-4">
           <div>
             <label class="form-label"> First Name* </label>
             <Field
@@ -238,7 +238,7 @@
       </div>
 
       <!-- EDUCATION -->
-      <Header> Education </Header>
+      <h1> Education </h1>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div class="mb-4">
@@ -314,7 +314,7 @@
       </div>
 
       <!-- LOCATION -->
-      <Header>Location</Header>
+      <h1>Location</h1>
       <p>
         Please enter the place you'll be departing from for Technica. For
         hackers in the U.S. only, select zip codes will be eligible to apply for
@@ -374,7 +374,7 @@
       </div>
 
       <!-- TRACKS -->
-      <Header>Tracks</Header>
+      <h1>Tracks</h1>
       <p class="description">
         Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
@@ -481,7 +481,7 @@
               >Which track do you wish to participate in?*</label
             >
             <p>
-              Please note: Most tracks are only available to in-person hackers!
+              Please note: Available tracks are based on previous response. Most tracks are only available to in-person hackers!
             </p>
             <div
               class="form-check"
@@ -553,7 +553,7 @@
       </div>
 
       <!-- EVENT INFO -->
-      <Header>Event Info</Header>
+      <h1>Event Info</h1>
 
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
@@ -727,7 +727,7 @@
       </div>
 
       <!-- RULES AND PRIVACY POLICY -->
-      <Header>Rules and Privacy Policies</Header>
+      <h1>Rules and Privacy Policies</h1>
 
       <div class="form-check mt-4">
         <Field
@@ -765,7 +765,9 @@
         <label class="form-check-label">
           I understand that the withdrawal or deletion of my data must be
           requested via the
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform?usp=dialog" target="_blank"
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform?usp=dialog"
+            target="_blank"
             >Data Rights Contact Form</a
           >.*
         </label>
@@ -789,8 +791,8 @@
       </div>
 
       <div class="disclaimer mt-4">
-        <p style="color: black">
-          We are currently in the process of partnering with MLH. The following
+        <p>
+          * We are currently in the process of partnering with MLH. The following
           3 checkboxes are for this partnership. If we do not end up partnering
           with MLH, your information will not be shared
         </p>
@@ -870,14 +872,15 @@
         class="btn mt-4"
         @click="submitTimes++"
       >
-        <PixelButton
+        <WebButton
           class="submit-btn"
           text="Submit"
-          img="purple-button-regular.svg"
-          hover="purple-button-regular.svg"
-          click="purple-visited.svg"
+          img="button_purple_normal.svg"
+          hover="button_purple_hover.svg"
+          click="button_purple_onclick.svg"
         />
       </button>
+
       <div class="error">
         <p v-if="submitTimes != 0">
           The page may take a second to redirect, if it doesn't, please make
@@ -1469,7 +1472,7 @@ const registerUser = async (values: Record<string, any>) => {
     } else if (response.error.value && response.error.value.statusCode == 500) {
       alert('status code 500');
     } else {
-      location.href = '/RegistrationConfirmation';
+      location.href = '/registrationconfirmation';
     }
   } catch (error: any) {
     alert(
@@ -1485,17 +1488,35 @@ function getFileUpload(e: any) {
 
 <style scoped lang="scss">
 a {
-  color: $DARKYELLOW;
+  color: #F1ADCD;
 }
 
-h1,
+h1 {
+  font-family: 'poppins';
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  white-space: nowrap;
+  padding: 1em 0;
+}
+
+h1:first-of-type{
+  margin-top: 1em;
+}
+
+
 H3 {
   color: $DARK_PURPLE;
+}
+
+.container {
+  margin-bottom: 5rem;
 }
 
 .disclaimer {
   padding: 2rem;
   padding-bottom: 0rem;
+  padding-left: 0rem;
 }
 
 .form-label {
@@ -1516,7 +1537,7 @@ H3 {
 }
 
 .form-check.mt-4 a {
-  color: $DARKPURPLE;
+  color: #aba0df;
 }
 
 .p-autocomplete {
@@ -1533,6 +1554,9 @@ ul {
 
 .submit-btn {
   width: 100%;
+  margin-left: -1rem;
+  margin-bottom: 5rem;
+  
 }
 
 .text-center {
