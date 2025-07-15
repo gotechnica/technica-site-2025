@@ -201,7 +201,7 @@ useHead({
 
 .whatToDo {
   width: 100%;
-  max-width: 1500px; /* or use 100vw for full width */
+  max-width: 1500px;
   margin: 0 auto;
 }
 

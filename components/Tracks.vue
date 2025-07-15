@@ -17,7 +17,7 @@
           <div v-if="!card.flipped" key="front" class="flip-card-front">
             <img class="card-img" :src="card.image" alt="Card Image" />
             <div :class="['card-body', card.title]">
-              <span class="flip-text">Learn More</span>
+              <span class="flip-text">Click the gates to learn more!</span>
               <img
                 class="flip-arrow"
                 src="/testimonials/flip.svg"
