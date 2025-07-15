@@ -2,7 +2,7 @@
   <title>Ambassadors</title>
   <div class="container">
     <!--<H1 class="title">Become an Ambassador</H1>-->
-    <div style="margin-top: 5rem;"></div>
+    <div style="margin-top: 5rem"></div>
     <Header>Ambassador Program</Header>
     <!-- <h3>Applications are now closed.</h3>
     <p>
@@ -42,21 +42,25 @@
       <div class="testimonials">
         <div class="carousel">
           <div class="carousel-cards">
-            <Carousel :initialCards="AmbassadorCards" :isShorten="false" ref="carouselRefAmb" />
+            <Carousel
+              :initialCards="AmbassadorCards"
+              :isShorten="false"
+              ref="carouselRefAmb"
+            />
           </div>
-          <div class="buttons">
+          <!-- <div class="buttons">
             <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
             <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
     <div class="container">
-      <Header v-if="width <= 768" class = faq>FAQ</Header>
-      <Header v-else class = faq>Frequently Asked Questions</Header>
+      <Header v-if="width <= 768" class="faq">FAQ</Header>
+      <Header v-else class="faq">Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
-    </div> 
+    </div>
     <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
@@ -74,7 +78,6 @@ function prev() {
 function next() {
   carouselRefAmb.value?.next();
 }
-
 
 import { useWindowSize } from '@vueuse/core';
 
@@ -126,7 +129,6 @@ const qaList = [
       out of it as much as you put in!",
   },
 ];
-
 </script>
 
 <style scoped lang="scss">
@@ -164,7 +166,7 @@ const qaList = [
     cursor: pointer;
     z-index: 2;
     position: relative;
-    pointer-events: auto; 
+    pointer-events: auto;
   }
 
   & .prev {
@@ -180,38 +182,35 @@ const qaList = [
   margin-top: 50px;
 }
 
-h3,
 h3 {
+  font-family: 'dinpro';
   text-align: center;
+  color: #cadaea;
   margin-bottom: 1rem;
-  color: #FFFFFF;
 }
 
 p {
   text-align: center;
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
 .list li {
   padding: 0.3rem 0px;
   margin-left: 2rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .row {
   margin: 2rem 0;
 }
+
 .col {
   margin: 1rem 0;
 }
-
-// .faq {
-//   // margin: auto;
-// }
 
 .button {
   width: 50%;
@@ -225,7 +224,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin: auto;
+  margin-bottom: 5rem;
 }
 
 .header {
@@ -238,16 +237,16 @@ a {
   display: inline-block;
 }
 
-.header img{
+.header img {
   width: 100%;
 }
 
-.header h1{
+.header h1 {
   position: absolute;
-  bottom:77%;
+  bottom: 77%;
   left: 50%;
   transform: translateX(-50%);
-  color:#653553;
+  color: #653553;
   margin: 0;
   padding: 0.5rem;
 }
@@ -269,7 +268,7 @@ a {
     bottom: 79%;
   }
 
-  .list li { 
+  .list li {
     margin-left: 0;
   }
 }
@@ -286,10 +285,22 @@ a {
     color: black;
   }
 
-  .list li { 
+  .list li {
     margin-left: 0;
   }
+
+  .carousel {
+    width: 95%;     
+    max-width: none; 
+  }
+
+  .buttons .prev,
+  .buttons .next {
+    margin-left: -5%;  
+    margin-right: -5%;
+  }
 }
+
 @media screen and (max-width: 572px) {
   .header img {
     width: 100%;
@@ -303,7 +314,7 @@ a {
     bottom: 80%;
   }
 
-  .list li { 
+  .list li {
     margin-left: 0;
   }
 }
@@ -320,9 +331,8 @@ a {
     bottom: 80.5%;
   }
 
-  .list li { 
+  .list li {
     margin-left: 0;
   }
 }
-
 </style>

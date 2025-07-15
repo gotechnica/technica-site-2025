@@ -1,30 +1,32 @@
 <template>
-
   <title>Mentors and Volunteers</title>
   <div class="container">
-
     <!-- HEADER BANNER -->
-    <div style="margin-top: 1rem;"></div>
+    <div style="margin-top: 1rem"></div>
     <Header>Mentors and Volunteers</Header>
 
     <!-- DESCRIPTION -->
-    <div style="margin-top: 2rem;"></div>
+    <div style="margin-top: 2rem"></div>
     <p>
-      Join us in running Technica and helping hackers during the event! 
-      Gain valuable experience while applying your skills for the world's 
-      largest hackathon for underrepresented genders. 
+      Join us in running Technica and helping hackers during the event! Gain
+      valuable experience while applying your skills for the world's largest
+      hackathon for underrepresented genders.
       <b>Must be 18+ to sign up.</b> People of all genders are welcome!
     </p>
 
     <!-- MENTOR AND VOLUNTEER INFO COLUMNS -->
     <div class="row">
-
       <!-- MENTORS COL -->
       <div class="col">
         <h3>Mentors</h3>
         <div class="button">
-          <VineButton text="Mentor" link="https://docs.google.com/forms/d/e/1FAIpQLSdTVezrN2UWKsXpJPDXKL7w4jA61BLbKvhYiUDdIhicpPWB_g/viewform?usp=dialog" img="button_cream_normal.svg"
-            hover="button_cream_hover.svg" click="button_cream_onclick.svg" />
+          <VineButton
+            text="Mentor"
+            link="https://docs.google.com/forms/d/e/1FAIpQLSdTVezrN2UWKsXpJPDXKL7w4jA61BLbKvhYiUDdIhicpPWB_g/viewform?usp=dialog"
+            img="button_cream_normal.svg"
+            hover="button_cream_hover.svg"
+            click="button_cream_onclick.svg"
+          />
         </div>
         <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
         <ul>
@@ -38,8 +40,13 @@
       <div class="col">
         <h3>Volunteers</h3>
         <div class="button">
-          <VineButton text="Volunteer" link="https://docs.google.com/forms/d/e/1FAIpQLScosx_QuVt11v3RfSqLVlhM54Bs-MNfl6UCjLzmInK5DY8JdA/viewform?usp=dialog" img="button_cream_normal.svg"
-            hover="button_cream_hover.svg" click="button_cream_onclick.svg" />
+          <VineButton
+            text="Volunteer"
+            link="https://docs.google.com/forms/d/e/1FAIpQLScosx_QuVt11v3RfSqLVlhM54Bs-MNfl6UCjLzmInK5DY8JdA/viewform?usp=dialog"
+            img="button_cream_normal.svg"
+            hover="button_cream_hover.svg"
+            click="button_cream_onclick.svg"
+          />
         </div>
         <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
         <ul>
@@ -48,28 +55,29 @@
           </li>
         </ul>
       </div>
-
     </div>
 
     <!-- FAQ SECTION -->
-    <div style="margin-top: 3rem;"></div>
-    <div class="container">
-      <Header v-if="width <= 768" class=faq>FAQ</Header>
-      <Header v-else class=faq>Frequently Asked Questions</Header>
+    <div style="margin-top: 3rem"></div>
+    <div>
+      <Header v-if="width <= 768" class="faq">FAQ</Header>
+      <Header v-else class="faq">Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
 
     <!-- GIVE OPS TROUBLE SECTION -->
-    <div style="margin-top: 3rem;"></div>
+    <div style="margin-top: 3rem"></div>
     <div class="contact">
-      <h3 style="color: #F0B54F;">Have Other Questions?</h3>
-      <p style="color: white;">
+      <h3>Have Other Questions?</h3>
+      <p style="color: white">
         Reach out to
-        <a href="mailto:operations@gotechnica.org">operations@gotechnica.org</a>
+        <a style="color: #f1adcd" href="mailto:operations@gotechnica.org"
+          >operations@gotechnica.org</a
+        >
         and we'll get back to you soon!
       </p>
     </div>
-    <div style="margin-bottom: 3rem;"></div>
+    <div style="margin-bottom: 3rem"></div>
     <!-- <StickyButton></StickyButton> -->
   </div>
   <StickyButton></StickyButton>
@@ -135,7 +143,6 @@ const qaList = [
       'After signing up, you will be contacted to provide additional information about your availability and receive other relevant information closer to Technica weekend. Please keep an eye on the inbox of the email you register with!',
   },
 ];
-
 </script>
 
 <!-- STYLE -->
@@ -145,15 +152,20 @@ p {
 }
 
 h3 {
+  font-family: 'dinpro';
   text-align: center;
-  color: #ffce64;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: #cadaea;
 }
 
 ul li {
   padding: 0.3rem 0px;
   margin-left: 2rem;
   color: white;
+}
+
+.container {
+  margin-bottom: 5rem;
 }
 </style>

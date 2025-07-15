@@ -60,7 +60,7 @@ a {
 }
 
 .image {
-  width: 87%;
+  width: 100%;
   opacity: 1;
   transition: opacity 0.5s linear;
 }
@@ -68,8 +68,6 @@ a {
 .hover-image,
 .click-image {
   position: absolute;
-  // top: 2%;
-  // left: -7%;
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s;
