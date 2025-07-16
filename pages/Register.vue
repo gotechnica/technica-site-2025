@@ -1479,6 +1479,7 @@ const registerUser = async (values: Record<string, any>) => {
       router.push({path: "RegistrationConfirmation"});
     }
   } catch (error: any) {
+    console.log(error)
     alert(
       'Sorry, there was an error with the submission. Please try again later. Catch'
     );
