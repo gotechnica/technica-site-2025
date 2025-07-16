@@ -1,4 +1,5 @@
 <template>
+  <Header><a href='register' style="color: #f1acdc">Registrations are now open!</a></Header>
   <div class="wrapper">
     <Header>About Technica</Header>
     <div class="row">
