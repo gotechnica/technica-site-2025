@@ -49,15 +49,15 @@ export function useUtils(){
             return 'prd'
         }
 
-        if (window.location.href === 'https://main.d2mxcgofoy6m8p.amplifyapp.com/register') {
+        if (window.location.href === 'https://main.d327wcdkrinotn.amplifyapp.com/register') {
             return 'prd'
         }
 
-        if (window.location.href === 'https://main.d2mxcgofoy6m8p.amplifyapp.com') {
+        if (window.location.href === 'https://main.d327wcdkrinotn.amplifyapp.com') {
             return 'prd'
         }
 
-        if (window.location.href === 'https://main.d2mxcgofoy6m8p.amplifyapp.com/register/') {
+        if (window.location.href === 'https://main.d327wcdkrinotn.amplifyapp.com/register/') {
             return 'prd'
         }
 
