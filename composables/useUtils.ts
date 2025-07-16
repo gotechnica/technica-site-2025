@@ -89,7 +89,7 @@ export function useUtils(){
             return 'dev'
         }
 
-        return 'dev'
+        return 'prd'
     }
 
     const getEnvVariable = (variableName: keyof Endpoint): (string | Dates) => {
