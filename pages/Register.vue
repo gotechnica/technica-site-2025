@@ -912,6 +912,7 @@ import { Value } from 'sass';
 import { Options } from 'tsparticles-engine';
 import { useRouter } from 'vue-router';
 const { performPostRequest, getEnvVariable } = useUtils();
+const router = useRouter();
 const isSending = ref(false); //form submitting
 const submitTimes = ref(0);
 
@@ -1474,7 +1475,6 @@ const registerUser = async (values: Record<string, any>) => {
       alert('status code 500');
     } else {
       // window.location.href = '/registrationconfirmation';
-      const router = useRouter();
       router.push({path: "/RegistrationConfirmation"});
     }
   } catch (error: any) {
