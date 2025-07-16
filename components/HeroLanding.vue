@@ -28,7 +28,7 @@
       <div class="buttons">
         <WebButton
           text="Register"
-          link="/register"
+          link="./register"
           img="button_blue_normal.svg"
           hover="button_blue_hover.svg"
           click="button_blue_onclick.svg"
