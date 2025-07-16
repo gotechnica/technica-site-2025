@@ -1456,8 +1456,6 @@ const registerUser = async (values: Record<string, any>) => {
   let referral = params.get('referral');
 
   fd.append('referral', referral as string);
-
-  const router = useRouter();
   
   try {
     const response = await performPostRequest(
@@ -1476,7 +1474,8 @@ const registerUser = async (values: Record<string, any>) => {
       alert('status code 500');
     } else {
       // window.location.href = '/registrationconfirmation';
-      router.push({path: "RegistrationConfirmation"});
+      const router = useRouter();
+      router.push({path: "/RegistrationConfirmation"});
     }
   } catch (error: any) {
     console.log(error)
