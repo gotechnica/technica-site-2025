@@ -1,8 +1,8 @@
 <template>
+  <div style="margin-top: 5rem;"></div>
   <div class="carousel-header">
     <div class="header-image-wrap">
       <Header>Hear from Past Hackers</Header>
-      <p>Click on each card to learn more about their projects!</p>
     </div>
   </div>
 
@@ -10,13 +10,11 @@
     :itemsToShow="3"
     :wrapAround="true"
     :transition="500"
-    v-model="currentSlide"
   >
     <Slide
       v-for="(slide, index) in slides"
       :key="slide.hackerName"
       class="carousel__item"
-      @click="currentSlide = index"
     >
       <TestimonyCard
         :hacker-image="slide.hackerImage"
@@ -32,6 +30,14 @@
     </Slide>
 
     <template #addons>
+      <Navigation>
+        <template #next>
+          <img class="arrowButtonRight" src="/public/testimonials/right-arrow.svg">
+        </template>
+        <template #prev>
+          <img class="arrowButtonLeft" src="/public/testimonials/left-arrow.svg">
+        </template>
+      </Navigation>
       <Pagination />
     </template>
   </Carousel>
@@ -46,10 +52,7 @@
 
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
-import { ref } from 'vue'
-
-const currentSlide = ref(0)
+import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
 
 
 const slides = [
@@ -128,6 +131,12 @@ const slides = [
       pointer-events: none;
       white-space: nowrap;
     }
+
+    p {
+      color: white;
+      font-weight: normal;
+      margin-bottom: 2%;
+    }
   }
 }
 
@@ -155,9 +164,21 @@ a:hover {
   margin-top: -1;
 }
 
+.carousel__viewport {
+  perspective: 0;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: 0.7s;
+}
+
 .carousel__pagination {
   padding: 0;
-  padding-bottom: 0.25rem;
+  padding-bottom: 2.5rem;
 }
 
 .carousel__slide {
@@ -167,16 +188,31 @@ a:hover {
   visibility: hidden;
 }
 
+.arrowButtonRight {
+  height: 4rem;
+  margin-right: 11vw;
+}
+
+.arrowButtonLeft {
+  height: 4rem;
+  margin-left: 11vw;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+}
+
 .carousel__slide--prev {
   opacity: 0.6;
   visibility: visible;
-  transform: translateX(4rem) scale(1.2);
+  transform: translateX(9rem) scale(1.5);
 }
 
 .carousel__slide--next {
   opacity: 0.6;
   visibility: visible;
-  transform: translateX(-4rem) scale(1.2);
+  transform: translateX(-9rem) scale(1.5);
 }
 
 .carousel__slide--active {
@@ -195,6 +231,15 @@ a:hover {
 }
 
 @media (max-width: 450px) {
+  .carousel-header .header-image-wrap {
+    p {
+      font-size: 1.2rem;
+      margin-bottom: -10%;
+      z-index: 3 !important;
+      position: relative;
+    }
+  }
+  
   .carousel-header .header-image-wrap img {
     width: 220px;
   }
@@ -205,6 +250,16 @@ a:hover {
 
   h3 {
     font-size: 1rem;
+  }
+
+  .arrowButtonRight {
+    height: 4rem;
+    margin-right: 5vw;
+  }
+
+  .arrowButtonLeft {
+    height: 4rem;
+    margin-left: 5vw;
   }
 }
 </style>
