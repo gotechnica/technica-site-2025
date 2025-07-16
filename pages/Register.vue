@@ -1476,7 +1476,7 @@ const registerUser = async (values: Record<string, any>) => {
       alert('status code 500');
     } else {
       // window.location.href = '/registrationconfirmation';
-      router.push('/registrationconfirmation');
+      location.href = '/RegistrationConfirmation'
     }
   } catch (error: any) {
     alert(
