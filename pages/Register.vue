@@ -1472,7 +1472,7 @@ const registerUser = async (values: Record<string, any>) => {
     } else if (response.error.value && response.error.value.statusCode == 500) {
       alert('status code 500');
     } else {
-      location.href = './registrationconfirmation';
+      location.href = '/RegistrationConfirmation';
     }
   } catch (error: any) {
     alert(
