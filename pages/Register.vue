@@ -910,6 +910,7 @@ import { allCountries } from 'country-region-data';
 import type { AutoCompleteCompleteEvent } from 'primevue/autocomplete';
 import { Value } from 'sass';
 import { Options } from 'tsparticles-engine';
+import { useRouter } from 'vue-router';
 const { performPostRequest, getEnvVariable } = useUtils();
 const isSending = ref(false); //form submitting
 const submitTimes = ref(0);
@@ -1456,6 +1457,8 @@ const registerUser = async (values: Record<string, any>) => {
 
   fd.append('referral', referral as string);
 
+  const router = useRouter();
+  
   try {
     const response = await performPostRequest(
       getEnvVariable('BACKEND_ENDPOINT') as string,
@@ -1472,7 +1475,8 @@ const registerUser = async (values: Record<string, any>) => {
     } else if (response.error.value && response.error.value.statusCode == 500) {
       alert('status code 500');
     } else {
-      window.location.href = '/registrationconfirmation';
+      // window.location.href = '/registrationconfirmation';
+      router.push('/registrationconfirmation');
     }
   } catch (error: any) {
     alert(
