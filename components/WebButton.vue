@@ -1,6 +1,6 @@
 <template>
-  <a
-    :href="link"
+  <NuxtLink
+    :to="link"
     class="image-container"
     @mouseover="isHover = true"
     @mouseleave="isHover = false"
@@ -19,7 +19,7 @@
       :style="{ opacity: isClick ? 1 : 0 }"
     />
     <span :style="{ color: textColor ? textColor : 'white', marginLeft: textAlign ? textAlign : '0rem'}">{{ text }}</span>
-  </a>
+</NuxtLink>
   
 </template>
 
