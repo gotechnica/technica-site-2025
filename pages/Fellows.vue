@@ -204,6 +204,14 @@
       <Header v-else class="faq">Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
+    <div class="contact">
+      <h3>Have Other Questions?</h3>
+      <p style="color: white">
+        Reach out to
+        <b><a style="color: #f1adcd" href="mailto:community@gotechnica.org">community@gotechnica.org</a></b>
+        and we'll get back to you soon!
+      </p>
+    </div>
 
     <StickyButton />
 
