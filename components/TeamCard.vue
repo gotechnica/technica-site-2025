@@ -147,7 +147,7 @@
   
     .left-column {
       width: 80%;
-      //margin-top: 22vw;
+      margin-top: 22vw;
     }
   
     .right-column {
@@ -184,7 +184,7 @@
     }
   
     .left-column {
-      //margin-top: 30vw;
+      margin-top: 30vw;
 
     }
   
@@ -225,7 +225,7 @@
   
   @media screen and (max-width: 365px) {
     .left-column {
-      //margin-top: 75vw;
+      margin-top: 75vw;
     }
   }
   

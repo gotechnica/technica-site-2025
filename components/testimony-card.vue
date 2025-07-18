@@ -1,17 +1,23 @@
 <template>
   <div class="card" :class="{ flipped: isFlipped, active: isActiveData}">
-    <div class="card-front" @click=flipCard>
+    <div class="card-front" @click="flipCard">
       <div class="left-column">
         <p>{{ testimonyDescription }}</p>
         <h3>{{ hackerName }}</h3>
         <h4>{{ hackerDesc }}</h4>
       </div>
-      <div class="ghost-frame-container">
-        <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
-        <img :src="hackerImage" alt="Headshot" class="headshot" />
+      <div class="right-column">
+        <div class="ghost-frame-container">
+          <img src="/public/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
+          <img :src="hackerImage" alt="Headshot" class="headshot" />
+        </div>
+        <div v-if="hasProject">
+          <button class="flip-button" @click="flipCard">Flip To Project</button>
+          <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
+        </div>
       </div>
     </div>
-    <div v-if="isActiveData" class="card-back" @click=flipCard>
+    <div v-if="isActiveData" class="card-back" @click="flipCard">
       <div class="left-column">
         <h3>{{ projectName }}</h3>
         <h4>{{ projectCategories }}</h4>
@@ -19,8 +25,12 @@
       </div>
       <div class="right-column">
         <div class="ghost-frame-container">
-          <img src="/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
+          <img src="/public/testimonials/speaker_frame_1.svg" alt="Ghost Frame" class="ghost-frame" />
           <img :src="projectImage" alt="Project" class="headshot" />
+        </div>
+        <div>
+          <button class="flip-button" @click="flipCard">Flip To Testimony</button>
+          <img class="flip-arrow" src="/testimonials/flip.svg" alt="flip arrow">
         </div>
       </div>
     </div>
@@ -32,15 +42,42 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    testimonyDescription: String,
-    hackerName: String,
-    hackerDesc: String,
-    projectName: String,
-    projectCategories: String,
-    projectDescription: String,
-    projectImage: String,
-    hackerImage: String,
-    hasProject: Boolean,
+    testimonyDescription: {
+      type: String,
+      required: true
+    },
+    hackerName: {
+      type: String,
+      required: true
+    },
+    hackerDesc: {
+      type: String,
+      required: true
+    },
+    hackerImage: {
+      type: String,
+      required: true
+    },
+    projectName: {
+      type: String,
+      required: false
+    },
+    projectCategories: {
+      type: String,
+      required: false
+    },
+    projectDescription: {
+      type: String,
+      required: false
+    },
+    projectImage: {
+      type: String,
+      required: false
+    },
+    hasProject: {
+      type: Boolean,
+      required: true
+    }
   },
   data() {
     return {
@@ -65,25 +102,28 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .card {
-  position: relative;
+  position: absolute;
   width: 50vw;
-  height: 38vw;
-  max-width: 700px;
-  max-height: 500px;
+  height: 39.6vw;
+  max-width: 710px;
+  max-height: 550px;
   perspective: 1000px;
-  border-radius: 1.5rem;
+  border-width: 0;
+  border-radius: 3rem;
+  background-color: transparent;
 }
 
 .card-front,
 .card-back {
   background-color: #1A132F;
   color: white;
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 3rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   transition: transform 0.6s ease-in-out;
   background-size: cover;
   background-repeat: no-repeat;
@@ -93,74 +133,99 @@ export default defineComponent({
   box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.1);
   backface-visibility: hidden;
   overflow-wrap: break-word;
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(150, 120, 255, 0.3),
+    0 0 60px rgba(100, 120, 255, 0.2);
 }
 
 .card-back {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .card.flipped .card-front {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .card.flipped .card-back {
-  transform: rotateY(360deg);
+  transform: rotateX(0);
 }
 
 .left-column {
   width: 60%;
+  flex: 1;
   text-align: left;
 }
 
 .right-column {
-  width: 35%;
+  width: 40%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-left: 2rem;
+}
+
+.image-container {
+  width: 100%;
+  padding-top: 100%; /* Maintain a square aspect ratio */
+  position: relative;
+  margin: 1rem;
+}
+
+.image-container img {
+  border: 0.3rem solid $MIDGREEN;
+  border-radius: 60%;  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
 }
 
 .ghost-frame-container {
+  width: 100%;
+  padding-top: 100%; /* Maintain a square aspect ratio */
   position: relative;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 1rem;
 }
 
 .ghost-frame {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -12%;
+  left: -12%;
+  width: 120%;
+  height: 120%;
   z-index: 1;
   object-fit: contain;
+  
 }
 
 .headshot {
   position: absolute;
-  top: 12%;         // aligns nicely inside the ghost
-  left: 12%;
-  width: 76%;       // slightly smaller to fit within new frame
-  height: 76%;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
-  z-index: 2;
+  z-index: 0;
 }
 
 h3 {
   font-family: 'Poppins';
-  font-weight: 700;
+  font-style: normal;
+  font-weight: 600;
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
 h4 {
   font-family: 'Poppins';
-  font-weight: 400;
-  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
   color: #ccc;
 }
 
@@ -170,58 +235,92 @@ p {
   word-wrap: break-word;
 }
 
-/* Mobile Responsiveness */
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
+button.flip-button {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border-width: 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1100px) {
   .card {
-    width: 95vw;
-    max-width: none;
-    margin: 0 auto;
-    margin-top: 0.5rem; /* Adjust margin above */
-    margin-bottom: 0.5rem; /* Add margin below */
-    height: auto;
-    overflow: hidden; /* Ensuring no overflow out of bounds */
+    width: 55vw;
+    height: 55vw;
+  }
+
+  button.flip-button {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 50vw;
+    height: 75vw;
   }
 
   .card-front,
   .card-back {
-    flex-direction: column;
+    background-color: #1A132F;
+    border-radius: 20px;
     padding: 1rem 1.2rem;
-    position: relative;
-    height: auto;
-    max-height: 60vh; /* Control max height of card */
-    overflow-y: auto; /* Enable scroll when content exceeds max height */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
   }
 
-  .left-column,
+  .left-column {
+    margin-top: 30vw;
+  }
+
   .right-column {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+    width: 50%;
+    position: absolute;
+    top: -60px;
+    margin-left: 0;
   }
 
-  .ghost-frame-container {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto;
-  }
 
+}
+
+@media screen and (max-width: 630px) {
+  .card {
+    width: 70vw;
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 445px) {
   p {
-    font-size: 0.95rem;
+    font-size: 80%;
   }
 
-  h3 {
-    font-size: 1.2rem;
+  .left-column {
+    width: 80%;
+    margin-top: 30vw;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .left-column {
+    margin-top: 30vw;
+    margin-left: -10vw;
+    margin-right: -10vw;
   }
 
-  h4 {
+  button.flip-button {
     font-size: 0.8rem;
   }
 }
 
-
+@media screen and (max-width: 330px) {
+  button.flip-button {
+    font-size: 0.7rem;
+  }
+}
 </style>
-
