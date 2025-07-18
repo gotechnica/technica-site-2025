@@ -80,9 +80,9 @@
                 </div>
               </div>
               <p class="footer-links">
-              <a href="/sponsor" target="_blank">
+              <NuxtLink to="/sponsor" target="_blank">
                   Sponsor
-              </a> |
+              </NuxtLink> |
               <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">
                   MLH Code of Conduct
               </a> |
