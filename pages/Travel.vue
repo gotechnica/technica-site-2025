@@ -129,8 +129,9 @@
     <div class="email-blurb section">
       <h3>Have Other Questions?</h3>
       <p class="contact-blurb">
-        Email us at
+        Reach out to
         <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b>
+        and we'll get back to you soon!
       </p>
     </div>
     <StickyButton></StickyButton>

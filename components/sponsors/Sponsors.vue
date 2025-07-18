@@ -30,22 +30,22 @@
     </div>
 
     <!-- Bronze Sponsors -->
-    <h4><b style="color: #8E80AB">Bronze</b></h4>
-    <div class="underline" style="background-color: #8E80AB"></div>
+    <h4><b style="color: #EFE4DC">Bronze</b></h4>
+    <div class="underline" style="background-color: #EFE4DC"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="bronzeSponsors" />
     </div>
 
     <!-- Starter Sponsors -->
-    <h4><b style="color: #8E80AB">Starter</b></h4>
-    <div class="underline" style="background-color: #8E80AB"></div>
+    <h4><b style="color: #CADAEA">Starter</b></h4>
+    <div class="underline" style="background-color: #CADAEA"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="starterSponsors" />
     </div>
 
     <!-- Custom Sponsors -->
-    <h4><b style="color: #8E80AB">Custom</b></h4>
-    <div class="underline" style="background-color: #8E80AB"></div>
+    <h4><b style="color: #F1ADCD">Custom</b></h4>
+    <div class="underline" style="background-color: #F1ADCD"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="customSponsors" />
     </div>
@@ -58,8 +58,8 @@
     </div>
 
     <!-- Special Thanks -->
-    <h4><b style="color: #8E80AB">Special Thanks</b></h4>
-    <div class="underline" style="background-color: #8E80AB"></div>
+    <h4><b style="color: #EFE4DC">Special Thanks</b></h4>
+    <div class="underline" style="background-color: #EFE4DC"></div>
     <div class="sponsor-tier">
       <SponsorsSponsorGrid :sponslist="specialThanks" />
     </div>
