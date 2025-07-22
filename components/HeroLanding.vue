@@ -16,10 +16,10 @@
 
       <div class="subtext">
         <h1 class="tagline outline">Bring Your Ideas to Life</h1>
-        <p class="basic-info outline">
+        <!-- <p class="basic-info outline">
           October 25 to October 26th at The Armory, UMD | Hybrid
           Environment
-        </p>
+        </p> -->
         <p class="outline">
           The world's largest hackathon for underrepresented genders
         </p>
@@ -33,6 +33,13 @@
           hover="button_blue_hover.svg"
           click="button_blue_onclick.svg"
         /> -->
+        <WebButton
+          text="Pre-register now!"
+          link="https://forms.gle/ue9gJfZThYRurVzg8"
+          img="button_blue_normal.svg"
+          hover="button_blue_hover.svg"
+          click="button_blue_onclick.svg"
+        />
         <WebButton
           text="Learn More"
           @click="TogglePopup"
