@@ -1,32 +1,37 @@
 <template>
   <div class="home">
-    <b-card class="mx-2 mb-5 instructions">
+    <div class="mx-2 mb-5 instructions">
       <p v-if="!checkedIn">Checking in... <br /></p>
       <h4>Status: {{ status }}</h4>
-    </b-card>
+    </div>
 
     <p v-if="readyToCheckin && error">{{ error }}</p>
 
-    <b-container>
-      <b-row class="mt-3">
-        <b-col xs="6" class="p-0 mx-2">
-          <b-button @click="goToScan" v-if="status === 'Check In Complete!'"
-            ><h3>Scan next hacker</h3></b-button
+    <div>
+      <div class="mt-3 row">
+        <div xs="6" class="p-0 mx-2 col">
+          <button @click="goToScan"  class = "btn" v-if="status === 'Check In Complete!'"
+            >Scan next hacker</button
           >
-          <b-button
-            @click="goToScan"
+          <button
+            @click="goToScan" class = "btn"
             v-if="status === 'This user has already checked in'"
-            ><h3>Scan next hacker</h3></b-button
+            >Scan next hacker</button
           >
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import general from "../mixins/general";
+import general from "./checkin/mixins/general";
 import '~/assets/styles/checkin.css';
+
+definePageMeta({
+  middleware: 'checkin',
+  layout: 'checkin'
+})
 
 export default {
   mixins: [general],
@@ -89,8 +94,19 @@ export default {
     },
   },
 };
+
 </script>
 
 <style src="~/assets/styles/checkin.css"></style>
 
-<style scoped></style>
+<style scoped>
+
+.instructions *{
+  color: white;
+}
+
+.btn{
+  font-size: 1.2rem;
+}
+
+</style>

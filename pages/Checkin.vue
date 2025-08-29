@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <b-card class="mx-2 mb-5 instructions"
+    <div class="mx-2 mb-5 instructions"
       ><p>
         Ask the hacker to look for a "Check-In Steps" email from
         <strong>tech@gotechnica.org</strong>.
@@ -8,13 +8,12 @@
         <br />
         The hacker might need to turn their phone's brightness up all the way
         for you to scan their code.
-      </p></b-card
-    >
+      </p></div>
 
     <div v-if="hideScanner" class="viewfinder-wrapper">
-      <b-button @click="hideScanner = false">
-        <h4>Scan Check-In QR Code</h4>
-      </b-button>
+      <button @click="hideScanner = false" class = "btn">
+        Scan Check-In QR Code
+      </button>
     </div>
     <div v-else class="viewfinder-wrapper">
       <div class="viewfinder">
@@ -27,6 +26,11 @@
 <script>
 import { QrcodeStream } from "vue-qrcode-reader";
 import '~/assets/styles/checkin.css';
+
+definePageMeta({
+  middleware: 'checkin',
+  layout: 'checkin'
+})
 
 export default {
   components: { QrcodeStream },
@@ -52,21 +56,23 @@ export default {
     },
   },
 };
+
 </script>
 
 <style src="~/assets/styles/checkin.css"></style>
 
 <style scoped>
-.viewfinder {
-  /* background-color: grey; */
-  width: 100%;
-  height: 100%;
+
+.instructions{
+  border: solid 2px white;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #1a1b27;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(150, 120, 255, 0.3), 0 0 60px rgba(100, 120, 255, 0.2);
 }
 
-.viewfinder-wrapper {
-  margin: auto;
-  text-align: center;
-  width: 75vw;
-  height: 75vw;
+.btn{
+  font-size: 1.2rem;
 }
+
 </style>

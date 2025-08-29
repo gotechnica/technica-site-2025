@@ -1,49 +1,54 @@
 <template>
   <div class="home">
 
-    <b-card class="mx-2 mb-5 instructions">
+    <div class="mx-2 mb-5 instructions">
       <p>
         These are the hacker's details. Make sure they're correct.
         <br>
         Make sure to ask the hacker for the following:
+      </p>
       <ul>
         <li>Photo ID</li>
         <li>Minor Waiver (if minor)</li>
         <li>Confirm Dietary Restricitons/Allergies</li>
         <li>Confirm Accomodations (keep track)</li>
       </ul>
-      </p>
-    </b-card>
-    <h2>{{status}}</h2>
+    </div>
+    <h2 class = "status">{{status}}</h2>
     <div v-if="dataLoaded" class="px-2">
 
-      <b-card no-body class="mx-2">
-        <b-table striped hover :items="getHackerDetails"></b-table>
-      </b-card>
+      <div no-body class="mx-2">
+        <table striped hover :items="getHackerDetails"></table>
+      </div>
 
       <!-- BACK/FORWARD BUTTONS -->
-      <b-container>
-        <b-row class="mt-3 mb-5">
-          <b-col xs="6" class="p-0 mx-2">
-            <b-button class="w-100" @click="goToScan">Re-scan QR code</b-button>
-          </b-col>
-          <b-col xs="6" class="p-0 mx-2">
-            <b-button class="w-100" @click="goToWrite">Hacker info is OK!</b-button>
-          </b-col>
-        </b-row>
-      </b-container>
+      <div class = "buttons">
+        <div class="mt-3 mb-5 row">
+          <div xs="6" class="p-0 mx-2 col">
+            <button class="w-100 btn" @click="goToScan">Re-scan QR code</button>
+          </div>
+          <div xs="6" class="p-0 mx-2 col">
+            <button class="w-100" @click="goToWrite">Hacker info is OK!</button>
+          </div>
+        </div>
+      </div>
 
     </div>
     <div v-else>
-      <b-button @click="goToScan">Re-scan QR code</b-button>
+      <button class="btn" @click="goToScan">Re-scan QR code</button>
     </div>
   </div>
 </template>
 
 <script>
-import general from '../mixins/general'
+import general from './checkin/mixins/general'
 import { useRoute } from 'vue-router';
 import '~/assets/styles/checkin.css';
+
+definePageMeta({
+  middleware: 'checkin',
+  layout: 'checkin'
+})
 
 export default {
   mixins: [general],
@@ -129,3 +134,25 @@ export default {
 </script>
 
 <style src="~/assets/styles/checkin.css"></style>
+
+<style scoped>
+
+.instructions{
+  border: solid 2px white;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #1a1b27;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(150, 120, 255, 0.3), 0 0 60px rgba(100, 120, 255, 0.2);
+}
+
+.instructions *{
+  margin-bottom: 10px;
+  color: white;
+}
+
+.status{
+  color: white;
+  margin-bottom: 2rem;
+}
+
+</style>
