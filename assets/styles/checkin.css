@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  font-display: swap;
+  src: local('DIN Pro'), url('./DINPro.woff2') format('woff2');
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"); /* Noto Sans */
+
+.instructions {
+  background-color: rgba(222, 210, 229, 0.5) !important;
+}
+
+.btn-secondary {
+  background-color: #b6a1c4 !important;
+  border-color: #82708F !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-position: center;
+  }
+}
+
+/* COLORS */
+:root {
+  --green: #b5d5b2;
+  --dark-green: #90aa8e;
+  --cyan: #00ffff;
+  --dirty-cyan: rgb(0, 200, 200);
+  --lavender: #b6a1c4;
+  --light-lavender: #ded2e5;
+  --dark-lavender: #8D7C98;
+  --darker-lavender: #82708F;
+  --rose: #ff7bac;
+  --white: #ffffff;
+  --black: #000000;
+  --asphalt-grey: #2d2d2d;
+  --charcoal-grey: #464343;
+  --dark-hero-blue:#087F8A;
+}
+
+body {
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "DIN Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header 1 */
+h1 {
+  font-size: 2.5em;
+  color: var(--black);
+}
+
+p {
+  color: var(--asphalt-grey);
+  font-size: 1.1rem;
+}
+
+a {
+  color: var(--dark-hero-blue);
+}
+
+a:hover {
+  color: var(--dark-hero-blue);
+}
+
+label {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
+  color: var(--charcoal-grey);
+}
+
+/* Body 2 */
+.body-2 {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+.main-card {
+  border-radius: 1rem;
+  margin-bottom: 5.5rem !important;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.125);
+}
+
+hr {
+  border-color: rgba(181, 213, 178, 0.75);
+}
+
+@media (min-width: 992px) {
+  .main-card {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (hover: none) {
+  label:hover { color: inherit; }
+}
+
+/* Google autocomplete styles */
+.pac-container {
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+}
