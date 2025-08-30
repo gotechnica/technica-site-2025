@@ -33,8 +33,11 @@ export default {
   methods: {
     async getToken() {
       const token = await this.performPostRequest(`tracking/login`, { password: this.loginCode });
+
+      console.log(token)
       if (token == "Enter") {
-        const tok = useCookie('token', {path: '/Checkin'})
+        console.log("login success")
+        const tok = useCookie('token', {path: '/'})
         tok.value = token;
 
         navigateTo('/Checkin')
@@ -49,7 +52,7 @@ export default {
 };
 
 definePageMeta({
-  layout: 'checkin'
+  layout: 'checkinlayout'
 })
 </script>
 <style src="~/assets/styles/checkin.css"></style>

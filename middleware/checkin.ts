@@ -6,6 +6,7 @@ export default defineNuxtRouteMiddleware((to) => {
 
   //redirect to login page if not logged in (token only exists after logging in)
   if (!token && to.name !== 'login') {
+    console.log("not logged in")
     return navigateTo('/login')
   }
 

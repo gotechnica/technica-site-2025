@@ -29,7 +29,7 @@ import '~/assets/styles/checkin.css';
 
 definePageMeta({
   middleware: 'checkin',
-  layout: 'checkin'
+  layout: 'checkinlayout'
 })
 
 export default {
