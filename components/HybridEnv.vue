@@ -25,7 +25,6 @@ const items = ref([
     image: '/hybrid/inperson-grave.svg',
     class: 'in-person',
     content: [
-      'Held at The Armory at UMD',
       'Receive swag (such as t-shirts, stickers, etc.)',
       'Visit sponsor booths face to face',
       'Live workshops',

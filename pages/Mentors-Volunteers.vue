@@ -111,11 +111,6 @@ const qaList = [
       'Volunteers assist with general tasks at the hackathon, such as directing check-in lines, while mentors provide technical support, such as guiding hackers with their code.',
   },
   {
-    question: 'Where and when is Technica?',
-    answer:
-      'Technica 2025 will take place on October 25-26 in The Reckord Armory at UMD and virtually through our online platform, Gather. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
-  },
-  {
     question:
       'I don’t identify as an underrepresented gender, can I still sign up?',
     answer: 'People of all genders are welcome to be a mentor or volunteer!',

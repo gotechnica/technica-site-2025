@@ -6,10 +6,6 @@
     <div class="travel-header section">
       <div class="process-blurb">
         <p>
-          Technica will be hosted at the Reckord Armory, College Park, MD, from
-          Saturday, October 25th to Sunday, October 26th.
-        </p>
-        <p>
           We will offer travel reimbursement for hackers on a first-come,
           first-serve basis.
         </p>

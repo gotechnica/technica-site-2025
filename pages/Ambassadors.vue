@@ -102,11 +102,6 @@ const qaList = [
       perks you'll receive!",
   },
   {
-    question: 'When is Technica 2025?',
-    answer:
-      'Technica 2024 will take place on October 25-26 this year at The Reckford Armory at UMD!',
-  },
-  {
     question:
       "I don't identify as an underrepresented gender, can I still apply?",
     answer:

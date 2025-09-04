@@ -103,7 +103,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2025 will take place on October 25-26 in The Armory at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
+      'Technica 2025 will take place both in person in College Park, Maryland and virtually via our platform. You choose how you want to join!',
   },
   {
     question: 'Who can attend Technica?',
@@ -142,7 +142,7 @@ const qaList = [
   {
     question: 'What do I need to register for Technica?',
     answer:
-      'Registration is open, all you need to do is fill out our registration form!',
+      'Registration is not open yet, so feel free to fill out our pre-registration form to be notified when it goes live!',
   },
   {
     question: 'Are there any COVID-19 policies?',
