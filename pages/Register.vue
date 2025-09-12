@@ -109,10 +109,6 @@
             </Field>
             <ErrorMessage :name="'gender'" class="invalid-feedback" />
           </div>
-          <p class="description">
-            Please note: Technica is intended for underrepresented genders in
-            tech!
-          </p>
           <div class="mt-1" v-if="values.gender?.includes('other')">
             <Field
               name="genderOther"

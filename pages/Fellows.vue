@@ -284,7 +284,7 @@ const qaList = [
   {
     question: 'Who should apply to the Fellowship?',
     answer:
-      'The fellowship is designed for rising college freshmen who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other underrepresented individuals in tech. <br><br>Fellows must identify as an underrepresented gender in tech: women, non-binary, genderqueer, and all others who are marginalized in tech.',
+      'The fellowship is designed for rising college freshmen who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other individuals in tech.',
   },
 
   // Updated Q&A
@@ -316,7 +316,6 @@ const qaList = [
 
 const items = [
   'Be a rising college freshman (starting college in Fall 2025)',
-  'Identify as an underrepresented gender in tech (e.g. women, nonbinary, gender-nonconforming)',
   'Be available for the full duration of the 8-week summer program',
   '(Preferred, but not required): Demonstrated interest in technology (e.g., school clubs, self-led projects, online courses), but no prior industry internship experience',
 ];

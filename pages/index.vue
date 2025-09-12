@@ -108,7 +108,7 @@ const qaList = [
   {
     question: 'Who can attend Technica?',
     answer:
-      'Anyone who identifies as a marginalized gender including, but not limited to, cisgender women, transgender women, transgender men, non-binary individuals, gender neutral individuals, genderqueer individuals, agender individuals, pangender individuals, or a gender who is otherwise underrepresented in tech may register as a hacker! All ages are welcome. Additionally, all participants must follow the MLH code of conduct and Technica code of conduct.',
+    'While this hackathon does celebrate underrepresented genders, people of all genders are welcome!',
   },
   {
     question: 'How much does it cost to attend Technica?',
