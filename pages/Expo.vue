@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { identifierToKeywordKind } from 'typescript';
+/* import { identifierToKeywordKind } from 'typescript';
 import ExpoTable from '../components/expo/ExpoTable.vue';
 import data from '../static/final.json';
 export default {
@@ -186,7 +186,7 @@ export default {
       return items;
     },
   },
-};
+}; */
 </script>
 
 <style lang="scss" scoped>
