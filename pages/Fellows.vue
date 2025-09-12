@@ -260,7 +260,7 @@ const qaList = [
   {
     question: 'What is Technica?',
     answer:
-      'Technica is the world’s largest hackathon for underrepresented genders, hosted annually by students at the University of Maryland.',
+      'Technica is the world’s largest hackathon celebrating underrepresented genders, hosted annually by students at the University of Maryland.',
   },
   {
     question: 'What is the Technica Fellowship Program?',

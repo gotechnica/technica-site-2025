@@ -741,7 +741,7 @@
         />
         <label class="form-check-label">
           <b
-            >I understand that Technica is intended for underrepresented genders
+            >I understand that Technica is intended for celebrating underrepresented genders
             in tech.</b
           >
           I further agree to the

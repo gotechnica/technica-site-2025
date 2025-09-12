@@ -23,7 +23,7 @@ export default {
 }
 // Constants we need throughout the site
 export const HACKATHON_NAME = 'Technica'
-export const HACKATHON_TAGLINE = 'The world\'s largest hackathon for underrepresented genders'
+export const HACKATHON_TAGLINE = 'The world\'s largest hackathon celebrating underrepresented genders'
 export const HACKATHON_DATE = 'October 26th-27th'
 export const HACKATHON_IN_PERSON_LOCATION = 'The Armory at UMD'
 export const HACKATHON_ONLINE_LOCATION = 'Virtual Platform'
