@@ -10,7 +10,7 @@
     <p>
       Join us in running Technica and helping hackers during the event! Gain
       valuable experience while applying your skills for the world's largest
-      hackathon for underrepresented genders.
+      hackathon celebrating underrepresented genders.
       <b>Must be 18+ to sign up.</b> People of all genders are welcome!
     </p>
 
