@@ -21,7 +21,7 @@
           Environment
         </p> -->
         <p class="outline">
-          The world's largest hackathon for celebrating underrepresented genders
+          The world's largest hackathon celebrating underrepresented genders
         </p>
       </div>
       <div id="dummy"></div>
