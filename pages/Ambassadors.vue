@@ -2,7 +2,7 @@
   <title>Ambassadors</title>
   <div class="container">
     <!--<H1 class="title">Become an Ambassador</H1>-->
-    <div style="margin-top: 5rem"></div>
+    <div style="margin-top: 1rem"></div>
     <Header>Ambassador Program</Header>
     <!-- <h3>Applications are now closed.</h3>
     <p>
