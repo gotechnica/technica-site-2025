@@ -65,7 +65,7 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/'},
-        // { dropdown: false, name: 'Register', path: './register'},
+        { dropdown: false, name: 'Register', path: './register'},
         // { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
         { dropdown: false, name: 'Travel', path: '/travel' },
         { dropdown: false, name: 'Tracks', path: '/tracks' },
