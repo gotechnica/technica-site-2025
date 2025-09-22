@@ -2,11 +2,890 @@
   <title>Register</title>
   <div id="form" class="container">
     <br /><br />
-    <Header>Technical Difficulties :(</Header>
-    <p style="text-align: center;">We're running into a few technical difficulties right now </p>
-    <p style="text-align: center;">In the meantime, please fill out the <b><NuxtLink to="https://docs.google.com/forms/d/e/1FAIpQLSdB600U6nHAGynJ4GJUMbAhAQo1MIeO129ka8xCzbBYTnGwPA/viewform">pre-registration</NuxtLink></b> form and we'll email you when registration is back up!</p>
-    <br><br>
+    <Header>Registration Form</Header>
+    <!-- <p style="text-align: center;">Registration is now closed! </p>
+    <p style="text-align: center;">There will be last minute check in on Saturday <b>after 11am</b> but it will be first come first serve. </p>
+    <p style="text-align: center;">We look forward to seeing you there! <b>#Wonder Awaits</b> at Technica!</p>
+    <br><br> -->
+
+    <Form
+      v-slot="{ values, errors }"
+      :validation-schema="validationSchema"
+      @submit="registerUser"
+    >
+      <!-- HACKER INFO -->
+      <h1>Hacker Info</h1>
+      <div class="row gx-5">
+        <div class="col-m d-4 mb-4">
+          <div>
+            <label class="form-label"> First Name* </label>
+            <Field
+              name="firstName"
+              type="text"
+              value=""
+              placeholder="First"
+              class="form-control"
+              :class="{ 'is-invalid': errors['firstName'] }"
+            />
+            <ErrorMessage :name="'firstName'" class="invalid-feedback" />
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div>
+            <label class="form-label"> Last Name* </label>
+            <Field
+              name="lastName"
+              type="text"
+              value=""
+              placeholder="Last"
+              class="form-control"
+              :class="{ 'is-invalid': errors['lastName'] }"
+            />
+            <ErrorMessage :name="'lastName'" class="invalid-feedback" />
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div>
+            <label class="form-label"> Phonetic Spelling* </label>
+            <Field
+              name="spelling"
+              type="text"
+              value=""
+              placeholder="tek-ni-ka"
+              class="form-control"
+              :class="{ 'is-invalid': errors['spelling'] }"
+            />
+            <ErrorMessage :name="'spelling'" class="invalid-feedback" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row gx-5">
+        <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label"> Email* </label>
+            <Field
+              name="email"
+              type="text"
+              value=""
+              placeholder="hello@gotechnica.org"
+              class="form-control"
+              :class="{ 'is-invalid': errors['email'] }"
+            />
+            <ErrorMessage :name="'email'" class="invalid-feedback" />
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label"> Phone Number* </label>
+            <Field
+              name="phone"
+              type="text"
+              value=""
+              placeholder="5552341230"
+              class="form-control"
+              :class="{ 'is-invalid': errors['phone'] }"
+            />
+            <ErrorMessage :name="'phone'" class="invalid-feedback" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row gx-5">
+        <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label">Gender Identity*</label>
+            <Field
+              name="gender"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['gender'] }"
+            >
+              <option v-for="option in genderOptions" :value="option.value">
+                {{ option.text }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'gender'" class="invalid-feedback" />
+          </div>
+          <div class="mt-1" v-if="values.gender?.includes('other')">
+            <Field
+              name="genderOther"
+              type="text"
+              value=""
+              placeholder="Other"
+              class="form-control"
+              :class="{ 'is-invalid': errors['genderOther'] }"
+            />
+            <ErrorMessage :name="'genderOther'" class="invalid-feedback" />
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label"> Pronouns </label>
+            <Field
+              name="pronouns"
+              type="text"
+              placeholder="she/they"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row gx-5">
+        <div class="col-md-6 mb-4">
+          <label class="form-label"> What race(s) do you identify as?* </label>
+          <div
+            class="form-check"
+            style="color: white"
+            v-for="option in raceOptions"
+          >
+            <Field
+              name="race"
+              :value="option.value"
+              type="checkbox"
+              class="form-check-input"
+              :id="option.value"
+              :class="{ 'is-invalid': errors['race'] }"
+              required
+            />
+
+            <label class="form-check-label" :for="option.value">
+              {{ option.text }}
+            </label>
+          </div>
+          <ErrorMessage :name="'race'" class="invalid-feedback" />
+          <div v-if="values.race?.includes('other')">
+            <Field
+              name="raceOther"
+              type="text"
+              value=""
+              placeholder="Other"
+              class="form-control"
+              :class="{ 'is-invalid': errors['raceOther'] }"
+            />
+            <ErrorMessage :name="'raceOther'" class="invalid-feedback" />
+          </div>
+
+          <div class="mt-4">
+            <label class="form-label"> LinkedIn </label>
+            <Field
+              name="linkedin"
+              type="text"
+              placeholder="linkedin.com/in/technica"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label">
+              What age will you be during Technica (November 15-16)?*
+            </label>
+            <Field
+              name="age"
+              type="text"
+              value=""
+              class="form-control"
+              :class="{ 'is-invalid': errors['age'] }"
+              required
+            />
+            <ErrorMessage :name="'age'" class="invalid-feedback" />
+          </div>
+          <p class="description">
+            <br />
+            If you will be a minor (under 18 years of age) at any point during
+            Technica, we will need your parent/guardian's email. We will email a
+            waiver to your parent/guardian in early October to sign. Minors
+            attending the event in-person will need to be accompanied by a
+            chaperone who must also be a registered hacker. A chaperone can
+            accompany up to ten minors.
+          </p>
+
+          <div class="mt-4" v-if="parseInt(values.age) < 18">
+            <label class="form-label"> Parent or Guardian Email* </label>
+            <Field
+              name="parentEmail"
+              type="text"
+              value=""
+              placeholder="hello@gotechnica.org"
+              class="form-control"
+              :class="{ 'is-invalid': errors['parentEmail'] }"
+            />
+            <ErrorMessage :name="'parentEmail'" class="invalid-feedback" />
+          </div>
+        </div>
+        <!-- <div class="col-md-6 mb-4">
+          <div>
+            <label class="form-label">Are you an Alumni?*</label>
+            <div class="form-check" v-for="option in alumni" :key="option.value">
+              <Field name="isAlumni" v-model="userInput.isAlumni" :value="option.value" type="radio" class="form-check-input"
+                :id="`first-technica-${option.value}`" :class="{ 'is-invalid': errors['isAlumni'] }" required />
+              <label class="form-check-label" :for="`first-technica-${option.value}`">
+                {{ option.text }}
+              </label>
+            </div>
+            <ErrorMessage :name="'isAlumni'" class="invalid-feedback" />
+          </div>
+        </div> -->
+      </div>
+
+      <!-- EDUCATION -->
+      <h1> Education </h1>
+      <div class="row gx-5">
+        <div class="col-md-4 mb-4">
+          <div class="mb-4">
+            <label class="form-label">Education Level*</label>
+            <Field
+              name="education"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['education'] }"
+              required
+              v-model="userInput.education"
+            >
+              <option v-for="option in educationOptions" :value="option">
+                {{ option }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'education'" class="invalid-feedback" />
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="mb-4">
+            <label class="form-label">School Name*</label>
+            <Field
+              name="school"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['school'] }"
+              required
+            >
+              <option v-for="school in schoolList" :value="school">
+                {{ school }}
+              </option>
+            </Field>
+
+            <div
+              v-if="
+                submitTimes > 0 &&
+                (values.school == null || values.school == '')
+              "
+            >
+              <ErrorMessage name="school" class="invalid-feedback" />
+            </div>
+            <div class="mt-1" v-if="values.school?.includes('Other')">
+              <Field
+                name="schoolOther"
+                type="text"
+                value=""
+                placeholder="Other"
+                class="form-control"
+                :class="{ 'is-invalid': errors['schoolOther'] }"
+              />
+              <ErrorMessage :name="'schoolOther'" class="invalid-feedback" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="mb-4">
+            <label class="form-label">Major*</label>
+            <Field
+              name="major"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['major'] }"
+              required
+            >
+              <option v-for="major in majorOptions" :value="major">
+                {{ major }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'major'" class="invalid-feedback" />
+          </div>
+        </div>
+      </div>
+
+      <!-- LOCATION -->
+      <h1>Location</h1>
+      <p>
+        Please enter the place you'll be departing from for Technica. For
+        hackers in the U.S. only, select zip codes will be eligible to apply for
+        travel assistance. Double check that you have entered your location
+        correctly! For more info about travel, visit our
+        <a href="/travel" target="_blank">travel page</a>.
+      </p>
+      <div class="mb-4">
+        <div class="row gx-5">
+          <div class="col-md-4">
+            <label class="form-label">Country*</label>
+            <Field
+              name="country"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['country'] }"
+              required
+            >
+              <option v-for="option in countryOptions" :value="option">
+                {{ option }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'country'" class="invalid-feedback" />
+          </div>
+          <div class="col-md-4" v-if="values.country">
+            <label class="form-label">Region*</label>
+            <Field
+              name="region"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['region'] }"
+              required
+            >
+              <option
+                v-for="option in getRegionOptions(values.country)"
+                :value="option"
+              >
+                {{ option }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'region'" class="invalid-feedback" />
+          </div>
+          <div class="col-md-4" v-if="values.country === 'United States'">
+            <label class="form-label">Zipcode*</label>
+            <Field
+              name="zipcode"
+              type="text"
+              value=""
+              placeholder=""
+              class="form-control"
+              :class="{ 'is-invalid': errors['zipcode'] }"
+              required
+            />
+            <ErrorMessage :name="'zipcode'" class="invalid-feedback" />
+          </div>
+        </div>
+      </div>
+
+      <!-- TRACKS -->
+      <h1>Tracks</h1>
+      <p class="description">
+        Tracks accommodate a hacker's interests and skill level and can provide
+        a more guided hackathon experience. Visit the
+        <a href="/Tracks" target="_blank">tracks page</a> for more information!
+        We provide recommendations for tracks you may be interested in, but you
+        may ultimately choose any that you'd like. Please note that some tracks
+        are for in-person attendance only, and may have limited slots.
+      </p>
+
+      <div class="row gx-5">
+        <div class="col-md-6 mb-4">
+          <div class="mb-4">
+            <label class="form-label"
+              >Will you be attending online or in person?*</label
+            >
+            <Field
+              as="select"
+              name="attendance"
+              id="attendance"
+              v-model="userInput.attendanceType"
+              class="form-select"
+              :class="{ 'is-invalid': errors['attendanceType'] }"
+              required
+            >
+              <option
+                v-for="option in attendanceOptions"
+                :key="option.value"
+                :value="option.value"
+              >
+                {{ option.text }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'attendance'" class="invalid-feedback" />
+          </div>
+
+          <div class="mb-4">
+            <div>
+              <label class="form-label">Is this your first hackathon?*</label>
+              <div
+                class="form-check"
+                v-for="option in firstHackathon"
+                :key="option.value"
+              >
+                <Field
+                  name="isFirstHackathon"
+                  v-model="userInput.isFirstHackathon"
+                  :value="option.value"
+                  type="radio"
+                  class="form-check-input"
+                  :id="`first-hackathon-${option.value}`"
+                  :class="{ 'is-invalid': errors['isFirstHackathon'] }"
+                  required
+                />
+                <label
+                  class="form-check-label"
+                  :for="`first-hackathon-${option.value}`"
+                >
+                  {{ option.text }}
+                </label>
+              </div>
+              <ErrorMessage
+                :name="'isFirstHackathon'"
+                class="invalid-feedback"
+              />
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div>
+              <label class="form-label"
+                >Is this your first time at Technica?*</label
+              >
+              <div
+                class="form-check"
+                v-for="option in firstTechnica"
+                :key="option.value"
+              >
+                <Field
+                  name="isFirstTechnica"
+                  v-model="userInput.isFirstTechnica"
+                  :value="option.value"
+                  type="radio"
+                  class="form-check-input"
+                  :id="`first-technica-${option.value}`"
+                  :class="{ 'is-invalid': errors['isFirstTechnica'] }"
+                  required
+                />
+                <label
+                  class="form-check-label"
+                  :for="`first-technica-${option.value}`"
+                >
+                  {{ option.text }}
+                </label>
+              </div>
+              <ErrorMessage
+                :name="'isFirstTechnica'"
+                class="invalid-feedback"
+              />
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label"
+              >Which track do you wish to participate in?*</label
+            >
+            <p>
+              Please note: Available tracks are based on previous response. Most tracks are only available to in-person hackers!
+            </p>
+            <div
+              class="form-check"
+              v-for="option in recommendedTracks"
+              :key="option.value"
+            >
+              <Field
+                name="track"
+                :value="option.value"
+                type="radio"
+                class="form-check-input"
+              />
+              <label class="form-check-label">{{ option.text }}</label>
+            </div>
+            <ErrorMessage :name="'track'" class="invalid-feedback" />
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="mb-4">
+            <label class="form-label"
+              >How many years of CS experience do you have?*</label
+            >
+            <Field
+              name="yearsExperience"
+              v-model="userInput.yearsExperience"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['yearsExperience'] }"
+              required
+            >
+              <option
+                v-for="option in experience"
+                :key="option"
+                :value="option"
+              >
+                {{ option }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'yearsExperience'" class="invalid-feedback" />
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label"
+              >What topics do you want to learn about?*</label
+            >
+            <div
+              class="form-check"
+              v-for="option in topicsOfInterest"
+              :key="option.value"
+            >
+              <Field
+                name="topics"
+                v-model="userInput.topicsOfInterest"
+                :value="option.value"
+                type="checkbox"
+                class="form-check-input"
+                :id="`topics-${option.value}`"
+                :class="{ 'is-invalid': errors['topics'] }"
+              />
+              <label class="form-check-label" :for="`topics-${option.value}`">
+                {{ option.text }}
+              </label>
+            </div>
+            <p></p>
+            <ErrorMessage :name="'topics'" class="invalid-feedback" />
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT INFO -->
+      <h1>Event Info</h1>
+
+      <div class="row gx-5">
+        <div class="col-md-6 mb-4">
+          <div class="mb-4">
+            <label class="form-label"
+              >Do you have any dietary restrictions?*</label
+            >
+            <div
+              class="form-check"
+              v-for="option in dietaryRestrictionsOptions"
+            >
+              <Field
+                name="dietaryRestrictions"
+                :value="option.value"
+                type="checkbox"
+                class="form-check-input"
+                :id="option.value"
+                :class="{ 'is-invalid': errors['dietaryRestrictions'] }"
+                required
+              />
+              <label class="form-check-label" :for="option.value">
+                {{ option.text }}
+              </label>
+            </div>
+            <ErrorMessage
+              :name="'dietaryRestrictions'"
+              class="invalid-feedback"
+            />
+
+            <div v-if="values.dietaryRestrictions?.includes('other')">
+              <Field
+                name="dietaryRestrictionsOther"
+                type="text"
+                value=""
+                placeholder="Other"
+                class="form-control"
+                :class="{ 'is-invalid': errors['dietaryRestrictionsOther'] }"
+              />
+              <ErrorMessage
+                :name="'dietaryRestrictionsOther'"
+                class="invalid-feedback"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label"
+              >Do you have any severe food allergies?*</label
+            >
+            <div class="form-check" v-for="option in foodAllergiesOptions">
+              <Field
+                name="foodAllergies"
+                :value="option.value"
+                type="radio"
+                class="form-check-input"
+                :id="`food-allergies-${option.value}`"
+                :class="{ 'is-invalid': errors['foodAllergies'] }"
+                required
+              />
+              <label class="form-check-label" :for="option.value">
+                {{ option.text }}
+              </label>
+            </div>
+            <ErrorMessage :name="'foodAllergies'" class="invalid-feedback" />
+            <div v-if="values.foodAllergies === 'Yes'">
+              <Field
+                name="foodAllergiesText"
+                type="text"
+                value=""
+                placeholder="Food allergies"
+                class="form-control"
+                :class="{ 'is-invalid': errors['foodAllergiesText'] }"
+              />
+              <ErrorMessage
+                :name="'foodAllergiesText'"
+                class="invalid-feedback"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <label class="form-label">How did you hear about us?*</label>
+          <div class="form-check" v-for="option in hearOptions">
+            <Field
+              name="hear"
+              :value="option.value"
+              type="checkbox"
+              class="form-check-input"
+              :id="option.value"
+              :class="{ 'is-invalid': errors['hear'] }"
+              required
+            />
+            <label class="form-check-label" :for="option.value">
+              {{ option.text }}
+            </label>
+          </div>
+          <ErrorMessage :name="'hear'" class="invalid-feedback" />
+
+          <div v-if="values.hear?.includes('other')">
+            <Field
+              name="hearOther"
+              type="text"
+              value=""
+              placeholder="Other"
+              class="form-control"
+              :class="{ 'is-invalid': errors['hearOther'] }"
+            />
+            <ErrorMessage :name="'hearOther'" class="invalid-feedback" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row gx-5">
+        <div class="col-md-6 mb-4">
+          <div class="mb-4">
+            <label class="form-label">T-Shirt Size*</label>
+            <Field
+              name="size"
+              as="select"
+              class="form-select"
+              :class="{ 'is-invalid': errors['size'] }"
+              required
+            >
+              <option v-for="option in sizeOptions" :value="option">
+                {{ option }}
+              </option>
+            </Field>
+            <ErrorMessage :name="'size'" class="invalid-feedback" />
+          </div>
+          <div>
+            <label for="resume" class="form-label">Upload Resume</label>
+            <Field name="resume">
+              <input
+                class="form-control"
+                type="file"
+                id="resume"
+                @change="getFileUpload"
+              />
+            </Field>
+            <p class="mt-3">
+              If you choose to share your resume with us, it will be shared with
+              our sponsors for opportunities. You may upload or update your
+              resume during the event.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <label class="form-label">Accommodations</label>
+          <div class="form-check" v-for="option in accommodationsOptions">
+            <Field
+              name="accommodations"
+              :value="option.value"
+              type="checkbox"
+              class="form-check-input"
+              :id="option.value"
+            />
+            <label class="form-check-label" :for="option.value">
+              {{ option.text }}
+            </label>
+          </div>
+          <p class="mt-3">
+            If you select other, please email
+            <a href="mailto:community@gotechnica.org"
+              >community@gotechnica.org</a
+            >
+            with your accommodation request.
+          </p>
+        </div>
+      </div>
+
+      <!-- RULES AND PRIVACY POLICY -->
+      <h1>Rules and Privacy Policies</h1>
+
+      <div class="form-check mt-4">
+        <Field
+          name="technicaValid"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`"
+          :class="{ 'is-invalid': errors['technicaValid'] }"
+          required
+        />
+        <label class="form-check-label">
+          <b
+            >I understand that Technica is intended for celebrating underrepresented genders
+            in tech.</b
+          >
+          I further agree to the
+          <a href="../2025TechnicaCoC.pdf" target="_blank"
+            >Technica Terms and Code of Conduct</a
+          >.*
+        </label>
+      </div>
+
+      <ErrorMessage :name="'technicaValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field
+          name="dataRights"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeDataRights.value"
+          :id="`agree-dataRights-${agreeDataRights.value}`"
+          :class="{ 'is-invalid': errors['dataRights'] }"
+        />
+        <label class="form-check-label">
+          I understand that the withdrawal or deletion of my data must be
+          requested via the
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform?usp=dialog"
+            target="_blank"
+            >Data Rights Contact Form</a
+          >.*
+        </label>
+      </div>
+
+      <ErrorMessage :name="'dataRights'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field
+          name="agreeNewsletter"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeNewsletter.value"
+          :id="`agree-newsletter-${agreeNewsletter.value}`"
+          :class="{ 'is-invalid': errors['agreeNewsletter'] }"
+        />
+
+        <label class="form-check-label">
+          I agree to opt into the monthly Technica newsletter.
+        </label>
+      </div>
+
+      <div class="disclaimer mt-4">
+        <p>
+          * We are currently in the process of partnering with MLH. The following
+          3 checkboxes are for this partnership. If we do not end up partnering
+          with MLH, your information will not be shared
+        </p>
+      </div>
+
+      <div class="form-check mt-4">
+        <Field
+          name="mlhValidCoC"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`"
+          :class="{ 'is-invalid': errors['mlhValidCoC'] }"
+          required
+        />
+        <label class="form-check-label">
+          I have read and agree to the
+          <a
+            href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+            target="_blank"
+            >MLH Code of Conduct</a
+          >.*
+        </label>
+      </div>
+      <ErrorMessage :name="'mlhValidCoC'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field
+          name="mlhValid"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeRules.value"
+          :id="`agree-rules-${agreeRules.value}`"
+          :class="{ 'is-invalid': errors['mlhValid'] }"
+          required
+        />
+        <label class="form-check-label">
+          I authorize you to share my application/registration information with
+          Major League Hacking for event administration, ranking, and MLH
+          administration in-line with the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a
+          >. I further agree to the terms of both the
+          <a
+            href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
+            target="_blank"
+            >MLH Contest Terms and Conditions</a
+          >
+          and the
+          <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a
+          >.*
+        </label>
+      </div>
+
+      <ErrorMessage :name="'mlhValid'" class="invalid-feedback ms-4" />
+
+      <div class="form-check mt-4">
+        <Field
+          name="mlhEmails"
+          type="checkbox"
+          class="form-check-input"
+          :value="agreeEmails.value"
+          :id="`agree-emails-${agreeEmails.value}`"
+          :class="{ 'is-invalid': errors['mlhEmails'] }"
+        />
+        <label class="form-check-label">
+          I authorize MLH to send me occasional emails about relevant events,
+          career opportunities, and community announcements.
+        </label>
+      </div>
+
+      <!-- {{ values }}
+      {{errors}} -->
+
+      <button
+        type="submit"
+        text="Submit"
+        class="btn mt-4"
+        @click="submitTimes++"
+      >
+        <WebButton
+          class="submit-btn"
+          text="Submit"
+          img="button_purple_normal.svg"
+          hover="button_purple_hover.svg"
+          click="button_purple_onclick.svg"
+        />
+      </button>
+
+      <div class="error">
+        <p v-if="submitTimes != 0">
+          The page may take a second to redirect, if it doesn't, please make
+          sure you've filled out all the required fields!
+        </p>
+      </div>
+    </Form>
   </div>
+  <StickyButton></StickyButton>
 </template>
 
 <script setup lang="ts">
