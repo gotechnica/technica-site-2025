@@ -183,7 +183,7 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">
-              What age will you be during Technica (November 15-26)?*
+              What age will you be during Technica (November 15-16)?*
             </label>
             <Field
               name="age"
