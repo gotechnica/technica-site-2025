@@ -183,7 +183,7 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">
-              What age will you be during Technica (October 25-26)?*
+              What age will you be during Technica (November 15-26)?*
             </label>
             <Field
               name="age"
@@ -1111,10 +1111,10 @@ const genderOptions = ref<Option[]>([
     text: 'Cisgender Woman (identifies and assigned at birth as female)',
     value: 'cis-woman',
   },
-  // {
-  //   text: 'Cisgender Man (identifies and assigned at birth as male)',
-  //   value: 'cis-man',
-  // },
+  {
+    text: 'Cisgender Man (identifies and assigned at birth as male)',
+    value: 'cis-man',
+  },
   { text: 'Transgender Woman', value: 'trans-woman' },
   { text: 'Transgender Man', value: 'trans-man' },
   { text: 'Non-binary', value: 'non-binary' },
