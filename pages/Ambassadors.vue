@@ -6,7 +6,7 @@
     <Header>Ambassador Program</Header>
     <!-- <h3>Applications are now closed.</h3>
     <p>
-      We are very excited to launch the seventh year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2025 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon for underrepresented genders!
+      We are very excited to launch the seventh year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2025 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon celebrating underrepresented genders!
     </p> -->
 
     <div class="row">

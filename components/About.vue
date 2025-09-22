@@ -4,14 +4,14 @@
     <div class="row">
       <div class="col-md-6 info-box">
         <p>
-          Technica is the world's largest hackathon for underrepresented genders 
+          Technica is the world's largest hackathon celebrating underrepresented genders 
           in tech. The hackathon is hosted annually at the University of Maryland, 
           and is a weekend jam-packed with swag, workshops, networking, and awesome projects!
 
         </p>
         <p>
           Last year we had over 800+ hackers participate (both in-person and online), 
-          comprised of underrepresented groups from many different backgrounds. We 
+          celebrating underrepresented groups from many different backgrounds. We 
           had 121 awesome projects submitted, many of which that tackle real-world 
           issues with unique solutions!
         </p>

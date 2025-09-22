@@ -10,7 +10,7 @@
     <p>
       Join us in running Technica and helping hackers during the event! Gain
       valuable experience while applying your skills for the world's largest
-      hackathon for underrepresented genders.
+      hackathon celebrating underrepresented genders.
       <b>Must be 18+ to sign up.</b> People of all genders are welcome!
     </p>
 
@@ -113,7 +113,7 @@ const qaList = [
   {
     question:
       'I don’t identify as an underrepresented gender, can I still sign up?',
-    answer: 'People of all genders are welcome to be a mentor or volunteer!',
+    answer: 'While this hackathon does celebrate underrepresented genders, people of all genders are welcome!',
   },
   {
     question: 'I’ve never been to Technica, can I still sign up?',
