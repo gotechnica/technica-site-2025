@@ -2,12 +2,11 @@
   <div class="wrapper">
     <Header>About Technica</Header>
     <div class="row">
-      <div class="col-md-6 info-box">
+      <div class="col-md-6 info-box"> 
         <p>
           Technica is the world's largest hackathon celebrating underrepresented genders 
-          in tech. The hackathon is hosted annually at the University of Maryland, 
+          in tech<b>*</b>. The hackathon is hosted annually at the University of Maryland, 
           and is a weekend jam-packed with swag, workshops, networking, and awesome projects!
-
         </p>
         <p>
           Last year we had over 800+ hackers participate (both in-person and online), 
@@ -28,6 +27,16 @@
           </iframe>
         </div>
       </div>
+    </div>
+    <div class = "row" style="margin-top: 2rem; color: white;">
+      <p>
+        <b>*</b> Technica is an event that is fully open to all, 
+        and Technica will have no segregation between certain groups or preferential treatment of any groups. 
+        For example, there will be no gender-specific grouping that excludes others; 
+        no preferences, quotas, or reserved spots based on gender; 
+        no special judging criteria favoring underrepresented groups; 
+        and no preferential treatment of certain groups, such as allocating more resources, swag or other benefits to certain groups.
+      </p>
     </div>
   </div>
 </template>

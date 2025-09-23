@@ -53,7 +53,7 @@
   <div v-if="isMobile" class="popup-mobile">
     <div id="popup" v-if="popupTriggers">
       <div id="popup-inner" class="mobile">
-        <h3>What is Bring Your Ideas to Life*?</h3>
+        <h3>What is Bring Your Ideas to Life?</h3>
         <p>
           We are thrilled to announce the theme for this fall's hackathon:
           <b>Bring Your Ideas to Life!</b>
@@ -64,7 +64,7 @@
   <div v-else>
     <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
       <div id="popup-inner">
-        <h3>What is Bring Your Ideas to Life*?</h3>
+        <h3>What is Bring Your Ideas to Life?</h3>
         <p>
           We are thrilled to announce the theme for this fall's hackathon:
           <b>Bring Your Ideas to Life!</b>
