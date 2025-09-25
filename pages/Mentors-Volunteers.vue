@@ -21,7 +21,7 @@
         <h3>Mentors</h3>
         <div class="button">
           <VineButton
-            text="Mentor"
+            text="Sign Up Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLSdTVezrN2UWKsXpJPDXKL7w4jA61BLbKvhYiUDdIhicpPWB_g/viewform?usp=dialog"
             img="button_cream_normal.svg"
             hover="button_cream_hover.svg"
@@ -41,7 +41,7 @@
         <h3>Volunteers</h3>
         <div class="button">
           <VineButton
-            text="Volunteer"
+            text="Sign Up Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLScosx_QuVt11v3RfSqLVlhM54Bs-MNfl6UCjLzmInK5DY8JdA/viewform?usp=dialog"
             img="button_cream_normal.svg"
             hover="button_cream_hover.svg"
