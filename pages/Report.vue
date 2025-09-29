@@ -1,5 +1,5 @@
 <template>
-    <meta http-equiv="Refresh" content="0; url=./2023AnnualReport.pdf" />
+    <meta http-equiv="Refresh" content="0; url=./2024AnnualReport.pdf" />
 
     <h1>Redirecting!!!</h1>
 </template>
