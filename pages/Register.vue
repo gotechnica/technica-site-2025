@@ -374,7 +374,7 @@
       <p class="description">
         Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
-        <a href="/Tracks" target="_blank">tracks page</a> for more information!
+        <a href="/tracks" target="_blank">tracks page</a> for more information!
         We provide recommendations for tracks you may be interested in, but you
         may ultimately choose any that you'd like. Please note that some tracks
         are for in-person attendance only, and may have limited slots.
