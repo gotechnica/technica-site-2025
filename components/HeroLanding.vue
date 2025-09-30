@@ -16,10 +16,10 @@
 
       <div class="subtext">
         <h1 class="tagline outline">Bring Your Ideas to Life</h1>
-        <!-- <p class="basic-info outline">
-          October 25 to October 26th at The Armory, UMD | Hybrid
+        <p class="basic-info outline">
+          November 15 to November 16 at The Marriott, College Park | Hybrid
           Environment
-        </p> -->
+        </p>
         <p class="outline">
           The world's largest hackathon celebrating underrepresented genders
         </p>
