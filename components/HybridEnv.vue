@@ -25,6 +25,7 @@ const items = ref([
     image: '/hybrid/inperson-grave.svg',
     class: 'in-person',
     content: [
+      'Hack at The Marriott, College Park',
       'Receive swag (such as t-shirts, stickers, etc.)',
       'Visit sponsor booths face to face',
       'Live workshops',

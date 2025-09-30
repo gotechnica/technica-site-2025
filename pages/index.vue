@@ -103,7 +103,7 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2025 will take place both in person in College Park, Maryland and virtually via our platform. You choose how you want to join!',
+      'Technica 2025 will take place from November 15th to November 16th in person at The Mariott College Park, and online via Gather. You can choose how you want to join',
   },
   {
     question: 'Who can attend Technica?',
