@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   plugins: ['~/plugins/useBootstrap.client.ts', '~/plugins/vue-gtag.client.ts'],
   runtimeConfig: {
     public: {
-      calendarID: 'c_a4b19c43518aa7f3bbed17c400a0cdd02b30ef07ee0bb451d2833daf931bc6df@group.calendar.google.com',
+      calendarID: 'c_37b7d271a1cb2de0b6a1e7e6db8d0573d7b6746786af5ec6d6c595b2da1651c9@group.calendar.google.com',
       googleApiKey: 'AIzaSyC5M08gJ1g5zur4te02Jf8ExM8-zO5EfT4',
     },
   },
