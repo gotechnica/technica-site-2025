@@ -1,5 +1,5 @@
 <template>
-  <title>Travel</title>
+  <title>Minors</title>
   <div class="container">
     <Header class="title">Minors Information</Header>
     <div class="section row">
@@ -56,7 +56,7 @@
       <h3>Have Other Questions?</h3>
       <p>
         Reach out to
-        <a style="color: #f1adcd" href="mailto:travel@gotechnica.org"
+        <a style="color: #f1adcd" href="mailto:operations@gotechnica.org"
           >operations@gotechnica.org</a
         >
         and we'll get back to you soon!
