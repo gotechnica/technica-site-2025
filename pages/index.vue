@@ -1,8 +1,7 @@
 <template>
   <!-- Modify page title in "useHead({ title: })" -->
-  <!-- <title>Technica Home</title> -->
   <div class="main-body" :style="{ backgroundColor: '#272341' }">
-    <!-- Hero's Section -->
+    <!-- Hero Section -->
     <HeroLanding />
 
     <div class="containers after">
@@ -57,10 +56,12 @@
       <KeynoteSpeakers />
     </div>
 
+    <!-- ✅ SPONSORS SECTION -->
     <div class="container">
-      <Sponsors />
+      <SponsorsSponsors />
     </div>
 
+    <!-- FAQ Section -->
     <div class="container">
       <Header v-if="width <= 768" class="faq">FAQ</Header>
       <Header v-else class="faq">Frequently Asked Questions</Header>
@@ -75,12 +76,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useWindowSize } from '@vueuse/core';
+import { computed } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 
-// Detect mobile layout based on screen width
-const { width } = useWindowSize();
-const isMobile = computed(() => width.value <= 768);
+// import sponsors section explicitly
+import SponsorsSponsors from '~/components/sponsors/Sponsors.vue'
+
+const { width } = useWindowSize()
+const isMobile = computed(() => width.value <= 768)
 
 const qaList = [
   {
@@ -133,8 +136,8 @@ const qaList = [
       'Some recommended items to bring are a computer, chargers, and a pair of headphones! Bring what you feel will help you stay comfortable during the course of the hackathon, this could be hygiene products, computer peripherals, or a blanket. A detailed list of items to bring can be found in our hacker guide, which will be released early October!',
   },
   {
-    question: 'What if I need any accomodations?',
-    answer: `If you have any accomodations you feel our organizers should be aware of or other questions or concerns, you can reach out to us at <a style="color:#4E23AA" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a>!`,
+    question: 'What if I need any accommodations?',
+    answer: `If you have any accommodations you feel our organizers should be aware of or other questions or concerns, you can reach out to us at <a style="color:#4E23AA" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a>!`,
   },
   {
     question: 'What do I need to register for Technica?',
@@ -151,44 +154,21 @@ const qaList = [
     answer:
       'We’d love to hear from you! Reach out to us at <a style="color:#4E23AA" href="mailto:hello@gotechnica.org">hello@gotechnica.org</a> and we’ll be in touch soon.',
   },
-];
+]
 
-// Google stuff + meta tags ~~ ! Update each year ! ~~
+// Meta tags + favicon
 useHead({
   title: 'Technica 2025',
   meta: [
-    {
-      name: 'description',
-      content: 'World’s largest hackathon for underrepresented genders',
-    },
-    {
-      property: 'og:title',
-      content: 'Technica 2025',
-    },
-    {
-      property: 'og:site_name',
-      content: 'Technica',
-    },
-    {
-      property: 'og:description',
-      content: 'World’s largest hackathon for underrepresented genders',
-    },
-    {
-      property: 'og:type',
-      content: 'website',
-    },
-    {
-      property: 'og:url',
-      content: 'https://gotechnica.org/',
-    },
+    { name: 'description', content: 'World’s largest hackathon for underrepresented genders' },
+    { property: 'og:title', content: 'Technica 2025' },
+    { property: 'og:site_name', content: 'Technica' },
+    { property: 'og:description', content: 'World’s largest hackathon for underrepresented genders' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://gotechnica.org/' },
   ],
-  link: [
-    {
-      rel: 'icon',
-      href: '/logos/favicon.ico',
-    },
-  ],
-});
+  link: [{ rel: 'icon', href: '/logos/favicon.ico' }],
+})
 </script>
 
 <style scoped lang="scss">
