@@ -56,9 +56,9 @@
     <div class="container">
       <KeynoteSpeakers />
     </div>
-
+    <!-- Sponsors Section -->
     <div class="container">
-      <Sponsors />
+      <SponsorsSponsors />
     </div>
 
     <div class="container">
@@ -78,6 +78,7 @@
 import { computed } from 'vue';
 import { useWindowSize } from '@vueuse/core';
 import { ref } from 'vue'
+import SponsorsSponsors from '~/components/sponsors/Sponsors.vue'
 
 const isHovered = ref(false)
 
