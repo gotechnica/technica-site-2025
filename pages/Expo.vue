@@ -4,7 +4,7 @@
     <Header>Expo</Header>
     <div style="margin-top: 5rem;"></div>
     <div class="container mx-auto">
-      <!--<div>
+      <div>
         <div>
           <p class="table-description">
             A schedule of all demo times and their corresponding locations will
@@ -21,7 +21,7 @@
         <Header>Frequently Asked Questions</Header>
         <div style="margin-top: 5rem;"></div>
         <FAQ class="faq-section" faqId="faq" :qaList="qaList" />
-      </div>-->
+      </div>
       <h1 class="title">Expo has ended! Thank you to all that participated!</h1>
     </div>
     <div>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-/* import { identifierToKeywordKind } from 'typescript';
+import { identifierToKeywordKind } from 'typescript';
 import ExpoTable from '../components/expo/ExpoTable.vue';
 import data from '../static/final.json';
 export default {
@@ -186,7 +186,7 @@ export default {
       return items;
     },
   },
-}; */
+}; 
 </script>
 
 <style lang="scss" scoped>
