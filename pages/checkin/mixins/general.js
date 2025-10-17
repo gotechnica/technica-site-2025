@@ -31,6 +31,7 @@ export default {
     },
     getEnvVariable(variableName) {
       if (Config.shared[variableName]) {
+        console.log(variableName)
         return Config.shared[variableName];
       }
       return Config[this.getCurrentEnvironment()][variableName];

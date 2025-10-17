@@ -69,16 +69,20 @@ export default {
     }
   },
   created() {
+    const route = useRoute();
+    const email = route.query.email;
+    const firstName = route.query.firstName;
+
     this.$watch(
-      () => this.$route.params,
+      () => route.query,
     async () => {
-      console.log(this.email, this.firstName)
+      console.log(email, firstName)
     const user = this.user = await this.performPostRequest("tracking/getreg", {
-      email: this.email,
-      firstName: this.firstName
+      email: email,
+      firstName: firstName
     })
 
-    if (this.user.Item == null) {
+    if (!user || !user.Item) {
       this.status = 'User not found'
       this.dataLoaded = false
     } else {
