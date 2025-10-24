@@ -4,189 +4,216 @@
     "Team": "Co-Execs",
     "Title": "Co-Executive Director",
     "Pronouns": "she/her",
-    "LinkedIn": "https://www.linkedin.com/in/jasmine-emeruwa/"
+    "LinkedIn": "https://www.linkedin.com/in/jasmine-emeruwa/",
+    "Image": "headshots/JasmineEmeruwa.jpg"
   },
   {
     "Name": "Serena Huang",
     "Team": "Co-Execs",
     "Title": "Co-Executive Director",
     "Pronouns": "she/her",
-    "LinkedIn": "https://www.linkedin.com/in/serenaqhuang/"
+    "LinkedIn": "https://www.linkedin.com/in/serenaqhuang/",
+    "Image": "/headshots/SerenaHuang.jpg"
   },
   {
     "Name": "Floricel Buencamino",
     "Team": "Directors",
     "Title": "Brand Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/FloricelBuencamino.jpg"
   },
   {
     "Name": "Joanne Lee",
     "Team": "Directors",
     "Title": "Design Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/JoanneLee.jpg"
   },
   {
     "Name": "Tracy Anne Tan",
     "Team": "Directors",
     "Title": "Design Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/TracyTan.jpg"
   },
   {
     "Name": "Breanna Pompey",
     "Team": "Directors",
     "Title": "Inclusive Communities Director",
     "Pronouns": "she/her, they/them",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/BreannaPompey.jpg"
   },
   {
     "Name": "Faith Comising",
     "Team": "Directors",
     "Title": "Inclusive Communities Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/FaithComising.jpg"
   },
   {
     "Name": "Victoria Anaele-Nwogu",
     "Team": "Directors",
     "Title": "Events Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/VictoriaAnaele.jpg"
   },
   {
     "Name": "Michelle Yu",
     "Team": "Directors",
     "Title": "Experience Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MichelleYu.jpg"
   },
   {
     "Name": "Helena Tesfaye",
     "Team": "Directors",
     "Title": "Experience Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/HelenaTesfaye.jpg"
   },
   {
     "Name": "Julie Lin",
     "Team": "Directors",
     "Title": "Operations Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/JulieLin.jpg"
   },
   {
     "Name": "Claire Chen",
     "Team": "Directors",
     "Title": "Operations Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ClaireChen.jpg"
   },
   {
     "Name": "Aditi Sethi",
     "Team": "Directors",
     "Title": "Outreach Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AditiSethi.jpg"
   },
   {
     "Name": "Madeline Moldrem",
     "Team": "Directors",
     "Title": "Sponsorship Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MadelineMoldrem.jpg"
   },
   {
     "Name": "Meenakshi Rama Subramanian",
     "Team": "Directors",
     "Title": "Sponsorship Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MeenakshiRamaSubramanian.jpg"
   },
   {
     "Name": "Valentina Hong",
     "Team": "Directors",
     "Title": "Tech Director",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ValentinaHong.jpg"
   },
   {
     "Name": "Brian Xie",
     "Team": "Directors",
     "Title": "Tech Director",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/BrianXie.jpg"
   },
   {
     "Name": "Sreya Kanchi",
     "Team": "Brand",
     "Title": "Brand Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ShreyaKanchi.jpg"
   },
   {
     "Name": "Habib Camara",
     "Team": "Brand",
     "Title": "Brand Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/HabibCamara.jpg"
   },
   {
     "Name": "Grace Yang",
     "Team": "Brand",
     "Title": "Brand Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/GraceYang.jpg"
   },
   {
     "Name": "Annie Nguyen",
     "Team": "Brand",
     "Title": "Brand Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnnieNguyen.jpg"
   },
   {
     "Name": "Trevor Kim",
     "Team": "Brand",
     "Title": "Brand Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/TrevorKim.jpg"
   },
   {
     "Name": "Zoey Tsai",
     "Team": "Brand",
     "Title": "Brand Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ZoeyTsai.jpg"
   },
   {
     "Name": "Purva Jani",
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/PurvaJani.jpg"
   },
   {
     "Name": "Alys Shah",
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AlysShah.jpg"
   },
   {
     "Name": "Mykha Floresca",
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/Mykha.jpg"
   },
   {
     "Name": "Kitty Shi",
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/KittyShi.jpg"
   },
   {
     "Name": "Uyen Nguyen",
@@ -200,133 +227,153 @@
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/DishaRamesh.jpg"
   },
   {
     "Name": "Arielle Bruce",
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ArielleBruce.jpg"
   },
   {
     "Name": "Alyssa Yen",
     "Team": "Design",
     "Title": "Design Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AlyssaYen.jpg"
   },
   {
     "Name": "Maya Chelar",
     "Team": "Events",
     "Title": "Events Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MayaChelar.jpg"
   },
   {
     "Name": "Avanti Athavale",
     "Team": "Events",
     "Title": "Events Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AvantiAthavale.jpg"
   },
   {
     "Name": "Sifene Fufa",
     "Team": "Events",
     "Title": "Events Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/Sifene.jpg"
   },
   {
     "Name": "Sofia Santiago",
     "Team": "Events",
     "Title": "Events Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SofiaSantiago.jpg"
   },
   {
     "Name": "Neha Joshi",
     "Team": "Events",
     "Title": "Events Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/NehaJoshi.jpg"
   },
   {
     "Name": "Laasya Madduri",
     "Team": "Events",
     "Title": "Events Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/LaasyaMadduri.jpg"
   },
   {
     "Name": "Beatrice Chung",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/BeatriceChung.jpg"
   },
   {
     "Name": "Dorothy Dang",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/DorothyDang.jpg"
   },
   {
     "Name": "Anoushka Arora",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnoushkaArora.jpg"
+
   },
   {
     "Name": "Bhavika Buddi",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/BhavikaBuddi.jpg"
   },
   {
     "Name": "Anannya Trehan",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnannyaTrehan.jpg"
   },
   {
     "Name": "Sharvari Tirodkar",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SharvariTirodkar.jpg"
   },
   {
     "Name": "Kyle Kuo",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/Kyle.jpg"
   },
   {
     "Name": "Sheila Li",
     "Team": "Experience",
     "Title": "Experience Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SheilaLi.jpg"
   },
   {
     "Name": "Savya Miriyala",
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SavyaMiriyala.jpg"
   },
   {
     "Name": "Keya Pawar",
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/KeyaPawar.jpg"
   },
   {
     "Name": "Michelle Akem",
@@ -340,244 +387,279 @@
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/IreneLee.jpg"
   },
   {
     "Name": "Melat Abera",
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MelatAbera.jpg"
   },
   {
     "Name": "Anagha Bhuvanagiri",
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnaghaBhuvanagiri.jpg"
   },
   {
     "Name": "Jordan Namie",
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/JordanNamie.jpg"
   },
   {
     "Name": "Sonaya Dhuria",
     "Team": "Inclusive Communities",
     "Title": "Inclusive Communities Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SonayaDhuria.jpg"
   },
   {
     "Name": "Safiyah Fatima",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SafiyahFatima.jpg"
   },
   {
     "Name": "Maggie McAndrew",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MaggieMcAndrew.jpg"
   },
   {
     "Name": "Ananya Malipeddi",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnanyaMalipeddi.jpg"
   },
   {
     "Name": "Tiffany Liu",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/TiffanyLiu.jpg"
   },
   {
     "Name": "Alison Wang",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AlisonWang.jpg"
   },
   {
     "Name": "Daanial Haris",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/DaanialHaris.jpg"
   },
   {
     "Name": "Luke Tan",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/LukeTan.jpg"
   },
   {
     "Name": "Naomi Kaul",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/NaomiKaul.jpg"
   },
   {
     "Name": "Anshu Chandrasekhar",
     "Team": "Operations",
     "Title": "Operations Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnshuChandrasekhar.jpg"
   },
   {
     "Name": "Samiha Naser",
     "Team": "Outreach",
     "Title": "Outreach Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SamihaNaser.jpg"
   },
   {
     "Name": "Keerthana Narabetla",
     "Team": "Outreach",
     "Title": "Outreach Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/Keerthana.jpg"
   },
   {
     "Name": "Sarah King",
     "Team": "Outreach",
     "Title": "Outreach Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SarahKing.jpg"
   },
   {
     "Name": "Divya Lingala",
     "Team": "Outreach",
     "Title": "Outreach Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/DivyaLingala.jpg"
   },
   {
     "Name": "Elizabeth Chung",
     "Team": "Outreach",
     "Title": "Outreach Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/EllieChung.jpg"
   },
   {
     "Name": "Kaavya Radhakrishnan",
     "Team": "Outreach",
     "Title": "Outreach Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/KaavyaRadhakrishnan.jpg"
   },
   {
     "Name": "Rhea Chandragiri",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/RheaChandragiri.jpg"
   },
   {
     "Name": "Anjali Samavedam",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnjaliSamavedam.jpg"
   },
   {
     "Name": "Srinidhi Gubba",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SrinidhiGubba.jpg"
   },
   {
     "Name": "Shree Dave",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ShreeDave.jpg"
   },
   {
     "Name": "Harleen Green",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/HarleenGreen.jpg"
   },
   {
     "Name": "Juhi Chitkara",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/JuhiChitkara.jpg"
   },
   {
     "Name": "Aabha Belsare",
     "Team": "Sponsorship",
     "Title": "Sponsorship Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AabhaBelsare.jpg"
   },
   {
     "Name": "Sophie Tsai",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/SophieTsai.jpg"
   },
   {
     "Name": "Tarun Kommuri",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/TarunKommuri.jpg"
   },
   {
     "Name": "Annika Wong",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AnnikaWong.jpg"
   },
   {
     "Name": "Alexa Chu",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/AlexaChu.jpg"
   },
   {
     "Name": "Rachel Kim",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/RachelKim.jpg"
   },
   {
     "Name": "Meron Abera",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/MeronAbera.jpg"
   },
   {
     "Name": "Chaitra Bhumula",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "she/her",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/ChaitraBhumula.jpg"
   },
   {
     "Name": "Edward Choi",
     "Team": "Tech",
     "Title": "Tech Organizer",
     "Pronouns": "he/him",
-    "LinkedIn": ""
+    "LinkedIn": "",
+    "Image": "/headshots/EdwardChoi.jpg"
   }
 ]
