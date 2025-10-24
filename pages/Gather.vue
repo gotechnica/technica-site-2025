@@ -1,7 +1,8 @@
 <template>
-    <title> Gather Guide 2025</title>
+    <title>Gather Guide 2025</title>
+    <div style="margin-top: 1rem"></div>
+    <Header>Gather Guide 2025</Header>
     <div class="container">
-      <Header>Gather Guide 2025</Header>
         <p>
           You can access Gather <a href = https://app.gather.town/app/GJJUtNlOaOKtSymR/Technica%202025>here</a>!
         </p>
@@ -147,6 +148,7 @@
           </p>
         </div>
    </div>
+   <div style="margin-bottom: 3rem"></div>
 </template>
 
 <script>
