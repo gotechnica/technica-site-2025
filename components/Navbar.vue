@@ -84,7 +84,7 @@ export default {
           ]
         },
 
-        { dropdown: false, name: 'Check In', path:'/checkin'},
+        // { dropdown: false, name: 'Check In', path:'/checkin'},
 ]
 
     }
