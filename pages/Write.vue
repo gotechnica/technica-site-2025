@@ -50,12 +50,17 @@ export default {
       error: null,
       readyToCheckin: false,
       checkedIn: false,
+      email: null,
+      firstName: null,
     };
   },
   beforeRouteEnter(to, from, next) {
     next(async (vm) => {
+      vm.email = to.query.email;
+      vm.firstName = to.query.firstName;
+
       const user = (vm.user = await vm.performPostRequest("tracking/getreg", {
-        email: vm.email,
+        email:  vm.email,
         firstName: vm.firstName
       }));
       vm.tryScan();
@@ -65,6 +70,7 @@ export default {
   methods: {
     async tryScan() {
       try {
+        console.log("Scan " + this.email + " " + this.firstName)
         const res = await this.performPostRequest(
           "tracking/status",
           {
@@ -90,7 +96,7 @@ export default {
       this.status = "Ready to write to DB";
       this.error = null;
       this.readyToCheckin = false;
-      this.$router.push({ path: "/" });
+      this.$router.push({ path: "/checkin" });
     },
   },
 };

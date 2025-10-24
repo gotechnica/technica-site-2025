@@ -17,14 +17,14 @@
     </div>
     <div v-else class="viewfinder-wrapper">
       <div class="viewfinder">
-        <qrcode-stream :key="qkey" @decode="onDecode" />
+        <qrcode-stream :key="qkey" @decode="onDecode" @init = "onInit"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { QrcodeStream } from "vue-qrcode-reader";
+import { QrcodeStream } from "vue3-qrcode-reader";
 import '~/assets/styles/checkin.css';
 
 definePageMeta({
@@ -51,10 +51,20 @@ export default {
       this.hideScanner = true;
 
       let decodedInfo = decodedString.split(",");
-      this.$router.push({ path: "view", query: {email: decodedInfo[0], firstName: decodedInfo[1]} });
+      this.$router.push({ path: "viewHacker", query: {email: decodedInfo[0], firstName: decodedInfo[1]} });
       console.log(decodedInfo);
     },
+
+    onInit(prom){
+      prom.then(() => {
+        console.log("camera perms granted")
+      })
+      .catch(error => {
+        console.log("camera failed:", error)
+      })
+    }
   },
+  
 };
 
 </script>
