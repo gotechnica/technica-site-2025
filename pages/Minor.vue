@@ -1,7 +1,8 @@
 <template>
   <title>Minors</title>
+  <div style="margin-top: 1rem"></div>
+  <Header>Minors Information</Header>
   <div class="container">
-    <Header class="title">Minors Information</Header>
     <div class="section row">
       <div class="col-md-7 text-block">
         <p>
@@ -56,9 +57,9 @@
       <h3>Have Other Questions?</h3>
       <p>
         Reach out to
-        <a style="color: #f1adcd" href="mailto:operations@gotechnica.org"
+        <b><a style="color: #f1adcd" href="mailto:operations@gotechnica.org"
           >operations@gotechnica.org</a
-        >
+        ></b>
         and we'll get back to you soon!
       </p>
     </div>
@@ -121,10 +122,6 @@ const qaList = [
 
 template {
   background-color: $CREAM;
-}
-
-.title {
-  margin-top: 5%;
 }
 
 .text-block h3 {
