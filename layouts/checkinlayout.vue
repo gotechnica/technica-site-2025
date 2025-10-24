@@ -13,5 +13,6 @@ import CheckInNavbar from '../components/checkin/CheckInNavbar.vue'
 <style scoped>
 #checkin{
     max-width: 100vw;
+    height: 100vh;
 }
 </style>
