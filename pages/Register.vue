@@ -109,10 +109,6 @@
             </Field>
             <ErrorMessage :name="'gender'" class="invalid-feedback" />
           </div>
-          <p class="description">
-            Please note: Technica is intended for underrepresented genders in
-            tech!
-          </p>
           <div class="mt-1" v-if="values.gender?.includes('other')">
             <Field
               name="genderOther"
@@ -187,7 +183,7 @@
         <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">
-              What age will you be during Technica (October 25-26)?*
+              What age will you be during Technica (November 15-16)?*
             </label>
             <Field
               name="age"
@@ -378,7 +374,7 @@
       <p class="description">
         Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
-        <a href="/Tracks" target="_blank">tracks page</a> for more information!
+        <a href="/tracks" target="_blank">tracks page</a> for more information!
         We provide recommendations for tracks you may be interested in, but you
         may ultimately choose any that you'd like. Please note that some tracks
         are for in-person attendance only, and may have limited slots.
@@ -741,7 +737,7 @@
         />
         <label class="form-check-label">
           <b
-            >I understand that Technica is intended for underrepresented genders
+            >I understand that Technica is intended for celebrating underrepresented genders
             in tech.</b
           >
           I further agree to the
@@ -1115,10 +1111,10 @@ const genderOptions = ref<Option[]>([
     text: 'Cisgender Woman (identifies and assigned at birth as female)',
     value: 'cis-woman',
   },
-  // {
-  //   text: 'Cisgender Man (identifies and assigned at birth as male)',
-  //   value: 'cis-man',
-  // },
+  {
+    text: 'Cisgender Man (identifies and assigned at birth as male)',
+    value: 'cis-man',
+  },
   { text: 'Transgender Woman', value: 'trans-woman' },
   { text: 'Transgender Man', value: 'trans-man' },
   { text: 'Non-binary', value: 'non-binary' },

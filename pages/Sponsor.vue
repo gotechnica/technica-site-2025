@@ -13,7 +13,7 @@
         Hello, Potential Sponsors!
       </h4>
       <br>
-      <p>Thank you for your interest in Technica, the world's largest hackathon for underrepresented genders! This fall,
+      <p>Thank you for your interest in Technica, the world's largest hackathon celebrating underrepresented genders! This fall,
         students from all over the globe will come to participate and celebrate our <b>eleventh year</b> active! Last year,
         we were happy to welcome over 800 participants from several countries, both at the in-person event and virtually
         through Gather.</p>
@@ -30,8 +30,7 @@
       <br>
       <p>Technica stands at the forefront of technology. We are a home for forward thinkers and innovative go-getters to
         collaborate and create something new! We are committed to providing a welcoming, fun, and creative environment
-        to foster support amongst underrepresented genders in tech culture, from beginners to the most experienced
-        hackers.</p>
+        to celebrate underrepresented genders in tech culture.</p>
       <br>
       <p>Listed below are our available sponsorship tiers. Please contact us if you are interested in becoming a part of
         Technica, or if you have any questions or concerns about the information below. Additionally, we are happy to
@@ -688,7 +687,7 @@ const { width } = useWindowSize();
 const qaList = [
   {
     question: 'What is a “hackathon”?',
-    answer: 'A hackathon is a technology-focused event where individuals and teams work on new projects in a short period of time. You can build anything you want. An app, a robot, a website. The only limit is your imagination! Technica is the world’s largest hackathon for underrepresented genders.'
+    answer: 'A hackathon is a technology-focused event where individuals and teams work on new projects in a short period of time. You can build anything you want. An app, a robot, a website. The only limit is your imagination! Technica is the world’s largest hackathon celebrating underrepresented genders.'
   },
   {
     question: 'Will Technica 2025 be in-person, online, or hybrid?',

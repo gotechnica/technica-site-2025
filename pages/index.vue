@@ -56,9 +56,9 @@
     <div class="container">
       <KeynoteSpeakers />
     </div>
-
+    <!-- Sponsors Section -->
     <div class="container">
-      <Sponsors />
+      <SponsorsSponsors />
     </div>
 
     <div class="container">
@@ -78,6 +78,7 @@
 import { computed } from 'vue';
 import { useWindowSize } from '@vueuse/core';
 import { ref } from 'vue'
+import SponsorsSponsors from '~/components/sponsors/Sponsors.vue'
 
 const isHovered = ref(false)
 
@@ -92,8 +93,8 @@ const qaList = [
       'A hackathon is a technology-focused event where individuals and teams work on new projects in a short period of time. You can build anything you want. An app, a robot, a website. The only limit is your imagination!',
   },
   {
-    question: 'Why a hackathon for underrepresented genders?',
-    answer: `People of a variety of genders are underrepresented in the tech world, and it’s up to everyone to change that! Technica’s goal is to create a welcoming environment where people of underrepresented genders can build cool projects and share their stories! You can learn more about gender diversity <a style="color: #F1ADCD" href="https://genderrights.org.au/information-hub/what-is-gender-diversity/">here</a>.`,
+    question: 'Why a hackathon celebrating underrepresented genders?',
+    answer: `People of a variety of genders are underrepresented in the tech world, and it’s up to everyone to change that! Technica’s goal is to create a welcoming environment where hackers can build cool projects and share their stories! You can learn more about gender diversity <a style="color: #F1ADCD" href="https://genderrights.org.au/information-hub/what-is-gender-diversity/">here</a>.`,
   },
   {
     question: 'Do I need to know how to code?',
@@ -103,12 +104,12 @@ const qaList = [
   {
     question: 'Where and when is Technica?',
     answer:
-      'Technica 2025 will take place on October 25-26 in The Armory at UMD and virtually via our platform. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
+      'Technica 2025 will take place from November 15th to November 16th in person at The Mariott College Park, and online via Gather. You can choose how you want to join',
   },
   {
     question: 'Who can attend Technica?',
     answer:
-      'Anyone who identifies as a marginalized gender including, but not limited to, cisgender women, transgender women, transgender men, non-binary individuals, gender neutral individuals, genderqueer individuals, agender individuals, pangender individuals, or a gender who is otherwise underrepresented in tech may register as a hacker! All ages are welcome. Additionally, all participants must follow the MLH code of conduct and Technica code of conduct.',
+    'While this hackathon does celebrate underrepresented genders, people of all genders are welcome!',
   },
   {
     question: 'How much does it cost to attend Technica?',
@@ -142,7 +143,7 @@ const qaList = [
   {
     question: 'What do I need to register for Technica?',
     answer:
-      'Registration is open, all you need to do is fill out our registration form!',
+      'Registration is not open yet, so feel free to fill out our pre-registration form to be notified when it goes live!',
   },
   {
     question: 'Are there any COVID-19 policies?',
@@ -162,7 +163,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'World’s largest hackathon for underrepresented genders',
+      content: 'World’s largest hackathon celebrating underrepresented genders',
     },
     {
       property: 'og:title',
@@ -174,7 +175,7 @@ useHead({
     },
     {
       property: 'og:description',
-      content: 'World’s largest hackathon for underrepresented genders',
+      content: 'World’s largest hackathon celebrating underrepresented genders',
     },
     {
       property: 'og:type',

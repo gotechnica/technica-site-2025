@@ -2,11 +2,11 @@
   <title>Ambassadors</title>
   <div class="container">
     <!--<H1 class="title">Become an Ambassador</H1>-->
-    <div style="margin-top: 5rem"></div>
+    <div style="margin-top: 1rem"></div>
     <Header>Ambassador Program</Header>
     <!-- <h3>Applications are now closed.</h3>
     <p>
-      We are very excited to launch the seventh year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2025 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon for underrepresented genders!
+      We are very excited to launch the seventh year of Technica Campus Ambassadors! As a Technica Campus Ambassador, you’ll have the unique opportunity to help foster our community beyond Technica weekend at UMD. As a representative of your school, you’ll spread the word about Technica 2025 on your campus and promote our message of inclusion in STEM for the world’s largest hackathon celebrating underrepresented genders!
     </p> -->
 
     <div class="row">
@@ -100,11 +100,6 @@ const qaList = [
       details of our merit-based system. All you need to know is, the more \
       effort you put into your role and outreach as an Ambassador, the more \
       perks you'll receive!",
-  },
-  {
-    question: 'When is Technica 2025?',
-    answer:
-      'Technica 2024 will take place on October 25-26 this year at The Reckford Armory at UMD!',
   },
   {
     question:

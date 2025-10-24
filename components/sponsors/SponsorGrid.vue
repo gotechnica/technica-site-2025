@@ -1,112 +1,82 @@
-<!--This component takes in a list of sponsors and links to their websites,
-    and creates a grid with 6 sponsors in each row.
-    NOTE: The names of the sponsors passed in must correspond to the
-    image name in /static/sponsors, as the name is what is used to get the path-->
 <template>
-  <div class="container sponsor-grid">
-    <div class="row"
-      v-for="row in Math.ceil(sponslist.length / 3)"
-      :key="row"
+  <div class="sponsors-rect" role="list" aria-label="Sponsors">
+    <a
+      v-for="s in sponslist"
+      :key="s.name"
+      class="logo-card"
+      :href="s.link"
+      target="_blank"
+      rel="noopener"
+      :aria-label="`Visit ${s.name} website`"
+      role="listitem"
     >
-      <!--
-        Slice the sponsor list according to current row.
-        This gives us a list of the sponsors in the current row.
-        Then, we make a column and image for each sponsor-->
-      <div class="col col-3 grid-item"
-        v-for="sponsor in sponslist.slice((row - 1) * 3, row * 3)"
-        :key="sponsor.name"
-      >
-        <!--wrapping using a tag to create clickable img-->
-        <a :href="sponsor.link" target="_blank">
-          <!--Calling imgPath to get full path-->
-          <img
-            :src="`/sponsors/${sponsor.name}.png`"
-            oncli
-            class="company-logo"
-            alt="sponsor"
-            :id="sponsor.name"
-          >
-        </a>
-      </div>
-    </div>
+      <img
+        :src="`/sponsors/${s.name}.png`"
+        :alt="s.name"
+        class="company-logo"
+        loading="lazy"
+      />
+    </a>
   </div>
 </template>
 
 <script setup lang="ts">
-import { type SponsorInfo } from './sponsor-info';
-
-const props = defineProps<{
-  sponslist: SponsorInfo[];
-}>();
-
-const sponslist = ref(props.sponslist);
-
+import type { SponsorInfo } from './sponsor-info'
+defineProps<{ sponslist: SponsorInfo[] }>()
 </script>
 
 <style scoped lang="scss">
+/* Responsive rectangle grid; left→right ordering, wraps into rows */
+.sponsors-rect {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem 1rem;
+  align-items: center;
+  justify-items: center;
+}
 
-  .sponsor-grid .row {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
+@media (max-width: 1280px) { .sponsors-rect { grid-template-columns: repeat(5, 1fr); } }
+@media (max-width: 1024px) { .sponsors-rect { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px)  { .sponsors-rect { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px)  { .sponsors-rect { grid-template-columns: repeat(2, 1fr); } }
 
-  .grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem 1.5rem;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    // -webkit-filter: grayscale(100%);
-    // -moz-filter: grayscale(100%);
-    // -ms-filter: grayscale(100%);
-    // filter: grayscale(100%);
-    -webkit-filter: none;
-    -moz-filter: none;
-    -ms-filter: none;
-    filter: none;
-    transform: scale(1.2);
-    // filter: gray; /* IE 6-9 */
-    // transition: transform .2s; /* Animation */
-  }
+.logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.5rem;
+  width: 100%;
+  padding: .5rem .75rem;
+  border-radius: 14px;
+  text-decoration: none;
+}
 
-  .grid-item:hover {
-    -webkit-filter: none;
-    -moz-filter: none;
-    -ms-filter: none;
-    filter: none;
-    transform: scale(1.2);
-  }
+.company-logo {
+  max-height: 3.5em;
+  max-width: 100%;
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+}
 
-  .company-logo {
-    max-height: 3.5em !important;
-    max-width: 100%;
-  }
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
 
-  #fannie-mae {
-    max-height: 7em !important;
-  }
 
-  #jhu {
-    max-height: 7em !important;
-  }
+.logo-card:hover .company-logo,
+.logo-card:focus .company-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.06);
+}
 
-  @media (max-width: 600px) {
-    .company-logo {
-      max-height: 1.7em;
-      margin: 0;
-    }
-  }
-
-  @media (min-width: 600px) {
-    .company-logo {
-      max-height: 2.2em;
-    }
-  }
-
-  @media (min-width: 800px) {
-    .company-logo {
-      max-height: 2.75em;
-    }
-
-  }
+@media (prefers-reduced-motion: reduce) {
+  .company-logo { transition: none; }
+}
 </style>

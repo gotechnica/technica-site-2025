@@ -16,30 +16,30 @@
 
       <div class="subtext">
         <h1 class="tagline outline">Bring Your Ideas to Life</h1>
-        <!-- <p class="basic-info outline">
-          October 25 to October 26th at The Armory, UMD | Hybrid
+        <p class="basic-info outline">
+          November 15 to November 16 at The Marriott, College Park | Hybrid
           Environment
-        </p> -->
+        </p>
         <p class="outline">
-          The world's largest hackathon for underrepresented genders
+          The world's largest hackathon celebrating underrepresented genders
         </p>
       </div>
       <div id="dummy"></div>
       <div class="buttons">
-        <!-- <WebButton
+        <WebButton
           text="Register"
           link="/register"
           img="button_blue_normal.svg"
           hover="button_blue_hover.svg"
           click="button_blue_onclick.svg"
-        /> -->
-        <WebButton
+        />
+        <!-- <WebButton
           text="Pre-register now!"
           link="https://forms.gle/ue9gJfZThYRurVzg8"
           img="button_blue_normal.svg"
           hover="button_blue_hover.svg"
           click="button_blue_onclick.svg"
-        />
+        /> -->
         <WebButton
           text="Learn More"
           @click="TogglePopup"
@@ -53,7 +53,7 @@
   <div v-if="isMobile" class="popup-mobile">
     <div id="popup" v-if="popupTriggers">
       <div id="popup-inner" class="mobile">
-        <h3>What is Bring Your Ideas to Life*?</h3>
+        <h3>What is Bring Your Ideas to Life?</h3>
         <p>
           We are thrilled to announce the theme for this fall's hackathon:
           <b>Bring Your Ideas to Life!</b>
@@ -64,7 +64,7 @@
   <div v-else>
     <div id="popup" class="d-flex justify-content-between" v-if="popupTriggers">
       <div id="popup-inner">
-        <h3>What is Bring Your Ideas to Life*?</h3>
+        <h3>What is Bring Your Ideas to Life?</h3>
         <p>
           We are thrilled to announce the theme for this fall's hackathon:
           <b>Bring Your Ideas to Life!</b>

@@ -2,13 +2,19 @@
   <title>Travel</title>
   <div style="margin-top: 1rem"></div>
   <Header>Travel</Header>
+  <!-- <h3 style="color:white;">Travel reimbursement applications now open! Apply by 11:59 EST on October 31st</h3>
+  <div class="d-flex justify-content-center button">
+    <WebButton
+      text="Apply Now!"
+      link="https://docs.google.com/forms/d/e/1FAIpQLSd3LoowRZ6WHLebUf375dIxse37AXoDDETSs7K0T1-L1u6jQg/viewform"
+      img="button_purple_normal.svg"
+      hover="button_purple_hover.svg"
+      click="button_purple_onclick.svg"
+      />
+  </div> -->
   <div class="travel-container">
     <div class="travel-header section">
       <div class="process-blurb">
-        <p>
-          Technica will be hosted at the Reckord Armory, College Park, MD, from
-          Saturday, October 25th to Sunday, October 26th.
-        </p>
         <p>
           We will offer travel reimbursement for hackers on a first-come,
           first-serve basis.
@@ -20,7 +26,7 @@
         <p>
           Please email
           <b
-            ><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b
+            ><a href="mailto:outreach@gotechnica.org">outreach@gotechnica.org</a></b
           >
           with any questions.
         </p>
@@ -111,8 +117,8 @@
             If you are unsure whether your documentation is acceptable, please
             email
             <b
-              ><a href="mailto:travel@gotechnica.org"
-                >travel@gotechnica.org</a
+              ><a href="mailto:outreach@gotechnica.org"
+                >outreach@gotechnica.org</a
               ></b
             >
             for clarification.
@@ -130,7 +136,7 @@
       <h3>Have Other Questions?</h3>
       <p class="contact-blurb">
         Reach out to
-        <b><a href="mailto:travel@gotechnica.org">travel@gotechnica.org</a></b>
+        <b><a href="mailto:outreach@gotechnica.org">outreach@gotechnica.org</a></b>
         and we'll get back to you soon!
       </p>
     </div>

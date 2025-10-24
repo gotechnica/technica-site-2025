@@ -10,7 +10,7 @@
     <p>
       Join us in running Technica and helping hackers during the event! Gain
       valuable experience while applying your skills for the world's largest
-      hackathon for underrepresented genders.
+      hackathon celebrating underrepresented genders.
       <b>Must be 18+ to sign up.</b> People of all genders are welcome!
     </p>
 
@@ -21,7 +21,7 @@
         <h3>Mentors</h3>
         <div class="button">
           <VineButton
-            text="Mentor"
+            text="Sign Up Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLSdTVezrN2UWKsXpJPDXKL7w4jA61BLbKvhYiUDdIhicpPWB_g/viewform?usp=dialog"
             img="button_cream_normal.svg"
             hover="button_cream_hover.svg"
@@ -41,7 +41,7 @@
         <h3>Volunteers</h3>
         <div class="button">
           <VineButton
-            text="Volunteer"
+            text="Sign Up Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLScosx_QuVt11v3RfSqLVlhM54Bs-MNfl6UCjLzmInK5DY8JdA/viewform?usp=dialog"
             img="button_cream_normal.svg"
             hover="button_cream_hover.svg"
@@ -111,14 +111,9 @@ const qaList = [
       'Volunteers assist with general tasks at the hackathon, such as directing check-in lines, while mentors provide technical support, such as guiding hackers with their code.',
   },
   {
-    question: 'Where and when is Technica?',
-    answer:
-      'Technica 2025 will take place on October 25-26 in The Reckord Armory at UMD and virtually through our online platform, Gather. You choose how you want to join! In-person check-in will begin at 10 AM on Saturday.',
-  },
-  {
     question:
       'I don’t identify as an underrepresented gender, can I still sign up?',
-    answer: 'People of all genders are welcome to be a mentor or volunteer!',
+    answer: 'While this hackathon does celebrate underrepresented genders, people of all genders are welcome!',
   },
   {
     question: 'I’ve never been to Technica, can I still sign up?',
