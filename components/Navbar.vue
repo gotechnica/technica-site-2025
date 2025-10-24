@@ -73,7 +73,7 @@ export default {
         // { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
         { dropdown: false, name: 'Sponsors', path: '/sponsor'},
         { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
-        { dropdown: false, name: 'Annual Report', path:'/report'},
+        { dropdown: false, name: 'Annual Report', path: '/report'},
         {
           dropdown: true,
           name: 'Programs',
@@ -82,8 +82,10 @@ export default {
             { name: 'Fellows', path: '/fellows' },
             { name: 'Ambassadors', path: '/ambassadors' },
             { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
-        ]
-   }
+          ]
+        },
+
+        // { dropdown: false, name: 'Check In', path:'/checkin'},
 ]
 
     }
