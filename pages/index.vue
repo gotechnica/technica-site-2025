@@ -11,11 +11,11 @@
 
     <!-- DAY OF! -->
     <div class="container timer">
-      <!-- <Timer /> -->
+      <Timer />
     </div>
 
     <div class="container">
-      <!-- <Announcements /> -->
+      <Announcements />
     </div>
 
     <!-- About Technica Section -->

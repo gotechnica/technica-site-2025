@@ -89,20 +89,21 @@ const { scrollToAnchor } = useAnchorScroll({
     font-style: normal;  
 }
     #wrapper {
-        background-image: url("/public/hero/timer.png");
+        background-image: url("/public/hero/website_counter.svg");
         background-attachment: scroll;
         background-size: contain;
-        background-position:55% center;
-        margin-top:5%;
+        background-position: center top;
+        margin-top: -30%;
+        margin-bottom: 10%;
         background-repeat: no-repeat;
         height: 100vh;
         position: relative;
     }
 
     #timer-container {
-        position: absolute; 
+        position: relative;
         top: 50%; 
-        left: 41.5%;
+        left: 51%;
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
@@ -140,7 +141,6 @@ const { scrollToAnchor } = useAnchorScroll({
     }
 
     .outline {
-        -webkit-text-stroke: 3px #09665B; 
         text-shadow: 2px 5px 2px black;
     }  
 

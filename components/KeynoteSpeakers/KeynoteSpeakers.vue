@@ -140,12 +140,6 @@ const toggleDropdown = (dropdownNumber: number) => {
   box-sizing: border-box;
 }
 
-.speaker-one {
-  width: 250px;
-  height: 250px;
-  z-index: 1;
-}
-
 .speaker-name {
   margin-top: 1rem;
   text-align: center;

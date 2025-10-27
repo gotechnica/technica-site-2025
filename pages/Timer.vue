@@ -97,7 +97,7 @@ const { scrollToAnchor } = useAnchorScroll({
     font-style: normal;  
 }
     #wrapper {
-        background-image: url("/public/hero/timer.png");
+        background-image: url("/hero/website_counter.svg");
         background-attachment: scroll;
         background-size: contain;
         background-position:55% center;
