@@ -75,24 +75,26 @@ const { scrollToAnchor } = useAnchorScroll({
 
 <style scoped lang="scss">
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: normal; 
-    font-style: normal;  
-}
+// idk what the point of these are!~~~~~~
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
+//     font-weight: normal; 
+//     font-style: normal;  
+// }
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('@/assets/fonts/Poppins-Bold.ttf') format('truetype');
-    font-weight: bold; 
-    font-style: normal;  
-}
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('@/assets/fonts/Poppins-Bold.ttf') format('truetype');
+//     font-weight: bold; 
+//     font-style: normal;  
+// }
+
     #wrapper {
         background-image: url("/public/hero/website_counter.svg");
         background-attachment: scroll;
         background-size: contain;
-        background-position: center top;
+        background-position: center;
         margin-top: -30%;
         margin-bottom: 10%;
         background-repeat: no-repeat;
@@ -113,7 +115,18 @@ const { scrollToAnchor } = useAnchorScroll({
         font-size: 4rem;
     }
 
+    .time-section {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        margin: 0 20px; 
+    }
 
+    .countdown {
+        display: flex;
+        align-items: center; 
+    }
+    
     .time {
             color: white; 
             font-size: 7vw; 
@@ -122,22 +135,11 @@ const { scrollToAnchor } = useAnchorScroll({
     }
 
     .label{
-        font-size: 2rem;
+        // font-size: 2rem;
+        font-size: 0.35em;
         color: white;
         margin-top: -1rem;
         font-family: 'Poppins', sans-serif;
-    }
-
-    .countdown {
-        display: flex;
-        align-items: center; 
-    }
-
-    .time-section {
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        margin: 0 20px; 
     }
 
     .outline {
