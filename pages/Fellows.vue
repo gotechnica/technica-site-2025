@@ -2,7 +2,7 @@
   <title>Fellows</title>
   <div class="container">
     <div style="margin-top: 1rem"></div>
-    <Header>Virtual Fellowship Program</Header>
+    <Header>2025 Virtual Fellowship Program</Header>
     <h4>Applications are now closed. Congrats to our fellows!</h4>
     <!-- <div class="d-flex justify-content-center button">
           <MainButton
@@ -16,7 +16,6 @@
 
     <div class="info-box">
       <p class="info-text">
-        <!-- New description based on fellowship page, separated some points into list (Let me know what you think!!)-->
         The Technica Fellowship Program is an 8-week initiative, running from
         <strong>June</strong> to <strong>August</strong>, designed for students
         of all skill levels — especially those with less technical experience
@@ -123,82 +122,38 @@
     </div>
 
     <!-- Projects! -->
-    <!-- replace google.com with their actual project links and add pictures -->
+
+    <!-- 2025 Projects -->
     <div class="row project-section">
-      <h3>Past Projects</h3>
-      <div class="project-cards">
-        <div class="project-card">
+      <h3>2025 Fellowship Projects</h3>
+      <!-- add projects-2025 so the 2x2 + non-span override applies -->
+      <div class="project-cards projects-2025">
+        <div
+          v-for="p in projects2025"
+          :key="p.href"
+          class="project-card"
+          :class="{ 'no-image': !p.img }"
+        >
           <img
-            src="/fellows/down-down-down-the-rabbithole.jpg"
-            alt="Down Down Down the Rabbithole"
+            v-if="p.img"
+            :src="p.img"
+            :alt="p.title"
             class="project-image"
+            loading="lazy"
           />
           <a
-            href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Milkii_Savya/fellowshipproject.html"
+            :href="p.href"
             class="project-button"
             target="_blank"
+            rel="noopener"
+            :aria-label="`Open ${p.title}`"
           >
-            <div class="subtitle">View Project</div>
-          </a>
-        </div>
-        <div class="project-card">
-          <img
-            src="/fellows/hackerland.jpg"
-            alt="Hackerland"
-            class="project-image"
-          />
-          <a
-            href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Christiana_Sophia/index.html"
-            class="project-button"
-            target="_blank"
-          >
-            <div class="subtitle">View Project</div>
-          </a>
-        </div>
-        <div class="project-card">
-          <img
-            src="/fellows/high-tea-time.jpg"
-            alt="High Tea Time"
-            class="project-image"
-          />
-          <a
-            href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Nikita_Eniola/index.html"
-            class="project-button"
-            target="_blank"
-          >
-            <div class="subtitle">View Project</div>
-          </a>
-        </div>
-        <div class="project-card">
-          <img
-            src="/fellows/the-wonder-of-fall.jpg"
-            alt="The Wonder of Fall"
-            class="project-image"
-          />
-          <a
-            href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Samragyee_Anagha/index.html"
-            class="project-button"
-            target="_blank"
-          >
-            <div class="subtitle">View Project</div>
-          </a>
-        </div>
-        <div class="project-card">
-          <img
-            src="/fellows/top-fantasy-movies.jpg"
-            alt="Top Fantasy Movies"
-            class="project-image"
-          />
-          <a
-            href="/fellows/Technica_Fellowship_2024/Technica_Fellowship_2024/2024_Fellowship/Zoey_Aabha/index.html"
-            class="project-button"
-            target="_blank"
-          >
-            <div class="subtitle">View Project</div>
+            <div class="subtitle">View Project — {{ p.title }}</div>
           </a>
         </div>
       </div>
     </div>
+
     <div class="container">
       <Header v-if="width <= 768" class="faq">FAQ</Header>
       <Header v-else class="faq">Frequently Asked Questions</Header>
@@ -214,11 +169,6 @@
     </div>
 
     <StickyButton />
-
-    <!-- <div class = "temp-carousel">
-      <Car2 :initialCards="FellowCards" :isMobile="false" :isShorten="isShorten" ref="carouselRef1"/>
-    
-    </div> -->
   </div>
 </template>
 
@@ -328,7 +278,40 @@ const outcomes = [
   'Strengthen communication and feedback skills, learning to present technical work clearly, culminating in a final project showcase',
   'Grow a network of peers, mentors, and organizers for continued support and future opportunities in tech, with insight into next steps like clubs, internships, and personal projects',
 ];
+
+// 2025 fellowship projects (links only; images optional later)
+const projects2025 = [
+  {
+    title: 'Map Meet',
+    href: 'https://github.com/HappyHat952/Map-Meet',
+    img: '/fellows/map%20proj.png', // public/fellows/map proj.png
+  },
+  {
+    title: 'Mental Health Dashboard (Technica)',
+    href: 'https://github.com/sanyagup/mental-health-dashboard-technica',
+    img: '/fellows/2nd%20one.png', // public/fellows/2nd one.png
+  },
+  {
+    title: 'Hackathon Photos (Technica)',
+    href: 'https://github.com/fatuma-tahalil/HackathonPhotos-Technica',
+    img: '/fellows/hackathon%20photos.png', 
+  },
+  {
+    title: 'Mentor Matching',
+    href: 'https://mentor-matching-2xei.vercel.app/',
+    img: '/fellows/mentor%20matching.png', // public/fellows/mentor matching.png
+  },
+];
 </script>
+
+<style scoped lang="scss">
+.container {
+  margin-bottom: 5rem;
+}
+
+/* all your original styles remain untouched */
+</style>
+
 
 <style scoped lang="scss">
 .container {
@@ -535,36 +518,40 @@ hr {
 .project-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  gap: 5vw;
-  width: 100%;
-  max-width: 60vw;
-  margin: auto;
-  padding: 20px;
+  grid-template-rows: repeat(2, 1fr); /* ensures 2 rows */
+  gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
 
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 200px);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* stack vertically on mobile */
+    grid-template-rows: auto;
   }
 }
 
 .project-card {
-  position: relative;
-  background-color: transparent;
+  width: 100%;
+  max-width: 450px;
+  height: 200px;
+  background: linear-gradient(
+    135deg,
+    rgba(166, 225, 255, 0.18),
+    rgba(205, 189, 255, 0.18)
+  );
+  border-radius: 1rem;
   border: 1px solid #cadaea;
   box-shadow: 0 4px 12px rgba(202, 218, 234, 0.7);
-  width: 100%;
-  height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
   overflow: hidden;
-  border-radius: 1rem;
+  position: relative;
 }
 
 .project-button {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -572,14 +559,17 @@ hr {
   border: none;
   text-decoration: none;
   color: inherit;
+  z-index: 0;
 }
 
 .project-image {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  z-index: 0;
 }
 
 .project-card:last-child {
@@ -612,7 +602,30 @@ hr {
   opacity: 1;
 }
 
-.subtitle {
+/* Minimal fallback style for new 2025 cards without images */
+.project-card.no-image {
+  background: linear-gradient(
+    135deg,
+    rgba(166, 225, 255, 0.18),
+    rgba(205, 189, 255, 0.18)
+  );
+  backdrop-filter: blur(2px);
+}
+
+/* Always show title on no-image cards so they never look blank */
+.project-card.no-image .subtitle {
+  background-color: rgba(10, 12, 20, 0.65);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Keep the 2025 grid tight (2x2) and don't span the last card */
+.projects-2025 {
+  grid-template-rows: repeat(2, 200px);
+}
+.projects-2025 .project-card:last-child {
+  grid-column: auto;
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
