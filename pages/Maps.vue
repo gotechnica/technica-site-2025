@@ -42,22 +42,14 @@
       </div>
     </section>
 
-    <!-- SVG venue floor plan (what was requested in the issue) -->
+    <!-- PNG venue floor plan (centered) -->
     <section class="venue-svg">
       <h3>Venue Floor Plan — College Park Marriott</h3>
-      <object
-        class="svg-map"
-        type="image/svg+xml"
-        data="/maps/hacker_map_opencenter.svg"
-        aria-label="College Park Marriott venue floor plan"
-      >
-        <!-- Fallback if <object> is blocked -->
-        <img
-          class="svg-map"
-          src="/maps/hacker_map_opencenter.png"
-          alt="College Park Marriott venue floor plan"
-        />
-      </object>
+      <img
+        class="venue-map"
+        src="/maps/hacker_map_opencenter.png"
+        alt="College Park Marriott venue floor plan"
+      />
     </section>
 
     <!-- Embedded Google Map -->
@@ -194,7 +186,7 @@
   transform: scale(1.05);
 }
 
-/* SVG venue map block */
+/* Venue map block (PNG) */
 .venue-svg {
   margin-top: 2rem;
   text-align: center;
@@ -210,16 +202,16 @@
                0 0 20px rgba(150, 183, 255, 0.4);
 }
 
-.svg-map {
+.venue-map {
   display: block;
-  width: 100%;
-  max-width: 1080px;
+  margin: 0 auto 0.5rem;     /* center horizontally */
+  width: min(1080px, 95%);   /* match the rest of the page’s max width */
   height: auto;
-  margin: 0 auto 0.5rem;
   border-radius: 12px;
   border: 1px solid rgba(202, 218, 234, 0.35);
   box-shadow: 0 6px 20px rgba(202, 218, 234, 0.15);
   background: rgba(255, 255, 255, 0.01);
+  image-rendering: auto;
 }
 
 /* Embedded Google Map */
