@@ -1,12 +1,10 @@
 <template>
-    <title> Gather Guide 2024</title>
+    <title>Gather Guide 2025</title>
+    <div style="margin-top: 1rem"></div>
+    <Header>Gather Guide 2025</Header>
     <div class="container">
-      <div class= "header">
-        <img src="/headings/header2024.png">
-        <h1>Gather Guide 2024</h1>
-      </div>
         <p>
-          You can access Gather <a href = https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024>here</a>!
+          You can access Gather <a href = https://app.gather.town/app/GJJUtNlOaOKtSymR/Technica%202025>here</a>!
         </p>
 
         <h3>What is Gather?</h3>
@@ -15,7 +13,7 @@
             Via seamless spatial audio and video chat, Gather aims to simulate fluid human interactions in a game-like setting.
         </p>
         <p>
-            <i>Check out Technica’s 2023 Gather space <a href="https://app.gather.town/app/2x7GW9NhurfCG9pf/Technica%202023-2024" class="highlight">here</a>!</i> 
+            <i>Check out Technica’s 2024 Gather space <a href="https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024" class="highlight">here</a>!</i> 
             Keep in mind that this is a public, online space–please be courteous and stay vigilant to protect yourself.
         </p>
         
@@ -145,11 +143,12 @@
 
           <p class="lastPar">
               <b>Please reach out to </b>
-              <a href="mailto:christinaxu10@gmail.com" class="email-link">Christina Xu</a> 
-              or <a href="mailto:cchen145@terpmail.umd.edu" class="email-link">Claire Chen</a> <b>if you encounter any issues.</b>
+              <a href="mailto:mcandmag@terpmail.umd.edu" class="email-link">Maggie McAndrew</a> 
+              or <a href="mailto:safiyahf@terpmail.umd.edu" class="email-link">Safiyah Fatima</a> <b>if you encounter any issues.</b>
           </p>
         </div>
    </div>
+   <div style="margin-bottom: 3rem"></div>
 </template>
 
 <script>
@@ -204,18 +203,18 @@ export default{
 .four-column-table-cell {
   flex: 1;
   padding: 8px;
-  border: 2px solid #ffce64;
+  border: 2px solid #f1adcd;
   text-align: center;
   color: white;
 }
 
 .four-column-table-cell:first-child {
   font-weight: bold;
-  color: #653553;
+  color: #f1adcd;
 }
 
 .four-column-table-cell:nth-child(3) {
-    color:#653553;
+    color:#f1adcd;
 }
 
 .four-column-table-cell + .four-column-table-cell {
@@ -247,8 +246,8 @@ export default{
   color: white;
   min-height: 50px;
   line-height:1.5;
-  border-left: 1px solid #ffce64;
-  border-right: 1px solid #ffce64;
+  border-left: 1px solid #f1adcd;
+  border-right: 1px solid #f1adcd;
 }
 
 .table-cell:first-child {
@@ -260,7 +259,7 @@ export default{
 
 .four-column-table-cell {
   background-color: transparent;
-  color: #653554;
+  color: #f1adcd;
   text-align: center;
 }
 
@@ -276,16 +275,16 @@ export default{
 }
 
 .table-row:first-of-type .table-cell {
-    border: 1px solid #ffce64;
+    border: 1px solid #f1adcd;
     
 }
 
 .table-row:last-child .table-cell {
-    border: 1px solid #ffce64; /* Add border to the bottom row */
+    border: 1px solid #f1adcd; /* Add border to the bottom row */
 }
 
 .table-column{
-    border-left: 2px #ffce64;
+    border-left: 2px #f1adcd;
 }
 
 .image-spacing{
@@ -304,9 +303,10 @@ export default{
 }
 
 h3 {
+  font-family: 'dinpro';
   text-align: center;
   margin-bottom: 1rem;
-  color: #ffce64;
+  color: #cadaea;
 }
 
 p {
@@ -318,7 +318,7 @@ p {
 }
 
 a {
-  color: #ffce64;
+  color: #f1adcd;
 }
 
 .row {
@@ -371,17 +371,17 @@ a {
 
 .highlight{
   font-weight:bold;
-  color: #ffce64;
+  color: #f1adcd;
   text-decoration:underline;
 }
 
 .underline{
-  color: #ffce64;
+  color: #cadaea;
   text-decoration: underline;
 }
 
 .bold{
-  color:#ffce64;
+  color:#f1adcd;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -410,7 +410,7 @@ ol li {
 }
 
 .bottom-info p{
-  color: #653553;
+  color: #FFFFFF;
   margin-top: 2rem;
 }
 

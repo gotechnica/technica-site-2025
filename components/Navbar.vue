@@ -66,29 +66,28 @@ export default {
   data() {
     return {
       links: [
-  { dropdown: false, name: 'Home', path: '/' },
-  { dropdown: false, name: 'Register', path: './register' },
-  { dropdown: false, name: 'Travel', path: '/travel' },
+        { dropdown: false, name: 'Home', path: '/'},
+        { dropdown: false, name: 'Register', path: './register'},
+        { dropdown: false, name: 'Gather', path: './gather'},
+        // { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
+        { dropdown: false, name: 'Travel', path: '/travel' },
+        { dropdown: false, name: 'Tracks', path: '/tracks' },
+        // { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
+        { dropdown: false, name: 'Sponsors', path: '/sponsor'},
+        { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
+        { dropdown: false, name: 'Annual Report', path: '/report'},
+        {
+          dropdown: true,
+          name: 'Programs',
+          showDropdown: false,
+          items: [
+            { name: 'Fellows', path: '/fellows' },
+            { name: 'Ambassadors', path: '/ambassadors' },
+            { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
+          ]
+        },
 
-  // 👇 NEW: show Maps in the navbar
-  { dropdown: false, name: 'Maps', path: '/maps' },
-
-  { dropdown: false, name: 'Tracks', path: '/tracks' },
-  { dropdown: false, name: 'Schedule', path: '/schedule' },
-  // { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
-  { dropdown: false, name: 'Sponsors', path: '/sponsor' },
-  { dropdown: false, name: 'Data Rights', path: 'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform' },
-  { dropdown: false, name: 'Annual Report', path: '/report' },
-  {
-    dropdown: true,
-    name: 'Programs',
-    showDropdown: false,
-    items: [
-      { name: 'Fellows', path: '/fellows' },
-      { name: 'Ambassadors', path: '/ambassadors' },
-      { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
-    ]
-  }
+        // { dropdown: false, name: 'Check In', path:'/checkin'},
 ]
 
     }
