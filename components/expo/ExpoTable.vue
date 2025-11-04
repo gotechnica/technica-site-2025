@@ -30,6 +30,7 @@
           ref="filterInput"
           v-model="filter"
           placeholder="Filter by Team Name"
+          @input="currentPage = 1"
         />
         <button
           v-if="filter"
@@ -45,6 +46,7 @@
           ref="prizeInput"
           v-model="prizeFilter"
           placeholder="Filter by Prize Category"
+          @input="currentPage = 1"
         />
         <button
           v-if="prizeFilter"
@@ -60,6 +62,7 @@
           ref="sponsorInput"
           v-model="sponsorFilter"
           placeholder="Filter by Sponsor Name"
+          @input="currentPage = 1"
         />
         <button
           v-if="sponsorFilter"
@@ -97,7 +100,7 @@
             <td class="time-col">{{ formatAMPM(item.time) }}</td>
             <td>{{ item.prize_category }}</td>
             <td>{{ item.sponsor_name }}</td>
-            <td>
+            <td >
               <span v-if="item.location.toString().startsWith('https')">
                 <a :href="item.location">{{ item.location }}</a>
               </span>
@@ -117,7 +120,7 @@
         Prev
       </button>
 
-      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <span>Page {{totalPages > 0 ? currentPage: 0 }} of {{totalPages}}</span>
 
       <button
         class="btn btn-md btn-outline-primary"
@@ -207,6 +210,7 @@ export default {
         this.sortBy = key;
         this.sortDesc = false;
       }
+      this.currentPage = 1;
     },
     getSortIcon(key) {
       if (this.sortBy === key) {
@@ -216,24 +220,28 @@ export default {
     },
     toggleEvents(filter) {
       this.selectedToggle = filter;
+      this.currentPage = 1;
     },
     clearFilter() {
       this.filter = '';
       this.$nextTick(
         () => this.$refs.filterInput && this.$refs.filterInput.focus()
       );
+      this.currentPage = 1;
     },
     clearPrizeFilter() {
       this.prizeFilter = '';
       this.$nextTick(
         () => this.$refs.prizeInput && this.$refs.prizeInput.focus()
       );
+      this.currentPage = 1;
     },
     clearSponsorFilter() {
       this.sponsorFilter = '';
       this.$nextTick(
         () => this.$refs.sponsorInput && this.$refs.sponsorInput.focus()
       );
+      this.currentPage = 1;
     },
     formatAMPM(timeArray) {
       const startDate = new Date(timeArray[0]);
