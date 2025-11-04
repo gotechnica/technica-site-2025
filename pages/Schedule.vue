@@ -1,20 +1,18 @@
 <template>
-  <div class="schedule">
+  <div class="schedule-page">
     <div class="container">
-      <div class="page-header">
-        <h1 class="title-2025">2025 Event Schedule</h1>
-        <p class="subtitle-2025">Times &amp; sessions will update live.</p>
-      </div>
+      <!-- Consistent page header (keep this ONE) -->
+      <Header>Schedule</Header>
 
-      <div class="schedule-shell">
-        <!-- Keep the original component exactly as before -->
+      <!-- Wrap the component so we can safely hide its internal header only -->
+      <div class="schedule-component">
         <Schedule />
       </div>
     </div>
   </div>
 </template>
 
-<!-- If your project does NOT auto-import components, uncomment this and adjust the path if needed -->
+<!-- If your project does NOT auto-import components, uncomment and adjust: -->
 <!--
 <script setup lang="ts">
 import Schedule from '~/components/schedule/Schedule.vue'
@@ -22,46 +20,25 @@ import Schedule from '~/components/schedule/Schedule.vue'
 -->
 
 <style scoped lang="scss">
-.schedule {
+.schedule-page {
   min-height: 100vh;
   padding: 2.5rem 0 4rem;
   color: #ffffff;
 }
 
-/* match page widths used elsewhere */
+/* Make the schedule area wider than usual pages and center it */
 .container {
-  width: min(1200px, 92vw);
+  width: min(1400px, 98vw);
   margin: 0 auto;
-}
-
-/* 2025 heading (matches Fellows) */
-.title-2025 {
-  margin: 0;
   text-align: center;
-  font-family: 'dinpro', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
-  color: #cadaea;
 }
 
-.subtitle-2025 {
-  margin: 0.5rem 0 1.5rem;
-  text-align: center;
-  opacity: 0.9;
-}
+/* Remove the decorative box entirely by not wrapping <Schedule/> in a shell */
 
-/* glowing panel around the existing schedule component */
-.schedule-shell {
-  background: #1a1b27;
-  border: 2px solid #ffffff;
-  border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow:
-    0 0 20px rgba(255, 255, 255, 0.4),
-    0 0 40px rgba(150, 120, 255, 0.3),
-    0 0 60px rgba(100, 120, 255, 0.2);
-}
-
-@media (min-width: 768px) {
-  .schedule-shell { padding: 1.75rem; }
+/* Hide the FIRST header that the Schedule component renders,
+   while keeping the page-level <Header> visible. */
+:deep(.schedule-component h1:first-of-type),
+:deep(.schedule-component .header:first-of-type) {
+  display: none !important;
 }
 </style>

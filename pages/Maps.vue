@@ -1,12 +1,13 @@
 <template>
   <title>Maps</title>
   <div class="container">
-    <!-- 2025 Overall Map -->
+    <!-- Page title -->
     <div class="overall">
       <div class="title">
         <Header>College Park Marriott Map</Header>
       </div>
 
+      <!-- Overall image (SVG with PNG fallback) -->
       <div class="center">
         <picture>
           <source srcset="/maps/hacker_map_opencenter.svg" type="image/svg+xml" />
@@ -19,9 +20,8 @@
       </div>
     </div>
 
-    <!-- College Park Marriott -->
+    <!-- CTA links -->
     <section class="venue">
-
       <div class="links">
         <a
           class="link-button"
@@ -40,8 +40,28 @@
           📍 Open in Google Maps
         </a>
       </div>
+    </section>
 
-      <!-- Google Map Embed -->
+    <!-- SVG venue floor plan (what was requested in the issue) -->
+    <section class="venue-svg">
+      <h3>Venue Floor Plan — College Park Marriott</h3>
+      <object
+        class="svg-map"
+        type="image/svg+xml"
+        data="/maps/hacker_map_opencenter.svg"
+        aria-label="College Park Marriott venue floor plan"
+      >
+        <!-- Fallback if <object> is blocked -->
+        <img
+          class="svg-map"
+          src="/maps/hacker_map_opencenter.png"
+          alt="College Park Marriott venue floor plan"
+        />
+      </object>
+    </section>
+
+    <!-- Embedded Google Map -->
+    <section class="venue">
       <div class="map-embed">
         <iframe
           title="College Park Marriott Map"
@@ -66,19 +86,26 @@
   --t-accent: #f1adcd;
   --t-accent-2: #96b7ff;
   --t-white: #ffffff;
+
+  /* Navbar height — keep in sync with .navbar { min-height: 84px } */
+  --nav-h: 84px;
 }
 
+/* Page container: adds consistent space below sticky navbar */
 .container {
   align-items: center;
   margin-bottom: 5rem;
   background: var(--t-bg);
   color: var(--t-white);
+  padding-top: calc(var(--nav-h) + 24px); /* consistent with other pages */
 }
 
 /* Page Title Section */
 .title {
-  padding-top: 5rem;
+  /* remove extra page-specific padding so spacing matches other pages */
+  padding-top: 0;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -108,10 +135,10 @@
   }
 }
 
-/* Venue Info Section */
+/* Buttons section (CTA) */
 .venue {
   margin-top: 3rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   border-radius: 16px;
   border: 1px solid var(--t-muted);
   background: linear-gradient(
@@ -123,23 +150,12 @@
   box-shadow: 0 6px 18px rgba(202, 218, 234, 0.1);
 }
 
-.venue h3 {
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 10px rgba(241, 173, 205, 0.6),
-               0 0 25px rgba(150, 183, 255, 0.4);
-}
-
 .links {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1.5rem 0 2rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 /* Primary button (gradient) */
@@ -178,6 +194,33 @@
   transform: scale(1.05);
 }
 
+/* SVG venue map block */
+.venue-svg {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.venue-svg h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(241, 173, 205, 0.6),
+               0 0 20px rgba(150, 183, 255, 0.4);
+}
+
+.svg-map {
+  display: block;
+  width: 100%;
+  max-width: 1080px;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(202, 218, 234, 0.35);
+  box-shadow: 0 6px 20px rgba(202, 218, 234, 0.15);
+  background: rgba(255, 255, 255, 0.01);
+}
 
 /* Embedded Google Map */
 .map-embed {

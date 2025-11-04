@@ -2,7 +2,6 @@
 <template>
   <div id="schedule">
     <div style="margin-top: 5rem;"></div>
-    <Header>Schedule</Header>
     <div class="schedule-page">
       <div class="row schedule-list">
         <!-- LEGEND AND TIMEZONE -->
@@ -33,7 +32,7 @@
                       <span class="day">{{ getDayOfTheWeek(day).substring(0, 3) }},
                         {{ '' }}
                       </span>
-                      <span class="date">October {{ day.getDate() }}</span>
+                      <span class="date">November {{ day.getDate() }}</span>
                     </div>
                     <div class="schedule-header-day-bar" :class="{ active: day === selectedDay }" />
                   </div>
