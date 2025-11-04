@@ -59,7 +59,7 @@
           </tr>
         </tbody>
       </table>
-
+      </div>
       <!-- Pagination controls -->
       <div class="pagination-controls">
         <button
@@ -79,7 +79,6 @@
         >
           Next
         </button>
-      </div>
     </div>
   </div>
 </template>
@@ -211,13 +210,19 @@ export default {
 }
 
 .pagination-controls button:hover {
-  background-color: #E8CAE6;
+  background-color: #D68BB1;
+}
+
+.table-responsive {
+  border-radius: 12px;
+  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.1);
 }
 
 /* Style for the table */
 .table {
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 0;
 
   th, td {
     padding: 10px;
@@ -238,6 +243,25 @@ export default {
     cursor: pointer;
     font-weight: 600;
     user-select: none;
+  }
+
+   /* table rounded corners */
+  thead th:first-child {
+    border-top-left-radius: 12px;
+  }
+  thead th:last-child {
+    border-top-right-radius: 12px;
+  }
+  tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+  }
+  tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+  }
+
+  /* remove bottom border on the last row */
+  tbody tr:last-child td {
+    border-bottom: none !important;
   }
 
   th:hover {
@@ -311,7 +335,7 @@ a {
 }
 
 .event-toggle-button:hover {
-  background-color: #E8CAE6;
+  background-color: #D68BB1;
 }
 
 .event-toggle-slider div {
