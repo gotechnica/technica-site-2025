@@ -49,12 +49,12 @@ export default {
         {
           question: 'Rules',
           answer:
-            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2024's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and unlimited Sponsor prize categories. However, you will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
+            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2025's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and THREE Sponsor prize categories. You will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
         },
         {
           question: 'Submission',
           answer:
-            'You will be required to submit information about you and your hack to Devpost by 11:30am EDT on Sunday, 10/27. After the submission deadline, no hacks will be accepted, with absolutely no exceptions. Ensure that you have ample time to submit your project before the deadline.',
+            'You will be required to submit information about you and your hack to Devpost by 12:00pm EST on Sunday, 11/16. After the submission deadline, no hacks will be accepted, with absolutely no exceptions. Ensure that you have ample time to submit your project before the deadline.',
         },
         {
           question: 'Where will I demo?',
@@ -64,12 +64,12 @@ export default {
         {
           question: 'If you are attending Expo virtually',
           answer:
-            'Find your team name by searching in the table above. If you are in-person at The Armory &copy; and need to attend virtually, we have rooms reserved for you! <br>If you are a <b>Hacker</b>, you can go to:<ul><li>Wayne K. Curry</li><li>Jim Henson</li><li>Francis Scott Key</li></ul><br>If you are a <b>Sponsor</b>, you can go to rooms:<ul><li>Salon I</li><li>Salon II</li><li>Salon III</li></ul>',
+            'Find your team name by searching in the table above and join the corresponding Gather room.',
         },
         {
           question: 'Judging Process',
           answer:
-            'Demos will take 5 minutes. You will have 2 minutes to demo your project, then the following 3 minutes to answer questions and discuss your project further with your judges. Judges will evaluate each hack against the criteria of that category. Winners will then be selected at the end of Expo by the judges.',
+            'Demos are 5 minutes total: 2 minutes to present your project and 3 minutes for Q&A with judges. Judges will score each hack based on the category criteria, and winners will be chosen at the end of Expo.',
         },
       ],
     };
