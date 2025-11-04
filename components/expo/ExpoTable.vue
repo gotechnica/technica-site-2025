@@ -267,6 +267,7 @@ export default {
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  color: #efe4dc;
 }
 
 .pagination-controls button {

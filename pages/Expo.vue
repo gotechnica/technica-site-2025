@@ -1,33 +1,35 @@
 <template>
   <div>
-    <div style="margin-top: 5rem;"></div>
+    <div style="margin-top: 5rem"></div>
     <Header>Expo</Header>
-    <div style="margin-top: 5rem;"></div>
+    <div style="margin-top: 5rem"></div>
     <div class="container mx-auto">
       <div>
         <div>
           <!-- Expo Has Not Started! -->
           <p class="table-description">
             A schedule of all demo times and their corresponding locations will
-            published here after the submission period closes. <br/>Sit tight!
+            published here after the submission period closes. <br />Sit tight!
           </p>
 
           <!-- Expo Has Ended! -->
-          <p class="table-description">
+          <!-- <p class="table-description">
            Expo has ended! Thank you to all that participated!
-          </p>
+          </p> -->
 
           <!-- Expo Message & Table -->
           <p class="table-description">
-            Below is the list of demos and their locations, along with a map showing all in-person judging areas.
+            Below is the list of demos and their locations, along with a map
+            showing all in-person judging areas.
           </p>
+          <!-- Expo Map -->
           <!-- <img src="../static/expo_map.svg"> -->
-          <br><br>
+          <br /><br />
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
-        <div style="margin-top: 5rem;"></div>
+        <div style="margin-top: 5rem"></div>
         <Header>Frequently Asked Questions</Header>
-        <div style="margin-top: 5rem;"></div>
+        <div style="margin-top: 5rem"></div>
         <FAQ class="faq-section" faqId="faq" :qaList="qaList" />
       </div>
     </div>
@@ -120,22 +122,23 @@ export default {
       let tableIndex = 0;
       const tableMap = [];
       for (const [category, config] of Object.entries(tables)) {
-          const { rows, cols } = config;
-          for (let row of rows) {
-              for (let col = 1; col <= cols; col++) {
-                  tableMap[tableIndex] = `${category} ${row}${col}`;
-                  tableIndex++;
-              }
+        const { rows, cols } = config;
+        for (let row of rows) {
+          for (let col = 1; col <= cols; col++) {
+            tableMap[tableIndex] = `${category} ${row}${col}`;
+            tableIndex++;
           }
+        }
       }
       if (schedule) {
         //waiting for schedule query
         Object.values(schedule).forEach((k) => {
-          // if(!('prize_category' in k) || !k.hasOwnProperty('prize_category') || k.prize_category === undefined) {
-          //   k.prize_category = k.sponsor_name;
-          //   k.sponsor_name = "Technica";
-          // }
-          if(k.sponsor_name != null && !k.sponsor_name.toString().includes("[MLH]") && (k.prize_category !== undefined && !k.prize_category.toString().includes("Best Research Track Hack"))) {
+          if (
+            k.sponsor_name != null &&
+            !k.sponsor_name.toString().includes('[MLH]') &&
+            k.prize_category !== undefined &&
+            !k.prize_category.toString().includes('Best Research Track Hack')
+          ) {
             const item = {};
             item.team_name = k.team_name;
             let start_time = new Date(k.start_time); //putting actual date object in
@@ -145,46 +148,7 @@ export default {
             item.time = [start_time, end_time];
             item.prize_category = k.prize_category;
             item.sponsor_name = k.sponsor_name;
-            if(k.sponsor_name.toString().startsWith("ICF")) {
-              item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=j_sGeUFoTdiSHGi0rv_j";
-            }
-            if(k.location == null) {
-                if(k.sponsor_name.toString().includes("Bloomberg")) {
-                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=NRCV3WFDSwm1HFHmjbqQ";
-                } else if (k.sponsor_name.toString().includes("ICF")) {
-                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=j_sGeUFoTdiSHGi0rv_j";
-                } else if (k.sponsor_name.toString().includes("T. Rowe Price")) {
-                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_bFXPg1uRmGKtGNnNsDG";
-                } else { // Technica 
-                  if(k.prize_category.toString().includes("Best Education Hack")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=X3pU1IHlTY20jdEaSwGq";
-                  } else if(k.prize_category.toString().includes("Best UI/UX Hack")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=vtiNk00kRk24OWkIRZIE";
-                  } else if(k.prize_category.toString().includes("Best Hack For Social Good")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=CW9Q-FR5Q5-9H0v-iy_K";
-                  } else if(k.prize_category.toString().includes("Best Gamification Hack")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=EcvQ61m4TTy1Q090L8Pn";
-                  } else if(k.prize_category.toString().includes("Best Accessibility Solution")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=uAiSIXV1Tvu8IL0aDcTg";
-                  } else if(k.prize_category.toString().includes("Best Active-Wellness/Health Hack")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=m0H0r72WTDC8PaQhAvyv";
-                  } else if(k.prize_category.toString().includes("Best Startup Track Hack")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=LGR1eBZITQiGPvt7BXJs";
-                  } else if(k.prize_category.toString().includes("Best Beginner Hack (College)")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=C19eA1PSS5aL9UGOgkFe";
-                  } else if(k.prize_category.toString().includes("Best Beginner Hack (Middle/High School)")) {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=oIZDuZWST-W3bXw6tzal";
-                  } else {
-                    item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_OK0O2faSk2uGYv5vMR-";
-                  }
-                }
-            } else {
-              if (k.sponsor_name.toString().includes("ICF")) {
-                  item.location = "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=j_sGeUFoTdiSHGi0rv_j";
-                } else {
-                  item.location = tableMap[Number(k.location) - 1];
-                }
-            }
+            item.location = k.location ? tableMap[Number(k.location) - 1] : "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_bFXPg1uRmGKtGNnNsDG";
             items.push(item); //boom
           }
         });
@@ -192,7 +156,7 @@ export default {
       return items;
     },
   },
-}; 
+};
 </script>
 
 <style lang="scss" scoped>
