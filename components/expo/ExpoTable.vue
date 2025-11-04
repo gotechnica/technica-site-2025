@@ -26,10 +26,49 @@
 
     <div class="search-container">
       <div class="filter-input">
-        <input v-model="filter" placeholder="Filter by Team Name" />
+        <input
+          ref="filterInput"
+          v-model="filter"
+          placeholder="Filter by Team Name"
+        />
+        <button
+          v-if="filter"
+          class="clear-btn"
+          @click="clearFilter"
+          aria-label="Clear filter"
+        >
+          ×
+        </button>
       </div>
       <div class="filter-input">
-        <input v-model="sponsorFilter" placeholder="Filter by Sponsor Name" />
+        <input
+          ref="prizeInput"
+          v-model="prizeFilter"
+          placeholder="Filter by Prize Category"
+        />
+        <button
+          v-if="prizeFilter"
+          class="clear-btn"
+          @click="clearPrizeFilter"
+          aria-label="Clear filter"
+        >
+          ×
+        </button>
+      </div>
+      <div class="filter-input">
+        <input
+          ref="sponsorInput"
+          v-model="sponsorFilter"
+          placeholder="Filter by Sponsor Name"
+        />
+        <button
+          v-if="sponsorFilter"
+          class="clear-btn"
+          @click="clearSponsorFilter"
+          aria-label="Clear filter"
+        >
+          ×
+        </button>
       </div>
     </div>
 
@@ -37,17 +76,25 @@
       <table class="table">
         <thead>
           <tr>
-            <th @click="sortTable('team_name')">Team Name {{ getSortIcon('team_name') }}</th>
-            <th @click="sortTable('time')">Time {{ getSortIcon('time') }}</th>
-            <th @click="sortTable('prize_category')">Prize Category {{ getSortIcon('prize_category') }}</th>
-            <th @click="sortTable('sponsor_name')">Sponsor Name {{ getSortIcon('sponsor_name') }}</th>
+            <th @click="sortTable('team_name')">
+              Team Name {{ getSortIcon('team_name') }}
+            </th>
+            <th class="time-col" @click="sortTable('time')">
+              Time {{ getSortIcon('time') }}
+            </th>
+            <th @click="sortTable('prize_category')">
+              Prize Category {{ getSortIcon('prize_category') }}
+            </th>
+            <th @click="sortTable('sponsor_name')">
+              Sponsor Name {{ getSortIcon('sponsor_name') }}
+            </th>
             <th>Location</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(item, i) in paginatedItems" :key="item.team_name + i">
             <td>{{ item.team_name }}</td>
-            <td>{{ formatAMPM(item.time) }}</td>
+            <td class="time-col">{{ formatAMPM(item.time) }}</td>
             <td>{{ item.prize_category }}</td>
             <td>{{ item.sponsor_name }}</td>
             <td>
@@ -59,26 +106,26 @@
           </tr>
         </tbody>
       </table>
-      </div>
-      <!-- Pagination controls -->
-      <div class="pagination-controls">
-        <button
-          class="btn btn-md btn-outline-primary"
-          :disabled="currentPage === 1"
-          @click="currentPage--"
-        >
-          Prev
-        </button>
+    </div>
+    <!-- Pagination controls -->
+    <div class="pagination-controls">
+      <button
+        class="btn btn-md btn-outline-primary"
+        :disabled="currentPage === 1"
+        @click="currentPage--"
+      >
+        Prev
+      </button>
 
-        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
 
-        <button
-          class="btn btn-md btn-outline-primary"
-          :disabled="currentPage === totalPages"
-          @click="currentPage++"
-        >
-          Next
-        </button>
+      <button
+        class="btn btn-md btn-outline-primary"
+        :disabled="currentPage === totalPages"
+        @click="currentPage++"
+      >
+        Next
+      </button>
     </div>
   </div>
 </template>
@@ -94,6 +141,7 @@ export default {
       sortBy: 'time',
       sortDesc: true,
       filter: '',
+      prizeFilter: '',
       sponsorFilter: '',
       selectedToggle: 'all', // 'all', 'virtual', or 'in-person'
       currentPage: 1,
@@ -107,11 +155,13 @@ export default {
 
       const filteredItems = this.items.filter((item) => {
         const filterText = this.filter.toLowerCase();
+        const prizeText = this.prizeFilter.toLowerCase();
         const sponsorText = this.sponsorFilter.toLowerCase();
 
         // Filter by team name and sponsor name
         const nameFilter =
           item.team_name.toLowerCase().includes(filterText) &&
+          item.prize_category.toLowerCase().includes(prizeText) &&
           item.sponsor_name.toLowerCase().includes(sponsorText);
 
         // Filter by the selected toggle
@@ -122,7 +172,10 @@ export default {
           this.selectedToggle === 'in-person' &&
           !item.location.toString().startsWith('https');
 
-        return nameFilter && (virtualFilter || inPersonFilter || this.selectedToggle === 'all');
+        return (
+          nameFilter &&
+          (virtualFilter || inPersonFilter || this.selectedToggle === 'all')
+        );
       });
 
       return filteredItems.slice().sort((a, b) => {
@@ -131,19 +184,19 @@ export default {
         if (key === 'time') {
           return desc * (new Date(bValue[0]) - new Date(aValue[0]));
         } else {
-          return desc * (aValue.localeCompare(bValue));
+          return desc * aValue.localeCompare(bValue);
         }
       });
     },
     totalPages() {
-    return this.sortedItems && Array.isArray(this.sortedItems)
-      ? Math.ceil(this.sortedItems.length / this.perPage)
-      : 1
+      return this.sortedItems && Array.isArray(this.sortedItems)
+        ? Math.ceil(this.sortedItems.length / this.perPage)
+        : 1;
     },
     paginatedItems() {
-      if (!this.sortedItems || !Array.isArray(this.sortedItems)) return []
-      const start = (this.currentPage - 1) * this.perPage
-      return this.sortedItems.slice(start, start + this.perPage)
+      if (!this.sortedItems || !Array.isArray(this.sortedItems)) return [];
+      const start = (this.currentPage - 1) * this.perPage;
+      return this.sortedItems.slice(start, start + this.perPage);
     },
   },
   methods: {
@@ -164,6 +217,24 @@ export default {
     toggleEvents(filter) {
       this.selectedToggle = filter;
     },
+    clearFilter() {
+      this.filter = '';
+      this.$nextTick(
+        () => this.$refs.filterInput && this.$refs.filterInput.focus()
+      );
+    },
+    clearPrizeFilter() {
+      this.prizeFilter = '';
+      this.$nextTick(
+        () => this.$refs.prizeInput && this.$refs.prizeInput.focus()
+      );
+    },
+    clearSponsorFilter() {
+      this.sponsorFilter = '';
+      this.$nextTick(
+        () => this.$refs.sponsorInput && this.$refs.sponsorInput.focus()
+      );
+    },
     formatAMPM(timeArray) {
       const startDate = new Date(timeArray[0]);
       const endDate = new Date(timeArray[1]);
@@ -173,21 +244,21 @@ export default {
         minute: '2-digit',
         hour12: true,
       });
-      
+
       const endTime = endDate.toLocaleTimeString([], {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true,
       });
 
-      return !timeArray[0] ? "" : `${startTime} - ${endTime}`;
+      return !timeArray[0] ? '' : `${startTime} - ${endTime}`;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/base.scss";
+@import '../../styles/base.scss';
 
 /* Style for pagination controls */
 .pagination-controls {
@@ -200,7 +271,7 @@ export default {
 
 .pagination-controls button {
   color: black;
-  border: 1px solid #EFE4DC;
+  border: 1px solid #efe4dc;
   background-color: #f1adcd;
   border-radius: 20px;
   padding: 8px 12px;
@@ -210,7 +281,7 @@ export default {
 }
 
 .pagination-controls button:hover {
-  background-color: #D68BB1;
+  background-color: #d68bb1;
 }
 
 .table-responsive {
@@ -224,28 +295,34 @@ export default {
   width: 100%;
   margin-bottom: 0;
 
-  th, td {
+  th,
+  td {
     padding: 10px;
     text-align: left;
   }
 
-  td {
-    background-color: #141024;
-    border-top: none !important;
-    border-bottom: 1px solid #EFE4DC;
-    color: white !important;
-  }
-
   th {
+    white-space: nowrap;
     border-top: none !important;
-    border-bottom: solid 1px #EFE4DC;
+    border-bottom: solid 1px #efe4dc;
     background-color: #f1adcd !important;
     cursor: pointer;
     font-weight: 600;
     user-select: none;
   }
 
-   /* table rounded corners */
+  td {
+    background-color: #141024;
+    border-top: none !important;
+    border-bottom: 1px solid #efe4dc;
+    color: white !important;
+  }
+
+  td.time-col {
+    white-space: nowrap;
+  }
+
+  /* table rounded corners */
   thead th:first-child {
     border-top-left-radius: 12px;
   }
@@ -278,16 +355,29 @@ a {
 }
 
 .search-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
   margin: 20px 0;
 }
 
+@media screen and (max-width: 600px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 20px 0;
+  }
+}
+
 .filter-input {
-  display: inline-block;
-  width: 48%;
-  margin-right: 2%;
+  width: 100%;
+
+  position: relative;
 
   input {
     padding: 10px;
+    padding-right: 2.5rem; /* room for clear button */
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -295,6 +385,23 @@ a {
 
     &:focus {
       border-color: $DARK_PURPLE;
+    }
+  }
+
+  .clear-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #b25f8c;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px 6px;
+
+    &:hover {
+      color: #d68bb1;
     }
   }
 }
@@ -309,7 +416,7 @@ a {
   width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
-  border: 2px solid #EFE4DC; 
+  border: 2px solid #efe4dc;
 
   @media (max-width: 768px) {
     width: 100%; /* Make it full width on smaller screens */
@@ -320,7 +427,7 @@ a {
 
 .event-toggle-button {
   background-color: transparent; /* Transparent background */
-  border: 1px solid #EFE4DC;
+  border: 1px solid #efe4dc;
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
@@ -329,13 +436,13 @@ a {
   color: black;
 
   &.active {
-    background-color: #B25F8C;
+    background-color: #b25f8c;
     color: white;
   }
 }
 
 .event-toggle-button:hover {
-  background-color: #D68BB1;
+  background-color: #d68bb1;
 }
 
 .event-toggle-slider div {
@@ -344,5 +451,4 @@ a {
   font-weight: 600;
   user-select: none; /* Disable text selection */
 }
-
 </style>
