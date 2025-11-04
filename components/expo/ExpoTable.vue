@@ -45,7 +45,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item, i in sortedItems" :key="item.team_name + i">
+          <tr v-for="(item, i) in paginatedItems" :key="item.team_name + i">
             <td>{{ item.team_name }}</td>
             <td>{{ formatAMPM(item.time) }}</td>
             <td>{{ item.prize_category }}</td>
@@ -59,6 +59,27 @@
           </tr>
         </tbody>
       </table>
+
+      <!-- Pagination controls -->
+      <div class="pagination-controls">
+        <button
+          class="btn btn-md btn-outline-primary"
+          :disabled="currentPage === 1"
+          @click="currentPage--"
+        >
+          Prev
+        </button>
+
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+
+        <button
+          class="btn btn-md btn-outline-primary"
+          :disabled="currentPage === totalPages"
+          @click="currentPage++"
+        >
+          Next
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -76,7 +97,8 @@ export default {
       filter: '',
       sponsorFilter: '',
       selectedToggle: 'all', // 'all', 'virtual', or 'in-person'
-
+      currentPage: 1,
+      perPage: 20,
     };
   },
   computed: {
@@ -113,6 +135,16 @@ export default {
           return desc * (aValue.localeCompare(bValue));
         }
       });
+    },
+    totalPages() {
+    return this.sortedItems && Array.isArray(this.sortedItems)
+      ? Math.ceil(this.sortedItems.length / this.perPage)
+      : 1
+    },
+    paginatedItems() {
+      if (!this.sortedItems || !Array.isArray(this.sortedItems)) return []
+      const start = (this.currentPage - 1) * this.perPage
+      return this.sortedItems.slice(start, start + this.perPage)
     },
   },
   methods: {
@@ -157,6 +189,31 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../styles/base.scss";
+
+/* Style for pagination controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination-controls button {
+  color: white;
+  border: 1px solid $DARKGREEN;
+  background-color: $LIGHTGREEN;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600;
+  color: black;
+}
+
+.pagination-controls button:hover {
+  background-color: $MIDGREEN;
+}
 
 /* Style for the table */
 .table {
