@@ -4,7 +4,8 @@
     <!-- Page title -->
     <div class="overall">
       <div class="title">
-        <Header>College Park Marriott Map</Header>
+        <div style="margin-top: 1rem"></div>
+        <Header>Maps</Header>
       </div>
 
       <!-- Overall image (SVG with PNG fallback) -->

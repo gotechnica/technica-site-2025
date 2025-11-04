@@ -1,8 +1,8 @@
 <template>
+  <div style="margin-top: 1rem"></div>
+  <Header>Schedule</Header>
   <div class="schedule-page">
     <div class="container">
-      <!-- Consistent page header (keep this ONE) -->
-      <Header>Schedule</Header>
 
       <!-- Wrap the component so we can safely hide its internal header only -->
       <div class="schedule-component">
