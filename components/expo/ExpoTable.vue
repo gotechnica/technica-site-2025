@@ -80,18 +80,30 @@
         <thead>
           <tr>
             <th @click="sortTable('team_name')">
-              Team Name {{ getSortIcon('team_name') }}
+              Team Name
+              <span class="sort-icon" v-html="getSortIcon('team_name')"></span>
             </th>
             <th class="time-col" @click="sortTable('time')">
-              Time {{ getSortIcon('time') }}
+              Time <span class="sort-icon" v-html="getSortIcon('time')"></span>
             </th>
             <th @click="sortTable('prize_category')">
-              Prize Category {{ getSortIcon('prize_category') }}
+              Prize Category
+              <span
+                class="sort-icon"
+                v-html="getSortIcon('prize_category')"
+              ></span>
             </th>
             <th @click="sortTable('sponsor_name')">
-              Sponsor Name {{ getSortIcon('sponsor_name') }}
+              Sponsor Name
+              <span
+                class="sort-icon"
+                v-html="getSortIcon('sponsor_name')"
+              ></span>
             </th>
-            <th>Location</th>
+            <th @click="sortTable('location')">
+              Location
+              <span class="sort-icon" v-html="getSortIcon('location')"></span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -100,9 +112,9 @@
             <td class="time-col">{{ formatAMPM(item.time) }}</td>
             <td>{{ item.prize_category }}</td>
             <td>{{ item.sponsor_name }}</td>
-            <td >
+            <td>
               <span v-if="item.location.toString().startsWith('https')">
-                <a :href="item.location">{{ item.location }}</a>
+                <a :href="item.location">Gather</a>
               </span>
               <span v-else>{{ item.location }}</span>
             </td>
@@ -120,7 +132,9 @@
         Prev
       </button>
 
-      <span>Page {{totalPages > 0 ? currentPage: 0 }} of {{totalPages}}</span>
+      <span
+        >Page {{ totalPages > 0 ? currentPage : 0 }} of {{ totalPages }}</span
+      >
 
       <button
         class="btn btn-md btn-outline-primary"
@@ -143,6 +157,13 @@ export default {
     return {
       sortBy: 'time',
       sortDesc: true,
+      sortState: {
+        team_name: 'unsorted',
+        time: 'desc',
+        prize_category: 'unsorted',
+        sponsor_name: 'unsorted',
+        location: 'unsorted',
+      },
       filter: '',
       prizeFilter: '',
       sponsorFilter: '',
@@ -181,14 +202,27 @@ export default {
         );
       });
 
+      if (!key || (this.sortState[key] && this.sortState[key] === 'unsorted')) {
+        return filteredItems;
+      }
+
       return filteredItems.slice().sort((a, b) => {
-        const aValue = a[key];
-        const bValue = b[key];
+        // handle time specially
         if (key === 'time') {
+          const aValue = a.time;
+          const bValue = b.time;
           return desc * (new Date(bValue[0]) - new Date(aValue[0]));
-        } else {
-          return desc * aValue.localeCompare(bValue);
         }
+
+        // handle location: normalize urls to 'Gather' so urls cluster consistently
+        let aValue = '' + (a[key] || '');
+        let bValue = '' + (b[key] || '');
+        if (key === 'location') {
+          aValue = aValue.toString().startsWith('http') ? 'Gather' : aValue;
+          bValue = bValue.toString().startsWith('http') ? 'Gather' : bValue;
+        }
+
+        return desc * aValue.localeCompare(bValue);
       });
     },
     totalPages() {
@@ -204,18 +238,33 @@ export default {
   },
   methods: {
     sortTable(key) {
-      if (this.sortBy === key) {
-        this.sortDesc = !this.sortDesc;
+      const current = this.sortState[key] || 'unsorted';
+      let next = 'unsorted';
+      if (current === 'unsorted') next = 'asc';
+      else if (current === 'asc') next = 'desc';
+      else if (current === 'desc') next = 'asc';
+
+      Object.keys(this.sortState).forEach((k) => {
+        this.sortState[k] = 'unsorted';
+      });
+
+      this.sortState[key] = next;
+
+      if (next === 'unsorted') {
+        this.sortBy = null;
+        this.sortDesc = false;
       } else {
         this.sortBy = key;
-        this.sortDesc = false;
+        this.sortDesc = next === 'desc';
       }
       this.currentPage = 1;
     },
     getSortIcon(key) {
-      if (this.sortBy === key) {
-        return this.sortDesc ? '▼' : '▲';
-      }
+      const state = this.sortState[key] || 'unsorted';
+      // return HTML so we can stack the two arrows when unsorted
+      if (state === 'unsorted') return '▲<br/>▼';
+      if (state === 'asc') return '▲';
+      if (state === 'desc') return '▼';
       return '';
     },
     toggleEvents(filter) {
@@ -285,7 +334,9 @@ export default {
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   font-weight: 600;
 }
 
@@ -318,6 +369,15 @@ export default {
     cursor: pointer;
     font-weight: 600;
     user-select: none;
+  }
+
+  .sort-icon {
+    display: inline-block;
+    text-align: center;
+    line-height: 0.8;
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+    vertical-align: middle;
   }
 
   td {
@@ -426,6 +486,7 @@ a {
   margin: 0 auto;
   margin-bottom: 20px;
   border: 2px solid #efe4dc;
+  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.1);
 
   @media (max-width: 768px) {
     width: 100%; /* Make it full width on smaller screens */
@@ -440,7 +501,9 @@ a {
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   font-weight: 600;
   color: black;
 
