@@ -6,14 +6,22 @@
     <div class="container mx-auto">
       <div>
         <div>
+          <!-- Expo Has Not Started! -->
           <p class="table-description">
             A schedule of all demo times and their corresponding locations will
             published here after the submission period closes. <br/>Sit tight!
           </p>
+
+          <!-- Expo Has Ended! -->
           <p class="table-description">
-            Below is a list of the demos and corresponding locations, as well as a map with all of the in-person judging locations.
+           Expo has ended! Thank you to all that participated!
           </p>
-          <img src="../static/expo_map.svg">
+
+          <!-- Expo Message & Table -->
+          <p class="table-description">
+            Below is the list of demos and their locations, along with a map showing all in-person judging areas.
+          </p>
+          <!-- <img src="../static/expo_map.svg"> -->
           <br><br>
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
@@ -22,7 +30,6 @@
         <div style="margin-top: 5rem;"></div>
         <FAQ class="faq-section" faqId="faq" :qaList="qaList" />
       </div>
-      <h1 class="title">Expo has ended! Thank you to all that participated!</h1>
     </div>
     <div>
       <StickyButton v-if="showStickyUp" />
@@ -32,7 +39,6 @@
 </template>
 
 <script>
-import { identifierToKeywordKind } from 'typescript';
 import ExpoTable from '../components/expo/ExpoTable.vue';
 import data from '../static/final.json';
 export default {

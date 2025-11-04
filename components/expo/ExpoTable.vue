@@ -200,19 +200,18 @@ export default {
 }
 
 .pagination-controls button {
-  color: white;
-  border: 1px solid $DARKGREEN;
-  background-color: $LIGHTGREEN;
+  color: black;
+  border: 1px solid #EFE4DC;
+  background-color: #f1adcd;
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   font-weight: 600;
-  color: black;
 }
 
 .pagination-controls button:hover {
-  background-color: $MIDGREEN;
+  background-color: #E8CAE6;
 }
 
 /* Style for the table */
@@ -226,16 +225,16 @@ export default {
   }
 
   td {
-    background-color: $LIGHTGREEN;
+    background-color: #141024;
     border-top: none !important;
-    border-bottom: 1px solid $DARKGREEN;
-    color: black !important;
+    border-bottom: 1px solid #EFE4DC;
+    color: white !important;
   }
 
   th {
     border-top: none !important;
-    border-bottom: solid 1px $DARKGREEN;
-    background-color: $MIDGREEN !important;
+    border-bottom: solid 1px #EFE4DC;
+    background-color: #f1adcd !important;
     cursor: pointer;
     font-weight: 600;
     user-select: none;
@@ -251,7 +250,7 @@ export default {
 }
 
 a {
-  color: $DARKYELLOW;
+  color: #f1adcd;
 }
 
 .search-container {
@@ -280,13 +279,13 @@ a {
 .event-toggle-slider {
   display: flex;
   justify-content: space-between;
-  background-color: $LIGHTGREEN;
+  background-color: #f1adcd;
   border-radius: 25px;
   padding: 5px;
   width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
-  border: 2px solid $DARKGREEN; /* Add a border */
+  border: 2px solid #EFE4DC; 
 
   @media (max-width: 768px) {
     width: 100%; /* Make it full width on smaller screens */
@@ -297,7 +296,7 @@ a {
 
 .event-toggle-button {
   background-color: transparent; /* Transparent background */
-  border: 1px solid $DARKGREEN;
+  border: 1px solid #EFE4DC;
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
@@ -306,13 +305,13 @@ a {
   color: black;
 
   &.active {
-    background-color: $DARKGREEN;
+    background-color: #B25F8C;
     color: white;
   }
 }
 
 .event-toggle-button:hover {
-  background-color: $MIDGREEN;
+  background-color: #E8CAE6;
 }
 
 .event-toggle-slider div {
