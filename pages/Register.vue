@@ -1,8 +1,8 @@
 <template>
   <title>Register</title>
+  <div style="margin-top: 1rem"></div>
+  <Header>Registration Form</Header>
   <div id="form" class="container">
-    <br /><br />
-    <Header>Registration Form</Header>
     <!-- <p style="text-align: center;">Registration is now closed! </p>
     <p style="text-align: center;">There will be last minute check in on Saturday <b>after 11am</b> but it will be first come first serve. </p>
     <p style="text-align: center;">We look forward to seeing you there! <b>#Wonder Awaits</b> at Technica!</p>

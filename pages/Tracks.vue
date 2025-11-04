@@ -1,5 +1,5 @@
 <template>
-  <title>2025 Tracks</title>
+  <title>Tracks</title>
   <div class="container">
     <!-- HEADER BANNER -->
     <div style="margin-top: 1rem"></div>

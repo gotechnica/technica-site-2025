@@ -2,7 +2,7 @@
   <title>Fellows</title>
   <div class="container">
     <div style="margin-top: 1rem"></div>
-    <Header>2025 Virtual Fellowship Program</Header>
+    <Header>Virtual Fellowship Program</Header>
     <h4>Applications are now closed. Congrats to our fellows!</h4>
     <!-- <div class="d-flex justify-content-center button">
           <MainButton

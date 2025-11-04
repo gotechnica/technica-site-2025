@@ -1,4 +1,5 @@
 <template>
+  <title>Schedule</title>
   <div style="margin-top: 1rem"></div>
   <Header>Schedule</Header>
   <div class="schedule-page">

@@ -1,5 +1,4 @@
 <template>
-
   <title>Sponsor</title>
   <div class="container">
 

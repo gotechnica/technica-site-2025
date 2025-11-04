@@ -20,15 +20,15 @@
       <div class="col">
         <h3>Mentors</h3>
         <div class="button">
-          <VineButton
+          <!-- <VineButton
             text="Sign Up Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLSdTVezrN2UWKsXpJPDXKL7w4jA61BLbKvhYiUDdIhicpPWB_g/viewform?usp=dialog"
             img="button_cream_normal.svg"
             hover="button_cream_hover.svg"
             click="button_cream_onclick.svg"
-          />
+          /> -->
         </div>
-        <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
+        <p><b>Applications for Technica 2025 mentors are now closed! Thank you to all who signed up!</b></p>
         <ul>
           <li v-for="info in mentorInfo">
             {{ info }}
@@ -40,15 +40,15 @@
       <div class="col">
         <h3>Volunteers</h3>
         <div class="button">
-          <VineButton
+          <!-- <VineButton
             text="Sign Up Now!"
             link="https://docs.google.com/forms/d/e/1FAIpQLScosx_QuVt11v3RfSqLVlhM54Bs-MNfl6UCjLzmInK5DY8JdA/viewform?usp=dialog"
             img="button_cream_normal.svg"
             hover="button_cream_hover.svg"
             click="button_cream_onclick.svg"
-          />
+          /> -->
         </div>
-        <!-- <p style="color: #ffce64;"><b>Applications for Technica 2024 aren't open yet; check back soon!</b></p> -->
+        <p><b>Applications for Technica 2025 volunteers are now closed! Thank you to all who signed up!</b></p>
         <ul>
           <li v-for="info in volunteerInfo">
             {{ info }}
