@@ -72,7 +72,7 @@ export default {
         {
           question: 'If you are attending Expo virtually',
           answer:
-            'Find your team name by searching in the table above and join the corresponding Gather room.',
+            'Find your team name by searching in the table above and join the corresponding linked Gather room.',
         },
         {
           question: 'Judging Process',
