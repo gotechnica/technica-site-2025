@@ -116,7 +116,7 @@
               <span v-if="item.location.toString().startsWith('https')">
                 <a :href="item.location">Gather</a>
               </span>
-              <span v-else>{{ item.location }}</span>
+              <span style="white-space: pre;" v-else>{{ item.location }}</span>
             </td>
           </tr>
         </tbody>

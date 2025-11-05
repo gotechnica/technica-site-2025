@@ -23,7 +23,7 @@
             showing all in-person judging areas.
           </p>
           <!-- Expo Map -->
-          <!-- <img src="../static/expo_map.svg"> -->
+          <img src="../static/expo_map.svg" alt="Expo Map" class="expo-map" />
           <br /><br />
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
@@ -113,19 +113,21 @@ export default {
     },
     formatSchedule(schedule) {
       const items = [];
+
       const tables = {
-        Spades: { rows: 'ABCDE', cols: 6 },
-        Diamonds: { rows: 'ABCDEF', cols: 5 },
-        Hearts: { rows: 'ABCDEFGHIJK', cols: 5 },
-        Clubs: { rows: 'ABCDE', cols: 6 },
+        Vampires: { cols: 'ABCDE', rows: ['1-1', '1-2', '2-1', '2-2'] },
+        Zombies: { cols: 'ABCDE', rows: ['1-1', '1-2', '2-1', '2-2'] },
+        Skeletons: { cols: 'FGHIJ', rows: ['3-1', '3-2', '4-1', '4-2'] },
+        Ghosts: { cols: 'FGHIJ', rows: ['3-1', '3-2', '4-1', '4-2'] },
       };
+
       let tableIndex = 0;
       const tableMap = [];
       for (const [category, config] of Object.entries(tables)) {
         const { rows, cols } = config;
-        for (let row of rows) {
-          for (let col = 1; col <= cols; col++) {
-            tableMap[tableIndex] = `${category} ${row}${col}`;
+        for (let col of cols) {
+          for (let row of rows) {
+            tableMap[tableIndex] = `${category}\n${col}${row}`;
             tableIndex++;
           }
         }
@@ -148,7 +150,9 @@ export default {
             item.time = [start_time, end_time];
             item.prize_category = k.prize_category;
             item.sponsor_name = k.sponsor_name;
-            item.location = k.location ? tableMap[Number(k.location) - 1] : "https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_bFXPg1uRmGKtGNnNsDG";
+            item.location = k.location
+              ? tableMap[Number(k.location) - 1]
+              : 'https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_bFXPg1uRmGKtGNnNsDG';
             items.push(item); //boom
           }
         });
@@ -161,10 +165,11 @@ export default {
 
 <style lang="scss" scoped>
 @import './styles/base.css';
-.title {
-  margin: 3.5rem 0 1.5rem 0;
-  text-align: center;
-  color: $DARKPURPLE;
+.expo-map {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .faq-section {
   margin-bottom: 10rem;
