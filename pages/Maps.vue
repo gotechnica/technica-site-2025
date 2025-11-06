@@ -8,17 +8,15 @@
         <Header>Maps</Header>
       </div>
 
-      <!-- Overall image (SVG with PNG fallback) -->
-      <div class="center">
-        <picture>
-          <source srcset="/maps/hacker_map_opencenter.svg" type="image/svg+xml" />
-          <img
-            class="map"
-            src="/maps/hacker_map_opencenter.png"
-            alt="Technica 2025 Overall Map"
-          />
-        </picture>
-      </div>
+      <!-- PNG venue floor plan (centered) -->
+      <section class="venue-svg">
+        <h3>Venue Floor Plan — College Park Marriott</h3>
+        <img
+          class="venue-map"
+          src="/maps/hacker_map_opencenter.png"
+          alt="College Park Marriott venue floor plan"
+        />
+      </section>
     </div>
 
     <!-- CTA links -->
@@ -43,16 +41,6 @@
       </div>
     </section>
 
-    <!-- PNG venue floor plan (centered) -->
-    <section class="venue-svg">
-      <h3>Venue Floor Plan — College Park Marriott</h3>
-      <img
-        class="venue-map"
-        src="/maps/hacker_map_opencenter.png"
-        alt="College Park Marriott venue floor plan"
-      />
-    </section>
-
     <!-- Embedded Google Map -->
     <section class="venue">
       <div class="map-embed">
@@ -67,8 +55,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 /* === 2025 Color Theme === */
@@ -181,7 +168,11 @@
 }
 
 .link-button.outline:hover {
-  background: linear-gradient(135deg, rgba(241, 173, 205, 0.15), rgba(150, 183, 255, 0.15));
+  background: linear-gradient(
+    135deg,
+    rgba(241, 173, 205, 0.15),
+    rgba(150, 183, 255, 0.15)
+  );
   border-color: #f1adcd;
   transform: scale(1.05);
 }
@@ -198,14 +189,15 @@
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 0 8px rgba(241, 173, 205, 0.6),
-               0 0 20px rgba(150, 183, 255, 0.4);
+  text-shadow:
+    0 0 8px rgba(241, 173, 205, 0.6),
+    0 0 20px rgba(150, 183, 255, 0.4);
 }
 
 .venue-map {
   display: block;
-  margin: 0 auto 0.5rem;     /* center horizontally */
-  width: min(1080px, 95%);   /* match the rest of the page’s max width */
+  margin: 0 auto 0.5rem; /* center horizontally */
+  width: min(1080px, 95%); /* match the rest of the page’s max width */
   height: auto;
   border-radius: 12px;
   border: 1px solid rgba(202, 218, 234, 0.35);
