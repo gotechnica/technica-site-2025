@@ -1,4 +1,5 @@
 <template>
+  <title>Meet the Team</title>
   <div class="container">
     <div class="box">
       <Header class="heading">Co-Execs</Header>

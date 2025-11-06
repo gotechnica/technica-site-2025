@@ -2,7 +2,7 @@
   <title>Travel</title>
   <div style="margin-top: 1rem"></div>
   <Header>Travel</Header>
-  <h3 style="color:white;">Travel reimbursement applications now open! Apply by 11:59 EST on October 31st</h3>
+  <!-- <h3 style="color:white;">Travel reimbursement applications now open! Apply by 11:59 EST on October 31st</h3>
   <div class="d-flex justify-content-center button">
     <WebButton
       text="Apply Now!"
@@ -11,7 +11,7 @@
       hover="button_purple_hover.svg"
       click="button_purple_onclick.svg"
       />
-  </div>
+  </div> -->
   <div class="travel-container">
     <div class="travel-header section">
       <div class="process-blurb">

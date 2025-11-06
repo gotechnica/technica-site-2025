@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border: none;
+  background-color: #aba0df;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 40px rgba(150, 120, 255, 0.3), 0 0 20px rgba(100, 120, 255, 0.2);
+  background-color: #aba0df;
+  color: black;
+  transform: scale(1.02);
+}
