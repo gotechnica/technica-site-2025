@@ -105,7 +105,7 @@ const { scrollToAnchor } = useAnchorScroll({
     #timer-container {
         position: relative;
         top: 50%; 
-        left: 51%;
+        left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
@@ -119,7 +119,8 @@ const { scrollToAnchor } = useAnchorScroll({
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        margin: 0 20px; 
+        justify-content: flex-start;
+        margin: 0 .5rem; 
     }
 
     .countdown {
@@ -132,13 +133,13 @@ const { scrollToAnchor } = useAnchorScroll({
             font-size: 7vw; 
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
+            line-height: 1;          /* keeps digits compact vertically */
+            margin-bottom: 0.25em;
     }
 
     .label{
-        // font-size: 2rem;
-        font-size: 0.35em;
+        font-size: 2vw;
         color: white;
-        margin-top: -1rem;
         font-family: 'Poppins', sans-serif;
     }
 
@@ -146,13 +147,13 @@ const { scrollToAnchor } = useAnchorScroll({
         text-shadow: 2px 5px 2px black;
     }  
 
-    @media screen and (max-width: 1048px) {
-      
+    @media screen and (max-width: 1100px) {
         
+        #wrapper {
+            margin-top: -70%;
+            margin-bottom: 10%;
+        }
         
-    }
-
-    @media screen and (max-width: 768px) {
         #timer-container {
             font-size: 3rem; 
         }
@@ -162,21 +163,49 @@ const { scrollToAnchor } = useAnchorScroll({
         }
 
         .label {
-            font-size: 2.5vw; 
+            font-size: 2vw; 
+        }
+        
+        
+    }
+
+    @media screen and (max-width: 768px) {
+        
+        #wrapper {
+            margin-top: -120%;
+            margin-bottom: -50%;
+        }
+        
+        #timer-container {
+            font-size: 3rem; 
+        }
+
+        .time {
+            font-size: 7vw; 
+        }
+
+        .label {
+            font-size: 2vw; 
         }
     }
 
     @media screen and (max-width: 500px) {
+        
+        #wrapper {
+            margin-top: -200%;
+            margin-bottom: -80%;
+        }
+
         #timer-container {
             font-size: 2rem; 
         }
 
         .time {
-            font-size: 10vw; 
+            font-size: 6vw; 
         }
 
         .label {
-            font-size: 3vw; 
+            font-size: 2vw; 
         }
     }
     

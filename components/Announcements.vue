@@ -161,7 +161,6 @@
     margin-top: -2px;
     list-style: none;
     border-radius: 10px; 
-    width: 60%;
   }
   
   .announcement-bubble {
