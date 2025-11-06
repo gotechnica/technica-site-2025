@@ -119,7 +119,6 @@
 }
 
 .center {
-  margin-right: 25vw;
   display: flex;
   justify-content: center;
 

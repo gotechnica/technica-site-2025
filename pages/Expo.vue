@@ -23,7 +23,7 @@
             showing all in-person judging areas.
           </p>
           <!-- Expo Map -->
-          <img src="../static/expo_map.svg" alt="Expo Map" class="expo-map" />
+          <img src="/maps/hacker_map_opencenter.svg" alt="Expo Map" class="expo-map" />
           <br /><br />
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
