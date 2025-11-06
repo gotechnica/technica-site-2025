@@ -23,7 +23,11 @@
             showing all in-person judging areas.
           </p>
           <!-- Expo Map -->
-          <img src="/maps/hacker_map_opencenter.svg" alt="Expo Map" class="expo-map" />
+          <img
+            src="/maps/hacker_map_opencenter.svg"
+            alt="Expo Map"
+            class="expo-map"
+          />
           <br /><br />
           <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
@@ -150,9 +154,13 @@ export default {
             item.time = [start_time, end_time];
             item.prize_category = k.prize_category;
             item.sponsor_name = k.sponsor_name;
-            item.location = k.location
-              ? tableMap[Number(k.location) - 1]
-              : 'https://app.gather.town/app/QAq8ZvP0XrnJanvN/Technica%202024?spawnToken=_bFXPg1uRmGKtGNnNsDG';
+            item.location =
+              k.location != null && !isNaN(Number(k.location))
+                ? tableMap[Number(k.location) - 1]
+                : k.location != null
+                ? k.location.toString()
+                : 'Error';
+
             items.push(item); //boom
           }
         });
