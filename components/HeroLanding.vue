@@ -55,8 +55,13 @@
       <div id="popup-inner" class="mobile">
         <h3>What is Bring Your Ideas to Life?</h3>
         <p>
-          We are thrilled to announce the theme for this fall's hackathon:
-          <b>Bring Your Ideas to Life!</b>
+          Get ready for a thrilling weekend on November 15–16!
+          <br /><br />
+          Technica returns with this year's theme:
+          <b>Bring Your Ideas to Life!</b> To celebrate the Halloween season,
+          we’re inviting you to join us on a spooky night where creativity
+          awakens, ideas take shape in the shadows, and your boldest projects
+          come alive. This is your chance to let your imagination run wild!
         </p>
       </div>
     </div>
@@ -66,8 +71,12 @@
       <div id="popup-inner">
         <h3>What is Bring Your Ideas to Life?</h3>
         <p>
-          We are thrilled to announce the theme for this fall's hackathon:
-          <b>Bring Your Ideas to Life!</b>
+          Get ready for a thrilling weekend on November 15–16! Technica returns
+          with this year's theme:
+          <b>Bring Your Ideas to Life!</b> To celebrate the Halloween season,
+          we’re inviting you to join us on a spooky night where creativity
+          awakens, ideas take shape in the shadows, and your boldest projects
+          come alive. This is your chance to let your imagination run wild!
         </p>
       </div>
     </div>
@@ -110,7 +119,7 @@ const TogglePopup = () => {
 <style scoped lang="scss">
 #wrapper {
   background-image: url('/hero/hero.svg');
-  background-color: rgb(37,35,62);
+  background-color: rgb(37, 35, 62);
   background-attachment: scroll;
   background-size: 100vw;
   background-position: right;
@@ -164,7 +173,7 @@ const TogglePopup = () => {
 
 .outline {
   color: white;
-  -webkit-text-stroke: .8px;
+  -webkit-text-stroke: 0.8px;
   -webkit-text-stroke-color: black;
   text-shadow: 2px 5px 2px black;
 }
@@ -177,17 +186,17 @@ const TogglePopup = () => {
 h1.tagline {
   font-weight: 400;
   font-size: 2rem;
-  -webkit-text-stroke: .8px;
+  -webkit-text-stroke: 0.8px;
   -webkit-text-stroke-color: black;
   font-family: 'Pippins', sans-serif;
 }
 
 #popup {
- margin-top: -30%;
- width: 100%;
- resize: both;
- justify-items: right;
- margin-top: -10vw;
+  margin-top: -30%;
+  width: 100%;
+  resize: both;
+  justify-items: right;
+  margin-top: -10vw;
 }
 
 #popup-inner h3 {
