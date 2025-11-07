@@ -1,8 +1,8 @@
 <template>
+  <title>Ambassadors</title>
+  <div style="margin-top: 1rem"></div>
+  <Header>Expo</Header>s
   <div>
-    <div style="margin-top: 5rem"></div>
-    <Header>Expo</Header>
-    <div style="margin-top: 5rem"></div>
     <div class="container mx-auto">
       <div>
         <div>
