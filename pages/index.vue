@@ -10,13 +10,13 @@
     </div>
 
     <!-- DAY OF! -->
-    <div class="container timer">
-      <!-- <Timer /> -->
+    <!-- <div class="container timer">
+      <Timer />
     </div>
 
     <div class="container">
-      <!-- <Announcements /> -->
-    </div>
+      <Announcements />
+    </div> -->
 
     <!-- About Technica Section -->
     <div class="container">

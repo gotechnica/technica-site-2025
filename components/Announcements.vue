@@ -1,10 +1,8 @@
 <template>
+  <Header>Announcements</Header>
     <div class="announcements-container">
       <div class="announcements-box"> 
         <div class="announcements-header-container">
-          <img src="/public/hero/left-trumpet.png" alt="Left Image" class="header-image" />
-          <h2 class="announcements-header">Announcements</h2>
-          <img src="/public/hero/right-trumpet.png" alt="Right Image" class="header-image" />
         </div>
   
         <ul class="announcement-list">
@@ -18,9 +16,15 @@
           </li>
         </ul>
         <div class="button-container">
-          <button @click="toggleShowMore" class="show-more-button">
-            {{ isExpanded ? 'Show Less' : 'Show More' }}
-          </button>
+          <div class="button-container">
+            <WebButton 
+              :text="isExpanded ? 'Show Less' : 'Show More'"
+              img="button_purple_normal.svg"
+              hover="button_purple_hover.svg"
+              click="button_purple_onclick.svg"
+              @click="toggleShowMore"
+            />
+          </div>
         </div>
       </div>
   
@@ -51,7 +55,6 @@
     import { ref, computed } from 'vue';
     
     const announcements = ref([
-        { title: "Technica App", text: "Calling all Android users! You can download the Technica app in the Google Play Store!" },
         { title: "Welcome!", text: "No major announcements yet. The timer will start when hacking begins!" },
     ]);
     
@@ -114,11 +117,17 @@
   
   
   .announcements-box {
-    background-color: #69B7AE; 
-    border: 6px solid #09665B;
-    border-radius: 10px;
-    padding: 1rem;
+    background-color: #1a1b27; 
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
     width: 90%; 
+
+    border: 2px solid #ffffff;
+    box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(150, 120, 255, 0.3),
+    0 0 60px rgba(100, 120, 255, 0.2);
   }
   
     .announcements-header-container {
@@ -152,7 +161,6 @@
     margin-top: -2px;
     list-style: none;
     border-radius: 10px; 
-    width: 60%;
   }
   
   .announcement-bubble {
@@ -197,13 +205,12 @@
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     color: white;
-    text-shadow: 2px 2px 0 #09665B; 
   }
   
   .button-container {
     display: flex;
     justify-content: center; 
-    margin-top: 1rem; 
+    margin-bottom: -1rem;
   }
   
   .show-more-button {

@@ -3,7 +3,7 @@
     <div class="announcements-box"> 
       <div class="announcements-header-container">
         <img src="/public/hero/left-trumpet.png" alt="Left Image" class="header-image" />
-        <h2 class="announcements-header">Announcements</h2>
+        <Header>Announcements</Header>
         <img src="/public/hero/right-trumpet.png" alt="Right Image" class="header-image" />
       </div>
 
