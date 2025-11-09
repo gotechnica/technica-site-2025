@@ -119,7 +119,6 @@ export default {
     if (!user || !user.Item) {
       this.status = 'User not found'
       this.dataLoaded = false
-      console.log("can't find him! get the redbull")
     } else {
       this.status = 'Verify hacker info'
       this.items = [
@@ -151,8 +150,6 @@ export default {
           email: this.email,
           firstName: this.firstName
         })
-        console.log(this.email)
-        console.log(this.firstName)
       } catch (error) {
         this.status = 'User not found'
         console.log(error)
@@ -170,8 +167,6 @@ export default {
       this.items = null;
       this.status = 'Ready to look up user'
       console.log("Writing var check: ")
-      console.log(this.routeEmail);
-      console.log(this.routeFirstName)
 
       this.$router.push({
         path: "write",
