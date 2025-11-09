@@ -3,18 +3,18 @@
   <div style="margin-top: 1rem"></div>
   <Header>Registration Form</Header>
   <div id="form" class="container">
-    <!-- <p style="text-align: center;">Registration is now closed! </p>
+    <p style="text-align: center;">Registration is now closed! </p>
     <p style="text-align: center;">There will be last minute check in on Saturday <b>after 11am</b> but it will be first come first serve. </p>
-    <p style="text-align: center;">We look forward to seeing you there! <b>#Wonder Awaits</b> at Technica!</p>
-    <br><br> -->
+    <p style="text-align: center;">We look forward to seeing you there! We can't wait to see you <b>#Bring Your Ideas To Life</b> at Technica!</p>
+    <br><br>
 
-    <Form
+    <!-- <Form
       v-slot="{ values, errors }"
       :validation-schema="validationSchema"
       @submit="registerUser"
-    >
+    > -->
       <!-- HACKER INFO -->
-      <h1>Hacker Info</h1>
+      <!-- <h1>Hacker Info</h1>
       <div class="row gx-5">
         <div class="col-m d-4 mb-4">
           <div>
@@ -217,7 +217,7 @@
             />
             <ErrorMessage :name="'parentEmail'" class="invalid-feedback" />
           </div>
-        </div>
+        </div> -->
         <!-- <div class="col-md-6 mb-4">
           <div>
             <label class="form-label">Are you an Alumni?*</label>
@@ -231,10 +231,10 @@
             <ErrorMessage :name="'isAlumni'" class="invalid-feedback" />
           </div>
         </div> -->
-      </div>
+      <!-- </div> -->
 
       <!-- EDUCATION -->
-      <h1> Education </h1>
+      <!-- <h1> Education </h1>
       <div class="row gx-5">
         <div class="col-md-4 mb-4">
           <div class="mb-4">
@@ -307,10 +307,10 @@
             <ErrorMessage :name="'major'" class="invalid-feedback" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- LOCATION -->
-      <h1>Location</h1>
+      <!-- <h1>Location</h1>
       <p>
         Please enter the place you'll be departing from for Technica. For
         hackers in the U.S. only, select zip codes will be eligible to apply for
@@ -367,10 +367,10 @@
             <ErrorMessage :name="'zipcode'" class="invalid-feedback" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- TRACKS -->
-      <h1>Tracks</h1>
+      <!-- <h1>Tracks</h1>
       <p class="description">
         Tracks accommodate a hacker's interests and skill level and can provide
         a more guided hackathon experience. Visit the
@@ -546,10 +546,10 @@
             <ErrorMessage :name="'topics'" class="invalid-feedback" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- EVENT INFO -->
-      <h1>Event Info</h1>
+      <!-- <h1>Event Info</h1>
 
       <div class="row gx-5">
         <div class="col-md-6 mb-4">
@@ -720,10 +720,10 @@
             with your accommodation request.
           </p>
         </div>
-      </div>
+      </div> -->
 
       <!-- RULES AND PRIVACY POLICY -->
-      <h1>Rules and Privacy Policies</h1>
+      <!-- <h1>Rules and Privacy Policies</h1>
 
       <div class="form-check mt-4">
         <Field
@@ -857,12 +857,12 @@
           I authorize MLH to send me occasional emails about relevant events,
           career opportunities, and community announcements.
         </label>
-      </div>
+      </div> -->
 
       <!-- {{ values }}
       {{errors}} -->
 
-      <button
+      <!-- <button
         type="submit"
         text="Submit"
         class="btn mt-4"
@@ -883,7 +883,7 @@
           sure you've filled out all the required fields!
         </p>
       </div>
-    </Form>
+    </Form> -->
   </div>
   <StickyButton></StickyButton>
 </template>
