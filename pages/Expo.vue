@@ -146,10 +146,14 @@ export default {
           ) {
             const item = {};
             item.team_name = k.team_name;
-            let start_time = new Date(k.start_time); //putting actual date object in
-            start_time.setHours(start_time.getHours());
-            let end_time = new Date(k.end_time);
-            end_time.setHours(end_time.getHours());
+            let start_time = k.start_time !== null ? new Date(k.start_time) : ""; //putting actual date object in
+            if (start_time != "") {
+              start_time.setHours(start_time.getHours());
+            }
+            let end_time = k.end_time !== null ? new Date(k.end_time) : "";
+            if (end_time != "") {
+              end_time.setHours(end_time.getHours());
+            }
             item.time = [start_time, end_time];
             item.prize_category = k.prize_category;
             item.sponsor_name = k.sponsor_name;
@@ -157,8 +161,8 @@ export default {
               k.location != null && !isNaN(Number(k.location))
                 ? tableMap[Number(k.location) - 1]
                 : k.location != null
-                  ? k.location.toString()
-                  : 'Error';
+                ? k.location.toString()
+                : 'Error';
 
             items.push(item); //boom
           }
