@@ -111,12 +111,12 @@
             <td>{{ item.team_name }}</td>
             <td class="time-col">{{ formatAMPM(item.time) }}</td>
             <td>{{ item.prize_category }}</td>
-            <td>{{ item.sponsor_name }}</td>
+            <td style="white-space: pre">{{ item.sponsor_name }}</td>
             <td>
               <span v-if="item.location.toString().startsWith('https')">
                 <a :href="item.location">Gather</a>
               </span>
-              <span style="white-space: pre;" v-else>{{ item.location }}</span>
+              <span style="white-space: pre" v-else>{{ item.location }}</span>
             </td>
           </tr>
         </tbody>
@@ -194,7 +194,8 @@ export default {
           item.location.toString().startsWith('https');
         const inPersonFilter =
           this.selectedToggle === 'in-person' &&
-          !item.location.toString().startsWith('https');
+          !item.location.toString().startsWith('https') &&
+          item.location !== 'Error';
 
         return (
           nameFilter &&
@@ -334,9 +335,7 @@ export default {
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   font-weight: 600;
 }
 
@@ -501,9 +500,7 @@ a {
   border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   font-weight: 600;
   color: black;
 
