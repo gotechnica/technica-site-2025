@@ -30,8 +30,8 @@ const isMobile = computed(() => {
 
 //Timer
 
-const startTime = new Date('2024-10-26T12:00:00'); 
-const endTime = new Date('2024-10-27T12:00:00');
+const startTime = new Date('2025-11-15T12:00:00-05:00'); 
+const endTime = new Date('2025-11-16T12:00:00-05:00');
 
 const days = ref('00');
 const hours = ref('00');
