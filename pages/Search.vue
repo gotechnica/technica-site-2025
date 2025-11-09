@@ -21,7 +21,7 @@
             :key="index"
             @click="selectHacker(result)"
           >
-            {{ result.firstName }} {{ result.lastName }} – {{ result.email }}
+            {{ result.firstName }} {{ result.lastName }} | {{ result.email }}
           </li>
         </ul>
     </div>
@@ -57,22 +57,29 @@ export default{
         const LAMBDA_URL = 'https://3m6dhx8k20.execute-api.us-east-1.amazonaws.com/search'
 
         let searchTimeout = null
+        let controller = null
 
         watch(searchQuery, (newValue) => {
             clearTimeout(searchTimeout)
             if (!newValue){
-                console.log("Nothing")
                 results.value = []
                 return
             }
 
             searchTimeout = setTimeout(() => {
-                console.log("performing search on " + newValue)
                 performSearch(newValue)
             }, 400)
         })
 
         async function performSearch(query){
+            //Abort previous request, avoid racing conditions
+            if (controller){
+                controller.abort()
+            }
+
+            controller = new AbortController()
+            const signal = controller.signal
+
             try{
                 loading.value = true
 
@@ -83,7 +90,7 @@ export default{
                 // })
 
                 const url = `${LAMBDA_URL}?q=${encodeURIComponent(query)}`
-                const response = await fetch(url)
+                const response = await fetch(url, {signal})
                 const data = await response.json()
                 results.value = data || []
             }
@@ -165,6 +172,7 @@ export default{
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .title p{
@@ -175,8 +183,8 @@ export default{
 }
 
 .title input{
-    max-width: 90vw;
     width: 600px;
+    max-width: 90%;
     color: #1a1b27;
 }
 
@@ -205,6 +213,12 @@ export default{
 .result-list li:hover {
   background-color: white;
   transform: scale(1.05)
+}
+
+@media only screen and (max-width: 600px){
+    .title input{
+        width: 100%;
+    }
 }
 
 </style>
