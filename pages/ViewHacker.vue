@@ -16,8 +16,8 @@
     <div class="loading" v-if="!dataLoaded">
         <h2 class = "status-loading">Status: {{status}}</h2>
         <div class = "buttons">
-        <button class="btn" @click="goToScan">Re-scan QR code</button>
-        <button class = "btn manual" @click="goToManualSearch">Manual Search</button>
+          <button class="btn" @click="goToScan">Re-scan QR code</button>
+          <button class = "btn manual" @click="goToManualSearch">Manual Search</button>
         </div>
      </div>
     </div>

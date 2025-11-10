@@ -11,26 +11,28 @@
           placeholder="Enter first or last name..."
         />
       </div>
-      <div v-if="loading" class="mt-3">Searching...</div>
+      <div v-if="loading" class="mt-3 loading">Searching...</div>
 
       <div v-if = "results.length && !loading" class = "results">
         <h3>Matches Found: Select a Hacker</h3>
-        <ul class="result-list mt-3">
-          <li
-            v-for="(result, index) in results"
-            :key="index"
-            @click="selectHacker(result)"
-          >
-            {{ result.firstName }} {{ result.lastName }} | {{ result.email }}
-          </li>
-        </ul>
+        <div class = "list">
+            <ul class="result-list mt-3">
+            <li
+                v-for="(result, index) in results"
+                :key="index"
+                @click="selectHacker(result)"
+            >
+                {{ result.firstName }} {{ result.lastName }} | {{ result.email }}
+            </li>
+            </ul>
+        </div>
     </div>
 
-        <p v-if="!results.length && !loading && searchQuery.length > 1" class="mt-3">
+        <p v-if="!results.length && !loading && searchQuery.length > 1" class="mt-3 loading-final">
           No results found.
         </p>
 
-        <button class="btn mt-4" @click="goBack">Back to Scan</button>
+        <button class="btn mt-4 back" @click="goBack">Back to Scan</button>
     </div>
   </div>
 </template>
@@ -68,7 +70,7 @@ export default{
 
             searchTimeout = setTimeout(() => {
                 performSearch(newValue)
-            }, 400)
+            }, 250)
         })
 
         async function performSearch(query){
@@ -154,6 +156,10 @@ export default{
   justify-content: center;
 }
 
+.loading{
+    color: white;
+}
+
 .title *{
     color: white;
     margin: 1rem 0;
@@ -173,6 +179,7 @@ export default{
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  padding-bottom: 0;
 }
 
 .title p{
@@ -188,17 +195,28 @@ export default{
     color: #1a1b27;
 }
 
+
 .results h3{
     color: white;
     font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .result-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 95%;
 }
 
 .result-list li {
@@ -208,6 +226,7 @@ export default{
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  width: 100%;
 }
 
 .result-list li:hover {
@@ -215,7 +234,15 @@ export default{
   transform: scale(1.05)
 }
 
+.back{
+    margin-bottom: 2rem;
+}
+
 @media only screen and (max-width: 600px){
+    *{
+        font-size: .95rem;
+    }
+
     .title input{
         width: 100%;
     }
