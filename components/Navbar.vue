@@ -81,17 +81,17 @@ export default {
         // { dropdown: false, name: 'Tracks', path: '/tracks' },
         { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
         // { dropdown: false, name: 'Sponsors', path: '/sponsor'},
-        { dropdown: false, name: 'Annual Report', path: '/report'},
-        {
-          dropdown: true,
-          name: 'Programs',
-          showDropdown: false,
-          items: [
-            { name: 'Fellows', path: '/fellows' },
-            { name: 'Ambassadors', path: '/ambassadors' },
-            // { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
-          ]
-        },
+        // { dropdown: false, name: 'Annual Report', path: '/report'},
+        // {
+        //   dropdown: true,
+        //   name: 'Programs',
+        //   showDropdown: false,
+        //   items: [
+        //     { name: 'Fellows', path: '/fellows' },
+        //     { name: 'Ambassadors', path: '/ambassadors' },
+        //     { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
+        //   ]
+        // },
 
         // { dropdown: false, name: 'Check In', path:'/checkin'},
 ]
