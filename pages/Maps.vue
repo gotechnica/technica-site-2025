@@ -226,16 +226,12 @@
   image-rendering: auto;
 }
 
-/* Smaller / less-tall maps (ground + upper floors) */
 .venue-map-small {
   display: block;
   margin: 0 auto 1.5rem;
-
-  /* Only control width — never height for tall maps */
   width: min(650px, 85%);
   height: auto;
   object-fit: contain;
-
   border-radius: 12px;
   border: 1px solid rgba(202, 218, 234, 0.35);
   box-shadow: 0 6px 20px rgba(202, 218, 234, 0.15);
