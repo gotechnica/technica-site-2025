@@ -17,6 +17,26 @@
           alt="College Park Marriott venue floor plan"
         />
       </section>
+
+       <!-- Ground Floor Map -->
+      <section class="venue-svg">
+        <h3>Ground Floor Layout</h3>
+        <img
+          class="venue-map-small"
+          src="/maps/groundfloor.png"
+          alt="College Park Marriott ground floor layout"
+        />
+      </section>
+
+        <!-- Upper Floor Map -->
+      <section class="venue-svg">
+        <h3>Upper Floor Layout</h3>
+        <img
+          class="venue-map-small"
+          src="/maps/upperfloor.png"
+          alt="College Park Marriott upper floor layout"
+        />
+      </section>
     </div>
 
     <!-- CTA links -->
@@ -205,6 +225,19 @@
   background: rgba(255, 255, 255, 0.01);
   image-rendering: auto;
 }
+
+.venue-map-small {
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: min(650px, 85%);
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(202, 218, 234, 0.35);
+  box-shadow: 0 6px 20px rgba(202, 218, 234, 0.15);
+  background: rgba(255, 255, 255, 0.01);
+}
+
 
 /* Embedded Google Map */
 .map-embed {

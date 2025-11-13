@@ -32,6 +32,7 @@
     "axios": "^1.7.7",
     "better-sqlite3": "^11.10.0",
     "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.13.1",
     "cookie-universal-nuxt": "^2.2.2",
     "country-region-data": "^2.7.0",
     "d3": "^7.9.0",
