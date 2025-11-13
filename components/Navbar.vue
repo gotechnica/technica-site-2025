@@ -67,6 +67,7 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/'},
+        { dropdown: false, name: 'Schedule', path: './schedule'},
         // { dropdown: false, name: 'Register', path: './register'},
         // { dropdown: false, name: 'Gather', path: './gather'},
         // { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
