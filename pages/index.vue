@@ -143,7 +143,7 @@ const qaList = [
   {
     question: 'What do I need to register for Technica?',
     answer:
-      'Registration is not open yet, so feel free to fill out our pre-registration form to be notified when it goes live!',
+      'Online registration is now closed, and there are first come first serve walk-in check-ins starting at 11 am on Saturday!',
   },
   {
     question: 'Are there any COVID-19 policies?',
