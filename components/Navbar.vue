@@ -67,25 +67,31 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/'},
-        { dropdown: false, name: 'Register', path: './register'},
-        // { dropdown: false, name: 'Gather', path: './gather'},
+        { dropdown: false, name: 'Slack', path: 'https://join.slack.com/t/technica2025/shared_invite/zt-3htqxwud3-71YR4qbjtICzlf6BmWQviA'},
+        { dropdown: false, name: 'Devpost', path: 'https://technica-2025.devpost.com/'},
+        { dropdown: false, name: 'Maps', path: './maps'},
+        { dropdown: false, name: 'Schedule', path: './schedule'},
+        { dropdown: false, name: 'Gather', path: './gather'},
+        { dropdown: false, name: 'Expo', path: './expo'},
+        { dropdown: false, name: 'Incident Report Form', path:'https://forms.gle/HJ5s6KqxkokE5efJA'},
+        { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
+        // { dropdown: false, name: 'Register', path: './register'},
         // { dropdown: false, name: 'Donate', path: 'http://www.paypal.com/donate/?hosted_button_id=83S778CAUXCLS'},
-        { dropdown: false, name: 'Travel', path: '/travel' },
-        { dropdown: false, name: 'Tracks', path: '/tracks' },
+        // { dropdown: false, name: 'Travel', path: '/travel' },
+        // { dropdown: false, name: 'Tracks', path: '/tracks' },
         { dropdown: false, name: 'Meet the Team', path:'/meet-the-team'},
         // { dropdown: false, name: 'Sponsors', path: '/sponsor'},
-        { dropdown: false, name: 'Data Rights', path:'https://docs.google.com/forms/d/e/1FAIpQLSd66NhgTJHy4UOim73TOx76U1xU7A15thwVvgpwUqmgXYqT8w/viewform'},
-        { dropdown: false, name: 'Annual Report', path: '/report'},
-        {
-          dropdown: true,
-          name: 'Programs',
-          showDropdown: false,
-          items: [
-            { name: 'Fellows', path: '/fellows' },
-            { name: 'Ambassadors', path: '/ambassadors' },
-            { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
-          ]
-        },
+        // { dropdown: false, name: 'Annual Report', path: '/report'},
+        // {
+        //   dropdown: true,
+        //   name: 'Programs',
+        //   showDropdown: false,
+        //   items: [
+        //     { name: 'Fellows', path: '/fellows' },
+        //     { name: 'Ambassadors', path: '/ambassadors' },
+        //     { name: 'Mentors & Volunteers', path: '/mentors-volunteers' }
+        //   ]
+        // },
 
         // { dropdown: false, name: 'Check In', path:'/checkin'},
 ]

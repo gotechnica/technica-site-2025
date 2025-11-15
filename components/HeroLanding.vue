@@ -26,13 +26,13 @@
       </div>
       <div id="dummy"></div>
       <div class="buttons">
-        <WebButton
+        <!-- <WebButton
           text="Register"
           link="/register"
           img="button_blue_normal.svg"
           hover="button_blue_hover.svg"
           click="button_blue_onclick.svg"
-        />
+        /> -->
         <!-- <WebButton
           text="Pre-register now!"
           link="https://forms.gle/ue9gJfZThYRurVzg8"

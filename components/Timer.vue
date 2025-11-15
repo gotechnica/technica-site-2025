@@ -30,8 +30,8 @@ const isMobile = computed(() => {
 
 //Timer
 
-const startTime = new Date('2024-10-26T12:00:00'); 
-const endTime = new Date('2024-10-27T12:00:00');
+const startTime = new Date('2025-11-15T08:00:00-05:00'); 
+const endTime = new Date('2025-11-16T12:00:00-05:00');
 
 const days = ref('00');
 const hours = ref('00');
@@ -45,7 +45,7 @@ onMounted(() => {
         if (now >= startTime && now <= endTime) {
             const timeDiff = endTime.getTime() - now.getTime();
             
-            hours.value = String(Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+            hours.value = String(Math.floor(timeDiff / (1000 * 60 * 60))).padStart(2, '0');
             minutes.value = String(Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
             seconds.value = String(Math.floor((timeDiff % (1000 * 60)) / 1000)).padStart(2, '0');
         } else if (now > endTime) {
