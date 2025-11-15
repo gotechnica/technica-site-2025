@@ -3,7 +3,7 @@
   <title>Technica</title>
   <div class="main-body" :style="{ backgroundColor: '#272341' }">
     <!-- Hero's Section -->
-    <HeroLanding class="hero-section" />
+    <!-- <HeroLanding class="hero-section" /> -->
 
     <div class="containers after">
       <!-- <h1>Thank You For Coming!</h1> -->
