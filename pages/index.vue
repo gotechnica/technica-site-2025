@@ -1,6 +1,6 @@
 <template>
   <!-- Modify page title in "useHead({ title: })" -->
-  <!-- <title>Technica Home</title> -->
+  <title>Technica</title>
   <div class="main-body" :style="{ backgroundColor: '#272341' }">
     <!-- Hero's Section -->
     <HeroLanding class="hero-section" />
@@ -10,62 +10,63 @@
     </div>
 
     <!-- DAY OF! -->
-    <!-- <div class="container timer">
+    <div class="container timer">
       <Timer />
     </div>
 
     <div class="container">
       <Announcements />
-    </div> -->
+    </div>
 
     <!-- About Technica Section -->
-    <div class="container">
+    <!-- <div class="container">
       <About />
     </div>
 
     <div class="container">
       <Achievements />
-    </div>
+    </div> -->
 
     <!-- What to do at Technica Section -->
-    <div class="whatToDo">
+    <!-- <div class="whatToDo">
       <WhatToDo />
-    </div>
+    </div> -->
 
     <!-- Hybrid Environment Section -->
-    <div class="container hybrid">
+    <!-- <div class="container hybrid">
       <HybridEnv />
-    </div>
+    </div> -->
 
     <!-- Hear From Past Hackers -->
-    <div class="container">
+    <!-- <div class="container">
       <TestimoniesCarousel class="main-section" />
-    </div>
+    </div> -->
 
     <!-- Tracks Section -->
-    <div class="container">
+    <!-- <div class="container">
       <Tracks />
-    </div>
+    </div> -->
 
     <!-- Additional Info Section -->
-    <div class="container">
+    <!-- <div class="container">
       <AdditionalInfo />
-    </div>
+    </div> -->
 
     <!--Keynote Speakers Section -->
     <div class="container">
       <KeynoteSpeakers />
     </div>
+
     <!-- Sponsors Section -->
     <div class="container">
       <SponsorsSponsors />
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
       <Header v-if="width <= 768" class="faq">FAQ</Header>
       <Header v-else class="faq">Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
-    </div>
+    </div> -->
 
     <!-- <div class="container">
       <TeamsCarousel/>
