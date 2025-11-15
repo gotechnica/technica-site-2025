@@ -80,7 +80,7 @@ export default {
         {
           question: 'Judging Process',
           answer:
-            'Demos are 5 minutes total: 2 minutes to present your project and 3 minutes for Q&A with judges. Judges will score each hack based on the category criteria, and winners will be chosen at the end of Expo.',
+            'Demos are 4 minutes total: 2 minutes to present your project and 2 minutes for Q&A with judges. Judges will score each hack based on the category criteria, and winners will be chosen at the end of Expo.',
         },
       ],
     };
