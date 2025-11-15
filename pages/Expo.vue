@@ -7,10 +7,10 @@
       <div>
         <div>
           <!-- Expo Has Not Started! -->
-          <p class="table-description">
+          <!-- <p class="table-description">
             A schedule of all demo times and their corresponding locations will
             published here after the submission period closes. Please sit tight!
-          </p>
+          </p> -->
 
           <!-- Expo Has Ended! -->
           <!-- <p class="table-description">
@@ -18,7 +18,7 @@
           </p> -->
 
           <!-- Expo Message & Table -->
-          <!-- <p class="table-description">
+          <p class="table-description">
             Below is the list of demos and their locations, along with a map
             showing all in-person judging areas.
           </p>
@@ -28,7 +28,7 @@
             class="expo-map"
           />
           <br /><br />
-          <ExpoTable :items="formatSchedule(getFullExpoSchedule())" /> -->
+          <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
         <div style="margin-top: 5rem"></div>
         <Header>Frequently Asked Questions</Header>
