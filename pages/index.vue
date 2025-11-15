@@ -59,7 +59,7 @@
 
     <!-- Sponsors Section -->
     <div class="container">
-      <SponsorsSponsors />
+      <Sponsors />
     </div>
 
     <!-- <div class="container">
