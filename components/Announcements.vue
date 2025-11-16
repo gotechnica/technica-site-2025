@@ -56,7 +56,12 @@
     
     const announcements = ref([
         { title: "Welcome!", text: "No major announcements yet. The timer will start when hacking begins!" },
-    ]);
+        { title: "Food!", text: "Hackers with Dietary Restrictions may get brunch!" },
+        { title: "Food!", text: "Hackers with Purple Sticker may get brunch!" },
+        { title: "Food!", text: "Hackers with Green Sticker may get brunch!!" },
+        { title: "Food!", text: "Hackers with Pink Sticker may get brunch!" },
+        { title: "Devpost Extension!", text: "The Devpost deadline has been extended to 12:15 PM!" },
+      ]);
     
     // const previousAnnouncements = ref([
     //   { title: "Announcement 4", text: "Details about event 4..." },
