@@ -59,7 +59,7 @@
         { title: "Food!", text: "Hackers with Dietary Restrictions may get brunch!" },
         { title: "Food!", text: "Hackers with Purple Sticker may get brunch!" },
         { title: "Food!", text: "Hackers with Green Sticker may get brunch!!" },
-      //  { title: "Food!", text: "!" },
+        { title: "Food!", text: "Hackers with Pink Sticker may get brunch!" },
       ]);
     
     // const previousAnnouncements = ref([
