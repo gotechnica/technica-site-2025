@@ -21,6 +21,8 @@
           <p class="table-description">
             Below is the list of demos and their locations, along with a map
             showing all in-person judging areas.
+
+            <b>If you are a virtual hacker demoing for MLH, access their Gather link <a href='https://app.gather.town/app/GJJUtNlOaOKtSymR/Technica%202025?spawnToken=mSvSPkiiRWazuCeFdrGy'>here</a>. If you are in person, MLH judges will be walking around to judge your hack in person!</b>
           </p>
           <img
             src="/maps/hacker_map_opencenter.svg"
