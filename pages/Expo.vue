@@ -1,5 +1,5 @@
 <template>
-  <title>Ambassadors</title>
+  <title>Expo</title>
   <div style="margin-top: 1rem"></div>
   <Header>Expo</Header>s
   <div>
@@ -58,12 +58,12 @@ export default {
       dataLoaded: false,
       qaList: [
         {
-          question: 'Rules',
+          question: 'What are the rules for submitting my hack?',
           answer:
-            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2025's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, and THREE Sponsor prize categories. You will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
+            "Hackers will be allowed to submit projects that they have worked on only during the course of Technica 2025's hacking period. Any use of prior projects is strictly prohibited. Additionally, any plagiarized projects from the internet or from fellow hackers is prohibited. Hackers found in violation of the above rules will be disqualified from all prize categories and will be reported to MLH.<br><br>Projects can be submitted to a maximum of THREE Technica prize categories, THREE Sponsor prize categories, and an unlimited amount of MLH prize categories. You will have the opportunity to demo your project to judges from each prize category you submit to, so if you submit your project to four prize categories, you will be signed up to demo four separate times.",
         },
         {
-          question: 'Submission',
+          question: 'When do I need to submit my hack by?',
           answer:
             'You will be required to submit information about you and your hack to Devpost by 12:00pm EST on Sunday, 11/16. After the submission deadline, no hacks will be accepted, with absolutely no exceptions. Ensure that you have ample time to submit your project before the deadline.',
         },
@@ -73,14 +73,19 @@ export default {
             'Expo will be conducted in a hybrid format. During Expo, in-person hackers must be seated in the hacking area, at their assigned table.<br><br>If you are demoing in person, the sponsors will come to you during the allotted time slot. Otherwise, you will join the sponsor booth via Gather.',
         },
         {
-          question: 'If you are attending Expo virtually',
+          question: 'What if I\'m attending virtually?',
           answer:
             'Find your team name by searching in the table above and join the corresponding linked Gather room.',
         },
         {
-          question: 'Judging Process',
+          question: 'How long should my demo be?',
           answer:
             'Demos are 4 minutes total: 2 minutes to present your project and 2 minutes for Q&A with judges. Judges will score each hack based on the category criteria, and winners will be chosen at the end of Expo.',
+        },
+        {
+          question: 'What will my hack be judged on?',
+          answer:
+            'Hacks will be judged based on their adherence to Technica\'s mission, UI/UX design, functionality & execution, originality & creativity, and adherence to category',
         },
       ],
     };
