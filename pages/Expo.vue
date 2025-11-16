@@ -7,10 +7,10 @@
       <div>
         <div>
           <!-- Expo Has Not Started! -->
-          <p class="table-description">
+          <!-- <p class="table-description">
             A schedule of all demo times and their corresponding locations will
             published here after the submission period closes. Please sit tight!
-          </p>
+          </p> -->
 
           <!-- Expo Has Ended! -->
           <!-- <p class="table-description">
@@ -18,9 +18,11 @@
           </p> -->
 
           <!-- Expo Message & Table -->
-          <!-- <p class="table-description">
+          <p class="table-description">
             Below is the list of demos and their locations, along with a map
             showing all in-person judging areas.
+
+            <b>If you are a virtual hacker demoing for MLH, access their Gather link <a href='https://app.gather.town/app/GJJUtNlOaOKtSymR/Technica%202025?spawnToken=mSvSPkiiRWazuCeFdrGy'>here</a>. If you are in person, MLH judges will be walking around to judge your hack in person!</b>
           </p>
           <img
             src="/maps/hacker_map_opencenter.svg"
@@ -28,7 +30,7 @@
             class="expo-map"
           />
           <br /><br />
-          <ExpoTable :items="formatSchedule(getFullExpoSchedule())" /> -->
+          <ExpoTable :items="formatSchedule(getFullExpoSchedule())" />
         </div>
         <div style="margin-top: 5rem"></div>
         <Header>Frequently Asked Questions</Header>
@@ -124,8 +126,8 @@ export default {
 
       const tables = {
         Vampires: { cols: 'ABCDE', rows: ['1-1', '1-2', '2-1', '2-2'] },
-        Zombies: { cols: 'ABCDE', rows: ['1-1', '1-2', '2-1', '2-2'] },
-        Skeletons: { cols: 'FGHIJ', rows: ['3-1', '3-2', '4-1', '4-2'] },
+        Zombies: { cols: 'ABCDE', rows: ['3-1', '3-2', '4-1', '4-2'] },
+        Skeletons: { cols: 'FGHIJ', rows: ['1-1', '1-2', '2-1', '2-2'] },
         Ghosts: { cols: 'FGHIJ', rows: ['3-1', '3-2', '4-1', '4-2'] },
       };
 
