@@ -119,8 +119,8 @@ export default {
 
       const tables = {
         Vampires: { cols: 'ABCDE', rows: ['1-1', '1-2', '2-1', '2-2'] },
-        Zombies: { cols: 'ABCDE', rows: ['1-1', '1-2', '2-1', '2-2'] },
-        Skeletons: { cols: 'FGHIJ', rows: ['3-1', '3-2', '4-1', '4-2'] },
+        Zombies: { cols: 'ABCDE', rows: ['3-1', '3-2', '4-1', '4-2'] },
+        Skeletons: { cols: 'FGHIJ', rows: ['1-1', '1-2', '2-1', '2-2'] },
         Ghosts: { cols: 'FGHIJ', rows: ['3-1', '3-2', '4-1', '4-2'] },
       };
 
