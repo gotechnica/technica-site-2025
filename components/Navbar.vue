@@ -67,7 +67,7 @@ export default {
     return {
       links: [
         { dropdown: false, name: 'Home', path: '/'},
-        { dropdown: false, name: 'Slack', path: 'https://join.slack.com/t/technica2025/shared_invite/zt-3ilafj6id-Bx0WY_K_in2UfaARK1H12Q'},
+        // { dropdown: false, name: 'Slack', path: 'https://join.slack.com/t/technica2025/shared_invite/zt-3ilafj6id-Bx0WY_K_in2UfaARK1H12Q'},
         { dropdown: false, name: 'Devpost', path: 'https://technica-2025.devpost.com/'},
         { dropdown: false, name: 'Maps', path: './maps'},
         { dropdown: false, name: 'Schedule', path: './schedule'},
