@@ -33,6 +33,12 @@ defineProps<{ sponslist: SponsorInfo[] }>()
   gap: 1.25rem 1rem;
   align-items: center;
   justify-items: center;
+
+  padding: 2rem;
+  border-radius: 14px;
+  background: rgb(159, 138, 178);
+  box-shadow: 0 10px 40px 10px #6e599880;
+
 }
 
 @media (max-width: 1280px) { .sponsors-rect { grid-template-columns: repeat(5, 1fr); } }
@@ -45,8 +51,8 @@ defineProps<{ sponslist: SponsorInfo[] }>()
   align-items: center;
   justify-content: center;
   height: 5.5rem;
-  width: 100%;
   padding: .5rem .75rem;
+  width: 100%;
   border-radius: 14px;
   text-decoration: none;
 }
@@ -55,7 +61,9 @@ defineProps<{ sponslist: SponsorInfo[] }>()
   max-height: 3.5em;
   max-width: 100%;
   filter: grayscale(100%);
-  opacity: 0.65;
+  opacity: 0.80;
+  padding: .5rem;
+  border-radius: 14px;
   transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
 }
 
@@ -70,10 +78,14 @@ defineProps<{ sponslist: SponsorInfo[] }>()
 
 
 .logo-card:hover .company-logo,
-.logo-card:focus .company-logo {
-  filter: grayscale(0%);
+.logo-card:focus-visible .company-logo {
+  filter: grayscale(30%) 
+  drop-shadow(0 0 2px rgb(251, 233, 255))
+  drop-shadow(0 0 3px rgba(251, 233, 255, 0.9))
+  drop-shadow(0 0 10px rgba(251, 233, 255, 0.9))
+   drop-shadow(0 0 16px rgba(251, 233, 255, 0.9));
   opacity: 1;
-  transform: scale(1.06);
+  transform: scale(1.10);
 }
 
 @media (prefers-reduced-motion: reduce) {
