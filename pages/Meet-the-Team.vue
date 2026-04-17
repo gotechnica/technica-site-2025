@@ -212,6 +212,7 @@
 
 <script setup>
 import { computed } from 'vue';
+import { defineAsyncComponent } from 'vue';
 import allProfiles from '../assets/spreadsheets/teams.json';
 import ProfileCard from '../components/ProfileCard.vue';
 

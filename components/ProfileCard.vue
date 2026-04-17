@@ -5,6 +5,7 @@
         :src="image && image.trim() !== '' ? image : placeholder"
         alt="Profile picture"
         class="profile-image"
+        lazy="loading"
       />
       <a :href="linkedin" target="_blank" rel="noopener noreferrer" v-if="linkedin">
         <img
