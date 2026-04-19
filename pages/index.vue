@@ -201,6 +201,10 @@ useHead({
   margin-bottom: 5rem;
 }
 
+.hero-section {
+  overflow-x: hidden;
+} //so that the ghost image doesn't overflow! - didn't work :(
+
 .whatToDo {
   width: 100%;
   max-width: 1500px;

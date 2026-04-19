@@ -42,6 +42,14 @@
     box-sizing: border-box;
 }
 
+/* * { outline: 1px solid red; } a REALLY good check to see what's causing the overflow in esponsive views */
+
+/*this might be too risky but we shall try it anyways */
+*{ 
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: 'Poppins' !important;
