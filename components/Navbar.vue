@@ -17,6 +17,7 @@
           <ul class="navbar-nav mr-auto">
             <!-- KEY GOES HERE -->
             <template v-for="link in links" :key="link.name">
+              
               <!-- Dropdown -->
               <li class="nav-item dropdown" v-if="link.dropdown">
                 <div variant="none" min-width="100px" :text="link.name" size="sm">
@@ -24,7 +25,7 @@
                     {{ link.name }}
                     <div class="dropdown-arrow"></div>
                   </div>
-                  <div v-if="link.showDropdown" class="dropdown-options">
+                  <div v-if="link.showDropdown" class="dropdown-options" :class = "{'home-dropdown-options' : link.name === 'Home'}">
                     <div class="dropdown-item" @click="toggleDropdown(link)" v-for="item in link.items" :key="item.name">
                       <NuxtLink :to="item.path" class="dropdown-link-active">
                         {{ item.name }}
@@ -79,7 +80,26 @@ export default {
   data() {
     return {
       links: [
-        { dropdown: false, name: 'Home', path: '/'},
+        { dropdown: true, 
+          name: 'Home', 
+          path: '/',
+          showDropdown: false,
+          items: [
+            {name: 'Top of Page', path:'/#hero'},
+            {name: 'About Technica', path:'/#about'},
+            {name: 'Our Achievements', path:'/#achievements'},
+            {name: 'What to Do at Technica', path:'/#to-do'},
+            {name: 'Techni-Environments', path:'/#techni-environments'},  
+            {name: 'Hear from Past Hackers', path:'/#past-hackers'},
+            {name: 'Tracks', path:'/#tracks'},
+            {name: 'Additional Information', path:'/#additional-info'},
+            {name: 'Keynote Speakers', path:'/keynotes'},
+            {name: 'Sponsors', path:'/#sponsors'},
+            {name: 'FAQ', path:'/#faq'},
+            {name: 'Contact Us', path:'/#footer'},
+          ]
+        },
+        
         // { dropdown: false, name: 'Slack', path: 'https://join.slack.com/t/technica2025/shared_invite/zt-3ilafj6id-Bx0WY_K_in2UfaARK1H12Q'},
         { dropdown: false, name: 'Devpost', path: 'https://technica-2025.devpost.com/'},
         { dropdown: false, name: 'Maps', path: './maps'},
@@ -138,12 +158,18 @@ export default {
 .mlh-logo { max-width: 100px; min-width: 50px; width: 10%; display: block; position: absolute; right: 1.5rem; padding: 0; top: 0; z-index: 2010; }
 #navbar { position: sticky; top: 0; overflow: visible; display: block; flex-wrap: wrap; justify-content: flex-start; padding: 0.25rem 1rem; -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); background-color: #130F1F; z-index: 2004; }
 // .navbar { min-height: 84px; }
-.navbar { min-height: 70px; margin-bottom: -3.5%; margin-top: -10px; display: flex; align-items: center; justify-content: space-between; } //turning navbar into a flex boxxx
+.navbar { min-height: 70px; margin-bottom: -3.9%; margin-top: -10px; display: flex; align-items: center; justify-content: space-between; } //turning navbar into a flex boxxx
 
 .navbar .container-fluid { display: flex; align-items: flex-start; flex-wrap: nowrap; justify-content: space-between; padding: 0 0.5rem !important; }
 .navbar-left { display: flex; align-items: center; gap: 0.5rem; padding-top: 1.5%; } //second flex for the logo and hamburger to stay together
 
 .dropdown-options { position: absolute; background-color: #130F1F; line-height: 2rem; padding: 5%; }
+.home-dropdown-options {
+  overflow-y: auto;
+  overflow-x: visible;
+  min-width: 200%;
+}
+
 // .navbar-toggler { margin: 0 auto 0 0; border: none; top: 1.65rem; }
 .navbar-toggler { margin: 0; border: none; }
 .navbar-collapse { flex: 1;  text-align: center; margin-bottom: 4%; padding-top: 1.5%;}

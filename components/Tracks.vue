@@ -7,7 +7,7 @@
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="flip-card-3D-wrapper col-lg-4 d-flex justify-content-center tracks"
+        class="flip-card-3D-wrapper col-lg-3 d-flex justify-content-center tracks"
       >
         <div
           class="flip-card"
@@ -137,8 +137,11 @@ body {
   height: 100%;
   transition: all 1s ease-in-out;
   transform-style: preserve-3d;
-  height: 700px;
-  width: 572px;
+  // height: 700px;
+  // width: 572px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 572 / 700;
 }
 
 .do-flip {
@@ -150,8 +153,12 @@ body {
   // height: 100%;
   display: flex;
   justify-content: center;
-  height: 700px;
-  width: 572px;
+  // height: 700px;
+  // width: 572px;
+  width: 100%;
+  // max-width: 340px;
+  aspect-ratio: 572 / 700;
+
   position: absolute;
   backface-visibility: hidden;
   z-index: 2;
@@ -211,10 +218,14 @@ body {
   display: flex;
   position: absolute;
   top: 20%;
-  left: 34%;
+  // left: 34%;
   justify-content: center;
   align-items: center;
-  width: 180px;
+
+  // width: 180px;
+  width: 70%;
+  max-width: 180px;
+
   text-align: center;
   // font-weight: bold;
 }
@@ -344,9 +355,9 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  .tracks {
-    margin-left: 21%;
-  }
+  // .tracks {
+  //   margin-left: 21%;
+  // }
 }
 
 @media screen and (max-width: 768px) {
@@ -355,8 +366,8 @@ body {
     max-width: 100% !important;
   }
 
-  .tracks {
-    margin-left: 12%;
-  }
+  // .tracks {
+  //   margin-left: 12%;
+  // }
 }
 </style>
