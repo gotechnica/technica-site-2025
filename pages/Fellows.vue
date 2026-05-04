@@ -1,199 +1,246 @@
 <template>
   <title>Fellows</title>
-  <div class="container">
-    <div style="margin-top: 1rem"></div>
-    <Header>Virtual Fellowship Program</Header>
-    <h4>Applications are now closed. Congrats to our fellows!</h4>
-    <!-- <div class="d-flex justify-content-center button">
-          <MainButton
-            text="Apply Now!"
-            link="https://docs.google.com/forms/d/e/1FAIpQLSeF1wVCqc4y6chQcS_p0ahKHa4b1cqV7pQK7YiOJWSK4Q-9tiQ/viewform"
-            gradient
-          />
-        </div>
-        <p>Open until May 31st at 11:59PM EST</p> -->
-    <!-- </div> -->
+  <div>
 
-    <div class="info-box">
-      <p class="info-text">
-        The Technica Fellowship Program is an 8-week initiative, running from
-        <strong>June</strong> to <strong>August</strong>, designed for students
-        of all skill levels — especially those with less technical experience
-        who are eager to grow! <br /><br />
-        Throughout the program, fellows will:
-      </p>
-      <div class="list-container">
-        <ul>
-          <li>collaborate on a guided technical project</li>
-          <li>gain hands-on experience</li>
-          <li>develop coding and teamwork skills</li>
-          <li>
-            build confidence within a supportive, mentorship-based environment
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <h3 style="margin-top: 3rem">Weekly Schedule</h3>
+    <!--Landing-->
+    <div class="container">
+      <div class="landing-grid">
+        <div class="landing-text">
 
-    <div class="info-text">
-      <h5>Sunday Evening:</h5>
-      <p>
-        <span class="schedule-act"
-          >Project Work Sessions / Technical Workshops: </span
-        >Hands-on work on technical projects, guided learning sessions, and
-        skill-building workshops
-      </p>
 
-      <hr />
+          <div class="header-group">
+          <h1 style="font-weight: 1000;">Virtual Fellowship</h1>
+          <h2>Program</h2>
+          </div>
 
-      <h5>Tuesday and Thursday Evening:</h5>
-      <p>
-        <span class="schedule-act">Professional Development Workshops:</span>
-        Workshops focused on career growth, including resume building, interview
-        prep, networking, and tech industry insights<br />
 
-        <br /><span style="display: flex; justify-content: center">OR</span
-        ><br />
-
-        <span class="schedule-act">Bonding Workshops:</span> Fun, interactive
-        workshops designed to build team cohesion, foster relationships, and
-        explore topics related to personal growth and community building
-      </p>
-    </div>
-
-    <h3 style="margin-top: 3rem">Testimonials</h3>
-    <div class="testimonials">
-      <div class="carousel">
-        <div class="carousel-cards">
-          <Carousel
-            :initialCards="FellowCards"
-            :isMobile="false"
-            :isShorten="isShorten"
-            ref="carouselRef1"
-          />
-        </div>
-        <div class="buttons">
-          <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
-          <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
-        </div>
-      </div>
-    </div>
-
-    <div class="row container grid-section">
-      <div class="row row-cols-1 row-cols-md-2">
-        <div class="col section section-req">
-          <h3>Application Requirements</h3>
-          <p>
-            To be eligible for the Technica Fellowship Program, applicants must:
+          <p>The Technica Fellowship Program is an 9-week initiative,
+            running from June to August, designed for students of all skill levels
+            — especially those with less technical experience who are eager to grow!
           </p>
-          <div>
+
+
+          <p>
+            <strong> Throughout the program, fellows will:</strong>
+          </p>
+
+
             <ul>
-              <li v-for="item in items" :key="item">
-                {{ item }}
-              </li>
+              <li v-for="action in actions">{{ action }}</li>
             </ul>
+
+          <button>
+            Apply Now!
+          </button>
+
+
+        </div>
+
+
+        <div class="fellows-video-container">
+          <iframe class="fellows-video" src="https://www.youtube.com/embed/OLOZIyTzyCo" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!--weekly schedule-->
+
+
+  <div class="container">
+    <h1 class="schedule-header">Weekly Schedule</h1>
+
+    <div class="week-grid">
+
+      <div class="day-column">
+
+
+
+
+        <h1>Sunday Evening</h1>
+        <p class="session-text">
+          Project Work Sessions / Technical Workshops:
+          Hands-on work on technical projects, guided learning sessions,
+          and skill-building workshops.
+        </p>
+
+        <h1 style="margin-top: 5rem">Tuesday & Thursday Evening</h1>
+        <p class="session-text">
+          Professional Development Workshops: Workshops focused on career growth,
+          including resume building, interview prep, networking, and tech industry
+          insights
+        </p>
+
+
+        <p class="session-text">OR</p>
+
+
+        <p class="session-text">
+
+
+          Bonding Workshops: Fun, interactive workshops designed to build team
+          cohesion, foster relationships, and explore topics related to personal
+          growth and community building
+        </p>
+
+
+      </div>
+
+      <img src="" alt="cute technica mascots">
+
+
+    </div>
+  </div>
+
+
+  <!--Testimonials-->
+
+
+  <div class="container">
+
+    <h3 class="testimonials-header">Testimonials</h3>
+
+    <div class="testimonials-grid">
+     
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-cards">
+            <Carousel :initialCards="FellowCards" :isMobile="false" :isShorten="isShorten" ref="carouselRef1" />
+          </div>
+          <div class="buttons">
+            <img class="prev" @click="prev" src="/public/icons/left-arrow.svg" />
+            <img class="next" @click="next" src="/public/icons/right-arrow.svg" />
           </div>
         </div>
-        <div class="col section">
-          <h3>Learning Outcomes</h3>
-          <p>By the end of the Technica Fellowship Program, fellows will:</p>
-          <ul>
-            <li v-for="outcome in outcomes" :key="outcome">
-              {{ outcome }}
-            </li>
-          </ul>
-        </div>
+      </div>
+
+
+      <div class="learning-outcomes">
+        <p>By the end of the Technica Fellowship Program, fellows will:
+        </p>
+
+        <ul>
+          <li v-for="outcome in outcomes" :key="outcome">
+            {{ outcome }}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--Application-->
+
+
+  <div class="container">
+    <div class="application-grid">
+      <h1>Application Requirements</h1>
+      <div class="application-text">
+        <strong>To be eligible for the Technica Fellowship Program, applicants must:</strong>
+        <ul>
+          <li v-for="item in items" :key="item">
+            {{ item }}
+          </li>
+        </ul>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <!--Past Projects-->
+
+  <div class="container">
+    <h3 class="projects-header">2025 Fellowship Projects</h3>
+    <!-- add projects-2025 so the 2x2 + non-span override applies -->
+    <div class="project-cards projects-2025">
+      <div v-for="p in projects2025" :key="p.href" class="project-card" :class="{ 'no-image': !p.img }">
+        <img v-if="p.img" :src="p.img" :alt="p.title" class="project-image" loading="lazy" />
+        <a :href="p.href" class="project-button" target="_blank" rel="noopener" :aria-label="`Open ${p.title}`">
+          <div class="subtitle">View Project — {{ p.title }}</div>
+        </a>
       </div>
     </div>
+  </div>
 
-    <div class="row hearFromFellows">
-      <h3>Hear from Our Fellowship Organizers</h3>
 
-      <div class="fellows-video-container">
-        <iframe
-          class="fellows-video"
-          src="https://www.youtube.com/embed/OLOZIyTzyCo"
-          frameborder="0"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
-    </div>
+  <!--freq asked questions-->
 
-    <!-- Projects! -->
 
-    <!-- 2025 Projects -->
-    <div class="row project-section">
-      <h3>2025 Fellowship Projects</h3>
-      <!-- add projects-2025 so the 2x2 + non-span override applies -->
-      <div class="project-cards projects-2025">
-        <div
-          v-for="p in projects2025"
-          :key="p.href"
-          class="project-card"
-          :class="{ 'no-image': !p.img }"
-        >
-          <img
-            v-if="p.img"
-            :src="p.img"
-            :alt="p.title"
-            class="project-image"
-            loading="lazy"
-          />
-          <a
-            :href="p.href"
-            class="project-button"
-            target="_blank"
-            rel="noopener"
-            :aria-label="`Open ${p.title}`"
-          >
-            <div class="subtitle">View Project — {{ p.title }}</div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+  <div class="freq-questions-section">
+    <div class="container-faq">
       <Header v-if="width <= 768" class="faq">FAQ</Header>
       <Header v-else class="faq">Frequently Asked Questions</Header>
-      <FAQ faqId="main" :qaList="qaList" class="main-section" />
-    </div>
-    <div class="contact">
-      <h3>Have Other Questions?</h3>
-      <p style="color: white">
-        Reach out to
-        <b><a style="color: #f1adcd" href="mailto:community@gotechnica.org">community@gotechnica.org</a></b>
-        and we'll get back to you soon!
-      </p>
-    </div>
 
-    <StickyButton />
+
+      <FAQ faqId="main" :qaList="qaList" class="main-section" />
+
+
+      <div class="contact">
+        <h3>Have Other Questions?</h3>
+        <p style="color: white">
+          Reach out to
+          <b>
+            <a style="color: #f1adcd" href="mailto:community@gotechnica.org">
+              community@gotechnica.org
+            </a>
+          </b>
+          and we'll get back to you soon!
+        </p>
+      </div>
+    </div>
   </div>
+
+
+  <StickyButton />
+
+
 </template>
+
 
 <script setup lang="ts">
 import Carousel from '~/components/Fellows/FellowsCarousel.vue';
 import { FellowCards } from '~/components/Fellows/FellowsCards';
 import Car2 from '~/components/Fellows/Carousel.vue';
 
+
+const days = [
+  'Sunday',
+  'Tuesday & Thursday',
+]
+
+
 const isShorten = computed(() => {
   return width.value <= 1400;
 });
 
+
 // Go to the previous / next carousel screen
 const carouselRef1 = ref();
 const carouselRef2 = ref();
+
 
 function prev() {
   carouselRef1.value?.prev();
   carouselRef2.value?.prev();
 }
 
+
 function next() {
   carouselRef1.value?.next();
   carouselRef2.value?.next();
 }
+
 
 // Render component after mount to avoid hydration errors
 const mounted = ref(false);
@@ -201,10 +248,13 @@ onMounted(() => {
   mounted.value = true;
 });
 
+
 import { useWindowSize } from '@vueuse/core';
+
 
 // Detect mobile layout based on screen width
 const { width } = useWindowSize();
+
 
 const qaList = [
   {
@@ -237,6 +287,7 @@ const qaList = [
       'The fellowship is designed for rising college freshmen who have a demonstrated interest in technology but have not had an industry internship yet. <br><br>The goal of the fellowship is to give you hands-on experience working on a real-world technology project in order to give you a leg up in your career, supplemented with a supportive community of other individuals in tech.',
   },
 
+
   // Updated Q&A
   {
     question: 'When will this happen?',
@@ -264,11 +315,20 @@ const qaList = [
   },
 ];
 
+const actions = [
+  'collaborate on a guided technical project',
+  'gain hands-on experience',
+  'develop coding and teamwork skills',
+  'build confidence within a supportive, mentorship-based environment',
+]
+
+
 const items = [
   'Be a rising college freshman (starting college in Fall 2025)',
   'Be available for the full duration of the 8-week summer program',
   '(Preferred, but not required): Demonstrated interest in technology (e.g., school clubs, self-led projects, online courses), but no prior industry internship experience',
 ];
+
 
 //Learning outcomes is a list so easier to render with v-for and array of data!!
 const outcomes = [
@@ -278,6 +338,7 @@ const outcomes = [
   'Strengthen communication and feedback skills, learning to present technical work clearly, culminating in a final project showcase',
   'Grow a network of peers, mentors, and organizers for continued support and future opportunities in tech, with insight into next steps like clubs, internships, and personal projects',
 ];
+
 
 // 2025 fellowship projects (links only; images optional later)
 const projects2025 = [
@@ -294,7 +355,7 @@ const projects2025 = [
   {
     title: 'Hackathon Photos (Technica)',
     href: 'https://github.com/fatuma-tahalil/HackathonPhotos-Technica',
-    img: '/fellows/hackathon%20photos.png', 
+    img: '/fellows/hackathon%20photos.png',
   },
   {
     title: 'Mentor Matching',
@@ -304,174 +365,240 @@ const projects2025 = [
 ];
 </script>
 
-<style scoped lang="scss">
-.container {
-  margin-bottom: 5rem;
-}
-
-/* all your original styles remain untouched */
-</style>
-
 
 <style scoped lang="scss">
+/* landing page styles */
+
 .container {
-  margin-bottom: 5rem;
+  width: 100%;
+  max-width: 112.5rem;
+  background: rgb(255, 255, 255);
+  margin: auto;
+  padding: 1% 5% 1% 5%;
+  padding-bottom: 2rem;
 }
 
-.title {
-  margin: 3.5rem 0 1.5rem 0;
+.landing-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 0.5rem;
+  justify-content: center;
 }
+
+
+/* header */
+
+
+.landing-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  gap: 0.5rem;
+
+}
+
+.header-group {
+ margin: auto 1rem;
+}
+
+
+.landing-text h1 {
+  font-size: 64px;
+  color: rgb(0, 0, 0);
+  padding-top: 5rem;
+}
+
+
+.landing-text h2 {
+  font-size: 64px;
+  color: rgb(0, 0, 0);
+
+}
+
+/* paragraph */
+
+
+.landing-text p {
+  font-size: 21px;
+  padding-left: 20rem;
+  color: black;
+  /* top right bottom left */
+  padding: 1rem 1rem 1rem 5rem;
+}
+
+.landing-text button {
+  background: red;
+  color: aliceblue;
+  width: 50%;
+  height: 10%;
+  margin: 5rem;
+  padding: 5%;
+  border: none;
+}
+
+
+/* list */
+
+.landing-text ul {
+  font-size: 1rem;
+  padding-left: 20%;
+  color: black;
+  margin: auto;
+
+}
+
+
+.fellows-video-container {
+  width: 80%;
+  height: 50%;
+  margin-top: 40%;
+}
+
+.fellows-video-container iframe {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* weekly schedule styles */
+
+
+.schedule-header {
+  font-size: 48px;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+
+.week-grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.week-grid img {
+  background: gray;
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+}
+
+
+/* name + card */
+
+
+.day-column {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+
+.day-column h1 {
+  color: black;
+  font-size: 36px;
+  margin: 0;
+}
+
+
+/* p */
+.session-text {
+  font-size: 1rem;
+  color: rgb(118, 106, 106);
+  line-height: 1.4;
+  padding-left: 3%;
+}
+
+
+/* testimonials */
+
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+  margin: 0 auto;
+  //padding: 1rem 10rem 5rem 10rem;
+
+
+}
+
 
 .testimonials {
-  max-width: 50%;
-  margin: auto;
+  overflow: visible;
 
   @media screen and (max-width: 768px) {
     margin-bottom: 15%;
   }
 }
 
-.header {
-  align-items: center;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  text-align: center;
+
+.testimonials-header {
+  font-size: 48px;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-bottom: 3%;
+  
+
+  /* transform: translateY(-10%) translateX(55%);
+  animation: headerSlide 2s ease-out forwards;
+  */
+  
 }
 
-.header img {
-  width: 66%;
-}
+/*
 
-.fellow-header {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 0;
-  padding-top: 100px;
-}
+ @keyframes headerSlide {
+  from {
+    transform: translateX(0%);
+    opacity: 0;
+  }
 
-.fellow-header h4 {
-  color: #ffffff;
-}
-
-.fellow-header h1 {
-  font-size: 26px;
-  position: absolute;
-  transform: translate(0, -75%);
-  top: 50%;
-  margin: 0;
-}
-
-.fellow-header img {
-  width: calc(10rem + 30vw);
-}
-
-h3 {
-  font-family: 'dinpro';
-  text-align: center;
-  color: #cadaea;
-}
-
-h4 {
-  color: white;
-  text-align: center;
-}
-
-h5,
-li,
-p {
-  color: white;
-}
-
-h5,
-p {
-  text-align: center;
-}
-
-.list-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 2rem;
-}
-
-.info-text {
-  padding: 0 2rem;
-}
-
-.info-box {
-  margin-top: 3rem;
-  background-color: #1a1b27;
-  color: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  border: 2px solid #ffffff;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
-    0 0 40px rgba(150, 120, 255, 0.3), 0 0 60px rgba(100, 120, 255, 0.2);
-}
-
-.info-box ul {
-  margin-bottom: 0;
-}
-
-.schedule-act {
-  font-weight: bold;
-}
-
-hr {
-  color: white;
-}
-
-.faq-heading {
-  text-align: center;
-}
-
-.section {
-  margin-top: 3rem;
-}
-
-.section-req {
-  @media screen and (max-width: 768px) {
-    margin-top: 2rem;
+  to {
+    transform: translateX(45%);
+    opacity: 1;
   }
 }
 
-.grid-section {
-  margin: 1rem;
+*/
+
+
+.learning-outcomes p {
+  font-size: 1.5rem;
+  color: #000000;
+  padding-top: 5rem;
+  margin-right: 2rem;
+
 }
 
-.fellows-video {
-  width: 55%;
-  height: 28vw;
+
+.learning-outcomes ul {
+  font-size: 16px;
+  color: #000000;
+  align-content: center;
 }
 
-.fellows-video-container {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.faq {
-  margin-top: 5rem;
-}
-
-.hearFromFellows {
-  margin-top: 3rem;
-  text-align: center;
-  padding: 1rem;
+.carousel-section {
+  width: auto;
+  max-width: 112.5rem;
+  margin: 0 auto;
 }
 
 .carousel {
-  position: relative;
   width: 100%;
-  max-width: 60rem;
-  z-index: 1;
+  max-width: 650px;
+  margin: 0 auto;
 }
+
 
 .carousel-cards {
   width: 100%;
@@ -479,67 +606,120 @@ hr {
   overflow: hidden;
 }
 
-.buttons {
-  display: flex;
-  position: absolute;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 0.5rem;
-  top: 0;
 
-  @media screen and (max-width: 768px) {
-    align-items: flex-end;
-    margin-top: 2.5rem;
-  }
+/* Application */
 
-  & .prev,
-  .next {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    z-index: 2;
-    position: relative;
-  }
 
-  //Moved arrows to make space for scrollbar
-
-  & .prev {
-    margin-left: -5%;
-  }
-
-  & .next {
-    margin-right: -5%;
-  }
+.application-grid {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
 }
+
+
+.application-grid h1 {
+  font-size: 48px;
+  color: rgb(0, 0, 0);
+  margin: 2rem 2rem;
+}
+
+
+.application-text {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin: auto 4rem;
+}
+
+
+.application-text ul {
+  font-size: 1rem;
+  margin-top: 2rem;
+  color: #000000;
+}
+
+
+.application-text p {
+  font-size: 1rem;
+  color: black;
+}
+
+
+/* past projects */
+
+
+.projects-header {
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+
+/* Show subtitle on hover */
+.project-card:hover .subtitle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Minimal fallback style for new 2025 cards without images */
+.project-card.no-image {
+  background: linear-gradient(135deg,
+      rgba(166, 225, 255, 0.18),
+      rgba(205, 189, 255, 0.18));
+  backdrop-filter: blur(2px);
+}
+
+
+/* Always show title on no-image cards so they never look blank */
+.project-card.no-image .subtitle {
+  background-color: rgba(10, 12, 20, 0.65);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Keep the 2025 grid tight (2x2) and don't span the last card */
+.projects-2025 {
+  grid-template-rows: repeat(2, 200px);
+}
+
+
+.projects-2025 .project-card:last-child {
+  grid-column: auto;
+  width: 100%;
+}
+
 
 .project-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); /* ensures 2 rows */
+  grid-template-rows: repeat(2, 1fr);
+  /* ensures 2 rows */
   gap: 2rem;
   width: 80%;
   margin: 0 auto;
   justify-items: center;
   align-items: center;
+  padding-bottom: 5rem;
+
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* stack vertically on mobile */
+    grid-template-columns: 1fr;
+    /* stack vertically on mobile */
     grid-template-rows: auto;
   }
 }
+
 
 .project-card {
   width: 100%;
   max-width: 450px;
   height: 200px;
-  background: linear-gradient(
-    135deg,
-    rgba(166, 225, 255, 0.18),
-    rgba(205, 189, 255, 0.18)
-  );
+  background: linear-gradient(135deg,
+      rgba(166, 225, 255, 0.18),
+      rgba(205, 189, 255, 0.18));
   border-radius: 1rem;
   border: 1px solid #cadaea;
   box-shadow: 0 4px 12px rgba(202, 218, 234, 0.7);
@@ -549,6 +729,7 @@ hr {
   overflow: hidden;
   position: relative;
 }
+
 
 .project-button {
   position: relative;
@@ -562,6 +743,7 @@ hr {
   z-index: 0;
 }
 
+
 .project-image {
   position: absolute;
   inset: 0;
@@ -572,14 +754,18 @@ hr {
   z-index: 0;
 }
 
+
 .project-card:last-child {
   grid-column: 1 / -1;
   justify-self: center;
   width: 50%;
-  @media (max-width: 600px) {
+
+
+  @media (max-width: 900px) {
     width: 100%;
   }
 }
+
 
 .subtitle {
   position: absolute;
@@ -596,48 +782,185 @@ hr {
   transition: all 0.3s ease;
 }
 
-/* Show subtitle on hover */
-.project-card:hover .subtitle {
-  transform: translateY(0);
-  opacity: 1;
+
+/* freq questions */
+
+
+.freq-questions-section {
+  width: min(100% - 4rem, 1200px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 5rem 0;
 }
 
-/* Minimal fallback style for new 2025 cards without images */
-.project-card.no-image {
-  background: linear-gradient(
-    135deg,
-    rgba(166, 225, 255, 0.18),
-    rgba(205, 189, 255, 0.18)
-  );
-  backdrop-filter: blur(2px);
+
+.contact {
+  color: white;
+  padding-top: 5rem;
+  text-align: center;
 }
 
-/* Always show title on no-image cards so they never look blank */
-.project-card.no-image .subtitle {
-  background-color: rgba(10, 12, 20, 0.65);
-  transform: translateY(0);
-  opacity: 1;
+
+/* other */
+
+
+.fellows-video {
+  width: 55%;
+  height: 28vw;
 }
 
-/* Keep the 2025 grid tight (2x2) and don't span the last card */
-.projects-2025 {
-  grid-template-rows: repeat(2, 200px);
-}
-.projects-2025 .project-card:last-child {
-  grid-column: auto;
-  width: 100%;
+
+.fellows-video-container {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 800px) {
+
+
+.header {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+
+.header img {
+  width: 66%;
+}
+
+
+.fellow-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  padding-top: 100px;
+}
+
+
+.fellow-header h4 {
+  color: #ffffff;
+}
+
+
+.fellow-header h1 {
+  font-size: 26px;
+  position: absolute;
+  transform: translate(0, -75%);
+  top: 50%;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
   .header img {
     width: 100%;
   }
 
-  .header h1 {
+
+  .body {
+    background-color: aqua;
+  }
+
+
+  /*.schedule-header {
     font-size: 1.3rem;
     word-wrap: normal;
     padding-top: 0.5rem;
     color: black;
   }
+
+  .landing-text h1{
+    font-size: 1.3rem;
+    word-wrap: normal;
+    padding-top: 0.5rem;
+    color: black;
+  }
+    */
+
+  .container-faq {
+    margin: auto;
+  }
+
+  .landing-grid {
+    grid-template-columns: 1fr;
+    padding-left: 20%;
+    max-width: 80%;
+  }
+
+  .landing-text {
+    margin: auto;
+  }
+
+  .landing-text h1 {
+    margin: 0 auto;
+  }
+
+  .landing-text h2 {
+    margin: 0 auto;
+  }
+
+  .landing-text p {
+    margin: 0 auto;
+    padding-left: 5%;
+  }
+
+  .landing-text button {
+    width: 15rem;
+    margin: 2rem auto;
+    padding: 1rem 0 1rem 0;
+  }
+
+
+  .container ul {
+    padding-left: 20%;
+    max-width: 80%;
+  }
+
+
+  .fellows-video-container {
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+
+  }
+
+  .fellows-video-container iframe {
+    margin-top: 4rem;
+    aspect-ratio: 16/9;
+  }
+
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-header {
+    padding-top: 10%;
+  
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .carousel-container {
+    margin: 1rem;
+    overflow: auto;
+  }
+
+
+  .application-grid h1 {
+    text-align: center;
+  }
+
+  
+
+ 
 }
-</style>
+
+
+ </style>
