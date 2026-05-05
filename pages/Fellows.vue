@@ -632,16 +632,15 @@ const projects2025 = [
 
 .application-grid h1 {
   font-size: 48px;
+  margin-top: 1.5rem;
   color: rgb(0, 0, 0);
-  margin: 2rem 2rem;
-  padding-left: 2.5%;
+  padding-left: 2%;
 }
-
 
 .application-text {
   color: rgb(0, 0, 0);
+  padding: 0 2%;
   font-size: 1rem;
-  margin: auto 4rem;
 }
 
 
@@ -876,6 +875,10 @@ const projects2025 = [
     margin: auto;
   }
 
+  .faq {
+    margin: auto;
+  }
+
   .landing-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -977,9 +980,19 @@ const projects2025 = [
     overflow: auto;
   }
 
+  .application-grid{
+    margin: auto;
+  }
+
 
   .application-grid h1 {
+    font-size: 2rem;
+    padding: 0;
     text-align: center;
+  }
+
+  .application-text {
+    margin: 0;;
   }
 
 
@@ -999,6 +1012,8 @@ const projects2025 = [
   .landing-text p {
     font-size: 1rem;
   }
+
+
 }
 
 
