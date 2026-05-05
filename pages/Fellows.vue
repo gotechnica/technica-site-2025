@@ -14,7 +14,7 @@
           <h2>Program</h2>
           </div>
 
-
+          <div class="landing-text-content">
           <p>The Technica Fellowship Program is an 9-week initiative,
             running from June to August, designed for students of all skill levels
             — especially those with less technical experience who are eager to grow!
@@ -29,14 +29,13 @@
             <ul>
               <li v-for="action in actions">{{ action }}</li>
             </ul>
+        
 
-          <button>
+        <button>
             Apply Now!
           </button>
-
-
         </div>
-
+      </div>
 
         <div class="fellows-video-container">
           <iframe class="fellows-video" src="https://www.youtube.com/embed/OLOZIyTzyCo" frameborder="0" allowfullscreen>
@@ -58,9 +57,6 @@
     <div class="week-grid">
 
       <div class="day-column">
-
-
-
 
         <h1>Sunday Evening</h1>
         <p class="session-text">
@@ -121,7 +117,7 @@
 
 
       <div class="learning-outcomes">
-        <p>By the end of the Technica Fellowship Program, fellows will:
+        <p style="font-weight: 1000;">By the end of the Technica Fellowship Program, fellows will:
         </p>
 
         <ul>
@@ -381,8 +377,8 @@ const projects2025 = [
 .landing-grid {
   display: grid;
   grid-template-columns: 60% 40%;
-  gap: 0.5rem;
-  justify-content: center;
+  grid-template-rows: auto auto;
+  align-items: start;
 }
 
 
@@ -390,16 +386,17 @@ const projects2025 = [
 
 
 .landing-text {
+  grid-column: 1;
+  grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   width: 80%;
-  gap: 0.5rem;
-
+  gap: 1rem;
 }
 
 .header-group {
- margin: auto 1rem;
+  margin: auto 1rem;
+  padding-left: 9%;
 }
 
 
@@ -428,13 +425,17 @@ const projects2025 = [
 }
 
 .landing-text button {
+  align-self: flex-start;
   background: red;
   color: aliceblue;
-  width: 50%;
-  height: 10%;
-  margin: 5rem;
-  padding: 5%;
+  width: fit-content;
+  min-width: 10rem;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0 0 5rem;
+  padding: 1rem 2rem;
   border: none;
+  cursor: pointer;
 }
 
 
@@ -448,19 +449,31 @@ const projects2025 = [
 
 }
 
+.landing-text-content {
+  grid-column: 1;
+  grid-row: 2;
 
-.fellows-video-container {
-  width: 80%;
-  height: 50%;
-  margin-top: 40%;
 }
 
+
+.fellows-video-container {
+  grid-column: 2;
+  /* so basically the video takes up the span of the rows in the second column */
+  grid-row: 1 / span 2;
+  /* applies the first argument width unless its bigger than 640px */
+  width: min(100%, 640px);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  align-self: center;
+}
+
+/* actual video content */
 .fellows-video-container iframe {
   width: 100%;
   height: 100%;
-
-  object-fit: contain;
+  display: block;
 }
+
 
 
 /* weekly schedule styles */
@@ -498,7 +511,7 @@ const projects2025 = [
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 
@@ -545,7 +558,7 @@ const projects2025 = [
   font-size: 48px;
   color: rgb(0, 0, 0);
   margin: 0 auto;
-  padding-left: 5%;
+  padding-left: 6%;
   padding-bottom: 3%;
   
 
@@ -575,7 +588,7 @@ const projects2025 = [
 .learning-outcomes p {
   font-size: 1.5rem;
   color: #000000;
-  padding-top: 5rem;
+  padding-top: 2.5rem;
   margin-right: 2rem;
 
 }
@@ -621,6 +634,7 @@ const projects2025 = [
   font-size: 48px;
   color: rgb(0, 0, 0);
   margin: 2rem 2rem;
+  padding-left: 2.5%;
 }
 
 
@@ -697,7 +711,7 @@ const projects2025 = [
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   /* ensures 2 rows */
-  gap: 2rem;
+  gap: 1rem;
   width: 80%;
   margin: 0 auto;
   justify-items: center;
@@ -856,31 +870,7 @@ const projects2025 = [
   margin: 0;
 }
 
-@media screen and (max-width: 900px) {
-  .header img {
-    width: 100%;
-  }
-
-
-  .body {
-    background-color: aqua;
-  }
-
-
-  /*.schedule-header {
-    font-size: 1.3rem;
-    word-wrap: normal;
-    padding-top: 0.5rem;
-    color: black;
-  }
-
-  .landing-text h1{
-    font-size: 1.3rem;
-    word-wrap: normal;
-    padding-top: 0.5rem;
-    color: black;
-  }
-    */
+@media screen and (max-width: 912px) {
 
   .container-faq {
     margin: auto;
@@ -888,57 +878,92 @@ const projects2025 = [
 
   .landing-grid {
     grid-template-columns: 1fr;
-    padding-left: 20%;
-    max-width: 80%;
+    grid-template-rows: auto;
+    gap: 2rem;
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 3rem 0 2rem;
   }
 
   .landing-text {
-    margin: auto;
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-group {
+    margin: 0;
+    padding-left: 0;
   }
 
   .landing-text h1 {
+    font-size: 48px;
     margin: 0 auto;
+    padding-top: 0;
   }
 
   .landing-text h2 {
+    font-size: 48px;
     margin: 0 auto;
   }
 
   .landing-text p {
     margin: 0 auto;
-    padding-left: 5%;
+    max-width: 38rem;
+    padding: 0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
   }
 
   .landing-text button {
-    width: 15rem;
-    margin: 2rem auto;
-    padding: 1rem 0 1rem 0;
+    align-self: center;
+    width: min(100%, 15rem);
+    margin: 1rem auto 0;
+    padding: 1rem 1.5rem;
   }
 
 
-  .container ul {
-    padding-left: 20%;
-    max-width: 80%;
+  .landing-text ul {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding-left: 1.25rem;
+    text-align: left;
   }
 
 
   .fellows-video-container {
-    aspect-ratio: 16/9;
+    grid-column: 1;
+    grid-row: auto;
+    width: min(100%, 40rem);
+    aspect-ratio: 16 / 9;
     margin: 0 auto;
-
   }
 
   .fellows-video-container iframe {
-    margin-top: 4rem;
-    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
   }
 
   .week-grid {
     grid-template-columns: 1fr;
   }
 
+  .day-column {
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .day-column h1 {
+    margin-top: 1rem;
+  }
+ 
+
   .testimonials-header {
-    padding-top: 10%;
+    padding-top: 2rem;
   
   }
 
@@ -957,9 +982,23 @@ const projects2025 = [
     text-align: center;
   }
 
-  
 
- 
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .landing-grid {
+    padding: 2rem 0 1rem;
+  }
+
+  .landing-text p {
+    font-size: 1rem;
+  }
 }
 
 
