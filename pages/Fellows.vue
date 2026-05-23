@@ -8,11 +8,6 @@
       <div class="landing-grid">
         <div class="landing-text">
 
-
-          <!-- <div class="header-group">
-          <h1 style="font-weight: 1000;">Virtual Fellowship</h1>
-          <h2>Program</h2>
-          </div> -->
           <Header>Virtual Fellowship Program</Header>
 
           <div class="landing-text-content">
@@ -20,7 +15,6 @@
             running from June to August, designed for students of all skill levels
             — especially those with less technical experience who are eager to grow!
           </p>
-
 
           <p>
             <strong> Throughout the program, fellows will:</strong>
@@ -33,10 +27,6 @@
         
         <h4>Applications are now closed. Congrats to our fellows!</h4>
 
-        <!-- <button>
-            Apply Now!
-          </button> -->
-
         </div>
       </div>
 
@@ -44,8 +34,6 @@
           <iframe class="fellows-video" src="https://www.youtube.com/embed/OLOZIyTzyCo" frameborder="0" allowfullscreen>
           </iframe>
         </div>
-
-
 
       </div>
     </div>
@@ -92,9 +80,6 @@
         </p>
 
       </div>
-
-      <!-- <img src="" alt="cute technica mascots"> -->
-
 
     </div>
   </div>
@@ -374,7 +359,6 @@ const projects2025 = [
 .container {
   width: 100%;
   max-width: 112.5rem;
-  //background: rgb(255, 255, 255);
   margin: auto;
   padding: 1% 5% 1% 5%;
   padding-bottom: 2rem;
@@ -413,12 +397,6 @@ const projects2025 = [
   padding-top: 5rem;
 }
 
-
-// .landing-text h2 {
-//   font-size: 64px;
-//   color: rgb(255, 255, 255);
-// }
-
 .landing-text-content h4{
   grid-column: 1;
   grid-row: 2;
@@ -443,20 +421,6 @@ const projects2025 = [
   /* top right bottom left */
   padding: 1rem 1rem 1rem 5rem;
 }
-
-// .landing-text button {
-//   align-self: flex-start;
-//   background: red;
-//   color: aliceblue;
-//   width: fit-content;
-//   min-width: 10rem;
-//   max-width: 100%;
-//   height: auto;
-//   margin: 2rem 0 0 5rem;
-//   padding: 1rem 2rem;
-//   border: none;
-//   cursor: pointer;
-// }
 
 h3 {
   font-family: 'dinpro';
@@ -565,8 +529,6 @@ h3 {
   grid-template-columns: 3fr 2fr;
   gap: 1rem;
   margin: 0 auto;
-  //padding: 1rem 10rem 5rem 10rem;
-
 
 }
 
@@ -659,7 +621,6 @@ h3 {
 .application-grid h1 {
   font-size: 48px;
   margin-top: 1.5rem;
-  //color: rgb(255, 255, 255);
   padding-left: 2%;
   color: #cadaea;
   text-align: start;
@@ -938,11 +899,6 @@ h3 {
     color: #cadaea;
   }
 
-  // .landing-text h2 {
-  //   font-size: 48px;
-  //   margin: 0 auto;
-  // }
-
   .landing-text p {
     margin: 0 auto;
     max-width: 38rem;
@@ -950,13 +906,6 @@ h3 {
     margin-bottom: 2rem;
     font-size: 1rem;
   }
-
-  // .landing-text button {
-  //   align-self: center;
-  //   width: min(100%, 15rem);
-  //   margin: 1rem auto 0;
-  //   padding: 1rem 1.5rem;
-  // }
 
 
   .landing-text ul {
