@@ -9,13 +9,14 @@
         <div class="landing-text">
 
 
-          <div class="header-group">
+          <!-- <div class="header-group">
           <h1 style="font-weight: 1000;">Virtual Fellowship</h1>
           <h2>Program</h2>
-          </div>
+          </div> -->
+          <Header>Virtual Fellowship Program</Header>
 
           <div class="landing-text-content">
-          <p>The Technica Fellowship Program is an 9-week initiative,
+          <p>The Technica Fellowship Program is a 9-week initiative,
             running from June to August, designed for students of all skill levels
             — especially those with less technical experience who are eager to grow!
           </p>
@@ -30,10 +31,12 @@
               <li v-for="action in actions">{{ action }}</li>
             </ul>
         
+        <h4>Applications are now closed. Congrats to our fellows!</h4>
 
-        <button>
+        <!-- <button>
             Apply Now!
-          </button>
+          </button> -->
+
         </div>
       </div>
 
@@ -65,7 +68,11 @@
           and skill-building workshops.
         </p>
 
-        <h1 style="margin-top: 5rem">Tuesday & Thursday Evening</h1>
+      </div>
+
+      <div class="day-column">
+
+        <h1>Tuesday & Thursday Evening</h1>
         <p class="session-text">
           Professional Development Workshops: Workshops focused on career growth,
           including resume building, interview prep, networking, and tech industry
@@ -84,10 +91,9 @@
           growth and community building
         </p>
 
-
       </div>
 
-      <img src="" alt="cute technica mascots">
+      <!-- <img src="" alt="cute technica mascots"> -->
 
 
     </div>
@@ -368,7 +374,7 @@ const projects2025 = [
 .container {
   width: 100%;
   max-width: 112.5rem;
-  background: rgb(255, 255, 255);
+  //background: rgb(255, 255, 255);
   margin: auto;
   padding: 1% 5% 1% 5%;
   padding-bottom: 2rem;
@@ -397,20 +403,34 @@ const projects2025 = [
 .header-group {
   margin: auto 1rem;
   padding-left: 9%;
+  color: #cadaea;
 }
 
 
 .landing-text h1 {
   font-size: 64px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding-top: 5rem;
 }
 
 
-.landing-text h2 {
-  font-size: 64px;
-  color: rgb(0, 0, 0);
+// .landing-text h2 {
+//   font-size: 64px;
+//   color: rgb(255, 255, 255);
+// }
 
+.landing-text-content h4{
+  grid-column: 1;
+  grid-row: 2;
+  color: #ffffff;
+  padding-left: 5rem;
+  padding-top: 2.5rem;
+  color: #cadaea;
+
+  @media (max-width: 900px) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 /* paragraph */
@@ -419,32 +439,37 @@ const projects2025 = [
 .landing-text p {
   font-size: 21px;
   padding-left: 20rem;
-  color: black;
+  color: rgb(255, 255, 255);
   /* top right bottom left */
   padding: 1rem 1rem 1rem 5rem;
 }
 
-.landing-text button {
-  align-self: flex-start;
-  background: red;
-  color: aliceblue;
-  width: fit-content;
-  min-width: 10rem;
-  max-width: 100%;
-  height: auto;
-  margin: 2rem 0 0 5rem;
-  padding: 1rem 2rem;
-  border: none;
-  cursor: pointer;
-}
+// .landing-text button {
+//   align-self: flex-start;
+//   background: red;
+//   color: aliceblue;
+//   width: fit-content;
+//   min-width: 10rem;
+//   max-width: 100%;
+//   height: auto;
+//   margin: 2rem 0 0 5rem;
+//   padding: 1rem 2rem;
+//   border: none;
+//   cursor: pointer;
+// }
 
+h3 {
+  font-family: 'dinpro';
+  text-align: center;
+  color: #cadaea;
+}
 
 /* list */
 
 .landing-text ul {
   font-size: 1rem;
   padding-left: 20%;
-  color: black;
+  color: rgb(255, 255, 255);
   margin: auto;
 
 }
@@ -452,7 +477,6 @@ const projects2025 = [
 .landing-text-content {
   grid-column: 1;
   grid-row: 2;
-
 }
 
 
@@ -481,10 +505,11 @@ const projects2025 = [
 
 .schedule-header {
   font-size: 48px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin: 0 auto;
   text-align: center;
   padding-top: 5rem;
+  color: #cadaea;
 }
 
 
@@ -493,7 +518,7 @@ const projects2025 = [
   grid-template-columns: 40% 40%;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .week-grid img {
@@ -512,11 +537,12 @@ const projects2025 = [
   flex-direction: column;
   padding: 2rem;
   gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
 
 .day-column h1 {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 36px;
   margin: 0;
 }
@@ -525,7 +551,7 @@ const projects2025 = [
 /* p */
 .session-text {
   font-size: 1rem;
-  color: rgb(118, 106, 106);
+  color: rgb(255, 255, 255);
   line-height: 1.4;
   padding-left: 3%;
 }
@@ -556,11 +582,11 @@ const projects2025 = [
 
 .testimonials-header {
   font-size: 48px;
-  color: rgb(0, 0, 0);
+  //color: rgb(255, 255, 255);
   margin: 0 auto;
   padding-left: 6%;
   padding-bottom: 3%;
-  
+  color: #cadaea;
 
   /* transform: translateY(-10%) translateX(55%);
   animation: headerSlide 2s ease-out forwards;
@@ -587,7 +613,7 @@ const projects2025 = [
 
 .learning-outcomes p {
   font-size: 1.5rem;
-  color: #000000;
+  color: #ffffff;
   padding-top: 2.5rem;
   margin-right: 2rem;
 
@@ -596,7 +622,7 @@ const projects2025 = [
 
 .learning-outcomes ul {
   font-size: 16px;
-  color: #000000;
+  color: #ffffff;
   align-content: center;
 }
 
@@ -633,12 +659,14 @@ const projects2025 = [
 .application-grid h1 {
   font-size: 48px;
   margin-top: 1.5rem;
-  color: rgb(0, 0, 0);
+  //color: rgb(255, 255, 255);
   padding-left: 2%;
+  color: #cadaea;
+  text-align: start;
 }
 
 .application-text {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 0 2%;
   font-size: 1rem;
 }
@@ -647,13 +675,13 @@ const projects2025 = [
 .application-text ul {
   font-size: 1rem;
   margin-top: 2rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 
 .application-text p {
   font-size: 1rem;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -662,7 +690,7 @@ const projects2025 = [
 
 .projects-header {
   font-size: 3rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding-top: 4rem;
   padding-bottom: 5rem;
@@ -867,6 +895,7 @@ const projects2025 = [
   transform: translate(0, -75%);
   top: 50%;
   margin: 0;
+  color: #cadaea;
 }
 
 @media screen and (max-width: 912px) {
@@ -906,12 +935,13 @@ const projects2025 = [
     font-size: 48px;
     margin: 0 auto;
     padding-top: 0;
+    color: #cadaea;
   }
 
-  .landing-text h2 {
-    font-size: 48px;
-    margin: 0 auto;
-  }
+  // .landing-text h2 {
+  //   font-size: 48px;
+  //   margin: 0 auto;
+  // }
 
   .landing-text p {
     margin: 0 auto;
@@ -921,12 +951,12 @@ const projects2025 = [
     font-size: 1rem;
   }
 
-  .landing-text button {
-    align-self: center;
-    width: min(100%, 15rem);
-    margin: 1rem auto 0;
-    padding: 1rem 1.5rem;
-  }
+  // .landing-text button {
+  //   align-self: center;
+  //   width: min(100%, 15rem);
+  //   margin: 1rem auto 0;
+  //   padding: 1rem 1.5rem;
+  // }
 
 
   .landing-text ul {
@@ -962,6 +992,7 @@ const projects2025 = [
 
   .day-column h1 {
     margin-top: 1rem;
+    color: #cadaea;
   }
  
 
@@ -989,6 +1020,7 @@ const projects2025 = [
     font-size: 2rem;
     padding: 0;
     text-align: center;
+    color: #cadaea;
   }
 
   .application-text {
