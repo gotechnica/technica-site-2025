@@ -19,14 +19,17 @@
             <template v-for="link in links" :key="link.name">
               
               <!-- Dropdown -->
-              <li class="nav-item dropdown" v-if="link.dropdown">
+              <li class="nav-item dropdown" v-if="link.dropdown"
+                  style="position: relative;"
+                  @mouseenter="openDropdown(link, $event)"
+                  @mouseleave="closeDropdown(link)">
                 <div variant="none" min-width="100px" :text="link.name" size="sm">
-                  <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem">
+                  <div type="button" style="display: flex; padding: 0.2rem; cursor: default;">
                     {{ link.name }}
                     <div class="dropdown-arrow"></div>
                   </div>
                   <div v-if="link.showDropdown" class="dropdown-options" :class = "{'home-dropdown-options' : link.name === 'Home'}">
-                    <div class="dropdown-item" @click="toggleDropdown(link)" v-for="item in link.items" :key="item.name">
+                    <div class="dropdown-item" v-for="item in link.items" :key="item.name">
                       <NuxtLink :to="item.path" class="dropdown-link-active">
                         {{ item.name }}
                       </NuxtLink>
@@ -93,7 +96,7 @@ export default {
             {name: 'Hear from Past Hackers', path:'/#past-hackers'},
             {name: 'Tracks', path:'/#tracks'},
             {name: 'Additional Information', path:'/#additional-info'},
-            {name: 'Keynote Speakers', path:'/keynotes'},
+            {name: 'Keynote Speakers', path:'/#keynotes'},
             {name: 'Sponsors', path:'/#sponsors'},
             {name: 'FAQ', path:'/#faq'},
             {name: 'Contact Us', path:'/#footer'},
@@ -138,16 +141,18 @@ export default {
     updateScroll() {
       this.scrollPosition = window.scrollY
     },
-    toggleDropdown(link) {
-      if (link.showDropdown) {
-        document.getElementById('my-navbar').classList.remove('show')
-      }
+    openDropdown(link, event) {
       link.showDropdown = !link.showDropdown
+      this.$nextTick(() => {
+        const rect = event.currentTarget.getBoundingClientRect()
+        const panel = event.currentTarget.querySelector('.dropdown-options')
+        if (panel) {
+          panel.style.top = rect.bottom + 'px'
+          panel.style.left = rect.left + 'px'
+        }
+      })
     },
-    closeDropdown(link) {
-      link.showDropdown = false
-      document.getElementById('my-navbar').classList.remove('show')
-    }
+    closeDropdown(link) { link.showDropdown = false }
   }
 }
 </script>
@@ -156,18 +161,39 @@ export default {
 // .navbar-brand { position: absolute; left: 1rem; top: 1rem; }
 .navbar-brand { display: block;} //flexbox should do the job?? 
 .mlh-logo { max-width: 100px; min-width: 50px; width: 10%; display: block; position: absolute; right: 1.5rem; padding: 0; top: 0; z-index: 2010; }
-#navbar { position: sticky; top: 0; overflow: visible; display: block; flex-wrap: wrap; justify-content: flex-start; padding: 0.25rem 1rem; -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); background-color: #130F1F; z-index: 2004; }
+#navbar { 
+  position: sticky; 
+  top: 0; 
+  display: block; 
+  flex-wrap: wrap; 
+  justify-content: flex-start; 
+  padding: 0.25rem 1rem; 
+  -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); 
+  background-color: #130F1F; 
+  z-index: 2004; }
 // .navbar { min-height: 84px; }
 .navbar { min-height: 70px; margin-bottom: -3.9%; margin-top: -10px; display: flex; align-items: center; justify-content: space-between; } //turning navbar into a flex boxxx
 
 .navbar .container-fluid { display: flex; align-items: flex-start; flex-wrap: nowrap; justify-content: space-between; padding: 0 0.5rem !important; }
 .navbar-left { display: flex; align-items: center; gap: 0.5rem; padding-top: 1.5%; } //second flex for the logo and hamburger to stay together
 
-.dropdown-options { position: absolute; background-color: #130F1F; line-height: 2rem; padding: 5%; }
-.home-dropdown-options {
+.dropdown-options {
+  position: fixed;
+  background-color: #1a1528;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 6px 0;
+  width: 210px;
+  z-index: 9999;
+  animation: fadeIn 0.15s ease;
+  max-height: 70vh;
   overflow-y: auto;
-  overflow-x: visible;
-  min-width: 200%;
+}
+
+.home-dropdown-options {
+  min-width: 220px;
+  max-width: 280px;
 }
 
 // .navbar-toggler { margin: 0 auto 0 0; border: none; top: 1.65rem; }
@@ -198,10 +224,28 @@ export default {
   #mlh-trust-badge { width: 60px; }
 }
 
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
 .dropdown-container { display: flex; max-height: 20px; }
-.dropdown-item a.dropdown-link-active { text-decoration: none; color: white; }
-.dropdown-item:hover { color: white; opacity: 0.7; background-color: transparent !important; }
-li .dropdown-item { display: flex; font-size: 1rem; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.5rem; font-weight: bold; }
+.dropdown-item a.dropdown-link-active {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+li .dropdown-item {
+  display: flex;
+  font-size: 0.9rem;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 0 4px;
+  text-align: start;
+}
+
+.dropdown-item:hover { background-color: rgba(255,255,255,0.07) !important; opacity: 1; }
 li { font-weight: bold; }
 .dropdown-arrow { float: right; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid white; margin: 10px; }
 </style>
