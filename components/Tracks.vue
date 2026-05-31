@@ -7,7 +7,7 @@
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="flip-card-3D-wrapper col-lg-4 d-flex justify-content-center tracks"
+        class="flip-card-3D-wrapper col-lg-6 d-flex justify-content-center tracks"
       >
         <div
           class="flip-card"
@@ -123,7 +123,7 @@ body {
 
 .flip-card-3D-wrapper {
   width: 100%;
-  max-width: 340px;
+  max-width: 500px;
   margin: 10px auto;
   box-sizing: border-box;
   display: flex;
@@ -137,8 +137,11 @@ body {
   height: 100%;
   transition: all 1s ease-in-out;
   transform-style: preserve-3d;
-  height: 700px;
-  width: 572px;
+  // height: 700px;
+  // width: 572px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 572 / 700;
 }
 
 .do-flip {
@@ -150,14 +153,15 @@ body {
   // height: 100%;
   display: flex;
   justify-content: center;
-  height: 700px;
-  width: 572px;
+  width: 100%;
+  aspect-ratio: 572 / 700;
+
   position: absolute;
   backface-visibility: hidden;
   z-index: 2;
   border-radius: 18px;
   background-color: transparent !important;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 .General {
@@ -210,11 +214,15 @@ body {
 .card-body-flipped {
   display: flex;
   position: absolute;
-  top: 20%;
-  left: 34%;
+  top: 25%;
+  // left: 34%;
   justify-content: center;
   align-items: center;
-  width: 180px;
+
+  // width: 180px;
+  width: 32%;
+  max-width: 180px;
+
   text-align: center;
   // font-weight: bold;
 }
@@ -257,7 +265,7 @@ body {
 .row {
   display: flex;
   justify-content: center;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -280,6 +288,10 @@ body {
 @media screen and (max-width: 400px) {
   .caption-box {
     width: 300px;
+  }
+
+  .card-body-flipped {
+    width: 80%;
   }
 }
 
@@ -344,8 +356,11 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  .tracks {
-    margin-left: 21%;
+  // .tracks {
+  //   margin-left: 21%;
+  // }
+  .card-body-flipped {
+    
   }
 }
 
@@ -355,8 +370,12 @@ body {
     max-width: 100% !important;
   }
 
-  .tracks {
-    margin-left: 12%;
+  .card-body-flipped {
+    font-size: 75%;
   }
+
+  // .tracks {
+  //   margin-left: 12%;
+  // }
 }
 </style>

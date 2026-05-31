@@ -3,7 +3,9 @@
   <title>Technica</title>
   <div class="main-body" :style="{ backgroundColor: '#272341' }">
     <!-- Hero's Section -->
-    <HeroLanding class="hero-section" />
+     <div id="hero">
+      <HeroLanding class="hero-section" id="hero"/>
+     </div>
     <Header>Thank You For Coming!</Header> 
     <!-- <div class="containers after">
       
@@ -18,53 +20,73 @@
       <Announcements />
     </div> -->
 
+    <!--{ dropdown: true, 
+          name: 'Home', 
+          path: '/',
+          items[
+            {name: 'Hero/Top of Page', path:'/#hero'},
+            {name: 'About Technica', path:'/#about'},
+            {name: 'Our Achievements', path:'/#achievements'},
+            {name: 'What to Do at Technica', path:'/#to-do'},
+            {name: 'Techni-Environments', path:'/#techni-environments'},  
+            {name: 'Hear from Past Hackers', path:'/#past hackers'},
+            {name: 'Tracks', path:'/#tracks'},
+            {name: 'Additional Information', path:'/#additional-info'},
+            {name: 'Keynote Speakers', path:'/keynotes'},
+            {name: 'Sponsors', path:'/#sponsors'},
+            {name: 'FAQ', path:'/#faq'},
+            {name: 'Contact Us', path:'/#contact'},
+          ]
+        },-->
+
     <!-- About Technica Section -->
-    <div class="container">
+    <div class="container", id="about">
       <About />
     </div>
 
-    <div class="container">
+    <div class="container", id="achievements">
       <Achievements />
     </div>
 
     <!-- What to do at Technica Section -->
-    <div class="whatToDo">
+    <div class="whatToDo", id="to-do">
       <WhatToDo />
     </div>
 
     <!-- Hybrid Environment Section -->
-    <div class="container hybrid">
+    <div class="container hybrid", id="techni-environments"> 
       <HybridEnv />
     </div>
 
     <!-- Hear From Past Hackers -->
-    <div class="container">
+    <div class="container" id="past-hackers">
       <TestimoniesCarousel class="main-section" />
     </div>
 
     <!-- Tracks Section -->
-    <div class="container">
+    <div class="container", id="tracks">
       <Tracks />
     </div>
 
     <!-- Additional Info Section -->
-    <div class="container">
+    <div class="container", id="additional-info">
       <AdditionalInfo />
     </div>
 
     <!--Keynote Speakers Section -->
-    <div class="container">
+    <div class="container", id="keynotes">
       <KeynoteSpeakers />
     </div>
 
     <!-- Sponsors Section -->
-    <div class="container">
+    <div class="container", id="sponsors">
       <Sponsors />
     </div>
+    
 
     <div class="container">
       <Header v-if="width <= 768" class="faq">FAQ</Header>
-      <Header v-else class="faq">Frequently Asked Questions</Header>
+      <Header v-else class="faq", id="faq">Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
 
@@ -200,6 +222,10 @@ useHead({
 .container {
   margin-bottom: 5rem;
 }
+
+.hero-section {
+  overflow-x: hidden;
+} //so that the ghost image doesn't overflow! - didn't work :(
 
 .whatToDo {
   width: 100%;

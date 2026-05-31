@@ -122,7 +122,7 @@ const TogglePopup = () => {
   background-color: rgb(37, 35, 62);
   background-attachment: scroll;
   background-size: 100vw;
-  background-position: right;
+  background-position: left;
   resize: both;
   padding-top: 0;
   margin-right: -10%;

@@ -1,28 +1,35 @@
 <template>
   <div id="navbar">
     <nav class="navbar navbar-dark navbar-expand-xl">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img id="logo-img" src="../static/logo.png" />
-        </a>
+      <div class="container-fluid">
+        <div class="navbar-left">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-navbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <a class="navbar-brand" href="/">
+            <img id="logo-img" src="../static/logo.png" />
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-navbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <div class="collapse navbar-collapse" id="my-navbar">
           <ul class="navbar-nav mr-auto">
             <!-- KEY GOES HERE -->
             <template v-for="link in links" :key="link.name">
+              
               <!-- Dropdown -->
-              <li class="nav-item dropdown" v-if="link.dropdown">
+              <li class="nav-item dropdown" v-if="link.dropdown"
+                  style="position: relative;"
+                  @mouseenter="openDropdown(link, $event)"
+                  @mouseleave="closeDropdown(link)">
                 <div variant="none" min-width="100px" :text="link.name" size="sm">
-                  <div type="button" @click="toggleDropdown(link)" style="display: flex; padding: 0.2rem">
+                  <div type="button" style="display: flex; padding: 0.2rem; cursor: default;">
                     {{ link.name }}
                     <div class="dropdown-arrow"></div>
                   </div>
-                  <div v-if="link.showDropdown" class="dropdown-options">
-                    <div class="dropdown-item" @click="toggleDropdown(link)" v-for="item in link.items" :key="item.name">
+                  <div v-if="link.showDropdown" class="dropdown-options" :class = "{'home-dropdown-options' : link.name === 'Home'}">
+                    <div class="dropdown-item" v-for="item in link.items" :key="item.name">
                       <NuxtLink :to="item.path" class="dropdown-link-active">
                         {{ item.name }}
                       </NuxtLink>
@@ -32,7 +39,7 @@
               </li>
 
               <!-- External links -->
-              <li v-else-if="link.name === 'Data Rights' || link.name === 'Devpost'">
+              <li v-else-if="link.name === 'Data Rights' || link.name === 'Devpost' || link.name === 'Incident Report Form'">
                 <div class="nav-item" @click="closeDropdown(links[links.length-1])" style="margin: 0; padding: 0.2rem">
                   <NuxtLink :to="link.path" target="_blank" class="nuxt-link-active">
                     {{ link.name }}
@@ -51,13 +58,23 @@
             </template>
           </ul>
         </div>
+
+        <a id="mlh-trust-badge" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank">
+          <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%">
+        </a>
+
+        <!-- using this as reference to add into the navbar... -->
+        <!-- <a id="mlh-trust-badge" style="display:block;max-width:5vw;min-width:60px;position:fixed;right:5vw;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank">
+          <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%">
+        </a> -->
       </div>
+
     </nav>
 
     <!-- MLH LOGO OVERLAY -->
-    <a id="mlh-trust-badge" style="display:block;max-width:5vw;min-width:60px;position:fixed;right:1vw;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%">
-    </a>
+    <!-- <a id="mlh-trust-badge" style="display:block;max-width:5vw;min-width:60px;position:fixed;right:1vw;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank"> -->
+      <!-- <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%">
+    </a> --> 
   </div>
 </template>
 
@@ -66,7 +83,26 @@ export default {
   data() {
     return {
       links: [
-        { dropdown: false, name: 'Home', path: '/'},
+        { dropdown: true, 
+          name: 'Home', 
+          path: '/',
+          showDropdown: false,
+          items: [
+            {name: 'Top of Page', path:'/#hero'},
+            {name: 'About Technica', path:'/#about'},
+            {name: 'Our Achievements', path:'/#achievements'},
+            {name: 'What to Do at Technica', path:'/#to-do'},
+            {name: 'Techni-Environments', path:'/#techni-environments'},  
+            {name: 'Hear from Past Hackers', path:'/#past-hackers'},
+            {name: 'Tracks', path:'/#tracks'},
+            {name: 'Additional Information', path:'/#additional-info'},
+            {name: 'Keynote Speakers', path:'/#keynotes'},
+            {name: 'Sponsors', path:'/#sponsors'},
+            {name: 'FAQ', path:'/#faq'},
+            {name: 'Contact Us', path:'/#footer'},
+          ]
+        },
+        
         // { dropdown: false, name: 'Slack', path: 'https://join.slack.com/t/technica2025/shared_invite/zt-3ilafj6id-Bx0WY_K_in2UfaARK1H12Q'},
         { dropdown: false, name: 'Devpost', path: 'https://technica-2025.devpost.com/'},
         { dropdown: false, name: 'Maps', path: './maps'},
@@ -105,46 +141,111 @@ export default {
     updateScroll() {
       this.scrollPosition = window.scrollY
     },
-    toggleDropdown(link) {
-      if (link.showDropdown) {
-        document.getElementById('my-navbar').classList.remove('show')
-      }
+    openDropdown(link, event) {
       link.showDropdown = !link.showDropdown
+      this.$nextTick(() => {
+        const rect = event.currentTarget.getBoundingClientRect()
+        const panel = event.currentTarget.querySelector('.dropdown-options')
+        if (panel) {
+          panel.style.top = rect.bottom + 'px'
+          panel.style.left = rect.left + 'px'
+        }
+      })
     },
-    closeDropdown(link) {
-      link.showDropdown = false
-      document.getElementById('my-navbar').classList.remove('show')
-    }
+    closeDropdown(link) { link.showDropdown = false }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.navbar-brand { position: absolute; left: 1rem; top: 1rem; }
+// .navbar-brand { position: absolute; left: 1rem; top: 1rem; }
+.navbar-brand { display: block;} //flexbox should do the job?? 
 .mlh-logo { max-width: 100px; min-width: 50px; width: 10%; display: block; position: absolute; right: 1.5rem; padding: 0; top: 0; z-index: 2010; }
-#navbar { position: sticky; top: 0; display: block; flex-wrap: wrap; justify-content: flex-start; padding: 0.25rem 1rem; -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); background-color: #130F1F; z-index: 2004; }
-.navbar { min-height: 84px; }
-.dropdown-options { position: absolute; background-color: #130F1F; line-height: 2rem; padding: 5%; }
-.navbar-toggler { margin: 0 auto 0 0; border: none; top: 1.65rem; }
+#navbar { 
+  position: sticky; 
+  top: 0; 
+  display: block; 
+  flex-wrap: wrap; 
+  justify-content: flex-start; 
+  padding: 0.25rem 1rem; 
+  -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.1); 
+  background-color: #130F1F; 
+  z-index: 2004; }
+// .navbar { min-height: 84px; }
+.navbar { min-height: 70px; margin-bottom: -3.9%; margin-top: -10px; display: flex; align-items: center; justify-content: space-between; } //turning navbar into a flex boxxx
+
+.navbar .container-fluid { display: flex; align-items: flex-start; flex-wrap: nowrap; justify-content: space-between; padding: 0 0.5rem !important; }
+.navbar-left { display: flex; align-items: center; gap: 0.5rem; padding-top: 1.5%; } //second flex for the logo and hamburger to stay together
+
+.dropdown-options {
+  position: fixed;
+  background-color: #1a1528;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 6px 0;
+  width: 210px;
+  z-index: 9999;
+  animation: fadeIn 0.15s ease;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.home-dropdown-options {
+  min-width: 220px;
+  max-width: 280px;
+}
+
+// .navbar-toggler { margin: 0 auto 0 0; border: none; top: 1.65rem; }
+.navbar-toggler { margin: 0; border: none; }
+.navbar-collapse { flex: 1;  text-align: center; margin-bottom: 4%; padding-top: 1.5%;}
+
 .navbar-nav { margin: auto; list-style-type: none; }
 .navbar-nav li { margin: 0 0.3rem; padding: 1rem; }
 .show .navbar-nav li { margin: 0; padding: 0; }
-.navbar-nav .nuxt-link-active { font-family: "Poppins"; font-size: 1rem; color: white; text-decoration: none; }
+.navbar-nav .nuxt-link-active { font-family: "Poppins"; font-size: 1rem; color: white; text-decoration: none;}
 .navbar-nav a:hover { opacity: 0.7; }
 .dropdown { color: white; }
 .customDropdown { font-family: "Poppins"; color: white; text-decoration: none; font-size: 1rem; }
+
+#mlh-trust-badge { display: block; width: 80px; flex-shrink: 0; align-self: flex-start; margin-top: 0; padding-top: 0; position: relative; z-index: 2005;} //general rule, will do more custom rules for this inside the different media views 
+
 @media (max-width: 1199px) {
-  .navbar-toggler { position: absolute; left: 75px; }
+  // .navbar-toggler { left: 75px; }  -> flex should handle positioning now
   .navbar-nav { margin-top: 5rem; padding: 0; }
   .navbar-nav li { margin: 0rem; padding: 0rem; }
   .nav-item { padding: 0.6rem 0 !important; text-align: center; }
   .dropdown { margin: auto !important; padding-left: 0.6rem !important; }
+  #mlh-trust-badge { width: 70px; }
 }
-@media (max-width: 576px) { .customDropdown { font-size: .7rem; } }
+
+@media (max-width: 576px) { 
+  .customDropdown { font-size: .7rem; } 
+  #mlh-trust-badge { width: 60px; }
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
 .dropdown-container { display: flex; max-height: 20px; }
-.dropdown-item a.dropdown-link-active { text-decoration: none; color: white; }
-.dropdown-item:hover { color: white; opacity: 0.7; background-color: transparent !important; }
-li .dropdown-item { display: flex; font-size: 1rem; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.5rem; font-weight: bold; }
+.dropdown-item a.dropdown-link-active {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+li .dropdown-item {
+  display: flex;
+  font-size: 0.9rem;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 0 4px;
+  text-align: start;
+}
+
+.dropdown-item:hover { background-color: rgba(255,255,255,0.07) !important; opacity: 1; }
 li { font-weight: bold; }
 .dropdown-arrow { float: right; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid white; margin: 10px; }
 </style>

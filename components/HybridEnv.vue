@@ -60,7 +60,8 @@ const items = ref([
 
 <style scoped lang="scss">
 .environment-box {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 530px;
   display: flex;
   flex-direction: column;
