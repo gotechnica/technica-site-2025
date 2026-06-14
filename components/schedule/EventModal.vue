@@ -1,4 +1,4 @@
-<!-- Modal containing event information -->
+git<!-- Modal containing event information -->
 <template>
     <VueFinalModal class="event-modal" :content-class="`event-modal-content ${event?.category}-event`"
         overlay-transition="vfm-fade" content-transition="vfm-fade">

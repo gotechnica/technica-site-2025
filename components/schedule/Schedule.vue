@@ -5,21 +5,34 @@
     <div class="schedule-page">
       <div class="row schedule-list">
         <!-- LEGEND AND TIMEZONE -->
-        <div class="schedule-legend">
-          <div>
-            <div class="schedule-legend-filter">
-              <b style="white-space: nowrap; color: white;">Event Categories:&nbsp;</b>
-              <Multiselect v-model="selectedEventCategories" mode="tags" placeholder="Filter by event category"
-                :append-new-option="false" :close-on-select="false" :searchable="false" :options="eventCategories" />
-            </div>
-            <div class="schedule-favorite-filter" style="color: white;">
-              <b>Show favorited events only:</b>
-              <input class="favorite-checkbox form-check-input" type="checkbox" v-model="showFavorites" />
+        <div class="schedule-filter-toggle-container">
+          <div class="schedule-legend">
+
+            <div>
+              <div class="schedule-legend-filter">
+                <b style="white-space: nowrap; color: white;">Event Categories:&nbsp</b>
+                <Multiselect v-model="selectedEventCategories" mode="tags" placeholder="Filter by event category"
+                  :append-new-option="false" :close-on-select="false" :searchable="false" :options="eventCategories" />
+              </div>
+
+
+
+              <div class="schedule-favorite-filter" style="color: white;">
+                <b>Show favorited events only:</b>
+                <input class="favorite-checkbox form-check-input" type="checkbox" v-model="showFavorites" />
+              </div>
             </div>
           </div>
-          <span style="color:white;"> <b>Timezone:</b> {{ timezoneDisplayName }} </span>
-        </div>
 
+          <div class="schedule-filter-toggle">
+
+            <span style="color:white;"> <b>Timezone:</b> {{ timezoneDisplayName }} </span>
+
+            <div class="schedule-view-toggle">
+              <Toggle v-model="showListView" left-label="Calendar" right-label="List" />
+            </div>
+          </div>
+        </div>
         <!-- FULL SCHEDULE -->
         <div v-if="dataLoaded" class="col pl-5" style="min-height: 0">
           <div no-body class="card h-100">
@@ -39,19 +52,23 @@
                 </div>
               </div>
 
-              <!-- SCHEDULE SCROLL -->
-              <div class="list-wrapper" v-if="dayHasEvents">
+              <!-- SCHEDULE SCROLL, if showListView is false (calendar view), if true (list view) -->
+              <div v-if="hasEventsToShow && !showListView" class="list-wrapper">
                 <div class="schedule-body">
                   <div class="schedule-time">
                     <div v-for="timeWindow in displayTimeWindows" :key="timeWindow" class="timewindow">
+
                       <span v-if="timeWindow.startsWith('0')">
                         {{ timeWindow.slice(1) }}
                       </span>
+
                       <span v-else>
                         {{ timeWindow }}
                       </span>
+
                     </div>
                   </div>
+
                   <div class="schedule-content" :style="{
                     gridTemplateColumns: `repeat(${scheduleColumns[selectedDay as any]}, minmax(${isSmallScreen ? 4 : 6}rem, 1fr))`,
                   }">
@@ -69,19 +86,19 @@
                             (event: any) => event.column === scheduleColumn
                           ).class,
                           {
-                            favorite: !!nuxtStorage.localStorage.getData(
+                            favorite: isEventFavorited(
                               formattedEvents[selectedDay as any][timeWindow].find(
                                 (event: any) => event.column === scheduleColumn
                               ).name
                             )
                           }
                         ]" data-toggle="modal" data-target="#scheduleEventModal" @click="
-                                                  openEventModal(
-                                                    selectedDay as Date,
-                                                    timeWindow,
-                                                    scheduleColumn
-                                                  )
-                                                  ">
+                          openEventModal(
+                            selectedDay as Date,
+                            timeWindow,
+                            scheduleColumn
+                          )
+                          ">
                           <div class="schedule-content-item-title">
                             {{
                               formattedEvents[selectedDay as any][
@@ -91,13 +108,39 @@
                               ).name
                             }}
                           </div>
+
                         </div>
                       </div>
+
                     </div>
+
                   </div>
                 </div>
               </div>
+              <!-- LIST VIEW, if showListView is true (list view), if false (calendar view) -->
+              <div v-else-if="hasEventsToShow && showListView" class="list-wrapper schedule-list-view">
+
+                <div v-for="event in selectedDayEvents" :key="`${event.name}-${event.startTime}`"
+                  class="schedule-list-item" :class="[
+                    `${event.category}-event`,
+                    { favorite: isEventFavorited(event.name) },
+                  ]" @click="openEventFromList(event)">
+                  <div class="schedule-list-item-header">
+                    <div class="schedule-list-item-title">{{ event.name }}</div>
+                  </div>
+                  <div class="schedule-list-item-time">{{ formatListEventTime(event) }}</div>
+                  <div v-if="event.location" class="schedule-list-item-location">{{ event.location }}</div>
+
+                  <img v-if="isEventFavorited(event.name)" class="schedule-list-favorite-button"
+                      src="/icons/star-solid.svg" alt="Unfavorite event" @click.stop="handleUnfavorite(event.name)" />
+                    <img v-else class="schedule-list-favorite-button" src="/icons/star-regular.svg" alt="Favorite event"
+                      @click.stop="handleFavorite(event.name)" />
+                </div>
+              </div>
+
+              <!-- end of list view -->
               <div class="no-favorites" v-else>No favorited events</div>
+
             </div>
           </div>
         </div>
@@ -108,9 +151,8 @@
     </div>
   </div>
   <ModalsContainer />
-  <EventModal v-model="showEventModal" :event="selectedEvent" :isFavorite="isFavorite"
-    @favorite="(eventName) => favoriteEvent(eventName, true)"
-    @unfavorite="(eventName) => favoriteEvent(eventName, false)" @close="closeEventModal" />
+  <EventModal v-model="showEventModal" :event="selectedEvent" :isFavorite="isFavorite" @favorite="handleFavorite"
+    @unfavorite="handleUnfavorite" @close="closeEventModal" />
 </template>
 
 <script setup lang="ts">
@@ -120,6 +162,7 @@ import { ModalsContainer } from 'vue-final-modal';
 import nuxtStorage from 'nuxt-storage';
 import EventModal from './EventModal.vue';
 import type { Event, EventCategory } from './event';
+import Toggle from '../Toggle.vue';
 // Environment variables
 const config = useRuntimeConfig();
 // Responsiveness
@@ -141,6 +184,8 @@ const showEventModal = ref(false);
 const showFavorites = ref(false);
 const isFavorite = ref(false);
 const dayHasEvents = ref(true);
+const showListView = ref(false);
+const favoriteVersion = ref(0);
 // Event categories
 const selectedEventCategories = ref<EventCategory[]>([
   'main',
@@ -231,6 +276,23 @@ const displayTimeWindows = computed(() => {
   endCutoff = Math.min(endCutoff, 48);
   return timeWindows.value.concat(newTimes).slice(startCutoff, endCutoff);
 });
+/* LIST VIEW */
+const selectedDayEvents = computed(() => {
+  if (!selectedDay.value) {
+    return [];
+  }
+  const selectedDate = selectedDay.value.getDate();
+  return filteredRawEvents.value
+    .filter((event) => new Date(event.startTime).getDate() === selectedDate)
+    .sort(
+      (a, b) =>
+        new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
+    );
+});
+const hasEventsToShow = computed(() =>
+  showListView.value ? selectedDayEvents.value.length > 0 : dayHasEvents.value
+);
+/* END OF LIST VIEW */
 function computeDayHasEvents() {
   const timeWindowCols = timeWindowColumns.value[selectedDay.value as any];
   const keys = Object.keys(timeWindowCols);
@@ -480,6 +542,10 @@ function getDurationOfEvent(start: Date, end: Date) {
 function selectTitleItem(day: Date) {
   selectedDay.value = day;
 }
+function isEventFavorited(eventName: string | undefined) {
+  favoriteVersion.value;
+  return !!nuxtStorage.localStorage.getData(eventName);
+}
 function favoriteEvent(eventName: string | undefined, favorite: boolean) {
   isFavorite.value = favorite;
   if (favorite) {
@@ -487,11 +553,30 @@ function favoriteEvent(eventName: string | undefined, favorite: boolean) {
   } else {
     nuxtStorage.localStorage.removeItem(eventName);
   }
+  favoriteVersion.value += 1;
   if (showFavorites.value) {
     prepareTimeWindows();
     populateFormattedEvents();
   }
 }
+/* LIST VIEW */
+function handleFavorite(eventName: string | undefined) {
+  favoriteEvent(eventName, true);
+}
+function handleUnfavorite(eventName: string | undefined) {
+  favoriteEvent(eventName, false);
+}
+function formatListEventTime(event: Event) {
+  const start = formatAMPM(new Date(event.startTime));
+  const end = formatAMPM(new Date(event.endTime));
+  return `${start} – ${end}`;
+}
+function openEventFromList(event: Event) {
+  selectedEvent.value = event;
+  isFavorite.value = isEventFavorited(event.name);
+  showEventModal.value = true;
+}
+/* END OF LIST VIEW */
 function openEventModal(selectedDay: Date, timeWindow: any, column: any) {
   selectedEvent.value = formattedEvents.value[selectedDay as any][
     timeWindow
@@ -500,9 +585,7 @@ function openEventModal(selectedDay: Date, timeWindow: any, column: any) {
     selectedEvent.value.selectedDay = selectedDay;
     selectedEvent.value.timeWindow = timeWindow;
     selectedEvent.value.column = column;
-    isFavorite.value = !!nuxtStorage.localStorage.getData(
-      selectedEvent.value?.name
-    );
+    isFavorite.value = isEventFavorited(selectedEvent.value?.name);
   }
   showEventModal.value = true;
 }
@@ -578,13 +661,16 @@ export default {
 }
 
 .card {
-  border: 0;
+  border: 10;
   overflow: hidden;
   background-color: $COLOR_FOREGROUND;
   border-radius: $BORDER_RADIUS;
   border: 2px solid darken($COLOR_HEADER, 30%);
   color: $COLOR_LIGHT_TEXT;
   font-family: Poppins;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .schedule-header {
@@ -629,6 +715,8 @@ export default {
   flex-direction: column;
   height: 100%;
   min-height: 0;
+  min-width: 0;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   backdrop-filter: blur(35px);
@@ -654,6 +742,8 @@ export default {
   height: 100%;
   flex-direction: column;
   min-height: 0;
+  min-width: 0;
+  width: 100%;
 }
 
 .schedule-page {
@@ -663,12 +753,21 @@ export default {
 .schedule-list {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: stretch;
   height: 85vh;
   margin: 0;
   margin-top: 1rem;
   padding: 0 1rem;
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.schedule-list > .col {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .schedule-legend {
@@ -687,6 +786,111 @@ export default {
     width: 100%;
   }
 }
+
+/* LIST VIEW */
+
+.schedule-view-toggle {
+  margin-bottom: 0.5rem;
+}
+
+.schedule-list-view {
+  gap: 0.75rem;
+  padding: 1rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.schedule-list-item {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) 12rem minmax(8rem, 8rem) 1.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-items: stretch;
+  gap: 0.35rem;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: $BORDER_RADIUS;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: $COLOR_HEADER;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.favorite {
+    box-shadow: 0 0 4px 2px $COLOR_FAVORITE;
+  }
+  
+}
+
+.schedule-list-item-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.schedule-list-item-title {
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 600;
+  color: inherit;
+  
+  text-align: left;
+  padding: auto 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.schedule-list-item-time {
+  font-size: 0.875rem;
+  line-height: 2;
+  color: inherit;
+  opacity: 0.95;
+  white-space: normal;
+  text-align: left;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.schedule-list-favorite-button {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  flex-shrink: 0;
+  grid-column: 4;
+  justify-self: end;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.schedule-list-item-location {
+  font-size: 0.875rem;
+  line-height: 2;
+  color: inherit;
+  opacity: 0.9;
+  white-space: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* end of LIST VIEW */
 
 .schedule-favorite-filter {
   display: flex;
@@ -740,11 +944,28 @@ export default {
 }
 
 #element::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.schedule-filter-toggle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.schedule-filter-toggle {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
 }
 
 .schedule-content-item {
-  overflow-y:auto;
+  overflow-y: auto;
   overflow-x: hidden;
   height: 4.5vh;
   border-radius: 8px;
@@ -901,6 +1122,26 @@ $event-length: 30;
   color: $COLOR_VIRTUAL_BORDER;
 }
 
+@media only screen and (max-width: 1100px) {
+  .schedule-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .schedule-list-favorite-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+  
+}
+
+
+
 @media only screen and (min-width: 1101px) {
   #schedule {
     padding: 0 1.5rem;
@@ -909,6 +1150,11 @@ $event-length: 30;
   .schedule-content-item {
     font-size: 14px !important;
     line-height: 17px !important;
+  }
+
+  .schedule-content-item {
+    flex-direction: row;
+
   }
 
   .length-30-min,
@@ -934,6 +1180,7 @@ $event-length: 30;
 
   .schedule-list-title-item {
     font-size: 16px !important;
+    
   }
 
   .schedule-content-item {
@@ -949,6 +1196,17 @@ $event-length: 30;
     &>.schedule-content-item-title {
       -webkit-line-clamp: 3;
     }
+  }
+
+  .schedule-filter-toggle-container {
+    flex-direction: column;
+    align-items: space-between;
+
+  }
+
+  .schedule-filter-toggle {
+    flex-direction: row;
+    gap: 4rem;
   }
 
   .timewindow,
@@ -981,6 +1239,19 @@ $event-length: 30;
   .btn {
     font-size: 10px !important;
   }
+
+  .schedule-filter-toggle-container {
+    flex-direction: column;
+    align-items: space-between;
+
+  }
+
+  .schedule-filter-toggle {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  
 }
 
 .loading-spinner-wrapper {
@@ -989,5 +1260,6 @@ $event-length: 30;
   align-items: center;
   height: 100%;
 }
+
 </style>
 <style src="@vueform/multiselect/themes/default.css"></style>
